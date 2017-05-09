@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  commentId: T:TimeCockpit.Data.Geolocation.OSM.Geocoder
+  id: Geocoder
+  parent: TimeCockpit.Data.Geolocation.OSM
+  children:
+  - TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor(System.String)
+  - TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback(TimeCockpit.Data.Geolocation.OSM.Address)
+  - TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address,TimeCockpit.Data.Geolocation.OSM.Location@)
+  - TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations(TimeCockpit.Data.Geolocation.OSM.Address,System.Int32,System.Boolean)
+  - TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: Geocoder
+  nameWithType: Geocoder
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  type: Class
+  source:
+    id: Geocoder
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 22
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nGeocoder utilizing openstreetmap services.\n"
+  example: []
+  syntax:
+    content: public class Geocoder
+    content.vb: Public Class Geocoder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor(System.String)
+  commentId: M:TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  langs:
+  - csharp
+  - vb
+  name: Geocoder(String)
+  nameWithType: Geocoder.Geocoder(String)
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.Geocoder(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 67
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nInitializes a new instance of the Geocoder class.\n"
+  example: []
+  syntax:
+    content: public Geocoder(string nominatimBaseUri)
+    parameters:
+    - id: nominatimBaseUri
+      type: System.String
+      description: Base uri for nominatim service. e.g. http://open.mapquestapi.com/nominatim/v1/search.php?
+    content.vb: Public Sub New(nominatimBaseUri As String)
+  overload: TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+  commentId: P:TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+  id: UserAgent
+  parent: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: Geocoder.UserAgent
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+  type: Property
+  source:
+    id: UserAgent
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nGets or sets the optional, custom user agent.\n"
+  example: []
+  syntax:
+    content: public string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address,TimeCockpit.Data.Geolocation.OSM.Location@)
+  commentId: M:TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address,TimeCockpit.Data.Geolocation.OSM.Location@)
+  id: TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address,TimeCockpit.Data.Geolocation.OSM.Location@)
+  parent: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  langs:
+  - csharp
+  - vb
+  name: TryGetLocation(Address, out Location)
+  nameWithType: Geocoder.TryGetLocation(Address, out Location)
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address, out TimeCockpit.Data.Geolocation.OSM.Location)
+  type: Method
+  source:
+    id: TryGetLocation
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 105
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nAttempt to look up a location for the provided address.\n"
+  example: []
+  syntax:
+    content: public bool TryGetLocation(Address address, out Location location)
+    parameters:
+    - id: address
+      type: TimeCockpit.Data.Geolocation.OSM.Address
+      description: Lookup address.
+    - id: location
+      type: TimeCockpit.Data.Geolocation.OSM.Location
+      description: Found location.
+    return:
+      type: System.Boolean
+      description: True if the lookup was successful.
+    content.vb: Public Function TryGetLocation(address As Address, ByRef location As Location) As Boolean
+  overload: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation*
+  nameWithType.vb: Geocoder.TryGetLocation(Address, ByRef Location)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation(TimeCockpit.Data.Geolocation.OSM.Address, ByRef TimeCockpit.Data.Geolocation.OSM.Location)
+  name.vb: TryGetLocation(Address, ByRef Location)
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations(TimeCockpit.Data.Geolocation.OSM.Address,System.Int32,System.Boolean)
+  commentId: M:TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations(TimeCockpit.Data.Geolocation.OSM.Address,System.Int32,System.Boolean)
+  id: TryGetLocations(TimeCockpit.Data.Geolocation.OSM.Address,System.Int32,System.Boolean)
+  parent: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  langs:
+  - csharp
+  - vb
+  name: TryGetLocations(Address, Int32, Boolean)
+  nameWithType: Geocoder.TryGetLocations(Address, Int32, Boolean)
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations(TimeCockpit.Data.Geolocation.OSM.Address, System.Int32, System.Boolean)
+  type: Method
+  source:
+    id: TryGetLocations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nAttempt to look up a location for the provided address.\n"
+  example: []
+  syntax:
+    content: public List<Location> TryGetLocations(Address address, int maxItems, bool alternativeQuery = false)
+    parameters:
+    - id: address
+      type: TimeCockpit.Data.Geolocation.OSM.Address
+      description: Lookup address.
+    - id: maxItems
+      type: System.Int32
+      description: Maximum number of items to return.
+    - id: alternativeQuery
+      type: System.Boolean
+      description: Indicates whether the alternative/split query parameter format is used.
+    return:
+      type: System.Collections.Generic.List{TimeCockpit.Data.Geolocation.OSM.Location}
+      description: List of found items.
+    content.vb: Public Function TryGetLocations(address As Address, maxItems As Integer, alternativeQuery As Boolean = False) As List(Of Location)
+  overload: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback(TimeCockpit.Data.Geolocation.OSM.Address)
+  commentId: M:TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback(TimeCockpit.Data.Geolocation.OSM.Address)
+  id: GetCoordinatesWithFallback(TimeCockpit.Data.Geolocation.OSM.Address)
+  parent: TimeCockpit.Data.Geolocation.OSM.Geocoder
+  langs:
+  - csharp
+  - vb
+  name: GetCoordinatesWithFallback(Address)
+  nameWithType: Geocoder.GetCoordinatesWithFallback(Address)
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback(TimeCockpit.Data.Geolocation.OSM.Address)
+  type: Method
+  source:
+    id: GetCoordinatesWithFallback
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Geolocation\OSM\Geocoder.cs
+    startLine: 231
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nMatch an address to a location with stepwise fallback.\n"
+  remarks: "\nThe fallback algorithm tries to drop parts of the address to achieve a positive lookup result.\ne.g. first omit city string, omit street number ...\n"
+  example: []
+  syntax:
+    content: public FallbackMatch GetCoordinatesWithFallback(Address address)
+    parameters:
+    - id: address
+      type: TimeCockpit.Data.Geolocation.OSM.Address
+      description: Original/actual address.
+    return:
+      type: TimeCockpit.Data.Geolocation.OSM.FallbackMatch
+      description: Match using fallback.
+    content.vb: Public Function GetCoordinatesWithFallback(address As Address) As FallbackMatch
+  overload: TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.Geolocation.OSM
+  commentId: N:TimeCockpit.Data.Geolocation.OSM
+  isExternal: false
+  name: TimeCockpit.Data.Geolocation.OSM
+  nameWithType: TimeCockpit.Data.Geolocation.OSM
+  fullName: TimeCockpit.Data.Geolocation.OSM
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Geocoder.#ctor
+  isExternal: false
+  name: Geocoder
+  nameWithType: Geocoder.Geocoder
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.Geocoder
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+  isExternal: false
+  name: UserAgent
+  nameWithType: Geocoder.UserAgent
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.UserAgent
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation
+  isExternal: false
+  name: TryGetLocation
+  nameWithType: Geocoder.TryGetLocation
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocation
+- uid: TimeCockpit.Data.Geolocation.OSM.Address
+  commentId: T:TimeCockpit.Data.Geolocation.OSM.Address
+  parent: TimeCockpit.Data.Geolocation.OSM
+  isExternal: false
+  name: Address
+  nameWithType: Address
+  fullName: TimeCockpit.Data.Geolocation.OSM.Address
+- uid: TimeCockpit.Data.Geolocation.OSM.Location
+  commentId: T:TimeCockpit.Data.Geolocation.OSM.Location
+  parent: TimeCockpit.Data.Geolocation.OSM
+  isExternal: false
+  name: Location
+  nameWithType: Location
+  fullName: TimeCockpit.Data.Geolocation.OSM.Location
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations
+  isExternal: false
+  name: TryGetLocations
+  nameWithType: Geocoder.TryGetLocations
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.TryGetLocations
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.List{TimeCockpit.Data.Geolocation.OSM.Location}
+  commentId: T:System.Collections.Generic.List{TimeCockpit.Data.Geolocation.OSM.Location}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Location>
+  nameWithType: List<Location>
+  fullName: System.Collections.Generic.List<TimeCockpit.Data.Geolocation.OSM.Location>
+  nameWithType.vb: List(Of Location)
+  fullName.vb: System.Collections.Generic.List(Of TimeCockpit.Data.Geolocation.OSM.Location)
+  name.vb: List(Of Location)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.Geolocation.OSM.Location
+    name: Location
+    nameWithType: Location
+    fullName: TimeCockpit.Data.Geolocation.OSM.Location
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.Geolocation.OSM.Location
+    name: Location
+    nameWithType: Location
+    fullName: TimeCockpit.Data.Geolocation.OSM.Location
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback
+  isExternal: false
+  name: GetCoordinatesWithFallback
+  nameWithType: Geocoder.GetCoordinatesWithFallback
+  fullName: TimeCockpit.Data.Geolocation.OSM.Geocoder.GetCoordinatesWithFallback
+- uid: TimeCockpit.Data.Geolocation.OSM.FallbackMatch
+  commentId: T:TimeCockpit.Data.Geolocation.OSM.FallbackMatch
+  parent: TimeCockpit.Data.Geolocation.OSM
+  isExternal: false
+  name: FallbackMatch
+  nameWithType: FallbackMatch
+  fullName: TimeCockpit.Data.Geolocation.OSM.FallbackMatch

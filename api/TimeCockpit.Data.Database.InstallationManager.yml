@@ -1,0 +1,1372 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Database.InstallationManager
+  commentId: T:TimeCockpit.Data.Database.InstallationManager
+  id: InstallationManager
+  parent: TimeCockpit.Data.Database
+  children:
+  - TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature})
+  - TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.Database.DbClient,TimeCockpit.Data.DataModel.Model,System.String)
+  - TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.Model,System.String)
+  - TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid)
+  - TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})
+  - TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(TimeCockpit.Data.Install.Feature)
+  - TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean})
+  - TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  - TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(TimeCockpit.Data.Install.Feature)
+  - TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites(TimeCockpit.Data.Install.Feature)
+  - TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  - TimeCockpit.Data.Database.InstallationManager.OrderByDependencies(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  - TimeCockpit.Data.Database.InstallationManager.RemoveFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: InstallationManager
+  nameWithType: InstallationManager
+  fullName: TimeCockpit.Data.Database.InstallationManager
+  type: Class
+  source:
+    id: InstallationManager
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 20
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nHandles installation issues on a given database client\n"
+  example: []
+  syntax:
+    content: public class InstallationManager
+    content.vb: Public Class InstallationManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.Model,System.String)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.Model,System.String)
+  id: Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.Model,System.String)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: Create(DataContext, Model, String)
+  nameWithType: InstallationManager.Create(DataContext, Model, String)
+  fullName: TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.DataContext, TimeCockpit.Data.DataModel.Model, System.String)
+  type: Method
+  source:
+    id: Create
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 115
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates a new installation manager that fits to the specified client\n"
+  example: []
+  syntax:
+    content: public static InstallationManager Create(DataContext context, Model writableModel = null, string dataModelLanguage = null)
+    parameters:
+    - id: context
+      type: TimeCockpit.Data.DataContext
+      description: Context that the installation manager has to work with
+    - id: writableModel
+      type: TimeCockpit.Data.DataModel.Model
+      description: Optional, preprovided writable model.
+    - id: dataModelLanguage
+      type: System.String
+      description: The language of the datamodel that is to be upgraded.
+    return:
+      type: TimeCockpit.Data.Database.InstallationManager
+      description: New instance of the InstallationManager class
+    content.vb: Public Shared Function Create(context As DataContext, writableModel As Model = Nothing, dataModelLanguage As String = Nothing) As InstallationManager
+  overload: TimeCockpit.Data.Database.InstallationManager.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.Database.DbClient,TimeCockpit.Data.DataModel.Model,System.String)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.Database.DbClient,TimeCockpit.Data.DataModel.Model,System.String)
+  id: Create(TimeCockpit.Data.Database.DbClient,TimeCockpit.Data.DataModel.Model,System.String)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: Create(DbClient, Model, String)
+  nameWithType: InstallationManager.Create(DbClient, Model, String)
+  fullName: TimeCockpit.Data.Database.InstallationManager.Create(TimeCockpit.Data.Database.DbClient, TimeCockpit.Data.DataModel.Model, System.String)
+  type: Method
+  source:
+    id: Create
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 132
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates a new installation manager that fits to the specified client\n"
+  example: []
+  syntax:
+    content: public static InstallationManager Create(DbClient client, Model writableModel = null, string dataModelLanguage = null)
+    parameters:
+    - id: client
+      type: TimeCockpit.Data.Database.DbClient
+      description: Database client that the installation manager has to work with
+    - id: writableModel
+      type: TimeCockpit.Data.DataModel.Model
+      description: Optional, preprovided writable model.
+    - id: dataModelLanguage
+      type: System.String
+      description: The language of the datamodel that is to be upgraded.
+    return:
+      type: TimeCockpit.Data.Database.InstallationManager
+      description: New instance of the InstallationManager class
+    content.vb: Public Shared Function Create(client As DbClient, writableModel As Model = Nothing, dataModelLanguage As String = Nothing) As InstallationManager
+  overload: TimeCockpit.Data.Database.InstallationManager.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})
+  id: GetFeatureStatus(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetFeatureStatus(Guid, IEnumerable<Guid>)
+  nameWithType: InstallationManager.GetFeatureStatus(Guid, IEnumerable<Guid>)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid, System.Collections.Generic.IEnumerable<System.Guid>)
+  type: Method
+  source:
+    id: GetFeatureStatus
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 148
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nReturns the status of a given feature\n"
+  example: []
+  syntax:
+    content: public static FeatureStatus GetFeatureStatus(Guid featureGuid, IEnumerable<Guid> installedFeatures)
+    parameters:
+    - id: featureGuid
+      type: System.Guid
+      description: Guid of the feature to check
+    - id: installedFeatures
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+      description: Installed feature uuids.
+    return:
+      type: TimeCockpit.Data.Install.FeatureStatus
+      description: Status of a given feature
+    content.vb: Public Shared Function GetFeatureStatus(featureGuid As Guid, installedFeatures As IEnumerable(Of Guid)) As FeatureStatus
+  overload: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus*
+  nameWithType.vb: InstallationManager.GetFeatureStatus(Guid, IEnumerable(Of Guid))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid, System.Collections.Generic.IEnumerable(Of System.Guid))
+  name.vb: GetFeatureStatus(Guid, IEnumerable(Of Guid))
+- uid: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  id: GetMissingComponents(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetMissingComponents(IEnumerable<InstallationComponent>, Nullable<Guid>)
+  nameWithType: InstallationManager.GetMissingComponents(IEnumerable<InstallationComponent>, Nullable<Guid>)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.InstallationComponent>, System.Nullable<System.Guid>)
+  type: Method
+  source:
+    id: GetMissingComponents
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 170
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets a list of missing installation components.\n"
+  remarks: "\n<p>\n  If <code>guidOfLastBatchToBeChecked</code> is <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref> all batches in <code>installBatch</code> are returned.\n</p>\n"
+  example: []
+  syntax:
+    content: public IEnumerable<InstallationComponent> GetMissingComponents(IEnumerable<InstallationComponent> installBatch, Guid? guidOfLastBatchToBeChecked)
+    parameters:
+    - id: installBatch
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+      description: "\nList of installation components for which to check if they have already been installed on the client db.\n"
+    - id: guidOfLastBatchToBeChecked
+      type: System.Nullable{System.Guid}
+      description: "\nGuid of the last batch that should be returned. See remarks for details.\n"
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+      description: "\nThose components from <code>installBatch</code> that have not already been installed on the client db.\n"
+    content.vb: Public Function GetMissingComponents(installBatch As IEnumerable(Of InstallationComponent), guidOfLastBatchToBeChecked As Guid?) As IEnumerable(Of InstallationComponent)
+  overload: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents*
+  nameWithType.vb: InstallationManager.GetMissingComponents(IEnumerable(Of InstallationComponent), Nullable(Of Guid))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.InstallationComponent), System.Nullable(Of System.Guid))
+  name.vb: GetMissingComponents(IEnumerable(Of InstallationComponent), Nullable(Of Guid))
+- uid: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(TimeCockpit.Data.Install.Feature)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(TimeCockpit.Data.Install.Feature)
+  id: GetMissingComponents(TimeCockpit.Data.Install.Feature)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetMissingComponents(Feature)
+  nameWithType: InstallationManager.GetMissingComponents(Feature)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents(TimeCockpit.Data.Install.Feature)
+  type: Method
+  source:
+    id: GetMissingComponents
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 188
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets a list of missing installation components for a given feature.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<InstallationComponent> GetMissingComponents(Feature feature)
+    parameters:
+    - id: feature
+      type: TimeCockpit.Data.Install.Feature
+      description: "\nFeature to check\n"
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+      description: "\nThose installation components from the <code>feature</code> that have not already been installed on the client db.\n"
+    content.vb: Public Function GetMissingComponents(feature As Feature) As IEnumerable(Of InstallationComponent)
+  overload: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  id: InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Nullable{System.Guid})
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: InstallMissingUpdateBatches(IEnumerable<InstallationComponent>, Nullable<Guid>)
+  nameWithType: InstallationManager.InstallMissingUpdateBatches(IEnumerable<InstallationComponent>, Nullable<Guid>)
+  fullName: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.InstallationComponent>, System.Nullable<System.Guid>)
+  type: Method
+  source:
+    id: InstallMissingUpdateBatches
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 217
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nInstalles missing installation components.\n"
+  remarks: "\n<p>\n  Note that this function adds the installed components to <code>TcSys_InstalledBatches</code> even\n  if the corresponding batch has not been executed because of not meeting the match criteria.\n</p>\n<p>\n  If <code>guidOfLastBatchToBeExecuted</code> is <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref> all batches in <code>installBatch</code> are installed.\n</p>\n"
+  example: []
+  syntax:
+    content: public void InstallMissingUpdateBatches(IEnumerable<InstallationComponent> installBatch, Guid? guidOfLastBatchToBeExecuted)
+    parameters:
+    - id: installBatch
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+      description: "\nList of installation components for which to check if they have already been installed on the client db.\nThose that have not been installed yet will be installed.\n"
+    - id: guidOfLastBatchToBeExecuted
+      type: System.Nullable{System.Guid}
+      description: "\nGuid of the last batch that should be installed. See remarks for details.\n"
+    content.vb: Public Sub InstallMissingUpdateBatches(installBatch As IEnumerable(Of InstallationComponent), guidOfLastBatchToBeExecuted As Guid?)
+  overload: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches*
+  nameWithType.vb: InstallationManager.InstallMissingUpdateBatches(IEnumerable(Of InstallationComponent), Nullable(Of Guid))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.InstallationComponent), System.Nullable(Of System.Guid))
+  name.vb: InstallMissingUpdateBatches(IEnumerable(Of InstallationComponent), Nullable(Of Guid))
+- uid: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature})
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature})
+  id: ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature})
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: ActivateAndInstallFeatures(IEnumerable<Feature>)
+  nameWithType: InstallationManager.ActivateAndInstallFeatures(IEnumerable<Feature>)
+  fullName: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.Feature>)
+  type: Method
+  source:
+    id: ActivateAndInstallFeatures
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 229
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nActivates and installs a given features.\n"
+  remarks: "\nThe method orders the features by prerequisites and installs them in order.\n"
+  example: []
+  syntax:
+    content: public void ActivateAndInstallFeatures(IEnumerable<Feature> features)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+      description: Features to install
+    content.vb: Public Sub ActivateAndInstallFeatures(features As IEnumerable(Of Feature))
+  overload: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures*
+  nameWithType.vb: InstallationManager.ActivateAndInstallFeatures(IEnumerable(Of Feature))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.Feature))
+  name.vb: ActivateAndInstallFeatures(IEnumerable(Of Feature))
+- uid: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.RemoveFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  id: RemoveFeatures(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: RemoveFeatures(IEnumerable<Feature>, Boolean)
+  nameWithType: InstallationManager.RemoveFeatures(IEnumerable<Feature>, Boolean)
+  fullName: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.Feature>, System.Boolean)
+  type: Method
+  source:
+    id: RemoveFeatures
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 242
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nRemoves and installs a set of features\n"
+  remarks: "\nOrders the features by prerequisites and uninstalls them in reversed order.\n"
+  example: []
+  syntax:
+    content: public void RemoveFeatures(IEnumerable<Feature> features, bool ignoreNotInstalled = false)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+      description: Features to uninstall
+    - id: ignoreNotInstalled
+      type: System.Boolean
+      description: Allows features to no be in installed state.
+    content.vb: Public Sub RemoveFeatures(features As IEnumerable(Of Feature), ignoreNotInstalled As Boolean = False)
+  overload: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures*
+  nameWithType.vb: InstallationManager.RemoveFeatures(IEnumerable(Of Feature), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.Feature), System.Boolean)
+  name.vb: RemoveFeatures(IEnumerable(Of Feature), Boolean)
+- uid: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(TimeCockpit.Data.Install.Feature)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(TimeCockpit.Data.Install.Feature)
+  id: GetFeatureStatus(TimeCockpit.Data.Install.Feature)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetFeatureStatus(Feature)
+  nameWithType: InstallationManager.GetFeatureStatus(Feature)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(TimeCockpit.Data.Install.Feature)
+  type: Method
+  source:
+    id: GetFeatureStatus
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 289
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nReturns the status of a given feature\n"
+  example: []
+  syntax:
+    content: public FeatureStatus GetFeatureStatus(Feature feature)
+    parameters:
+    - id: feature
+      type: TimeCockpit.Data.Install.Feature
+      description: Feature to check
+    return:
+      type: TimeCockpit.Data.Install.FeatureStatus
+      description: Status of a given feature
+    content.vb: Public Function GetFeatureStatus(feature As Feature) As FeatureStatus
+  overload: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid)
+  id: GetFeatureStatus(System.Guid)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetFeatureStatus(Guid)
+  nameWithType: InstallationManager.GetFeatureStatus(Guid)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus(System.Guid)
+  type: Method
+  source:
+    id: GetFeatureStatus
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 299
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nReturns the status of a given feature\n"
+  example: []
+  syntax:
+    content: public FeatureStatus GetFeatureStatus(Guid featureGuid)
+    parameters:
+    - id: featureGuid
+      type: System.Guid
+      description: Guid of the feature to check
+    return:
+      type: TimeCockpit.Data.Install.FeatureStatus
+      description: Status of a given feature
+    content.vb: Public Function GetFeatureStatus(featureGuid As Guid) As FeatureStatus
+  overload: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites(TimeCockpit.Data.Install.Feature)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites(TimeCockpit.Data.Install.Feature)
+  id: HasNecessaryPrerequisites(TimeCockpit.Data.Install.Feature)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: HasNecessaryPrerequisites(Feature)
+  nameWithType: InstallationManager.HasNecessaryPrerequisites(Feature)
+  fullName: TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites(TimeCockpit.Data.Install.Feature)
+  type: Method
+  source:
+    id: HasNecessaryPrerequisites
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 311
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets a value indicating whether the underlying database has all necessary prerequisites\nfor a given feature\n"
+  example: []
+  syntax:
+    content: public bool HasNecessaryPrerequisites(Feature feature)
+    parameters:
+    - id: feature
+      type: TimeCockpit.Data.Install.Feature
+      description: Feature to check
+    return:
+      type: System.Boolean
+      description: >-
+        value indicating whether the underlying database has all necessary prerequisites
+
+        for a given feature
+    content.vb: Public Function HasNecessaryPrerequisites(feature As Feature) As Boolean
+  overload: TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean})
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean})
+  id: GetInstallationComponentStatus(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent},System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean})
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: GetInstallationComponentStatus(IEnumerable<InstallationComponent>, Func<InstalledBatchInformation, Boolean>)
+  nameWithType: InstallationManager.GetInstallationComponentStatus(IEnumerable<InstallationComponent>, Func<InstalledBatchInformation, Boolean>)
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.InstallationComponent>, System.Func<TimeCockpit.Data.Database.InstalledBatchInformation, System.Boolean>)
+  type: Method
+  source:
+    id: GetInstallationComponentStatus
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 327
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the installation status for a specified collection of installation components\n"
+  remarks: "\n<code>installedBatchFilter</code> can be <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref> if all installed components stored in the database\nshould be taken into account.\n"
+  example: []
+  syntax:
+    content: public InstallationComponentStatus GetInstallationComponentStatus(IEnumerable<InstallationComponent> installBatch, Func<InstalledBatchInformation, bool> installedBatchFilter)
+    parameters:
+    - id: installBatch
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+      description: Installation components to check
+    - id: installedBatchFilter
+      type: System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean}
+      description: Optional filter function for installed components stored in the database (see remarks for details)
+    return:
+      type: TimeCockpit.Data.Install.InstallationComponentStatus
+      description: Installation status for a specified collection of installation components
+    content.vb: Public Function GetInstallationComponentStatus(installBatch As IEnumerable(Of InstallationComponent), installedBatchFilter As Func(Of InstalledBatchInformation, Boolean)) As InstallationComponentStatus
+  overload: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus*
+  nameWithType.vb: InstallationManager.GetInstallationComponentStatus(IEnumerable(Of InstallationComponent), Func(Of InstalledBatchInformation, Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.InstallationComponent), System.Func(Of TimeCockpit.Data.Database.InstalledBatchInformation, System.Boolean))
+  name.vb: GetInstallationComponentStatus(IEnumerable(Of InstallationComponent), Func(Of InstalledBatchInformation, Boolean))
+- uid: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  commentId: M:TimeCockpit.Data.Database.InstallationManager.OrderByDependencies(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  id: OrderByDependencies(System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature},System.Boolean)
+  parent: TimeCockpit.Data.Database.InstallationManager
+  langs:
+  - csharp
+  - vb
+  name: OrderByDependencies(IEnumerable<Feature>, Boolean)
+  nameWithType: InstallationManager.OrderByDependencies(IEnumerable<Feature>, Boolean)
+  fullName: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies(System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.Feature>, System.Boolean)
+  type: Method
+  source:
+    id: OrderByDependencies
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\InstallationManager.cs
+    startLine: 389
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nOrders features by its dependencies.\nTo get an uninstall order, reverse the returned collection.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Feature> OrderByDependencies(IEnumerable<Feature> features, bool uninstall)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+      description: features to install.
+    - id: uninstall
+      type: System.Boolean
+      description: true if ordered for uninstall (does not check if prerequisites are in the features.
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+      description: returns the enumeration of features, sorted by dependencies.
+    content.vb: Public Function OrderByDependencies(features As IEnumerable(Of Feature), uninstall As Boolean) As IEnumerable(Of Feature)
+  overload: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies*
+  nameWithType.vb: InstallationManager.OrderByDependencies(IEnumerable(Of Feature), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.Feature), System.Boolean)
+  name.vb: OrderByDependencies(IEnumerable(Of Feature), Boolean)
+references:
+- uid: TimeCockpit.Data.Database
+  commentId: N:TimeCockpit.Data.Database
+  isExternal: false
+  name: TimeCockpit.Data.Database
+  nameWithType: TimeCockpit.Data.Database
+  fullName: TimeCockpit.Data.Database
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Database.InstallationManager.Create*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.Create
+  isExternal: false
+  name: Create
+  nameWithType: InstallationManager.Create
+  fullName: TimeCockpit.Data.Database.InstallationManager.Create
+- uid: TimeCockpit.Data.DataContext
+  commentId: T:TimeCockpit.Data.DataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DataContext
+  nameWithType: DataContext
+  fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Database.InstallationManager
+  commentId: T:TimeCockpit.Data.Database.InstallationManager
+  parent: TimeCockpit.Data.Database
+  isExternal: false
+  name: InstallationManager
+  nameWithType: InstallationManager
+  fullName: TimeCockpit.Data.Database.InstallationManager
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.Database.DbClient
+  commentId: T:TimeCockpit.Data.Database.DbClient
+  parent: TimeCockpit.Data.Database
+  isExternal: false
+  name: DbClient
+  nameWithType: DbClient
+  fullName: TimeCockpit.Data.Database.DbClient
+- uid: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus
+  isExternal: false
+  name: GetFeatureStatus
+  nameWithType: InstallationManager.GetFeatureStatus
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetFeatureStatus
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Collections.Generic.IEnumerable{System.Guid}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Guid>
+  nameWithType: IEnumerable<Guid>
+  fullName: System.Collections.Generic.IEnumerable<System.Guid>
+  nameWithType.vb: IEnumerable(Of Guid)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Guid)
+  name.vb: IEnumerable(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Install.FeatureStatus
+  commentId: T:TimeCockpit.Data.Install.FeatureStatus
+  parent: TimeCockpit.Data.Install
+  isExternal: false
+  name: FeatureStatus
+  nameWithType: FeatureStatus
+  fullName: TimeCockpit.Data.Install.FeatureStatus
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Install
+  commentId: N:TimeCockpit.Data.Install
+  isExternal: false
+  name: TimeCockpit.Data.Install
+  nameWithType: TimeCockpit.Data.Install
+  fullName: TimeCockpit.Data.Install
+- uid: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.GetMissingComponents
+  isExternal: false
+  name: GetMissingComponents
+  nameWithType: InstallationManager.GetMissingComponents
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetMissingComponents
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.InstallationComponent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<InstallationComponent>
+  nameWithType: IEnumerable<InstallationComponent>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.InstallationComponent>
+  nameWithType.vb: IEnumerable(Of InstallationComponent)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.InstallationComponent)
+  name.vb: IEnumerable(Of InstallationComponent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.Install.InstallationComponent
+    name: InstallationComponent
+    nameWithType: InstallationComponent
+    fullName: TimeCockpit.Data.Install.InstallationComponent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.Install.InstallationComponent
+    name: InstallationComponent
+    nameWithType: InstallationComponent
+    fullName: TimeCockpit.Data.Install.InstallationComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<System.Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of System.Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Install.Feature
+  commentId: T:TimeCockpit.Data.Install.Feature
+  parent: TimeCockpit.Data.Install
+  isExternal: false
+  name: Feature
+  nameWithType: Feature
+  fullName: TimeCockpit.Data.Install.Feature
+- uid: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches
+  isExternal: false
+  name: InstallMissingUpdateBatches
+  nameWithType: InstallationManager.InstallMissingUpdateBatches
+  fullName: TimeCockpit.Data.Database.InstallationManager.InstallMissingUpdateBatches
+- uid: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures
+  isExternal: false
+  name: ActivateAndInstallFeatures
+  nameWithType: InstallationManager.ActivateAndInstallFeatures
+  fullName: TimeCockpit.Data.Database.InstallationManager.ActivateAndInstallFeatures
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.Install.Feature}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Feature>
+  nameWithType: IEnumerable<Feature>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.Install.Feature>
+  nameWithType.vb: IEnumerable(Of Feature)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Install.Feature)
+  name.vb: IEnumerable(Of Feature)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.Install.Feature
+    name: Feature
+    nameWithType: Feature
+    fullName: TimeCockpit.Data.Install.Feature
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.Install.Feature
+    name: Feature
+    nameWithType: Feature
+    fullName: TimeCockpit.Data.Install.Feature
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.RemoveFeatures
+  isExternal: false
+  name: RemoveFeatures
+  nameWithType: InstallationManager.RemoveFeatures
+  fullName: TimeCockpit.Data.Database.InstallationManager.RemoveFeatures
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites
+  isExternal: false
+  name: HasNecessaryPrerequisites
+  nameWithType: InstallationManager.HasNecessaryPrerequisites
+  fullName: TimeCockpit.Data.Database.InstallationManager.HasNecessaryPrerequisites
+- uid: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus
+  isExternal: false
+  name: GetInstallationComponentStatus
+  nameWithType: InstallationManager.GetInstallationComponentStatus
+  fullName: TimeCockpit.Data.Database.InstallationManager.GetInstallationComponentStatus
+- uid: System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean}
+  commentId: T:System.Func{TimeCockpit.Data.Database.InstalledBatchInformation,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  name: Func<InstalledBatchInformation, Boolean>
+  nameWithType: Func<InstalledBatchInformation, Boolean>
+  fullName: System.Func<TimeCockpit.Data.Database.InstalledBatchInformation, System.Boolean>
+  nameWithType.vb: Func(Of InstalledBatchInformation, Boolean)
+  fullName.vb: System.Func(Of TimeCockpit.Data.Database.InstalledBatchInformation, System.Boolean)
+  name.vb: Func(Of InstalledBatchInformation, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.Database.InstalledBatchInformation
+    name: InstalledBatchInformation
+    nameWithType: InstalledBatchInformation
+    fullName: TimeCockpit.Data.Database.InstalledBatchInformation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.Database.InstalledBatchInformation
+    name: InstalledBatchInformation
+    nameWithType: InstalledBatchInformation
+    fullName: TimeCockpit.Data.Database.InstalledBatchInformation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Install.InstallationComponentStatus
+  commentId: T:TimeCockpit.Data.Install.InstallationComponentStatus
+  parent: TimeCockpit.Data.Install
+  isExternal: false
+  name: InstallationComponentStatus
+  nameWithType: InstallationComponentStatus
+  fullName: TimeCockpit.Data.Install.InstallationComponentStatus
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies*
+  commentId: Overload:TimeCockpit.Data.Database.InstallationManager.OrderByDependencies
+  isExternal: false
+  name: OrderByDependencies
+  nameWithType: InstallationManager.OrderByDependencies
+  fullName: TimeCockpit.Data.Database.InstallationManager.OrderByDependencies

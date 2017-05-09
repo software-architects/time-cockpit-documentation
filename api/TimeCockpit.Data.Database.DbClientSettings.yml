@@ -1,0 +1,1051 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Database.DbClientSettings
+  commentId: T:TimeCockpit.Data.Database.DbClientSettings
+  id: DbClientSettings
+  parent: TimeCockpit.Data.Database
+  children:
+  - TimeCockpit.Data.Database.DbClientSettings.#ctor
+  - TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+  - TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+  - TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+  - TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+  - TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  - TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+  - TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists
+  - TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  - TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+  - TimeCockpit.Data.Database.DbClientSettings.ProviderName
+  - TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+  - TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+  - TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+  langs:
+  - csharp
+  - vb
+  name: DbClientSettings
+  nameWithType: DbClientSettings
+  fullName: TimeCockpit.Data.Database.DbClientSettings
+  type: Class
+  source:
+    id: DbClientSettings
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 14
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nRepresents settings used to create new instances of the <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public class DbClientSettings
+    content.vb: Public Class DbClientSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Database.DbClientSettings.#ctor
+  commentId: M:TimeCockpit.Data.Database.DbClientSettings.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: DbClientSettings()
+  nameWithType: DbClientSettings.DbClientSettings()
+  fullName: TimeCockpit.Data.Database.DbClientSettings.DbClientSettings()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 24
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nInitializes a new instance of the DbClientSettings class\n"
+  example: []
+  syntax:
+    content: public DbClientSettings()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Database.DbClientSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.ProviderName
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.ProviderName
+  id: ProviderName
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: ProviderName
+  nameWithType: DbClientSettings.ProviderName
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ProviderName
+  type: Property
+  source:
+    id: ProviderName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 41
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the invariant name of a provider\n"
+  remarks: "\n<p>\nThe system currently supports <code>System.Data.SqlClient</code> and <code>System.Data.SqlServerCe.4.0</code>.\n</p>\n<p>\nThe default value for this property is <code>System.Data.SqlServerCe.4.0</code>.\n</p>\n"
+  example: []
+  syntax:
+    content: public string ProviderName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ProviderName As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.ProviderName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+  id: ConnectionString
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString
+  nameWithType: DbClientSettings.ConnectionString
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+  type: Property
+  source:
+    id: ConnectionString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 71
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the connection string used to establish the initial connection. \n"
+  remarks: "\n<p>\nThe exact contents of the connection string depend on the specific data source for this connection.\n</p>\n<p>\nThe default value for this property is an empty string. You have to explicitly set this property\nbefore creating a new <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> instance.\n</p>\n"
+  example: []
+  syntax:
+    content: public string ConnectionString { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ConnectionString As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.ConnectionString*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+  id: AzureBlobStorageAccountName
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: AzureBlobStorageAccountName
+  nameWithType: DbClientSettings.AzureBlobStorageAccountName
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+  type: Property
+  source:
+    id: AzureBlobStorageAccountName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 83
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the account name used to connect to azure blob storage service.\n"
+  remarks: "\n<p>\nThe default value for this property is an empty string. You have to explicitly set this property\nbefore creating a new <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> instance if you use <code>BlobStorageType.Azure</code> (see <xref href=\"TimeCockpit.Data.Database.DbClientSettings.BlobStorageType\" data-throw-if-not-resolved=\"false\"></xref> \nand property <xref href=\"TimeCockpit.Data.Database.DbClientSettings.BlobStorageType\" data-throw-if-not-resolved=\"false\"></xref>).\n</p>\n"
+  example: []
+  syntax:
+    content: public string AzureBlobStorageAccountName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AzureBlobStorageAccountName As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+  id: AzureBlobStorageKey
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: AzureBlobStorageKey
+  nameWithType: DbClientSettings.AzureBlobStorageKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+  type: Property
+  source:
+    id: AzureBlobStorageKey
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 95
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the account key used to connect to azure blob storage service\n"
+  remarks: "\n<p>\nThe default value for this property is an empty string. You have to explicitly set this property\nbefore creating a new <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> instance if you use <code>BlobStorageType.Azure</code> (see <xref href=\"TimeCockpit.Data.Database.DbClientSettings.BlobStorageType\" data-throw-if-not-resolved=\"false\"></xref> \nand property <xref href=\"TimeCockpit.Data.Database.DbClientSettings.BlobStorageType\" data-throw-if-not-resolved=\"false\"></xref>).\n</p>\n"
+  example: []
+  syntax:
+    content: public string AzureBlobStorageKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AzureBlobStorageKey As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+  id: AzureSharedAccessKey
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: AzureSharedAccessKey
+  nameWithType: DbClientSettings.AzureSharedAccessKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+  type: Property
+  source:
+    id: AzureSharedAccessKey
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 100
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the shared access key for accessing a blob container\n"
+  example: []
+  syntax:
+    content: public string AzureSharedAccessKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AzureSharedAccessKey As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+  id: TenantSchema
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: TenantSchema
+  nameWithType: DbClientSettings.TenantSchema
+  fullName: TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+  type: Property
+  source:
+    id: TenantSchema
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 108
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the database schema to work with.\n"
+  remarks: "\nThe default value for this property is an empty string.\n"
+  example: []
+  syntax:
+    content: public string TenantSchema { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TenantSchema As String
+  overload: TimeCockpit.Data.Database.DbClientSettings.TenantSchema*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  id: BlobStorageType
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: BlobStorageType
+  nameWithType: DbClientSettings.BlobStorageType
+  fullName: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  type: Property
+  source:
+    id: BlobStorageType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 116
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the location of the blob storage.\n"
+  remarks: "\nThe default value for this property is <code>BlobStorageType.Default</code> (see <xref href=\"TimeCockpit.Data.Database.DbClientSettings.BlobStorageType\" data-throw-if-not-resolved=\"false\"></xref>).\n"
+  example: []
+  syntax:
+    content: public BlobStorageType BlobStorageType { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Database.BlobStorageType
+    content.vb: Public Property BlobStorageType As BlobStorageType
+  overload: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  id: InstallMissingSystemObjects
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: InstallMissingSystemObjects
+  nameWithType: DbClientSettings.InstallMissingSystemObjects
+  fullName: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  type: Property
+  source:
+    id: InstallMissingSystemObjects
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets a value indicating whether missing system objects should be automatically installed or updated\nwhen the connection to the underlying database is established.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool InstallMissingSystemObjects { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property InstallMissingSystemObjects As Boolean
+  overload: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+  id: PerformVersionCheck
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: PerformVersionCheck
+  nameWithType: DbClientSettings.PerformVersionCheck
+  fullName: TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+  type: Property
+  source:
+    id: PerformVersionCheck
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 135
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets a value indicating whether the system should check if the system objects in the underlying database \nmatch the system objects for this program version.\n"
+  remarks: "\nNote that this property is only evaluated if <xref href=\"TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects\" data-throw-if-not-resolved=\"false\"></xref> is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>\nbecause otherwise system objects are automatically installed or updated.\n"
+  example: []
+  syntax:
+    content: public bool PerformVersionCheck { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PerformVersionCheck As Boolean
+  overload: TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+  id: BlobEncryptionKey
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: BlobEncryptionKey
+  nameWithType: DbClientSettings.BlobEncryptionKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+  type: Property
+  source:
+    id: BlobEncryptionKey
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 140
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the blob encryption key of a user\n"
+  example: []
+  syntax:
+    content: public byte[] BlobEncryptionKey { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property BlobEncryptionKey As Byte()
+  overload: TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+  id: UserAccountId
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: UserAccountId
+  nameWithType: DbClientSettings.UserAccountId
+  fullName: TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+  type: Property
+  source:
+    id: UserAccountId
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 145
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the it of the user.\n"
+  example: []
+  syntax:
+    content: public Guid UserAccountId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property UserAccountId As Guid
+  overload: TimeCockpit.Data.Database.DbClientSettings.UserAccountId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+  id: ReplicaId
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: ReplicaId
+  nameWithType: DbClientSettings.ReplicaId
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+  type: Property
+  source:
+    id: ReplicaId
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 150
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the replica id.\n"
+  example: []
+  syntax:
+    content: public Guid? ReplicaId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Guid}
+    content.vb: Public Property ReplicaId As Guid?
+  overload: TimeCockpit.Data.Database.DbClientSettings.ReplicaId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists
+  id: EnsureBlobContainerExists
+  parent: TimeCockpit.Data.Database.DbClientSettings
+  langs:
+  - csharp
+  - vb
+  name: EnsureBlobContainerExists
+  nameWithType: DbClientSettings.EnsureBlobContainerExists
+  fullName: TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists
+  type: Property
+  source:
+    id: EnsureBlobContainerExists
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\DbClientSettings.cs
+    startLine: 155
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets a value indicating whether blob storage may be lazy initialized.\n"
+  example: []
+  syntax:
+    content: public bool EnsureBlobContainerExists { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnsureBlobContainerExists As Boolean
+  overload: TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.Database.DbClient
+  commentId: T:TimeCockpit.Data.Database.DbClient
+  parent: TimeCockpit.Data.Database
+  isExternal: false
+  name: DbClient
+  nameWithType: DbClient
+  fullName: TimeCockpit.Data.Database.DbClient
+- uid: TimeCockpit.Data.Database
+  commentId: N:TimeCockpit.Data.Database
+  isExternal: false
+  name: TimeCockpit.Data.Database
+  nameWithType: TimeCockpit.Data.Database
+  fullName: TimeCockpit.Data.Database
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Database.DbClientSettings.#ctor*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.#ctor
+  isExternal: false
+  name: DbClientSettings
+  nameWithType: DbClientSettings.DbClientSettings
+  fullName: TimeCockpit.Data.Database.DbClientSettings.DbClientSettings
+- uid: TimeCockpit.Data.Database.DbClientSettings.ProviderName*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.ProviderName
+  isExternal: false
+  name: ProviderName
+  nameWithType: DbClientSettings.ProviderName
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ProviderName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Database.DbClientSettings.ConnectionString*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+  isExternal: false
+  name: ConnectionString
+  nameWithType: DbClientSettings.ConnectionString
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ConnectionString
+- uid: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+  isExternal: false
+  name: AzureBlobStorageAccountName
+  nameWithType: DbClientSettings.AzureBlobStorageAccountName
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageAccountName
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+  isExternal: false
+  name: AzureBlobStorageKey
+  nameWithType: DbClientSettings.AzureBlobStorageKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureBlobStorageKey
+- uid: TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+  isExternal: false
+  name: AzureSharedAccessKey
+  nameWithType: DbClientSettings.AzureSharedAccessKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.AzureSharedAccessKey
+- uid: TimeCockpit.Data.Database.DbClientSettings.TenantSchema*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+  isExternal: false
+  name: TenantSchema
+  nameWithType: DbClientSettings.TenantSchema
+  fullName: TimeCockpit.Data.Database.DbClientSettings.TenantSchema
+- uid: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+  isExternal: false
+  name: BlobStorageType
+  nameWithType: DbClientSettings.BlobStorageType
+  fullName: TimeCockpit.Data.Database.DbClientSettings.BlobStorageType
+- uid: TimeCockpit.Data.Database.BlobStorageType
+  commentId: T:TimeCockpit.Data.Database.BlobStorageType
+  parent: TimeCockpit.Data.Database
+  isExternal: false
+  name: BlobStorageType
+  nameWithType: BlobStorageType
+  fullName: TimeCockpit.Data.Database.BlobStorageType
+- uid: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  isExternal: false
+  name: InstallMissingSystemObjects
+  nameWithType: DbClientSettings.InstallMissingSystemObjects
+  fullName: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+  commentId: P:TimeCockpit.Data.Database.DbClientSettings.InstallMissingSystemObjects
+- uid: TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+  isExternal: false
+  name: PerformVersionCheck
+  nameWithType: DbClientSettings.PerformVersionCheck
+  fullName: TimeCockpit.Data.Database.DbClientSettings.PerformVersionCheck
+- uid: TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+  isExternal: false
+  name: BlobEncryptionKey
+  nameWithType: DbClientSettings.BlobEncryptionKey
+  fullName: TimeCockpit.Data.Database.DbClientSettings.BlobEncryptionKey
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.Database.DbClientSettings.UserAccountId*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+  isExternal: false
+  name: UserAccountId
+  nameWithType: DbClientSettings.UserAccountId
+  fullName: TimeCockpit.Data.Database.DbClientSettings.UserAccountId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.Database.DbClientSettings.ReplicaId*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+  isExternal: false
+  name: ReplicaId
+  nameWithType: DbClientSettings.ReplicaId
+  fullName: TimeCockpit.Data.Database.DbClientSettings.ReplicaId
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<System.Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of System.Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists*
+  commentId: Overload:TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists
+  isExternal: false
+  name: EnsureBlobContainerExists
+  nameWithType: DbClientSettings.EnsureBlobContainerExists
+  fullName: TimeCockpit.Data.Database.DbClientSettings.EnsureBlobContainerExists

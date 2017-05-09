@@ -1,0 +1,947 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.RelationIdentifiers
+  commentId: T:TimeCockpit.Data.RelationIdentifiers
+  id: RelationIdentifiers
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.RelationIdentifiers.Changed
+  - TimeCockpit.Data.RelationIdentifiers.GetMember(System.String)
+  - TimeCockpit.Data.RelationIdentifiers.GetMember(System.String,System.Boolean)
+  - TimeCockpit.Data.RelationIdentifiers.Item(System.String)
+  - TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object)
+  - TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: RelationIdentifiers
+  nameWithType: RelationIdentifiers
+  fullName: TimeCockpit.Data.RelationIdentifiers
+  type: Class
+  source:
+    id: RelationIdentifiers
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 29
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nImplements a list of relation identifiers\n"
+  remarks: "\n<p>\n  A relation can be set on an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> by assigning the\n  referenced <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> to the corresponding property. However,\n  there are cases in which you might only have the UUID of the referenced\n  objects. This class implements a list of UUID values that can be used for\n  storing referenced <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> instances based on their UUID.\n</p>\n<p>\n  An instance of <code>RelationIdentifiers</code> is closely coupled with <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n  It works hand in hand with it.\n</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RelationIdentifiers : DynamicObject, IDynamicMetaObjectProvider'
+    content.vb: >-
+      Public NotInheritable Class RelationIdentifiers
+          Inherits DynamicObject
+          Implements IDynamicMetaObjectProvider
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DynamicObject
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider
+  inheritedMembers:
+  - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: TimeCockpit.Data.RelationIdentifiers.Changed
+  commentId: E:TimeCockpit.Data.RelationIdentifiers.Changed
+  id: Changed
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: Changed
+  nameWithType: RelationIdentifiers.Changed
+  fullName: TimeCockpit.Data.RelationIdentifiers.Changed
+  type: Event
+  source:
+    id: Changed
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 60
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nOccurs when a relation identifier changes. \n"
+  example: []
+  syntax:
+    content: public event EventHandler<RelationIdentifierChangedEventArgs> Changed
+    return:
+      type: System.EventHandler{TimeCockpit.Data.RelationIdentifierChangedEventArgs}
+    content.vb: Public Event Changed As EventHandler(Of RelationIdentifierChangedEventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RelationIdentifiers.Item(System.String)
+  commentId: P:TimeCockpit.Data.RelationIdentifiers.Item(System.String)
+  id: Item(System.String)
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: RelationIdentifiers.Item[String]
+  fullName: TimeCockpit.Data.RelationIdentifiers.Item[System.String]
+  type: Property
+  source:
+    id: this[]
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 67
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the UUID for the specified relation.\n"
+  example: []
+  syntax:
+    content: public Guid? this[string name] { get; set; }
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the relation.
+    return:
+      type: System.Nullable{System.Guid}
+      description: UUID of the relation; <xref uid="langword_csharp_null" name="null" href=""></xref> if the relation is empty.
+    content.vb: Public Property Item(name As String) As Guid?
+  overload: TimeCockpit.Data.RelationIdentifiers.Item*
+  nameWithType.vb: RelationIdentifiers.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.RelationIdentifiers.Item(System.String)
+  name.vb: Item(String)
+- uid: TimeCockpit.Data.RelationIdentifiers.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.RelationIdentifiers.GetMember(System.String)
+  id: GetMember(System.String)
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: GetMember(String)
+  nameWithType: RelationIdentifiers.GetMember(String)
+  fullName: TimeCockpit.Data.RelationIdentifiers.GetMember(System.String)
+  type: Method
+  source:
+    id: GetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 91
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the UUID of the specified relation.\n"
+  remarks: "\n<code>GetMember</code> returns the UUID of the object referenced by the relation\nwith the name <code>name</code>. If an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> instance has been\nassigned to the relation its <xref href=\"TimeCockpit.Data.EntityObject.ObjectUuid\" data-throw-if-not-resolved=\"false\"></xref> is returned.\nIt the relation is empty (i.e. <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref>) the function returns null.\n"
+  example: []
+  syntax:
+    content: public override object GetMember(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the relation.
+    return:
+      type: System.Object
+      description: Returns the UUID of the specified relation.
+    content.vb: Public Overrides Function GetMember(name As String) As Object
+  overridden: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  overload: TimeCockpit.Data.RelationIdentifiers.GetMember*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.RelationIdentifiers.GetMember(System.String,System.Boolean)
+  commentId: M:TimeCockpit.Data.RelationIdentifiers.GetMember(System.String,System.Boolean)
+  id: GetMember(System.String,System.Boolean)
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: GetMember(String, Boolean)
+  nameWithType: RelationIdentifiers.GetMember(String, Boolean)
+  fullName: TimeCockpit.Data.RelationIdentifiers.GetMember(System.String, System.Boolean)
+  type: Method
+  source:
+    id: GetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 108
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the UUID of the specified relation.\n"
+  remarks: "\n<code>GetMember</code> returns the UUID of the object referenced by the relation\nwith the name <code>name</code>. If an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> instance has been\nassigned to the relation its <xref href=\"TimeCockpit.Data.EntityObject.ObjectUuid\" data-throw-if-not-resolved=\"false\"></xref> is returned.\nIt the relation is empty (i.e. <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref>) the function returns null.\n"
+  example: []
+  syntax:
+    content: public object GetMember(string name, bool ignorePermissions = false)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the relation.
+    - id: ignorePermissions
+      type: System.Boolean
+      description: Indicates that permissions should not be checked.
+    return:
+      type: System.Object
+      description: Returns the UUID of the specified relation.
+    content.vb: Public Function GetMember(name As String, ignorePermissions As Boolean = False) As Object
+  overload: TimeCockpit.Data.RelationIdentifiers.GetMember*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object)
+  id: SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: SetMember(String, Object)
+  nameWithType: RelationIdentifiers.SetMember(String, Object)
+  fullName: TimeCockpit.Data.RelationIdentifiers.SetMember(System.String, System.Object)
+  type: Method
+  source:
+    id: SetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 149
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSets the UUID of the specified relation.\n"
+  remarks: "\nIf an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> has been assigned to the relation previously\nthe reference to this object is deleted. Instead the specified UUID is stored for\nthe relation.\n"
+  example: []
+  syntax:
+    content: public override void SetMember(string name, object value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the relation.
+    - id: value
+      type: System.Object
+      description: UUID of the relation; has to be a <xref href="System.Guid" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Sub SetMember(name As String, value As Object)
+  overridden: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  overload: TimeCockpit.Data.RelationIdentifiers.SetMember*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object,System.Boolean)
+  commentId: M:TimeCockpit.Data.RelationIdentifiers.SetMember(System.String,System.Object,System.Boolean)
+  id: SetMember(System.String,System.Object,System.Boolean)
+  parent: TimeCockpit.Data.RelationIdentifiers
+  langs:
+  - csharp
+  - vb
+  name: SetMember(String, Object, Boolean)
+  nameWithType: RelationIdentifiers.SetMember(String, Object, Boolean)
+  fullName: TimeCockpit.Data.RelationIdentifiers.SetMember(System.String, System.Object, System.Boolean)
+  type: Method
+  source:
+    id: SetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\RelationIdentifiers.cs
+    startLine: 165
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSets the UUID of the specified relation.\n"
+  remarks: "\nIf an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> has been assigned to the relation previously\nthe reference to this object is deleted. Instead the specified UUID is stored for\nthe relation.\n"
+  example: []
+  syntax:
+    content: public void SetMember(string name, object value, bool initialization)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the relation.
+    - id: value
+      type: System.Object
+      description: UUID of the relation; has to be a <xref href="System.Guid" data-throw-if-not-resolved="false"></xref>.
+    - id: initialization
+      type: System.Boolean
+      description: Inidicates if SetMember is called during initialization of the object.
+    content.vb: Public Sub SetMember(name As String, value As Object, initialization As Boolean)
+  overload: TimeCockpit.Data.RelationIdentifiers.SetMember*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: DynamicObject.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: System.EventHandler{TimeCockpit.Data.RelationIdentifierChangedEventArgs}
+  commentId: T:System.EventHandler{TimeCockpit.Data.RelationIdentifierChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  name: EventHandler<RelationIdentifierChangedEventArgs>
+  nameWithType: EventHandler<RelationIdentifierChangedEventArgs>
+  fullName: System.EventHandler<TimeCockpit.Data.RelationIdentifierChangedEventArgs>
+  nameWithType.vb: EventHandler(Of RelationIdentifierChangedEventArgs)
+  fullName.vb: System.EventHandler(Of TimeCockpit.Data.RelationIdentifierChangedEventArgs)
+  name.vb: EventHandler(Of RelationIdentifierChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.RelationIdentifierChangedEventArgs
+    name: RelationIdentifierChangedEventArgs
+    nameWithType: RelationIdentifierChangedEventArgs
+    fullName: TimeCockpit.Data.RelationIdentifierChangedEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.RelationIdentifierChangedEventArgs
+    name: RelationIdentifierChangedEventArgs
+    nameWithType: RelationIdentifierChangedEventArgs
+    fullName: TimeCockpit.Data.RelationIdentifierChangedEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: System.EventHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEventArgs
+    nameWithType: TEventArgs
+    fullName: TEventArgs
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.RelationIdentifiers.Item*
+  commentId: Overload:TimeCockpit.Data.RelationIdentifiers.Item
+  isExternal: false
+  name: Item
+  nameWithType: RelationIdentifiers.Item
+  fullName: TimeCockpit.Data.RelationIdentifiers.Item
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<System.Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of System.Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.EntityObject.ObjectUuid
+  commentId: P:TimeCockpit.Data.EntityObject.ObjectUuid
+- uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMember(String)
+  nameWithType: DynamicObject.GetMember(String)
+  fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.RelationIdentifiers.GetMember*
+  commentId: Overload:TimeCockpit.Data.RelationIdentifiers.GetMember
+  isExternal: false
+  name: GetMember
+  nameWithType: RelationIdentifiers.GetMember
+  fullName: TimeCockpit.Data.RelationIdentifiers.GetMember
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: SetMember(String, Object)
+  nameWithType: DynamicObject.SetMember(String, Object)
+  fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.RelationIdentifiers.SetMember*
+  commentId: Overload:TimeCockpit.Data.RelationIdentifiers.SetMember
+  isExternal: false
+  name: SetMember
+  nameWithType: RelationIdentifiers.SetMember
+  fullName: TimeCockpit.Data.RelationIdentifiers.SetMember

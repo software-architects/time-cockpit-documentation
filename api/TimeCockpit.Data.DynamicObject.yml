@@ -1,0 +1,789 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  id: DynamicObject
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.DynamicObject.#ctor
+  - TimeCockpit.Data.DynamicObject.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
+  - TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+  type: Class
+  source:
+    id: DynamicObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nImplementation of DynamicObject\n"
+  remarks: "\n<p>Supports the library for integrating with the Dynamic Language Runtime. This class must not be used\noutside of this library!</p>\n<p>Caution! Will be replaced as soon as implementation of C# 4.0 becomes available.</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public abstract class DynamicObject : IDynamicMetaObjectProvider
+    content.vb: >-
+      <DataContract>
+
+      Public MustInherit Class DynamicObject
+          Implements IDynamicMetaObjectProvider
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TimeCockpit.Data.DataContext
+  - TimeCockpit.Data.DataModel.ModelCollection`1
+  - TimeCockpit.Data.DataModel.NamedDynamicObject
+  - TimeCockpit.Data.DependencyEntityObject
+  - TimeCockpit.Data.EntityObject
+  - TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
+  - TimeCockpit.Data.Localization.LocalizedValueCollection
+  - TimeCockpit.Data.RelationIdentifiers
+  - TimeCockpit.Data.Security.MemberAccessPermission
+  - TimeCockpit.Data.Security.MemberAccessPermissions
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.DynamicObject.#ctor
+  commentId: M:TimeCockpit.Data.DynamicObject.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DynamicObject
+  langs:
+  - csharp
+  - vb
+  name: DynamicObject()
+  nameWithType: DynamicObject.DynamicObject()
+  fullName: TimeCockpit.Data.DynamicObject.DynamicObject()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 32
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the DynamicObject class\n"
+  example: []
+  syntax:
+    content: protected DynamicObject()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.DynamicObject.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.DynamicObject.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
+  commentId: M:TimeCockpit.Data.DynamicObject.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})'
+  parent: TimeCockpit.Data.DynamicObject
+  langs:
+  - csharp
+  - vb
+  name: DynamicObject(IEnumerable<KeyValuePair<Object, Object>>)
+  nameWithType: DynamicObject.DynamicObject(IEnumerable<KeyValuePair<Object, Object>>)
+  fullName: TimeCockpit.Data.DynamicObject.DynamicObject(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 53
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the DynamicObject class.\n"
+  remarks: "\n<p>You can use this constructor to initialize a new instance of the\nDynamicObject class by specifying its properties in a list of key/value\npairs. This is especially useful for dynamic languages like python.</p>\n"
+  example:
+  - "\n<pre><code class=\"Python\">flatDim = ModelEntity({ \"Name\": \"Project\" })\nflatDim.Properties.Add(TextProperty({ \"Name\": \"ProjectName\", \"MaxStorageSize\": 50 }))\nflatDim.Properties.Add(DateTimeProperty({ \"Name\": \"BeginTime\", \"FractionalSecondsPrecision\": 2 }))\nContext.Model.Entities.Add(flatDim)</code></pre>\n"
+  syntax:
+    content: protected DynamicObject(IEnumerable<KeyValuePair<object, object>> properties)
+    parameters:
+    - id: properties
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}}
+      description: Collection of properties.
+    content.vb: Protected Sub New(properties As IEnumerable(Of KeyValuePair(Of Object, Object)))
+  overload: TimeCockpit.Data.DynamicObject.#ctor*
+  nameWithType.vb: DynamicObject.DynamicObject(IEnumerable(Of KeyValuePair(Of Object, Object)))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: TimeCockpit.Data.DynamicObject.DynamicObject(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Object, System.Object)))
+  name.vb: DynamicObject(IEnumerable(Of KeyValuePair(Of Object, Object)))
+- uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  id: GetMember(System.String)
+  parent: TimeCockpit.Data.DynamicObject
+  langs:
+  - csharp
+  - vb
+  name: GetMember(String)
+  nameWithType: DynamicObject.GetMember(String)
+  fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  type: Method
+  source:
+    id: GetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 149
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the value of a CLR property.\n"
+  example: []
+  syntax:
+    content: public virtual object GetMember(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the member to get.
+    return:
+      type: System.Object
+      description: Reference to the dynamic member.
+    content.vb: Public Overridable Function GetMember(name As String) As Object
+  overload: TimeCockpit.Data.DynamicObject.GetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  id: SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.DynamicObject
+  langs:
+  - csharp
+  - vb
+  name: SetMember(String, Object)
+  nameWithType: DynamicObject.SetMember(String, Object)
+  fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
+  type: Method
+  source:
+    id: SetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 172
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSets the value of a CLR property. \n"
+  example: []
+  syntax:
+    content: public virtual void SetMember(string name, object value)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the member to set.
+    - id: value
+      type: System.Object
+      description: Value to set.
+    content.vb: Public Overridable Sub SetMember(name As String, value As Object)
+  overload: TimeCockpit.Data.DynamicObject.SetMember*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  id: GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DynamicObject
+  langs:
+  - csharp
+  - vb
+  name: GetMetaObject(Expression)
+  nameWithType: DynamicObject.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  type: Method
+  source:
+    id: GetMetaObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 193
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the meta object of the dynamic object.\n"
+  example: []
+  syntax:
+    content: public virtual DynamicMetaObject GetMetaObject(Expression parameter)
+    parameters:
+    - id: parameter
+      type: System.Linq.Expressions.Expression
+      description: Provided by the DLR (Dynamic Language Runtime).
+    return:
+      type: System.Dynamic.DynamicMetaObject
+      description: <xref href="TimeCockpit.Data.DynamicObject.DynamicMetaObject" data-throw-if-not-resolved="false"></xref> that represents this specific object’s binding logic.
+    content.vb: Public Overridable Function GetMetaObject(parameter As Expression) As DynamicMetaObject
+  overload: TimeCockpit.Data.DynamicObject.GetMetaObject*
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: TimeCockpit.Data.DynamicObject.#ctor*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.#ctor
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject.DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject.DynamicObject
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<Object, Object>>
+  nameWithType: IEnumerable<KeyValuePair<Object, Object>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of Object, Object))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Object, System.Object))
+  name.vb: IEnumerable(Of KeyValuePair(Of Object, Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DynamicObject.GetMember*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.GetMember
+  isExternal: false
+  name: GetMember
+  nameWithType: DynamicObject.GetMember
+  fullName: TimeCockpit.Data.DynamicObject.GetMember
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DynamicObject.SetMember*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.SetMember
+  isExternal: false
+  name: SetMember
+  nameWithType: DynamicObject.SetMember
+  fullName: TimeCockpit.Data.DynamicObject.SetMember
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  commentId: T:TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  isExternal: false
+  name: DynamicObject.DynamicMetaObject
+  nameWithType: DynamicObject.DynamicMetaObject
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.GetMetaObject
+  isExternal: false
+  name: GetMetaObject
+  nameWithType: DynamicObject.GetMetaObject
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+- uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: System.Dynamic.IDynamicMetaObjectProvider
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: IDynamicMetaObjectProvider.GetMetaObject(Expression)
+  fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
+    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
+    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
+  parent: System.Linq.Expressions
+  isExternal: true
+  name: Expression
+  nameWithType: Expression
+  fullName: System.Linq.Expressions.Expression
+- uid: System.Dynamic.DynamicMetaObject
+  commentId: T:System.Dynamic.DynamicMetaObject
+  parent: System.Dynamic
+  isExternal: true
+  name: DynamicMetaObject
+  nameWithType: DynamicMetaObject
+  fullName: System.Dynamic.DynamicMetaObject
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: false
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions

@@ -1,0 +1,620 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  commentId: T:TimeCockpit.Data.Export.Excel.LocalizationExporter
+  id: LocalizationExporter
+  parent: TimeCockpit.Data.Export.Excel
+  children:
+  - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.GenericKeysCollection,System.Boolean)
+  - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet``1(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.LocalizerCollection{``0},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: LocalizationExporter
+  nameWithType: LocalizationExporter
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  type: Class
+  source:
+    id: LocalizationExporter
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Export\Excel\LocalizationExporter.cs
+    startLine: 19
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  summary: "\nThe localization exporter.\n"
+  example: []
+  syntax:
+    content: public class LocalizationExporter
+    content.vb: Public Class LocalizationExporter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  commentId: M:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  id: ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  parent: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  langs:
+  - csharp
+  - vb
+  name: ExportToWorkbook(DefaultLocalizer)
+  nameWithType: LocalizationExporter.ExportToWorkbook(DefaultLocalizer)
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  type: Method
+  source:
+    id: ExportToWorkbook
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Export\Excel\LocalizationExporter.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  summary: "\nexports a localizer to a workbook.\n"
+  example: []
+  syntax:
+    content: public static byte[] ExportToWorkbook(DefaultLocalizer localizer)
+    parameters:
+    - id: localizer
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: The localizer to export.
+    return:
+      type: System.Byte[]
+      description: Returns the workbook, serialized as an byte array.
+    content.vb: Public Shared Function ExportToWorkbook(localizer As DefaultLocalizer) As Byte()
+  overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.GenericKeysCollection,System.Boolean)
+  commentId: M:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.GenericKeysCollection,System.Boolean)
+  id: ExportToWorksheet(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.GenericKeysCollection,System.Boolean)
+  parent: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  langs:
+  - csharp
+  - vb
+  name: ExportToWorksheet(IXLRow, GenericKeysCollection, Boolean)
+  nameWithType: LocalizationExporter.ExportToWorksheet(IXLRow, GenericKeysCollection, Boolean)
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.GenericKeysCollection, System.Boolean)
+  type: Method
+  source:
+    id: ExportToWorksheet
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Export\Excel\LocalizationExporter.cs
+    startLine: 56
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  summary: "\nexports a localizer collection to a row in a worksheet.\n"
+  example: []
+  syntax:
+    content: public static void ExportToWorksheet(IXLRow firstRow, GenericKeysCollection localizers, bool writeCultureHeader = false)
+    parameters:
+    - id: firstRow
+      type: ClosedXML.Excel.IXLRow
+      description: The first row of the excel sheet to export to.
+    - id: localizers
+      type: TimeCockpit.Data.Localization.Default.GenericKeysCollection
+      description: The localizers to export.
+    - id: writeCultureHeader
+      type: System.Boolean
+      description: True if the culture name should be in the first column
+    content.vb: Public Shared Sub ExportToWorksheet(firstRow As IXLRow, localizers As GenericKeysCollection, writeCultureHeader As Boolean = False)
+  overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet``1(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.LocalizerCollection{``0},System.Boolean)
+  commentId: M:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet``1(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.LocalizerCollection{``0},System.Boolean)
+  id: ExportToWorksheet``1(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.LocalizerCollection{``0},System.Boolean)
+  parent: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  langs:
+  - csharp
+  - vb
+  name: ExportToWorksheet<T>(IXLRow, LocalizerCollection<T>, Boolean)
+  nameWithType: LocalizationExporter.ExportToWorksheet<T>(IXLRow, LocalizerCollection<T>, Boolean)
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet<T>(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.LocalizerCollection<T>, System.Boolean)
+  type: Method
+  source:
+    id: ExportToWorksheet
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Export\Excel\LocalizationExporter.cs
+    startLine: 76
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  summary: "\nexports a localizer collection to a row in a worksheet.\n"
+  example: []
+  syntax:
+    content: 'public static void ExportToWorksheet<T>(IXLRow firstRow, LocalizerCollection<T> localizers, bool writeCultureHeader = true)where T : ModelElementLocalizer'
+    parameters:
+    - id: firstRow
+      type: ClosedXML.Excel.IXLRow
+      description: The first row of the excel sheet to export to.
+    - id: localizers
+      type: TimeCockpit.Data.Localization.Default.LocalizerCollection{{T}}
+      description: The localizers to export.
+    - id: writeCultureHeader
+      type: System.Boolean
+      description: True if the cultures header should be written to the excel sheet.
+    typeParameters:
+    - id: T
+      description: The type of the localizers.
+    content.vb: Public Shared Sub ExportToWorksheet(Of T As ModelElementLocalizer)(firstRow As IXLRow, localizers As LocalizerCollection(Of T), writeCultureHeader As Boolean = True)
+  overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
+  nameWithType.vb: LocalizationExporter.ExportToWorksheet(Of T)(IXLRow, LocalizerCollection(Of T), Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(Of T)(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.LocalizerCollection(Of T), System.Boolean)
+  name.vb: ExportToWorksheet(Of T)(IXLRow, LocalizerCollection(Of T), Boolean)
+references:
+- uid: TimeCockpit.Data.Export.Excel
+  commentId: N:TimeCockpit.Data.Export.Excel
+  isExternal: false
+  name: TimeCockpit.Data.Export.Excel
+  nameWithType: TimeCockpit.Data.Export.Excel
+  fullName: TimeCockpit.Data.Export.Excel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook*
+  commentId: Overload:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook
+  isExternal: false
+  name: ExportToWorkbook
+  nameWithType: LocalizationExporter.ExportToWorkbook
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: DefaultLocalizer
+  nameWithType: DefaultLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.Localization.Default
+  commentId: N:TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: TimeCockpit.Data.Localization.Default
+  nameWithType: TimeCockpit.Data.Localization.Default
+  fullName: TimeCockpit.Data.Localization.Default
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
+  commentId: Overload:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet
+  isExternal: false
+  name: ExportToWorksheet
+  nameWithType: LocalizationExporter.ExportToWorksheet
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet
+- uid: ClosedXML.Excel.IXLRow
+  commentId: T:ClosedXML.Excel.IXLRow
+  parent: ClosedXML.Excel
+  isExternal: true
+  name: IXLRow
+  nameWithType: IXLRow
+  fullName: ClosedXML.Excel.IXLRow
+- uid: TimeCockpit.Data.Localization.Default.GenericKeysCollection
+  commentId: T:TimeCockpit.Data.Localization.Default.GenericKeysCollection
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: GenericKeysCollection
+  nameWithType: GenericKeysCollection
+  fullName: TimeCockpit.Data.Localization.Default.GenericKeysCollection
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ClosedXML.Excel
+  commentId: N:ClosedXML.Excel
+  isExternal: false
+  name: ClosedXML.Excel
+  nameWithType: ClosedXML.Excel
+  fullName: ClosedXML.Excel
+- uid: TimeCockpit.Data.Localization.Default.LocalizerCollection{{T}}
+  commentId: T:TimeCockpit.Data.Localization.Default.LocalizerCollection{``0}
+  parent: TimeCockpit.Data.Localization.Default
+  definition: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+  name: LocalizerCollection<T>
+  nameWithType: LocalizerCollection<T>
+  fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection<T>
+  nameWithType.vb: LocalizerCollection(Of T)
+  fullName.vb: TimeCockpit.Data.Localization.Default.LocalizerCollection(Of T)
+  name.vb: LocalizerCollection(Of T)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+    name: LocalizerCollection
+    nameWithType: LocalizerCollection
+    fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+    name: LocalizerCollection
+    nameWithType: LocalizerCollection
+    fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+  commentId: T:TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: LocalizerCollection<T>
+  nameWithType: LocalizerCollection<T>
+  fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection<T>
+  nameWithType.vb: LocalizerCollection(Of T)
+  fullName.vb: TimeCockpit.Data.Localization.Default.LocalizerCollection(Of T)
+  name.vb: LocalizerCollection(Of T)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+    name: LocalizerCollection
+    nameWithType: LocalizerCollection
+    fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
+    name: LocalizerCollection
+    nameWithType: LocalizerCollection
+    fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

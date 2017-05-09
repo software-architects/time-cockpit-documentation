@@ -1,0 +1,528 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.Operation
+  commentId: T:TimeCockpit.Data.DataModel.Operation
+  id: Operation
+  parent: TimeCockpit.Data.DataModel
+  children:
+  - TimeCockpit.Data.DataModel.Operation.#ctor(TimeCockpit.Data.DataModel.ModelElement)
+  - TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  - TimeCockpit.Data.DataModel.Operation.Element
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: Operation
+  fullName: TimeCockpit.Data.DataModel.Operation
+  type: Class
+  source:
+    id: Operation
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Operation.cs
+    startLine: 13
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRepresents an operation.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      [KnownType(typeof (CreateOperation))]
+
+      [KnownType(typeof (UpdateOperation))]
+
+      [KnownType(typeof (DeleteOperation))]
+
+      public abstract class Operation
+    content.vb: >-
+      <DataContract>
+
+      <KnownType(GetType(CreateOperation))>
+
+      <KnownType(GetType(UpdateOperation))>
+
+      <KnownType(GetType(DeleteOperation))>
+
+      Public MustInherit Class Operation
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TimeCockpit.Data.DataModel.CreateOperation
+  - TimeCockpit.Data.DataModel.DeleteOperation
+  - TimeCockpit.Data.DataModel.UpdateOperation
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  - type: System.Runtime.Serialization.KnownTypeAttribute
+    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: TimeCockpit.Data.DataModel.CreateOperation
+  - type: System.Runtime.Serialization.KnownTypeAttribute
+    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: TimeCockpit.Data.DataModel.UpdateOperation
+  - type: System.Runtime.Serialization.KnownTypeAttribute
+    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: TimeCockpit.Data.DataModel.DeleteOperation
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.DataModel.Operation.#ctor(TimeCockpit.Data.DataModel.ModelElement)
+  commentId: M:TimeCockpit.Data.DataModel.Operation.#ctor(TimeCockpit.Data.DataModel.ModelElement)
+  id: '#ctor(TimeCockpit.Data.DataModel.ModelElement)'
+  parent: TimeCockpit.Data.DataModel.Operation
+  langs:
+  - csharp
+  - vb
+  name: Operation(ModelElement)
+  nameWithType: Operation.Operation(ModelElement)
+  fullName: TimeCockpit.Data.DataModel.Operation.Operation(TimeCockpit.Data.DataModel.ModelElement)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Operation.cs
+    startLine: 23
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the Operation class.\n"
+  example: []
+  syntax:
+    content: protected Operation(ModelElement element)
+    parameters:
+    - id: element
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: Element on which the operation should be performed.
+    content.vb: Protected Sub New(element As ModelElement)
+  overload: TimeCockpit.Data.DataModel.Operation.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.DataModel.Operation.Element
+  commentId: P:TimeCockpit.Data.DataModel.Operation.Element
+  id: Element
+  parent: TimeCockpit.Data.DataModel.Operation
+  langs:
+  - csharp
+  - vb
+  name: Element
+  nameWithType: Operation.Element
+  fullName: TimeCockpit.Data.DataModel.Operation.Element
+  type: Property
+  source:
+    id: Element
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Operation.cs
+    startLine: 31
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the model element on which the operation should be performed.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      public ModelElement Element { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelElement
+    content.vb: >-
+      <DataMember>
+
+      Public ReadOnly Property Element As ModelElement
+  overload: TimeCockpit.Data.DataModel.Operation.Element*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  commentId: M:TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  id: Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  parent: TimeCockpit.Data.DataModel.Operation
+  langs:
+  - csharp
+  - vb
+  name: Accept(OperationVisitor)
+  nameWithType: Operation.Accept(OperationVisitor)
+  fullName: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Operation.cs
+    startLine: 38
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nAccepts a visitor for operations.\n"
+  example: []
+  syntax:
+    content: public abstract void Accept(OperationVisitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.DataModel.OperationVisitor
+      description: the visitor to accept.
+    content.vb: Public MustOverride Sub Accept(visitor As OperationVisitor)
+  overload: TimeCockpit.Data.DataModel.Operation.Accept*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.DataModel.Operation.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Operation.#ctor
+  isExternal: false
+  name: Operation
+  nameWithType: Operation.Operation
+  fullName: TimeCockpit.Data.DataModel.Operation.Operation
+- uid: TimeCockpit.Data.DataModel.ModelElement
+  commentId: T:TimeCockpit.Data.DataModel.ModelElement
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelElement
+  nameWithType: ModelElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement
+- uid: TimeCockpit.Data.DataModel.Operation.Element*
+  commentId: Overload:TimeCockpit.Data.DataModel.Operation.Element
+  isExternal: false
+  name: Element
+  nameWithType: Operation.Element
+  fullName: TimeCockpit.Data.DataModel.Operation.Element
+- uid: TimeCockpit.Data.DataModel.Operation.Accept*
+  commentId: Overload:TimeCockpit.Data.DataModel.Operation.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: Operation.Accept
+  fullName: TimeCockpit.Data.DataModel.Operation.Accept
+- uid: TimeCockpit.Data.DataModel.OperationVisitor
+  commentId: T:TimeCockpit.Data.DataModel.OperationVisitor
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: OperationVisitor
+  nameWithType: OperationVisitor
+  fullName: TimeCockpit.Data.DataModel.OperationVisitor

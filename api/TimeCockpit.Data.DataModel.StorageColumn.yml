@@ -1,0 +1,1479 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.StorageColumn
+  commentId: T:TimeCockpit.Data.DataModel.StorageColumn
+  id: StorageColumn
+  parent: TimeCockpit.Data.DataModel
+  children:
+  - TimeCockpit.Data.DataModel.StorageColumn.#ctor
+  - TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,System.Int32,System.Byte,System.Byte,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  - TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  - TimeCockpit.Data.DataModel.StorageColumn.DataType
+  - TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+  - TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+  - TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+  - TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+  - TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+  - TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+  - TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+  - TimeCockpit.Data.DataModel.StorageColumn.IsLocalized
+  - TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+  - TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+  - TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+  - TimeCockpit.Data.DataModel.StorageColumn.IsString
+  - TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+  - TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+  - TimeCockpit.Data.DataModel.StorageColumn.Name
+  - TimeCockpit.Data.DataModel.StorageColumn.Ownership
+  - TimeCockpit.Data.DataModel.StorageColumn.Precision
+  - TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+  - TimeCockpit.Data.DataModel.StorageColumn.Scale
+  - TimeCockpit.Data.DataModel.StorageColumn.Size
+  langs:
+  - csharp
+  - vb
+  name: StorageColumn
+  nameWithType: StorageColumn
+  fullName: TimeCockpit.Data.DataModel.StorageColumn
+  type: Class
+  source:
+    id: StorageColumn
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 15
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nProvides information about how to store values in the database.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class StorageColumn
+    content.vb: >-
+      <DataContract>
+
+      Public Class StorageColumn
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  commentId: M:TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  id: '#ctor(System.String,System.Type,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)'
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: StorageColumn(String, Type, Ownership, ModelEntityBase, Boolean)
+  nameWithType: StorageColumn.StorageColumn(String, Type, Ownership, ModelEntityBase, Boolean)
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.StorageColumn(System.String, System.Type, TimeCockpit.Data.DataModel.Ownership, TimeCockpit.Data.DataModel.ModelEntityBase, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the StorageColumn class.\n"
+  example: []
+  syntax:
+    content: public StorageColumn(string name, Type dataType, Ownership ownership, ModelEntityBase relationTarget, bool isLocalized = false)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the column.
+    - id: dataType
+      type: System.Type
+      description: .NET data type of the column
+    - id: ownership
+      type: TimeCockpit.Data.DataModel.Ownership
+      description: 'The parent model entity the property/relation to which this storage column belongs to '
+    - id: relationTarget
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Target of the foreign key.
+    - id: isLocalized
+      type: System.Boolean
+      description: Indicates whether the property represented by the storage column is localized or not.
+    content.vb: Public Sub New(name As String, dataType As Type, ownership As Ownership, relationTarget As ModelEntityBase, isLocalized As Boolean = False)
+  overload: TimeCockpit.Data.DataModel.StorageColumn.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,System.Int32,System.Byte,System.Byte,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  commentId: M:TimeCockpit.Data.DataModel.StorageColumn.#ctor(System.String,System.Type,System.Int32,System.Byte,System.Byte,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)
+  id: '#ctor(System.String,System.Type,System.Int32,System.Byte,System.Byte,TimeCockpit.Data.DataModel.Ownership,TimeCockpit.Data.DataModel.ModelEntityBase,System.Boolean)'
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: StorageColumn(String, Type, Int32, Byte, Byte, Ownership, ModelEntityBase, Boolean)
+  nameWithType: StorageColumn.StorageColumn(String, Type, Int32, Byte, Byte, Ownership, ModelEntityBase, Boolean)
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.StorageColumn(System.String, System.Type, System.Int32, System.Byte, System.Byte, TimeCockpit.Data.DataModel.Ownership, TimeCockpit.Data.DataModel.ModelEntityBase, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 42
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the StorageColumn class.\n"
+  example: []
+  syntax:
+    content: public StorageColumn(string name, Type dataType, int size, byte precision, byte scale, Ownership ownership, ModelEntityBase relationTarget, bool isLocalized)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the column.
+    - id: dataType
+      type: System.Type
+      description: .NET data type of the column
+    - id: size
+      type: System.Int32
+      description: The length of the column.
+    - id: precision
+      type: System.Byte
+      description: The total number of digits to the left and right of the decimal point.
+    - id: scale
+      type: System.Byte
+      description: The total number of decimal places.
+    - id: ownership
+      type: TimeCockpit.Data.DataModel.Ownership
+      description: 'The parent model entity the property/relation to which this storage column belongs to '
+    - id: relationTarget
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Target of the foreign key.
+    - id: isLocalized
+      type: System.Boolean
+      description: Indicates whether the property represented by the storage column is localized or not.
+    content.vb: Public Sub New(name As String, dataType As Type, size As Integer, precision As Byte, scale As Byte, ownership As Ownership, relationTarget As ModelEntityBase, isLocalized As Boolean)
+  overload: TimeCockpit.Data.DataModel.StorageColumn.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.StorageColumn.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: StorageColumn()
+  nameWithType: StorageColumn.StorageColumn()
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.StorageColumn()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 68
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the StorageColumn class.\n"
+  example: []
+  syntax:
+    content: public StorageColumn()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.StorageColumn.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Name
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.Name
+  id: Name
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: StorageColumn.Name
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Name
+  type: Property
+  source:
+    id: Name
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 76
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the name of the column.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TimeCockpit.Data.DataModel.StorageColumn.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.DataType
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.DataType
+  id: DataType
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: DataType
+  nameWithType: StorageColumn.DataType
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.DataType
+  type: Property
+  source:
+    id: DataType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 81
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the .NET data type of the column.\n"
+  example: []
+  syntax:
+    content: public Type DataType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property DataType As Type
+  overload: TimeCockpit.Data.DataModel.StorageColumn.DataType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Size
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.Size
+  id: Size
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: StorageColumn.Size
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Size
+  type: Property
+  source:
+    id: Size
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 86
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the length of the column.\n"
+  example: []
+  syntax:
+    content: public int Size { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Size As Integer
+  overload: TimeCockpit.Data.DataModel.StorageColumn.Size*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Precision
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.Precision
+  id: Precision
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: Precision
+  nameWithType: StorageColumn.Precision
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Precision
+  type: Property
+  source:
+    id: Precision
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 91
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the total number of digits to the left and right of the decimal point.\n"
+  example: []
+  syntax:
+    content: public byte Precision { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property Precision As Byte
+  overload: TimeCockpit.Data.DataModel.StorageColumn.Precision*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Scale
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.Scale
+  id: Scale
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: Scale
+  nameWithType: StorageColumn.Scale
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Scale
+  type: Property
+  source:
+    id: Scale
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 96
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the total number of decimal places.\n"
+  example: []
+  syntax:
+    content: public byte Scale { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: Public Property Scale As Byte
+  overload: TimeCockpit.Data.DataModel.StorageColumn.Scale*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+  id: IsStoredOnBlobStorage
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsStoredOnBlobStorage
+  nameWithType: StorageColumn.IsStoredOnBlobStorage
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+  type: Property
+  source:
+    id: IsStoredOnBlobStorage
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 101
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets a value indicating whether the column is stored on blob storage\n"
+  example: []
+  syntax:
+    content: public bool IsStoredOnBlobStorage { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsStoredOnBlobStorage As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Ownership
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.Ownership
+  id: Ownership
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: Ownership
+  nameWithType: StorageColumn.Ownership
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Ownership
+  type: Property
+  source:
+    id: Ownership
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 106
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the parent ownership of the the property/relation to which this storage column belongs to \n"
+  example: []
+  syntax:
+    content: public Ownership Ownership { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.Ownership
+    content.vb: Public ReadOnly Property Ownership As Ownership
+  overload: TimeCockpit.Data.DataModel.StorageColumn.Ownership*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+  id: RelationTarget
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: RelationTarget
+  nameWithType: StorageColumn.RelationTarget
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+  type: Property
+  source:
+    id: RelationTarget
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 111
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the target of the foreign key.\n"
+  example: []
+  syntax:
+    content: public ModelEntityBase RelationTarget { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    content.vb: Public ReadOnly Property RelationTarget As ModelEntityBase
+  overload: TimeCockpit.Data.DataModel.StorageColumn.RelationTarget*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsString
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsString
+  id: IsString
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsString
+  nameWithType: StorageColumn.IsString
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsString
+  type: Property
+  source:
+    id: IsString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 116
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type string.\n"
+  example: []
+  syntax:
+    content: public bool IsString { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsString As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsString*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+  id: IsBoolean
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsBoolean
+  nameWithType: StorageColumn.IsBoolean
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+  type: Property
+  source:
+    id: IsBoolean
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 127
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type bool.\n"
+  example: []
+  syntax:
+    content: public bool IsBoolean { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBoolean As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsBoolean*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+  id: IsDecimal
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsDecimal
+  nameWithType: StorageColumn.IsDecimal
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+  type: Property
+  source:
+    id: IsDecimal
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 138
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type decimal.\n"
+  example: []
+  syntax:
+    content: public bool IsDecimal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDecimal As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsDecimal*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+  id: IsDateTime
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsDateTime
+  nameWithType: StorageColumn.IsDateTime
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+  type: Property
+  source:
+    id: IsDateTime
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 149
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type DateTime.\n"
+  example: []
+  syntax:
+    content: public bool IsDateTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDateTime As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+  id: IsGuid
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsGuid
+  nameWithType: StorageColumn.IsGuid
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+  type: Property
+  source:
+    id: IsGuid
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 160
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type Guid.\n"
+  example: []
+  syntax:
+    content: public bool IsGuid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGuid As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsGuid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+  id: IsBinary
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsBinary
+  nameWithType: StorageColumn.IsBinary
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+  type: Property
+  source:
+    id: IsBinary
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 171
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified .NET type is of type byte []\n"
+  example: []
+  syntax:
+    content: public bool IsBinary { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBinary As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsBinary*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+  id: IsMaxSize
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsMaxSize
+  nameWithType: StorageColumn.IsMaxSize
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+  type: Property
+  source:
+    id: IsMaxSize
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 182
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the specified size is the max size.\n"
+  example: []
+  syntax:
+    content: public bool IsMaxSize { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMaxSize As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+  id: IsSystemElement
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsSystemElement
+  nameWithType: StorageColumn.IsSystemElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+  type: Property
+  source:
+    id: IsSystemElement
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 193
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the storagecolumn represents a system element.\n"
+  example: []
+  syntax:
+    content: public bool IsSystemElement { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSystemElement As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+  id: IsApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsApplicationSpecificElement
+  nameWithType: StorageColumn.IsApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+  type: Property
+  source:
+    id: IsApplicationSpecificElement
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 204
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the storagecolumn represents a application specific element.\n"
+  example: []
+  syntax:
+    content: public bool IsApplicationSpecificElement { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsApplicationSpecificElement As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+  id: IsUserElement
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsUserElement
+  nameWithType: StorageColumn.IsUserElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+  type: Property
+  source:
+    id: IsUserElement
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 215
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the storagecolumn represents a user specific element.\n"
+  example: []
+  syntax:
+    content: public bool IsUserElement { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserElement As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsUserElement*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+  id: EntityObjectProperties
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: EntityObjectProperties
+  nameWithType: StorageColumn.EntityObjectProperties
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+  type: Property
+  source:
+    id: EntityObjectProperties
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 236
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a list of properties, that provide access to the value of the column.\n"
+  remarks: "\n<p>\n  For properties (see <xref href=\"TimeCockpit.Data.DataModel.ModelProperty\" data-throw-if-not-resolved=\"false\"></xref>) <code>EntityObjectProperties</code> contains\n  a single string with the property's name.\n</p>\n<p>\n  For relations (see <xref href=\"TimeCockpit.Data.DataModel.Relation\" data-throw-if-not-resolved=\"false\"></xref>) <code>EntityObjectProperties</code> contains\n  a single string with the relation's name.\n</p>\n"
+  example: []
+  syntax:
+    content: public Collection<string> EntityObjectProperties { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.Collection{System.String}
+    content.vb: Public ReadOnly Property EntityObjectProperties As Collection(Of String)
+  overload: TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+  id: IsRelation
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsRelation
+  nameWithType: StorageColumn.IsRelation
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+  type: Property
+  source:
+    id: IsRelation
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 241
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the storage column is a relation or not.\n"
+  example: []
+  syntax:
+    content: public bool IsRelation { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRelation As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsRelation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsLocalized
+  commentId: P:TimeCockpit.Data.DataModel.StorageColumn.IsLocalized
+  id: IsLocalized
+  parent: TimeCockpit.Data.DataModel.StorageColumn
+  langs:
+  - csharp
+  - vb
+  name: IsLocalized
+  nameWithType: StorageColumn.IsLocalized
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsLocalized
+  type: Property
+  source:
+    id: IsLocalized
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\StorageColumn.cs
+    startLine: 255
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether this instance is localized.\n"
+  example: []
+  syntax:
+    content: public bool IsLocalized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if this instance is localized; otherwise, <code>false</code>.\n"
+    content.vb: Public ReadOnly Property IsLocalized As Boolean
+  overload: TimeCockpit.Data.DataModel.StorageColumn.IsLocalized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.DataModel.StorageColumn.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.#ctor
+  isExternal: false
+  name: StorageColumn
+  nameWithType: StorageColumn.StorageColumn
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.StorageColumn
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TimeCockpit.Data.DataModel.Ownership
+  commentId: T:TimeCockpit.Data.DataModel.Ownership
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Ownership
+  nameWithType: Ownership
+  fullName: TimeCockpit.Data.DataModel.Ownership
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Name*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.Name
+  isExternal: false
+  name: Name
+  nameWithType: StorageColumn.Name
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Name
+- uid: TimeCockpit.Data.DataModel.StorageColumn.DataType*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.DataType
+  isExternal: false
+  name: DataType
+  nameWithType: StorageColumn.DataType
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.DataType
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Size*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.Size
+  isExternal: false
+  name: Size
+  nameWithType: StorageColumn.Size
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Size
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Precision*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.Precision
+  isExternal: false
+  name: Precision
+  nameWithType: StorageColumn.Precision
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Precision
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Scale*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.Scale
+  isExternal: false
+  name: Scale
+  nameWithType: StorageColumn.Scale
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Scale
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+  isExternal: false
+  name: IsStoredOnBlobStorage
+  nameWithType: StorageColumn.IsStoredOnBlobStorage
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsStoredOnBlobStorage
+- uid: TimeCockpit.Data.DataModel.StorageColumn.Ownership*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.Ownership
+  isExternal: false
+  name: Ownership
+  nameWithType: StorageColumn.Ownership
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.Ownership
+- uid: TimeCockpit.Data.DataModel.StorageColumn.RelationTarget*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+  isExternal: false
+  name: RelationTarget
+  nameWithType: StorageColumn.RelationTarget
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.RelationTarget
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsString*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsString
+  isExternal: false
+  name: IsString
+  nameWithType: StorageColumn.IsString
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsString
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsBoolean*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+  isExternal: false
+  name: IsBoolean
+  nameWithType: StorageColumn.IsBoolean
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsBoolean
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsDecimal*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+  isExternal: false
+  name: IsDecimal
+  nameWithType: StorageColumn.IsDecimal
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsDecimal
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsDateTime*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+  isExternal: false
+  name: IsDateTime
+  nameWithType: StorageColumn.IsDateTime
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsDateTime
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsGuid*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+  isExternal: false
+  name: IsGuid
+  nameWithType: StorageColumn.IsGuid
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsGuid
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsBinary*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+  isExternal: false
+  name: IsBinary
+  nameWithType: StorageColumn.IsBinary
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsBinary
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+  isExternal: false
+  name: IsMaxSize
+  nameWithType: StorageColumn.IsMaxSize
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsMaxSize
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+  isExternal: false
+  name: IsSystemElement
+  nameWithType: StorageColumn.IsSystemElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsSystemElement
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+  isExternal: false
+  name: IsApplicationSpecificElement
+  nameWithType: StorageColumn.IsApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsUserElement*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+  isExternal: false
+  name: IsUserElement
+  nameWithType: StorageColumn.IsUserElement
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsUserElement
+- uid: TimeCockpit.Data.DataModel.ModelProperty
+  commentId: T:TimeCockpit.Data.DataModel.ModelProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelProperty
+  nameWithType: ModelProperty
+  fullName: TimeCockpit.Data.DataModel.ModelProperty
+- uid: TimeCockpit.Data.DataModel.Relation
+  commentId: T:TimeCockpit.Data.DataModel.Relation
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Relation
+  nameWithType: Relation
+  fullName: TimeCockpit.Data.DataModel.Relation
+- uid: TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+  isExternal: false
+  name: EntityObjectProperties
+  nameWithType: StorageColumn.EntityObjectProperties
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.EntityObjectProperties
+- uid: System.Collections.ObjectModel.Collection{System.String}
+  commentId: T:System.Collections.ObjectModel.Collection{System.String}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.Collection`1
+  name: Collection<String>
+  nameWithType: Collection<String>
+  fullName: System.Collections.ObjectModel.Collection<System.String>
+  nameWithType.vb: Collection(Of String)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of System.String)
+  name.vb: Collection(Of String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.Collection`1
+  commentId: T:System.Collections.ObjectModel.Collection`1
+  isExternal: true
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullName.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsRelation*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+  isExternal: false
+  name: IsRelation
+  nameWithType: StorageColumn.IsRelation
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsRelation
+- uid: TimeCockpit.Data.DataModel.StorageColumn.IsLocalized*
+  commentId: Overload:TimeCockpit.Data.DataModel.StorageColumn.IsLocalized
+  isExternal: false
+  name: IsLocalized
+  nameWithType: StorageColumn.IsLocalized
+  fullName: TimeCockpit.Data.DataModel.StorageColumn.IsLocalized

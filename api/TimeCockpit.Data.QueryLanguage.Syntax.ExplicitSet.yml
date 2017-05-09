@@ -1,0 +1,758 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  id: ExplicitSet
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression})
+  - TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  - TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+  langs:
+  - csharp
+  - vb
+  name: ExplicitSet
+  nameWithType: ExplicitSet
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  type: Class
+  source:
+    id: ExplicitSet
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\ExplicitSet.cs
+    startLine: 20
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nAST Node representing an explicit set definition, e.g.:\nin\n<pre><code>From X In Timesheet Where X.Description In ('Some Description', 'Some Other Description') Select X</code></pre>\nan instance of this node refers to \"('Some Description', 'Some Other Description')\".\n"
+  example: []
+  syntax:
+    content: 'public class ExplicitSet : Set'
+    content.vb: >-
+      Public Class ExplicitSet
+          Inherits
+
+           Set
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.QueryLanguage.Syntax.Node
+  - TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  - TimeCockpit.Data.QueryLanguage.Syntax.Set
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression})
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression})
+  id: '#ctor(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression})'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  langs:
+  - csharp
+  - vb
+  name: ExplicitSet(IEnumerable<Expression>)
+  nameWithType: ExplicitSet.ExplicitSet(IEnumerable<Expression>)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.ExplicitSet(System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.Syntax.Expression>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\ExplicitSet.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ExplicitSet(IEnumerable<Expression> elements)
+    parameters:
+    - id: elements
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+      description: The expressions producing the elements of the set.
+    content.vb: Public Sub New(elements As IEnumerable(Of Expression))
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor*
+  nameWithType.vb: ExplicitSet.ExplicitSet(IEnumerable(Of Expression))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.ExplicitSet(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.Syntax.Expression))
+  name.vb: ExplicitSet(IEnumerable(Of Expression))
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+  id: Elements
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  nameWithType: ExplicitSet.Elements
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+  type: Property
+  source:
+    id: Elements
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\ExplicitSet.cs
+    startLine: 39
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the expressions of the elements of the set.\n"
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<Expression> Elements { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+    content.vb: Public ReadOnly Property Elements As ReadOnlyCollection(Of Expression)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: ExplicitSet.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\ExplicitSet.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
+  example: []
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax
+  commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage.Syntax
+  nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Node
+  nameWithType: Node
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Expression
+  nameWithType: Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Set
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Set
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Set
+  nameWithType: Set
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Set
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: ExplicitSet
+  nameWithType: ExplicitSet
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.#ctor
+  isExternal: false
+  name: ExplicitSet
+  nameWithType: ExplicitSet.ExplicitSet
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.ExplicitSet
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Expression>
+  nameWithType: IEnumerable<Expression>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.Syntax.Expression>
+  nameWithType.vb: IEnumerable(Of Expression)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  name.vb: IEnumerable(Of Expression)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+  isExternal: false
+  name: Elements
+  nameWithType: ExplicitSet.Elements
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Elements
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{TimeCockpit.Data.QueryLanguage.Syntax.Expression}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  name: ReadOnlyCollection<Expression>
+  nameWithType: ReadOnlyCollection<Expression>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<TimeCockpit.Data.QueryLanguage.Syntax.Expression>
+  nameWithType.vb: ReadOnlyCollection(Of Expression)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  name.vb: ReadOnlyCollection(Of Expression)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    nameWithType: ReadOnlyCollection
+    fullName: System.Collections.ObjectModel.ReadOnlyCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  isExternal: false
+  name: VisitQuery(Query)
+  nameWithType: Visitor.VisitQuery(Query)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: false
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: ExplicitSet.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.ExplicitSet.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

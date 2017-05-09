@@ -1,0 +1,964 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Environment
+  commentId: T:TimeCockpit.Data.Environment
+  id: Environment
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.Environment.CurrentUser
+  - TimeCockpit.Data.Environment.GetNamedSet(System.String)
+  - TimeCockpit.Data.Environment.GlobalSettings
+  - TimeCockpit.Data.Environment.Item(System.String)
+  - TimeCockpit.Data.Environment.NamedSets
+  - TimeCockpit.Data.Environment.ParentContext
+  - TimeCockpit.Data.Environment.RefreshEveryQuerySets
+  - TimeCockpit.Data.Environment.RefreshLogonSets(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  - TimeCockpit.Data.Environment.TryGetNamedSet(System.String,TimeCockpit.Data.NamedSet@)
+  langs:
+  - csharp
+  - vb
+  name: Environment
+  nameWithType: Environment
+  fullName: TimeCockpit.Data.Environment
+  type: Class
+  source:
+    id: Environment
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 23
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRepresents the gateway to information that should be available throughout the \ndatalayer.\n"
+  remarks: "\nAn instance of <xref href=\"TimeCockpit.Data.Environment\" data-throw-if-not-resolved=\"false\"></xref> is attatched to an instance of a\n<xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>. That is, the <xref href=\"TimeCockpit.Data.Environment\" data-throw-if-not-resolved=\"false\"></xref> is not \nglobal for the application life time, but the life time of a corresponding <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public class Environment
+    content.vb: Public Class Environment
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  id: '#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)'
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: Environment(IDataContext, EntityObject)
+  nameWithType: Environment.Environment(IDataContext, EntityObject)
+  fullName: TimeCockpit.Data.Environment.Environment(TimeCockpit.Data.IDataContext, TimeCockpit.Data.EntityObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 56
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Environment\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Environment(IDataContext context, EntityObject currentUser)
+    parameters:
+    - id: context
+      type: TimeCockpit.Data.IDataContext
+      description: The parent <xref href="TimeCockpit.Data.DataContext" data-throw-if-not-resolved="false"></xref> to which the environment belongs.
+    - id: currentUser
+      type: TimeCockpit.Data.EntityObject
+      description: The current user under which the datacontext is running.
+    content.vb: Public Sub New(context As IDataContext, currentUser As EntityObject)
+  overload: TimeCockpit.Data.Environment.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.Environment.#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject)
+  id: '#ctor(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject)'
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: Environment(IDataContext, EntityObject, EntityObject)
+  nameWithType: Environment.Environment(IDataContext, EntityObject, EntityObject)
+  fullName: TimeCockpit.Data.Environment.Environment(TimeCockpit.Data.IDataContext, TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 68
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Environment\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Environment(IDataContext context, EntityObject currentUser, EntityObject globalSettings)
+    parameters:
+    - id: context
+      type: TimeCockpit.Data.IDataContext
+      description: The parent <xref href="TimeCockpit.Data.DataContext" data-throw-if-not-resolved="false"></xref> to which the environment belongs.
+    - id: currentUser
+      type: TimeCockpit.Data.EntityObject
+      description: The current user under which the datacontext is running.
+    - id: globalSettings
+      type: TimeCockpit.Data.EntityObject
+      description: The global settings.
+    content.vb: Public Sub New(context As IDataContext, currentUser As EntityObject, globalSettings As EntityObject)
+  overload: TimeCockpit.Data.Environment.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.CurrentUser
+  commentId: P:TimeCockpit.Data.Environment.CurrentUser
+  id: CurrentUser
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: CurrentUser
+  nameWithType: Environment.CurrentUser
+  fullName: TimeCockpit.Data.Environment.CurrentUser
+  type: Property
+  source:
+    id: CurrentUser
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the current user that uses the current instance of a \n<xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public EntityObject CurrentUser { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject
+    content.vb: Public ReadOnly Property CurrentUser As EntityObject
+  overload: TimeCockpit.Data.Environment.CurrentUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Environment.GlobalSettings
+  commentId: P:TimeCockpit.Data.Environment.GlobalSettings
+  id: GlobalSettings
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: GlobalSettings
+  nameWithType: Environment.GlobalSettings
+  fullName: TimeCockpit.Data.Environment.GlobalSettings
+  type: Property
+  source:
+    id: GlobalSettings
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 94
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the settings.\n"
+  example: []
+  syntax:
+    content: public EntityObject GlobalSettings { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject
+      description: "\nThe settings.\n"
+    content.vb: Public Property GlobalSettings As EntityObject
+  overload: TimeCockpit.Data.Environment.GlobalSettings*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.NamedSets
+  commentId: P:TimeCockpit.Data.Environment.NamedSets
+  id: NamedSets
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: NamedSets
+  nameWithType: Environment.NamedSets
+  fullName: TimeCockpit.Data.Environment.NamedSets
+  type: Property
+  source:
+    id: NamedSets
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 104
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the <xref href=\"TimeCockpit.Data.NamedSet\" data-throw-if-not-resolved=\"false\"></xref>s that exist in the current instance\n<xref href=\"TimeCockpit.Data.Environment\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IDictionary<string, NamedSet> NamedSets { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IDictionary{System.String,TimeCockpit.Data.NamedSet}
+    content.vb: Public Property NamedSets As IDictionary(Of String, NamedSet)
+  overload: TimeCockpit.Data.Environment.NamedSets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.ParentContext
+  commentId: P:TimeCockpit.Data.Environment.ParentContext
+  id: ParentContext
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: ParentContext
+  nameWithType: Environment.ParentContext
+  fullName: TimeCockpit.Data.Environment.ParentContext
+  type: Property
+  source:
+    id: ParentContext
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 114
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the parent context.\n"
+  example: []
+  syntax:
+    content: public IDataContext ParentContext { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.IDataContext
+      description: The parent context.
+    content.vb: Public Property ParentContext As IDataContext
+  overload: TimeCockpit.Data.Environment.ParentContext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.Item(System.String)
+  commentId: P:TimeCockpit.Data.Environment.Item(System.String)
+  id: Item(System.String)
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: Environment.Item[String]
+  fullName: TimeCockpit.Data.Environment.Item[System.String]
+  type: Property
+  source:
+    id: this[]
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the <xref href=\"System.Object\" data-throw-if-not-resolved=\"false\"></xref> with the specified property name.\n"
+  example: []
+  syntax:
+    content: public object this[string propertyName] { get; }
+    parameters:
+    - id: propertyName
+      type: System.String
+      description: The name of the member to get the value for.
+    return:
+      type: System.Object
+      description: Returns the value of the specified member.
+    content.vb: Public ReadOnly Property Item(propertyName As String) As Object
+  overload: TimeCockpit.Data.Environment.Item*
+  nameWithType.vb: Environment.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.Environment.Item(System.String)
+  name.vb: Item(String)
+- uid: TimeCockpit.Data.Environment.RefreshEveryQuerySets
+  commentId: M:TimeCockpit.Data.Environment.RefreshEveryQuerySets
+  id: RefreshEveryQuerySets
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: RefreshEveryQuerySets()
+  nameWithType: Environment.RefreshEveryQuerySets()
+  fullName: TimeCockpit.Data.Environment.RefreshEveryQuerySets()
+  type: Method
+  source:
+    id: RefreshEveryQuerySets
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 149
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRefreshes the every query sets.\n"
+  example: []
+  syntax:
+    content: public void RefreshEveryQuerySets()
+    content.vb: Public Sub RefreshEveryQuerySets
+  overload: TimeCockpit.Data.Environment.RefreshEveryQuerySets*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.TryGetNamedSet(System.String,TimeCockpit.Data.NamedSet@)
+  commentId: M:TimeCockpit.Data.Environment.TryGetNamedSet(System.String,TimeCockpit.Data.NamedSet@)
+  id: TryGetNamedSet(System.String,TimeCockpit.Data.NamedSet@)
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: TryGetNamedSet(String, out NamedSet)
+  nameWithType: Environment.TryGetNamedSet(String, out NamedSet)
+  fullName: TimeCockpit.Data.Environment.TryGetNamedSet(System.String, out TimeCockpit.Data.NamedSet)
+  type: Method
+  source:
+    id: TryGetNamedSet
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 186
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nTries the get named set.\n"
+  example: []
+  syntax:
+    content: public bool TryGetNamedSet(string name, out NamedSet namedSet)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the <xref href="TimeCockpit.Data.NamedSet" data-throw-if-not-resolved="false"></xref> to search for.
+    - id: namedSet
+      type: TimeCockpit.Data.NamedSet
+      description: The instance of <xref href="TimeCockpit.Data.NamedSet" data-throw-if-not-resolved="false"></xref> with the corresponding name.
+    return:
+      type: System.Boolean
+      description: true if the <xref href="TimeCockpit.Data.NamedSet" data-throw-if-not-resolved="false"></xref> with the name is found, else false
+    content.vb: Public Function TryGetNamedSet(name As String, ByRef namedSet As NamedSet) As Boolean
+  overload: TimeCockpit.Data.Environment.TryGetNamedSet*
+  nameWithType.vb: Environment.TryGetNamedSet(String, ByRef NamedSet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Environment.TryGetNamedSet(System.String, ByRef TimeCockpit.Data.NamedSet)
+  name.vb: TryGetNamedSet(String, ByRef NamedSet)
+- uid: TimeCockpit.Data.Environment.GetNamedSet(System.String)
+  commentId: M:TimeCockpit.Data.Environment.GetNamedSet(System.String)
+  id: GetNamedSet(System.String)
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: GetNamedSet(String)
+  nameWithType: Environment.GetNamedSet(String)
+  fullName: TimeCockpit.Data.Environment.GetNamedSet(System.String)
+  type: Method
+  source:
+    id: GetNamedSet
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 199
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGet named set.\n"
+  remarks: "\nIf the set with the name cannot be found, the method return null.\n"
+  example: []
+  syntax:
+    content: public NamedSet GetNamedSet(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the <xref href="TimeCockpit.Data.NamedSet" data-throw-if-not-resolved="false"></xref> to search for.
+    return:
+      type: TimeCockpit.Data.NamedSet
+      description: true if the <xref href="TimeCockpit.Data.NamedSet" data-throw-if-not-resolved="false"></xref> with the name is found, else false
+    content.vb: Public Function GetNamedSet(name As String) As NamedSet
+  overload: TimeCockpit.Data.Environment.GetNamedSet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Environment.RefreshLogonSets(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  commentId: M:TimeCockpit.Data.Environment.RefreshLogonSets(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  id: RefreshLogonSets(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  parent: TimeCockpit.Data.Environment
+  langs:
+  - csharp
+  - vb
+  name: RefreshLogonSets(DataContext, Environment)
+  nameWithType: Environment.RefreshLogonSets(DataContext, Environment)
+  fullName: TimeCockpit.Data.Environment.RefreshLogonSets(TimeCockpit.Data.DataContext, TimeCockpit.Data.Environment)
+  type: Method
+  source:
+    id: RefreshLogonSets
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Environment.cs
+    startLine: 211
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRefresh all (logon) named sets.\n"
+  example: []
+  syntax:
+    content: public void RefreshLogonSets(DataContext context, Environment environment)
+    parameters:
+    - id: context
+      type: TimeCockpit.Data.DataContext
+      description: Context to use for refresh.
+    - id: environment
+      type: TimeCockpit.Data.Environment
+      description: The environment.
+    content.vb: Public Sub RefreshLogonSets(context As DataContext, environment As Environment)
+  overload: TimeCockpit.Data.Environment.RefreshLogonSets*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.Environment
+  commentId: T:TimeCockpit.Data.Environment
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: Environment
+  nameWithType: Environment
+  fullName: TimeCockpit.Data.Environment
+- uid: TimeCockpit.Data.DataContext
+  commentId: T:TimeCockpit.Data.DataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DataContext
+  nameWithType: DataContext
+  fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Environment.#ctor*
+  commentId: Overload:TimeCockpit.Data.Environment.#ctor
+  isExternal: false
+  name: Environment
+  nameWithType: Environment.Environment
+  fullName: TimeCockpit.Data.Environment.Environment
+- uid: TimeCockpit.Data.IDataContext
+  commentId: T:TimeCockpit.Data.IDataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: IDataContext
+  nameWithType: IDataContext
+  fullName: TimeCockpit.Data.IDataContext
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data.Environment.CurrentUser*
+  commentId: Overload:TimeCockpit.Data.Environment.CurrentUser
+  isExternal: false
+  name: CurrentUser
+  nameWithType: Environment.CurrentUser
+  fullName: TimeCockpit.Data.Environment.CurrentUser
+- uid: TimeCockpit.Data.Environment.GlobalSettings*
+  commentId: Overload:TimeCockpit.Data.Environment.GlobalSettings
+  isExternal: false
+  name: GlobalSettings
+  nameWithType: Environment.GlobalSettings
+  fullName: TimeCockpit.Data.Environment.GlobalSettings
+- uid: TimeCockpit.Data.NamedSet
+  commentId: T:TimeCockpit.Data.NamedSet
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: NamedSet
+  nameWithType: NamedSet
+  fullName: TimeCockpit.Data.NamedSet
+- uid: TimeCockpit.Data.Environment.NamedSets*
+  commentId: Overload:TimeCockpit.Data.Environment.NamedSets
+  isExternal: false
+  name: NamedSets
+  nameWithType: Environment.NamedSets
+  fullName: TimeCockpit.Data.Environment.NamedSets
+- uid: System.Collections.Generic.IDictionary{System.String,TimeCockpit.Data.NamedSet}
+  commentId: T:System.Collections.Generic.IDictionary{System.String,TimeCockpit.Data.NamedSet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IDictionary`2
+  name: IDictionary<String, NamedSet>
+  nameWithType: IDictionary<String, NamedSet>
+  fullName: System.Collections.Generic.IDictionary<System.String, TimeCockpit.Data.NamedSet>
+  nameWithType.vb: IDictionary(Of String, NamedSet)
+  fullName.vb: System.Collections.Generic.IDictionary(Of System.String, TimeCockpit.Data.NamedSet)
+  name.vb: IDictionary(Of String, NamedSet)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.NamedSet
+    name: NamedSet
+    nameWithType: NamedSet
+    fullName: TimeCockpit.Data.NamedSet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.NamedSet
+    name: NamedSet
+    nameWithType: NamedSet
+    fullName: TimeCockpit.Data.NamedSet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Environment.ParentContext*
+  commentId: Overload:TimeCockpit.Data.Environment.ParentContext
+  isExternal: false
+  name: ParentContext
+  nameWithType: Environment.ParentContext
+  fullName: TimeCockpit.Data.Environment.ParentContext
+- uid: TimeCockpit.Data.Environment.Item*
+  commentId: Overload:TimeCockpit.Data.Environment.Item
+  isExternal: false
+  name: Item
+  nameWithType: Environment.Item
+  fullName: TimeCockpit.Data.Environment.Item
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Environment.RefreshEveryQuerySets*
+  commentId: Overload:TimeCockpit.Data.Environment.RefreshEveryQuerySets
+  isExternal: false
+  name: RefreshEveryQuerySets
+  nameWithType: Environment.RefreshEveryQuerySets
+  fullName: TimeCockpit.Data.Environment.RefreshEveryQuerySets
+- uid: TimeCockpit.Data.Environment.TryGetNamedSet*
+  commentId: Overload:TimeCockpit.Data.Environment.TryGetNamedSet
+  isExternal: false
+  name: TryGetNamedSet
+  nameWithType: Environment.TryGetNamedSet
+  fullName: TimeCockpit.Data.Environment.TryGetNamedSet
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.Environment.GetNamedSet*
+  commentId: Overload:TimeCockpit.Data.Environment.GetNamedSet
+  isExternal: false
+  name: GetNamedSet
+  nameWithType: Environment.GetNamedSet
+  fullName: TimeCockpit.Data.Environment.GetNamedSet
+- uid: TimeCockpit.Data.Environment.RefreshLogonSets*
+  commentId: Overload:TimeCockpit.Data.Environment.RefreshLogonSets
+  isExternal: false
+  name: RefreshLogonSets
+  nameWithType: Environment.RefreshLogonSets
+  fullName: TimeCockpit.Data.Environment.RefreshLogonSets

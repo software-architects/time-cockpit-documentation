@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  commentId: T:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  id: ImportEngine.SaveReportCallback
+  parent: TimeCockpit.Data.Import
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ImportEngine.SaveReportCallback
+  nameWithType: ImportEngine.SaveReportCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  type: Delegate
+  source:
+    id: SaveReportCallback
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportEngine.cs
+    startLine: 102
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\ncallback used to indicate the import has finished and the report should be saved.\n"
+  example: []
+  syntax:
+    content: public delegate void SaveReportCallback(ImportEngine source, byte[] reportData, string reportMimeType, byte[] sourceData, string sourceMimeType);
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Import.ImportEngine
+      description: the import engine producing the event.
+    - id: reportData
+      type: System.Byte[]
+      description: the report data produced.
+    - id: reportMimeType
+      type: System.String
+      description: the mime type of the report.
+    - id: sourceData
+      type: System.Byte[]
+      description: the source data.
+    - id: sourceMimeType
+      type: System.String
+      description: the mime type of the source data.
+    content.vb: Public Delegate Sub SaveReportCallback(source As ImportEngine, reportData As Byte(), reportMimeType As String, sourceData As Byte(), sourceMimeType As String)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: TimeCockpit.Data.Import.ImportEngine
+  commentId: T:TimeCockpit.Data.Import.ImportEngine
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportEngine
+  nameWithType: ImportEngine
+  fullName: TimeCockpit.Data.Import.ImportEngine
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

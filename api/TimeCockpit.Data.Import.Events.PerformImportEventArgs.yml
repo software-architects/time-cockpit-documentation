@@ -1,0 +1,1213 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  commentId: T:TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  id: PerformImportEventArgs
+  parent: TimeCockpit.Data.Import.Events
+  children:
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  langs:
+  - csharp
+  - vb
+  name: PerformImportEventArgs
+  nameWithType: PerformImportEventArgs
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  type: Class
+  source:
+    id: PerformImportEventArgs
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 15
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nEvent arguments passed to the perform import event.\n"
+  example: []
+  syntax:
+    content: public class PerformImportEventArgs
+    content.vb: Public Class PerformImportEventArgs
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
+  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
+  id: '#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})'
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, Action<String, Int64, Int64>)
+  nameWithType: PerformImportEventArgs.PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, Action<String, Int64, Int64>)
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte[], System.String, System.Boolean, System.String, System.Guid, System.Nullable<System.Guid>, System.Action, TimeCockpit.Data.DataContext, System.Action<System.String, System.Int64, System.Int64>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 30
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Import.Events.PerformImportEventArgs\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public PerformImportEventArgs(string definition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, string definitionName, Guid importTaskId, Guid? definitionId = null, Action completed = null, DataContext targetDataContext = null, Action<string, long, long> progress = null)
+    parameters:
+    - id: definition
+      type: System.String
+      description: the import definition
+    - id: sourceData
+      type: System.Byte[]
+      description: the source data to import from (the raw file data).
+    - id: sourceFileName
+      type: System.String
+      description: The name of the source file name.
+    - id: saveOnSuccess
+      type: System.Boolean
+      description: true if the imported entity objects should be imported immediately.
+    - id: definitionName
+      type: System.String
+      description: name of the definition to import.
+    - id: importTaskId
+      type: System.Guid
+      description: id of the associated import task.
+    - id: definitionId
+      type: System.Nullable{System.Guid}
+      description: the guid of the definition, or null if none was used.
+    - id: completed
+      type: System.Action
+      description: Action to be called when the import succeeded.
+    - id: targetDataContext
+      type: TimeCockpit.Data.DataContext
+      description: the target data context, null if the default should be used.
+    - id: progress
+      type: System.Action{System.String,System.Int64,System.Int64}
+      description: progress handler.
+    content.vb: Public Sub New(definition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, definitionName As String, importTaskId As Guid, definitionId As Guid? = Nothing, completed As Action = Nothing, targetDataContext As DataContext = Nothing, progress As Action(Of String, Long, Long) = Nothing)
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor*
+  nameWithType.vb: PerformImportEventArgs.PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, Action(Of String, Int64, Int64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte(), System.String, System.Boolean, System.String, System.Guid, System.Nullable(Of System.Guid), System.Action, TimeCockpit.Data.DataContext, System.Action(Of System.String, System.Int64, System.Int64))
+  name.vb: PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, Action(Of String, Int64, Int64))
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+  id: TargetDataContext
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: TargetDataContext
+  nameWithType: PerformImportEventArgs.TargetDataContext
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+  type: Property
+  source:
+    id: TargetDataContext
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 47
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the target data context.\n"
+  example: []
+  syntax:
+    content: public DataContext TargetDataContext { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataContext
+    content.vb: Public ReadOnly Property TargetDataContext As DataContext
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+  id: Definition
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Definition
+  nameWithType: PerformImportEventArgs.Definition
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+  type: Property
+  source:
+    id: Definition
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 56
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the definition used for the import.\n"
+  example: []
+  syntax:
+    content: public string Definition { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Definition As String
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+  id: SourceData
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SourceData
+  nameWithType: PerformImportEventArgs.SourceData
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+  type: Property
+  source:
+    id: SourceData
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 65
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the source data that should be imported.\n"
+  example: []
+  syntax:
+    content: public byte[] SourceData { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property SourceData As Byte()
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+  id: SourceFileName
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SourceFileName
+  nameWithType: PerformImportEventArgs.SourceFileName
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+  type: Property
+  source:
+    id: SourceFileName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 74
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the name of the source file.\n"
+  example: []
+  syntax:
+    content: public string SourceFileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SourceFileName As String
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+  id: SaveOnSucess
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SaveOnSucess
+  nameWithType: PerformImportEventArgs.SaveOnSucess
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+  type: Property
+  source:
+    id: SaveOnSucess
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 83
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets a value indicating whether the items should be saved upon success of an import.\n"
+  example: []
+  syntax:
+    content: public bool SaveOnSucess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property SaveOnSucess As Boolean
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+  id: DefinitionName
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DefinitionName
+  nameWithType: PerformImportEventArgs.DefinitionName
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+  type: Property
+  source:
+    id: DefinitionName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 92
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the name of the definition to import.\n"
+  example: []
+  syntax:
+    content: public string DefinitionName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property DefinitionName As String
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+  id: ImportTaskId
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ImportTaskId
+  nameWithType: PerformImportEventArgs.ImportTaskId
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+  type: Property
+  source:
+    id: ImportTaskId
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 101
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the guid of the import task.\n"
+  example: []
+  syntax:
+    content: public Guid ImportTaskId { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property ImportTaskId As Guid
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+  id: DefinitionId
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DefinitionId
+  nameWithType: PerformImportEventArgs.DefinitionId
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+  type: Property
+  source:
+    id: DefinitionId
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 110
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the DefinitionId\n"
+  example: []
+  syntax:
+    content: public Guid? DefinitionId { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Guid}
+    content.vb: Public ReadOnly Property DefinitionId As Guid?
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+  id: Completed
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: PerformImportEventArgs.Completed
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+  type: Property
+  source:
+    id: Completed
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 119
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the action to be called when the import is completed.\n"
+  example: []
+  syntax:
+    content: public Action Completed { get; }
+    parameters: []
+    return:
+      type: System.Action
+    content.vb: Public ReadOnly Property Completed As Action
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+  id: Progress
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Progress
+  nameWithType: PerformImportEventArgs.Progress
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+  type: Property
+  source:
+    id: Progress
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 128
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nGets the action to be called when the import proceeds.\n"
+  example: []
+  syntax:
+    content: public Action<string, long, long> Progress { get; }
+    parameters: []
+    return:
+      type: System.Action{System.String,System.Int64,System.Int64}
+    content.vb: Public ReadOnly Property Progress As Action(Of String, Long, Long)
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
+  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
+  id: Read(Newtonsoft.Json.JsonReader)
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Read(JsonReader)
+  nameWithType: PerformImportEventArgs.Read(JsonReader)
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
+  type: Method
+  source:
+    id: Read
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 139
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nReats the perform import event args from \n"
+  example: []
+  syntax:
+    content: public static PerformImportEventArgs Read(JsonReader reader)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+      description: the reader to read the event args from.
+    return:
+      type: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+      description: returns a new import event args object containing the deserialized data.
+    content.vb: Public Shared Function Read(reader As JsonReader) As PerformImportEventArgs
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, PerformImportEventArgs)
+  nameWithType: PerformImportEventArgs.Write(JsonWriter, PerformImportEventArgs)
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  type: Method
+  source:
+    id: Write
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\Events\PerformImportEventArgs.cs
+    startLine: 206
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  summary: "\nWrites the event args to a json writer.\n"
+  example: []
+  syntax:
+    content: public static void Write(JsonWriter writer, PerformImportEventArgs eventArgs)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+      description: The writer.
+    - id: eventArgs
+      type: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+      description: the event args to import.
+    content.vb: Public Shared Sub Write(writer As JsonWriter, eventArgs As PerformImportEventArgs)
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.Import.Events
+  commentId: N:TimeCockpit.Data.Import.Events
+  isExternal: false
+  name: TimeCockpit.Data.Import.Events
+  nameWithType: TimeCockpit.Data.Import.Events
+  fullName: TimeCockpit.Data.Import.Events
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  commentId: T:TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  parent: TimeCockpit.Data.Import.Events
+  isExternal: false
+  name: PerformImportEventArgs
+  nameWithType: PerformImportEventArgs
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor
+  isExternal: false
+  name: PerformImportEventArgs
+  nameWithType: PerformImportEventArgs.PerformImportEventArgs
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<System.Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of System.Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: TimeCockpit.Data.DataContext
+  commentId: T:TimeCockpit.Data.DataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DataContext
+  nameWithType: DataContext
+  fullName: TimeCockpit.Data.DataContext
+- uid: System.Action{System.String,System.Int64,System.Int64}
+  commentId: T:System.Action{System.String,System.Int64,System.Int64}
+  parent: System
+  definition: System.Action`3
+  name: Action<String, Int64, Int64>
+  nameWithType: Action<String, Int64, Int64>
+  fullName: System.Action<System.String, System.Int64, System.Int64>
+  nameWithType.vb: Action(Of String, Int64, Int64)
+  fullName.vb: System.Action(Of System.String, System.Int64, System.Int64)
+  name.vb: Action(Of String, Int64, Int64)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+  isExternal: false
+  name: TargetDataContext
+  nameWithType: PerformImportEventArgs.TargetDataContext
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+  isExternal: false
+  name: Definition
+  nameWithType: PerformImportEventArgs.Definition
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+  isExternal: false
+  name: SourceData
+  nameWithType: PerformImportEventArgs.SourceData
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+  isExternal: false
+  name: SourceFileName
+  nameWithType: PerformImportEventArgs.SourceFileName
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+  isExternal: false
+  name: SaveOnSucess
+  nameWithType: PerformImportEventArgs.SaveOnSucess
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+  isExternal: false
+  name: DefinitionName
+  nameWithType: PerformImportEventArgs.DefinitionName
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+  isExternal: false
+  name: ImportTaskId
+  nameWithType: PerformImportEventArgs.ImportTaskId
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+  isExternal: false
+  name: DefinitionId
+  nameWithType: PerformImportEventArgs.DefinitionId
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+  isExternal: false
+  name: Completed
+  nameWithType: PerformImportEventArgs.Completed
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+  isExternal: false
+  name: Progress
+  nameWithType: PerformImportEventArgs.Progress
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read
+  isExternal: false
+  name: Read
+  nameWithType: PerformImportEventArgs.Read
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read
+- uid: Newtonsoft.Json.JsonReader
+  commentId: T:Newtonsoft.Json.JsonReader
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: Newtonsoft.Json.JsonReader
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: false
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write
+  isExternal: false
+  name: Write
+  nameWithType: PerformImportEventArgs.Write
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write
+- uid: Newtonsoft.Json.JsonWriter
+  commentId: T:Newtonsoft.Json.JsonWriter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: Newtonsoft.Json.JsonWriter

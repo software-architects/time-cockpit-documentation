@@ -1,0 +1,1376 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler
+  commentId: T:TimeCockpit.Data.DataModel.ExpressionCompiler
+  id: ExpressionCompiler
+  parent: TimeCockpit.Data.DataModel
+  children:
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree(System.String)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String,TimeCockpit.Data.Environment,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember``1(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment,``0)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType(System.String,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter})
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.Validate``2(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.String,System.String,TimeCockpit.Data.DataModel.ModelElement,System.Type,System.Boolean)
+  - TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ExpressionCompiler
+  nameWithType: ExpressionCompiler
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler
+  type: Class
+  source:
+    id: ExpressionCompiler
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 28
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRepresents a class that is able to compile TCQL expressions into either abstract syntax tree or expression trees.\nFurther this class provides methods to translate TCQL expressions into executable code.\n"
+  example: []
+  syntax:
+    content: public static class ExpressionCompiler
+    content.vb: Public Module ExpressionCompiler
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree(System.String)
+  id: BuildSyntaxTree(System.String)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: BuildSyntaxTree(String)
+  nameWithType: ExpressionCompiler.BuildSyntaxTree(String)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree(System.String)
+  type: Method
+  source:
+    id: BuildSyntaxTree
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 35
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the abstract syntax tree for a specified expression\n"
+  example: []
+  syntax:
+    content: public static IAstNode BuildSyntaxTree(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: the expression to build the abstract syntax tree for
+    return:
+      type: TimeCockpit.Data.QueryLanguage.IAstNode
+      description: an instance of <xref href="TimeCockpit.Data.QueryLanguage.IAstNode" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Shared Function BuildSyntaxTree(expression As String) As IAstNode
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression(System.String)
+  id: ValidateExpression(System.String)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: ValidateExpression(String)
+  nameWithType: ExpressionCompiler.ValidateExpression(String)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression(System.String)
+  type: Method
+  source:
+    id: ValidateExpression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 55
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nParses an expression and validates it.\n"
+  example: []
+  syntax:
+    content: public static void ValidateExpression(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The string expression to parse
+    content.vb: Public Shared Sub ValidateExpression(expression As String)
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression*
+  exceptions:
+  - type: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+    commentId: T:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+    description: "\nThrown if the expression is syntactically incorrect.\n"
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate``2(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.String,System.String,TimeCockpit.Data.DataModel.ModelElement,System.Type,System.Boolean)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.Validate``2(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.String,System.String,TimeCockpit.Data.DataModel.ModelElement,System.Type,System.Boolean)
+  id: Validate``2(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.String,System.String,TimeCockpit.Data.DataModel.ModelElement,System.Type,System.Boolean)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: Validate<T1, T2>(ref IList<PropertyValidationMessage>, String, String, ModelElement, Type, Boolean)
+  nameWithType: ExpressionCompiler.Validate<T1, T2>(ref IList<PropertyValidationMessage>, String, String, ModelElement, Type, Boolean)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate<T1, T2>(ref System.Collections.Generic.IList<TimeCockpit.Data.DataModel.PropertyValidationMessage>, System.String, System.String, TimeCockpit.Data.DataModel.ModelElement, System.Type, System.Boolean)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 74
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nValidates the specified messages.\n"
+  example: []
+  syntax:
+    content: 'public static T1 Validate<T1, T2>(ref IList<PropertyValidationMessage> messages, string propertyName, string expression, ModelElement element, Type expectedDataType, bool isEnvironmentalizedExpression)where T1 : CompiledExpressionBase<T2>'
+    parameters:
+    - id: messages
+      type: System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}
+      description: The validation messages collected by the method.
+    - id: propertyName
+      type: System.String
+      description: Name of the property that is validated.
+    - id: expression
+      type: System.String
+      description: The expression that is validated.
+    - id: element
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: The modelelement that contains the expression.
+    - id: expectedDataType
+      type: System.Type
+      description: The expected datatype.
+    - id: isEnvironmentalizedExpression
+      type: System.Boolean
+      description: if set to <code>true</code> [is environmentalized expression].
+    typeParameters:
+    - id: T1
+      description: The type of the 1.
+    - id: T2
+      description: The type of the 2.
+    return:
+      type: '{T1}'
+      description: "\nAn <xref href=\"TimeCockpit.Data.QueryLanguage.CompiledExpressionBase%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+    content.vb: Public Shared Function Validate(Of T1 As CompiledExpressionBase(Of T2), T2)(ByRef messages As IList(Of PropertyValidationMessage), propertyName As String, expression As String, element As ModelElement, expectedDataType As Type, isEnvironmentalizedExpression As Boolean) As T1
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate*
+  nameWithType.vb: ExpressionCompiler.Validate(Of T1, T2)(ByRef IList(Of PropertyValidationMessage), String, String, ModelElement, Type, Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate(Of T1, T2)(ByRef System.Collections.Generic.IList(Of TimeCockpit.Data.DataModel.PropertyValidationMessage), System.String, System.String, TimeCockpit.Data.DataModel.ModelElement, System.Type, System.Boolean)
+  name.vb: Validate(Of T1, T2)(ByRef IList(Of PropertyValidationMessage), String, String, ModelElement, Type, Boolean)
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String)
+  id: GetParticipatingMembers(System.String)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: GetParticipatingMembers(String)
+  nameWithType: ExpressionCompiler.GetParticipatingMembers(String)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String)
+  type: Method
+  source:
+    id: GetParticipatingMembers
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 191
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the properties that are targeted by a Condition\n"
+  example: []
+  syntax:
+    content: public static List<string> GetParticipatingMembers(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: the expression to build the abstract syntax tree for
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: an IEnumerable of property names
+    content.vb: Public Shared Function GetParticipatingMembers(expression As String) As List(Of String)
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  id: GetParticipatingMembers(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: GetParticipatingMembers(String, ModelElement)
+  nameWithType: ExpressionCompiler.GetParticipatingMembers(String, ModelElement)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers(System.String, TimeCockpit.Data.DataModel.ModelElement)
+  type: Method
+  source:
+    id: GetParticipatingMembers
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 202
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the properties that are targeted by a Condition\n"
+  example: []
+  syntax:
+    content: public static List<string> GetParticipatingMembers(string expression, ModelElement element)
+    parameters:
+    - id: expression
+      type: System.String
+      description: the expression to build the abstract syntax tree for
+    - id: element
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: a model element to validate against
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: an IEnumerable of property names
+    content.vb: Public Shared Function GetParticipatingMembers(expression As String, element As ModelElement) As List(Of String)
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  id: GetParticipatingProperties(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: GetParticipatingProperties(String, ModelElement)
+  nameWithType: ExpressionCompiler.GetParticipatingProperties(String, ModelElement)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties(System.String, TimeCockpit.Data.DataModel.ModelElement)
+  type: Method
+  source:
+    id: GetParticipatingProperties
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 213
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the properties that are targeted by a Condition\n"
+  example: []
+  syntax:
+    content: public static IEnumerable<IAstMemberAccessNode> GetParticipatingProperties(string expression, ModelElement element)
+    parameters:
+    - id: expression
+      type: System.String
+      description: the expression to build the abstract syntax tree for
+    - id: element
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: a model element to validate against
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode}
+      description: an IEnumerable of property names
+    content.vb: Public Shared Function GetParticipatingProperties(expression As String, element As ModelElement) As IEnumerable(Of IAstMemberAccessNode)
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  id: GetParticipatingRelations(System.String,TimeCockpit.Data.DataModel.ModelElement)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: GetParticipatingRelations(String, ModelElement)
+  nameWithType: ExpressionCompiler.GetParticipatingRelations(String, ModelElement)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations(System.String, TimeCockpit.Data.DataModel.ModelElement)
+  type: Method
+  source:
+    id: GetParticipatingRelations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 224
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the relations that are targeted by a Condition\n"
+  example: []
+  syntax:
+    content: public static List<string> GetParticipatingRelations(string expression, ModelElement element)
+    parameters:
+    - id: expression
+      type: System.String
+      description: the expression to build the abstract syntax tree for
+    - id: element
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: a model element to validate against
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: an IEnumerable of relation names
+    content.vb: Public Shared Function GetParticipatingRelations(expression As String, element As ModelElement) As List(Of String)
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String)
+  id: Evaluate``1(System.String)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: Evaluate<T>(String)
+  nameWithType: ExpressionCompiler.Evaluate<T>(String)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate<T>(System.String)
+  type: Method
+  source:
+    id: Evaluate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 235
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nEvaluates the specified expression.\n"
+  example: []
+  syntax:
+    content: public static T Evaluate<T>(string expression)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The expression.
+    typeParameters:
+    - id: T
+      description: The return type of the method.
+    return:
+      type: '{T}'
+      description: A value that the expression resulted in.
+    content.vb: Public Shared Function Evaluate(Of T)(expression As String) As T
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate*
+  nameWithType.vb: ExpressionCompiler.Evaluate(Of T)(String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate(Of T)(System.String)
+  name.vb: Evaluate(Of T)(String)
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String,TimeCockpit.Data.Environment,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate``1(System.String,TimeCockpit.Data.Environment,TimeCockpit.Data.EntityObject)
+  id: Evaluate``1(System.String,TimeCockpit.Data.Environment,TimeCockpit.Data.EntityObject)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: Evaluate<T>(String, Environment, EntityObject)
+  nameWithType: ExpressionCompiler.Evaluate<T>(String, Environment, EntityObject)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate<T>(System.String, TimeCockpit.Data.Environment, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: Evaluate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 248
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nEvaluates the specified expression.\n"
+  example: []
+  syntax:
+    content: public static T Evaluate<T>(string expression, Environment environment, EntityObject current = null)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The expression.
+    - id: environment
+      type: TimeCockpit.Data.Environment
+      description: (Optional) current entity object.
+    - id: current
+      type: TimeCockpit.Data.EntityObject
+      description: The environment.
+    typeParameters:
+    - id: T
+      description: The return type of the method.
+    return:
+      type: '{T}'
+      description: A value that the expression resulted in.
+    content.vb: Public Shared Function Evaluate(Of T)(expression As String, environment As Environment, current As EntityObject = Nothing) As T
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate*
+  nameWithType.vb: ExpressionCompiler.Evaluate(Of T)(String, Environment, EntityObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate(Of T)(System.String, TimeCockpit.Data.Environment, TimeCockpit.Data.EntityObject)
+  name.vb: Evaluate(Of T)(String, Environment, EntityObject)
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember``1(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment,``0)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember``1(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment,``0)
+  id: EvaluateExpressionMember``1(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment,``0)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateExpressionMember<T>(EntityObject, String, Environment, T)
+  nameWithType: ExpressionCompiler.EvaluateExpressionMember<T>(EntityObject, String, Environment, T)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember<T>(TimeCockpit.Data.EntityObject, System.String, TimeCockpit.Data.Environment, T)
+  type: Method
+  source:
+    id: EvaluateExpressionMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 263
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nEvaluates the specified expression.\n"
+  example: []
+  syntax:
+    content: public static T EvaluateExpressionMember<T>(EntityObject source, string propertyName, Environment environment, T fallbackValue)
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.EntityObject
+      description: The source entity object.
+    - id: propertyName
+      type: System.String
+      description: The expression to evaluate.
+    - id: environment
+      type: TimeCockpit.Data.Environment
+      description: The environment to evaluate against.
+    - id: fallbackValue
+      type: '{T}'
+      description: The fallback value if something goes wrong.
+    typeParameters:
+    - id: T
+      description: The type of the result.
+    return:
+      type: '{T}'
+      description: Returns the result of the evaluated expression, or the fallbackvalue if something goes wrong.
+    content.vb: Public Shared Function EvaluateExpressionMember(Of T)(source As EntityObject, propertyName As String, environment As Environment, fallbackValue As T) As T
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember*
+  nameWithType.vb: ExpressionCompiler.EvaluateExpressionMember(Of T)(EntityObject, String, Environment, T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember(Of T)(TimeCockpit.Data.EntityObject, System.String, TimeCockpit.Data.Environment, T)
+  name.vb: EvaluateExpressionMember(Of T)(EntityObject, String, Environment, T)
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType(System.String,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter})
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType(System.String,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter})
+  id: EvaluateResultType(System.String,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter})
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateResultType(String, ModelEntityBase, Model, IEnumerable<QueryParameter>)
+  nameWithType: ExpressionCompiler.EvaluateResultType(String, ModelEntityBase, Model, IEnumerable<QueryParameter>)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>)
+  type: Method
+  source:
+    id: EvaluateResultType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 289
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the resulting CLR type of an expression.\n"
+  example: []
+  syntax:
+    content: public static Type EvaluateResultType(string expression, ModelEntityBase current, Model model, IEnumerable<QueryParameter> parameters = null)
+    parameters:
+    - id: expression
+      type: System.String
+      description: The TCQL expression.
+    - id: current
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: The ModelEntity representing the Current entity.
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+      description: The model.
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+      description: The query parameters.
+    return:
+      type: System.Type
+      description: Returns the clr type produced by such an expression.
+    content.vb: Public Shared Function EvaluateResultType(expression As String, current As ModelEntityBase, model As Model, parameters As IEnumerable(Of QueryParameter) = Nothing) As Type
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType*
+  nameWithType.vb: ExpressionCompiler.EvaluateResultType(String, ModelEntityBase, Model, IEnumerable(Of QueryParameter))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter))
+  name.vb: EvaluateResultType(String, ModelEntityBase, Model, IEnumerable(Of QueryParameter))
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment)
+  commentId: M:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment)
+  id: EvaluateOptionalExpression(TimeCockpit.Data.EntityObject,System.String,TimeCockpit.Data.Environment)
+  parent: TimeCockpit.Data.DataModel.ExpressionCompiler
+  langs:
+  - csharp
+  - vb
+  name: EvaluateOptionalExpression(EntityObject, String, Environment)
+  nameWithType: ExpressionCompiler.EvaluateOptionalExpression(EntityObject, String, Environment)
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression(TimeCockpit.Data.EntityObject, System.String, TimeCockpit.Data.Environment)
+  type: Method
+  source:
+    id: EvaluateOptionalExpression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ExpressionCompiler.cs
+    startLine: 302
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nreturns a field, evaluating the value of the field if it starts with a = and represents an expression.\n"
+  example: []
+  syntax:
+    content: public static object EvaluateOptionalExpression(EntityObject eo, string propertyName, Environment environment)
+    parameters:
+    - id: eo
+      type: TimeCockpit.Data.EntityObject
+      description: The source entity object.
+    - id: propertyName
+      type: System.String
+      description: The name of the property.
+    - id: environment
+      type: TimeCockpit.Data.Environment
+      description: The environment to use for evaluating.
+    return:
+      type: System.Object
+      description: Returns the result of the expression if it is an expression, the value of the property otherwise.
+    content.vb: Public Shared Function EvaluateOptionalExpression(eo As EntityObject, propertyName As String, environment As Environment) As Object
+  overload: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.IAstNode
+  commentId: T:TimeCockpit.Data.QueryLanguage.IAstNode
+  parent: TimeCockpit.Data.QueryLanguage
+  isExternal: false
+  name: IAstNode
+  nameWithType: IAstNode
+  fullName: TimeCockpit.Data.QueryLanguage.IAstNode
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree
+  isExternal: false
+  name: BuildSyntaxTree
+  nameWithType: ExpressionCompiler.BuildSyntaxTree
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.BuildSyntaxTree
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.QueryLanguage
+  commentId: N:TimeCockpit.Data.QueryLanguage
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage
+  nameWithType: TimeCockpit.Data.QueryLanguage
+  fullName: TimeCockpit.Data.QueryLanguage
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression
+  isExternal: false
+  name: ValidateExpression
+  nameWithType: ExpressionCompiler.ValidateExpression
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.ValidateExpression
+- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+  commentId: T:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+  isExternal: false
+  name: AbstractSyntaxException
+  nameWithType: AbstractSyntaxException
+  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+- uid: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase`1
+  commentId: T:TimeCockpit.Data.QueryLanguage.CompiledExpressionBase`1
+  isExternal: false
+  name: CompiledExpressionBase<T>
+  nameWithType: CompiledExpressionBase<T>
+  fullName: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase<T>
+  nameWithType.vb: CompiledExpressionBase(Of T)
+  fullName.vb: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase(Of T)
+  name.vb: CompiledExpressionBase(Of T)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase`1
+    name: CompiledExpressionBase
+    nameWithType: CompiledExpressionBase
+    fullName: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase`1
+    name: CompiledExpressionBase
+    nameWithType: CompiledExpressionBase
+    fullName: TimeCockpit.Data.QueryLanguage.CompiledExpressionBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.Validate
+  isExternal: false
+  name: Validate
+  nameWithType: ExpressionCompiler.Validate
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.Validate
+- uid: System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}
+  commentId: T:System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<PropertyValidationMessage>
+  nameWithType: IList<PropertyValidationMessage>
+  fullName: System.Collections.Generic.IList<TimeCockpit.Data.DataModel.PropertyValidationMessage>
+  nameWithType.vb: IList(Of PropertyValidationMessage)
+  fullName.vb: System.Collections.Generic.IList(Of TimeCockpit.Data.DataModel.PropertyValidationMessage)
+  name.vb: IList(Of PropertyValidationMessage)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    name: PropertyValidationMessage
+    nameWithType: PropertyValidationMessage
+    fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    name: PropertyValidationMessage
+    nameWithType: PropertyValidationMessage
+    fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelElement
+  commentId: T:TimeCockpit.Data.DataModel.ModelElement
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelElement
+  nameWithType: ModelElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: '{T1}'
+  commentId: '!:T1'
+  definition: T1
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: T1
+  commentId: '!:T1'
+  isExternal: false
+  name: T1
+  nameWithType: T1
+  fullName: T1
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers
+  isExternal: false
+  name: GetParticipatingMembers
+  nameWithType: ExpressionCompiler.GetParticipatingMembers
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingMembers
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties
+  isExternal: false
+  name: GetParticipatingProperties
+  nameWithType: ExpressionCompiler.GetParticipatingProperties
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingProperties
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<IAstMemberAccessNode>
+  nameWithType: IEnumerable<IAstMemberAccessNode>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode>
+  nameWithType.vb: IEnumerable(Of IAstMemberAccessNode)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode)
+  name.vb: IEnumerable(Of IAstMemberAccessNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode
+    name: IAstMemberAccessNode
+    nameWithType: IAstMemberAccessNode
+    fullName: TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode
+    name: IAstMemberAccessNode
+    nameWithType: IAstMemberAccessNode
+    fullName: TimeCockpit.Data.QueryLanguage.IAstMemberAccessNode
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations
+  isExternal: false
+  name: GetParticipatingRelations
+  nameWithType: ExpressionCompiler.GetParticipatingRelations
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.GetParticipatingRelations
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate
+  isExternal: false
+  name: Evaluate
+  nameWithType: ExpressionCompiler.Evaluate
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.Evaluate
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TimeCockpit.Data.Environment
+  commentId: T:TimeCockpit.Data.Environment
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: Environment
+  nameWithType: Environment
+  fullName: TimeCockpit.Data.Environment
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember
+  isExternal: false
+  name: EvaluateExpressionMember
+  nameWithType: ExpressionCompiler.EvaluateExpressionMember
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateExpressionMember
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType
+  isExternal: false
+  name: EvaluateResultType
+  nameWithType: ExpressionCompiler.EvaluateResultType
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateResultType
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<QueryParameter>
+  nameWithType: IEnumerable<QueryParameter>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>
+  nameWithType.vb: IEnumerable(Of QueryParameter)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter)
+  name.vb: IEnumerable(Of QueryParameter)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression*
+  commentId: Overload:TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression
+  isExternal: false
+  name: EvaluateOptionalExpression
+  nameWithType: ExpressionCompiler.EvaluateOptionalExpression
+  fullName: TimeCockpit.Data.DataModel.ExpressionCompiler.EvaluateOptionalExpression

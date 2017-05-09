@@ -1,0 +1,4121 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection`1
+  id: ModelCollection`1
+  parent: TimeCockpit.Data.DataModel
+  children:
+  - TimeCockpit.Data.DataModel.ModelCollection`1.#ctor
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Add(`0)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Clear
+  - TimeCockpit.Data.DataModel.ModelCollection`1.CollectionChanged
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Contains(`0)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Contains(System.String)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo(`0[],System.Int32)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Count
+  - TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator
+  - TimeCockpit.Data.DataModel.ModelCollection`1.GetMember(System.String)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject(System.Linq.Expressions.Expression)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf(`0)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Insert(System.Int32,`0)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Item(System.String)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Remove(`0)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.Remove(System.String)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt(System.Int32)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item(System.Int32)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add(System.Object)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains(System.Object)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf(System.Object)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert(System.Int32,System.Object)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item(System.Int32)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove(System.Object)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue(System.String,`0@)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder(System.String,`0@)
+  - TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ModelCollection<T>
+  nameWithType: ModelCollection<T>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>
+  type: Class
+  source:
+    id: ModelCollection
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 29
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRepresents a dynamic data collection that provides notification events when items get added or removed.\n"
+  remarks: "\n<p>T has to be derived from <xref href=\"TimeCockpit.Data.DataModel.NamedDynamicObject\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p><xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> can be seen as a special kind of dictionary. The name of the model element (see \n<xref href=\"TimeCockpit.Data.DataModel.NamedDynamicObject.Name\" data-throw-if-not-resolved=\"false\"></xref>) is used as the key. In fact the class uses an object of \ntype <xref href=\"System.Collections.Generic.Dictionary%602\" data-throw-if-not-resolved=\"false\"></xref>  internally. You can access model elements in the \ncollection using their model element names (i.e. keys). Accessing the collection using integer indexes is currently \nnot supported.</p>\n"
+  example: []
+  syntax:
+    content: >-
+      [CollectionDataContract]
+
+      public sealed class ModelCollection<T> : DynamicObject, IDynamicMetaObjectProvider, IList<T>, ICollection<T>, IEnumerable<T>, IList, ICollection, IEnumerable, INotifyCollectionChanged where T : NamedDynamicObject
+    typeParameters:
+    - id: T
+      description: The type of elements in the list.
+    content.vb: >-
+      <CollectionDataContract>
+
+      Public NotInheritable Class ModelCollection(Of T As NamedDynamicObject)
+          Inherits DynamicObject
+          Implements IDynamicMetaObjectProvider, IList(Of T), ICollection(Of T), IEnumerable(Of T), IList, ICollection, IEnumerable, INotifyCollectionChanged
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DynamicObject
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider
+  - System.Collections.Generic.IList{{T}}
+  - System.Collections.Generic.ICollection{{T}}
+  - System.Collections.Generic.IEnumerable{{T}}
+  - System.Collections.IList
+  - System.Collections.ICollection
+  - System.Collections.IEnumerable
+  - System.Collections.Specialized.INotifyCollectionChanged
+  inheritedMembers:
+  - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.CollectionDataContractAttribute
+    ctor: System.Runtime.Serialization.CollectionDataContractAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ModelCollection(Of T)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T)
+  name.vb: ModelCollection(Of T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: ModelCollection()
+  nameWithType: ModelCollection<T>.ModelCollection()
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.ModelCollection()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 47
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the ModelCollection class.\n"
+  example: []
+  syntax:
+    content: public ModelCollection()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.#ctor*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Occurs, when {T} is not of type NamedDynamicObject.
+  nameWithType.vb: ModelCollection(Of T).ModelCollection()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).ModelCollection()
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.CollectionChanged
+  commentId: E:TimeCockpit.Data.DataModel.ModelCollection`1.CollectionChanged
+  id: CollectionChanged
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: CollectionChanged
+  nameWithType: ModelCollection<T>.CollectionChanged
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.CollectionChanged
+  type: Event
+  source:
+    id: CollectionChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 62
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nOccurs when an item is added or removed.\n"
+  example: []
+  syntax:
+    content: public event NotifyCollectionChangedEventHandler CollectionChanged
+    return:
+      type: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+    content.vb: Public Event CollectionChanged As NotifyCollectionChangedEventHandler
+  implements:
+  - System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  nameWithType.vb: ModelCollection(Of T).CollectionChanged
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).CollectionChanged
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Count
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.Count
+  id: Count
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ModelCollection<T>.Count
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Count
+  type: Property
+  source:
+    id: Count
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 71
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the number of elements contained in the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Count*
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.Count
+  - System.Collections.ICollection.Count
+  nameWithType.vb: ModelCollection(Of T).Count
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Count
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly
+  id: IsReadOnly
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: ModelCollection<T>.IsReadOnly
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.IsReadOnly
+  type: Property
+  source:
+    id: IsReadOnly
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> is read-only. \n"
+  example: []
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly*
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.IsReadOnly
+  - System.Collections.IList.IsReadOnly
+  nameWithType.vb: ModelCollection(Of T).IsReadOnly
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).IsReadOnly
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize
+  id: System#Collections#IList#IsFixedSize
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.IsFixedSize
+  nameWithType: ModelCollection<T>.IList.IsFixedSize
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.IsFixedSize
+  type: Property
+  source:
+    id: System.Collections.IList.IsFixedSize
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 93
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> has a fixed size.\n"
+  example: []
+  syntax:
+    content: bool IList.IsFixedSize { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly WriteOnly Property System.Collections.IList.IsFixedSize As Boolean Implements IList.IsFixedSize
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize*
+  implements:
+  - System.Collections.IList.IsFixedSize
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.IsFixedSize
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.IsFixedSize
+  name.vb: System.Collections.IList.IsFixedSize
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized
+  id: System#Collections#ICollection#IsSynchronized
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: ICollection.IsSynchronized
+  nameWithType: ModelCollection<T>.ICollection.IsSynchronized
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.IsSynchronized
+  type: Property
+  source:
+    id: System.Collections.ICollection.IsSynchronized
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 104
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether access to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> is synchronized (thread safe). \n"
+  example: []
+  syntax:
+    content: bool ICollection.IsSynchronized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly WriteOnly Property System.Collections.ICollection.IsSynchronized As Boolean Implements ICollection.IsSynchronized
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized*
+  implements:
+  - System.Collections.ICollection.IsSynchronized
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.IsSynchronized
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.IsSynchronized
+  name.vb: System.Collections.ICollection.IsSynchronized
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot
+  id: System#Collections#ICollection#SyncRoot
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: ICollection.SyncRoot
+  nameWithType: ModelCollection<T>.ICollection.SyncRoot
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.SyncRoot
+  type: Property
+  source:
+    id: System.Collections.ICollection.SyncRoot
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 115
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets an object that can be used to synchronize access to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: object ICollection.SyncRoot { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly WriteOnly Property System.Collections.ICollection.SyncRoot As Object Implements ICollection.SyncRoot
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot*
+  implements:
+  - System.Collections.ICollection.SyncRoot
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.SyncRoot
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.SyncRoot
+  name.vb: System.Collections.ICollection.SyncRoot
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item(System.Int32)
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item(System.Int32)
+  id: System#Collections#Generic#IList{T}#Item(System.Int32)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList<T>.Item[Int32]
+  nameWithType: ModelCollection<T>.IList<T>.Item[Int32]
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.Generic.IList<T>.Item[System.Int32]
+  type: Property
+  source:
+    id: System.Collections.Generic.IList<T>.this[]
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 131
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the element at the specified index (CURRENTLY NOT IMPLEMENTED!)\n"
+  remarks: "This method is currently not implemented and therefore it always throws \na <xref href=\"System.NotImplementedException\" data-throw-if-not-resolved=\"false\"></xref>."
+  example: []
+  syntax:
+    content: T IList<T>.this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to get or set (CURRENTLY NOT USED!).
+    return:
+      type: '{T}'
+      description: The element at the specified index.
+    content.vb: ReadOnly WriteOnly Property System.Collections.Generic.IList<T>.Item(index As Integer) As T Implements IList(Of T).this
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: Always thrown because property is currently not implemented.
+  implements:
+  - System.Collections.Generic.IList{{T}}.Item(System.Int32)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.Generic.IList<T>.Item(Int32)
+  modifiers.csharp:
+  - get
+  - set
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.Generic.IList<T>.Item(System.Int32)
+  name.vb: System.Collections.Generic.IList<T>.Item(Int32)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item(System.Int32)
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item(System.Int32)
+  id: System#Collections#IList#Item(System.Int32)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.Item[Int32]
+  nameWithType: ModelCollection<T>.IList.Item[Int32]
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Item[System.Int32]
+  type: Property
+  source:
+    id: System.Collections.IList.this[]
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 152
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the element at the specified index (CURRENTLY NOT IMPLEMENTED!)\n"
+  remarks: "This method is currently not implemented and therefore it always throws \na <xref href=\"System.NotImplementedException\" data-throw-if-not-resolved=\"false\"></xref>."
+  example: []
+  syntax:
+    content: object IList.this[int index] { get; set; }
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the element to get or set (CURRENTLY NOT USED!).
+    return:
+      type: System.Object
+      description: The element at the specified index.
+    content.vb: ReadOnly WriteOnly Property System.Collections.IList.Item(index As Integer) As Object Implements IList.this
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: Always thrown because property is currently not implemented.
+  implements:
+  - System.Collections.IList.Item(System.Int32)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Item(Int32)
+  modifiers.csharp:
+  - get
+  - set
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Item(System.Int32)
+  name.vb: System.Collections.IList.Item(Int32)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Item(System.String)
+  commentId: P:TimeCockpit.Data.DataModel.ModelCollection`1.Item(System.String)
+  id: Item(System.String)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: ModelCollection<T>.Item[String]
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Item[System.String]
+  type: Property
+  source:
+    id: this[]
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 170
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the element with the specified key.\n"
+  example: []
+  syntax:
+    content: public T this[string key] { get; }
+    parameters:
+    - id: key
+      type: System.String
+      description: The key of the element to get.
+    return:
+      type: '{T}'
+      description: The element with the specified key.
+    content.vb: Public ReadOnly Property Item(key As String) As T
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Item*
+  nameWithType.vb: ModelCollection(Of T).Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Item(System.String)
+  name.vb: Item(String)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.GetMember(System.String)
+  id: GetMember(System.String)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: GetMember(String)
+  nameWithType: ModelCollection<T>.GetMember(String)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetMember(System.String)
+  type: Method
+  source:
+    id: GetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 187
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a member dynamically.\n"
+  example: []
+  syntax:
+    content: public override object GetMember(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the collection item to get.
+    return:
+      type: System.Object
+      description: Dynamic member.
+    content.vb: Public Overrides Function GetMember(name As String) As Object
+  overridden: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.GetMember*
+  nameWithType.vb: ModelCollection(Of T).GetMember(String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetMember(System.String)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject(System.Linq.Expressions.Expression)
+  id: GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: GetMetaObject(Expression)
+  nameWithType: ModelCollection<T>.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetMetaObject(System.Linq.Expressions.Expression)
+  type: Method
+  source:
+    id: GetMetaObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 235
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the meta object of the dynamic object.\n"
+  example: []
+  syntax:
+    content: public override DynamicMetaObject GetMetaObject(Expression parameter)
+    parameters:
+    - id: parameter
+      type: System.Linq.Expressions.Expression
+      description: Provided by the DLR (Dynamic Language Runtime).
+    return:
+      type: System.Dynamic.DynamicMetaObject
+      description: <xref href="TimeCockpit.Data.DynamicObject.DynamicMetaObject" data-throw-if-not-resolved="false"></xref> that represents this specific object’s binding logic.
+    content.vb: Public Overrides Function GetMetaObject(parameter As Expression) As DynamicMetaObject
+  overridden: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject*
+  nameWithType.vb: ModelCollection(Of T).GetMetaObject(Expression)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetMetaObject(System.Linq.Expressions.Expression)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Add(`0)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Add(`0)
+  id: Add(`0)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Add(T)
+  nameWithType: ModelCollection<T>.Add(T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Add(T)
+  type: Method
+  source:
+    id: Add
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 248
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nAdds an item to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: The name of the model element is used as the item's key.
+  example: []
+  syntax:
+    content: public void Add(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: The object to add to the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub Add(item As T)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: "\nOccurs, when the name of the item is not set, or an item is added to the collection twice.\n"
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.Add({T})
+  nameWithType.vb: ModelCollection(Of T).Add(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Add(T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  id: AddRange(System.Collections.Generic.IEnumerable{`0})
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: AddRange(IEnumerable<T>)
+  nameWithType: ModelCollection<T>.AddRange(IEnumerable<T>)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.AddRange(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    id: AddRange
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 257
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nAdds a collection of items and fires CollectionChanged once at the end of the operation.\n"
+  example: []
+  syntax:
+    content: public void AddRange(IEnumerable<T> items)
+    parameters:
+    - id: items
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: Items to add.
+    content.vb: Public Sub AddRange(items As IEnumerable(Of T))
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.AddRange*
+  nameWithType.vb: ModelCollection(Of T).AddRange(IEnumerable(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).AddRange(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: AddRange(IEnumerable(Of T))
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add(System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add(System.Object)
+  id: System#Collections#IList#Add(System.Object)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.Add(Object)
+  nameWithType: ModelCollection<T>.IList.Add(Object)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Add(System.Object)
+  type: Method
+  source:
+    id: System.Collections.IList.Add
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 274
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nAdds an item to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: int IList.Add(object value)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The object to add to the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: The position into which the new element was inserted.
+    content.vb: Function System.Collections.IList.Add(value As Object) As Integer Implements IList.Add
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Occurs, when value is not of type {T}.
+  implements:
+  - System.Collections.IList.Add(System.Object)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Add(Object)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Add(System.Object)
+  name.vb: System.Collections.IList.Add(Object)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Clear
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Clear
+  id: Clear
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: ModelCollection<T>.Clear()
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Clear()
+  type: Method
+  source:
+    id: Clear
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 288
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRemoves all items from the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Clear*
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.Clear
+  - System.Collections.IList.Clear
+  nameWithType.vb: ModelCollection(Of T).Clear()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Clear()
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Contains(`0)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Contains(`0)
+  id: Contains(`0)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Contains(T)
+  nameWithType: ModelCollection<T>.Contains(T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Contains(T)
+  type: Method
+  source:
+    id: Contains
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 302
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nDetermines whether the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> contains a specific value.\n"
+  example: []
+  syntax:
+    content: public bool Contains(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: The object to locate in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: True if the item is found in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>, otherwise false.
+    content.vb: Public Function Contains(item As T) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Contains*
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.Contains({T})
+  nameWithType.vb: ModelCollection(Of T).Contains(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Contains(T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Contains(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Contains(System.String)
+  id: Contains(System.String)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Contains(String)
+  nameWithType: ModelCollection<T>.Contains(String)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Contains(System.String)
+  type: Method
+  source:
+    id: Contains
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 312
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nDetermines whether the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> contains a specific value.\n"
+  example: []
+  syntax:
+    content: public bool Contains(string item)
+    parameters:
+    - id: item
+      type: System.String
+      description: The name of the object to locate in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: True if the item is found in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>, otherwise false.
+    content.vb: Public Function Contains(item As String) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Contains*
+  nameWithType.vb: ModelCollection(Of T).Contains(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Contains(System.String)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains(System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains(System.Object)
+  id: System#Collections#IList#Contains(System.Object)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.Contains(Object)
+  nameWithType: ModelCollection<T>.IList.Contains(Object)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Contains(System.Object)
+  type: Method
+  source:
+    id: System.Collections.IList.Contains
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 323
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nDetermines whether the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> contains a specific value.\n"
+  example: []
+  syntax:
+    content: bool IList.Contains(object value)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The object to locate in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: True if the item is found in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>, otherwise false.
+    content.vb: Function System.Collections.IList.Contains(value As Object) As Boolean Implements IList.Contains
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Occurs, when value is not of type {T}.
+  implements:
+  - System.Collections.IList.Contains(System.Object)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Contains(Object)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Contains(System.Object)
+  name.vb: System.Collections.IList.Contains(Object)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue(System.String,`0@)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue(System.String,`0@)
+  id: TryGetValue(System.String,`0@)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: TryGetValue(String, out T)
+  nameWithType: ModelCollection<T>.TryGetValue(String, out T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryGetValue(System.String, out T)
+  type: Method
+  source:
+    id: TryGetValue
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 341
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the value associated with the specified key.\nThis method performs the lookup in the SYS, APP, USR order!\n"
+  example: []
+  syntax:
+    content: public bool TryGetValue(string key, out T value)
+    parameters:
+    - id: key
+      type: System.String
+      description: The key whose value to get.
+    - id: value
+      type: '{T}'
+      description: "When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter. \nThis parameter is passed uninitialized."
+    return:
+      type: System.Boolean
+      description: true if the object that implements <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> contains an element with the specified key; otherwise, false.
+    content.vb: Public Function TryGetValue(key As String, ByRef value As T) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue*
+  nameWithType.vb: ModelCollection(Of T).TryGetValue(String, ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryGetValue(System.String, ByRef T)
+  name.vb: TryGetValue(String, ByRef T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder(System.String,`0@)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder(System.String,`0@)
+  id: TryGetValueInReverseOrder(System.String,`0@)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: TryGetValueInReverseOrder(String, out T)
+  nameWithType: ModelCollection<T>.TryGetValueInReverseOrder(String, out T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryGetValueInReverseOrder(System.String, out T)
+  type: Method
+  source:
+    id: TryGetValueInReverseOrder
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 354
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nATTENTION: This method performs the lookup in the SYS, APP, USR order\nand gets the value associated with the specified key. USE WITH CARE!\n"
+  example: []
+  syntax:
+    content: public bool TryGetValueInReverseOrder(string key, out T value)
+    parameters:
+    - id: key
+      type: System.String
+      description: The key whose value to get.
+    - id: value
+      type: '{T}'
+      description: "When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the value parameter. \nThis parameter is passed uninitialized."
+    return:
+      type: System.Boolean
+      description: true if the object that implements <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> contains an element with the specified key; otherwise, false.
+    content.vb: Public Function TryGetValueInReverseOrder(key As String, ByRef value As T) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder*
+  nameWithType.vb: ModelCollection(Of T).TryGetValueInReverseOrder(String, ByRef T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryGetValueInReverseOrder(System.String, ByRef T)
+  name.vb: TryGetValueInReverseOrder(String, ByRef T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo(`0[],System.Int32)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo(`0[],System.Int32)
+  id: CopyTo(`0[],System.Int32)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(T[], Int32)
+  nameWithType: ModelCollection<T>.CopyTo(T[], Int32)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.CopyTo(T[], System.Int32)
+  type: Method
+  source:
+    id: CopyTo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 365
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nCopies the elements of the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> to an Array, starting at a particular <xref href=\"System.Array\" data-throw-if-not-resolved=\"false\"></xref> index.\n"
+  example: []
+  syntax:
+    content: public void CopyTo(T[] array, int arrayIndex)
+    parameters:
+    - id: array
+      type: '{T}[]'
+      description: 'The one-dimensional Array that is the destination of the elements copied from <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing. '
+    - id: arrayIndex
+      type: System.Int32
+      description: The zero-based index in array at which copying begins.
+    content.vb: Public Sub CopyTo(array As T(), arrayIndex As Integer)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Copying of elements is not allowed in this collection.
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.CopyTo({T}[],System.Int32)
+  nameWithType.vb: ModelCollection(Of T).CopyTo(T(), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).CopyTo(T(), System.Int32)
+  name.vb: CopyTo(T(), Int32)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  id: System#Collections#ICollection#CopyTo(System.Array,System.Int32)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: ICollection.CopyTo(Array, Int32)
+  nameWithType: ModelCollection<T>.ICollection.CopyTo(Array, Int32)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.CopyTo(System.Array, System.Int32)
+  type: Method
+  source:
+    id: System.Collections.ICollection.CopyTo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 376
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nCopies the elements of the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> to an Array, starting at a particular <xref href=\"System.Array\" data-throw-if-not-resolved=\"false\"></xref> index.\n"
+  example: []
+  syntax:
+    content: void ICollection.CopyTo(Array array, int index)
+    parameters:
+    - id: array
+      type: System.Array
+      description: 'The one-dimensional Array that is the destination of the elements copied from <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>. The <xref href="System.Array" data-throw-if-not-resolved="false"></xref> must have zero-based indexing. '
+    - id: index
+      type: System.Int32
+      description: The zero-based index in array at which copying begins.
+    content.vb: Sub System.Collections.ICollection.CopyTo(array As Array, index As Integer) Implements ICollection.CopyTo
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Copying of elements is not allowed in this collection.
+  implements:
+  - System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.CopyTo(Array, Int32)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.CopyTo(System.Array, System.Int32)
+  name.vb: System.Collections.ICollection.CopyTo(Array, Int32)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Remove(`0)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Remove(`0)
+  id: Remove(`0)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(T)
+  nameWithType: ModelCollection<T>.Remove(T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Remove(T)
+  type: Method
+  source:
+    id: Remove
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 386
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRemoves the first occurrence of a specific object from the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: public bool Remove(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: The object to remove from the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: True if the item was successfully removed, otherwise false. This method also returns false if item is not found in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Remove(item As T) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Remove*
+  implements:
+  - System.Collections.Generic.ICollection{{T}}.Remove({T})
+  nameWithType.vb: ModelCollection(Of T).Remove(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Remove(T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Remove(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Remove(System.String)
+  id: Remove(System.String)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: ModelCollection<T>.Remove(String)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Remove(System.String)
+  type: Method
+  source:
+    id: Remove
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 398
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRemoves the first occurrence of a specific object from the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: public bool Remove(string item)
+    parameters:
+    - id: item
+      type: System.String
+      description: The name of the object to remove from the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: "True if the item was successfully removed, otherwise false. This method also returns false if item \nis not found in the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>."
+    content.vb: Public Function Remove(item As String) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Remove*
+  exceptions:
+  - type: System.Collections.Generic.KeyNotFoundException
+    commentId: T:System.Collections.Generic.KeyNotFoundException
+    description: The specified item was not found in the collection.
+  nameWithType.vb: ModelCollection(Of T).Remove(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Remove(System.String)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove(System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove(System.Object)
+  id: System#Collections#IList#Remove(System.Object)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.Remove(Object)
+  nameWithType: ModelCollection<T>.IList.Remove(Object)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Remove(System.Object)
+  type: Method
+  source:
+    id: System.Collections.IList.Remove
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 441
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRemoves the first occurrence of a specific object from the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: void IList.Remove(object value)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The object to remove from the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Sub System.Collections.IList.Remove(value As Object) Implements IList.Remove
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Occurs, when value is not of type {T}.
+  implements:
+  - System.Collections.IList.Remove(System.Object)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Remove(Object)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Remove(System.Object)
+  name.vb: System.Collections.IList.Remove(Object)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt(System.Int32)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt(System.Int32)
+  id: RemoveAt(System.Int32)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: RemoveAt(Int32)
+  nameWithType: ModelCollection<T>.RemoveAt(Int32)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.RemoveAt(System.Int32)
+  type: Method
+  source:
+    id: RemoveAt
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 456
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRemoves the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> item at the specified index. \n"
+  example: []
+  syntax:
+    content: public void RemoveAt(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the item to remove.
+    content.vb: Public Sub RemoveAt(index As Integer)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Removing elements by index is not allowed in this collection.
+  implements:
+  - System.Collections.Generic.IList{{T}}.RemoveAt(System.Int32)
+  - System.Collections.IList.RemoveAt(System.Int32)
+  nameWithType.vb: ModelCollection(Of T).RemoveAt(Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).RemoveAt(System.Int32)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf(`0)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf(`0)
+  id: IndexOf(`0)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(T)
+  nameWithType: ModelCollection<T>.IndexOf(T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.IndexOf(T)
+  type: Method
+  source:
+    id: IndexOf
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 467
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nDetermines the index of a specific item in the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int IndexOf(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: The object to locate in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: The index of item if found in the list; otherwise, -1.
+    content.vb: Public Function IndexOf(item As T) As Integer
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Getting the index of an element is not allowed in this collection.
+  implements:
+  - System.Collections.Generic.IList{{T}}.IndexOf({T})
+  nameWithType.vb: ModelCollection(Of T).IndexOf(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).IndexOf(T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Insert(System.Int32,`0)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.Insert(System.Int32,`0)
+  id: Insert(System.Int32,`0)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Insert(Int32, T)
+  nameWithType: ModelCollection<T>.Insert(Int32, T)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Insert(System.Int32, T)
+  type: Method
+  source:
+    id: Insert
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 478
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInserts an item to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> at the specified index.\n"
+  example: []
+  syntax:
+    content: public void Insert(int index, T item)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which item should be inserted.
+    - id: item
+      type: '{T}'
+      description: The object to insert into the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub Insert(index As Integer, item As T)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.Insert*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Inserting items at a specified index is not allowed in this collection.
+  implements:
+  - System.Collections.Generic.IList{{T}}.Insert(System.Int32,{T})
+  nameWithType.vb: ModelCollection(Of T).Insert(Int32, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Insert(System.Int32, T)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator
+  id: GetEnumerator
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: ModelCollection<T>.GetEnumerator()
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetEnumerator()
+  type: Method
+  source:
+    id: GetEnumerator
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 487
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nReturns an enumerator that iterates through a collection. \n"
+  example: []
+  syntax:
+    content: public IEnumerator<T> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{{T}}
+      description: 'An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection. '
+    content.vb: Public Function GetEnumerator As IEnumerator(Of T)
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  nameWithType.vb: ModelCollection(Of T).GetEnumerator()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetEnumerator()
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification(System.String)
+  id: TryRemoveExactWithNotification(System.String)
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: TryRemoveExactWithNotification(String)
+  nameWithType: ModelCollection<T>.TryRemoveExactWithNotification(String)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryRemoveExactWithNotification(System.String)
+  type: Method
+  source:
+    id: TryRemoveExactWithNotification
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 497
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nTries to find an element with the exact name.\n"
+  example: []
+  syntax:
+    content: public bool TryRemoveExactWithNotification(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: the name to find.
+    return:
+      type: System.Boolean
+      description: returns true if the name of the item was contained, false otherwise.
+    content.vb: Public Function TryRemoveExactWithNotification(name As String) As Boolean
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification*
+  nameWithType.vb: ModelCollection(Of T).TryRemoveExactWithNotification(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryRemoveExactWithNotification(System.String)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf(System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf(System.Object)
+  id: System#Collections#IList#IndexOf(System.Object)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.IndexOf(Object)
+  nameWithType: ModelCollection<T>.IList.IndexOf(Object)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.IndexOf(System.Object)
+  type: Method
+  source:
+    id: System.Collections.IList.IndexOf
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 529
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nDetermines the index of a specific item in the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: int IList.IndexOf(object value)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The object to locate in the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Int32
+      description: The index of item if found in the list; otherwise, -1.
+    content.vb: Function System.Collections.IList.IndexOf(value As Object) As Integer Implements IList.IndexOf
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Getting the index of an element is not allowed in this collection.
+  implements:
+  - System.Collections.IList.IndexOf(System.Object)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.IndexOf(Object)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.IndexOf(System.Object)
+  name.vb: System.Collections.IList.IndexOf(Object)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert(System.Int32,System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert(System.Int32,System.Object)
+  id: System#Collections#IList#Insert(System.Int32,System.Object)
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IList.Insert(Int32, Object)
+  nameWithType: ModelCollection<T>.IList.Insert(Int32, Object)
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Insert(System.Int32, System.Object)
+  type: Method
+  source:
+    id: System.Collections.IList.Insert
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 551
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInserts an item to the <xref href=\"TimeCockpit.Data.DataModel.ModelCollection%601\" data-throw-if-not-resolved=\"false\"></xref> at the specified index.\n"
+  example: []
+  syntax:
+    content: void IList.Insert(int index, object value)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index at which item should be inserted.
+    - id: value
+      type: System.Object
+      description: The object to insert into the <xref href="TimeCockpit.Data.DataModel.ModelCollection%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Sub System.Collections.IList.Insert(index As Integer, value As Object) Implements IList.Insert
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Inserting items at a specified index is not allowed in this collection.
+  implements:
+  - System.Collections.IList.Insert(System.Int32,System.Object)
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Insert(Int32, Object)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Insert(System.Int32, System.Object)
+  name.vb: System.Collections.IList.Insert(Int32, Object)
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator
+  commentId: M:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator
+  id: System#Collections#IEnumerable#GetEnumerator
+  isEii: true
+  parent: TimeCockpit.Data.DataModel.ModelCollection`1
+  langs:
+  - csharp
+  - vb
+  name: IEnumerable.GetEnumerator()
+  nameWithType: ModelCollection<T>.IEnumerable.GetEnumerator()
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IEnumerable.GetEnumerator()
+  type: Method
+  source:
+    id: System.Collections.IEnumerable.GetEnumerator
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\ModelCollection.cs
+    startLine: 560
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nReturns an enumerator that iterates through a collection. \n"
+  example: []
+  syntax:
+    content: IEnumerator IEnumerable.GetEnumerator()
+    return:
+      type: System.Collections.IEnumerator
+      description: 'An <xref href="System.Collections.IEnumerator" data-throw-if-not-resolved="false"></xref> object that can be used to iterate through the collection. '
+    content.vb: Function System.Collections.IEnumerable.GetEnumerator As IEnumerator Implements IEnumerable.GetEnumerator
+  overload: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator*
+  implements:
+  - System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IEnumerable.GetEnumerator()
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+references:
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject
+  commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: NamedDynamicObject
+  nameWithType: NamedDynamicObject
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection`1
+  isExternal: false
+  name: ModelCollection<T>
+  nameWithType: ModelCollection<T>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>
+  nameWithType.vb: ModelCollection(Of T)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T)
+  name.vb: ModelCollection(Of T)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: false
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.Collections.Generic.IList{{T}}
+  commentId: T:System.Collections.Generic.IList{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection{{T}}
+  commentId: T:System.Collections.Generic.ICollection{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IList
+  commentId: T:System.Collections.IList
+  parent: System.Collections
+  isExternal: true
+  name: IList
+  nameWithType: IList
+  fullName: System.Collections.IList
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  parent: System.Collections
+  isExternal: true
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Collections.Specialized.INotifyCollectionChanged
+  commentId: T:System.Collections.Specialized.INotifyCollectionChanged
+  parent: System.Collections.Specialized
+  isExternal: true
+  name: INotifyCollectionChanged
+  nameWithType: INotifyCollectionChanged
+  fullName: System.Collections.Specialized.INotifyCollectionChanged
+- uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: SetMember(String, Object)
+  nameWithType: DynamicObject.SetMember(String, Object)
+  fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: false
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: System.Collections.Specialized
+  commentId: N:System.Collections.Specialized
+  isExternal: false
+  name: System.Collections.Specialized
+  nameWithType: System.Collections.Specialized
+  fullName: System.Collections.Specialized
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.#ctor
+  isExternal: false
+  name: ModelCollection
+  nameWithType: ModelCollection<T>.ModelCollection
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.ModelCollection
+  nameWithType.vb: ModelCollection(Of T).ModelCollection
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).ModelCollection
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  parent: System
+  isExternal: true
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  commentId: E:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  parent: System.Collections.Specialized.INotifyCollectionChanged
+  isExternal: true
+  name: CollectionChanged
+  nameWithType: INotifyCollectionChanged.CollectionChanged
+  fullName: System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+- uid: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+  commentId: T:System.Collections.Specialized.NotifyCollectionChangedEventHandler
+  parent: System.Collections.Specialized
+  isExternal: true
+  name: NotifyCollectionChangedEventHandler
+  nameWithType: NotifyCollectionChangedEventHandler
+  fullName: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Count*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Count
+  isExternal: false
+  name: Count
+  nameWithType: ModelCollection<T>.Count
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Count
+  nameWithType.vb: ModelCollection(Of T).Count
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Count
+- uid: System.Collections.Generic.ICollection{{T}}.Count
+  commentId: P:System.Collections.Generic.ICollection{`0}.Count
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.Count
+  name: Count
+  nameWithType: ICollection<T>.Count
+  fullName: System.Collections.Generic.ICollection<T>.Count
+  nameWithType.vb: ICollection(Of T).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Count
+- uid: System.Collections.ICollection.Count
+  commentId: P:System.Collections.ICollection.Count
+  parent: System.Collections.ICollection
+  isExternal: true
+  name: Count
+  nameWithType: ICollection.Count
+  fullName: System.Collections.ICollection.Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Collections.Generic.ICollection`1.Count
+  commentId: P:System.Collections.Generic.ICollection`1.Count
+  isExternal: true
+  name: Count
+  nameWithType: ICollection<T>.Count
+  fullName: System.Collections.Generic.ICollection<T>.Count
+  nameWithType.vb: ICollection(Of T).Count
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Count
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.IsReadOnly
+  isExternal: false
+  name: IsReadOnly
+  nameWithType: ModelCollection<T>.IsReadOnly
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.IsReadOnly
+  nameWithType.vb: ModelCollection(Of T).IsReadOnly
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).IsReadOnly
+- uid: System.Collections.Generic.ICollection{{T}}.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection{`0}.IsReadOnly
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.IsReadOnly
+  name: IsReadOnly
+  nameWithType: ICollection<T>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<T>.IsReadOnly
+  nameWithType.vb: ICollection(Of T).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of T).IsReadOnly
+- uid: System.Collections.IList.IsReadOnly
+  commentId: P:System.Collections.IList.IsReadOnly
+  parent: System.Collections.IList
+  isExternal: true
+  name: IsReadOnly
+  nameWithType: IList.IsReadOnly
+  fullName: System.Collections.IList.IsReadOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.ICollection`1.IsReadOnly
+  commentId: P:System.Collections.Generic.ICollection`1.IsReadOnly
+  isExternal: true
+  name: IsReadOnly
+  nameWithType: ICollection<T>.IsReadOnly
+  fullName: System.Collections.Generic.ICollection<T>.IsReadOnly
+  nameWithType.vb: ICollection(Of T).IsReadOnly
+  fullName.vb: System.Collections.Generic.ICollection(Of T).IsReadOnly
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IsFixedSize
+  isExternal: false
+  name: IList.IsFixedSize
+  nameWithType: ModelCollection<T>.IList.IsFixedSize
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.IsFixedSize
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.IsFixedSize
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.IsFixedSize
+  name.vb: System.Collections.IList.IsFixedSize
+- uid: System.Collections.IList.IsFixedSize
+  commentId: P:System.Collections.IList.IsFixedSize
+  parent: System.Collections.IList
+  isExternal: true
+  name: IsFixedSize
+  nameWithType: IList.IsFixedSize
+  fullName: System.Collections.IList.IsFixedSize
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#IsSynchronized
+  isExternal: false
+  name: ICollection.IsSynchronized
+  nameWithType: ModelCollection<T>.ICollection.IsSynchronized
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.IsSynchronized
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.IsSynchronized
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.IsSynchronized
+  name.vb: System.Collections.ICollection.IsSynchronized
+- uid: System.Collections.ICollection.IsSynchronized
+  commentId: P:System.Collections.ICollection.IsSynchronized
+  parent: System.Collections.ICollection
+  isExternal: true
+  name: IsSynchronized
+  nameWithType: ICollection.IsSynchronized
+  fullName: System.Collections.ICollection.IsSynchronized
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#SyncRoot
+  isExternal: false
+  name: ICollection.SyncRoot
+  nameWithType: ModelCollection<T>.ICollection.SyncRoot
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.SyncRoot
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.SyncRoot
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.SyncRoot
+  name.vb: System.Collections.ICollection.SyncRoot
+- uid: System.Collections.ICollection.SyncRoot
+  commentId: P:System.Collections.ICollection.SyncRoot
+  parent: System.Collections.ICollection
+  isExternal: true
+  name: SyncRoot
+  nameWithType: ICollection.SyncRoot
+  fullName: System.Collections.ICollection.SyncRoot
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#Generic#IList{T}#Item
+  isExternal: false
+  name: IList<T>.Item
+  nameWithType: ModelCollection<T>.IList<T>.Item
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.Generic.IList<T>.Item
+  nameWithType.vb: ModelCollection(Of T).System.Collections.Generic.IList<T>.Item
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.Generic.IList<T>.Item
+  name.vb: System.Collections.Generic.IList<T>.Item
+- uid: System.Collections.Generic.IList{{T}}.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IList{`0}.Item(System.Int32)
+  parent: System.Collections.Generic.IList{{T}}
+  definition: System.Collections.Generic.IList`1.Item(System.Int32)
+  name: Item[Int32]
+  nameWithType: IList<T>.Item[Int32]
+  fullName: System.Collections.Generic.IList<T>.Item[System.Int32]
+  nameWithType.vb: IList(Of T).Item(Int32)
+  fullName.vb: System.Collections.Generic.IList(Of T).Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.Item(System.Int32)
+    name: Item
+    nameWithType: IList<T>.Item
+    fullName: System.Collections.Generic.IList<T>.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Item(System.Int32)
+    name: Item
+    nameWithType: IList(Of T).Item
+    fullName: System.Collections.Generic.IList(Of T).Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.IList`1.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IList`1.Item(System.Int32)
+  isExternal: true
+  name: Item[Int32]
+  nameWithType: IList<T>.Item[Int32]
+  fullName: System.Collections.Generic.IList<T>.Item[System.Int32]
+  nameWithType.vb: IList(Of T).Item(Int32)
+  fullName.vb: System.Collections.Generic.IList(Of T).Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.Item(System.Int32)
+    name: Item
+    nameWithType: IList<T>.Item
+    fullName: System.Collections.Generic.IList<T>.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Item(System.Int32)
+    name: Item
+    nameWithType: IList(Of T).Item
+    fullName: System.Collections.Generic.IList(Of T).Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Item
+  isExternal: false
+  name: IList.Item
+  nameWithType: ModelCollection<T>.IList.Item
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Item
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Item
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Item
+  name.vb: System.Collections.IList.Item
+- uid: System.Collections.IList.Item(System.Int32)
+  commentId: P:System.Collections.IList.Item(System.Int32)
+  parent: System.Collections.IList
+  isExternal: true
+  name: Item[Int32]
+  nameWithType: IList.Item[Int32]
+  fullName: System.Collections.IList.Item[System.Int32]
+  nameWithType.vb: IList.Item(Int32)
+  fullName.vb: System.Collections.IList.Item(System.Int32)
+  name.vb: Item(Int32)
+  spec.csharp:
+  - uid: System.Collections.IList.Item(System.Int32)
+    name: Item
+    nameWithType: IList.Item
+    fullName: System.Collections.IList.Item
+    isExternal: true
+  - name: '['
+    nameWithType: '['
+    fullName: '['
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ']'
+    nameWithType: ']'
+    fullName: ']'
+  spec.vb:
+  - uid: System.Collections.IList.Item(System.Int32)
+    name: Item
+    nameWithType: IList.Item
+    fullName: System.Collections.IList.Item
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Item*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Item
+  isExternal: false
+  name: Item
+  nameWithType: ModelCollection<T>.Item
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Item
+  nameWithType.vb: ModelCollection(Of T).Item
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Item
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMember(String)
+  nameWithType: DynamicObject.GetMember(String)
+  fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetMember*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.GetMember
+  isExternal: false
+  name: GetMember
+  nameWithType: ModelCollection<T>.GetMember
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetMember
+  nameWithType.vb: ModelCollection(Of T).GetMember
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetMember
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: DynamicObject.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.GetMetaObject
+  isExternal: false
+  name: GetMetaObject
+  nameWithType: ModelCollection<T>.GetMetaObject
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetMetaObject
+  nameWithType.vb: ModelCollection(Of T).GetMetaObject
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetMetaObject
+- uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
+  parent: System.Linq.Expressions
+  isExternal: true
+  name: Expression
+  nameWithType: Expression
+  fullName: System.Linq.Expressions.Expression
+- uid: System.Dynamic.DynamicMetaObject
+  commentId: T:System.Dynamic.DynamicMetaObject
+  parent: System.Dynamic
+  isExternal: true
+  name: DynamicMetaObject
+  nameWithType: DynamicMetaObject
+  fullName: System.Dynamic.DynamicMetaObject
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: false
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Add*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Add
+  isExternal: false
+  name: Add
+  nameWithType: ModelCollection<T>.Add
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Add
+  nameWithType.vb: ModelCollection(Of T).Add
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Add
+- uid: System.Collections.Generic.ICollection{{T}}.Add({T})
+  commentId: M:System.Collections.Generic.ICollection{`0}.Add(`0)
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.Add(`0)
+  name: Add(T)
+  nameWithType: ICollection<T>.Add(T)
+  fullName: System.Collections.Generic.ICollection<T>.Add(T)
+  nameWithType.vb: ICollection(Of T).Add(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Add(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection<T>.Add
+    fullName: System.Collections.Generic.ICollection<T>.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection(Of T).Add
+    fullName: System.Collections.Generic.ICollection(Of T).Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+- uid: System.Collections.Generic.ICollection`1.Add(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Add(`0)
+  isExternal: true
+  name: Add(T)
+  nameWithType: ICollection<T>.Add(T)
+  fullName: System.Collections.Generic.ICollection<T>.Add(T)
+  nameWithType.vb: ICollection(Of T).Add(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Add(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection<T>.Add
+    fullName: System.Collections.Generic.ICollection<T>.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Add(`0)
+    name: Add
+    nameWithType: ICollection(Of T).Add
+    fullName: System.Collections.Generic.ICollection(Of T).Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.AddRange*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.AddRange
+  isExternal: false
+  name: AddRange
+  nameWithType: ModelCollection<T>.AddRange
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.AddRange
+  nameWithType.vb: ModelCollection(Of T).AddRange
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).AddRange
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Add
+  isExternal: false
+  name: IList.Add
+  nameWithType: ModelCollection<T>.IList.Add
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Add
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Add
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Add
+  name.vb: System.Collections.IList.Add
+- uid: System.Collections.IList.Add(System.Object)
+  commentId: M:System.Collections.IList.Add(System.Object)
+  parent: System.Collections.IList
+  isExternal: true
+  name: Add(Object)
+  nameWithType: IList.Add(Object)
+  fullName: System.Collections.IList.Add(System.Object)
+  spec.csharp:
+  - uid: System.Collections.IList.Add(System.Object)
+    name: Add
+    nameWithType: IList.Add
+    fullName: System.Collections.IList.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.Add(System.Object)
+    name: Add
+    nameWithType: IList.Add
+    fullName: System.Collections.IList.Add
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Clear*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Clear
+  isExternal: false
+  name: Clear
+  nameWithType: ModelCollection<T>.Clear
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Clear
+  nameWithType.vb: ModelCollection(Of T).Clear
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Clear
+- uid: System.Collections.Generic.ICollection{{T}}.Clear
+  commentId: M:System.Collections.Generic.ICollection{`0}.Clear
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.Clear
+  name: Clear()
+  nameWithType: ICollection<T>.Clear()
+  fullName: System.Collections.Generic.ICollection<T>.Clear()
+  nameWithType.vb: ICollection(Of T).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection<T>.Clear
+    fullName: System.Collections.Generic.ICollection<T>.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection(Of T).Clear
+    fullName: System.Collections.Generic.ICollection(Of T).Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IList.Clear
+  commentId: M:System.Collections.IList.Clear
+  parent: System.Collections.IList
+  isExternal: true
+  name: Clear()
+  nameWithType: IList.Clear()
+  fullName: System.Collections.IList.Clear()
+  spec.csharp:
+  - uid: System.Collections.IList.Clear
+    name: Clear
+    nameWithType: IList.Clear
+    fullName: System.Collections.IList.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.Clear
+    name: Clear
+    nameWithType: IList.Clear
+    fullName: System.Collections.IList.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Clear
+  commentId: M:System.Collections.Generic.ICollection`1.Clear
+  isExternal: true
+  name: Clear()
+  nameWithType: ICollection<T>.Clear()
+  fullName: System.Collections.Generic.ICollection<T>.Clear()
+  nameWithType.vb: ICollection(Of T).Clear()
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Clear()
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection<T>.Clear
+    fullName: System.Collections.Generic.ICollection<T>.Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Clear
+    name: Clear
+    nameWithType: ICollection(Of T).Clear
+    fullName: System.Collections.Generic.ICollection(Of T).Clear
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Contains*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Contains
+  isExternal: false
+  name: Contains
+  nameWithType: ModelCollection<T>.Contains
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Contains
+  nameWithType.vb: ModelCollection(Of T).Contains
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Contains
+- uid: System.Collections.Generic.ICollection{{T}}.Contains({T})
+  commentId: M:System.Collections.Generic.ICollection{`0}.Contains(`0)
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.Contains(`0)
+  name: Contains(T)
+  nameWithType: ICollection<T>.Contains(T)
+  fullName: System.Collections.Generic.ICollection<T>.Contains(T)
+  nameWithType.vb: ICollection(Of T).Contains(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Contains(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection<T>.Contains
+    fullName: System.Collections.Generic.ICollection<T>.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection(Of T).Contains
+    fullName: System.Collections.Generic.ICollection(Of T).Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Contains(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Contains(`0)
+  isExternal: true
+  name: Contains(T)
+  nameWithType: ICollection<T>.Contains(T)
+  fullName: System.Collections.Generic.ICollection<T>.Contains(T)
+  nameWithType.vb: ICollection(Of T).Contains(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Contains(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection<T>.Contains
+    fullName: System.Collections.Generic.ICollection<T>.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Contains(`0)
+    name: Contains
+    nameWithType: ICollection(Of T).Contains
+    fullName: System.Collections.Generic.ICollection(Of T).Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Contains
+  isExternal: false
+  name: IList.Contains
+  nameWithType: ModelCollection<T>.IList.Contains
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Contains
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Contains
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Contains
+  name.vb: System.Collections.IList.Contains
+- uid: System.Collections.IList.Contains(System.Object)
+  commentId: M:System.Collections.IList.Contains(System.Object)
+  parent: System.Collections.IList
+  isExternal: true
+  name: Contains(Object)
+  nameWithType: IList.Contains(Object)
+  fullName: System.Collections.IList.Contains(System.Object)
+  spec.csharp:
+  - uid: System.Collections.IList.Contains(System.Object)
+    name: Contains
+    nameWithType: IList.Contains
+    fullName: System.Collections.IList.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.Contains(System.Object)
+    name: Contains
+    nameWithType: IList.Contains
+    fullName: System.Collections.IList.Contains
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValue
+  isExternal: false
+  name: TryGetValue
+  nameWithType: ModelCollection<T>.TryGetValue
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryGetValue
+  nameWithType.vb: ModelCollection(Of T).TryGetValue
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryGetValue
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.TryGetValueInReverseOrder
+  isExternal: false
+  name: TryGetValueInReverseOrder
+  nameWithType: ModelCollection<T>.TryGetValueInReverseOrder
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryGetValueInReverseOrder
+  nameWithType.vb: ModelCollection(Of T).TryGetValueInReverseOrder
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryGetValueInReverseOrder
+- uid: System.Array
+  commentId: T:System.Array
+  parent: System
+  isExternal: true
+  name: Array
+  nameWithType: Array
+  fullName: System.Array
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.CopyTo
+  isExternal: false
+  name: CopyTo
+  nameWithType: ModelCollection<T>.CopyTo
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.CopyTo
+  nameWithType.vb: ModelCollection(Of T).CopyTo
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).CopyTo
+- uid: System.Collections.Generic.ICollection{{T}}.CopyTo({T}[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection{`0}.CopyTo(`0[],System.Int32)
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  name: CopyTo(T[], Int32)
+  nameWithType: ICollection<T>.CopyTo(T[], Int32)
+  fullName: System.Collections.Generic.ICollection<T>.CopyTo(T[], System.Int32)
+  nameWithType.vb: ICollection(Of T).CopyTo(T(), Int32)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).CopyTo(T(), System.Int32)
+  name.vb: CopyTo(T(), Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection<T>.CopyTo
+    fullName: System.Collections.Generic.ICollection<T>.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection(Of T).CopyTo
+    fullName: System.Collections.Generic.ICollection(Of T).CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{T}[]'
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  commentId: M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+  isExternal: true
+  name: CopyTo(T[], Int32)
+  nameWithType: ICollection<T>.CopyTo(T[], Int32)
+  fullName: System.Collections.Generic.ICollection<T>.CopyTo(T[], System.Int32)
+  nameWithType.vb: ICollection(Of T).CopyTo(T(), Int32)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).CopyTo(T(), System.Int32)
+  name.vb: CopyTo(T(), Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection<T>.CopyTo
+    fullName: System.Collections.Generic.ICollection<T>.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)
+    name: CopyTo
+    nameWithType: ICollection(Of T).CopyTo
+    fullName: System.Collections.Generic.ICollection(Of T).CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#ICollection#CopyTo
+  isExternal: false
+  name: ICollection.CopyTo
+  nameWithType: ModelCollection<T>.ICollection.CopyTo
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.ICollection.CopyTo
+  nameWithType.vb: ModelCollection(Of T).System.Collections.ICollection.CopyTo
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.ICollection.CopyTo
+  name.vb: System.Collections.ICollection.CopyTo
+- uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  commentId: M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+  parent: System.Collections.ICollection
+  isExternal: true
+  name: CopyTo(Array, Int32)
+  nameWithType: ICollection.CopyTo(Array, Int32)
+  fullName: System.Collections.ICollection.CopyTo(System.Array, System.Int32)
+  spec.csharp:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    nameWithType: ICollection.CopyTo
+    fullName: System.Collections.ICollection.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Array
+    name: Array
+    nameWithType: Array
+    fullName: System.Array
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.ICollection.CopyTo(System.Array,System.Int32)
+    name: CopyTo
+    nameWithType: ICollection.CopyTo
+    fullName: System.Collections.ICollection.CopyTo
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Array
+    name: Array
+    nameWithType: Array
+    fullName: System.Array
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Remove*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Remove
+  isExternal: false
+  name: Remove
+  nameWithType: ModelCollection<T>.Remove
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Remove
+  nameWithType.vb: ModelCollection(Of T).Remove
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Remove
+- uid: System.Collections.Generic.ICollection{{T}}.Remove({T})
+  commentId: M:System.Collections.Generic.ICollection{`0}.Remove(`0)
+  parent: System.Collections.Generic.ICollection{{T}}
+  definition: System.Collections.Generic.ICollection`1.Remove(`0)
+  name: Remove(T)
+  nameWithType: ICollection<T>.Remove(T)
+  fullName: System.Collections.Generic.ICollection<T>.Remove(T)
+  nameWithType.vb: ICollection(Of T).Remove(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Remove(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection<T>.Remove
+    fullName: System.Collections.Generic.ICollection<T>.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection(Of T).Remove
+    fullName: System.Collections.Generic.ICollection(Of T).Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1.Remove(`0)
+  commentId: M:System.Collections.Generic.ICollection`1.Remove(`0)
+  isExternal: true
+  name: Remove(T)
+  nameWithType: ICollection<T>.Remove(T)
+  fullName: System.Collections.Generic.ICollection<T>.Remove(T)
+  nameWithType.vb: ICollection(Of T).Remove(T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T).Remove(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection<T>.Remove
+    fullName: System.Collections.Generic.ICollection<T>.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1.Remove(`0)
+    name: Remove
+    nameWithType: ICollection(Of T).Remove
+    fullName: System.Collections.Generic.ICollection(Of T).Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.KeyNotFoundException
+  commentId: T:System.Collections.Generic.KeyNotFoundException
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Remove
+  isExternal: false
+  name: IList.Remove
+  nameWithType: ModelCollection<T>.IList.Remove
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Remove
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Remove
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Remove
+  name.vb: System.Collections.IList.Remove
+- uid: System.Collections.IList.Remove(System.Object)
+  commentId: M:System.Collections.IList.Remove(System.Object)
+  parent: System.Collections.IList
+  isExternal: true
+  name: Remove(Object)
+  nameWithType: IList.Remove(Object)
+  fullName: System.Collections.IList.Remove(System.Object)
+  spec.csharp:
+  - uid: System.Collections.IList.Remove(System.Object)
+    name: Remove
+    nameWithType: IList.Remove
+    fullName: System.Collections.IList.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.Remove(System.Object)
+    name: Remove
+    nameWithType: IList.Remove
+    fullName: System.Collections.IList.Remove
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.RemoveAt
+  isExternal: false
+  name: RemoveAt
+  nameWithType: ModelCollection<T>.RemoveAt
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.RemoveAt
+  nameWithType.vb: ModelCollection(Of T).RemoveAt
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).RemoveAt
+- uid: System.Collections.Generic.IList{{T}}.RemoveAt(System.Int32)
+  commentId: M:System.Collections.Generic.IList{`0}.RemoveAt(System.Int32)
+  parent: System.Collections.Generic.IList{{T}}
+  definition: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  name: RemoveAt(Int32)
+  nameWithType: IList<T>.RemoveAt(Int32)
+  fullName: System.Collections.Generic.IList<T>.RemoveAt(System.Int32)
+  nameWithType.vb: IList(Of T).RemoveAt(Int32)
+  fullName.vb: System.Collections.Generic.IList(Of T).RemoveAt(System.Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList<T>.RemoveAt
+    fullName: System.Collections.Generic.IList<T>.RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList(Of T).RemoveAt
+    fullName: System.Collections.Generic.IList(Of T).RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IList.RemoveAt(System.Int32)
+  commentId: M:System.Collections.IList.RemoveAt(System.Int32)
+  parent: System.Collections.IList
+  isExternal: true
+  name: RemoveAt(Int32)
+  nameWithType: IList.RemoveAt(Int32)
+  fullName: System.Collections.IList.RemoveAt(System.Int32)
+  spec.csharp:
+  - uid: System.Collections.IList.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList.RemoveAt
+    fullName: System.Collections.IList.RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList.RemoveAt
+    fullName: System.Collections.IList.RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  commentId: M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+  isExternal: true
+  name: RemoveAt(Int32)
+  nameWithType: IList<T>.RemoveAt(Int32)
+  fullName: System.Collections.Generic.IList<T>.RemoveAt(System.Int32)
+  nameWithType.vb: IList(Of T).RemoveAt(Int32)
+  fullName.vb: System.Collections.Generic.IList(Of T).RemoveAt(System.Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList<T>.RemoveAt
+    fullName: System.Collections.Generic.IList<T>.RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.RemoveAt(System.Int32)
+    name: RemoveAt
+    nameWithType: IList(Of T).RemoveAt
+    fullName: System.Collections.Generic.IList(Of T).RemoveAt
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.IndexOf
+  isExternal: false
+  name: IndexOf
+  nameWithType: ModelCollection<T>.IndexOf
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.IndexOf
+  nameWithType.vb: ModelCollection(Of T).IndexOf
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).IndexOf
+- uid: System.Collections.Generic.IList{{T}}.IndexOf({T})
+  commentId: M:System.Collections.Generic.IList{`0}.IndexOf(`0)
+  parent: System.Collections.Generic.IList{{T}}
+  definition: System.Collections.Generic.IList`1.IndexOf(`0)
+  name: IndexOf(T)
+  nameWithType: IList<T>.IndexOf(T)
+  fullName: System.Collections.Generic.IList<T>.IndexOf(T)
+  nameWithType.vb: IList(Of T).IndexOf(T)
+  fullName.vb: System.Collections.Generic.IList(Of T).IndexOf(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    nameWithType: IList<T>.IndexOf
+    fullName: System.Collections.Generic.IList<T>.IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    nameWithType: IList(Of T).IndexOf
+    fullName: System.Collections.Generic.IList(Of T).IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1.IndexOf(`0)
+  commentId: M:System.Collections.Generic.IList`1.IndexOf(`0)
+  isExternal: true
+  name: IndexOf(T)
+  nameWithType: IList<T>.IndexOf(T)
+  fullName: System.Collections.Generic.IList<T>.IndexOf(T)
+  nameWithType.vb: IList(Of T).IndexOf(T)
+  fullName.vb: System.Collections.Generic.IList(Of T).IndexOf(T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    nameWithType: IList<T>.IndexOf
+    fullName: System.Collections.Generic.IList<T>.IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.IndexOf(`0)
+    name: IndexOf
+    nameWithType: IList(Of T).IndexOf
+    fullName: System.Collections.Generic.IList(Of T).IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.Insert*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.Insert
+  isExternal: false
+  name: Insert
+  nameWithType: ModelCollection<T>.Insert
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.Insert
+  nameWithType.vb: ModelCollection(Of T).Insert
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).Insert
+- uid: System.Collections.Generic.IList{{T}}.Insert(System.Int32,{T})
+  commentId: M:System.Collections.Generic.IList{`0}.Insert(System.Int32,`0)
+  parent: System.Collections.Generic.IList{{T}}
+  definition: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  name: Insert(Int32, T)
+  nameWithType: IList<T>.Insert(Int32, T)
+  fullName: System.Collections.Generic.IList<T>.Insert(System.Int32, T)
+  nameWithType.vb: IList(Of T).Insert(Int32, T)
+  fullName.vb: System.Collections.Generic.IList(Of T).Insert(System.Int32, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    nameWithType: IList<T>.Insert
+    fullName: System.Collections.Generic.IList<T>.Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    nameWithType: IList(Of T).Insert
+    fullName: System.Collections.Generic.IList(Of T).Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  commentId: M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+  isExternal: true
+  name: Insert(Int32, T)
+  nameWithType: IList<T>.Insert(Int32, T)
+  fullName: System.Collections.Generic.IList<T>.Insert(System.Int32, T)
+  nameWithType.vb: IList(Of T).Insert(Int32, T)
+  fullName.vb: System.Collections.Generic.IList(Of T).Insert(System.Int32, T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    nameWithType: IList<T>.Insert
+    fullName: System.Collections.Generic.IList<T>.Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1.Insert(System.Int32,`0)
+    name: Insert
+    nameWithType: IList(Of T).Insert
+    fullName: System.Collections.Generic.IList(Of T).Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.GetEnumerator
+  isExternal: false
+  name: GetEnumerator
+  nameWithType: ModelCollection<T>.GetEnumerator
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.GetEnumerator
+  nameWithType.vb: ModelCollection(Of T).GetEnumerator
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{{T}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{{T}}
+  commentId: T:System.Collections.Generic.IEnumerator{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable<T>.GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable(Of T).GetEnumerator
+    fullName: System.Collections.Generic.IEnumerable(Of T).GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.TryRemoveExactWithNotification
+  isExternal: false
+  name: TryRemoveExactWithNotification
+  nameWithType: ModelCollection<T>.TryRemoveExactWithNotification
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.TryRemoveExactWithNotification
+  nameWithType.vb: ModelCollection(Of T).TryRemoveExactWithNotification
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).TryRemoveExactWithNotification
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#IndexOf
+  isExternal: false
+  name: IList.IndexOf
+  nameWithType: ModelCollection<T>.IList.IndexOf
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.IndexOf
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.IndexOf
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.IndexOf
+  name.vb: System.Collections.IList.IndexOf
+- uid: System.Collections.IList.IndexOf(System.Object)
+  commentId: M:System.Collections.IList.IndexOf(System.Object)
+  parent: System.Collections.IList
+  isExternal: true
+  name: IndexOf(Object)
+  nameWithType: IList.IndexOf(Object)
+  fullName: System.Collections.IList.IndexOf(System.Object)
+  spec.csharp:
+  - uid: System.Collections.IList.IndexOf(System.Object)
+    name: IndexOf
+    nameWithType: IList.IndexOf
+    fullName: System.Collections.IList.IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.IndexOf(System.Object)
+    name: IndexOf
+    nameWithType: IList.IndexOf
+    fullName: System.Collections.IList.IndexOf
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IList#Insert
+  isExternal: false
+  name: IList.Insert
+  nameWithType: ModelCollection<T>.IList.Insert
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IList.Insert
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IList.Insert
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IList.Insert
+  name.vb: System.Collections.IList.Insert
+- uid: System.Collections.IList.Insert(System.Int32,System.Object)
+  commentId: M:System.Collections.IList.Insert(System.Int32,System.Object)
+  parent: System.Collections.IList
+  isExternal: true
+  name: Insert(Int32, Object)
+  nameWithType: IList.Insert(Int32, Object)
+  fullName: System.Collections.IList.Insert(System.Int32, System.Object)
+  spec.csharp:
+  - uid: System.Collections.IList.Insert(System.Int32,System.Object)
+    name: Insert
+    nameWithType: IList.Insert
+    fullName: System.Collections.IList.Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IList.Insert(System.Int32,System.Object)
+    name: Insert
+    nameWithType: IList.Insert
+    fullName: System.Collections.IList.Insert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator*
+  commentId: Overload:TimeCockpit.Data.DataModel.ModelCollection`1.System#Collections#IEnumerable#GetEnumerator
+  isExternal: false
+  name: IEnumerable.GetEnumerator
+  nameWithType: ModelCollection<T>.IEnumerable.GetEnumerator
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>.System.Collections.IEnumerable.GetEnumerator
+  nameWithType.vb: ModelCollection(Of T).System.Collections.IEnumerable.GetEnumerator
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T).System.Collections.IEnumerable.GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+- uid: System.Collections.IEnumerable.GetEnumerator
+  commentId: M:System.Collections.IEnumerable.GetEnumerator
+  parent: System.Collections.IEnumerable
+  isExternal: true
+  name: GetEnumerator()
+  nameWithType: IEnumerable.GetEnumerator()
+  fullName: System.Collections.IEnumerable.GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Collections.IEnumerable.GetEnumerator
+    name: GetEnumerator
+    nameWithType: IEnumerable.GetEnumerator
+    fullName: System.Collections.IEnumerable.GetEnumerator
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

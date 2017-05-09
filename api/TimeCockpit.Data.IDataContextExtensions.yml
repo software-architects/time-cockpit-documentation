@@ -1,0 +1,1582 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.IDataContextExtensions
+  commentId: T:TimeCockpit.Data.IDataContextExtensions
+  id: IDataContextExtensions
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.IDataContextExtensions.DeleteObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.IDataContextExtensions.SaveObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.IDataContextExtensions.Select(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  - TimeCockpit.Data.IDataContextExtensions.SelectAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  - TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  - TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  - TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  - TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  - TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Model)
+  langs:
+  - csharp
+  - vb
+  name: IDataContextExtensions
+  nameWithType: IDataContextExtensions
+  fullName: TimeCockpit.Data.IDataContextExtensions
+  type: Class
+  source:
+    id: IDataContextExtensions
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 24
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nExtension methods for easier use of <xref href=\"TimeCockpit.Data.IDataContext\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static class IDataContextExtensions
+    content.vb: Public Module IDataContextExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SelectAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  id: SelectAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectAsync(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  nameWithType: IDataContextExtensions.SelectAsync(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectAsync(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, TimeCockpit.Data.Database.SelectCache)
+  type: Method
+  source:
+    id: SelectAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 34
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nAsynchronously performs a select.\n"
+  example: []
+  syntax:
+    content: public static Task<EntityObject[]> SelectAsync(this IDataContext dataContext, string query, IEnumerable<QueryParameter> parameters = null, SelectCache cache = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context.
+    - id: query
+      type: System.String
+      description: The TCQL query string.
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+      description: The query parameters.
+    - id: cache
+      type: TimeCockpit.Data.Database.SelectCache
+      description: The select cache.
+    return:
+      type: System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject[]}
+      description: Asynchronously returns the resulting entity objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectAsync(dataContext As IDataContext, query As String, parameters As IEnumerable(Of QueryParameter) = Nothing, cache As SelectCache = Nothing) As Task(Of EntityObject())
+  overload: TimeCockpit.Data.IDataContextExtensions.SelectAsync*
+  nameWithType.vb: IDataContextExtensions.SelectAsync(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.SelectAsync(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), TimeCockpit.Data.Database.SelectCache)
+  name.vb: SelectAsync(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+- uid: TimeCockpit.Data.IDataContextExtensions.Select(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.Select(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  id: Select(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: Select(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  nameWithType: IDataContextExtensions.Select(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  fullName: TimeCockpit.Data.IDataContextExtensions.Select(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, TimeCockpit.Data.Database.SelectCache)
+  type: Method
+  source:
+    id: Select
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 54
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nPerforms a select.\n"
+  example: []
+  syntax:
+    content: public static EntityObject[] Select(this IDataContext dataContext, string query, IEnumerable<QueryParameter> parameters = null, SelectCache cache = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context.
+    - id: query
+      type: System.String
+      description: The TCQL query string.
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+      description: The query parameters.
+    - id: cache
+      type: TimeCockpit.Data.Database.SelectCache
+      description: The select cache.
+    return:
+      type: TimeCockpit.Data.EntityObject[]
+      description: Asynchronously returns the resulting entity objects.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Select(dataContext As IDataContext, query As String, parameters As IEnumerable(Of QueryParameter) = Nothing, cache As SelectCache = Nothing) As EntityObject()
+  overload: TimeCockpit.Data.IDataContextExtensions.Select*
+  nameWithType.vb: IDataContextExtensions.Select(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.Select(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), TimeCockpit.Data.Database.SelectCache)
+  name.vb: Select(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  id: SelectSingleAsync(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectSingleAsync(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  nameWithType: IDataContextExtensions.SelectSingleAsync(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, TimeCockpit.Data.Database.SelectCache)
+  type: Method
+  source:
+    id: SelectSingleAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 67
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nAsynchronously selects a single entity.\n"
+  example: []
+  syntax:
+    content: public static Task<EntityObject> SelectSingleAsync(this IDataContext dataContext, string query, IEnumerable<QueryParameter> parameters = null, SelectCache cache = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context.
+    - id: query
+      type: System.String
+      description: The query.
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+      description: The parameters.
+    - id: cache
+      type: TimeCockpit.Data.Database.SelectCache
+      description: The select cache.
+    return:
+      type: System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject}
+      description: Returns the single entity object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingleAsync(dataContext As IDataContext, query As String, parameters As IEnumerable(Of QueryParameter) = Nothing, cache As SelectCache = Nothing) As Task(Of EntityObject)
+  overload: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync*
+  nameWithType.vb: IDataContextExtensions.SelectSingleAsync(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), TimeCockpit.Data.Database.SelectCache)
+  name.vb: SelectSingleAsync(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  id: SelectSingle(TimeCockpit.Data.IDataContext,System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectSingle(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  nameWithType: IDataContextExtensions.SelectSingle(IDataContext, String, IEnumerable<QueryParameter>, SelectCache)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, TimeCockpit.Data.Database.SelectCache)
+  type: Method
+  source:
+    id: SelectSingle
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 84
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nAsynchronously selects a single entity.\n"
+  example: []
+  syntax:
+    content: public static EntityObject SelectSingle(this IDataContext dataContext, string query, IEnumerable<QueryParameter> parameters = null, SelectCache cache = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context.
+    - id: query
+      type: System.String
+      description: The query.
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+      description: The parameters.
+    - id: cache
+      type: TimeCockpit.Data.Database.SelectCache
+      description: The select cache.
+    return:
+      type: TimeCockpit.Data.EntityObject
+      description: Returns the single entity object.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingle(dataContext As IDataContext, query As String, parameters As IEnumerable(Of QueryParameter) = Nothing, cache As SelectCache = Nothing) As EntityObject
+  overload: TimeCockpit.Data.IDataContextExtensions.SelectSingle*
+  nameWithType.vb: IDataContextExtensions.SelectSingle(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext, System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), TimeCockpit.Data.Database.SelectCache)
+  name.vb: SelectSingle(IDataContext, String, IEnumerable(Of QueryParameter), SelectCache)
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  id: SelectSingleAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectSingleAsync(IDataContext, IEntityObject, Boolean)
+  nameWithType: IDataContextExtensions.SelectSingleAsync(IDataContext, IEntityObject, Boolean)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync(TimeCockpit.Data.IDataContext, TimeCockpit.Data.IEntityObject, System.Boolean)
+  type: Method
+  source:
+    id: SelectSingleAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 96
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSelect single based on an existing IEntityObject.\n"
+  example: []
+  syntax:
+    content: public static Task<EntityObject> SelectSingleAsync(this IDataContext dataContext, IEntityObject entityObject, bool autoIncludeRelations = false)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: entityObject
+      type: TimeCockpit.Data.IEntityObject
+      description: Existing (proxy) entity object to (re-)select.
+    - id: autoIncludeRelations
+      type: System.Boolean
+      description: Indicates whether relations should be included.
+    return:
+      type: System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject}
+      description: Single entity object or null if not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingleAsync(dataContext As IDataContext, entityObject As IEntityObject, autoIncludeRelations As Boolean = False) As Task(Of EntityObject)
+  overload: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  id: SelectSingle(TimeCockpit.Data.IDataContext,TimeCockpit.Data.IEntityObject,System.Boolean)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SelectSingle(IDataContext, IEntityObject, Boolean)
+  nameWithType: IDataContextExtensions.SelectSingle(IDataContext, IEntityObject, Boolean)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingle(TimeCockpit.Data.IDataContext, TimeCockpit.Data.IEntityObject, System.Boolean)
+  type: Method
+  source:
+    id: SelectSingle
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 115
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSelect single based on an existing IEntityObject.\n"
+  example: []
+  syntax:
+    content: public static EntityObject SelectSingle(this IDataContext dataContext, IEntityObject entityObject, bool autoIncludeRelations = false)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: entityObject
+      type: TimeCockpit.Data.IEntityObject
+      description: Existing (proxy) entity object to (re-)select.
+    - id: autoIncludeRelations
+      type: System.Boolean
+      description: Indicates whether relations should be included.
+    return:
+      type: TimeCockpit.Data.EntityObject
+      description: Single entity object or null if not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function SelectSingle(dataContext As IDataContext, entityObject As IEntityObject, autoIncludeRelations As Boolean = False) As EntityObject
+  overload: TimeCockpit.Data.IDataContextExtensions.SelectSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  id: ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteActionAsync(IDataContext, ModelAction, IEnumerable<EntityObject>, ModelEntityBase, EntityObject)
+  nameWithType: IDataContextExtensions.ExecuteActionAsync(IDataContext, ModelAction, IEnumerable<EntityObject>, ModelEntityBase, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: ExecuteActionAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 129
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nExecutes an instance of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static Task<ActionResult> ExecuteActionAsync(this IDataContext dataContext, ModelAction action, IEnumerable<EntityObject> inputSet, ModelEntityBase modelEntity, EntityObject parameter)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: The action that sould be executed.
+    - id: inputSet
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+      description: The input set on which an action should be executed.
+    - id: modelEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: The entity type of the input set.
+    - id: parameter
+      type: TimeCockpit.Data.EntityObject
+      description: The parameter that is passed into the action.
+    return:
+      type: System.Threading.Tasks.Task{TimeCockpit.Data.ActionResult}
+      description: The output of the action
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteActionAsync(dataContext As IDataContext, action As ModelAction, inputSet As IEnumerable(Of EntityObject), modelEntity As ModelEntityBase, parameter As EntityObject) As Task(Of ActionResult)
+  overload: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync*
+  nameWithType.vb: IDataContextExtensions.ExecuteActionAsync(IDataContext, ModelAction, IEnumerable(Of EntityObject), ModelEntityBase, EntityObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject), TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  name.vb: ExecuteActionAsync(IDataContext, ModelAction, IEnumerable(Of EntityObject), ModelEntityBase, EntityObject)
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  id: ExecuteActionAsync(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteActionAsync(IDataContext, ModelAction, IEnumerable<Guid>, ModelEntityBase, EntityObject)
+  nameWithType: IDataContextExtensions.ExecuteActionAsync(IDataContext, ModelAction, IEnumerable<Guid>, ModelEntityBase, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable<System.Guid>, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: ExecuteActionAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 143
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nExecutes an instance of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static Task<ActionResult> ExecuteActionAsync(this IDataContext dataContext, ModelAction action, IEnumerable<Guid> inputSetUuids, ModelEntityBase modelEntity, EntityObject parameter)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: The action that sould be executed.
+    - id: inputSetUuids
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+      description: The input set uuids on which an action should be executed.
+    - id: modelEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: The entity type of the input set.
+    - id: parameter
+      type: TimeCockpit.Data.EntityObject
+      description: The parameter that is passed into the action.
+    return:
+      type: System.Threading.Tasks.Task{TimeCockpit.Data.ActionResult}
+      description: The output of the action
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteActionAsync(dataContext As IDataContext, action As ModelAction, inputSetUuids As IEnumerable(Of Guid), modelEntity As ModelEntityBase, parameter As EntityObject) As Task(Of ActionResult)
+  overload: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync*
+  nameWithType.vb: IDataContextExtensions.ExecuteActionAsync(IDataContext, ModelAction, IEnumerable(Of Guid), ModelEntityBase, EntityObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable(Of System.Guid), TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  name.vb: ExecuteActionAsync(IDataContext, ModelAction, IEnumerable(Of Guid), ModelEntityBase, EntityObject)
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  id: ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAction(IDataContext, ModelAction, IEnumerable<EntityObject>, ModelEntityBase, EntityObject)
+  nameWithType: IDataContextExtensions.ExecuteAction(IDataContext, ModelAction, IEnumerable<EntityObject>, ModelEntityBase, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: ExecuteAction
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 157
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nExecutes an instance of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static ActionResult ExecuteAction(this IDataContext dataContext, ModelAction action, IEnumerable<EntityObject> inputSet, ModelEntityBase modelEntity, EntityObject parameter)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: The action that sould be executed.
+    - id: inputSet
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+      description: The input set on which an action should be executed.
+    - id: modelEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: The entity type of the input set.
+    - id: parameter
+      type: TimeCockpit.Data.EntityObject
+      description: The parameter that is passed into the action.
+    return:
+      type: TimeCockpit.Data.ActionResult
+      description: The output of the action
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteAction(dataContext As IDataContext, action As ModelAction, inputSet As IEnumerable(Of EntityObject), modelEntity As ModelEntityBase, parameter As EntityObject) As ActionResult
+  overload: TimeCockpit.Data.IDataContextExtensions.ExecuteAction*
+  nameWithType.vb: IDataContextExtensions.ExecuteAction(IDataContext, ModelAction, IEnumerable(Of EntityObject), ModelEntityBase, EntityObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject), TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  name.vb: ExecuteAction(IDataContext, ModelAction, IEnumerable(Of EntityObject), ModelEntityBase, EntityObject)
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  id: ExecuteAction(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Actions.ModelAction,System.Collections.Generic.IEnumerable{System.Guid},TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAction(IDataContext, ModelAction, IEnumerable<Guid>, ModelEntityBase, EntityObject)
+  nameWithType: IDataContextExtensions.ExecuteAction(IDataContext, ModelAction, IEnumerable<Guid>, ModelEntityBase, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable<System.Guid>, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: ExecuteAction
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 180
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nExecutes an instance of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static ActionResult ExecuteAction(this IDataContext dataContext, ModelAction action, IEnumerable<Guid> inputSetUuids, ModelEntityBase modelEntity, EntityObject parameter)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: The action that sould be executed.
+    - id: inputSetUuids
+      type: System.Collections.Generic.IEnumerable{System.Guid}
+      description: The input set uuids on which an action should be executed.
+    - id: modelEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: The entity type of the input set.
+    - id: parameter
+      type: TimeCockpit.Data.EntityObject
+      description: The parameter that is passed into the action.
+    return:
+      type: TimeCockpit.Data.ActionResult
+      description: The output of the action
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ExecuteAction(dataContext As IDataContext, action As ModelAction, inputSetUuids As IEnumerable(Of Guid), modelEntity As ModelEntityBase, parameter As EntityObject) As ActionResult
+  overload: TimeCockpit.Data.IDataContextExtensions.ExecuteAction*
+  nameWithType.vb: IDataContextExtensions.ExecuteAction(IDataContext, ModelAction, IEnumerable(Of Guid), ModelEntityBase, EntityObject)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.IDataContextExtensions.ExecuteAction(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Actions.ModelAction, System.Collections.Generic.IEnumerable(Of System.Guid), TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.EntityObject)
+  name.vb: ExecuteAction(IDataContext, ModelAction, IEnumerable(Of Guid), ModelEntityBase, EntityObject)
+- uid: TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync(TimeCockpit.Data.IDataContext)
+  id: RefreshModelAsync(TimeCockpit.Data.IDataContext)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: RefreshModelAsync(IDataContext)
+  nameWithType: IDataContextExtensions.RefreshModelAsync(IDataContext)
+  fullName: TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: RefreshModelAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 199
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRefresh the model using a async task.\n"
+  example: []
+  syntax:
+    content: public static Task RefreshModelAsync(this IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Task representing the refresh operation.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RefreshModelAsync(dataContext As IDataContext) As Task
+  overload: TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Model)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Model)
+  id: UserHasAdminRole(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.Model)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: UserHasAdminRole(IDataContext, Model)
+  nameWithType: IDataContextExtensions.UserHasAdminRole(IDataContext, Model)
+  fullName: TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.Model)
+  type: Method
+  source:
+    id: UserHasAdminRole
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 211
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether the user is admin or not.\n"
+  remarks: If the APP_AdminPermission is not found or system mode is enabled we assume admin.
+  example: []
+  syntax:
+    content: public static bool UserHasAdminRole(this IDataContext dataContext, Model model = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context to use.
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+      description: The model that hold the permissions
+    return:
+      type: System.Boolean
+      description: True if APP_AdminPermission matches or is not found.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function UserHasAdminRole(dataContext As IDataContext, model As Model = Nothing) As Boolean
+  overload: TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.IDataContextExtensions.SaveObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.SaveObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  id: SaveObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: SaveObject(IDataContext, EntityObject)
+  nameWithType: IDataContextExtensions.SaveObject(IDataContext, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.SaveObject(TimeCockpit.Data.IDataContext, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: SaveObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 232
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nSaves a given <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static void SaveObject(this IDataContext dataContext, EntityObject entityObject)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context to use.
+    - id: entityObject
+      type: TimeCockpit.Data.EntityObject
+      description: The <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref> to save.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SaveObject(dataContext As IDataContext, entityObject As EntityObject)
+  overload: TimeCockpit.Data.IDataContextExtensions.SaveObject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.IDataContextExtensions.DeleteObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.IDataContextExtensions.DeleteObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  id: DeleteObject(TimeCockpit.Data.IDataContext,TimeCockpit.Data.EntityObject)
+  isExtensionMethod: true
+  parent: TimeCockpit.Data.IDataContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: DeleteObject(IDataContext, EntityObject)
+  nameWithType: IDataContextExtensions.DeleteObject(IDataContext, EntityObject)
+  fullName: TimeCockpit.Data.IDataContextExtensions.DeleteObject(TimeCockpit.Data.IDataContext, TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: DeleteObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\IDataContextExtensions.cs
+    startLine: 242
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nDeletes a given <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public static void DeleteObject(this IDataContext dataContext, EntityObject entityObject)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: Data context to use.
+    - id: entityObject
+      type: TimeCockpit.Data.EntityObject
+      description: The <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref> to delete.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub DeleteObject(dataContext As IDataContext, entityObject As EntityObject)
+  overload: TimeCockpit.Data.IDataContextExtensions.DeleteObject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.IDataContext
+  commentId: T:TimeCockpit.Data.IDataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: IDataContext
+  nameWithType: IDataContext
+  fullName: TimeCockpit.Data.IDataContext
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectAsync*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.SelectAsync
+  isExternal: false
+  name: SelectAsync
+  nameWithType: IDataContextExtensions.SelectAsync
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<QueryParameter>
+  nameWithType: IEnumerable<QueryParameter>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>
+  nameWithType.vb: IEnumerable(Of QueryParameter)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter)
+  name.vb: IEnumerable(Of QueryParameter)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.SelectCache
+  commentId: T:TimeCockpit.Data.Database.SelectCache
+  parent: TimeCockpit.Data.Database
+  isExternal: false
+  name: SelectCache
+  nameWithType: SelectCache
+  fullName: TimeCockpit.Data.Database.SelectCache
+- uid: System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject[]}
+  commentId: T:System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<EntityObject[]>
+  nameWithType: Task<EntityObject[]>
+  fullName: System.Threading.Tasks.Task<TimeCockpit.Data.EntityObject[]>
+  nameWithType.vb: Task(Of EntityObject())
+  fullName.vb: System.Threading.Tasks.Task(Of TimeCockpit.Data.EntityObject())
+  name.vb: Task(Of EntityObject())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Database
+  commentId: N:TimeCockpit.Data.Database
+  isExternal: false
+  name: TimeCockpit.Data.Database
+  nameWithType: TimeCockpit.Data.Database
+  fullName: TimeCockpit.Data.Database
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: TimeCockpit.Data.IDataContextExtensions.Select*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.Select
+  isExternal: false
+  name: Select
+  nameWithType: IDataContextExtensions.Select
+  fullName: TimeCockpit.Data.IDataContextExtensions.Select
+- uid: TimeCockpit.Data.EntityObject[]
+  name: EntityObject[]
+  nameWithType: EntityObject[]
+  fullName: TimeCockpit.Data.EntityObject[]
+  nameWithType.vb: EntityObject()
+  fullName.vb: TimeCockpit.Data.EntityObject()
+  name.vb: EntityObject()
+  spec.csharp:
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync
+  isExternal: false
+  name: SelectSingleAsync
+  nameWithType: IDataContextExtensions.SelectSingleAsync
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingleAsync
+- uid: System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject}
+  commentId: T:System.Threading.Tasks.Task{TimeCockpit.Data.EntityObject}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<EntityObject>
+  nameWithType: Task<EntityObject>
+  fullName: System.Threading.Tasks.Task<TimeCockpit.Data.EntityObject>
+  nameWithType.vb: Task(Of EntityObject)
+  fullName.vb: System.Threading.Tasks.Task(Of TimeCockpit.Data.EntityObject)
+  name.vb: Task(Of EntityObject)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.IDataContextExtensions.SelectSingle*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.SelectSingle
+  isExternal: false
+  name: SelectSingle
+  nameWithType: IDataContextExtensions.SelectSingle
+  fullName: TimeCockpit.Data.IDataContextExtensions.SelectSingle
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data.IEntityObject
+  commentId: T:TimeCockpit.Data.IEntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: IEntityObject
+  nameWithType: IEntityObject
+  fullName: TimeCockpit.Data.IEntityObject
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: ModelAction
+  nameWithType: ModelAction
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync
+  isExternal: false
+  name: ExecuteActionAsync
+  nameWithType: IDataContextExtensions.ExecuteActionAsync
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteActionAsync
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<EntityObject>
+  nameWithType: IEnumerable<EntityObject>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>
+  nameWithType.vb: IEnumerable(Of EntityObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject)
+  name.vb: IEnumerable(Of EntityObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: System.Threading.Tasks.Task{TimeCockpit.Data.ActionResult}
+  commentId: T:System.Threading.Tasks.Task{TimeCockpit.Data.ActionResult}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ActionResult>
+  nameWithType: Task<ActionResult>
+  fullName: System.Threading.Tasks.Task<TimeCockpit.Data.ActionResult>
+  nameWithType.vb: Task(Of ActionResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TimeCockpit.Data.ActionResult)
+  name.vb: Task(Of ActionResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: TimeCockpit.Data.ActionResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.ActionResult
+    name: ActionResult
+    nameWithType: ActionResult
+    fullName: TimeCockpit.Data.ActionResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Actions
+  commentId: N:TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.Actions
+  nameWithType: TimeCockpit.Data.DataModel.Actions
+  fullName: TimeCockpit.Data.DataModel.Actions
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Collections.Generic.IEnumerable{System.Guid}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Guid>
+  nameWithType: IEnumerable<Guid>
+  fullName: System.Collections.Generic.IEnumerable<System.Guid>
+  nameWithType.vb: IEnumerable(Of Guid)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Guid)
+  name.vb: IEnumerable(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.IDataContextExtensions.ExecuteAction*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.ExecuteAction
+  isExternal: false
+  name: ExecuteAction
+  nameWithType: IDataContextExtensions.ExecuteAction
+  fullName: TimeCockpit.Data.IDataContextExtensions.ExecuteAction
+- uid: TimeCockpit.Data.ActionResult
+  commentId: T:TimeCockpit.Data.ActionResult
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: TimeCockpit.Data.ActionResult
+- uid: TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync
+  isExternal: false
+  name: RefreshModelAsync
+  nameWithType: IDataContextExtensions.RefreshModelAsync
+  fullName: TimeCockpit.Data.IDataContextExtensions.RefreshModelAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole
+  isExternal: false
+  name: UserHasAdminRole
+  nameWithType: IDataContextExtensions.UserHasAdminRole
+  fullName: TimeCockpit.Data.IDataContextExtensions.UserHasAdminRole
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
+- uid: TimeCockpit.Data.IDataContextExtensions.SaveObject*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.SaveObject
+  isExternal: false
+  name: SaveObject
+  nameWithType: IDataContextExtensions.SaveObject
+  fullName: TimeCockpit.Data.IDataContextExtensions.SaveObject
+- uid: TimeCockpit.Data.IDataContextExtensions.DeleteObject*
+  commentId: Overload:TimeCockpit.Data.IDataContextExtensions.DeleteObject
+  isExternal: false
+  name: DeleteObject
+  nameWithType: IDataContextExtensions.DeleteObject
+  fullName: TimeCockpit.Data.IDataContextExtensions.DeleteObject

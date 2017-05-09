@@ -1,0 +1,1963 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.View.List
+  commentId: T:TimeCockpit.Data.DataModel.View.List
+  id: List
+  parent: TimeCockpit.Data.DataModel.View
+  children:
+  - TimeCockpit.Data.DataModel.View.List.#ctor
+  - TimeCockpit.Data.DataModel.View.List.Actions
+  - TimeCockpit.Data.DataModel.View.List.AllowAdd
+  - TimeCockpit.Data.DataModel.View.List.AllowCopy
+  - TimeCockpit.Data.DataModel.View.List.AllowDelete
+  - TimeCockpit.Data.DataModel.View.List.AllowEdit
+  - TimeCockpit.Data.DataModel.View.List.AllowSort
+  - TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+  - TimeCockpit.Data.DataModel.View.List.Columns
+  - TimeCockpit.Data.DataModel.View.List.EditFormName
+  - TimeCockpit.Data.DataModel.View.List.EditMode
+  - TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+  - TimeCockpit.Data.DataModel.View.List.EditProperty
+  - TimeCockpit.Data.DataModel.View.List.EncodedSignature
+  - TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+  - TimeCockpit.Data.DataModel.View.List.Filter
+  - TimeCockpit.Data.DataModel.View.List.Groups
+  - TimeCockpit.Data.DataModel.View.List.Query
+  - TimeCockpit.Data.DataModel.View.List.RowBackground
+  - TimeCockpit.Data.DataModel.View.List.ScriptSource
+  - TimeCockpit.Data.DataModel.View.List.Signature
+  - TimeCockpit.Data.DataModel.View.List.SortDirection
+  - TimeCockpit.Data.DataModel.View.List.SortExpression
+  - TimeCockpit.Data.DataModel.View.List.Thumbprint
+  - TimeCockpit.Data.DataModel.View.List.ViewActions
+  langs:
+  - csharp
+  - vb
+  name: List
+  nameWithType: List
+  fullName: TimeCockpit.Data.DataModel.View.List
+  type: Class
+  source:
+    id: List
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 27
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nRepresents the definition of a list.\n"
+  remarks: "\nThe user interface layer interprets the definitions in this class and displays a list of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> \nobjects accordingly.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class List : View, INotifyPropertyChanged
+    content.vb: >-
+      <DataContract>
+
+      Public Class List
+          Inherits View
+          Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DataModel.View.View
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  - TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  - TimeCockpit.Data.DataModel.View.View.ToString
+  - TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.DataModel.View.List.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.View.List.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: List()
+  nameWithType: List.List()
+  fullName: TimeCockpit.Data.DataModel.View.List.List()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 124
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nInitializes a new instance of the List class.\n"
+  example: []
+  syntax:
+    content: public List()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.View.List.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.Columns
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Columns
+  id: Columns
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Columns
+  nameWithType: List.Columns
+  fullName: TimeCockpit.Data.DataModel.View.List.Columns
+  type: Property
+  source:
+    id: Columns
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 135
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of columns in the list.\n"
+  example: []
+  syntax:
+    content: public ObservableCollection<Cell> Columns { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Cell}
+    content.vb: Public ReadOnly Property Columns As ObservableCollection(Of Cell)
+  overload: TimeCockpit.Data.DataModel.View.List.Columns*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.View.List.Groups
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Groups
+  id: Groups
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Groups
+  nameWithType: List.Groups
+  fullName: TimeCockpit.Data.DataModel.View.List.Groups
+  type: Property
+  source:
+    id: Groups
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 141
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of groups that are applied when opening a list.\n"
+  example: []
+  syntax:
+    content: public ObservableCollection<Group> Groups { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Group}
+    content.vb: Public ReadOnly Property Groups As ObservableCollection(Of Group)
+  overload: TimeCockpit.Data.DataModel.View.List.Groups*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.View.List.ViewActions
+  commentId: P:TimeCockpit.Data.DataModel.View.List.ViewActions
+  id: ViewActions
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: ViewActions
+  nameWithType: List.ViewActions
+  fullName: TimeCockpit.Data.DataModel.View.List.ViewActions
+  type: Property
+  source:
+    id: ViewActions
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 147
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of actions that are directly offered for execution.\n"
+  example: []
+  syntax:
+    content: public ObservableCollection<ViewAction> ViewActions { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ViewAction}
+    content.vb: Public ReadOnly Property ViewActions As ObservableCollection(Of ViewAction)
+  overload: TimeCockpit.Data.DataModel.View.List.ViewActions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.View.List.Actions
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Actions
+  id: Actions
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: List.Actions
+  fullName: TimeCockpit.Data.DataModel.View.List.Actions
+  type: Property
+  source:
+    id: Actions
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 153
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of actions that are directly offered for execution.\n"
+  example: []
+  syntax:
+    content: public ObservableCollection<ListAction> Actions { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ListAction}
+    content.vb: Public ReadOnly Property Actions As ObservableCollection(Of ListAction)
+  overload: TimeCockpit.Data.DataModel.View.List.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.View.List.EditFormName
+  commentId: P:TimeCockpit.Data.DataModel.View.List.EditFormName
+  id: EditFormName
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: EditFormName
+  nameWithType: List.EditFormName
+  fullName: TimeCockpit.Data.DataModel.View.List.EditFormName
+  type: Property
+  source:
+    id: EditFormName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 165
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the name of the edit form.\n"
+  remarks: "\nWhenever the user wants to edit an existing row or add a new row a form has to be opened. You can specify\nthe name of the form that should be opened in this property. If this property is not specified a default\nform is generated based on the underlying model.\n"
+  example: []
+  syntax:
+    content: public string EditFormName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EditFormName As String
+  overload: TimeCockpit.Data.DataModel.View.List.EditFormName*
+  seealso:
+  - linkId: TimeCockpit.Data.DataModel.View.Form
+    commentId: T:TimeCockpit.Data.DataModel.View.Form
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.Query
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Query
+  id: Query
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: List.Query
+  fullName: TimeCockpit.Data.DataModel.View.List.Query
+  type: Property
+  source:
+    id: Query
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 186
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the underlying query.\n"
+  remarks: "\nOnly one of the properties <xref href=\"TimeCockpit.Data.DataModel.View.List.ScriptSource\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"TimeCockpit.Data.DataModel.View.List.Query\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.DataModel.View.View.ModelEntityName\" data-throw-if-not-resolved=\"false\"></xref> must be set.\n"
+  example: []
+  syntax:
+    content: public string Query { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Query As String
+  overload: TimeCockpit.Data.DataModel.View.List.Query*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.ScriptSource
+  commentId: P:TimeCockpit.Data.DataModel.View.List.ScriptSource
+  id: ScriptSource
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: ScriptSource
+  nameWithType: List.ScriptSource
+  fullName: TimeCockpit.Data.DataModel.View.List.ScriptSource
+  type: Property
+  source:
+    id: ScriptSource
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 207
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the underlying script source.\n"
+  remarks: "\nOnly one of the properties <xref href=\"TimeCockpit.Data.DataModel.View.List.ScriptSource\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"TimeCockpit.Data.DataModel.View.List.Query\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.DataModel.View.View.ModelEntityName\" data-throw-if-not-resolved=\"false\"></xref> must be set.\n"
+  example: []
+  syntax:
+    content: public string ScriptSource { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ScriptSource As String
+  overload: TimeCockpit.Data.DataModel.View.List.ScriptSource*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+  id: AutoGenerateColumns
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AutoGenerateColumns
+  nameWithType: List.AutoGenerateColumns
+  fullName: TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+  type: Property
+  source:
+    id: AutoGenerateColumns
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 231
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the columns should be generated from the underlying query or model entity.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool AutoGenerateColumns { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoGenerateColumns As Boolean
+  overload: TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AllowEdit
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AllowEdit
+  id: AllowEdit
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AllowEdit
+  nameWithType: List.AllowEdit
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowEdit
+  type: Property
+  source:
+    id: AllowEdit
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 252
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the user can edit records in the list.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool AllowEdit { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowEdit As Boolean
+  overload: TimeCockpit.Data.DataModel.View.List.AllowEdit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AllowDelete
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AllowDelete
+  id: AllowDelete
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AllowDelete
+  nameWithType: List.AllowDelete
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowDelete
+  type: Property
+  source:
+    id: AllowDelete
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 272
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the user can delete records in the list.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool AllowDelete { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowDelete As Boolean
+  overload: TimeCockpit.Data.DataModel.View.List.AllowDelete*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AllowAdd
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AllowAdd
+  id: AllowAdd
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AllowAdd
+  nameWithType: List.AllowAdd
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowAdd
+  type: Property
+  source:
+    id: AllowAdd
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 292
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the user can add records to the list.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool ? AllowAdd { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property AllowAdd As Boolean?
+  overload: TimeCockpit.Data.DataModel.View.List.AllowAdd*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AllowCopy
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AllowCopy
+  id: AllowCopy
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AllowCopy
+  nameWithType: List.AllowCopy
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowCopy
+  type: Property
+  source:
+    id: AllowCopy
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 313
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the user can copy records in the list.\n"
+  remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool ? AllowCopy { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property AllowCopy As Boolean?
+  overload: TimeCockpit.Data.DataModel.View.List.AllowCopy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+  commentId: P:TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+  id: EditModelEntityName
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: EditModelEntityName
+  nameWithType: List.EditModelEntityName
+  fullName: TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+  type: Property
+  source:
+    id: EditModelEntityName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 331
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the name of the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> that is used to edit.\n"
+  example: []
+  syntax:
+    content: public string EditModelEntityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EditModelEntityName As String
+  overload: TimeCockpit.Data.DataModel.View.List.EditModelEntityName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.EditProperty
+  commentId: P:TimeCockpit.Data.DataModel.View.List.EditProperty
+  id: EditProperty
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: EditProperty
+  nameWithType: List.EditProperty
+  fullName: TimeCockpit.Data.DataModel.View.List.EditProperty
+  type: Property
+  source:
+    id: EditProperty
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 350
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the name of the <xref href=\"TimeCockpit.Data.DataModel.ModelProperty\" data-throw-if-not-resolved=\"false\"></xref>.\nTODO: find a better name for EditProperty.\n"
+  example: []
+  syntax:
+    content: public string EditProperty { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EditProperty As String
+  overload: TimeCockpit.Data.DataModel.View.List.EditProperty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.Filter
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Filter
+  id: Filter
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Filter
+  nameWithType: List.Filter
+  fullName: TimeCockpit.Data.DataModel.View.List.Filter
+  type: Property
+  source:
+    id: Filter
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 368
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the filter form for the List.\n"
+  example: []
+  syntax:
+    content: public Form Filter { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.View.Form
+    content.vb: Public Property Filter As Form
+  overload: TimeCockpit.Data.DataModel.View.List.Filter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.EditMode
+  commentId: P:TimeCockpit.Data.DataModel.View.List.EditMode
+  id: EditMode
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: EditMode
+  nameWithType: List.EditMode
+  fullName: TimeCockpit.Data.DataModel.View.List.EditMode
+  type: Property
+  source:
+    id: EditMode
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 397
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the edit mode for the list.\n"
+  example: []
+  syntax:
+    content: public EditMode EditMode { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.View.EditMode
+    content.vb: Public Property EditMode As EditMode
+  overload: TimeCockpit.Data.DataModel.View.List.EditMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.RowBackground
+  commentId: P:TimeCockpit.Data.DataModel.View.List.RowBackground
+  id: RowBackground
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: RowBackground
+  nameWithType: List.RowBackground
+  fullName: TimeCockpit.Data.DataModel.View.List.RowBackground
+  type: Property
+  source:
+    id: RowBackground
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 415
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the background color for rows.\n"
+  example: []
+  syntax:
+    content: public string RowBackground { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RowBackground As String
+  overload: TimeCockpit.Data.DataModel.View.List.RowBackground*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.AllowSort
+  commentId: P:TimeCockpit.Data.DataModel.View.List.AllowSort
+  id: AllowSort
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: AllowSort
+  nameWithType: List.AllowSort
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowSort
+  type: Property
+  source:
+    id: AllowSort
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 433
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating if sorting is allowed.\n"
+  example: []
+  syntax:
+    content: public string AllowSort { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AllowSort As String
+  overload: TimeCockpit.Data.DataModel.View.List.AllowSort*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.Signature
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Signature
+  id: Signature
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: List.Signature
+  fullName: TimeCockpit.Data.DataModel.View.List.Signature
+  type: Property
+  source:
+    id: Signature
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 454
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the signature.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Obsolete("Use embedded signatures instead.")]
+
+      public byte[] Signature { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+      description: "\nThe signature.\n"
+    content.vb: >-
+      <JsonIgnore>
+
+      <Obsolete("Use embedded signatures instead.")>
+
+      Public Property Signature As Byte()
+  overload: TimeCockpit.Data.DataModel.View.List.Signature*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use embedded signatures instead.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+  commentId: P:TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+  id: ExecuteOnOpen
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: ExecuteOnOpen
+  nameWithType: List.ExecuteOnOpen
+  fullName: TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+  type: Property
+  source:
+    id: ExecuteOnOpen
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 465
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the list should be executed immediately when opened.\n"
+  example: []
+  syntax:
+    content: public bool ExecuteOnOpen { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ExecuteOnOpen As Boolean
+  overload: TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.SortExpression
+  commentId: P:TimeCockpit.Data.DataModel.View.List.SortExpression
+  id: SortExpression
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: SortExpression
+  nameWithType: List.SortExpression
+  fullName: TimeCockpit.Data.DataModel.View.List.SortExpression
+  type: Property
+  source:
+    id: SortExpression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 483
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the default sort order for the list.\n"
+  example: []
+  syntax:
+    content: public string SortExpression { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SortExpression As String
+  overload: TimeCockpit.Data.DataModel.View.List.SortExpression*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.SortDirection
+  commentId: P:TimeCockpit.Data.DataModel.View.List.SortDirection
+  id: SortDirection
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: SortDirection
+  nameWithType: List.SortDirection
+  fullName: TimeCockpit.Data.DataModel.View.List.SortDirection
+  type: Property
+  source:
+    id: SortDirection
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 501
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the default sort direction for the list.\n"
+  example: []
+  syntax:
+    content: public SortDirection? SortDirection { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{TimeCockpit.Data.DataModel.View.SortDirection}
+    content.vb: Public Property SortDirection As SortDirection?
+  overload: TimeCockpit.Data.DataModel.View.List.SortDirection*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.EncodedSignature
+  commentId: P:TimeCockpit.Data.DataModel.View.List.EncodedSignature
+  id: EncodedSignature
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: EncodedSignature
+  nameWithType: List.EncodedSignature
+  fullName: TimeCockpit.Data.DataModel.View.List.EncodedSignature
+  type: Property
+  source:
+    id: EncodedSignature
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 522
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the encoded signature.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Obsolete("Use embedded python signatures instead")]
+
+      public string EncodedSignature { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe encoded signature.\n"
+    content.vb: >-
+      <JsonIgnore>
+
+      <Obsolete("Use embedded python signatures instead")>
+
+      Public Property EncodedSignature As String
+  overload: TimeCockpit.Data.DataModel.View.List.EncodedSignature*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use embedded python signatures instead
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.List.Thumbprint
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Thumbprint
+  id: Thumbprint
+  parent: TimeCockpit.Data.DataModel.View.List
+  langs:
+  - csharp
+  - vb
+  name: Thumbprint
+  nameWithType: List.Thumbprint
+  fullName: TimeCockpit.Data.DataModel.View.List.Thumbprint
+  type: Property
+  source:
+    id: Thumbprint
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\List.cs
+    startLine: 536
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the thumbprint.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      [Obsolete("Use embedded python signatures instead")]
+
+      public string Thumbprint { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe thumbprint.\n"
+    content.vb: >-
+      <JsonIgnore>
+
+      <Obsolete("Use embedded python signatures instead")>
+
+      Public Property Thumbprint As String
+  overload: TimeCockpit.Data.DataModel.View.List.Thumbprint*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use embedded python signatures instead
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data.DataModel.View
+  commentId: N:TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.View
+  nameWithType: TimeCockpit.Data.DataModel.View
+  fullName: TimeCockpit.Data.DataModel.View
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DataModel.View.View
+  commentId: T:TimeCockpit.Data.DataModel.View.View
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: View
+  nameWithType: View
+  fullName: TimeCockpit.Data.DataModel.View.View
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: PropertyChanged
+  nameWithType: View.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.View.View.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  commentId: P:TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: ModelEntityName
+  nameWithType: View.ModelEntityName
+  fullName: TimeCockpit.Data.DataModel.View.View.ModelEntityName
+- uid: TimeCockpit.Data.DataModel.View.View.ToString
+  commentId: M:TimeCockpit.Data.DataModel.View.View.ToString
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: ToString()
+  nameWithType: View.ToString()
+  fullName: TimeCockpit.Data.DataModel.View.View.ToString()
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.ToString
+    name: ToString
+    nameWithType: View.ToString
+    fullName: TimeCockpit.Data.DataModel.View.View.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.ToString
+    name: ToString
+    nameWithType: View.ToString
+    fullName: TimeCockpit.Data.DataModel.View.View.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: GetModelEntity(IDataContext)
+  nameWithType: View.GetModelEntity(IDataContext)
+  fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+    name: GetModelEntity
+    nameWithType: View.GetModelEntity
+    fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+    name: GetModelEntity
+    nameWithType: View.GetModelEntity
+    fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: true
+  name: OnPropertyChanged(String)
+  nameWithType: View.OnPropertyChanged(String)
+  fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: View.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: View.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: false
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel.View.List.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.#ctor
+  isExternal: false
+  name: List
+  nameWithType: List.List
+  fullName: TimeCockpit.Data.DataModel.View.List.List
+- uid: TimeCockpit.Data.DataModel.View.List.Columns*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Columns
+  isExternal: false
+  name: Columns
+  nameWithType: List.Columns
+  fullName: TimeCockpit.Data.DataModel.View.List.Columns
+- uid: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Cell}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Cell}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  name: ObservableCollection<Cell>
+  nameWithType: ObservableCollection<Cell>
+  fullName: System.Collections.ObjectModel.ObservableCollection<TimeCockpit.Data.DataModel.View.Cell>
+  nameWithType.vb: ObservableCollection(Of Cell)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of TimeCockpit.Data.DataModel.View.Cell)
+  name.vb: ObservableCollection(Of Cell)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.Cell
+    name: Cell
+    nameWithType: Cell
+    fullName: TimeCockpit.Data.DataModel.View.Cell
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.Cell
+    name: Cell
+    nameWithType: Cell
+    fullName: TimeCockpit.Data.DataModel.View.Cell
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: TimeCockpit.Data.DataModel.View.List.Groups*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Groups
+  isExternal: false
+  name: Groups
+  nameWithType: List.Groups
+  fullName: TimeCockpit.Data.DataModel.View.List.Groups
+- uid: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Group}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Group}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  name: ObservableCollection<Group>
+  nameWithType: ObservableCollection<Group>
+  fullName: System.Collections.ObjectModel.ObservableCollection<TimeCockpit.Data.DataModel.View.Group>
+  nameWithType.vb: ObservableCollection(Of Group)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of TimeCockpit.Data.DataModel.View.Group)
+  name.vb: ObservableCollection(Of Group)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.Group
+    name: Group
+    nameWithType: Group
+    fullName: TimeCockpit.Data.DataModel.View.Group
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.Group
+    name: Group
+    nameWithType: Group
+    fullName: TimeCockpit.Data.DataModel.View.Group
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.List.ViewActions*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.ViewActions
+  isExternal: false
+  name: ViewActions
+  nameWithType: List.ViewActions
+  fullName: TimeCockpit.Data.DataModel.View.List.ViewActions
+- uid: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ViewAction}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ViewAction}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  name: ObservableCollection<ViewAction>
+  nameWithType: ObservableCollection<ViewAction>
+  fullName: System.Collections.ObjectModel.ObservableCollection<TimeCockpit.Data.DataModel.View.ViewAction>
+  nameWithType.vb: ObservableCollection(Of ViewAction)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of TimeCockpit.Data.DataModel.View.ViewAction)
+  name.vb: ObservableCollection(Of ViewAction)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.ViewAction
+    name: ViewAction
+    nameWithType: ViewAction
+    fullName: TimeCockpit.Data.DataModel.View.ViewAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.ViewAction
+    name: ViewAction
+    nameWithType: ViewAction
+    fullName: TimeCockpit.Data.DataModel.View.ViewAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.List.Actions*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Actions
+  isExternal: false
+  name: Actions
+  nameWithType: List.Actions
+  fullName: TimeCockpit.Data.DataModel.View.List.Actions
+- uid: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ListAction}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.ListAction}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  name: ObservableCollection<ListAction>
+  nameWithType: ObservableCollection<ListAction>
+  fullName: System.Collections.ObjectModel.ObservableCollection<TimeCockpit.Data.DataModel.View.ListAction>
+  nameWithType.vb: ObservableCollection(Of ListAction)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of TimeCockpit.Data.DataModel.View.ListAction)
+  name.vb: ObservableCollection(Of ListAction)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.ListAction
+    name: ListAction
+    nameWithType: ListAction
+    fullName: TimeCockpit.Data.DataModel.View.ListAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.ListAction
+    name: ListAction
+    nameWithType: ListAction
+    fullName: TimeCockpit.Data.DataModel.View.ListAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Form
+  commentId: T:TimeCockpit.Data.DataModel.View.Form
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: Form
+  nameWithType: Form
+  fullName: TimeCockpit.Data.DataModel.View.Form
+- uid: TimeCockpit.Data.DataModel.View.List.EditFormName*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.EditFormName
+  isExternal: false
+  name: EditFormName
+  nameWithType: List.EditFormName
+  fullName: TimeCockpit.Data.DataModel.View.List.EditFormName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.View.List.ScriptSource
+  commentId: P:TimeCockpit.Data.DataModel.View.List.ScriptSource
+- uid: TimeCockpit.Data.DataModel.View.List.Query
+  commentId: P:TimeCockpit.Data.DataModel.View.List.Query
+- uid: TimeCockpit.Data.DataModel.View.List.Query*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Query
+  isExternal: false
+  name: Query
+  nameWithType: List.Query
+  fullName: TimeCockpit.Data.DataModel.View.List.Query
+- uid: TimeCockpit.Data.DataModel.View.List.ScriptSource*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.ScriptSource
+  isExternal: false
+  name: ScriptSource
+  nameWithType: List.ScriptSource
+  fullName: TimeCockpit.Data.DataModel.View.List.ScriptSource
+- uid: TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+  isExternal: false
+  name: AutoGenerateColumns
+  nameWithType: List.AutoGenerateColumns
+  fullName: TimeCockpit.Data.DataModel.View.List.AutoGenerateColumns
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.DataModel.View.List.AllowEdit*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AllowEdit
+  isExternal: false
+  name: AllowEdit
+  nameWithType: List.AllowEdit
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowEdit
+- uid: TimeCockpit.Data.DataModel.View.List.AllowDelete*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AllowDelete
+  isExternal: false
+  name: AllowDelete
+  nameWithType: List.AllowDelete
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowDelete
+- uid: TimeCockpit.Data.DataModel.View.List.AllowAdd*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AllowAdd
+  isExternal: false
+  name: AllowAdd
+  nameWithType: List.AllowAdd
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowAdd
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.List.AllowCopy*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AllowCopy
+  isExternal: false
+  name: AllowCopy
+  nameWithType: List.AllowCopy
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowCopy
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: TimeCockpit.Data.DataModel.View.List.EditModelEntityName*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+  isExternal: false
+  name: EditModelEntityName
+  nameWithType: List.EditModelEntityName
+  fullName: TimeCockpit.Data.DataModel.View.List.EditModelEntityName
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.DataModel.ModelProperty
+  commentId: T:TimeCockpit.Data.DataModel.ModelProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelProperty
+  nameWithType: ModelProperty
+  fullName: TimeCockpit.Data.DataModel.ModelProperty
+- uid: TimeCockpit.Data.DataModel.View.List.EditProperty*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.EditProperty
+  isExternal: false
+  name: EditProperty
+  nameWithType: List.EditProperty
+  fullName: TimeCockpit.Data.DataModel.View.List.EditProperty
+- uid: TimeCockpit.Data.DataModel.View.List.Filter*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Filter
+  isExternal: false
+  name: Filter
+  nameWithType: List.Filter
+  fullName: TimeCockpit.Data.DataModel.View.List.Filter
+- uid: TimeCockpit.Data.DataModel.View.List.EditMode*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.EditMode
+  isExternal: false
+  name: EditMode
+  nameWithType: List.EditMode
+  fullName: TimeCockpit.Data.DataModel.View.List.EditMode
+- uid: TimeCockpit.Data.DataModel.View.EditMode
+  commentId: T:TimeCockpit.Data.DataModel.View.EditMode
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: EditMode
+  nameWithType: EditMode
+  fullName: TimeCockpit.Data.DataModel.View.EditMode
+- uid: TimeCockpit.Data.DataModel.View.List.RowBackground*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.RowBackground
+  isExternal: false
+  name: RowBackground
+  nameWithType: List.RowBackground
+  fullName: TimeCockpit.Data.DataModel.View.List.RowBackground
+- uid: TimeCockpit.Data.DataModel.View.List.AllowSort*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.AllowSort
+  isExternal: false
+  name: AllowSort
+  nameWithType: List.AllowSort
+  fullName: TimeCockpit.Data.DataModel.View.List.AllowSort
+- uid: TimeCockpit.Data.DataModel.View.List.Signature*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Signature
+  isExternal: false
+  name: Signature
+  nameWithType: List.Signature
+  fullName: TimeCockpit.Data.DataModel.View.List.Signature
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+  isExternal: false
+  name: ExecuteOnOpen
+  nameWithType: List.ExecuteOnOpen
+  fullName: TimeCockpit.Data.DataModel.View.List.ExecuteOnOpen
+- uid: TimeCockpit.Data.DataModel.View.List.SortExpression*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.SortExpression
+  isExternal: false
+  name: SortExpression
+  nameWithType: List.SortExpression
+  fullName: TimeCockpit.Data.DataModel.View.List.SortExpression
+- uid: TimeCockpit.Data.DataModel.View.List.SortDirection*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.SortDirection
+  isExternal: false
+  name: SortDirection
+  nameWithType: List.SortDirection
+  fullName: TimeCockpit.Data.DataModel.View.List.SortDirection
+- uid: System.Nullable{TimeCockpit.Data.DataModel.View.SortDirection}
+  commentId: T:System.Nullable{TimeCockpit.Data.DataModel.View.SortDirection}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<SortDirection>
+  nameWithType: Nullable<SortDirection>
+  fullName: System.Nullable<TimeCockpit.Data.DataModel.View.SortDirection>
+  nameWithType.vb: Nullable(Of SortDirection)
+  fullName.vb: System.Nullable(Of TimeCockpit.Data.DataModel.View.SortDirection)
+  name.vb: Nullable(Of SortDirection)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.SortDirection
+    name: SortDirection
+    nameWithType: SortDirection
+    fullName: TimeCockpit.Data.DataModel.View.SortDirection
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.SortDirection
+    name: SortDirection
+    nameWithType: SortDirection
+    fullName: TimeCockpit.Data.DataModel.View.SortDirection
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.List.EncodedSignature*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.EncodedSignature
+  isExternal: false
+  name: EncodedSignature
+  nameWithType: List.EncodedSignature
+  fullName: TimeCockpit.Data.DataModel.View.List.EncodedSignature
+- uid: TimeCockpit.Data.DataModel.View.List.Thumbprint*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.List.Thumbprint
+  isExternal: false
+  name: Thumbprint
+  nameWithType: List.Thumbprint
+  fullName: TimeCockpit.Data.DataModel.View.List.Thumbprint

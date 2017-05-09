@@ -1,0 +1,1121 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.View.Form
+  commentId: T:TimeCockpit.Data.DataModel.View.Form
+  id: Form
+  parent: TimeCockpit.Data.DataModel.View
+  children:
+  - TimeCockpit.Data.DataModel.View.Form.#ctor
+  - TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+  - TimeCockpit.Data.DataModel.View.Form.Header
+  - TimeCockpit.Data.DataModel.View.Form.IncludeClause
+  - TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  - TimeCockpit.Data.DataModel.View.Form.Tabs
+  - TimeCockpit.Data.DataModel.View.Form.TabsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  - TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+  - TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+  - TimeCockpit.Data.DataModel.View.Form.Width
+  langs:
+  - csharp
+  - vb
+  name: Form
+  nameWithType: Form
+  fullName: TimeCockpit.Data.DataModel.View.Form
+  type: Class
+  source:
+    id: Form
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 17
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nDisplays one record of an entity in a form.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public class Form : View, INotifyPropertyChanged
+    content.vb: >-
+      <DataContract>
+
+      Public Class Form
+          Inherits View
+          Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DataModel.View.View
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  - TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  - TimeCockpit.Data.DataModel.View.View.ToString
+  - TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.DataModel.View.Form.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.View.Form.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: Form()
+  nameWithType: Form.Form()
+  fullName: TimeCockpit.Data.DataModel.View.Form.Form()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 59
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nInitializes a new instance of the Form class.\n"
+  example: []
+  syntax:
+    content: public Form()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.View.Form.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.Width
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.Width
+  id: Width
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Form.Width
+  fullName: TimeCockpit.Data.DataModel.View.Form.Width
+  type: Property
+  source:
+    id: Width
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 70
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the default width of the form.\n"
+  example: []
+  syntax:
+    content: public int ? Width { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Width As Integer?
+  overload: TimeCockpit.Data.DataModel.View.Form.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+  id: VerticalTabOrder
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: VerticalTabOrder
+  nameWithType: Form.VerticalTabOrder
+  fullName: TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+  type: Property
+  source:
+    id: VerticalTabOrder
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 89
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether to use vertical tab order instead of the default horizontal tab order.\nIf this value is not set, the tab order of the parenting form is used.\n"
+  example: []
+  syntax:
+    content: public bool ? VerticalTabOrder { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property VerticalTabOrder As Boolean?
+  overload: TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+  id: UseParametersAsDefaultValues
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: UseParametersAsDefaultValues
+  nameWithType: Form.UseParametersAsDefaultValues
+  fullName: TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+  type: Property
+  source:
+    id: UseParametersAsDefaultValues
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 107
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether to use all passed parameters as default values when the name matches.\n"
+  example: []
+  syntax:
+    content: public bool ? UseParametersAsDefaultValues { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property UseParametersAsDefaultValues As Boolean?
+  overload: TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.IncludeClause
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.IncludeClause
+  id: IncludeClause
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: IncludeClause
+  nameWithType: Form.IncludeClause
+  fullName: TimeCockpit.Data.DataModel.View.Form.IncludeClause
+  type: Property
+  source:
+    id: IncludeClause
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the include clause for the statement. If no include clause is specified \".Include(*)\" is used.\n"
+  example: []
+  syntax:
+    content: public string IncludeClause { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IncludeClause As String
+  overload: TimeCockpit.Data.DataModel.View.Form.IncludeClause*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.Header
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.Header
+  id: Header
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: Form.Header
+  fullName: TimeCockpit.Data.DataModel.View.Form.Header
+  type: Property
+  source:
+    id: Header
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 143
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a header expression.\n"
+  example: []
+  syntax:
+    content: public string Header { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Header As String
+  overload: TimeCockpit.Data.DataModel.View.Form.Header*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.Tabs
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.Tabs
+  id: Tabs
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: Tabs
+  nameWithType: Form.Tabs
+  fullName: TimeCockpit.Data.DataModel.View.Form.Tabs
+  type: Property
+  source:
+    id: Tabs
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 164
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of tabs in the form.\n"
+  example: []
+  syntax:
+    content: public ObservableCollection<Tab> Tabs { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Tab}
+    content.vb: Public ReadOnly Property Tabs As ObservableCollection(Of Tab)
+  overload: TimeCockpit.Data.DataModel.View.Form.Tabs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+  id: AutoRefreshOnDataUpdates
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: AutoRefreshOnDataUpdates
+  nameWithType: Form.AutoRefreshOnDataUpdates
+  fullName: TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+  type: Property
+  source:
+    id: AutoRefreshOnDataUpdates
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 170
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the form and all backreference tabs should be automatically updated if any data changes.\n"
+  example: []
+  syntax:
+    content: public bool AutoRefreshOnDataUpdates { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoRefreshOnDataUpdates As Boolean
+  overload: TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Form.TabsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  commentId: M:TimeCockpit.Data.DataModel.View.Form.TabsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  id: TabsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: TabsChanged(Object, NotifyCollectionChangedEventArgs)
+  nameWithType: Form.TabsChanged(Object, NotifyCollectionChangedEventArgs)
+  fullName: TimeCockpit.Data.DataModel.View.Form.TabsChanged(System.Object, System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  type: Method
+  source:
+    id: TabsChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 193
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nRaised, when an item is added to the <xref href=\"TimeCockpit.Data.DataModel.View.Form.Tabs\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  example: []
+  syntax:
+    content: protected void TabsChanged(object sender, NotifyCollectionChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: The sender that fired the event
+    - id: e
+      type: System.Collections.Specialized.NotifyCollectionChangedEventArgs
+      description: Provides information about event arguments
+    content.vb: Protected Sub TabsChanged(sender As Object, e As NotifyCollectionChangedEventArgs)
+  overload: TimeCockpit.Data.DataModel.View.Form.TabsChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  commentId: M:TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  id: TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  parent: TimeCockpit.Data.DataModel.View.Form
+  langs:
+  - csharp
+  - vb
+  name: TabChanged(Object, PropertyChangedEventArgs)
+  nameWithType: Form.TabChanged(Object, PropertyChangedEventArgs)
+  fullName: TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object, System.ComponentModel.PropertyChangedEventArgs)
+  type: Method
+  source:
+    id: TabChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Form.cs
+    startLine: 216
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nEvent handler for the <xref href=\"TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object%2cSystem.ComponentModel.PropertyChangedEventArgs)\" data-throw-if-not-resolved=\"false\"></xref> event.\nIf a tab is changed in the <xref href=\"TimeCockpit.Data.DataModel.View.Form.Tabs\" data-throw-if-not-resolved=\"false\"></xref> collection, we fire the <xref href=\"PropertyChanged\" data-throw-if-not-resolved=\"false\"></xref> event for Tabs\n"
+  example: []
+  syntax:
+    content: protected void TabChanged(object sender, PropertyChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: Object sending the event (currently not used)
+    - id: e
+      type: System.ComponentModel.PropertyChangedEventArgs
+      description: Event arguments.
+    content.vb: Protected Sub TabChanged(sender As Object, e As PropertyChangedEventArgs)
+  overload: TimeCockpit.Data.DataModel.View.Form.TabChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: TimeCockpit.Data.DataModel.View
+  commentId: N:TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.View
+  nameWithType: TimeCockpit.Data.DataModel.View
+  fullName: TimeCockpit.Data.DataModel.View
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DataModel.View.View
+  commentId: T:TimeCockpit.Data.DataModel.View.View
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: View
+  nameWithType: View
+  fullName: TimeCockpit.Data.DataModel.View.View
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.View.View.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: PropertyChanged
+  nameWithType: View.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.View.View.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  commentId: P:TimeCockpit.Data.DataModel.View.View.ModelEntityName
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: ModelEntityName
+  nameWithType: View.ModelEntityName
+  fullName: TimeCockpit.Data.DataModel.View.View.ModelEntityName
+- uid: TimeCockpit.Data.DataModel.View.View.ToString
+  commentId: M:TimeCockpit.Data.DataModel.View.View.ToString
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: ToString()
+  nameWithType: View.ToString()
+  fullName: TimeCockpit.Data.DataModel.View.View.ToString()
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.ToString
+    name: ToString
+    nameWithType: View.ToString
+    fullName: TimeCockpit.Data.DataModel.View.View.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.ToString
+    name: ToString
+    nameWithType: View.ToString
+    fullName: TimeCockpit.Data.DataModel.View.View.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: false
+  name: GetModelEntity(IDataContext)
+  nameWithType: View.GetModelEntity(IDataContext)
+  fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+    name: GetModelEntity
+    nameWithType: View.GetModelEntity
+    fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.GetModelEntity(TimeCockpit.Data.IDataContext)
+    name: GetModelEntity
+    nameWithType: View.GetModelEntity
+    fullName: TimeCockpit.Data.DataModel.View.View.GetModelEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  parent: TimeCockpit.Data.DataModel.View.View
+  isExternal: true
+  name: OnPropertyChanged(String)
+  nameWithType: View.OnPropertyChanged(String)
+  fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: View.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: View.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.View.View.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: false
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel.View.Form.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.#ctor
+  isExternal: false
+  name: Form
+  nameWithType: Form.Form
+  fullName: TimeCockpit.Data.DataModel.View.Form.Form
+- uid: TimeCockpit.Data.DataModel.View.Form.Width*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.Width
+  isExternal: false
+  name: Width
+  nameWithType: Form.Width
+  fullName: TimeCockpit.Data.DataModel.View.Form.Width
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+  isExternal: false
+  name: VerticalTabOrder
+  nameWithType: Form.VerticalTabOrder
+  fullName: TimeCockpit.Data.DataModel.View.Form.VerticalTabOrder
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+  isExternal: false
+  name: UseParametersAsDefaultValues
+  nameWithType: Form.UseParametersAsDefaultValues
+  fullName: TimeCockpit.Data.DataModel.View.Form.UseParametersAsDefaultValues
+- uid: TimeCockpit.Data.DataModel.View.Form.IncludeClause*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.IncludeClause
+  isExternal: false
+  name: IncludeClause
+  nameWithType: Form.IncludeClause
+  fullName: TimeCockpit.Data.DataModel.View.Form.IncludeClause
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.View.Form.Header*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.Header
+  isExternal: false
+  name: Header
+  nameWithType: Form.Header
+  fullName: TimeCockpit.Data.DataModel.View.Form.Header
+- uid: TimeCockpit.Data.DataModel.View.Form.Tabs*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.Tabs
+  isExternal: false
+  name: Tabs
+  nameWithType: Form.Tabs
+  fullName: TimeCockpit.Data.DataModel.View.Form.Tabs
+- uid: System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Tab}
+  commentId: T:System.Collections.ObjectModel.ObservableCollection{TimeCockpit.Data.DataModel.View.Tab}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ObservableCollection`1
+  name: ObservableCollection<Tab>
+  nameWithType: ObservableCollection<Tab>
+  fullName: System.Collections.ObjectModel.ObservableCollection<TimeCockpit.Data.DataModel.View.Tab>
+  nameWithType.vb: ObservableCollection(Of Tab)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of TimeCockpit.Data.DataModel.View.Tab)
+  name.vb: ObservableCollection(Of Tab)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.View.Tab
+    name: Tab
+    nameWithType: Tab
+    fullName: TimeCockpit.Data.DataModel.View.Tab
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.View.Tab
+    name: Tab
+    nameWithType: Tab
+    fullName: TimeCockpit.Data.DataModel.View.Tab
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.ObservableCollection`1
+  commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  isExternal: true
+  name: ObservableCollection<T>
+  nameWithType: ObservableCollection<T>
+  fullName: System.Collections.ObjectModel.ObservableCollection<T>
+  nameWithType.vb: ObservableCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ObservableCollection(Of T)
+  name.vb: ObservableCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ObservableCollection`1
+    name: ObservableCollection
+    nameWithType: ObservableCollection
+    fullName: System.Collections.ObjectModel.ObservableCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+  isExternal: false
+  name: AutoRefreshOnDataUpdates
+  nameWithType: Form.AutoRefreshOnDataUpdates
+  fullName: TimeCockpit.Data.DataModel.View.Form.AutoRefreshOnDataUpdates
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.DataModel.View.Form.Tabs
+  commentId: P:TimeCockpit.Data.DataModel.View.Form.Tabs
+- uid: TimeCockpit.Data.DataModel.View.Form.TabsChanged*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.TabsChanged
+  isExternal: false
+  name: TabsChanged
+  nameWithType: Form.TabsChanged
+  fullName: TimeCockpit.Data.DataModel.View.Form.TabsChanged
+- uid: System.Collections.Specialized.NotifyCollectionChangedEventArgs
+  commentId: T:System.Collections.Specialized.NotifyCollectionChangedEventArgs
+  parent: System.Collections.Specialized
+  isExternal: true
+  name: NotifyCollectionChangedEventArgs
+  nameWithType: NotifyCollectionChangedEventArgs
+  fullName: System.Collections.Specialized.NotifyCollectionChangedEventArgs
+- uid: System.Collections.Specialized
+  commentId: N:System.Collections.Specialized
+  isExternal: false
+  name: System.Collections.Specialized
+  nameWithType: System.Collections.Specialized
+  fullName: System.Collections.Specialized
+- uid: TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  commentId: M:TimeCockpit.Data.DataModel.View.Form.TabChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+- uid: PropertyChanged
+  commentId: M:PropertyChanged
+- uid: TimeCockpit.Data.DataModel.View.Form.TabChanged*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Form.TabChanged
+  isExternal: false
+  name: TabChanged
+  nameWithType: Form.TabChanged
+  fullName: TimeCockpit.Data.DataModel.View.Form.TabChanged
+- uid: System.ComponentModel.PropertyChangedEventArgs
+  commentId: T:System.ComponentModel.PropertyChangedEventArgs
+  parent: System.ComponentModel
+  isExternal: true
+  name: PropertyChangedEventArgs
+  nameWithType: PropertyChangedEventArgs
+  fullName: System.ComponentModel.PropertyChangedEventArgs

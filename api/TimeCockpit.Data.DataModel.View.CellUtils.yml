@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.View.CellUtils
+  commentId: T:TimeCockpit.Data.DataModel.View.CellUtils
+  id: CellUtils
+  parent: TimeCockpit.Data.DataModel.View
+  children:
+  - TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty@,TimeCockpit.Data.DataModel.Relation@)
+  - TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType(TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.DataModel.RelationBase)
+  - TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType(System.Type)
+  - TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression(TimeCockpit.Data.IDataContext,System.String)
+  - TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell(TimeCockpit.Data.DataModel.View.FileCell,TimeCockpit.Data.DataModel.FileProperty)
+  langs:
+  - csharp
+  - vb
+  name: CellUtils
+  nameWithType: CellUtils
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils
+  type: Class
+  source:
+    id: CellUtils
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 17
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nutility functions for transforming cells\n"
+  example: []
+  syntax:
+    content: public static class CellUtils
+    content.vb: Public Module CellUtils
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty@,TimeCockpit.Data.DataModel.Relation@)
+  commentId: M:TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty@,TimeCockpit.Data.DataModel.Relation@)
+  id: DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext,TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty@,TimeCockpit.Data.DataModel.Relation@)
+  parent: TimeCockpit.Data.DataModel.View.CellUtils
+  langs:
+  - csharp
+  - vb
+  name: DerivePropertyOrRelationFromCell(IDataContext, BoundCell, out ModelProperty, out Relation)
+  nameWithType: CellUtils.DerivePropertyOrRelationFromCell(IDataContext, BoundCell, out ModelProperty, out Relation)
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.View.BoundCell, out TimeCockpit.Data.DataModel.ModelProperty, out TimeCockpit.Data.DataModel.Relation)
+  type: Method
+  source:
+    id: DerivePropertyOrRelationFromCell
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 27
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nDervies the property or relation from the a cell.\n"
+  example: []
+  syntax:
+    content: public static bool DerivePropertyOrRelationFromCell(IDataContext dataContext, BoundCell cell, out ModelProperty property, out Relation relation)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context to use.
+    - id: cell
+      type: TimeCockpit.Data.DataModel.View.BoundCell
+      description: A derived instance of bound cell.
+    - id: property
+      type: TimeCockpit.Data.DataModel.ModelProperty
+      description: The property derived from the bound cell, or null if it is a relation cell.
+    - id: relation
+      type: TimeCockpit.Data.DataModel.Relation
+      description: The relation dervied from the bound cell, or null if it is not a relation cell.
+    return:
+      type: System.Boolean
+      description: Returns true if a relation or a property can be derived.
+    content.vb: Public Shared Function DerivePropertyOrRelationFromCell(dataContext As IDataContext, cell As BoundCell, ByRef property As ModelProperty, ByRef relation As Relation) As Boolean
+  overload: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell*
+  nameWithType.vb: CellUtils.DerivePropertyOrRelationFromCell(IDataContext, BoundCell, ByRef ModelProperty, ByRef Relation)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell(TimeCockpit.Data.IDataContext, TimeCockpit.Data.DataModel.View.BoundCell, ByRef TimeCockpit.Data.DataModel.ModelProperty, ByRef TimeCockpit.Data.DataModel.Relation)
+  name.vb: DerivePropertyOrRelationFromCell(IDataContext, BoundCell, ByRef ModelProperty, ByRef Relation)
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression(TimeCockpit.Data.IDataContext,System.String)
+  commentId: M:TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression(TimeCockpit.Data.IDataContext,System.String)
+  id: EvaluateBooleanExpression(TimeCockpit.Data.IDataContext,System.String)
+  parent: TimeCockpit.Data.DataModel.View.CellUtils
+  langs:
+  - csharp
+  - vb
+  name: EvaluateBooleanExpression(IDataContext, String)
+  nameWithType: CellUtils.EvaluateBooleanExpression(IDataContext, String)
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression(TimeCockpit.Data.IDataContext, System.String)
+  type: Method
+  source:
+    id: EvaluateBooleanExpression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 104
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nEvaluates a boolean expression.\n"
+  example: []
+  syntax:
+    content: public static bool EvaluateBooleanExpression(IDataContext dataContext, string expression)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context to use.
+    - id: expression
+      type: System.String
+      description: The FilterIsMandatory expression.
+    return:
+      type: System.Boolean
+      description: Returns the visibility of the cell.
+    content.vb: Public Shared Function EvaluateBooleanExpression(dataContext As IDataContext, expression As String) As Boolean
+  overload: TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType(System.Type)
+  commentId: M:TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType(System.Type)
+  id: DervicePropertyFromClrType(System.Type)
+  parent: TimeCockpit.Data.DataModel.View.CellUtils
+  langs:
+  - csharp
+  - vb
+  name: DervicePropertyFromClrType(Type)
+  nameWithType: CellUtils.DervicePropertyFromClrType(Type)
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType(System.Type)
+  type: Method
+  source:
+    id: DervicePropertyFromClrType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 138
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nDerives a model property from a clr data type.\n"
+  example: []
+  syntax:
+    content: public static ModelProperty DervicePropertyFromClrType(Type dataType)
+    parameters:
+    - id: dataType
+      type: System.Type
+      description: the clr type to derive a type from.
+    return:
+      type: TimeCockpit.Data.DataModel.ModelProperty
+      description: returns the model property.
+    content.vb: Public Shared Function DervicePropertyFromClrType(dataType As Type) As ModelProperty
+  overload: TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell(TimeCockpit.Data.DataModel.View.FileCell,TimeCockpit.Data.DataModel.FileProperty)
+  commentId: M:TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell(TimeCockpit.Data.DataModel.View.FileCell,TimeCockpit.Data.DataModel.FileProperty)
+  id: PrepareFileCell(TimeCockpit.Data.DataModel.View.FileCell,TimeCockpit.Data.DataModel.FileProperty)
+  parent: TimeCockpit.Data.DataModel.View.CellUtils
+  langs:
+  - csharp
+  - vb
+  name: PrepareFileCell(FileCell, FileProperty)
+  nameWithType: CellUtils.PrepareFileCell(FileCell, FileProperty)
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell(TimeCockpit.Data.DataModel.View.FileCell, TimeCockpit.Data.DataModel.FileProperty)
+  type: Method
+  source:
+    id: PrepareFileCell
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 169
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nPrepares the file cell and file property.\n"
+  example: []
+  syntax:
+    content: public static void PrepareFileCell(FileCell fileCell, FileProperty fileProperty)
+    parameters:
+    - id: fileCell
+      type: TimeCockpit.Data.DataModel.View.FileCell
+      description: The file cell to prepare.
+    - id: fileProperty
+      type: TimeCockpit.Data.DataModel.FileProperty
+      description: The file property represented by the file cell.
+    content.vb: Public Shared Sub PrepareFileCell(fileCell As FileCell, fileProperty As FileProperty)
+  overload: TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType(TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.DataModel.RelationBase)
+  commentId: M:TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType(TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.DataModel.RelationBase)
+  id: DeriveSpecificCellType(TimeCockpit.Data.DataModel.View.BoundCell,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.DataModel.RelationBase)
+  parent: TimeCockpit.Data.DataModel.View.CellUtils
+  langs:
+  - csharp
+  - vb
+  name: DeriveSpecificCellType(BoundCell, ModelProperty, RelationBase)
+  nameWithType: CellUtils.DeriveSpecificCellType(BoundCell, ModelProperty, RelationBase)
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType(TimeCockpit.Data.DataModel.View.BoundCell, TimeCockpit.Data.DataModel.ModelProperty, TimeCockpit.Data.DataModel.RelationBase)
+  type: Method
+  source:
+    id: DeriveSpecificCellType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\CellUtils.cs
+    startLine: 227
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nDerives the type of the specific cell.\n"
+  example: []
+  syntax:
+    content: public static BoundCell DeriveSpecificCellType(BoundCell cell, ModelProperty modelProperty, RelationBase relation)
+    parameters:
+    - id: cell
+      type: TimeCockpit.Data.DataModel.View.BoundCell
+      description: The original cell.
+    - id: modelProperty
+      type: TimeCockpit.Data.DataModel.ModelProperty
+      description: The model property to build a cell for.
+    - id: relation
+      type: TimeCockpit.Data.DataModel.RelationBase
+      description: The relation to build the cell for.
+    return:
+      type: TimeCockpit.Data.DataModel.View.BoundCell
+      description: returns a more specific bound cell representing the type of the property.
+    content.vb: Public Shared Function DeriveSpecificCellType(cell As BoundCell, modelProperty As ModelProperty, relation As RelationBase) As BoundCell
+  overload: TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.DataModel.View
+  commentId: N:TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.View
+  nameWithType: TimeCockpit.Data.DataModel.View
+  fullName: TimeCockpit.Data.DataModel.View
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell
+  isExternal: false
+  name: DerivePropertyOrRelationFromCell
+  nameWithType: CellUtils.DerivePropertyOrRelationFromCell
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DerivePropertyOrRelationFromCell
+- uid: TimeCockpit.Data.IDataContext
+  commentId: T:TimeCockpit.Data.IDataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: IDataContext
+  nameWithType: IDataContext
+  fullName: TimeCockpit.Data.IDataContext
+- uid: TimeCockpit.Data.DataModel.View.BoundCell
+  commentId: T:TimeCockpit.Data.DataModel.View.BoundCell
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: BoundCell
+  nameWithType: BoundCell
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell
+- uid: TimeCockpit.Data.DataModel.ModelProperty
+  commentId: T:TimeCockpit.Data.DataModel.ModelProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelProperty
+  nameWithType: ModelProperty
+  fullName: TimeCockpit.Data.DataModel.ModelProperty
+- uid: TimeCockpit.Data.DataModel.Relation
+  commentId: T:TimeCockpit.Data.DataModel.Relation
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Relation
+  nameWithType: Relation
+  fullName: TimeCockpit.Data.DataModel.Relation
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression
+  isExternal: false
+  name: EvaluateBooleanExpression
+  nameWithType: CellUtils.EvaluateBooleanExpression
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.EvaluateBooleanExpression
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType
+  isExternal: false
+  name: DervicePropertyFromClrType
+  nameWithType: CellUtils.DervicePropertyFromClrType
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DervicePropertyFromClrType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell
+  isExternal: false
+  name: PrepareFileCell
+  nameWithType: CellUtils.PrepareFileCell
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.PrepareFileCell
+- uid: TimeCockpit.Data.DataModel.View.FileCell
+  commentId: T:TimeCockpit.Data.DataModel.View.FileCell
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: FileCell
+  nameWithType: FileCell
+  fullName: TimeCockpit.Data.DataModel.View.FileCell
+- uid: TimeCockpit.Data.DataModel.FileProperty
+  commentId: T:TimeCockpit.Data.DataModel.FileProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: FileProperty
+  nameWithType: FileProperty
+  fullName: TimeCockpit.Data.DataModel.FileProperty
+- uid: TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType
+  isExternal: false
+  name: DeriveSpecificCellType
+  nameWithType: CellUtils.DeriveSpecificCellType
+  fullName: TimeCockpit.Data.DataModel.View.CellUtils.DeriveSpecificCellType
+- uid: TimeCockpit.Data.DataModel.RelationBase
+  commentId: T:TimeCockpit.Data.DataModel.RelationBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: RelationBase
+  nameWithType: RelationBase
+  fullName: TimeCockpit.Data.DataModel.RelationBase

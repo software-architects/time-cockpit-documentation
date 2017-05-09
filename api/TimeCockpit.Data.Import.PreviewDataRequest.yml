@@ -1,0 +1,872 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.PreviewDataRequest
+  commentId: T:TimeCockpit.Data.Import.PreviewDataRequest
+  id: PreviewDataRequest
+  parent: TimeCockpit.Data.Import
+  children:
+  - TimeCockpit.Data.Import.PreviewDataRequest.#ctor(System.Byte[],System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  - TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  - TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  - TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  - TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  - TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  - TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  - TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  langs:
+  - csharp
+  - vb
+  name: PreviewDataRequest
+  nameWithType: PreviewDataRequest
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest
+  type: Class
+  source:
+    id: PreviewDataRequest
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 18
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nclass holding data to be loaded for preview in the importer.\n"
+  example: []
+  syntax:
+    content: public class PreviewDataRequest
+    content.vb: Public Class PreviewDataRequest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.#ctor(System.Byte[],System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.#ctor(System.Byte[],System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  id: '#ctor(System.Byte[],System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)'
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: PreviewDataRequest(Byte[], Int32, String, Dictionary<String, Int32>, Int32)
+  nameWithType: PreviewDataRequest.PreviewDataRequest(Byte[], Int32, String, Dictionary<String, Int32>, Int32)
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest(System.Byte[], System.Int32, System.String, System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 28
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nInitializes a new instance of the PreviewDataRequest class.\n"
+  example: []
+  syntax:
+    content: public PreviewDataRequest(byte[] sourceData, int sampleSize, string sourceProvider, Dictionary<string, int> headerRowPositions, int defaultHeaderRowNumber)
+    parameters:
+    - id: sourceData
+      type: System.Byte[]
+      description: the source data to preview.
+    - id: sampleSize
+      type: System.Int32
+      description: the sample size of each column.
+    - id: sourceProvider
+      type: System.String
+      description: the provider to use for importing.
+    - id: headerRowPositions
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+      description: a dictionary holding offsets (optional).
+    - id: defaultHeaderRowNumber
+      type: System.Int32
+      description: The default row number, in case no row number is passed for the worksheet with <span class="paramref">headerRowOffsets</span>.
+    content.vb: Public Sub New(sourceData As Byte(), sampleSize As Integer, sourceProvider As String, headerRowPositions As Dictionary(Of String, Integer), defaultHeaderRowNumber As Integer)
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.#ctor*
+  nameWithType.vb: PreviewDataRequest.PreviewDataRequest(Byte(), Int32, String, Dictionary(Of String, Int32), Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest(System.Byte(), System.Int32, System.String, System.Collections.Generic.Dictionary(Of System.String, System.Int32), System.Int32)
+  name.vb: PreviewDataRequest(Byte(), Int32, String, Dictionary(Of String, Int32), Int32)
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  id: SourceData
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: SourceData
+  nameWithType: PreviewDataRequest.SourceData
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  type: Property
+  source:
+    id: SourceData
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 40
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the source data.\n"
+  example: []
+  syntax:
+    content: public byte[] SourceData { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property SourceData As Byte()
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.SourceData*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  id: SampleSize
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: SampleSize
+  nameWithType: PreviewDataRequest.SampleSize
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  type: Property
+  source:
+    id: SampleSize
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 45
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the sample size\n"
+  example: []
+  syntax:
+    content: public int SampleSize { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SampleSize As Integer
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  id: SourceProvider
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: SourceProvider
+  nameWithType: PreviewDataRequest.SourceProvider
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  type: Property
+  source:
+    id: SourceProvider
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the source provider for the preview data request.\n"
+  example: []
+  syntax:
+    content: public string SourceProvider { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SourceProvider As String
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  id: HeaderRowPositions
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: HeaderRowPositions
+  nameWithType: PreviewDataRequest.HeaderRowPositions
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  type: Property
+  source:
+    id: HeaderRowPositions
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 55
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the header row positions.\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, int> HeaderRowPositions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Public ReadOnly Property HeaderRowPositions As Dictionary(Of String, Integer)
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  id: DefaultHeaderRowNumber
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: DefaultHeaderRowNumber
+  nameWithType: PreviewDataRequest.DefaultHeaderRowNumber
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  type: Property
+  source:
+    id: DefaultHeaderRowNumber
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 60
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the fallback header row number.\n"
+  example: []
+  syntax:
+    content: public int DefaultHeaderRowNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DefaultHeaderRowNumber As Integer
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, PreviewDataRequest)
+  nameWithType: PreviewDataRequest.Write(JsonWriter, PreviewDataRequest)
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewDataRequest)
+  type: Method
+  source:
+    id: Write
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 67
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nwrites a preview data request class to a json writer.\n"
+  example: []
+  syntax:
+    content: public static void Write(JsonWriter writer, PreviewDataRequest previewDataRequest)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+      description: the writer to write to.
+    - id: previewDataRequest
+      type: TimeCockpit.Data.Import.PreviewDataRequest
+      description: the previewDataRequest to write.
+    content.vb: Public Shared Sub Write(writer As JsonWriter, previewDataRequest As PreviewDataRequest)
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  id: Read(Newtonsoft.Json.Linq.JObject)
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: Read(JObject)
+  nameWithType: PreviewDataRequest.Read(JObject)
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  type: Method
+  source:
+    id: Read
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewDataRequest.cs
+    startLine: 105
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nReads the preview data request from a JSON object.\n"
+  example: []
+  syntax:
+    content: public static PreviewDataRequest Read(JObject requestJson)
+    parameters:
+    - id: requestJson
+      type: Newtonsoft.Json.Linq.JObject
+      description: The request as <xref href="Newtonsoft.Json.Linq.JObject" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: TimeCockpit.Data.Import.PreviewDataRequest
+      description: Returns the preview data request.
+    content.vb: Public Shared Function Read(requestJson As JObject) As PreviewDataRequest
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.#ctor
+  isExternal: false
+  name: PreviewDataRequest
+  nameWithType: PreviewDataRequest.PreviewDataRequest
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Int32>
+  nameWithType: Dictionary<String, Int32>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Int32>
+  nameWithType.vb: Dictionary(Of String, Int32)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Int32)
+  name.vb: Dictionary(Of String, Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceData*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  isExternal: false
+  name: SourceData
+  nameWithType: PreviewDataRequest.SourceData
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  isExternal: false
+  name: SampleSize
+  nameWithType: PreviewDataRequest.SampleSize
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  isExternal: false
+  name: SourceProvider
+  nameWithType: PreviewDataRequest.SourceProvider
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  isExternal: false
+  name: HeaderRowPositions
+  nameWithType: PreviewDataRequest.HeaderRowPositions
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  isExternal: false
+  name: DefaultHeaderRowNumber
+  nameWithType: PreviewDataRequest.DefaultHeaderRowNumber
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Write*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.Write
+  isExternal: false
+  name: Write
+  nameWithType: PreviewDataRequest.Write
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Write
+- uid: Newtonsoft.Json.JsonWriter
+  commentId: T:Newtonsoft.Json.JsonWriter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: Newtonsoft.Json.JsonWriter
+- uid: TimeCockpit.Data.Import.PreviewDataRequest
+  commentId: T:TimeCockpit.Data.Import.PreviewDataRequest
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: PreviewDataRequest
+  nameWithType: PreviewDataRequest
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: false
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+- uid: Newtonsoft.Json.Linq.JObject
+  commentId: T:Newtonsoft.Json.Linq.JObject
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JObject
+  nameWithType: JObject
+  fullName: Newtonsoft.Json.Linq.JObject
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.Read
+  isExternal: false
+  name: Read
+  nameWithType: PreviewDataRequest.Read
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read
+- uid: Newtonsoft.Json.Linq
+  commentId: N:Newtonsoft.Json.Linq
+  isExternal: false
+  name: Newtonsoft.Json.Linq
+  nameWithType: Newtonsoft.Json.Linq
+  fullName: Newtonsoft.Json.Linq

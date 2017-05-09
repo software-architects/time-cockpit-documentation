@@ -1,0 +1,1305 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  commentId: T:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  id: ModelLocalizationValidator
+  parent: TimeCockpit.Data.Localization.Default
+  children:
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.IEnumerable{System.String},TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction,TimeCockpit.Data.Security.Permission)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView,TimeCockpit.Data.Security.Permission)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{System.String})
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.Security.Permission)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.Security.Permission)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ValidationRule)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Security.Permission)
+  - TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.NamedSetDefinition)
+  langs:
+  - csharp
+  - vb
+  name: ModelLocalizationValidator
+  nameWithType: ModelLocalizationValidator
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  type: Class
+  source:
+    id: ModelLocalizationValidator
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 18
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidation helper for model localizations. Ensures that all validated elements are localized.\n"
+  example: []
+  syntax:
+    content: public class ModelLocalizationValidator
+    content.vb: Public Class ModelLocalizationValidator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.IEnumerable{System.String},TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.IEnumerable{System.String},TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  id: '#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.IEnumerable{System.String},TimeCockpit.Data.Localization.Default.DefaultLocalizer)'
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: ModelLocalizationValidator(DefaultLocalizer, IEnumerable<String>, DefaultLocalizer)
+  nameWithType: ModelLocalizationValidator.ModelLocalizationValidator(DefaultLocalizer, IEnumerable<String>, DefaultLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.ModelLocalizationValidator(TimeCockpit.Data.Localization.Default.DefaultLocalizer, System.Collections.Generic.IEnumerable<System.String>, TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nInitializes a new instance of the ModelLocalizationValidator class.\n"
+  example: []
+  syntax:
+    content: public ModelLocalizationValidator(DefaultLocalizer localizer, IEnumerable<string> cultures, DefaultLocalizer secondaryLocalizer = null)
+    parameters:
+    - id: localizer
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: Localizer to use for validation.
+    - id: cultures
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Cultures to check.
+    - id: secondaryLocalizer
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: (Optional) secondary localizer to use for validation.
+    content.vb: Public Sub New(localizer As DefaultLocalizer, cultures As IEnumerable(Of String), secondaryLocalizer As DefaultLocalizer = Nothing)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor*
+  nameWithType.vb: ModelLocalizationValidator.ModelLocalizationValidator(DefaultLocalizer, IEnumerable(Of String), DefaultLocalizer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.ModelLocalizationValidator(TimeCockpit.Data.Localization.Default.DefaultLocalizer, System.Collections.Generic.IEnumerable(Of System.String), TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  name.vb: ModelLocalizationValidator(DefaultLocalizer, IEnumerable(Of String), DefaultLocalizer)
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+  id: Cultures
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Cultures
+  nameWithType: ModelLocalizationValidator.Cultures
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+  type: Property
+  source:
+    id: Cultures
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 37
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the cultures to check.\n"
+  example: []
+  syntax:
+    content: public string[] Cultures { get; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Public ReadOnly Property Cultures As String()
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+  id: Localizer
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Localizer
+  nameWithType: ModelLocalizationValidator.Localizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+  type: Property
+  source:
+    id: Localizer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 42
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the localizer to check.\n"
+  example: []
+  syntax:
+    content: public DefaultLocalizer Localizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+    content.vb: Public ReadOnly Property Localizer As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+  id: SecondaryLocalizer
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: SecondaryLocalizer
+  nameWithType: ModelLocalizationValidator.SecondaryLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+  type: Property
+  source:
+    id: SecondaryLocalizer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 47
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the secondary localizer to check.\n"
+  example: []
+  syntax:
+    content: public DefaultLocalizer SecondaryLocalizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+    content.vb: Public ReadOnly Property SecondaryLocalizer As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+  id: Result
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: ModelLocalizationValidator.Result
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+  type: Property
+  source:
+    id: Result
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 52
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the validation result.\n"
+  example: []
+  syntax:
+    content: public List<string> Result { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public ReadOnly Property Result As List(Of String)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{System.String})
+  id: Validate(TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{System.String})
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(Model, IEnumerable<String>)
+  nameWithType: ModelLocalizationValidator.Validate(Model, IEnumerable<String>)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Model, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 59
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a Model. Ensures that all localizable elements within the model are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(Model model, IEnumerable<string> excludedEntities = null)
+    parameters:
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+      description: Model to validate against.
+    - id: excludedEntities
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Optional list of entity names to exclude from validation.
+    content.vb: Public Sub Validate(model As Model, excludedEntities As IEnumerable(Of String) = Nothing)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  nameWithType.vb: ModelLocalizationValidator.Validate(Model, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Model, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Validate(Model, IEnumerable(Of String))
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.NamedSetDefinition)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.NamedSetDefinition)
+  id: Validate(TimeCockpit.Data.DataModel.NamedSetDefinition)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(NamedSetDefinition)
+  nameWithType: ModelLocalizationValidator.Validate(NamedSetDefinition)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.NamedSetDefinition)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 93
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a NamedSetDefinition. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(NamedSetDefinition namedSetDefinition)
+    parameters:
+    - id: namedSetDefinition
+      type: TimeCockpit.Data.DataModel.NamedSetDefinition
+      description: NamedSetDefinition to validate.
+    content.vb: Public Sub Validate(namedSetDefinition As NamedSetDefinition)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView)
+  id: Validate(TimeCockpit.Data.DataModel.EntityView)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(EntityView)
+  nameWithType: ModelLocalizationValidator.Validate(EntityView)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 118
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a EntityView. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(EntityView entityView)
+    parameters:
+    - id: entityView
+      type: TimeCockpit.Data.DataModel.EntityView
+      description: EntityView to validate.
+    content.vb: Public Sub Validate(entityView As EntityView)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView,TimeCockpit.Data.Security.Permission)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView,TimeCockpit.Data.Security.Permission)
+  id: Validate(TimeCockpit.Data.DataModel.EntityView,TimeCockpit.Data.Security.Permission)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(EntityView, Permission)
+  nameWithType: ModelLocalizationValidator.Validate(EntityView, Permission)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.EntityView, TimeCockpit.Data.Security.Permission)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 149
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a entity view permission. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(EntityView entityView, Permission permission)
+    parameters:
+    - id: entityView
+      type: TimeCockpit.Data.DataModel.EntityView
+      description: Parent entity view.
+    - id: permission
+      type: TimeCockpit.Data.Security.Permission
+      description: Permission to validate.
+    content.vb: Public Sub Validate(entityView As EntityView, permission As Permission)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction)
+  id: Validate(TimeCockpit.Data.DataModel.Actions.ModelAction)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelAction)
+  nameWithType: ModelLocalizationValidator.Validate(ModelAction)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 174
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a ModelAction. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelAction action)
+    parameters:
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: ModelAction to validate.
+    content.vb: Public Sub Validate(action As ModelAction)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction,TimeCockpit.Data.Security.Permission)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction,TimeCockpit.Data.Security.Permission)
+  id: Validate(TimeCockpit.Data.DataModel.Actions.ModelAction,TimeCockpit.Data.Security.Permission)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelAction, Permission)
+  nameWithType: ModelLocalizationValidator.Validate(ModelAction, Permission)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.Actions.ModelAction, TimeCockpit.Data.Security.Permission)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 205
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a action permission. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelAction action, Permission permission)
+    parameters:
+    - id: action
+      type: TimeCockpit.Data.DataModel.Actions.ModelAction
+      description: Parent action.
+    - id: permission
+      type: TimeCockpit.Data.Security.Permission
+      description: Permission to validate.
+    content.vb: Public Sub Validate(action As ModelAction, permission As Permission)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 230
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a ModelEntity. Ensures that all localizable elements and children are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Entity to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, ModelProperty)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, ModelProperty)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.ModelProperty)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 276
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a model entity relation. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, ModelProperty property)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: property
+      type: TimeCockpit.Data.DataModel.ModelProperty
+      description: Relation to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, property As ModelProperty)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, Relation)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, Relation)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.Relation)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 307
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a model entity relation. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, Relation relation)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: relation
+      type: TimeCockpit.Data.DataModel.Relation
+      description: Relation to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, relation As Relation)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ValidationRule)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ValidationRule)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ValidationRule)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, ValidationRule)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, ValidationRule)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.ValidationRule)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 349
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a model entity validation rule. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, ValidationRule validationRule)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: validationRule
+      type: TimeCockpit.Data.DataModel.ValidationRule
+      description: Validation rule to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, validationRule As ValidationRule)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Security.Permission)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Security.Permission)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Security.Permission)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, Permission)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, Permission)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.Security.Permission)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 381
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a model entity permission. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, Permission permission)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: permission
+      type: TimeCockpit.Data.Security.Permission
+      description: Permission to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, permission As Permission)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.Security.Permission)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.Security.Permission)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.Security.Permission)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, ModelProperty, Permission)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, ModelProperty, Permission)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.ModelProperty, TimeCockpit.Data.Security.Permission)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 419
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a property permission. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, ModelProperty property, Permission permission)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: property
+      type: TimeCockpit.Data.DataModel.ModelProperty
+      description: Parent property.
+    - id: permission
+      type: TimeCockpit.Data.Security.Permission
+      description: Permission to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, property As ModelProperty, permission As Permission)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.Security.Permission)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.Security.Permission)
+  id: Validate(TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.Security.Permission)
+  parent: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator
+  langs:
+  - csharp
+  - vb
+  name: Validate(ModelEntityBase, Relation, Permission)
+  nameWithType: ModelLocalizationValidator.Validate(ModelEntityBase, Relation, Permission)
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate(TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.Relation, TimeCockpit.Data.Security.Permission)
+  type: Method
+  source:
+    id: Validate
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelLocalizationValidator.cs
+    startLine: 457
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nValidate a relation permission. Ensures that all localizable elements are localized.\n"
+  example: []
+  syntax:
+    content: public void Validate(ModelEntityBase entity, Relation relation, Permission permission)
+    parameters:
+    - id: entity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: Parent model entity.
+    - id: relation
+      type: TimeCockpit.Data.DataModel.Relation
+      description: Parent relation.
+    - id: permission
+      type: TimeCockpit.Data.Security.Permission
+      description: Permission to validate.
+    content.vb: Public Sub Validate(entity As ModelEntityBase, relation As Relation, permission As Permission)
+  overload: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.Localization.Default
+  commentId: N:TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: TimeCockpit.Data.Localization.Default
+  nameWithType: TimeCockpit.Data.Localization.Default
+  fullName: TimeCockpit.Data.Localization.Default
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.#ctor
+  isExternal: false
+  name: ModelLocalizationValidator
+  nameWithType: ModelLocalizationValidator.ModelLocalizationValidator
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.ModelLocalizationValidator
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: DefaultLocalizer
+  nameWithType: DefaultLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+  isExternal: false
+  name: Cultures
+  nameWithType: ModelLocalizationValidator.Cultures
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Cultures
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+  isExternal: false
+  name: Localizer
+  nameWithType: ModelLocalizationValidator.Localizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Localizer
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+  isExternal: false
+  name: SecondaryLocalizer
+  nameWithType: ModelLocalizationValidator.SecondaryLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.SecondaryLocalizer
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+  isExternal: false
+  name: Result
+  nameWithType: ModelLocalizationValidator.Result
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Result
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate
+  isExternal: false
+  name: Validate
+  nameWithType: ModelLocalizationValidator.Validate
+  fullName: TimeCockpit.Data.Localization.Default.ModelLocalizationValidator.Validate
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.DataModel.NamedSetDefinition
+  commentId: T:TimeCockpit.Data.DataModel.NamedSetDefinition
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: NamedSetDefinition
+  nameWithType: NamedSetDefinition
+  fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
+- uid: TimeCockpit.Data.DataModel.EntityView
+  commentId: T:TimeCockpit.Data.DataModel.EntityView
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: EntityView
+  nameWithType: EntityView
+  fullName: TimeCockpit.Data.DataModel.EntityView
+- uid: TimeCockpit.Data.Security.Permission
+  commentId: T:TimeCockpit.Data.Security.Permission
+  parent: TimeCockpit.Data.Security
+  isExternal: false
+  name: Permission
+  nameWithType: Permission
+  fullName: TimeCockpit.Data.Security.Permission
+- uid: TimeCockpit.Data.Security
+  commentId: N:TimeCockpit.Data.Security
+  isExternal: false
+  name: TimeCockpit.Data.Security
+  nameWithType: TimeCockpit.Data.Security
+  fullName: TimeCockpit.Data.Security
+- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: ModelAction
+  nameWithType: ModelAction
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
+- uid: TimeCockpit.Data.DataModel.Actions
+  commentId: N:TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.Actions
+  nameWithType: TimeCockpit.Data.DataModel.Actions
+  fullName: TimeCockpit.Data.DataModel.Actions
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: TimeCockpit.Data.DataModel.ModelProperty
+  commentId: T:TimeCockpit.Data.DataModel.ModelProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelProperty
+  nameWithType: ModelProperty
+  fullName: TimeCockpit.Data.DataModel.ModelProperty
+- uid: TimeCockpit.Data.DataModel.Relation
+  commentId: T:TimeCockpit.Data.DataModel.Relation
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Relation
+  nameWithType: Relation
+  fullName: TimeCockpit.Data.DataModel.Relation
+- uid: TimeCockpit.Data.DataModel.ValidationRule
+  commentId: T:TimeCockpit.Data.DataModel.ValidationRule
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ValidationRule
+  nameWithType: ValidationRule
+  fullName: TimeCockpit.Data.DataModel.ValidationRule

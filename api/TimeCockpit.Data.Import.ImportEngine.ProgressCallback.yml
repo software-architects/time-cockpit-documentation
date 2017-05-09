@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+  commentId: T:TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+  id: ImportEngine.ProgressCallback
+  parent: TimeCockpit.Data.Import
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ImportEngine.ProgressCallback
+  nameWithType: ImportEngine.ProgressCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+  type: Delegate
+  source:
+    id: ProgressCallback
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportEngine.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\ncallback used to indicate progress in an import process.\n"
+  example: []
+  syntax:
+    content: public delegate void ProgressCallback(ImportEngine source, string worksheet, int maximum, int value, int created, int updated);
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Import.ImportEngine
+      description: the import engine producing the event.
+    - id: worksheet
+      type: System.String
+      description: the name of the worksheet that is currently imported.
+    - id: maximum
+      type: System.Int32
+      description: the maximum number of elements that are to be imported.
+    - id: value
+      type: System.Int32
+      description: the current progress in the import.
+    - id: created
+      type: System.Int32
+      description: The number of created objects.
+    - id: updated
+      type: System.Int32
+      description: The number of updated objects.
+    content.vb: Public Delegate Sub ProgressCallback(source As ImportEngine, worksheet As String, maximum As Integer, value As Integer, created As Integer, updated As Integer)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: TimeCockpit.Data.Import.ImportEngine
+  commentId: T:TimeCockpit.Data.Import.ImportEngine
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportEngine
+  nameWithType: ImportEngine
+  fullName: TimeCockpit.Data.Import.ImportEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

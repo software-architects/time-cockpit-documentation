@@ -1,0 +1,685 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.ImportMessage
+  commentId: T:TimeCockpit.Data.Import.ImportMessage
+  id: ImportMessage
+  parent: TimeCockpit.Data.Import
+  children:
+  - TimeCockpit.Data.Import.ImportMessage.#ctor(System.String,System.Int32,TimeCockpit.Data.Import.ImportMessage.Kind,System.String)
+  - TimeCockpit.Data.Import.ImportMessage.Message
+  - TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  - TimeCockpit.Data.Import.ImportMessage.RowNumber
+  - TimeCockpit.Data.Import.ImportMessage.Severity
+  - TimeCockpit.Data.Import.ImportMessage.SheetName
+  - TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  langs:
+  - csharp
+  - vb
+  name: ImportMessage
+  nameWithType: ImportMessage
+  fullName: TimeCockpit.Data.Import.ImportMessage
+  type: Class
+  source:
+    id: ImportMessage
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 18
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nclass representing a single message such as an error or a warning from an import process.\nIt contains information such as the sheet name and\n"
+  example: []
+  syntax:
+    content: public class ImportMessage
+    content.vb: Public Class ImportMessage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Import.ImportMessage.#ctor(System.String,System.Int32,TimeCockpit.Data.Import.ImportMessage.Kind,System.String)
+  commentId: M:TimeCockpit.Data.Import.ImportMessage.#ctor(System.String,System.Int32,TimeCockpit.Data.Import.ImportMessage.Kind,System.String)
+  id: '#ctor(System.String,System.Int32,TimeCockpit.Data.Import.ImportMessage.Kind,System.String)'
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: ImportMessage(String, Int32, ImportMessage.Kind, String)
+  nameWithType: ImportMessage.ImportMessage(String, Int32, ImportMessage.Kind, String)
+  fullName: TimeCockpit.Data.Import.ImportMessage.ImportMessage(System.String, System.Int32, TimeCockpit.Data.Import.ImportMessage.Kind, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 27
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nInitializes a new instance of the ImportMessage class.\n"
+  example: []
+  syntax:
+    content: public ImportMessage(string sheetName, int rowNumber, ImportMessage.Kind severity, string message)
+    parameters:
+    - id: sheetName
+      type: System.String
+      description: the name of the sheet for which the message occurred.
+    - id: rowNumber
+      type: System.Int32
+      description: the row number for which the message occurred.
+    - id: severity
+      type: TimeCockpit.Data.Import.ImportMessage.Kind
+      description: the severity of the message.
+    - id: message
+      type: System.String
+      description: the message.
+    content.vb: Public Sub New(sheetName As String, rowNumber As Integer, severity As ImportMessage.Kind, message As String)
+  overload: TimeCockpit.Data.Import.ImportMessage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Import.ImportMessage.SheetName
+  commentId: P:TimeCockpit.Data.Import.ImportMessage.SheetName
+  id: SheetName
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: SheetName
+  nameWithType: ImportMessage.SheetName
+  fullName: TimeCockpit.Data.Import.ImportMessage.SheetName
+  type: Property
+  source:
+    id: SheetName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 59
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the name of the sheet that produced the message.\n"
+  example: []
+  syntax:
+    content: public string SheetName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property SheetName As String
+  overload: TimeCockpit.Data.Import.ImportMessage.SheetName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.ImportMessage.RowNumber
+  commentId: P:TimeCockpit.Data.Import.ImportMessage.RowNumber
+  id: RowNumber
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: RowNumber
+  nameWithType: ImportMessage.RowNumber
+  fullName: TimeCockpit.Data.Import.ImportMessage.RowNumber
+  type: Property
+  source:
+    id: RowNumber
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 64
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the rownumber that produced the message.\n"
+  example: []
+  syntax:
+    content: public int RowNumber { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RowNumber As Integer
+  overload: TimeCockpit.Data.Import.ImportMessage.RowNumber*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.ImportMessage.Message
+  commentId: P:TimeCockpit.Data.Import.ImportMessage.Message
+  id: Message
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: ImportMessage.Message
+  fullName: TimeCockpit.Data.Import.ImportMessage.Message
+  type: Property
+  source:
+    id: Message
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 69
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the message.\n"
+  example: []
+  syntax:
+    content: public string Message { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Message As String
+  overload: TimeCockpit.Data.Import.ImportMessage.Message*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.ImportMessage.Severity
+  commentId: P:TimeCockpit.Data.Import.ImportMessage.Severity
+  id: Severity
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: ImportMessage.Severity
+  fullName: TimeCockpit.Data.Import.ImportMessage.Severity
+  type: Property
+  source:
+    id: Severity
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 74
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the severity of the message.\n"
+  example: []
+  syntax:
+    content: public ImportMessage.Kind Severity { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Import.ImportMessage.Kind
+    content.vb: Public ReadOnly Property Severity As ImportMessage.Kind
+  overload: TimeCockpit.Data.Import.ImportMessage.Severity*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  commentId: M:TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, ImportMessage)
+  nameWithType: ImportMessage.Write(JsonWriter, ImportMessage)
+  fullName: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.ImportMessage)
+  type: Method
+  source:
+    id: Write
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 81
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nWrites a message to a json writer.\n"
+  example: []
+  syntax:
+    content: public static void Write(JsonWriter writer, ImportMessage message)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+      description: the writer to write to.
+    - id: message
+      type: TimeCockpit.Data.Import.ImportMessage
+      description: the message to write.
+    content.vb: Public Shared Sub Write(writer As JsonWriter, message As ImportMessage)
+  overload: TimeCockpit.Data.Import.ImportMessage.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  commentId: M:TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  id: Read(Newtonsoft.Json.JsonReader)
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Read(JsonReader)
+  nameWithType: ImportMessage.Read(JsonReader)
+  fullName: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  type: Method
+  source:
+    id: Read
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportMessage.cs
+    startLine: 96
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nReads a ImportMessage from a json reader.\n"
+  example: []
+  syntax:
+    content: public static ImportMessage Read(JsonReader reader)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+      description: the reader to read from.
+    return:
+      type: TimeCockpit.Data.Import.ImportMessage
+      description: Returns the import message read from the reader.
+    content.vb: Public Shared Function Read(reader As JsonReader) As ImportMessage
+  overload: TimeCockpit.Data.Import.ImportMessage.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Import.ImportMessage.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.#ctor
+  isExternal: false
+  name: ImportMessage
+  nameWithType: ImportMessage.ImportMessage
+  fullName: TimeCockpit.Data.Import.ImportMessage.ImportMessage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TimeCockpit.Data.Import.ImportMessage.Kind
+  commentId: T:TimeCockpit.Data.Import.ImportMessage.Kind
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportMessage.Kind
+  nameWithType: ImportMessage.Kind
+  fullName: TimeCockpit.Data.Import.ImportMessage.Kind
+- uid: TimeCockpit.Data.Import.ImportMessage.SheetName*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.SheetName
+  isExternal: false
+  name: SheetName
+  nameWithType: ImportMessage.SheetName
+  fullName: TimeCockpit.Data.Import.ImportMessage.SheetName
+- uid: TimeCockpit.Data.Import.ImportMessage.RowNumber*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.RowNumber
+  isExternal: false
+  name: RowNumber
+  nameWithType: ImportMessage.RowNumber
+  fullName: TimeCockpit.Data.Import.ImportMessage.RowNumber
+- uid: TimeCockpit.Data.Import.ImportMessage.Message*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Message
+  isExternal: false
+  name: Message
+  nameWithType: ImportMessage.Message
+  fullName: TimeCockpit.Data.Import.ImportMessage.Message
+- uid: TimeCockpit.Data.Import.ImportMessage.Severity*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Severity
+  isExternal: false
+  name: Severity
+  nameWithType: ImportMessage.Severity
+  fullName: TimeCockpit.Data.Import.ImportMessage.Severity
+- uid: TimeCockpit.Data.Import.ImportMessage.Write*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Write
+  isExternal: false
+  name: Write
+  nameWithType: ImportMessage.Write
+  fullName: TimeCockpit.Data.Import.ImportMessage.Write
+- uid: Newtonsoft.Json.JsonWriter
+  commentId: T:Newtonsoft.Json.JsonWriter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: Newtonsoft.Json.JsonWriter
+- uid: TimeCockpit.Data.Import.ImportMessage
+  commentId: T:TimeCockpit.Data.Import.ImportMessage
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportMessage
+  nameWithType: ImportMessage
+  fullName: TimeCockpit.Data.Import.ImportMessage
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: false
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+- uid: TimeCockpit.Data.Import.ImportMessage.Read*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Read
+  isExternal: false
+  name: Read
+  nameWithType: ImportMessage.Read
+  fullName: TimeCockpit.Data.Import.ImportMessage.Read
+- uid: Newtonsoft.Json.JsonReader
+  commentId: T:Newtonsoft.Json.JsonReader
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: Newtonsoft.Json.JsonReader

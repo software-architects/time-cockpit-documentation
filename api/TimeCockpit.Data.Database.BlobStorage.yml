@@ -1,0 +1,1194 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Database.BlobStorage
+  commentId: T:TimeCockpit.Data.Database.BlobStorage
+  id: BlobStorage
+  parent: TimeCockpit.Data.Database
+  children:
+  - TimeCockpit.Data.Database.BlobStorage.#ctor(System.Guid)
+  - TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+  - TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.Guid,System.Guid,System.Guid,System.Byte[])
+  - TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.String,System.String,System.String,System.Byte[])
+  - TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.Guid,System.Guid,System.Guid,System.Byte[])
+  - TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.String,System.String,System.String,System.Byte[])
+  - TimeCockpit.Data.Database.BlobStorage.CreateContainer(System.String)
+  - TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+  - TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.Guid,System.Guid,System.Guid)
+  - TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.String,System.String,System.String)
+  - TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.Guid,System.Guid,System.Guid)
+  - TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.String,System.String,System.String)
+  - TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.Guid,System.Guid,System.Guid)
+  - TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.String,System.String,System.String)
+  - TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer
+  - TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer
+  langs:
+  - csharp
+  - vb
+  name: BlobStorage
+  nameWithType: BlobStorage
+  fullName: TimeCockpit.Data.Database.BlobStorage
+  type: Class
+  source:
+    id: BlobStorage
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 20
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nActs as the base class for blob storage implementations\n"
+  example: []
+  syntax:
+    content: public abstract class BlobStorage
+    content.vb: Public MustInherit Class BlobStorage
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TimeCockpit.Data.Database.CloudBlobStorage
+  - TimeCockpit.Data.Database.LocalBlobStorage
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.Database.BlobStorage.#ctor(System.Guid)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.#ctor(System.Guid)
+  id: '#ctor(System.Guid)'
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: BlobStorage(Guid)
+  nameWithType: BlobStorage.BlobStorage(Guid)
+  fullName: TimeCockpit.Data.Database.BlobStorage.BlobStorage(System.Guid)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 36
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nInitializes a new instance of the BlobStorage class\n"
+  example: []
+  syntax:
+    content: protected BlobStorage(Guid clientReplicaId)
+    parameters:
+    - id: clientReplicaId
+      type: System.Guid
+      description: Replica id of the client to which this blob storage belongs
+    content.vb: Protected Sub New(clientReplicaId As Guid)
+  overload: TimeCockpit.Data.Database.BlobStorage.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+  commentId: P:TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+  id: BlobEncryptionKey
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: BlobEncryptionKey
+  nameWithType: BlobStorage.BlobEncryptionKey
+  fullName: TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+  type: Property
+  source:
+    id: BlobEncryptionKey
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 45
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets or sets the optional encryption key used for storing blobs.\nBlob encryption key must be 32 Bytes/256 bits long or null to disable encryption support.\n"
+  example: []
+  syntax:
+    content: protected byte[] BlobEncryptionKey { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Protected Property BlobEncryptionKey As Byte()
+  overload: TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+  commentId: P:TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+  id: CurrentContainer
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CurrentContainer
+  nameWithType: BlobStorage.CurrentContainer
+  fullName: TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+  type: Property
+  source:
+    id: CurrentContainer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the current tenant's name\n"
+  example: []
+  syntax:
+    content: protected string CurrentContainer { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected ReadOnly Property CurrentContainer As String
+  overload: TimeCockpit.Data.Database.BlobStorage.CurrentContainer*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.Guid,System.Guid,System.Guid,System.Byte[])
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.Guid,System.Guid,System.Guid,System.Byte[])
+  id: CreateBlob(System.Guid,System.Guid,System.Guid,System.Byte[])
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CreateBlob(Guid, Guid, Guid, Byte[])
+  nameWithType: BlobStorage.CreateBlob(Guid, Guid, Guid, Byte[])
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.Guid, System.Guid, System.Guid, System.Byte[])
+  type: Method
+  source:
+    id: CreateBlob
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 65
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates or replaces a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: public void CreateBlob(Guid blobId, Guid entityId, Guid propertyId, byte[] blobContent)
+    parameters:
+    - id: blobId
+      type: System.Guid
+      description: Guid of the blob
+    - id: entityId
+      type: System.Guid
+      description: Guid of the entity to which the blob belongs
+    - id: propertyId
+      type: System.Guid
+      description: Guid of the property to which the blob belongs
+    - id: blobContent
+      type: System.Byte[]
+      description: Content of the blob
+    content.vb: Public Sub CreateBlob(blobId As Guid, entityId As Guid, propertyId As Guid, blobContent As Byte())
+  overload: TimeCockpit.Data.Database.BlobStorage.CreateBlob*
+  nameWithType.vb: BlobStorage.CreateBlob(Guid, Guid, Guid, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.Guid, System.Guid, System.Guid, System.Byte())
+  name.vb: CreateBlob(Guid, Guid, Guid, Byte())
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.Guid,System.Guid,System.Guid,System.Byte[])
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.Guid,System.Guid,System.Guid,System.Byte[])
+  id: CreateBlobAsync(System.Guid,System.Guid,System.Guid,System.Byte[])
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CreateBlobAsync(Guid, Guid, Guid, Byte[])
+  nameWithType: BlobStorage.CreateBlobAsync(Guid, Guid, Guid, Byte[])
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.Guid, System.Guid, System.Guid, System.Byte[])
+  type: Method
+  source:
+    id: CreateBlobAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 78
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates or replaces a blob in the blob storage asynchronously.\n"
+  example: []
+  syntax:
+    content: public Task CreateBlobAsync(Guid blobId, Guid entityId, Guid propertyId, byte[] blobContent)
+    parameters:
+    - id: blobId
+      type: System.Guid
+      description: Guid of the blob.
+    - id: entityId
+      type: System.Guid
+      description: Guid of the entity to which the blob belongs.
+    - id: propertyId
+      type: System.Guid
+      description: Guid of the property to which the blob belongs.
+    - id: blobContent
+      type: System.Byte[]
+      description: Content of the blob.
+    return:
+      type: System.Threading.Tasks.Task
+      description: The task representing the operation.
+    content.vb: Public Function CreateBlobAsync(blobId As Guid, entityId As Guid, propertyId As Guid, blobContent As Byte()) As Task
+  overload: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync*
+  nameWithType.vb: BlobStorage.CreateBlobAsync(Guid, Guid, Guid, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.Guid, System.Guid, System.Guid, System.Byte())
+  name.vb: CreateBlobAsync(Guid, Guid, Guid, Byte())
+- uid: TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer
+  id: OpenOrCreateCurrentContainer
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: OpenOrCreateCurrentContainer()
+  nameWithType: BlobStorage.OpenOrCreateCurrentContainer()
+  fullName: TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer()
+  type: Method
+  source:
+    id: OpenOrCreateCurrentContainer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 86
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates the tenant's container if it does not already exist.\n"
+  example: []
+  syntax:
+    content: public abstract void OpenOrCreateCurrentContainer()
+    content.vb: Public MustOverride Sub OpenOrCreateCurrentContainer
+  overload: TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer
+  id: OpenCurrentContainer
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: OpenCurrentContainer()
+  nameWithType: BlobStorage.OpenCurrentContainer()
+  fullName: TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer()
+  type: Method
+  source:
+    id: OpenCurrentContainer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 96
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nOpens the tenant's container which already exist.\n"
+  remarks: "\nThis methods is used for the share access key authenticatio method, where the tenant needs to be \ncreated via a key and name pair. A data context which provides name and the shared access signature\nis nt allowed to create a tenant\n"
+  example: []
+  syntax:
+    content: public abstract void OpenCurrentContainer()
+    content.vb: Public MustOverride Sub OpenCurrentContainer
+  overload: TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.Guid,System.Guid,System.Guid)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.Guid,System.Guid,System.Guid)
+  id: GetBlobContent(System.Guid,System.Guid,System.Guid)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: GetBlobContent(Guid, Guid, Guid)
+  nameWithType: BlobStorage.GetBlobContent(Guid, Guid, Guid)
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.Guid, System.Guid, System.Guid)
+  type: Method
+  source:
+    id: GetBlobContent
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 105
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the content of a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: public byte[] GetBlobContent(Guid blobId, Guid entityId, Guid propertyId)
+    parameters:
+    - id: blobId
+      type: System.Guid
+      description: Guid of the blob that should be read
+    - id: entityId
+      type: System.Guid
+      description: Guid of the entity to which the blob belongs
+    - id: propertyId
+      type: System.Guid
+      description: Guid of the property to which the blob belongs
+    return:
+      type: System.Byte[]
+      description: Content of the requested blob
+    content.vb: Public Function GetBlobContent(blobId As Guid, entityId As Guid, propertyId As Guid) As Byte()
+  overload: TimeCockpit.Data.Database.BlobStorage.GetBlobContent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.Guid,System.Guid,System.Guid)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.Guid,System.Guid,System.Guid)
+  id: GetBlobContentAsync(System.Guid,System.Guid,System.Guid)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: GetBlobContentAsync(Guid, Guid, Guid)
+  nameWithType: BlobStorage.GetBlobContentAsync(Guid, Guid, Guid)
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.Guid, System.Guid, System.Guid)
+  type: Method
+  source:
+    id: GetBlobContentAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 117
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the blob content asynchronously.\n"
+  example: []
+  syntax:
+    content: public Task<byte[]> GetBlobContentAsync(Guid blobId, Guid entityId, Guid propertyId)
+    parameters:
+    - id: blobId
+      type: System.Guid
+      description: Guid of the blob that should be read
+    - id: entityId
+      type: System.Guid
+      description: Guid of the entity to which the blob belongs
+    - id: propertyId
+      type: System.Guid
+      description: Guid of the property to which the blob belongs
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: A task Producing
+    content.vb: Public Function GetBlobContentAsync(blobId As Guid, entityId As Guid, propertyId As Guid) As Task(Of Byte())
+  overload: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.Guid,System.Guid,System.Guid)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.Guid,System.Guid,System.Guid)
+  id: DeleteBlob(System.Guid,System.Guid,System.Guid)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: DeleteBlob(Guid, Guid, Guid)
+  nameWithType: BlobStorage.DeleteBlob(Guid, Guid, Guid)
+  fullName: TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.Guid, System.Guid, System.Guid)
+  type: Method
+  source:
+    id: DeleteBlob
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 128
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nDelets a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: public void DeleteBlob(Guid blobId, Guid entityId, Guid propertyId)
+    parameters:
+    - id: blobId
+      type: System.Guid
+      description: Guid of the blob
+    - id: entityId
+      type: System.Guid
+      description: Guid of the entity to which the blob belongs
+    - id: propertyId
+      type: System.Guid
+      description: Guid of the property to which the blob belongs
+    content.vb: Public Sub DeleteBlob(blobId As Guid, entityId As Guid, propertyId As Guid)
+  overload: TimeCockpit.Data.Database.BlobStorage.DeleteBlob*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateContainer(System.String)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.CreateContainer(System.String)
+  id: CreateContainer(System.String)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CreateContainer(String)
+  nameWithType: BlobStorage.CreateContainer(String)
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateContainer(System.String)
+  type: Method
+  source:
+    id: CreateContainer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 233
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates a container in the blob storage\n"
+  example: []
+  syntax:
+    content: protected abstract void CreateContainer(string containerName)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    content.vb: Protected MustOverride Sub CreateContainer(containerName As String)
+  overload: TimeCockpit.Data.Database.BlobStorage.CreateContainer*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.String,System.String,System.String,System.Byte[])
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.String,System.String,System.String,System.Byte[])
+  id: CreateBlob(System.String,System.String,System.String,System.Byte[])
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CreateBlob(String, String, String, Byte[])
+  nameWithType: BlobStorage.CreateBlob(String, String, String, Byte[])
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.String, System.String, System.String, System.Byte[])
+  type: Method
+  source:
+    id: CreateBlob
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 242
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates or replaces a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: protected abstract void CreateBlob(string containerName, string blobName, string categoryName, byte[] blobContent)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    - id: blobName
+      type: System.String
+      description: Name of the blob
+    - id: categoryName
+      type: System.String
+      description: Name of the category to which the blob belongs
+    - id: blobContent
+      type: System.Byte[]
+      description: Content of the blob
+    content.vb: Protected MustOverride Sub CreateBlob(containerName As String, blobName As String, categoryName As String, blobContent As Byte())
+  overload: TimeCockpit.Data.Database.BlobStorage.CreateBlob*
+  nameWithType.vb: BlobStorage.CreateBlob(String, String, String, Byte())
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: TimeCockpit.Data.Database.BlobStorage.CreateBlob(System.String, System.String, System.String, System.Byte())
+  name.vb: CreateBlob(String, String, String, Byte())
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.String,System.String,System.String,System.Byte[])
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.String,System.String,System.String,System.Byte[])
+  id: CreateBlobAsync(System.String,System.String,System.String,System.Byte[])
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: CreateBlobAsync(String, String, String, Byte[])
+  nameWithType: BlobStorage.CreateBlobAsync(String, String, String, Byte[])
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.String, System.String, System.String, System.Byte[])
+  type: Method
+  source:
+    id: CreateBlobAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 252
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nCreates or replaces a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: protected abstract Task CreateBlobAsync(string containerName, string blobName, string categoryName, byte[] blobContent)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    - id: blobName
+      type: System.String
+      description: Name of the blob
+    - id: categoryName
+      type: System.String
+      description: Name of the category to which the blob belongs
+    - id: blobContent
+      type: System.Byte[]
+      description: Content of the blob
+    return:
+      type: System.Threading.Tasks.Task
+      description: The task representing the operation.
+    content.vb: Protected MustOverride Function CreateBlobAsync(containerName As String, blobName As String, categoryName As String, blobContent As Byte()) As Task
+  overload: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync*
+  nameWithType.vb: BlobStorage.CreateBlobAsync(String, String, String, Byte())
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync(System.String, System.String, System.String, System.Byte())
+  name.vb: CreateBlobAsync(String, String, String, Byte())
+- uid: TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.String,System.String,System.String)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.String,System.String,System.String)
+  id: DeleteBlob(System.String,System.String,System.String)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: DeleteBlob(String, String, String)
+  nameWithType: BlobStorage.DeleteBlob(String, String, String)
+  fullName: TimeCockpit.Data.Database.BlobStorage.DeleteBlob(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: DeleteBlob
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 260
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nDelets a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: protected abstract void DeleteBlob(string containerName, string blobName, string categoryName)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    - id: blobName
+      type: System.String
+      description: Name of the blob
+    - id: categoryName
+      type: System.String
+      description: Name of the category to which the blob belongs
+    content.vb: Protected MustOverride Sub DeleteBlob(containerName As String, blobName As String, categoryName As String)
+  overload: TimeCockpit.Data.Database.BlobStorage.DeleteBlob*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.String,System.String,System.String)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.String,System.String,System.String)
+  id: GetBlobContent(System.String,System.String,System.String)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: GetBlobContent(String, String, String)
+  nameWithType: BlobStorage.GetBlobContent(String, String, String)
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContent(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: GetBlobContent
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 269
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the content of a blob in the blob storage\n"
+  example: []
+  syntax:
+    content: protected abstract byte[] GetBlobContent(string containerName, string blobName, string categoryName)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    - id: blobName
+      type: System.String
+      description: Name of the blob
+    - id: categoryName
+      type: System.String
+      description: Name of the category to which the blob belongs
+    return:
+      type: System.Byte[]
+      description: Content of the requested blob
+    content.vb: Protected MustOverride Function GetBlobContent(containerName As String, blobName As String, categoryName As String) As Byte()
+  overload: TimeCockpit.Data.Database.BlobStorage.GetBlobContent*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.String,System.String,System.String)
+  commentId: M:TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.String,System.String,System.String)
+  id: GetBlobContentAsync(System.String,System.String,System.String)
+  parent: TimeCockpit.Data.Database.BlobStorage
+  langs:
+  - csharp
+  - vb
+  name: GetBlobContentAsync(String, String, String)
+  nameWithType: BlobStorage.GetBlobContentAsync(String, String, String)
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync(System.String, System.String, System.String)
+  type: Method
+  source:
+    id: GetBlobContentAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Database\BlobStorage.cs
+    startLine: 278
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets the content of a blob in the blob storage asynchronously.\n"
+  example: []
+  syntax:
+    content: protected abstract Task<byte[]> GetBlobContentAsync(string containerName, string blobName, string categoryName)
+    parameters:
+    - id: containerName
+      type: System.String
+      description: Name of the container
+    - id: blobName
+      type: System.String
+      description: Name of the blob
+    - id: categoryName
+      type: System.String
+      description: Name of the category to which the blob belongs
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: Content of the requested blob
+    content.vb: Protected MustOverride Function GetBlobContentAsync(containerName As String, blobName As String, categoryName As String) As Task(Of Byte())
+  overload: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+references:
+- uid: TimeCockpit.Data.Database
+  commentId: N:TimeCockpit.Data.Database
+  isExternal: false
+  name: TimeCockpit.Data.Database
+  nameWithType: TimeCockpit.Data.Database
+  fullName: TimeCockpit.Data.Database
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Database.BlobStorage.#ctor*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.#ctor
+  isExternal: false
+  name: BlobStorage
+  nameWithType: BlobStorage.BlobStorage
+  fullName: TimeCockpit.Data.Database.BlobStorage.BlobStorage
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+  isExternal: false
+  name: BlobEncryptionKey
+  nameWithType: BlobStorage.BlobEncryptionKey
+  fullName: TimeCockpit.Data.Database.BlobStorage.BlobEncryptionKey
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.Database.BlobStorage.CurrentContainer*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+  isExternal: false
+  name: CurrentContainer
+  nameWithType: BlobStorage.CurrentContainer
+  fullName: TimeCockpit.Data.Database.BlobStorage.CurrentContainer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlob*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.CreateBlob
+  isExternal: false
+  name: CreateBlob
+  nameWithType: BlobStorage.CreateBlob
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlob
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync
+  isExternal: false
+  name: CreateBlobAsync
+  nameWithType: BlobStorage.CreateBlobAsync
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateBlobAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer
+  isExternal: false
+  name: OpenOrCreateCurrentContainer
+  nameWithType: BlobStorage.OpenOrCreateCurrentContainer
+  fullName: TimeCockpit.Data.Database.BlobStorage.OpenOrCreateCurrentContainer
+- uid: TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer
+  isExternal: false
+  name: OpenCurrentContainer
+  nameWithType: BlobStorage.OpenCurrentContainer
+  fullName: TimeCockpit.Data.Database.BlobStorage.OpenCurrentContainer
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContent*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.GetBlobContent
+  isExternal: false
+  name: GetBlobContent
+  nameWithType: BlobStorage.GetBlobContent
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContent
+- uid: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync
+  isExternal: false
+  name: GetBlobContentAsync
+  nameWithType: BlobStorage.GetBlobContentAsync
+  fullName: TimeCockpit.Data.Database.BlobStorage.GetBlobContentAsync
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Byte[]>
+  nameWithType: Task<Byte[]>
+  fullName: System.Threading.Tasks.Task<System.Byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of System.Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.BlobStorage.DeleteBlob*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.DeleteBlob
+  isExternal: false
+  name: DeleteBlob
+  nameWithType: BlobStorage.DeleteBlob
+  fullName: TimeCockpit.Data.Database.BlobStorage.DeleteBlob
+- uid: TimeCockpit.Data.Database.BlobStorage.CreateContainer*
+  commentId: Overload:TimeCockpit.Data.Database.BlobStorage.CreateContainer
+  isExternal: false
+  name: CreateContainer
+  nameWithType: BlobStorage.CreateContainer
+  fullName: TimeCockpit.Data.Database.BlobStorage.CreateContainer

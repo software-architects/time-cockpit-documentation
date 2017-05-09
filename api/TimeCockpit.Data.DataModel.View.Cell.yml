@@ -1,0 +1,1805 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.View.Cell
+  commentId: T:TimeCockpit.Data.DataModel.View.Cell
+  id: Cell
+  parent: TimeCockpit.Data.DataModel.View
+  children:
+  - TimeCockpit.Data.DataModel.View.Cell.#ctor
+  - TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  - TimeCockpit.Data.DataModel.View.Cell.Background
+  - TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  - TimeCockpit.Data.DataModel.View.Cell.DataType
+  - TimeCockpit.Data.DataModel.View.Cell.Foreground
+  - TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+  - TimeCockpit.Data.DataModel.View.Cell.Header
+  - TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  - TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  - TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  - TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  - TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  - TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  - TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  - TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  - TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  - TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  - TimeCockpit.Data.DataModel.View.Cell.Width
+  langs:
+  - csharp
+  - vb
+  name: Cell
+  nameWithType: Cell
+  fullName: TimeCockpit.Data.DataModel.View.Cell
+  type: Class
+  source:
+    id: Cell
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 18
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nRepresents a field in a <xref href=\"TimeCockpit.Data.DataModel.View.List\" data-throw-if-not-resolved=\"false\"></xref> or a <xref href=\"TimeCockpit.Data.DataModel.View.Form\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      public abstract class Cell : NamedDynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged, IWeakEventListener
+    content.vb: >-
+      <DataContract>
+
+      Public MustInherit Class Cell
+          Inherits NamedDynamicObject
+          Implements IDynamicMetaObjectProvider, INotifyPropertyChanged, IWeakEventListener
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DynamicObject
+  - TimeCockpit.Data.DataModel.NamedDynamicObject
+  derivedClasses:
+  - TimeCockpit.Data.DataModel.View.BackReferenceCell
+  - TimeCockpit.Data.DataModel.View.BackReferenceFormListCell
+  - TimeCockpit.Data.DataModel.View.BoundCell
+  - TimeCockpit.Data.DataModel.View.DataBarCellBase
+  - TimeCockpit.Data.DataModel.View.DurationCell
+  - TimeCockpit.Data.DataModel.View.ImageCell
+  - TimeCockpit.Data.DataModel.View.ManyToManyRelationCell
+  - TimeCockpit.Data.DataModel.View.RefreshModelCell
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider
+  - System.ComponentModel.INotifyPropertyChanged
+  - TimeCockpit.Common.IWeakEventListener
+  inheritedMembers:
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.DataModel.View.Cell.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.View.Cell.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Cell()
+  nameWithType: Cell.Cell()
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Cell()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 114
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nInitializes a new instance of the Cell class.\n"
+  example: []
+  syntax:
+    content: public Cell()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.View.Cell.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.Header
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Header
+  id: Header
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Header
+  nameWithType: Cell.Header
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Header
+  type: Property
+  source:
+    id: Header
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the header of the cell.\n"
+  example: []
+  syntax:
+    content: public string Header { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Header As String
+  overload: TimeCockpit.Data.DataModel.View.Cell.Header*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.Foreground
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Foreground
+  id: Foreground
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Foreground
+  nameWithType: Cell.Foreground
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Foreground
+  type: Property
+  source:
+    id: Foreground
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 143
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the foreground color of the cell.\n"
+  example: []
+  syntax:
+    content: public string Foreground { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Foreground As String
+  overload: TimeCockpit.Data.DataModel.View.Cell.Foreground*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.Background
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Background
+  id: Background
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Background
+  nameWithType: Cell.Background
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Background
+  type: Property
+  source:
+    id: Background
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 161
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the background color of the cell.\n"
+  example: []
+  syntax:
+    content: public string Background { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Background As String
+  overload: TimeCockpit.Data.DataModel.View.Cell.Background*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  id: RowSpan
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: RowSpan
+  nameWithType: Cell.RowSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  type: Property
+  source:
+    id: RowSpan
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 180
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the rowspan of the cell.\n"
+  example: []
+  syntax:
+    content: public int ? RowSpan { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property RowSpan As Integer?
+  overload: TimeCockpit.Data.DataModel.View.Cell.RowSpan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  id: ColSpan
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: ColSpan
+  nameWithType: Cell.ColSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  type: Property
+  source:
+    id: ColSpan
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 198
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the colspan of the cell.\n"
+  example: []
+  syntax:
+    content: public int ? ColSpan { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property ColSpan As Integer?
+  overload: TimeCockpit.Data.DataModel.View.Cell.ColSpan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  id: MinWidth
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: MinWidth
+  nameWithType: Cell.MinWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  type: Property
+  source:
+    id: MinWidth
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 216
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the minimum width of the cell.\n"
+  example: []
+  syntax:
+    content: public double ? MinWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property MinWidth As Double?
+  overload: TimeCockpit.Data.DataModel.View.Cell.MinWidth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  id: MaxWidth
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: MaxWidth
+  nameWithType: Cell.MaxWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  type: Property
+  source:
+    id: MaxWidth
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 234
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the maximum width of the cell.\n"
+  example: []
+  syntax:
+    content: public double ? MaxWidth { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property MaxWidth As Double?
+  overload: TimeCockpit.Data.DataModel.View.Cell.MaxWidth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.Width
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Width
+  id: Width
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Cell.Width
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Width
+  type: Property
+  source:
+    id: Width
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 252
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the width of the cell.\n"
+  example: []
+  syntax:
+    content: public double ? Width { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property Width As Double?
+  overload: TimeCockpit.Data.DataModel.View.Cell.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  id: Hyperlink
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: Hyperlink
+  nameWithType: Cell.Hyperlink
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  type: Property
+  source:
+    id: Hyperlink
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 270
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the the configuration of a hyperlink.\n"
+  example: []
+  syntax:
+    content: public Hyperlink Hyperlink { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.View.Hyperlink
+    content.vb: Public Property Hyperlink As Hyperlink
+  overload: TimeCockpit.Data.DataModel.View.Cell.Hyperlink*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  id: IsVisible
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: IsVisible
+  nameWithType: Cell.IsVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  type: Property
+  source:
+    id: IsVisible
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 299
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the cell is visible.\n"
+  example: []
+  syntax:
+    content: public object IsVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property IsVisible As Object
+  overload: TimeCockpit.Data.DataModel.View.Cell.IsVisible*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  id: IsColumnVisible
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: IsColumnVisible
+  nameWithType: Cell.IsColumnVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  type: Property
+  source:
+    id: IsColumnVisible
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 317
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether a column in a list is visible.\n"
+  example: []
+  syntax:
+    content: public object IsColumnVisible { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property IsColumnVisible As Object
+  overload: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  id: IsEnabled
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: Cell.IsEnabled
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  type: Property
+  source:
+    id: IsEnabled
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 335
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the cell is enabled.\n"
+  example: []
+  syntax:
+    content: public object IsEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property IsEnabled As Object
+  overload: TimeCockpit.Data.DataModel.View.Cell.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  id: IsReadOnly
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: Cell.IsReadOnly
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  type: Property
+  source:
+    id: IsReadOnly
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 353
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the cell is read only.\n"
+  example: []
+  syntax:
+    content: public object IsReadOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property IsReadOnly As Object
+  overload: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  id: LabelPosition
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: LabelPosition
+  nameWithType: Cell.LabelPosition
+  fullName: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  type: Property
+  source:
+    id: LabelPosition
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 371
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets a value indicating whether the label should be displayed above the input field.\n"
+  example: []
+  syntax:
+    content: public LabelPosition LabelPosition { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.View.LabelPosition
+    content.vb: Public Property LabelPosition As LabelPosition
+  overload: TimeCockpit.Data.DataModel.View.Cell.LabelPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  id: AggregateFunction
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: AggregateFunction
+  nameWithType: Cell.AggregateFunction
+  fullName: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  type: Property
+  source:
+    id: AggregateFunction
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 389
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the AggregateFunction used for this cell when multiple cells are merged (in a column, e.g.)\n"
+  example: []
+  syntax:
+    content: public DefaultAggregateFunction? AggregateFunction { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{TimeCockpit.Data.DataModel.DefaultAggregateFunction}
+    content.vb: Public Property AggregateFunction As DefaultAggregateFunction?
+  overload: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.DataType
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.DataType
+  id: DataType
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: DataType
+  nameWithType: Cell.DataType
+  fullName: TimeCockpit.Data.DataModel.View.Cell.DataType
+  type: Property
+  source:
+    id: DataType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 407
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets or sets the data type of the cell-\n"
+  example: []
+  syntax:
+    content: public Type DataType { get; set; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public Property DataType As Type
+  overload: TimeCockpit.Data.DataModel.View.Cell.DataType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+  commentId: M:TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+  id: GetPropertyInfos
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: GetPropertyInfos()
+  nameWithType: Cell.GetPropertyInfos()
+  fullName: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos()
+  type: Method
+  source:
+    id: GetPropertyInfos
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 448
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nGets a list of all properties.\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, string> GetPropertyInfos()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Returns a list of all properties.
+    content.vb: Public Function GetPropertyInfos As Dictionary(Of String, String)
+  overload: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  commentId: M:TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  id: ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  langs:
+  - csharp
+  - vb
+  name: ReceiveWeakEvent(Type, Object, EventArgs)
+  nameWithType: Cell.ReceiveWeakEvent(Type, Object, EventArgs)
+  fullName: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)
+  type: Method
+  source:
+    id: ReceiveWeakEvent
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\View\Cell.cs
+    startLine: 476
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nReceives events from the centralized event manager.\n"
+  example: []
+  syntax:
+    content: public bool ReceiveWeakEvent(Type managerType, object sender, EventArgs e)
+    parameters:
+    - id: managerType
+      type: System.Type
+      description: The type of the <xref href="System.Windows.WeakEventManager" data-throw-if-not-resolved="false"></xref> calling this method.
+    - id: sender
+      type: System.Object
+      description: Object that originated the event.
+    - id: e
+      type: System.EventArgs
+      description: Event data.
+    return:
+      type: System.Boolean
+      description: "\ntrue if the listener handled the event. It is considered an error by the <xref href=\"System.Windows.WeakEventManager\" data-throw-if-not-resolved=\"false\"></xref> handling in WPF to register a listener for an event that the listener does not handle. Regardless, the method should return false if it receives an event that it does not recognize or handle.\n"
+    content.vb: Public Function ReceiveWeakEvent(managerType As Type, sender As Object, e As EventArgs) As Boolean
+  overload: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent*
+  implements:
+  - TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.DataModel.View.List
+  commentId: T:TimeCockpit.Data.DataModel.View.List
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: List
+  nameWithType: List
+  fullName: TimeCockpit.Data.DataModel.View.List
+- uid: TimeCockpit.Data.DataModel.View.Form
+  commentId: T:TimeCockpit.Data.DataModel.View.Form
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: Form
+  nameWithType: Form
+  fullName: TimeCockpit.Data.DataModel.View.Form
+- uid: TimeCockpit.Data.DataModel.View
+  commentId: N:TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.View
+  nameWithType: TimeCockpit.Data.DataModel.View
+  fullName: TimeCockpit.Data.DataModel.View
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject
+  commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: NamedDynamicObject
+  nameWithType: NamedDynamicObject
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Common.IWeakEventListener
+  commentId: T:TimeCockpit.Common.IWeakEventListener
+  parent: TimeCockpit.Common
+  isExternal: false
+  name: IWeakEventListener
+  nameWithType: IWeakEventListener
+  fullName: TimeCockpit.Common.IWeakEventListener
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: false
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: false
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: OnPropertyChanged(String)
+  nameWithType: NamedDynamicObject.OnPropertyChanged(String)
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: NamedDynamicObject.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: NamedDynamicObject.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMember(String)
+  nameWithType: DynamicObject.GetMember(String)
+  fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: SetMember(String, Object)
+  nameWithType: DynamicObject.SetMember(String, Object)
+  fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: DynamicObject.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: false
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: TimeCockpit.Common
+  commentId: N:TimeCockpit.Common
+  isExternal: false
+  name: TimeCockpit.Common
+  nameWithType: TimeCockpit.Common
+  fullName: TimeCockpit.Common
+- uid: TimeCockpit.Data.DataModel.View.Cell.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.#ctor
+  isExternal: false
+  name: Cell
+  nameWithType: Cell.Cell
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Cell
+- uid: TimeCockpit.Data.DataModel.View.Cell.Header*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.Header
+  isExternal: false
+  name: Header
+  nameWithType: Cell.Header
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Header
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.View.Cell.Foreground*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.Foreground
+  isExternal: false
+  name: Foreground
+  nameWithType: Cell.Foreground
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Foreground
+- uid: TimeCockpit.Data.DataModel.View.Cell.Background*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.Background
+  isExternal: false
+  name: Background
+  nameWithType: Cell.Background
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Background
+- uid: TimeCockpit.Data.DataModel.View.Cell.RowSpan*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  isExternal: false
+  name: RowSpan
+  nameWithType: Cell.RowSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.RowSpan
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Cell.ColSpan*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  isExternal: false
+  name: ColSpan
+  nameWithType: Cell.ColSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.ColSpan
+- uid: TimeCockpit.Data.DataModel.View.Cell.MinWidth*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  isExternal: false
+  name: MinWidth
+  nameWithType: Cell.MinWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MinWidth
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Cell.MaxWidth*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  isExternal: false
+  name: MaxWidth
+  nameWithType: Cell.MaxWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+- uid: TimeCockpit.Data.DataModel.View.Cell.Width*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.Width
+  isExternal: false
+  name: Width
+  nameWithType: Cell.Width
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Width
+- uid: TimeCockpit.Data.DataModel.View.Cell.Hyperlink*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  isExternal: false
+  name: Hyperlink
+  nameWithType: Cell.Hyperlink
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+- uid: TimeCockpit.Data.DataModel.View.Hyperlink
+  commentId: T:TimeCockpit.Data.DataModel.View.Hyperlink
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: Hyperlink
+  nameWithType: Hyperlink
+  fullName: TimeCockpit.Data.DataModel.View.Hyperlink
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsVisible*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  isExternal: false
+  name: IsVisible
+  nameWithType: Cell.IsVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsVisible
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  isExternal: false
+  name: IsColumnVisible
+  nameWithType: Cell.IsColumnVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsEnabled*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  isExternal: false
+  name: IsEnabled
+  nameWithType: Cell.IsEnabled
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  isExternal: false
+  name: IsReadOnly
+  nameWithType: Cell.IsReadOnly
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+- uid: TimeCockpit.Data.DataModel.View.Cell.LabelPosition*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  isExternal: false
+  name: LabelPosition
+  nameWithType: Cell.LabelPosition
+  fullName: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+- uid: TimeCockpit.Data.DataModel.View.LabelPosition
+  commentId: T:TimeCockpit.Data.DataModel.View.LabelPosition
+  parent: TimeCockpit.Data.DataModel.View
+  isExternal: false
+  name: LabelPosition
+  nameWithType: LabelPosition
+  fullName: TimeCockpit.Data.DataModel.View.LabelPosition
+- uid: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  isExternal: false
+  name: AggregateFunction
+  nameWithType: Cell.AggregateFunction
+  fullName: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+- uid: System.Nullable{TimeCockpit.Data.DataModel.DefaultAggregateFunction}
+  commentId: T:System.Nullable{TimeCockpit.Data.DataModel.DefaultAggregateFunction}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DefaultAggregateFunction>
+  nameWithType: Nullable<DefaultAggregateFunction>
+  fullName: System.Nullable<TimeCockpit.Data.DataModel.DefaultAggregateFunction>
+  nameWithType.vb: Nullable(Of DefaultAggregateFunction)
+  fullName.vb: System.Nullable(Of TimeCockpit.Data.DataModel.DefaultAggregateFunction)
+  name.vb: Nullable(Of DefaultAggregateFunction)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.DefaultAggregateFunction
+    name: DefaultAggregateFunction
+    nameWithType: DefaultAggregateFunction
+    fullName: TimeCockpit.Data.DataModel.DefaultAggregateFunction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.DefaultAggregateFunction
+    name: DefaultAggregateFunction
+    nameWithType: DefaultAggregateFunction
+    fullName: TimeCockpit.Data.DataModel.DefaultAggregateFunction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.View.Cell.DataType*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.DataType
+  isExternal: false
+  name: DataType
+  nameWithType: Cell.DataType
+  fullName: TimeCockpit.Data.DataModel.View.Cell.DataType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+  isExternal: false
+  name: GetPropertyInfos
+  nameWithType: Cell.GetPropertyInfos
+  fullName: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Windows.WeakEventManager
+  commentId: T:System.Windows.WeakEventManager
+- uid: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent
+  isExternal: false
+  name: ReceiveWeakEvent
+  nameWithType: Cell.ReceiveWeakEvent
+  fullName: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent
+- uid: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  commentId: M:TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+  parent: TimeCockpit.Common.IWeakEventListener
+  isExternal: true
+  name: ReceiveWeakEvent(Type, Object, EventArgs)
+  nameWithType: IWeakEventListener.ReceiveWeakEvent(Type, Object, EventArgs)
+  fullName: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type, System.Object, System.EventArgs)
+  spec.csharp:
+  - uid: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+    name: ReceiveWeakEvent
+    nameWithType: IWeakEventListener.ReceiveWeakEvent
+    fullName: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.EventArgs
+    name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
+    name: ReceiveWeakEvent
+    nameWithType: IWeakEventListener.ReceiveWeakEvent
+    fullName: TimeCockpit.Common.IWeakEventListener.ReceiveWeakEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.EventArgs
+    name: EventArgs
+    nameWithType: EventArgs
+    fullName: System.EventArgs
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  id: MemberDeclarationNamedExpression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  - TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  - TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+  - TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+  langs:
+  - csharp
+  - vb
+  name: MemberDeclarationNamedExpression
+  nameWithType: MemberDeclarationNamedExpression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  type: Class
+  source:
+    id: MemberDeclarationNamedExpression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\MemberDeclarationNamedExpression.cs
+    startLine: 19
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nAST Node representing a member declaration named expression, e.g.\nin\n<pre><code>From X In Timesheet Select New With { .ThreeTimesDurationOfHours = 3 * X.DurationInHours }</code></pre>\n\".ThreeTimesDurationOfHours = 3 * X.DurationInHours\" is represented by an instance of this node.\n"
+  example: []
+  syntax:
+    content: 'public class MemberDeclarationNamedExpression : MemberDeclaration'
+    content.vb: >-
+      Public Class MemberDeclarationNamedExpression
+          Inherits MemberDeclaration
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.QueryLanguage.Syntax.Node
+  - TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclaration
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  id: '#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression)'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  langs:
+  - csharp
+  - vb
+  name: MemberDeclarationNamedExpression(String, Expression)
+  nameWithType: MemberDeclarationNamedExpression.MemberDeclarationNamedExpression(String, Expression)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberDeclarationNamedExpression(System.String, TimeCockpit.Data.QueryLanguage.Syntax.Expression)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\MemberDeclarationNamedExpression.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemberDeclarationNamedExpression(string memberName, Expression expression)
+    parameters:
+    - id: memberName
+      type: System.String
+      description: The name of the member being defined.
+    - id: expression
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+      description: The expression producing the defined member.
+    content.vb: Public Sub New(memberName As String, expression As Expression)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+  id: MemberName
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  langs:
+  - csharp
+  - vb
+  name: MemberName
+  nameWithType: MemberDeclarationNamedExpression.MemberName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+  type: Property
+  source:
+    id: MemberName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\MemberDeclarationNamedExpression.cs
+    startLine: 45
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the name of the member being defined.\n"
+  example: []
+  syntax:
+    content: public string MemberName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property MemberName As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+  id: Expression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  langs:
+  - csharp
+  - vb
+  name: Expression
+  nameWithType: MemberDeclarationNamedExpression.Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+  type: Property
+  source:
+    id: Expression
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\MemberDeclarationNamedExpression.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the expression producing the member value.\n"
+  example: []
+  syntax:
+    content: public Expression Expression { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    content.vb: Public ReadOnly Property Expression As Expression
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: MemberDeclarationNamedExpression.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\MemberDeclarationNamedExpression.cs
+    startLine: 57
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch to.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax
+  commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage.Syntax
+  nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Node
+  nameWithType: Node
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclaration
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclaration
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: MemberDeclaration
+  nameWithType: MemberDeclaration
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclaration
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: MemberDeclarationNamedExpression
+  nameWithType: MemberDeclarationNamedExpression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.#ctor
+  isExternal: false
+  name: MemberDeclarationNamedExpression
+  nameWithType: MemberDeclarationNamedExpression.MemberDeclarationNamedExpression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberDeclarationNamedExpression
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Expression
+  nameWithType: Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+  isExternal: false
+  name: MemberName
+  nameWithType: MemberDeclarationNamedExpression.MemberName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.MemberName
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+  isExternal: false
+  name: Expression
+  nameWithType: MemberDeclarationNamedExpression.Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Expression
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  isExternal: false
+  name: VisitMemberDeclarationNamedExpression(MemberDeclarationNamedExpression)
+  nameWithType: Visitor.VisitMemberDeclarationNamedExpression(MemberDeclarationNamedExpression)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)
+    name: VisitMemberDeclarationNamedExpression
+    nameWithType: Visitor.VisitMemberDeclarationNamedExpression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+    name: MemberDeclarationNamedExpression
+    nameWithType: MemberDeclarationNamedExpression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression(TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression)
+    name: VisitMemberDeclarationNamedExpression
+    nameWithType: Visitor.VisitMemberDeclarationNamedExpression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitMemberDeclarationNamedExpression
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+    name: MemberDeclarationNamedExpression
+    nameWithType: MemberDeclarationNamedExpression
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: false
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: MemberDeclarationNamedExpression.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.MemberDeclarationNamedExpression.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

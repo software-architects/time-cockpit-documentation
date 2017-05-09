@@ -1,0 +1,714 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  id: EntitySourceIncludeConditional
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor(System.String,System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression,System.String)
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+  langs:
+  - csharp
+  - vb
+  name: EntitySourceIncludeConditional
+  nameWithType: EntitySourceIncludeConditional
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  type: Class
+  source:
+    id: EntitySourceIncludeConditional
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 22
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nAST Node representing a conditional include statement.\ne.g.:\nIn\n<pre><code>From X In Project.Include(P, Timesheet, P.BeginTime &gt; 10) Select X</code></pre>\nthe node corresponds to the \".Include(P, Timesheet, P.BeginTime &gt; 10)\" part.\nBackReferenceAliasName corresponds to the alias given to the back reference item (\"P\"),\nBackReferenceName corresponds to \"Timesheet\" and Condition corresponds to \"P.BeginTime &gt; 10\" /&gt;\n"
+  example: []
+  syntax:
+    content: 'public class EntitySourceIncludeConditional : EntitySourceInclude'
+    content.vb: >-
+      Public Class EntitySourceIncludeConditional
+          Inherits EntitySourceInclude
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.QueryLanguage.Syntax.Node
+  - TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor(System.String,System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression,System.String)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor(System.String,System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression,System.String)
+  id: '#ctor(System.String,System.String,TimeCockpit.Data.QueryLanguage.Syntax.Expression,System.String)'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: EntitySourceIncludeConditional(String, String, Expression, String)
+  nameWithType: EntitySourceIncludeConditional.EntitySourceIncludeConditional(String, String, Expression, String)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.EntitySourceIncludeConditional(System.String, System.String, TimeCockpit.Data.QueryLanguage.Syntax.Expression, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 31
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public EntitySourceIncludeConditional(string backReferenceAliasName, string backReferenceName, Expression condition, string joinType = null)
+    parameters:
+    - id: backReferenceAliasName
+      type: System.String
+      description: The name of the back reference alias.
+    - id: backReferenceName
+      type: System.String
+      description: The name of the back reference being included.
+    - id: condition
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+      description: The include condition.
+    - id: joinType
+      type: System.String
+      description: The type of the join.
+    content.vb: Public Sub New(backReferenceAliasName As String, backReferenceName As String, condition As Expression, joinType As String = Nothing)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+  id: BackReferenceAliasName
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: BackReferenceAliasName
+  nameWithType: EntitySourceIncludeConditional.BackReferenceAliasName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+  type: Property
+  source:
+    id: BackReferenceAliasName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 47
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the name of the BackReference Alias.\n"
+  example: []
+  syntax:
+    content: public string BackReferenceAliasName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property BackReferenceAliasName As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+  id: BackReferenceName
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: BackReferenceName
+  nameWithType: EntitySourceIncludeConditional.BackReferenceName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+  type: Property
+  source:
+    id: BackReferenceName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 52
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the name of the BackReference the alias refers to.\n"
+  example: []
+  syntax:
+    content: public string BackReferenceName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property BackReferenceName As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+  id: Condition
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: Condition
+  nameWithType: EntitySourceIncludeConditional.Condition
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+  type: Property
+  source:
+    id: Condition
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 57
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the expression of the condition for the back reference elements.\n"
+  example: []
+  syntax:
+    content: public Expression Condition { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    content.vb: Public ReadOnly Property Condition As Expression
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+  id: JoinType
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: JoinType
+  nameWithType: EntitySourceIncludeConditional.JoinType
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+  type: Property
+  source:
+    id: JoinType
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 62
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the type of the join.\n"
+  example: []
+  syntax:
+    content: public string JoinType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property JoinType As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: EntitySourceIncludeConditional.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\EntitySourceIncludeConditional.cs
+    startLine: 69
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
+  example: []
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax
+  commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage.Syntax
+  nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Node
+  nameWithType: Node
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: EntitySourceInclude
+  nameWithType: EntitySourceInclude
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: EntitySourceIncludeConditional
+  nameWithType: EntitySourceIncludeConditional
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.#ctor
+  isExternal: false
+  name: EntitySourceIncludeConditional
+  nameWithType: EntitySourceIncludeConditional.EntitySourceIncludeConditional
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.EntitySourceIncludeConditional
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Expression
+  nameWithType: Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+  isExternal: false
+  name: BackReferenceAliasName
+  nameWithType: EntitySourceIncludeConditional.BackReferenceAliasName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceAliasName
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+  isExternal: false
+  name: BackReferenceName
+  nameWithType: EntitySourceIncludeConditional.BackReferenceName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.BackReferenceName
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+  isExternal: false
+  name: Condition
+  nameWithType: EntitySourceIncludeConditional.Condition
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Condition
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+  isExternal: false
+  name: JoinType
+  nameWithType: EntitySourceIncludeConditional.JoinType
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.JoinType
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  isExternal: false
+  name: VisitQuery(Query)
+  nameWithType: Visitor.VisitQuery(Query)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: false
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: EntitySourceIncludeConditional.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceIncludeConditional.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

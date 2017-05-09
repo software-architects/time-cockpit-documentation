@@ -1,0 +1,950 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Query
+  id: Query
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL
+  - TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: Query
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  type: Class
+  source:
+    id: Query
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 24
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nrepresents a query:\ne.g.: In\n<pre><code>From X In SomeTable Where X.BeginTime &gt; #2012-10-10 12:00:00# Select X With VersionInfoOnly</code></pre>\nAlias will map to \"X\",\nSource will map to \"SomeTable\",\nWhere will map to \"X.BeginTime &gt; #2012-10-10 12:00:00#\",\nSelect will map to \"X\",\nQueryOptions will have VersionInfoOnly set to true.\n"
+  example: []
+  syntax:
+    content: 'public class Query : Expression'
+    content.vb: >-
+      Public Class Query
+          Inherits Expression
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.QueryLanguage.Syntax.Node
+  - TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  id: '#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Query(String, QuerySource, Expression, OrderBy, Select, QueryOptions)
+  nameWithType: Query.Query(String, QuerySource, Expression, OrderBy, Select, QueryOptions)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Query(System.String, TimeCockpit.Data.QueryLanguage.Syntax.QuerySource, TimeCockpit.Data.QueryLanguage.Syntax.Expression, TimeCockpit.Data.QueryLanguage.Syntax.OrderBy, TimeCockpit.Data.QueryLanguage.Syntax.Select, TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 35
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nInitializes a new instance of the Query class.\n"
+  example: []
+  syntax:
+    content: public Query(string alias, QuerySource source, Expression whereCondition, OrderBy orderBy, Select select, QueryOptions queryOptions)
+    parameters:
+    - id: alias
+      type: System.String
+      description: The alias of the item.
+    - id: source
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+      description: The source to select from.
+    - id: whereCondition
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+      description: The where condition.
+    - id: orderBy
+      type: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+      description: The order by clause.
+    - id: select
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Select
+      description: The select clause.
+    - id: queryOptions
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+      description: The query options.
+    content.vb: Public Sub New(alias As String, source As QuerySource, whereCondition As Expression, orderBy As OrderBy, select As  Select, queryOptions As QueryOptions)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  id: '#ctor(System.String,TimeCockpit.Data.QueryLanguage.Syntax.QuerySource,TimeCockpit.Data.QueryLanguage.Syntax.Expression,TimeCockpit.Data.QueryLanguage.Syntax.OrderBy,TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake,TimeCockpit.Data.QueryLanguage.Syntax.Select,TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Query(String, QuerySource, Expression, OrderBy, SkipAndTake, Select, QueryOptions)
+  nameWithType: Query.Query(String, QuerySource, Expression, OrderBy, SkipAndTake, Select, QueryOptions)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Query(System.String, TimeCockpit.Data.QueryLanguage.Syntax.QuerySource, TimeCockpit.Data.QueryLanguage.Syntax.Expression, TimeCockpit.Data.QueryLanguage.Syntax.OrderBy, TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake, TimeCockpit.Data.QueryLanguage.Syntax.Select, TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 65
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nInitializes a new instance of the Query class.\n"
+  example: []
+  syntax:
+    content: public Query(string alias, QuerySource source, Expression whereCondition, OrderBy orderBy, SkipAndTake skipAndTake, Select select, QueryOptions queryOptions)
+    parameters:
+    - id: alias
+      type: System.String
+      description: The alias of the item.
+    - id: source
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+      description: The source to select from.
+    - id: whereCondition
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+      description: The where condition.
+    - id: orderBy
+      type: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+      description: The order by clause.
+    - id: skipAndTake
+      type: TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake
+      description: The skip and take clause.
+    - id: select
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Select
+      description: The select clause.
+    - id: queryOptions
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+      description: The query options.
+    content.vb: Public Sub New(alias As String, source As QuerySource, whereCondition As Expression, orderBy As OrderBy, skipAndTake As SkipAndTake, select As  Select, queryOptions As QueryOptions)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+  id: Alias
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Alias
+  nameWithType: Query.Alias
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+  type: Property
+  source:
+    id: Alias
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 89
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the alias of the query.\n"
+  example: []
+  syntax:
+    content: public string Alias { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Alias As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+  id: Source
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: Query.Source
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+  type: Property
+  source:
+    id: Source
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 98
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the query source.\n"
+  example: []
+  syntax:
+    content: public QuerySource Source { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+    content.vb: Public ReadOnly Property Source As QuerySource
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.Source*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+  id: WhereCondition
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: WhereCondition
+  nameWithType: Query.WhereCondition
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+  type: Property
+  source:
+    id: WhereCondition
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 107
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the where condition.\n"
+  example: []
+  syntax:
+    content: public Expression WhereCondition { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    content.vb: Public ReadOnly Property WhereCondition As Expression
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+  id: OrderBy
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: OrderBy
+  nameWithType: Query.OrderBy
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+  type: Property
+  source:
+    id: OrderBy
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 116
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the order by clause.\n"
+  example: []
+  syntax:
+    content: public OrderBy OrderBy { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+    content.vb: Public ReadOnly Property OrderBy As OrderBy
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+  id: SkipAndTake
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: SkipAndTake
+  nameWithType: Query.SkipAndTake
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+  type: Property
+  source:
+    id: SkipAndTake
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 125
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the skip and take clause.\n"
+  example: []
+  syntax:
+    content: public SkipAndTake SkipAndTake { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake
+    content.vb: Public ReadOnly Property SkipAndTake As SkipAndTake
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+  id: Select
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Select
+  nameWithType: Query.Select
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+  type: Property
+  source:
+    id: Select
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 134
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the select statement.\n"
+  example: []
+  syntax:
+    content: public Select Select { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Select
+    content.vb: 'Public ReadOnly Property Select As '
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.Select*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+  id: QueryOptions
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: QueryOptions
+  nameWithType: Query.QueryOptions
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+  type: Property
+  source:
+    id: QueryOptions
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 143
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the query options.\n"
+  example: []
+  syntax:
+    content: public QueryOptions QueryOptions { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+    content.vb: Public ReadOnly Property QueryOptions As QueryOptions
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: Query.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 154
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
+  example: []
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: the visitor to dispatch to.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL
+  id: ToTCQL
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  langs:
+  - csharp
+  - vb
+  name: ToTCQL()
+  nameWithType: Query.ToTCQL()
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL()
+  type: Method
+  source:
+    id: ToTCQL
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\Syntax\Query.cs
+    startLine: 163
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nConverts the query to TCQL text.\n"
+  example: []
+  syntax:
+    content: public string ToTCQL()
+    return:
+      type: System.String
+      description: Returns the TCQL textual represenation of the query.
+    content.vb: Public Function ToTCQL As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.QueryLanguage.Syntax
+  commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage.Syntax
+  nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Node
+  nameWithType: Node
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Expression
+  nameWithType: Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.#ctor
+  isExternal: false
+  name: Query
+  nameWithType: Query.Query
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Query
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: QuerySource
+  nameWithType: QuerySource
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: OrderBy
+  nameWithType: OrderBy
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Select
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Select
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Select
+  nameWithType: Select
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Select
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: QueryOptions
+  nameWithType: QueryOptions
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.QueryOptions
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: SkipAndTake
+  nameWithType: SkipAndTake
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SkipAndTake
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+  isExternal: false
+  name: Alias
+  nameWithType: Query.Alias
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Alias
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Source*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+  isExternal: false
+  name: Source
+  nameWithType: Query.Source
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Source
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+  isExternal: false
+  name: WhereCondition
+  nameWithType: Query.WhereCondition
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.WhereCondition
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+  isExternal: false
+  name: OrderBy
+  nameWithType: Query.OrderBy
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.OrderBy
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+  isExternal: false
+  name: SkipAndTake
+  nameWithType: Query.SkipAndTake
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.SkipAndTake
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Select*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+  isExternal: false
+  name: Select
+  nameWithType: Query.Select
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Select
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+  isExternal: false
+  name: QueryOptions
+  nameWithType: Query.QueryOptions
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.QueryOptions
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  isExternal: false
+  name: VisitQuery(Query)
+  nameWithType: Visitor.VisitQuery(Query)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
+    name: VisitQuery
+    nameWithType: Visitor.VisitQuery
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
+    name: Query
+    nameWithType: Query
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: false
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: Query.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: false
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL
+  isExternal: false
+  name: ToTCQL
+  nameWithType: Query.ToTCQL
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query.ToTCQL

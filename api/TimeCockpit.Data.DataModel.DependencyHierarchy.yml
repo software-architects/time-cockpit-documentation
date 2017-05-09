@@ -1,0 +1,895 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy
+  commentId: T:TimeCockpit.Data.DataModel.DependencyHierarchy
+  id: DependencyHierarchy
+  parent: TimeCockpit.Data.DataModel
+  children:
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+  - TimeCockpit.Data.DataModel.DependencyHierarchy.ToString
+  langs:
+  - csharp
+  - vb
+  name: DependencyHierarchy
+  nameWithType: DependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy
+  type: Class
+  source:
+    id: DependencyHierarchy
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 14
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nRepresents a dependency hierarchy\n"
+  example: []
+  syntax:
+    content: public class DependencyHierarchy
+    content.vb: Public Class DependencyHierarchy
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: DependencyHierarchy()
+  nameWithType: DependencyHierarchy.DependencyHierarchy()
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.DependencyHierarchy()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 19
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.DataModel.DependencyHierarchy\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DependencyHierarchy()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+  commentId: P:TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+  id: SourceModelEntity
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: SourceModelEntity
+  nameWithType: DependencyHierarchy.SourceModelEntity
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+  type: Property
+  source:
+    id: SourceModelEntity
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 30
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the source model entity.\n"
+  example: []
+  syntax:
+    content: public ModelEntityBase SourceModelEntity { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: "\nThe source model entity.\n"
+    content.vb: Public Property SourceModelEntity As ModelEntityBase
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+  commentId: P:TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+  id: TargetModelEntity
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: TargetModelEntity
+  nameWithType: DependencyHierarchy.TargetModelEntity
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+  type: Property
+  source:
+    id: TargetModelEntity
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 38
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the base entity.\n"
+  remarks: "\nThe base entity is the entity on which all other entities depend.\n"
+  example: []
+  syntax:
+    content: public ModelEntityBase TargetModelEntity { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    content.vb: Public Property TargetModelEntity As ModelEntityBase
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+  commentId: P:TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+  id: DependentModelEntities
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: DependentModelEntities
+  nameWithType: DependencyHierarchy.DependentModelEntities
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+  type: Property
+  source:
+    id: DependentModelEntities
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 43
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the dependent model entities.\n"
+  example: []
+  syntax:
+    content: public Stack<KeyValuePair<Relation, Dependency>> DependentModelEntities { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Stack{System.Collections.Generic.KeyValuePair{TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.DataModel.Dependency}}
+    content.vb: Public Property DependentModelEntities As Stack(Of KeyValuePair(Of Relation, Dependency))
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+  commentId: P:TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+  id: RelationDependencyHierarchy
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: RelationDependencyHierarchy
+  nameWithType: DependencyHierarchy.RelationDependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+  type: Property
+  source:
+    id: RelationDependencyHierarchy
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 51
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the relation dependency hierarchy.\n"
+  example: []
+  syntax:
+    content: public DependencyHierarchy RelationDependencyHierarchy { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.DependencyHierarchy
+      description: "\nThe relation dependency hierarchy.\n"
+    content.vb: Public Property RelationDependencyHierarchy As DependencyHierarchy
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  commentId: P:TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  id: IsRelationDependencyHierarchyLeaf
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: IsRelationDependencyHierarchyLeaf
+  nameWithType: DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  type: Property
+  source:
+    id: IsRelationDependencyHierarchyLeaf
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 56
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether this instance is relation dependency hierarchy leaf.\n"
+  example: []
+  syntax:
+    content: public bool IsRelationDependencyHierarchyLeaf { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRelationDependencyHierarchyLeaf As Boolean
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy
+  commentId: M:TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy
+  id: FlattenDependencyHierarchy
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: FlattenDependencyHierarchy()
+  nameWithType: DependencyHierarchy.FlattenDependencyHierarchy()
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy()
+  type: Method
+  source:
+    id: FlattenDependencyHierarchy
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 70
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nFlattens the dependency hierarchy.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Dependency> FlattenDependencyHierarchy()
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.Dependency}
+      description: "\nA list of <xref href=\"TimeCockpit.Data.DataModel.Dependency\" data-throw-if-not-resolved=\"false\"></xref> instances ordered descending by their hierarchy level.\n"
+    content.vb: Public Function FlattenDependencyHierarchy As IEnumerable(Of Dependency)
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.ToString
+  commentId: M:TimeCockpit.Data.DataModel.DependencyHierarchy.ToString
+  id: ToString
+  parent: TimeCockpit.Data.DataModel.DependencyHierarchy
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DependencyHierarchy.ToString()
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\DependencyHierarchy.cs
+    startLine: 89
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nReturns a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> that represents this instance.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: "\nA <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> that represents this instance.\n"
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TimeCockpit.Data.DataModel.DependencyHierarchy.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy
+  commentId: T:TimeCockpit.Data.DataModel.DependencyHierarchy
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: DependencyHierarchy
+  nameWithType: DependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.#ctor
+  isExternal: false
+  name: DependencyHierarchy
+  nameWithType: DependencyHierarchy.DependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.DependencyHierarchy
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+  isExternal: false
+  name: SourceModelEntity
+  nameWithType: DependencyHierarchy.SourceModelEntity
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.SourceModelEntity
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+  isExternal: false
+  name: TargetModelEntity
+  nameWithType: DependencyHierarchy.TargetModelEntity
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.TargetModelEntity
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+  isExternal: false
+  name: DependentModelEntities
+  nameWithType: DependencyHierarchy.DependentModelEntities
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.DependentModelEntities
+- uid: System.Collections.Generic.Stack{System.Collections.Generic.KeyValuePair{TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.DataModel.Dependency}}
+  commentId: T:System.Collections.Generic.Stack{System.Collections.Generic.KeyValuePair{TimeCockpit.Data.DataModel.Relation,TimeCockpit.Data.DataModel.Dependency}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Stack`1
+  name: Stack<KeyValuePair<Relation, Dependency>>
+  nameWithType: Stack<KeyValuePair<Relation, Dependency>>
+  fullName: System.Collections.Generic.Stack<System.Collections.Generic.KeyValuePair<TimeCockpit.Data.DataModel.Relation, TimeCockpit.Data.DataModel.Dependency>>
+  nameWithType.vb: Stack(Of KeyValuePair(Of Relation, Dependency))
+  fullName.vb: System.Collections.Generic.Stack(Of System.Collections.Generic.KeyValuePair(Of TimeCockpit.Data.DataModel.Relation, TimeCockpit.Data.DataModel.Dependency))
+  name.vb: Stack(Of KeyValuePair(Of Relation, Dependency))
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.Relation
+    name: Relation
+    nameWithType: Relation
+    fullName: TimeCockpit.Data.DataModel.Relation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.DataModel.Dependency
+    name: Dependency
+    nameWithType: Dependency
+    fullName: TimeCockpit.Data.DataModel.Dependency
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.Relation
+    name: Relation
+    nameWithType: Relation
+    fullName: TimeCockpit.Data.DataModel.Relation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.DataModel.Dependency
+    name: Dependency
+    nameWithType: Dependency
+    fullName: TimeCockpit.Data.DataModel.Dependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+  isExternal: false
+  name: RelationDependencyHierarchy
+  nameWithType: DependencyHierarchy.RelationDependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.RelationDependencyHierarchy
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  isExternal: false
+  name: IsRelationDependencyHierarchyLeaf
+  nameWithType: DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.IsRelationDependencyHierarchyLeaf
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.DataModel.Dependency
+  commentId: T:TimeCockpit.Data.DataModel.Dependency
+  isExternal: false
+  name: Dependency
+  nameWithType: Dependency
+  fullName: TimeCockpit.Data.DataModel.Dependency
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy
+  isExternal: false
+  name: FlattenDependencyHierarchy
+  nameWithType: DependencyHierarchy.FlattenDependencyHierarchy
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.FlattenDependencyHierarchy
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.Dependency}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.Dependency}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Dependency>
+  nameWithType: IEnumerable<Dependency>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.Dependency>
+  nameWithType.vb: IEnumerable(Of Dependency)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.DataModel.Dependency)
+  name.vb: IEnumerable(Of Dependency)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.Dependency
+    name: Dependency
+    nameWithType: Dependency
+    fullName: TimeCockpit.Data.DataModel.Dependency
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.Dependency
+    name: Dependency
+    nameWithType: Dependency
+    fullName: TimeCockpit.Data.DataModel.Dependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.DependencyHierarchy.ToString*
+  commentId: Overload:TimeCockpit.Data.DataModel.DependencyHierarchy.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: DependencyHierarchy.ToString
+  fullName: TimeCockpit.Data.DataModel.DependencyHierarchy.ToString

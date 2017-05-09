@@ -1,0 +1,813 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.PreviewColumn
+  commentId: T:TimeCockpit.Data.Import.PreviewColumn
+  id: PreviewColumn
+  parent: TimeCockpit.Data.Import
+  children:
+  - TimeCockpit.Data.Import.PreviewColumn.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Type)
+  - TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+  - TimeCockpit.Data.Import.PreviewColumn.Description
+  - TimeCockpit.Data.Import.PreviewColumn.Name
+  - TimeCockpit.Data.Import.PreviewColumn.Read(Newtonsoft.Json.Linq.JObject)
+  - TimeCockpit.Data.Import.PreviewColumn.SampleValues
+  - TimeCockpit.Data.Import.PreviewColumn.TypeHint
+  - TimeCockpit.Data.Import.PreviewColumn.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewColumn)
+  langs:
+  - csharp
+  - vb
+  name: PreviewColumn
+  nameWithType: PreviewColumn
+  fullName: TimeCockpit.Data.Import.PreviewColumn
+  type: Class
+  source:
+    id: PreviewColumn
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 18
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nclass representing a column in the data preview.\n"
+  example: []
+  syntax:
+    content: public class PreviewColumn
+    content.vb: Public Class PreviewColumn
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Import.PreviewColumn.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Type)
+  commentId: M:TimeCockpit.Data.Import.PreviewColumn.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Type)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.Type)'
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: PreviewColumn(String, IEnumerable<String>, Type)
+  nameWithType: PreviewColumn.PreviewColumn(String, IEnumerable<String>, Type)
+  fullName: TimeCockpit.Data.Import.PreviewColumn.PreviewColumn(System.String, System.Collections.Generic.IEnumerable<System.String>, System.Type)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 26
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nInitializes a new instance of the PreviewColumn class.\n"
+  example: []
+  syntax:
+    content: public PreviewColumn(string name, IEnumerable<string> sampleValues, Type typeHint)
+    parameters:
+    - id: name
+      type: System.String
+      description: name of the column.
+    - id: sampleValues
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: sample values for the column.
+    - id: typeHint
+      type: System.Type
+      description: the type, may be null.
+    content.vb: Public Sub New(name As String, sampleValues As IEnumerable(Of String), typeHint As Type)
+  overload: TimeCockpit.Data.Import.PreviewColumn.#ctor*
+  nameWithType.vb: PreviewColumn.PreviewColumn(String, IEnumerable(Of String), Type)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Import.PreviewColumn.PreviewColumn(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.Type)
+  name.vb: PreviewColumn(String, IEnumerable(Of String), Type)
+- uid: TimeCockpit.Data.Import.PreviewColumn.Name
+  commentId: P:TimeCockpit.Data.Import.PreviewColumn.Name
+  id: Name
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PreviewColumn.Name
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Name
+  type: Property
+  source:
+    id: Name
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 36
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the name of the column.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TimeCockpit.Data.Import.PreviewColumn.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewColumn.SampleValues
+  commentId: P:TimeCockpit.Data.Import.PreviewColumn.SampleValues
+  id: SampleValues
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: SampleValues
+  nameWithType: PreviewColumn.SampleValues
+  fullName: TimeCockpit.Data.Import.PreviewColumn.SampleValues
+  type: Property
+  source:
+    id: SampleValues
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 41
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the first few column values.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> SampleValues { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property SampleValues As IEnumerable(Of String)
+  overload: TimeCockpit.Data.Import.PreviewColumn.SampleValues*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewColumn.TypeHint
+  commentId: P:TimeCockpit.Data.Import.PreviewColumn.TypeHint
+  id: TypeHint
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: TypeHint
+  nameWithType: PreviewColumn.TypeHint
+  fullName: TimeCockpit.Data.Import.PreviewColumn.TypeHint
+  type: Property
+  source:
+    id: TypeHint
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 46
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets the type hint for this column. may be null.\n"
+  example: []
+  syntax:
+    content: public Type TypeHint { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property TypeHint As Type
+  overload: TimeCockpit.Data.Import.PreviewColumn.TypeHint*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewColumn.Description
+  commentId: P:TimeCockpit.Data.Import.PreviewColumn.Description
+  id: Description
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PreviewColumn.Description
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Description
+  type: Property
+  source:
+    id: Description
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 51
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets a description for the preview column.\n"
+  example: []
+  syntax:
+    content: public string Description { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Description As String
+  overload: TimeCockpit.Data.Import.PreviewColumn.Description*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+  commentId: P:TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+  id: AllSampleValues
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: AllSampleValues
+  nameWithType: PreviewColumn.AllSampleValues
+  fullName: TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+  type: Property
+  source:
+    id: AllSampleValues
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 67
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nGets a string representing all sample values.\n"
+  example: []
+  syntax:
+    content: public string AllSampleValues { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property AllSampleValues As String
+  overload: TimeCockpit.Data.Import.PreviewColumn.AllSampleValues*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.PreviewColumn.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewColumn)
+  commentId: M:TimeCockpit.Data.Import.PreviewColumn.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewColumn)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewColumn)
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, PreviewColumn)
+  nameWithType: PreviewColumn.Write(JsonWriter, PreviewColumn)
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewColumn)
+  type: Method
+  source:
+    id: Write
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 85
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nWrites the column to the json writer.\n"
+  example: []
+  syntax:
+    content: public static void Write(JsonWriter writer, PreviewColumn column)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+      description: the writer to write to.
+    - id: column
+      type: TimeCockpit.Data.Import.PreviewColumn
+      description: the column to write.
+    content.vb: Public Shared Sub Write(writer As JsonWriter, column As PreviewColumn)
+  overload: TimeCockpit.Data.Import.PreviewColumn.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.PreviewColumn.Read(Newtonsoft.Json.Linq.JObject)
+  commentId: M:TimeCockpit.Data.Import.PreviewColumn.Read(Newtonsoft.Json.Linq.JObject)
+  id: Read(Newtonsoft.Json.Linq.JObject)
+  parent: TimeCockpit.Data.Import.PreviewColumn
+  langs:
+  - csharp
+  - vb
+  name: Read(JObject)
+  nameWithType: PreviewColumn.Read(JObject)
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Read(Newtonsoft.Json.Linq.JObject)
+  type: Method
+  source:
+    id: Read
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\PreviewColumn.cs
+    startLine: 117
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\nReads a PreviewColumn from a JSON object.\n"
+  example: []
+  syntax:
+    content: public static PreviewColumn Read(JObject json)
+    parameters:
+    - id: json
+      type: Newtonsoft.Json.Linq.JObject
+      description: the <xref href="Newtonsoft.Json.Linq.JObject" data-throw-if-not-resolved="false"></xref> to read from.
+    return:
+      type: TimeCockpit.Data.Import.PreviewColumn
+      description: returns a new preview column.
+    content.vb: Public Shared Function Read(json As JObject) As PreviewColumn
+  overload: TimeCockpit.Data.Import.PreviewColumn.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Import.PreviewColumn.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.#ctor
+  isExternal: false
+  name: PreviewColumn
+  nameWithType: PreviewColumn.PreviewColumn
+  fullName: TimeCockpit.Data.Import.PreviewColumn.PreviewColumn
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Import.PreviewColumn.Name*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.Name
+  isExternal: false
+  name: Name
+  nameWithType: PreviewColumn.Name
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Name
+- uid: TimeCockpit.Data.Import.PreviewColumn.SampleValues*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.SampleValues
+  isExternal: false
+  name: SampleValues
+  nameWithType: PreviewColumn.SampleValues
+  fullName: TimeCockpit.Data.Import.PreviewColumn.SampleValues
+- uid: TimeCockpit.Data.Import.PreviewColumn.TypeHint*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.TypeHint
+  isExternal: false
+  name: TypeHint
+  nameWithType: PreviewColumn.TypeHint
+  fullName: TimeCockpit.Data.Import.PreviewColumn.TypeHint
+- uid: TimeCockpit.Data.Import.PreviewColumn.Description*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.Description
+  isExternal: false
+  name: Description
+  nameWithType: PreviewColumn.Description
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Description
+- uid: TimeCockpit.Data.Import.PreviewColumn.AllSampleValues*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+  isExternal: false
+  name: AllSampleValues
+  nameWithType: PreviewColumn.AllSampleValues
+  fullName: TimeCockpit.Data.Import.PreviewColumn.AllSampleValues
+- uid: TimeCockpit.Data.Import.PreviewColumn.Write*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.Write
+  isExternal: false
+  name: Write
+  nameWithType: PreviewColumn.Write
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Write
+- uid: Newtonsoft.Json.JsonWriter
+  commentId: T:Newtonsoft.Json.JsonWriter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: Newtonsoft.Json.JsonWriter
+- uid: TimeCockpit.Data.Import.PreviewColumn
+  commentId: T:TimeCockpit.Data.Import.PreviewColumn
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: PreviewColumn
+  nameWithType: PreviewColumn
+  fullName: TimeCockpit.Data.Import.PreviewColumn
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: false
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+- uid: Newtonsoft.Json.Linq.JObject
+  commentId: T:Newtonsoft.Json.Linq.JObject
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JObject
+  nameWithType: JObject
+  fullName: Newtonsoft.Json.Linq.JObject
+- uid: TimeCockpit.Data.Import.PreviewColumn.Read*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewColumn.Read
+  isExternal: false
+  name: Read
+  nameWithType: PreviewColumn.Read
+  fullName: TimeCockpit.Data.Import.PreviewColumn.Read
+- uid: Newtonsoft.Json.Linq
+  commentId: N:Newtonsoft.Json.Linq
+  isExternal: false
+  name: Newtonsoft.Json.Linq
+  nameWithType: Newtonsoft.Json.Linq
+  fullName: Newtonsoft.Json.Linq

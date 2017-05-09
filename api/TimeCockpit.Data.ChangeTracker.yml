@@ -1,0 +1,1365 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.ChangeTracker
+  commentId: T:TimeCockpit.Data.ChangeTracker
+  id: ChangeTracker
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.ChangeTracker.#ctor
+  - TimeCockpit.Data.ChangeTracker.Add(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  - TimeCockpit.Data.ChangeTracker.Add(TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.ChangeTracker.BeginScope
+  - TimeCockpit.Data.ChangeTracker.CanEndScope
+  - TimeCockpit.Data.ChangeTracker.CanEndScopeChanged
+  - TimeCockpit.Data.ChangeTracker.CanRedo
+  - TimeCockpit.Data.ChangeTracker.CanRedoChanged
+  - TimeCockpit.Data.ChangeTracker.CanUndo
+  - TimeCockpit.Data.ChangeTracker.CanUndoChanged
+  - TimeCockpit.Data.ChangeTracker.Clear
+  - TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks
+  - TimeCockpit.Data.ChangeTracker.EndScope
+  - TimeCockpit.Data.ChangeTracker.HasChanges
+  - TimeCockpit.Data.ChangeTracker.Redo
+  - TimeCockpit.Data.ChangeTracker.RedoStack
+  - TimeCockpit.Data.ChangeTracker.Remove(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  - TimeCockpit.Data.ChangeTracker.Remove(TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.ChangeTracker.TrackedObjects
+  - TimeCockpit.Data.ChangeTracker.Undo
+  - TimeCockpit.Data.ChangeTracker.UndoStack
+  - TimeCockpit.Data.ChangeTracker.UpdateAllCanStates
+  langs:
+  - csharp
+  - vb
+  name: ChangeTracker
+  nameWithType: ChangeTracker
+  fullName: TimeCockpit.Data.ChangeTracker
+  type: Class
+  source:
+    id: ChangeTracker
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 21
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRepresents a class that keeps track of changes. One can add/remove either\na single instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> or a collection of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s.\nand can perform a save operation on the tracked instances. An instance of <xref href=\"TimeCockpit.Data.ChangeTracker\" data-throw-if-not-resolved=\"false\"></xref>\nshould organize various instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s (perhaps if different <xref href=\"TimeCockpit.Data.DataModel.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref> types)\ninto a logical structure that can be stored within a transaction\n"
+  example: []
+  syntax:
+    content: public class ChangeTracker
+    content.vb: Public Class ChangeTracker
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.ChangeTracker.#ctor
+  commentId: M:TimeCockpit.Data.ChangeTracker.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: ChangeTracker()
+  nameWithType: ChangeTracker.ChangeTracker()
+  fullName: TimeCockpit.Data.ChangeTracker.ChangeTracker()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 61
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.ChangeTracker\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ChangeTracker()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.ChangeTracker.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.CanUndoChanged
+  commentId: E:TimeCockpit.Data.ChangeTracker.CanUndoChanged
+  id: CanUndoChanged
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanUndoChanged
+  nameWithType: ChangeTracker.CanUndoChanged
+  fullName: TimeCockpit.Data.ChangeTracker.CanUndoChanged
+  type: Event
+  source:
+    id: CanUndoChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 75
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nEvent triggered when the CanUndo property changed.\n"
+  example: []
+  syntax:
+    content: public event EventHandler CanUndoChanged
+    return:
+      type: System.EventHandler
+    content.vb: Public Event CanUndoChanged As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.CanRedoChanged
+  commentId: E:TimeCockpit.Data.ChangeTracker.CanRedoChanged
+  id: CanRedoChanged
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanRedoChanged
+  nameWithType: ChangeTracker.CanRedoChanged
+  fullName: TimeCockpit.Data.ChangeTracker.CanRedoChanged
+  type: Event
+  source:
+    id: CanRedoChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 80
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nEvent triggered when the CanRedo property changed.\n"
+  example: []
+  syntax:
+    content: public event EventHandler CanRedoChanged
+    return:
+      type: System.EventHandler
+    content.vb: Public Event CanRedoChanged As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.CanEndScopeChanged
+  commentId: E:TimeCockpit.Data.ChangeTracker.CanEndScopeChanged
+  id: CanEndScopeChanged
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanEndScopeChanged
+  nameWithType: ChangeTracker.CanEndScopeChanged
+  fullName: TimeCockpit.Data.ChangeTracker.CanEndScopeChanged
+  type: Event
+  source:
+    id: CanEndScopeChanged
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 85
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nEvent triggered when the CanEndScope property changed.\n"
+  example: []
+  syntax:
+    content: public event EventHandler CanEndScopeChanged
+    return:
+      type: System.EventHandler
+    content.vb: Public Event CanEndScopeChanged As EventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.TrackedObjects
+  commentId: P:TimeCockpit.Data.ChangeTracker.TrackedObjects
+  id: TrackedObjects
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: TrackedObjects
+  nameWithType: ChangeTracker.TrackedObjects
+  fullName: TimeCockpit.Data.ChangeTracker.TrackedObjects
+  type: Property
+  source:
+    id: TrackedObjects
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 91
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the tracked objects of type <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<EntityObject> TrackedObjects { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+      description: The tracked objects.
+    content.vb: Public ReadOnly Property TrackedObjects As IEnumerable(Of EntityObject)
+  overload: TimeCockpit.Data.ChangeTracker.TrackedObjects*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.UndoStack
+  commentId: P:TimeCockpit.Data.ChangeTracker.UndoStack
+  id: UndoStack
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: UndoStack
+  nameWithType: ChangeTracker.UndoStack
+  fullName: TimeCockpit.Data.ChangeTracker.UndoStack
+  type: Property
+  source:
+    id: UndoStack
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 102
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the stack of operations that can be undone.\n"
+  example: []
+  syntax:
+    content: public Stack<Operation> UndoStack { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Stack{TimeCockpit.Data.UndoRedo.Operation}
+    content.vb: Public ReadOnly Property UndoStack As Stack(Of Operation)
+  overload: TimeCockpit.Data.ChangeTracker.UndoStack*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.RedoStack
+  commentId: P:TimeCockpit.Data.ChangeTracker.RedoStack
+  id: RedoStack
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: RedoStack
+  nameWithType: ChangeTracker.RedoStack
+  fullName: TimeCockpit.Data.ChangeTracker.RedoStack
+  type: Property
+  source:
+    id: RedoStack
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 111
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the stack of operations that can be redone / applied\n"
+  example: []
+  syntax:
+    content: public Stack<Operation> RedoStack { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Stack{TimeCockpit.Data.UndoRedo.Operation}
+    content.vb: Public ReadOnly Property RedoStack As Stack(Of Operation)
+  overload: TimeCockpit.Data.ChangeTracker.RedoStack*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.CanUndo
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanUndo
+  id: CanUndo
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanUndo
+  nameWithType: ChangeTracker.CanUndo
+  fullName: TimeCockpit.Data.ChangeTracker.CanUndo
+  type: Property
+  source:
+    id: CanUndo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 120
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether calling Undo will have an effect.\n"
+  example: []
+  syntax:
+    content: public bool CanUndo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanUndo As Boolean
+  overload: TimeCockpit.Data.ChangeTracker.CanUndo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.CanRedo
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanRedo
+  id: CanRedo
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanRedo
+  nameWithType: ChangeTracker.CanRedo
+  fullName: TimeCockpit.Data.ChangeTracker.CanRedo
+  type: Property
+  source:
+    id: CanRedo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 140
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether calling Redo will have an effect.\n"
+  example: []
+  syntax:
+    content: public bool CanRedo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanRedo As Boolean
+  overload: TimeCockpit.Data.ChangeTracker.CanRedo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.CanEndScope
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanEndScope
+  id: CanEndScope
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: CanEndScope
+  nameWithType: ChangeTracker.CanEndScope
+  fullName: TimeCockpit.Data.ChangeTracker.CanEndScope
+  type: Property
+  source:
+    id: CanEndScope
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 160
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether EndScope can be called safely.\n"
+  example: []
+  syntax:
+    content: public bool CanEndScope { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanEndScope As Boolean
+  overload: TimeCockpit.Data.ChangeTracker.CanEndScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks
+  commentId: M:TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks
+  id: ClearUndoRedoStacks
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: ClearUndoRedoStacks()
+  nameWithType: ChangeTracker.ClearUndoRedoStacks()
+  fullName: TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks()
+  type: Method
+  source:
+    id: ClearUndoRedoStacks
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 184
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nclears the undo / redo history.\n"
+  example: []
+  syntax:
+    content: public void ClearUndoRedoStacks()
+    content.vb: Public Sub ClearUndoRedoStacks
+  overload: TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.Add(TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.ChangeTracker.Add(TimeCockpit.Data.EntityObject)
+  id: Add(TimeCockpit.Data.EntityObject)
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Add(EntityObject)
+  nameWithType: ChangeTracker.Add(EntityObject)
+  fullName: TimeCockpit.Data.ChangeTracker.Add(TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: Add
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 196
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nAdds the specified <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> to the collection of tracked <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
+  example: []
+  syntax:
+    content: public void Add(EntityObject entityObject)
+    parameters:
+    - id: entityObject
+      type: TimeCockpit.Data.EntityObject
+      description: The <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref> to track.
+    content.vb: Public Sub Add(entityObject As EntityObject)
+  overload: TimeCockpit.Data.ChangeTracker.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: An element with the same key already exists in the collection.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.Add(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  commentId: M:TimeCockpit.Data.ChangeTracker.Add(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  id: Add(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Add(IEnumerable<EntityObject>)
+  nameWithType: ChangeTracker.Add(IEnumerable<EntityObject>)
+  fullName: TimeCockpit.Data.ChangeTracker.Add(System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>)
+  type: Method
+  source:
+    id: Add
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 225
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nAdds the specified entity objects.\n"
+  example: []
+  syntax:
+    content: public void Add(IEnumerable<EntityObject> entityObjects)
+    parameters:
+    - id: entityObjects
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+      description: The entity objects.
+    content.vb: Public Sub Add(entityObjects As IEnumerable(Of EntityObject))
+  overload: TimeCockpit.Data.ChangeTracker.Add*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: An element with the same key already exists in the dictionary.
+  nameWithType.vb: ChangeTracker.Add(IEnumerable(Of EntityObject))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.ChangeTracker.Add(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject))
+  name.vb: Add(IEnumerable(Of EntityObject))
+- uid: TimeCockpit.Data.ChangeTracker.Remove(TimeCockpit.Data.EntityObject)
+  commentId: M:TimeCockpit.Data.ChangeTracker.Remove(TimeCockpit.Data.EntityObject)
+  id: Remove(TimeCockpit.Data.EntityObject)
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Remove(EntityObject)
+  nameWithType: ChangeTracker.Remove(EntityObject)
+  fullName: TimeCockpit.Data.ChangeTracker.Remove(TimeCockpit.Data.EntityObject)
+  type: Method
+  source:
+    id: Remove
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 254
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRemoves the specified <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> from the collection of tracked <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
+  example: []
+  syntax:
+    content: public void Remove(EntityObject entityObject)
+    parameters:
+    - id: entityObject
+      type: TimeCockpit.Data.EntityObject
+      description: The <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref> to remove from the collection.
+    content.vb: Public Sub Remove(entityObject As EntityObject)
+  overload: TimeCockpit.Data.ChangeTracker.Remove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.Remove(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  commentId: M:TimeCockpit.Data.ChangeTracker.Remove(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  id: Remove(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Remove(IEnumerable<EntityObject>)
+  nameWithType: ChangeTracker.Remove(IEnumerable<EntityObject>)
+  fullName: TimeCockpit.Data.ChangeTracker.Remove(System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>)
+  type: Method
+  source:
+    id: Remove
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 264
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nRemoves the specified instances of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s from the collection.\n"
+  example: []
+  syntax:
+    content: public void Remove(IEnumerable<EntityObject> entityObjects)
+    parameters:
+    - id: entityObjects
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+      description: The <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref>s to remove from the collection.
+    content.vb: Public Sub Remove(entityObjects As IEnumerable(Of EntityObject))
+  overload: TimeCockpit.Data.ChangeTracker.Remove*
+  nameWithType.vb: ChangeTracker.Remove(IEnumerable(Of EntityObject))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.ChangeTracker.Remove(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject))
+  name.vb: Remove(IEnumerable(Of EntityObject))
+- uid: TimeCockpit.Data.ChangeTracker.Clear
+  commentId: M:TimeCockpit.Data.ChangeTracker.Clear
+  id: Clear
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: ChangeTracker.Clear()
+  fullName: TimeCockpit.Data.ChangeTracker.Clear()
+  type: Method
+  source:
+    id: Clear
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 276
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nClears all the instances of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that have been tracked by this instance.\n"
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear
+  overload: TimeCockpit.Data.ChangeTracker.Clear*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.HasChanges
+  commentId: M:TimeCockpit.Data.ChangeTracker.HasChanges
+  id: HasChanges
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: HasChanges()
+  nameWithType: ChangeTracker.HasChanges()
+  fullName: TimeCockpit.Data.ChangeTracker.HasChanges()
+  type: Method
+  source:
+    id: HasChanges
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 296
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nDetermines whether any of the tracked objects has changes.\n"
+  example: []
+  syntax:
+    content: public bool HasChanges()
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if any of the tracked objects has changes; otherwise, <code>false</code>.\n"
+    content.vb: Public Function HasChanges As Boolean
+  overload: TimeCockpit.Data.ChangeTracker.HasChanges*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.Undo
+  commentId: M:TimeCockpit.Data.ChangeTracker.Undo
+  id: Undo
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Undo()
+  nameWithType: ChangeTracker.Undo()
+  fullName: TimeCockpit.Data.ChangeTracker.Undo()
+  type: Method
+  source:
+    id: Undo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 312
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nIf there is an operation that can be undone\nremoves the operation from the undo stack\nadds the operation to the redo stack\nundos the operation\n"
+  example: []
+  syntax:
+    content: public void Undo()
+    content.vb: Public Sub Undo
+  overload: TimeCockpit.Data.ChangeTracker.Undo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.Redo
+  commentId: M:TimeCockpit.Data.ChangeTracker.Redo
+  id: Redo
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: Redo()
+  nameWithType: ChangeTracker.Redo()
+  fullName: TimeCockpit.Data.ChangeTracker.Redo()
+  type: Method
+  source:
+    id: Redo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 332
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nif there is an operation that can be redone\nremoves the operation from the redo stack\nadds the operation to the undo stack.\nredoes the operation\n"
+  example: []
+  syntax:
+    content: public void Redo()
+    content.vb: Public Sub Redo
+  overload: TimeCockpit.Data.ChangeTracker.Redo*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.BeginScope
+  commentId: M:TimeCockpit.Data.ChangeTracker.BeginScope
+  id: BeginScope
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: BeginScope()
+  nameWithType: ChangeTracker.BeginScope()
+  fullName: TimeCockpit.Data.ChangeTracker.BeginScope()
+  type: Method
+  source:
+    id: BeginScope
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 349
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nadds a begin scope operation.\n"
+  example: []
+  syntax:
+    content: public void BeginScope()
+    content.vb: Public Sub BeginScope
+  overload: TimeCockpit.Data.ChangeTracker.BeginScope*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.EndScope
+  commentId: M:TimeCockpit.Data.ChangeTracker.EndScope
+  id: EndScope
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: EndScope()
+  nameWithType: ChangeTracker.EndScope()
+  fullName: TimeCockpit.Data.ChangeTracker.EndScope()
+  type: Method
+  source:
+    id: EndScope
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 359
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nadds an EndScope operation.\n"
+  example: []
+  syntax:
+    content: public void EndScope()
+    content.vb: Public Sub
+  overload: TimeCockpit.Data.ChangeTracker.EndScope*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.ChangeTracker.UpdateAllCanStates
+  commentId: M:TimeCockpit.Data.ChangeTracker.UpdateAllCanStates
+  id: UpdateAllCanStates
+  parent: TimeCockpit.Data.ChangeTracker
+  langs:
+  - csharp
+  - vb
+  name: UpdateAllCanStates()
+  nameWithType: ChangeTracker.UpdateAllCanStates()
+  fullName: TimeCockpit.Data.ChangeTracker.UpdateAllCanStates()
+  type: Method
+  source:
+    id: UpdateAllCanStates
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\ChangeTracker.cs
+    startLine: 385
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nUpdates all state properties, <xref href=\"TimeCockpit.Data.ChangeTracker.CanUndo\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"TimeCockpit.Data.ChangeTracker.CanRedo\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.ChangeTracker.CanEndScope\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public void UpdateAllCanStates()
+    content.vb: Public Sub UpdateAllCanStates
+  overload: TimeCockpit.Data.ChangeTracker.UpdateAllCanStates*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data.ChangeTracker
+  commentId: T:TimeCockpit.Data.ChangeTracker
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: ChangeTracker
+  nameWithType: ChangeTracker
+  fullName: TimeCockpit.Data.ChangeTracker
+- uid: TimeCockpit.Data.DataModel.ModelEntity
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntity
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntity
+  nameWithType: ModelEntity
+  fullName: TimeCockpit.Data.DataModel.ModelEntity
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.ChangeTracker.#ctor*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.#ctor
+  isExternal: false
+  name: ChangeTracker
+  nameWithType: ChangeTracker.ChangeTracker
+  fullName: TimeCockpit.Data.ChangeTracker.ChangeTracker
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: TimeCockpit.Data.ChangeTracker.TrackedObjects*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.TrackedObjects
+  isExternal: false
+  name: TrackedObjects
+  nameWithType: ChangeTracker.TrackedObjects
+  fullName: TimeCockpit.Data.ChangeTracker.TrackedObjects
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<EntityObject>
+  nameWithType: IEnumerable<EntityObject>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>
+  nameWithType.vb: IEnumerable(Of EntityObject)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject)
+  name.vb: IEnumerable(Of EntityObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.EntityObject
+    name: EntityObject
+    nameWithType: EntityObject
+    fullName: TimeCockpit.Data.EntityObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.ChangeTracker.UndoStack*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.UndoStack
+  isExternal: false
+  name: UndoStack
+  nameWithType: ChangeTracker.UndoStack
+  fullName: TimeCockpit.Data.ChangeTracker.UndoStack
+- uid: System.Collections.Generic.Stack{TimeCockpit.Data.UndoRedo.Operation}
+  commentId: T:System.Collections.Generic.Stack{TimeCockpit.Data.UndoRedo.Operation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Stack`1
+  name: Stack<Operation>
+  nameWithType: Stack<Operation>
+  fullName: System.Collections.Generic.Stack<TimeCockpit.Data.UndoRedo.Operation>
+  nameWithType.vb: Stack(Of Operation)
+  fullName.vb: System.Collections.Generic.Stack(Of TimeCockpit.Data.UndoRedo.Operation)
+  name.vb: Stack(Of Operation)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.UndoRedo.Operation
+    name: Operation
+    nameWithType: Operation
+    fullName: TimeCockpit.Data.UndoRedo.Operation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.UndoRedo.Operation
+    name: Operation
+    nameWithType: Operation
+    fullName: TimeCockpit.Data.UndoRedo.Operation
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    nameWithType: Stack
+    fullName: System.Collections.Generic.Stack
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.ChangeTracker.RedoStack*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.RedoStack
+  isExternal: false
+  name: RedoStack
+  nameWithType: ChangeTracker.RedoStack
+  fullName: TimeCockpit.Data.ChangeTracker.RedoStack
+- uid: TimeCockpit.Data.ChangeTracker.CanUndo*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.CanUndo
+  isExternal: false
+  name: CanUndo
+  nameWithType: ChangeTracker.CanUndo
+  fullName: TimeCockpit.Data.ChangeTracker.CanUndo
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.ChangeTracker.CanRedo*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.CanRedo
+  isExternal: false
+  name: CanRedo
+  nameWithType: ChangeTracker.CanRedo
+  fullName: TimeCockpit.Data.ChangeTracker.CanRedo
+- uid: TimeCockpit.Data.ChangeTracker.CanEndScope*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.CanEndScope
+  isExternal: false
+  name: CanEndScope
+  nameWithType: ChangeTracker.CanEndScope
+  fullName: TimeCockpit.Data.ChangeTracker.CanEndScope
+- uid: TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks
+  isExternal: false
+  name: ClearUndoRedoStacks
+  nameWithType: ChangeTracker.ClearUndoRedoStacks
+  fullName: TimeCockpit.Data.ChangeTracker.ClearUndoRedoStacks
+- uid: TimeCockpit.Data.ChangeTracker.Add*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.Add
+  isExternal: false
+  name: Add
+  nameWithType: ChangeTracker.Add
+  fullName: TimeCockpit.Data.ChangeTracker.Add
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+- uid: TimeCockpit.Data.ChangeTracker.Remove*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.Remove
+  isExternal: false
+  name: Remove
+  nameWithType: ChangeTracker.Remove
+  fullName: TimeCockpit.Data.ChangeTracker.Remove
+- uid: TimeCockpit.Data.ChangeTracker.Clear*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.Clear
+  isExternal: false
+  name: Clear
+  nameWithType: ChangeTracker.Clear
+  fullName: TimeCockpit.Data.ChangeTracker.Clear
+- uid: TimeCockpit.Data.ChangeTracker.HasChanges*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.HasChanges
+  isExternal: false
+  name: HasChanges
+  nameWithType: ChangeTracker.HasChanges
+  fullName: TimeCockpit.Data.ChangeTracker.HasChanges
+- uid: TimeCockpit.Data.ChangeTracker.Undo*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.Undo
+  isExternal: false
+  name: Undo
+  nameWithType: ChangeTracker.Undo
+  fullName: TimeCockpit.Data.ChangeTracker.Undo
+- uid: TimeCockpit.Data.ChangeTracker.Redo*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.Redo
+  isExternal: false
+  name: Redo
+  nameWithType: ChangeTracker.Redo
+  fullName: TimeCockpit.Data.ChangeTracker.Redo
+- uid: TimeCockpit.Data.ChangeTracker.BeginScope*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.BeginScope
+  isExternal: false
+  name: BeginScope
+  nameWithType: ChangeTracker.BeginScope
+  fullName: TimeCockpit.Data.ChangeTracker.BeginScope
+- uid: TimeCockpit.Data.ChangeTracker.EndScope*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.EndScope
+  isExternal: false
+  name: EndScope
+  nameWithType: ChangeTracker.EndScope
+  fullName: TimeCockpit.Data.ChangeTracker.EndScope
+- uid: TimeCockpit.Data.ChangeTracker.CanUndo
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanUndo
+- uid: TimeCockpit.Data.ChangeTracker.CanRedo
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanRedo
+- uid: TimeCockpit.Data.ChangeTracker.CanEndScope
+  commentId: P:TimeCockpit.Data.ChangeTracker.CanEndScope
+- uid: TimeCockpit.Data.ChangeTracker.UpdateAllCanStates*
+  commentId: Overload:TimeCockpit.Data.ChangeTracker.UpdateAllCanStates
+  isExternal: false
+  name: UpdateAllCanStates
+  nameWithType: ChangeTracker.UpdateAllCanStates
+  fullName: TimeCockpit.Data.ChangeTracker.UpdateAllCanStates

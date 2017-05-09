@@ -1,0 +1,748 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  commentId: T:TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  id: ConditionBuilder
+  parent: TimeCockpit.Data.QueryLanguage
+  children:
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition(System.Collections.Generic.Dictionary{System.String,System.Object},TimeCockpit.Data.DataModel.ModelEntityBase)
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString(System.String)
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.DateTime)
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.Guid)
+  - TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ConditionBuilder
+  nameWithType: ConditionBuilder
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  type: Class
+  source:
+    id: ConditionBuilder
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 17
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nhelper methods for building conditions for string / object key value pairs\n"
+  example: []
+  syntax:
+    content: public class ConditionBuilder
+    content.vb: Public Class ConditionBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+  commentId: P:TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+  id: TCQLNullString
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: TCQLNullString
+  nameWithType: ConditionBuilder.TCQLNullString
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+  type: Property
+  source:
+    id: TCQLNullString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 22
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nGets the string representation of a null in TCQL.\n"
+  example: []
+  syntax:
+    content: public static string TCQLNullString { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property TCQLNullString As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.DateTime)
+  commentId: M:TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.DateTime)
+  id: ToTCQLString(System.DateTime)
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToTCQLString(DateTime)
+  nameWithType: ConditionBuilder.ToTCQLString(DateTime)
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.DateTime)
+  type: Method
+  source:
+    id: ToTCQLString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 32
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nConverts a datetime to a TCQL compatible string\n"
+  example: []
+  syntax:
+    content: public static string ToTCQLString(DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: the datetime value to convert.
+    return:
+      type: System.String
+      description: returns the tcql compatible string representation of the datetime value.
+    content.vb: Public Shared Function ToTCQLString(dateTime As Date) As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.Guid)
+  commentId: M:TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.Guid)
+  id: ToTCQLString(System.Guid)
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToTCQLString(Guid)
+  nameWithType: ConditionBuilder.ToTCQLString(Guid)
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.Guid)
+  type: Method
+  source:
+    id: ToTCQLString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 42
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nconverts a guid to a tcql string.\n"
+  example: []
+  syntax:
+    content: public static string ToTCQLString(Guid guid)
+    parameters:
+    - id: guid
+      type: System.Guid
+      description: the guid to convert
+    return:
+      type: System.String
+      description: returns the tcql compatible string representation of the guid value.
+    content.vb: Public Shared Function ToTCQLString(guid As Guid) As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString(System.String)
+  commentId: M:TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString(System.String)
+  id: EscapeTCQLString(System.String)
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: EscapeTCQLString(String)
+  nameWithType: ConditionBuilder.EscapeTCQLString(String)
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString(System.String)
+  type: Method
+  source:
+    id: EscapeTCQLString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 52
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nreplaces ' with \\'.\n"
+  example: []
+  syntax:
+    content: public static string EscapeTCQLString(string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: the string to escape.
+    return:
+      type: System.String
+      description: returns the orignal string with ' replaced by \'
+    content.vb: Public Shared Function EscapeTCQLString(s As String) As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.String)
+  commentId: M:TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.String)
+  id: ToTCQLString(System.String)
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToTCQLString(String)
+  nameWithType: ConditionBuilder.ToTCQLString(String)
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString(System.String)
+  type: Method
+  source:
+    id: ToTCQLString
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 62
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nReturns a string escaped to avoid tcql injection\n"
+  example: []
+  syntax:
+    content: public static string ToTCQLString(string s)
+    parameters:
+    - id: s
+      type: System.String
+      description: the parameter to escape
+    return:
+      type: System.String
+      description: returns the string in single quotes with single quotes in the original string escaped.
+    content.vb: Public Shared Function ToTCQLString(s As String) As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition(System.Collections.Generic.Dictionary{System.String,System.Object},TimeCockpit.Data.DataModel.ModelEntityBase)
+  commentId: M:TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition(System.Collections.Generic.Dictionary{System.String,System.Object},TimeCockpit.Data.DataModel.ModelEntityBase)
+  id: BuildCondition(System.Collections.Generic.Dictionary{System.String,System.Object},TimeCockpit.Data.DataModel.ModelEntityBase)
+  parent: TimeCockpit.Data.QueryLanguage.ConditionBuilder
+  langs:
+  - csharp
+  - vb
+  name: BuildCondition(Dictionary<String, Object>, ModelEntityBase)
+  nameWithType: ConditionBuilder.BuildCondition(Dictionary<String, Object>, ModelEntityBase)
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition(System.Collections.Generic.Dictionary<System.String, System.Object>, TimeCockpit.Data.DataModel.ModelEntityBase)
+  type: Method
+  source:
+    id: BuildCondition
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\QueryLanguage\ConditionBuilder.cs
+    startLine: 86
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage
+  summary: "\nBuilds a TCQL condition from a dictionary of string / object values.\nthe object values in the dictionary should one of \n<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>\nand should match the type of the property.\n"
+  example: []
+  syntax:
+    content: public static string BuildCondition(Dictionary<string, object> conditionParams, ModelEntityBase sourceEntity)
+    parameters:
+    - id: conditionParams
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: the condition parameters used for building the condition.
+    - id: sourceEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+      description: the source entity that the condition will be built agains.
+    return:
+      type: System.String
+      description: returns a tcql where condition as string.
+    content.vb: Public Shared Function BuildCondition(conditionParams As Dictionary(Of String, Object), sourceEntity As ModelEntityBase) As String
+  overload: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition*
+  nameWithType.vb: ConditionBuilder.BuildCondition(Dictionary(Of String, Object), ModelEntityBase)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition(System.Collections.Generic.Dictionary(Of System.String, System.Object), TimeCockpit.Data.DataModel.ModelEntityBase)
+  name.vb: BuildCondition(Dictionary(Of String, Object), ModelEntityBase)
+references:
+- uid: TimeCockpit.Data.QueryLanguage
+  commentId: N:TimeCockpit.Data.QueryLanguage
+  isExternal: false
+  name: TimeCockpit.Data.QueryLanguage
+  nameWithType: TimeCockpit.Data.QueryLanguage
+  fullName: TimeCockpit.Data.QueryLanguage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+  isExternal: false
+  name: TCQLNullString
+  nameWithType: ConditionBuilder.TCQLNullString
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.TCQLNullString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString
+  isExternal: false
+  name: ToTCQLString
+  nameWithType: ConditionBuilder.ToTCQLString
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.ToTCQLString
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString
+  isExternal: false
+  name: EscapeTCQLString
+  nameWithType: ConditionBuilder.EscapeTCQLString
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.EscapeTCQLString
+- uid: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition
+  isExternal: false
+  name: BuildCondition
+  nameWithType: ConditionBuilder.BuildCondition
+  fullName: TimeCockpit.Data.QueryLanguage.ConditionBuilder.BuildCondition
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel

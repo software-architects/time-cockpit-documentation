@@ -1,0 +1,1373 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  commentId: T:TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  id: DynamicObject.DynamicMetaObject
+  parent: TimeCockpit.Data
+  children:
+  - TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor(TimeCockpit.Data.DynamicObject,System.Linq.Expressions.Expression)
+  - TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  - TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  langs:
+  - csharp
+  - vb
+  name: DynamicObject.DynamicMetaObject
+  nameWithType: DynamicObject.DynamicMetaObject
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  type: Class
+  source:
+    id: DynamicMetaObject
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 207
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nComplements <xref href=\"System.Dynamic.DynamicMetaObject\" data-throw-if-not-resolved=\"false\"></xref> and serves as the common representation of dynamic metadata, \nallowing operations to be dispatched on dynamic objects.\n"
+  remarks: "\n<p>Supports the library for integrating with the Dynamic Language Runtime. This class must not be used\noutside of this library!</p>\n<p>Caution! Will be replaced as soon as implementation of C# 4.0 becomes available.</p>\n"
+  example: []
+  syntax:
+    content: 'protected class DynamicMetaObject : DynamicMetaObject'
+    content.vb: >-
+      Protected Class DynamicMetaObject
+          Inherits DynamicMetaObject
+  inheritance:
+  - System.Object
+  - System.Dynamic.DynamicMetaObject
+  inheritedMembers:
+  - System.Dynamic.DynamicMetaObject.EmptyMetaObjects
+  - System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+  - System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+  - System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])
+  - System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)
+  - System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])
+  - System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])
+  - System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])
+  - System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])
+  - System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+  - System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)
+  - System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+  - System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)
+  - System.Dynamic.DynamicMetaObject.Expression
+  - System.Dynamic.DynamicMetaObject.Restrictions
+  - System.Dynamic.DynamicMetaObject.Value
+  - System.Dynamic.DynamicMetaObject.HasValue
+  - System.Dynamic.DynamicMetaObject.RuntimeType
+  - System.Dynamic.DynamicMetaObject.LimitType
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - protected
+  - class
+  modifiers.vb:
+  - Protected
+  - Class
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor(TimeCockpit.Data.DynamicObject,System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor(TimeCockpit.Data.DynamicObject,System.Linq.Expressions.Expression)
+  id: '#ctor(TimeCockpit.Data.DynamicObject,System.Linq.Expressions.Expression)'
+  parent: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  langs:
+  - csharp
+  - vb
+  name: DynamicMetaObject(DynamicObject, Expression)
+  nameWithType: DynamicObject.DynamicMetaObject.DynamicMetaObject(DynamicObject, Expression)
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.DynamicMetaObject(TimeCockpit.Data.DynamicObject, System.Linq.Expressions.Expression)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 214
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nInitializes a new instance of the DynamicMetaObject class.\n"
+  example: []
+  syntax:
+    content: public DynamicMetaObject(DynamicObject v, Expression e)
+    parameters:
+    - id: v
+      type: TimeCockpit.Data.DynamicObject
+      description: Reference to the dynamic object
+    - id: e
+      type: System.Linq.Expressions.Expression
+      description: Provided by the DLR (Dynamic Language Runtime).
+    content.vb: Public Sub New(v As DynamicObject, e As Expression)
+  overload: TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  commentId: M:TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  id: BindGetMember(System.Dynamic.GetMemberBinder)
+  parent: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  langs:
+  - csharp
+  - vb
+  name: BindGetMember(GetMemberBinder)
+  nameWithType: DynamicObject.DynamicMetaObject.BindGetMember(GetMemberBinder)
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  type: Method
+  source:
+    id: BindGetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 224
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the meta object for a get member operation.\n"
+  example: []
+  syntax:
+    content: public override DynamicMetaObject BindGetMember(GetMemberBinder info)
+    parameters:
+    - id: info
+      type: System.Dynamic.GetMemberBinder
+      description: Information about which member to get.
+    return:
+      type: System.Dynamic.DynamicMetaObject
+      description: Reference to the meta object that can be used to dispatch operations.
+    content.vb: Public Overrides Function BindGetMember(info As GetMemberBinder) As DynamicMetaObject
+  overridden: System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  overload: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  commentId: M:TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  id: BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  parent: TimeCockpit.Data.DynamicObject.DynamicMetaObject
+  langs:
+  - csharp
+  - vb
+  name: BindSetMember(SetMemberBinder, DynamicMetaObject)
+  nameWithType: DynamicObject.DynamicMetaObject.BindSetMember(SetMemberBinder, DynamicMetaObject)
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder, System.Dynamic.DynamicMetaObject)
+  type: Method
+  source:
+    id: BindSetMember
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DynamicObject.cs
+    startLine: 250
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the meta object for a set member operation.\n"
+  example: []
+  syntax:
+    content: public override DynamicMetaObject BindSetMember(SetMemberBinder info, DynamicMetaObject value)
+    parameters:
+    - id: info
+      type: System.Dynamic.SetMemberBinder
+      description: Information about which member to set.
+    - id: value
+      type: System.Dynamic.DynamicMetaObject
+      description: Value to set.
+    return:
+      type: System.Dynamic.DynamicMetaObject
+      description: Reference to the meta object that can be used to dispatch operations.
+    content.vb: Public Overrides Function BindSetMember(info As SetMemberBinder, value As DynamicMetaObject) As DynamicMetaObject
+  overridden: System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  overload: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: System.Dynamic.DynamicMetaObject
+  commentId: T:System.Dynamic.DynamicMetaObject
+  parent: System.Dynamic
+  isExternal: true
+  name: DynamicMetaObject
+  nameWithType: DynamicMetaObject
+  fullName: System.Dynamic.DynamicMetaObject
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Dynamic.DynamicMetaObject.EmptyMetaObjects
+  commentId: F:System.Dynamic.DynamicMetaObject.EmptyMetaObjects
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: EmptyMetaObjects
+  nameWithType: DynamicMetaObject.EmptyMetaObjects
+  fullName: System.Dynamic.DynamicMetaObject.EmptyMetaObjects
+- uid: System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindConvert(ConvertBinder)
+  nameWithType: DynamicMetaObject.BindConvert(ConvertBinder)
+  fullName: System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+    name: BindConvert
+    nameWithType: DynamicMetaObject.BindConvert
+    fullName: System.Dynamic.DynamicMetaObject.BindConvert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.ConvertBinder
+    name: ConvertBinder
+    nameWithType: ConvertBinder
+    fullName: System.Dynamic.ConvertBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindConvert(System.Dynamic.ConvertBinder)
+    name: BindConvert
+    nameWithType: DynamicMetaObject.BindConvert
+    fullName: System.Dynamic.DynamicMetaObject.BindConvert
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.ConvertBinder
+    name: ConvertBinder
+    nameWithType: ConvertBinder
+    fullName: System.Dynamic.ConvertBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindDeleteMember(DeleteMemberBinder)
+  nameWithType: DynamicMetaObject.BindDeleteMember(DeleteMemberBinder)
+  fullName: System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+    name: BindDeleteMember
+    nameWithType: DynamicMetaObject.BindDeleteMember
+    fullName: System.Dynamic.DynamicMetaObject.BindDeleteMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.DeleteMemberBinder
+    name: DeleteMemberBinder
+    nameWithType: DeleteMemberBinder
+    fullName: System.Dynamic.DeleteMemberBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindDeleteMember(System.Dynamic.DeleteMemberBinder)
+    name: BindDeleteMember
+    nameWithType: DynamicMetaObject.BindDeleteMember
+    fullName: System.Dynamic.DynamicMetaObject.BindDeleteMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.DeleteMemberBinder
+    name: DeleteMemberBinder
+    nameWithType: DeleteMemberBinder
+    fullName: System.Dynamic.DeleteMemberBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])
+  commentId: M:System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindGetIndex(GetIndexBinder, DynamicMetaObject[])
+  nameWithType: DynamicMetaObject.BindGetIndex(GetIndexBinder, DynamicMetaObject[])
+  fullName: System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder, System.Dynamic.DynamicMetaObject[])
+  nameWithType.vb: DynamicMetaObject.BindGetIndex(GetIndexBinder, DynamicMetaObject())
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder, System.Dynamic.DynamicMetaObject())
+  name.vb: BindGetIndex(GetIndexBinder, DynamicMetaObject())
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindGetIndex
+    nameWithType: DynamicMetaObject.BindGetIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindGetIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.GetIndexBinder
+    name: GetIndexBinder
+    nameWithType: GetIndexBinder
+    fullName: System.Dynamic.GetIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindGetIndex(System.Dynamic.GetIndexBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindGetIndex
+    nameWithType: DynamicMetaObject.BindGetIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindGetIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.GetIndexBinder
+    name: GetIndexBinder
+    nameWithType: GetIndexBinder
+    fullName: System.Dynamic.GetIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindSetIndex(SetIndexBinder, DynamicMetaObject[], DynamicMetaObject)
+  nameWithType: DynamicMetaObject.BindSetIndex(SetIndexBinder, DynamicMetaObject[], DynamicMetaObject)
+  fullName: System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder, System.Dynamic.DynamicMetaObject[], System.Dynamic.DynamicMetaObject)
+  nameWithType.vb: DynamicMetaObject.BindSetIndex(SetIndexBinder, DynamicMetaObject(), DynamicMetaObject)
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder, System.Dynamic.DynamicMetaObject(), System.Dynamic.DynamicMetaObject)
+  name.vb: BindSetIndex(SetIndexBinder, DynamicMetaObject(), DynamicMetaObject)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)
+    name: BindSetIndex
+    nameWithType: DynamicMetaObject.BindSetIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindSetIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.SetIndexBinder
+    name: SetIndexBinder
+    nameWithType: SetIndexBinder
+    fullName: System.Dynamic.SetIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindSetIndex(System.Dynamic.SetIndexBinder,System.Dynamic.DynamicMetaObject[],System.Dynamic.DynamicMetaObject)
+    name: BindSetIndex
+    nameWithType: DynamicMetaObject.BindSetIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindSetIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.SetIndexBinder
+    name: SetIndexBinder
+    nameWithType: SetIndexBinder
+    fullName: System.Dynamic.SetIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])
+  commentId: M:System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindDeleteIndex(DeleteIndexBinder, DynamicMetaObject[])
+  nameWithType: DynamicMetaObject.BindDeleteIndex(DeleteIndexBinder, DynamicMetaObject[])
+  fullName: System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Dynamic.DynamicMetaObject[])
+  nameWithType.vb: DynamicMetaObject.BindDeleteIndex(DeleteIndexBinder, DynamicMetaObject())
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder, System.Dynamic.DynamicMetaObject())
+  name.vb: BindDeleteIndex(DeleteIndexBinder, DynamicMetaObject())
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindDeleteIndex
+    nameWithType: DynamicMetaObject.BindDeleteIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindDeleteIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.DeleteIndexBinder
+    name: DeleteIndexBinder
+    nameWithType: DeleteIndexBinder
+    fullName: System.Dynamic.DeleteIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindDeleteIndex(System.Dynamic.DeleteIndexBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindDeleteIndex
+    nameWithType: DynamicMetaObject.BindDeleteIndex
+    fullName: System.Dynamic.DynamicMetaObject.BindDeleteIndex
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.DeleteIndexBinder
+    name: DeleteIndexBinder
+    nameWithType: DeleteIndexBinder
+    fullName: System.Dynamic.DeleteIndexBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])
+  commentId: M:System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindInvokeMember(InvokeMemberBinder, DynamicMetaObject[])
+  nameWithType: DynamicMetaObject.BindInvokeMember(InvokeMemberBinder, DynamicMetaObject[])
+  fullName: System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder, System.Dynamic.DynamicMetaObject[])
+  nameWithType.vb: DynamicMetaObject.BindInvokeMember(InvokeMemberBinder, DynamicMetaObject())
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder, System.Dynamic.DynamicMetaObject())
+  name.vb: BindInvokeMember(InvokeMemberBinder, DynamicMetaObject())
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindInvokeMember
+    nameWithType: DynamicMetaObject.BindInvokeMember
+    fullName: System.Dynamic.DynamicMetaObject.BindInvokeMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.InvokeMemberBinder
+    name: InvokeMemberBinder
+    nameWithType: InvokeMemberBinder
+    fullName: System.Dynamic.InvokeMemberBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindInvokeMember(System.Dynamic.InvokeMemberBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindInvokeMember
+    nameWithType: DynamicMetaObject.BindInvokeMember
+    fullName: System.Dynamic.DynamicMetaObject.BindInvokeMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.InvokeMemberBinder
+    name: InvokeMemberBinder
+    nameWithType: InvokeMemberBinder
+    fullName: System.Dynamic.InvokeMemberBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])
+  commentId: M:System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindInvoke(InvokeBinder, DynamicMetaObject[])
+  nameWithType: DynamicMetaObject.BindInvoke(InvokeBinder, DynamicMetaObject[])
+  fullName: System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder, System.Dynamic.DynamicMetaObject[])
+  nameWithType.vb: DynamicMetaObject.BindInvoke(InvokeBinder, DynamicMetaObject())
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder, System.Dynamic.DynamicMetaObject())
+  name.vb: BindInvoke(InvokeBinder, DynamicMetaObject())
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindInvoke
+    nameWithType: DynamicMetaObject.BindInvoke
+    fullName: System.Dynamic.DynamicMetaObject.BindInvoke
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.InvokeBinder
+    name: InvokeBinder
+    nameWithType: InvokeBinder
+    fullName: System.Dynamic.InvokeBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindInvoke(System.Dynamic.InvokeBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindInvoke
+    nameWithType: DynamicMetaObject.BindInvoke
+    fullName: System.Dynamic.DynamicMetaObject.BindInvoke
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.InvokeBinder
+    name: InvokeBinder
+    nameWithType: InvokeBinder
+    fullName: System.Dynamic.InvokeBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])
+  commentId: M:System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindCreateInstance(CreateInstanceBinder, DynamicMetaObject[])
+  nameWithType: DynamicMetaObject.BindCreateInstance(CreateInstanceBinder, DynamicMetaObject[])
+  fullName: System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder, System.Dynamic.DynamicMetaObject[])
+  nameWithType.vb: DynamicMetaObject.BindCreateInstance(CreateInstanceBinder, DynamicMetaObject())
+  fullName.vb: System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder, System.Dynamic.DynamicMetaObject())
+  name.vb: BindCreateInstance(CreateInstanceBinder, DynamicMetaObject())
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindCreateInstance
+    nameWithType: DynamicMetaObject.BindCreateInstance
+    fullName: System.Dynamic.DynamicMetaObject.BindCreateInstance
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.CreateInstanceBinder
+    name: CreateInstanceBinder
+    nameWithType: CreateInstanceBinder
+    fullName: System.Dynamic.CreateInstanceBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindCreateInstance(System.Dynamic.CreateInstanceBinder,System.Dynamic.DynamicMetaObject[])
+    name: BindCreateInstance
+    nameWithType: DynamicMetaObject.BindCreateInstance
+    fullName: System.Dynamic.DynamicMetaObject.BindCreateInstance
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.CreateInstanceBinder
+    name: CreateInstanceBinder
+    nameWithType: CreateInstanceBinder
+    fullName: System.Dynamic.CreateInstanceBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindUnaryOperation(UnaryOperationBinder)
+  nameWithType: DynamicMetaObject.BindUnaryOperation(UnaryOperationBinder)
+  fullName: System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+    name: BindUnaryOperation
+    nameWithType: DynamicMetaObject.BindUnaryOperation
+    fullName: System.Dynamic.DynamicMetaObject.BindUnaryOperation
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.UnaryOperationBinder
+    name: UnaryOperationBinder
+    nameWithType: UnaryOperationBinder
+    fullName: System.Dynamic.UnaryOperationBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindUnaryOperation(System.Dynamic.UnaryOperationBinder)
+    name: BindUnaryOperation
+    nameWithType: DynamicMetaObject.BindUnaryOperation
+    fullName: System.Dynamic.DynamicMetaObject.BindUnaryOperation
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.UnaryOperationBinder
+    name: UnaryOperationBinder
+    nameWithType: UnaryOperationBinder
+    fullName: System.Dynamic.UnaryOperationBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindBinaryOperation(BinaryOperationBinder, DynamicMetaObject)
+  nameWithType: DynamicMetaObject.BindBinaryOperation(BinaryOperationBinder, DynamicMetaObject)
+  fullName: System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder, System.Dynamic.DynamicMetaObject)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)
+    name: BindBinaryOperation
+    nameWithType: DynamicMetaObject.BindBinaryOperation
+    fullName: System.Dynamic.DynamicMetaObject.BindBinaryOperation
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.BinaryOperationBinder
+    name: BinaryOperationBinder
+    nameWithType: BinaryOperationBinder
+    fullName: System.Dynamic.BinaryOperationBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Dynamic.DynamicMetaObject)
+    name: BindBinaryOperation
+    nameWithType: DynamicMetaObject.BindBinaryOperation
+    fullName: System.Dynamic.DynamicMetaObject.BindBinaryOperation
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.BinaryOperationBinder
+    name: BinaryOperationBinder
+    nameWithType: BinaryOperationBinder
+    fullName: System.Dynamic.BinaryOperationBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+  commentId: M:System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: GetDynamicMemberNames()
+  nameWithType: DynamicMetaObject.GetDynamicMemberNames()
+  fullName: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames()
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+    name: GetDynamicMemberNames
+    nameWithType: DynamicMetaObject.GetDynamicMemberNames
+    fullName: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+    name: GetDynamicMemberNames
+    nameWithType: DynamicMetaObject.GetDynamicMemberNames
+    fullName: System.Dynamic.DynamicMetaObject.GetDynamicMemberNames
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)
+  commentId: M:System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: Create(Object, Expression)
+  nameWithType: DynamicMetaObject.Create(Object, Expression)
+  fullName: System.Dynamic.DynamicMetaObject.Create(System.Object, System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)
+    name: Create
+    nameWithType: DynamicMetaObject.Create
+    fullName: System.Dynamic.DynamicMetaObject.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.Create(System.Object,System.Linq.Expressions.Expression)
+    name: Create
+    nameWithType: DynamicMetaObject.Create
+    fullName: System.Dynamic.DynamicMetaObject.Create
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic.DynamicMetaObject.Expression
+  commentId: P:System.Dynamic.DynamicMetaObject.Expression
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: Expression
+  nameWithType: DynamicMetaObject.Expression
+  fullName: System.Dynamic.DynamicMetaObject.Expression
+- uid: System.Dynamic.DynamicMetaObject.Restrictions
+  commentId: P:System.Dynamic.DynamicMetaObject.Restrictions
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: Restrictions
+  nameWithType: DynamicMetaObject.Restrictions
+  fullName: System.Dynamic.DynamicMetaObject.Restrictions
+- uid: System.Dynamic.DynamicMetaObject.Value
+  commentId: P:System.Dynamic.DynamicMetaObject.Value
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: Value
+  nameWithType: DynamicMetaObject.Value
+  fullName: System.Dynamic.DynamicMetaObject.Value
+- uid: System.Dynamic.DynamicMetaObject.HasValue
+  commentId: P:System.Dynamic.DynamicMetaObject.HasValue
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: HasValue
+  nameWithType: DynamicMetaObject.HasValue
+  fullName: System.Dynamic.DynamicMetaObject.HasValue
+- uid: System.Dynamic.DynamicMetaObject.RuntimeType
+  commentId: P:System.Dynamic.DynamicMetaObject.RuntimeType
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: RuntimeType
+  nameWithType: DynamicMetaObject.RuntimeType
+  fullName: System.Dynamic.DynamicMetaObject.RuntimeType
+- uid: System.Dynamic.DynamicMetaObject.LimitType
+  commentId: P:System.Dynamic.DynamicMetaObject.LimitType
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: LimitType
+  nameWithType: DynamicMetaObject.LimitType
+  fullName: System.Dynamic.DynamicMetaObject.LimitType
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.DynamicMetaObject.#ctor
+  isExternal: false
+  name: DynamicMetaObject
+  nameWithType: DynamicObject.DynamicMetaObject.DynamicMetaObject
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.DynamicMetaObject
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+- uid: System.Linq.Expressions.Expression
+  commentId: T:System.Linq.Expressions.Expression
+  parent: System.Linq.Expressions
+  isExternal: true
+  name: Expression
+  nameWithType: Expression
+  fullName: System.Linq.Expressions.Expression
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: false
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+- uid: System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindGetMember(GetMemberBinder)
+  nameWithType: DynamicMetaObject.BindGetMember(GetMemberBinder)
+  fullName: System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+    name: BindGetMember
+    nameWithType: DynamicMetaObject.BindGetMember
+    fullName: System.Dynamic.DynamicMetaObject.BindGetMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.GetMemberBinder
+    name: GetMemberBinder
+    nameWithType: GetMemberBinder
+    fullName: System.Dynamic.GetMemberBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindGetMember(System.Dynamic.GetMemberBinder)
+    name: BindGetMember
+    nameWithType: DynamicMetaObject.BindGetMember
+    fullName: System.Dynamic.DynamicMetaObject.BindGetMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.GetMemberBinder
+    name: GetMemberBinder
+    nameWithType: GetMemberBinder
+    fullName: System.Dynamic.GetMemberBinder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember
+  isExternal: false
+  name: BindGetMember
+  nameWithType: DynamicObject.DynamicMetaObject.BindGetMember
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindGetMember
+- uid: System.Dynamic.GetMemberBinder
+  commentId: T:System.Dynamic.GetMemberBinder
+  parent: System.Dynamic
+  isExternal: true
+  name: GetMemberBinder
+  nameWithType: GetMemberBinder
+  fullName: System.Dynamic.GetMemberBinder
+- uid: System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  commentId: M:System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+  parent: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: BindSetMember(SetMemberBinder, DynamicMetaObject)
+  nameWithType: DynamicMetaObject.BindSetMember(SetMemberBinder, DynamicMetaObject)
+  fullName: System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder, System.Dynamic.DynamicMetaObject)
+  spec.csharp:
+  - uid: System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+    name: BindSetMember
+    nameWithType: DynamicMetaObject.BindSetMember
+    fullName: System.Dynamic.DynamicMetaObject.BindSetMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.SetMemberBinder
+    name: SetMemberBinder
+    nameWithType: SetMemberBinder
+    fullName: System.Dynamic.SetMemberBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Dynamic.DynamicMetaObject.BindSetMember(System.Dynamic.SetMemberBinder,System.Dynamic.DynamicMetaObject)
+    name: BindSetMember
+    nameWithType: DynamicMetaObject.BindSetMember
+    fullName: System.Dynamic.DynamicMetaObject.BindSetMember
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Dynamic.SetMemberBinder
+    name: SetMemberBinder
+    nameWithType: SetMemberBinder
+    fullName: System.Dynamic.SetMemberBinder
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Dynamic.DynamicMetaObject
+    name: DynamicMetaObject
+    nameWithType: DynamicMetaObject
+    fullName: System.Dynamic.DynamicMetaObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember*
+  commentId: Overload:TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember
+  isExternal: false
+  name: BindSetMember
+  nameWithType: DynamicObject.DynamicMetaObject.BindSetMember
+  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject.BindSetMember
+- uid: System.Dynamic.SetMemberBinder
+  commentId: T:System.Dynamic.SetMemberBinder
+  parent: System.Dynamic
+  isExternal: true
+  name: SetMemberBinder
+  nameWithType: SetMemberBinder
+  fullName: System.Dynamic.SetMemberBinder

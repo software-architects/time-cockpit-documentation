@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  commentId: T:TimeCockpit.Data.UndoRedo.SetMemberOperation
+  id: SetMemberOperation
+  parent: TimeCockpit.Data.UndoRedo
+  children:
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor(System.String,TimeCockpit.Data.EntityObject,System.Object,System.Object)
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo(TimeCockpit.Data.ChangeTracker)
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  - TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo(TimeCockpit.Data.ChangeTracker)
+  langs:
+  - csharp
+  - vb
+  name: SetMemberOperation
+  nameWithType: SetMemberOperation
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  type: Class
+  source:
+    id: SetMemberOperation
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 16
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nclass representing an undoable set member operation.\n"
+  example: []
+  syntax:
+    content: 'public class SetMemberOperation : Operation'
+    content.vb: >-
+      Public Class SetMemberOperation
+          Inherits Operation
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.UndoRedo.Operation
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor(System.String,TimeCockpit.Data.EntityObject,System.Object,System.Object)
+  commentId: M:TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor(System.String,TimeCockpit.Data.EntityObject,System.Object,System.Object)
+  id: '#ctor(System.String,TimeCockpit.Data.EntityObject,System.Object,System.Object)'
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: SetMemberOperation(String, EntityObject, Object, Object)
+  nameWithType: SetMemberOperation.SetMemberOperation(String, EntityObject, Object, Object)
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.SetMemberOperation(System.String, TimeCockpit.Data.EntityObject, System.Object, System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 25
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nInitializes a new instance of the SetMemberOperation class.\n"
+  example: []
+  syntax:
+    content: public SetMemberOperation(string propertyName, EntityObject targetEntity, object previousValue, object currentValue)
+    parameters:
+    - id: propertyName
+      type: System.String
+      description: the name of the property that changed.
+    - id: targetEntity
+      type: TimeCockpit.Data.EntityObject
+      description: the entity instance whose property changed.
+    - id: previousValue
+      type: System.Object
+      description: the value the property had before the change.
+    - id: currentValue
+      type: System.Object
+      description: the value the property had after the change.
+    content.vb: Public Sub New(propertyName As String, targetEntity As EntityObject, previousValue As Object, currentValue As Object)
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+  commentId: P:TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+  id: PropertyName
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: PropertyName
+  nameWithType: SetMemberOperation.PropertyName
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+  type: Property
+  source:
+    id: PropertyName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 36
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nGets the name of the property this set member operation applies to.\n"
+  example: []
+  syntax:
+    content: public string PropertyName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PropertyName As String
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+  commentId: P:TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+  id: PreviousValue
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SetMemberOperation.PreviousValue
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+  type: Property
+  source:
+    id: PreviousValue
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 45
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nGets the value the property had before.\n"
+  example: []
+  syntax:
+    content: public object PreviousValue { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property PreviousValue As Object
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  commentId: P:TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  id: CurrentValue
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: CurrentValue
+  nameWithType: SetMemberOperation.CurrentValue
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  type: Property
+  source:
+    id: CurrentValue
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 54
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nGets the value the property has now.\n"
+  example: []
+  syntax:
+    content: public object CurrentValue { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property CurrentValue As Object
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+  commentId: P:TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+  id: TargetEntity
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: TargetEntity
+  nameWithType: SetMemberOperation.TargetEntity
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+  type: Property
+  source:
+    id: TargetEntity
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 63
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nGets the instance of the entityobject whose value was changed.\n"
+  example: []
+  syntax:
+    content: public EntityObject TargetEntity { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject
+    content.vb: Public ReadOnly Property TargetEntity As EntityObject
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo(TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo(TimeCockpit.Data.ChangeTracker)
+  id: Undo(TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: Undo(ChangeTracker)
+  nameWithType: SetMemberOperation.Undo(ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo(TimeCockpit.Data.ChangeTracker)
+  type: Method
+  source:
+    id: Undo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 73
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\ncalled when the operation is to be undone.\n"
+  example: []
+  syntax:
+    content: public override void Undo(ChangeTracker changeTracker)
+    parameters:
+    - id: changeTracker
+      type: TimeCockpit.Data.ChangeTracker
+      description: the change tracker tracking this operation.
+    content.vb: Public Overrides Sub Undo(changeTracker As ChangeTracker)
+  overridden: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo(TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo(TimeCockpit.Data.ChangeTracker)
+  id: Redo(TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: Redo(ChangeTracker)
+  nameWithType: SetMemberOperation.Redo(ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo(TimeCockpit.Data.ChangeTracker)
+  type: Method
+  source:
+    id: Redo
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\ncalled when the operation is to be re applied.\n"
+  example: []
+  syntax:
+    content: public override void Redo(ChangeTracker changeTracker)
+    parameters:
+    - id: changeTracker
+      type: TimeCockpit.Data.ChangeTracker
+      description: the change tracker tracking this operation.
+    content.vb: Public Overrides Sub Redo(changeTracker As ChangeTracker)
+  overridden: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  id: TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.SetMemberOperation
+  langs:
+  - csharp
+  - vb
+  name: TryMerge(Operation, ChangeTracker)
+  nameWithType: SetMemberOperation.TryMerge(Operation, ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge(TimeCockpit.Data.UndoRedo.Operation, TimeCockpit.Data.ChangeTracker)
+  type: Method
+  source:
+    id: TryMerge
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\UndoRedo\SetMemberOperation.cs
+    startLine: 96
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nchecks whether the newer operation is also a set member operation targeting the same property \nof the same entity object.\nif so, the <xref href=\"TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue\" data-throw-if-not-resolved=\"false\"></xref> property is updated to the CurrentValue of the newerOperation\nand true is returned, indicating that the newer operation can be discarded.\n"
+  example: []
+  syntax:
+    content: public override bool TryMerge(Operation newerOperation, ChangeTracker changeTracker)
+    parameters:
+    - id: newerOperation
+      type: TimeCockpit.Data.UndoRedo.Operation
+      description: the newer operation that should possibly be merged with this operation.
+    - id: changeTracker
+      type: TimeCockpit.Data.ChangeTracker
+      description: the change tracker governing this operation.
+    return:
+      type: System.Boolean
+      description: Returns true if the newerOperation could be merged to this operation.
+    content.vb: Public Overrides Function TryMerge(newerOperation As Operation, changeTracker As ChangeTracker) As Boolean
+  overridden: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  overload: TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: TimeCockpit.Data.UndoRedo
+  commentId: N:TimeCockpit.Data.UndoRedo
+  isExternal: false
+  name: TimeCockpit.Data.UndoRedo
+  nameWithType: TimeCockpit.Data.UndoRedo
+  fullName: TimeCockpit.Data.UndoRedo
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.UndoRedo.Operation
+  commentId: T:TimeCockpit.Data.UndoRedo.Operation
+  parent: TimeCockpit.Data.UndoRedo
+  isExternal: false
+  name: Operation
+  nameWithType: Operation
+  fullName: TimeCockpit.Data.UndoRedo.Operation
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.#ctor
+  isExternal: false
+  name: SetMemberOperation
+  nameWithType: SetMemberOperation.SetMemberOperation
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.SetMemberOperation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+  isExternal: false
+  name: PropertyName
+  nameWithType: SetMemberOperation.PropertyName
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.PropertyName
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+  isExternal: false
+  name: PreviousValue
+  nameWithType: SetMemberOperation.PreviousValue
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.PreviousValue
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  isExternal: false
+  name: CurrentValue
+  nameWithType: SetMemberOperation.CurrentValue
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+  isExternal: false
+  name: TargetEntity
+  nameWithType: SetMemberOperation.TargetEntity
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.TargetEntity
+- uid: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.Operation
+  isExternal: false
+  name: Undo(ChangeTracker)
+  nameWithType: Operation.Undo(ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+  spec.csharp:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+    name: Undo
+    nameWithType: Operation.Undo
+    fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
+    name: Undo
+    nameWithType: Operation.Undo
+    fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo
+  isExternal: false
+  name: Undo
+  nameWithType: SetMemberOperation.Undo
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.Undo
+- uid: TimeCockpit.Data.ChangeTracker
+  commentId: T:TimeCockpit.Data.ChangeTracker
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: ChangeTracker
+  nameWithType: ChangeTracker
+  fullName: TimeCockpit.Data.ChangeTracker
+- uid: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.Operation
+  isExternal: false
+  name: Redo(ChangeTracker)
+  nameWithType: Operation.Redo(ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+  spec.csharp:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+    name: Redo
+    nameWithType: Operation.Redo
+    fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
+    name: Redo
+    nameWithType: Operation.Redo
+    fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo
+  isExternal: false
+  name: Redo
+  nameWithType: SetMemberOperation.Redo
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.Redo
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+  commentId: P:TimeCockpit.Data.UndoRedo.SetMemberOperation.CurrentValue
+- uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  commentId: M:TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+  parent: TimeCockpit.Data.UndoRedo.Operation
+  isExternal: false
+  name: TryMerge(Operation, ChangeTracker)
+  nameWithType: Operation.TryMerge(Operation, ChangeTracker)
+  fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation, TimeCockpit.Data.ChangeTracker)
+  spec.csharp:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+    name: TryMerge
+    nameWithType: Operation.TryMerge
+    fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.UndoRedo.Operation
+    name: Operation
+    nameWithType: Operation
+    fullName: TimeCockpit.Data.UndoRedo.Operation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
+    name: TryMerge
+    nameWithType: Operation.TryMerge
+    fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.UndoRedo.Operation
+    name: Operation
+    nameWithType: Operation
+    fullName: TimeCockpit.Data.UndoRedo.Operation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.ChangeTracker
+    name: ChangeTracker
+    nameWithType: ChangeTracker
+    fullName: TimeCockpit.Data.ChangeTracker
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge
+  isExternal: false
+  name: TryMerge
+  nameWithType: SetMemberOperation.TryMerge
+  fullName: TimeCockpit.Data.UndoRedo.SetMemberOperation.TryMerge
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

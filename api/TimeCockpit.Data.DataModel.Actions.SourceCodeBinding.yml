@@ -1,0 +1,1082 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  commentId: T:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  id: SourceCodeBinding
+  parent: TimeCockpit.Data.DataModel.Actions
+  children:
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
+  langs:
+  - csharp
+  - vb
+  name: SourceCodeBinding
+  nameWithType: SourceCodeBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  type: Class
+  source:
+    id: SourceCodeBinding
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 17
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nRepresents a binding that establishes a relationship from a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>\nto executable code that is directly stored with the binding.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataContract]
+
+      [JsonObject(MemberSerialization.OptIn)]
+
+      public abstract class SourceCodeBinding : ModelActionBinding, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content.vb: >-
+      <DataContract>
+
+      <JsonObject(MemberSerialization.OptIn)>
+
+      Public MustInherit Class SourceCodeBinding
+          Inherits ModelActionBinding
+          Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.DynamicObject
+  - TimeCockpit.Data.DataModel.NamedDynamicObject
+  - TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  derivedClasses:
+  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding
+  - TimeCockpit.Data.DataModel.Actions.IronPythonLibraryBinding
+  implements:
+  - System.Dynamic.IDynamicMetaObjectProvider
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+  - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.Runtime.Serialization.DataContractAttribute
+    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
+    arguments:
+    - type: Newtonsoft.Json.MemberSerialization
+      value: 1
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+  id: ActionCall
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: ActionCall
+  nameWithType: SourceCodeBinding.ActionCall
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+  type: Property
+  source:
+    id: ActionCall
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the function call derived from a function definition from source code.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string ActionCall { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property ActionCall As String
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+  id: IsVerified
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: IsVerified
+  nameWithType: SourceCodeBinding.IsVerified
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+  type: Property
+  source:
+    id: IsVerified
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 70
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets a value indicating whether the source code has been verfied or not.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public bool IsVerified { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property IsVerified As Boolean
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+  id: Description
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SourceCodeBinding.Description
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+  type: Property
+  source:
+    id: Description
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 90
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the description of the current instance.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      [JsonProperty]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember>
+
+      <JsonProperty>
+
+      Public Property Description As String
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+  id: SourceCode
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: SourceCode
+  nameWithType: SourceCodeBinding.SourceCode
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+  type: Property
+  source:
+    id: SourceCode
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 115
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the source code of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\nIf the source code is set, it is verified automatically by calling <xref href=\"TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      public string SourceCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember>
+
+      Public Property SourceCode As String
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+  id: Signature
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: SourceCodeBinding.Signature
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+  type: Property
+  source:
+    id: Signature
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 136
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the signature. DEPRECATED.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      [JsonIgnore]
+
+      [Obsolete("Signature is deprecated. Use embededded signatures instead.")]
+
+      public byte[] Signature { get; set; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: >-
+      <DataMember>
+
+      <JsonIgnore>
+
+      <Obsolete("Signature is deprecated. Use embededded signatures instead.")>
+
+      Public Property Signature As Byte()
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Signature is deprecated. Use embededded signatures instead.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
+  commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
+  id: Thumbprint
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: Thumbprint
+  nameWithType: SourceCodeBinding.Thumbprint
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
+  type: Property
+  source:
+    id: Thumbprint
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\DataModel\Actions\SourceCodeBinding.cs
+    startLine: 144
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the thumbprint. DEPRECATED.\n"
+  example: []
+  syntax:
+    content: >-
+      [DataMember]
+
+      [JsonIgnore]
+
+      [Obsolete("Thumbprint is deprecated. Use embededded signatures instead.")]
+
+      public string Thumbprint { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <DataMember>
+
+      <JsonIgnore>
+
+      <Obsolete("Thumbprint is deprecated. Use embededded signatures instead.")>
+
+      Public Property Thumbprint As String
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint*
+  attributes:
+  - type: System.Runtime.Serialization.DataMemberAttribute
+    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Thumbprint is deprecated. Use embededded signatures instead.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: ModelAction
+  nameWithType: ModelAction
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
+- uid: TimeCockpit.Data.DataModel.Actions
+  commentId: N:TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: TimeCockpit.Data.DataModel.Actions
+  nameWithType: TimeCockpit.Data.DataModel.Actions
+  fullName: TimeCockpit.Data.DataModel.Actions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.DynamicObject
+  commentId: T:TimeCockpit.Data.DynamicObject
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: DynamicObject
+  nameWithType: DynamicObject
+  fullName: TimeCockpit.Data.DynamicObject
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject
+  commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: NamedDynamicObject
+  nameWithType: NamedDynamicObject
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: false
+  name: ModelActionBinding
+  nameWithType: ModelActionBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+- uid: System.Dynamic.IDynamicMetaObjectProvider
+  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
+  parent: System.Dynamic
+  isExternal: true
+  name: IDynamicMetaObjectProvider
+  nameWithType: IDynamicMetaObjectProvider
+  fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+  commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+  parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  isExternal: false
+  name: Clone()
+  nameWithType: ModelActionBinding.Clone()
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone()
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    name: Clone
+    nameWithType: ModelActionBinding.Clone
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    name: Clone
+    nameWithType: ModelActionBinding.Clone
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+  commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+  parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  isExternal: false
+  name: Execute(ExecutionContext)
+  nameWithType: ModelActionBinding.Execute(ExecutionContext)
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+    name: Execute
+    nameWithType: ModelActionBinding.Execute
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    name: ExecutionContext
+    nameWithType: ExecutionContext
+    fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
+    name: Execute
+    nameWithType: ModelActionBinding.Execute
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    name: ExecutionContext
+    nameWithType: ExecutionContext
+    fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: false
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: false
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: OnPropertyChanged(String)
+  nameWithType: NamedDynamicObject.OnPropertyChanged(String)
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: NamedDynamicObject.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+    name: OnPropertyChanged
+    nameWithType: NamedDynamicObject.OnPropertyChanged
+    fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMember(String)
+  nameWithType: DynamicObject.GetMember(String)
+  fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
+    name: GetMember
+    nameWithType: DynamicObject.GetMember
+    fullName: TimeCockpit.Data.DynamicObject.GetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: SetMember(String, Object)
+  nameWithType: DynamicObject.SetMember(String, Object)
+  fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
+    name: SetMember
+    nameWithType: DynamicObject.SetMember
+    fullName: TimeCockpit.Data.DynamicObject.SetMember
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  parent: TimeCockpit.Data.DynamicObject
+  isExternal: true
+  name: GetMetaObject(Expression)
+  nameWithType: DynamicObject.GetMetaObject(Expression)
+  fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
+    name: GetMetaObject
+    nameWithType: DynamicObject.GetMetaObject
+    fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Dynamic
+  commentId: N:System.Dynamic
+  isExternal: false
+  name: System.Dynamic
+  nameWithType: System.Dynamic
+  fullName: System.Dynamic
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: false
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+  isExternal: false
+  name: ActionCall
+  nameWithType: SourceCodeBinding.ActionCall
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+  isExternal: false
+  name: IsVerified
+  nameWithType: SourceCodeBinding.IsVerified
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+  isExternal: false
+  name: Description
+  nameWithType: SourceCodeBinding.Description
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)
+  commentId: M:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+  isExternal: false
+  name: SourceCode
+  nameWithType: SourceCodeBinding.SourceCode
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+  isExternal: false
+  name: Signature
+  nameWithType: SourceCodeBinding.Signature
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
+  isExternal: false
+  name: Thumbprint
+  nameWithType: SourceCodeBinding.Thumbprint
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint

@@ -1,0 +1,834 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  id: ModelElementLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  children:
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(System.String)
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept(TimeCockpit.Data.Localization.Default.LocalizerVisitor)
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations
+  langs:
+  - csharp
+  - vb
+  name: ModelElementLocalizer
+  nameWithType: ModelElementLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  type: Class
+  source:
+    id: ModelElementLocalizer
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 16
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nBase class for all localizer classes that localize model elements.\n"
+  example: []
+  syntax:
+    content: public abstract class ModelElementLocalizer
+    content.vb: Public MustInherit Class ModelElementLocalizer
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
+  - TimeCockpit.Data.Localization.Default.PermissionedElementLocalizer
+  - TimeCockpit.Data.Localization.Default.PermissionLocalizer
+  - TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  extensionMethods:
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  - TimeCockpit.Data.Localization.Default.ModelElementLocalizer.TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(System.String)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: ModelElementLocalizer(String)
+  nameWithType: ModelElementLocalizer.ModelElementLocalizer(String)
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.ModelElementLocalizer(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 32
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Localization.Default.ModelElementLocalizer\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ModelElementLocalizer(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: the name of the element.
+    content.vb: Public Sub New(name As String)
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  id: '#ctor(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)'
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: ModelElementLocalizer(ModelElementLocalizer)
+  nameWithType: ModelElementLocalizer.ModelElementLocalizer(ModelElementLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.ModelElementLocalizer(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 41
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Localization.Default.ModelElementLocalizer\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ModelElementLocalizer(ModelElementLocalizer source)
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+      description: the source to copy from.
+    content.vb: Public Sub New(source As ModelElementLocalizer)
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+  id: Name
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ModelElementLocalizer.Name
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+  type: Property
+  source:
+    id: Name
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 50
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the name of the element.\n"
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+  commentId: P:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+  id: FriendlyName
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: FriendlyName
+  nameWithType: ModelElementLocalizer.FriendlyName
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+  type: Property
+  source:
+    id: FriendlyName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 61
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the <xref href=\"TimeCockpit.Data.Localization.Default.StringLocalizer\" data-throw-if-not-resolved=\"false\"></xref> for the friendly name;\n"
+  example: []
+  syntax:
+    content: public StringLocalizer FriendlyName { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.StringLocalizer
+    content.vb: Public ReadOnly Property FriendlyName As StringLocalizer
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept(TimeCockpit.Data.Localization.Default.LocalizerVisitor)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept(TimeCockpit.Data.Localization.Default.LocalizerVisitor)
+  id: Accept(TimeCockpit.Data.Localization.Default.LocalizerVisitor)
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: Accept(LocalizerVisitor)
+  nameWithType: ModelElementLocalizer.Accept(LocalizerVisitor)
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept(TimeCockpit.Data.Localization.Default.LocalizerVisitor)
+  type: Method
+  source:
+    id: Accept
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 73
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\naccepts a visitor for the elements\n"
+  example: []
+  syntax:
+    content: public virtual void Accept(LocalizerVisitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.Localization.Default.LocalizerVisitor
+      description: the visitor to accept
+    content.vb: Public Overridable Sub Accept(visitor As LocalizerVisitor)
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  id: MergeFrom(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: MergeFrom(ModelElementLocalizer)
+  nameWithType: ModelElementLocalizer.MergeFrom(ModelElementLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  type: Method
+  source:
+    id: MergeFrom
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nMerges names from the source to this.\n"
+  example: []
+  syntax:
+    content: public virtual void MergeFrom(ModelElementLocalizer source)
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+      description: the source to merge from.
+    content.vb: Public Overridable Sub MergeFrom(source As ModelElementLocalizer)
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations
+  id: RemoveLocalizations
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: RemoveLocalizations()
+  nameWithType: ModelElementLocalizer.RemoveLocalizations()
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations()
+  type: Method
+  source:
+    id: RemoveLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 90
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nRemoves all cultures.\n"
+  example: []
+  syntax:
+    content: public virtual void RemoveLocalizations()
+    content.vb: Public Overridable Sub RemoveLocalizations
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone
+  commentId: M:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone
+  id: Clone
+  parent: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: ModelElementLocalizer.Clone()
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone()
+  type: Method
+  source:
+    id: Clone
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\ModelElementLocalizer.cs
+    startLine: 99
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nclones the localizer.\n"
+  example: []
+  syntax:
+    content: public abstract ModelElementLocalizer Clone()
+    return:
+      type: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+      description: a deep copy of the localizer.
+    content.vb: Public MustOverride Function Clone As ModelElementLocalizer
+  overload: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: TimeCockpit.Data.Localization.Default
+  commentId: N:TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: TimeCockpit.Data.Localization.Default
+  nameWithType: TimeCockpit.Data.Localization.Default
+  fullName: TimeCockpit.Data.Localization.Default
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  commentId: M:TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  parent: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper
+  definition: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  name: ClearDirtyFlag()
+  nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag()
+  fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag()
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    name: ClearDirtyFlag
+    nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    name: ClearDirtyFlag
+    nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  commentId: M:TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  parent: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper
+  definition: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  name: GetCultures()
+  nameWithType: DistinctCultureCollectVisitorHelper.GetCultures()
+  fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures()
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+    name: GetCultures
+    nameWithType: DistinctCultureCollectVisitorHelper.GetCultures
+    fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+    name: GetCultures
+    nameWithType: DistinctCultureCollectVisitorHelper.GetCultures
+    fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  isExternal: false
+  name: ClearDirtyFlag(ModelElementLocalizer)
+  nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag(ModelElementLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+    name: ClearDirtyFlag
+    nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+    name: ModelElementLocalizer
+    nameWithType: ModelElementLocalizer
+    fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+    name: ClearDirtyFlag
+    nameWithType: ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+    fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper.ClearDirtyFlag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+    name: ModelElementLocalizer
+    nameWithType: ModelElementLocalizer
+    fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper
+  commentId: T:TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: ClearDirtyFlagVisitorHelper
+  nameWithType: ClearDirtyFlagVisitorHelper
+  fullName: TimeCockpit.Data.Localization.Default.ClearDirtyFlagVisitorHelper
+- uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  isExternal: false
+  name: GetCultures(ModelElementLocalizer)
+  nameWithType: DistinctCultureCollectVisitorHelper.GetCultures(ModelElementLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+    name: GetCultures
+    nameWithType: DistinctCultureCollectVisitorHelper.GetCultures
+    fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+    name: ModelElementLocalizer
+    nameWithType: ModelElementLocalizer
+    fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures(TimeCockpit.Data.Localization.Default.ModelElementLocalizer)
+    name: GetCultures
+    nameWithType: DistinctCultureCollectVisitorHelper.GetCultures
+    fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper.GetCultures
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+    name: ModelElementLocalizer
+    nameWithType: ModelElementLocalizer
+    fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper
+  commentId: T:TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: DistinctCultureCollectVisitorHelper
+  nameWithType: DistinctCultureCollectVisitorHelper
+  fullName: TimeCockpit.Data.Localization.Default.DistinctCultureCollectVisitorHelper
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: ModelElementLocalizer
+  nameWithType: ModelElementLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.#ctor
+  isExternal: false
+  name: ModelElementLocalizer
+  nameWithType: ModelElementLocalizer.ModelElementLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.ModelElementLocalizer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+  isExternal: false
+  name: Name
+  nameWithType: ModelElementLocalizer.Name
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Name
+- uid: TimeCockpit.Data.Localization.Default.StringLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.StringLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: StringLocalizer
+  nameWithType: StringLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StringLocalizer
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+  isExternal: false
+  name: FriendlyName
+  nameWithType: ModelElementLocalizer.FriendlyName
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.FriendlyName
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept
+  isExternal: false
+  name: Accept
+  nameWithType: ModelElementLocalizer.Accept
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Accept
+- uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor
+  commentId: T:TimeCockpit.Data.Localization.Default.LocalizerVisitor
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: LocalizerVisitor
+  nameWithType: LocalizerVisitor
+  fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom
+  isExternal: false
+  name: MergeFrom
+  nameWithType: ModelElementLocalizer.MergeFrom
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.MergeFrom
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations
+  isExternal: false
+  name: RemoveLocalizations
+  nameWithType: ModelElementLocalizer.RemoveLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.RemoveLocalizations
+- uid: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone
+  isExternal: false
+  name: Clone
+  nameWithType: ModelElementLocalizer.Clone
+  fullName: TimeCockpit.Data.Localization.Default.ModelElementLocalizer.Clone

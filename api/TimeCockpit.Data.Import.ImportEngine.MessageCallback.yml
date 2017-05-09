@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Import.ImportEngine.MessageCallback
+  commentId: T:TimeCockpit.Data.Import.ImportEngine.MessageCallback
+  id: ImportEngine.MessageCallback
+  parent: TimeCockpit.Data.Import
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ImportEngine.MessageCallback
+  nameWithType: ImportEngine.MessageCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.MessageCallback
+  type: Delegate
+  source:
+    id: MessageCallback
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data.Import\ImportEngine.cs
+    startLine: 92
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  summary: "\ncallback used to indicate a message on a row in a worksheet.\n"
+  example: []
+  syntax:
+    content: public delegate void MessageCallback(ImportEngine source, string worksheet, int row, ImportMessage.Kind severity, string message);
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Import.ImportEngine
+      description: the import engine producing the event.
+    - id: worksheet
+      type: System.String
+      description: the worksheet the message occurred.
+    - id: row
+      type: System.Int32
+      description: the row the message occurred.
+    - id: severity
+      type: TimeCockpit.Data.Import.ImportMessage.Kind
+      description: the severity level of the message.
+    - id: message
+      type: System.String
+      description: the message.
+    content.vb: Public Delegate Sub MessageCallback(source As ImportEngine, worksheet As String, row As Integer, severity As ImportMessage.Kind, message As String)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: TimeCockpit.Data.Import
+  commentId: N:TimeCockpit.Data.Import
+  isExternal: false
+  name: TimeCockpit.Data.Import
+  nameWithType: TimeCockpit.Data.Import
+  fullName: TimeCockpit.Data.Import
+- uid: TimeCockpit.Data.Import.ImportEngine
+  commentId: T:TimeCockpit.Data.Import.ImportEngine
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportEngine
+  nameWithType: ImportEngine
+  fullName: TimeCockpit.Data.Import.ImportEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: TimeCockpit.Data.Import.ImportMessage.Kind
+  commentId: T:TimeCockpit.Data.Import.ImportMessage.Kind
+  parent: TimeCockpit.Data.Import
+  isExternal: false
+  name: ImportMessage.Kind
+  nameWithType: ImportMessage.Kind
+  fullName: TimeCockpit.Data.Import.ImportMessage.Kind
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

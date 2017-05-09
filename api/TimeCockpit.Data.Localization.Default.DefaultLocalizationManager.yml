@@ -1,0 +1,2104 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  id: DefaultLocalizationManager
+  parent: TimeCockpit.Data.Localization.Default
+  children:
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.Dictionary{System.String,System.String})
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable{System.String})
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext)
+  - TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext,System.Collections.Generic.Dictionary{System.String,System.String})
+  langs:
+  - csharp
+  - vb
+  name: DefaultLocalizationManager
+  nameWithType: DefaultLocalizationManager
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  type: Class
+  source:
+    id: DefaultLocalizationManager
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 28
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nThe standard localizer in CoFX / time cockpit. Loads and Save localization info\nvia <xref href=\"TimeCockpit.Data.Localization.Default.DefaultLocalizer\" data-throw-if-not-resolved=\"false\"></xref> to a compressed binary column (named APP_LocalizedDataModel) in APP_CultureInfo.\nIf the column APP_LocalizedDataModel does not exist, no localization is performed and the InvariantFriendlyNames\nare returned.\n"
+  example: []
+  syntax:
+    content: 'public class DefaultLocalizationManager : NameLocalizer'
+    content.vb: >-
+      Public Class DefaultLocalizationManager
+          Inherits NameLocalizer
+  inheritance:
+  - System.Object
+  - TimeCockpit.Data.Localization.NameLocalizer
+  inheritedMembers:
+  - TimeCockpit.Data.Localization.NameLocalizer.Resources
+  - TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement,TimeCockpit.Data.DataModel.ModelEntityBase)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: DefaultLocalizationManager()
+  nameWithType: DefaultLocalizationManager.DefaultLocalizationManager()
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.DefaultLocalizationManager()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 58
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Localization.Default.DefaultLocalizationManager\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DefaultLocalizationManager()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: '#ctor(TimeCockpit.Data.Localization.Default.DefaultLocalizer,System.Collections.Generic.Dictionary{System.String,System.String})'
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: DefaultLocalizationManager(DefaultLocalizer, Dictionary<String, String>)
+  nameWithType: DefaultLocalizationManager.DefaultLocalizationManager(DefaultLocalizer, Dictionary<String, String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.DefaultLocalizationManager(TimeCockpit.Data.Localization.Default.DefaultLocalizer, System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 69
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Localization.Default.DefaultLocalizationManager\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DefaultLocalizationManager(DefaultLocalizer localizer, Dictionary<string, string> fallbackCultures)
+    parameters:
+    - id: localizer
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: the localizer to use.
+    - id: fallbackCultures
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: the fallback cultures.
+    content.vb: Public Sub New(localizer As DefaultLocalizer, fallbackCultures As Dictionary(Of String, String))
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor*
+  nameWithType.vb: DefaultLocalizationManager.DefaultLocalizationManager(DefaultLocalizer, Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.DefaultLocalizationManager(TimeCockpit.Data.Localization.Default.DefaultLocalizer, System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: DefaultLocalizationManager(DefaultLocalizer, Dictionary(Of String, String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  id: SaveDirtyUserLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: SaveDirtyUserLocalizations(IDataContext, DefaultLocalizer)
+  nameWithType: DefaultLocalizationManager.SaveDirtyUserLocalizations(IDataContext, DefaultLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations(TimeCockpit.Data.IDataContext, TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  type: Method
+  source:
+    id: SaveDirtyUserLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 82
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nsaves the localizations that have been modified to the user column in the culture info.\nBefore saving the localization, the localization info is reloaded and updates are merged from the localization\ninfo in the database.\n"
+  example: []
+  syntax:
+    content: public static void SaveDirtyUserLocalizations(IDataContext dataContext, DefaultLocalizer localizations)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to use.
+    - id: localizations
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: the localization to store.
+    content.vb: Public Shared Sub SaveDirtyUserLocalizations(dataContext As IDataContext, localizations As DefaultLocalizer)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  id: ClearUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: ClearUserLocalizations(IDataContext, IEnumerable<String>)
+  nameWithType: DefaultLocalizationManager.ClearUserLocalizations(IDataContext, IEnumerable<String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    id: ClearUserLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 113
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nRemoves all user localizations for all cultures or for an optionally given list of cultures.\n"
+  example: []
+  syntax:
+    content: public static void ClearUserLocalizations(IDataContext dataContext, IEnumerable<string> cultures = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context to clear.
+    - id: cultures
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The cultures to remove.
+    content.vb: Public Shared Sub ClearUserLocalizations(dataContext As IDataContext, cultures As IEnumerable(Of String) = Nothing)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations*
+  nameWithType.vb: DefaultLocalizationManager.ClearUserLocalizations(IDataContext, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: ClearUserLocalizations(IDataContext, IEnumerable(Of String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  id: SaveDirtyApplicationLocalizations(TimeCockpit.Data.IDataContext,TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: SaveDirtyApplicationLocalizations(IDataContext, DefaultLocalizer)
+  nameWithType: DefaultLocalizationManager.SaveDirtyApplicationLocalizations(IDataContext, DefaultLocalizer)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations(TimeCockpit.Data.IDataContext, TimeCockpit.Data.Localization.Default.DefaultLocalizer)
+  type: Method
+  source:
+    id: SaveDirtyApplicationLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 137
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nsaves the localizations that have been modified to the app column.\n"
+  example: []
+  syntax:
+    content: public static void SaveDirtyApplicationLocalizations(IDataContext dataContext, DefaultLocalizer localizations)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to use.
+    - id: localizations
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: the localization to save.
+    content.vb: Public Shared Sub SaveDirtyApplicationLocalizations(dataContext As IDataContext, localizations As DefaultLocalizer)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  id: GetApplicationLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetApplicationLocalizations(IDataContext, IEnumerable<String>)
+  nameWithType: DefaultLocalizationManager.GetApplicationLocalizations(IDataContext, IEnumerable<String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    id: GetApplicationLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 169
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the application specific localization information for the given culture.\n"
+  example: []
+  syntax:
+    content: public static DefaultLocalizer GetApplicationLocalizations(IDataContext dataContext, IEnumerable<string> cultures)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to use.
+    - id: cultures
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: the cultures to fetch.
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: Returns a new localizer instance with the localizations loaded.
+    content.vb: Public Shared Function GetApplicationLocalizations(dataContext As IDataContext, cultures As IEnumerable(Of String)) As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations*
+  nameWithType.vb: DefaultLocalizationManager.GetApplicationLocalizations(IDataContext, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GetApplicationLocalizations(IDataContext, IEnumerable(Of String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext)
+  id: GetApplicationLocalizations(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetApplicationLocalizations(IDataContext)
+  nameWithType: DefaultLocalizationManager.GetApplicationLocalizations(IDataContext)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: GetApplicationLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 179
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the application localizations for all cultures defined in the model of the data context.\n"
+  example: []
+  syntax:
+    content: public static DefaultLocalizer GetApplicationLocalizations(IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to fetch localizations from.
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: returns a new localizer with all localizations defined in the model.
+    content.vb: Public Shared Function GetApplicationLocalizations(dataContext As IDataContext) As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  id: GetUserLocalizations(TimeCockpit.Data.IDataContext,System.Collections.Generic.IEnumerable{System.String})
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetUserLocalizations(IDataContext, IEnumerable<String>)
+  nameWithType: DefaultLocalizationManager.GetUserLocalizations(IDataContext, IEnumerable<String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    id: GetUserLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 190
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the user specific localization information for the given culture.\n"
+  example: []
+  syntax:
+    content: public static DefaultLocalizer GetUserLocalizations(IDataContext dataContext, IEnumerable<string> cultures)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to use.
+    - id: cultures
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: the cultures to use.
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: returns a new localizer instance with the localization for the user specific parts.
+    content.vb: Public Shared Function GetUserLocalizations(dataContext As IDataContext, cultures As IEnumerable(Of String)) As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations*
+  nameWithType.vb: DefaultLocalizationManager.GetUserLocalizations(IDataContext, IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GetUserLocalizations(IDataContext, IEnumerable(Of String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext)
+  id: GetUserLocalizations(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetUserLocalizations(IDataContext)
+  nameWithType: DefaultLocalizationManager.GetUserLocalizations(IDataContext)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: GetUserLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 200
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the user specific localizations for all cultures defined in the model of the data context.\n"
+  example: []
+  syntax:
+    content: public static DefaultLocalizer GetUserLocalizations(IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to fetch localizations from.
+    return:
+      type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+      description: returns a new localizer with all localizations defined in the model.
+    content.vb: Public Shared Function GetUserLocalizations(dataContext As IDataContext) As DefaultLocalizer
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  id: BuildFallbackChain(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: BuildFallbackChain(String, Dictionary<String, String>, String)
+  nameWithType: DefaultLocalizationManager.BuildFallbackChain(String, Dictionary<String, String>, String)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain(System.String, System.Collections.Generic.Dictionary<System.String, System.String>, System.String)
+  type: Method
+  source:
+    id: BuildFallbackChain
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 212
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nbuilds a fallback chain from the .net cultures and the defined fallback cultures.\n"
+  example: []
+  syntax:
+    content: public static Dictionary<string, string> BuildFallbackChain(string culture, Dictionary<string, string> fallbackCultures, string mainFallback)
+    parameters:
+    - id: culture
+      type: System.String
+      description: The culture to start at.
+    - id: fallbackCultures
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: The fallback cultures defined in the datamodel.
+    - id: mainFallback
+      type: System.String
+      description: The fail-all fallback culture.
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: Returns a string array defining the fallback culture.
+    content.vb: Public Shared Function BuildFallbackChain(culture As String, fallbackCultures As Dictionary(Of String, String), mainFallback As String) As Dictionary(Of String, String)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain*
+  nameWithType.vb: DefaultLocalizationManager.BuildFallbackChain(String, Dictionary(Of String, String), String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain(System.String, System.Collections.Generic.Dictionary(Of System.String, System.String), System.String)
+  name.vb: BuildFallbackChain(String, Dictionary(Of String, String), String)
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable{System.String})
+  id: BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable{System.String})
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: BuildCultureFilterAndParams(IEnumerable<String>)
+  nameWithType: DefaultLocalizationManager.BuildCultureFilterAndParams(IEnumerable<String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    id: BuildCultureFilterAndParams
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 265
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nBuilds the query for selecting all cultures required to load.\n"
+  example: []
+  syntax:
+    content: public static Tuple<string, IEnumerable<QueryParameter>> BuildCultureFilterAndParams(IEnumerable<string> cultures)
+    parameters:
+    - id: cultures
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The cultures to load.
+    return:
+      type: System.Tuple{System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}}
+      description: Returns a tuple containing the query string and the query parameters.
+    content.vb: Public Shared Function BuildCultureFilterAndParams(cultures As IEnumerable(Of String)) As Tuple(Of String, IEnumerable(Of QueryParameter))
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams*
+  nameWithType.vb: DefaultLocalizationManager.BuildCultureFilterAndParams(IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: BuildCultureFilterAndParams(IEnumerable(Of String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext,System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext,System.Collections.Generic.Dictionary{System.String,System.String})
+  id: SetFallbackCultures(TimeCockpit.Data.IDataContext,System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: SetFallbackCultures(IDataContext, Dictionary<String, String>)
+  nameWithType: DefaultLocalizationManager.SetFallbackCultures(IDataContext, Dictionary<String, String>)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext, System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    id: SetFallbackCultures
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 287
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nSets the fallback cultures.\n"
+  example: []
+  syntax:
+    content: public void SetFallbackCultures(IDataContext context, Dictionary<string, string> fb)
+    parameters:
+    - id: context
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to load cultures from.
+    - id: fb
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: the fallback cultures.
+    content.vb: Public Sub SetFallbackCultures(context As IDataContext, fb As Dictionary(Of String, String))
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures*
+  nameWithType.vb: DefaultLocalizationManager.SetFallbackCultures(IDataContext, Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext, System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: SetFallbackCultures(IDataContext, Dictionary(Of String, String))
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  id: GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedFriendlyName(ModelElement, CultureInfo)
+  nameWithType: DefaultLocalizationManager.GetLocalizedFriendlyName(ModelElement, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    id: GetLocalizedFriendlyName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 301
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nReturns the localized friendly name for the specified\nmodel element.\n"
+  example: []
+  syntax:
+    content: public override string GetLocalizedFriendlyName(ModelElement elementToTranslate, CultureInfo targetCulture)
+    parameters:
+    - id: elementToTranslate
+      type: TimeCockpit.Data.DataModel.ModelElement
+      description: Model entity for which a property has to be translated. It has to be a type derived from <xref href="TimeCockpit.Data.DataModel.ModelElement" data-throw-if-not-resolved="false"></xref>.
+    - id: targetCulture
+      type: System.Globalization.CultureInfo
+      description: Target culture for which the implementer has to provide a localized name. The CoFX UI will pass the current UI culture into this parameter.
+    return:
+      type: System.String
+      description: "Localized text that CoFX has to use. A return value of null indicates that the name has no translation. In this case CoFX will use the \n<xref href=\"TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName\" data-throw-if-not-resolved=\"false\"></xref> of the model element repectively the <xref href=\"TimeCockpit.Data.DataModel.ValidationRule.Message\" data-throw-if-not-resolved=\"false\"></xref> of the validation rule."
+    content.vb: Public Overrides Function GetLocalizedFriendlyName(elementToTranslate As ModelElement, targetCulture As CultureInfo) As String
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  id: GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedBackReferenceFriendlyName(Relation, CultureInfo)
+  nameWithType: DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName(Relation, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    id: GetLocalizedBackReferenceFriendlyName
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 332
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nReturns the localized back reference friendly name for the specified\nmodel element.\n"
+  example: []
+  syntax:
+    content: public override string GetLocalizedBackReferenceFriendlyName(Relation elementToTranslate, CultureInfo targetCulture)
+    parameters:
+    - id: elementToTranslate
+      type: TimeCockpit.Data.DataModel.Relation
+      description: Model entity for which a property has to be translated. It has to be a type derived from <xref href="TimeCockpit.Data.DataModel.ModelElement" data-throw-if-not-resolved="false"></xref>.
+    - id: targetCulture
+      type: System.Globalization.CultureInfo
+      description: Target culture for which the implementer has to provide a localized name. The CoFX UI will pass the current UI culture into this parameter.
+    return:
+      type: System.String
+      description: "Localized text that CoFX has to use. A return value of null indicates that the back reference name has no translation. In this case CoFX will use the \n<xref href=\"TimeCockpit.Data.DataModel.Relation.BackReferenceInvariantFriendlyName\" data-throw-if-not-resolved=\"false\"></xref> of the Relation."
+    content.vb: Public Overrides Function GetLocalizedBackReferenceFriendlyName(elementToTranslate As Relation, targetCulture As CultureInfo) As String
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  id: GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedMessage(Permission, CultureInfo)
+  nameWithType: DefaultLocalizationManager.GetLocalizedMessage(Permission, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.Security.Permission, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    id: GetLocalizedMessage
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 369
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nReturns the localized permission message for the specified\npermissions.\n"
+  example: []
+  syntax:
+    content: public override string GetLocalizedMessage(Permission elementToTranslate, CultureInfo targetCulture)
+    parameters:
+    - id: elementToTranslate
+      type: TimeCockpit.Data.Security.Permission
+      description: <xref href="TimeCockpit.Data.Security.Permission" data-throw-if-not-resolved="false"></xref> for which the message has to be translated.
+    - id: targetCulture
+      type: System.Globalization.CultureInfo
+      description: Target culture for which the implementer has to provide a localized name. The CoFX UI will pass the current UI culture into this parameter.
+    return:
+      type: System.String
+      description: "Localized text that CoFX has to use. A return value of null indicates that the message has no translation. In this case CoFX will use the \n<xref href=\"TimeCockpit.Data.Security.Permission.Message\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"TimeCockpit.Data.Security.Permission\" data-throw-if-not-resolved=\"false\"></xref>."
+    content.vb: Public Overrides Function GetLocalizedMessage(elementToTranslate As Permission, targetCulture As CultureInfo) As String
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  id: GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedMessage(ValidationRule, CultureInfo)
+  nameWithType: DefaultLocalizationManager.GetLocalizedMessage(ValidationRule, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule, System.Globalization.CultureInfo)
+  type: Method
+  source:
+    id: GetLocalizedMessage
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 400
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nReturns the localized validation rule message for the specified\nvalidation rule.\n"
+  example: []
+  syntax:
+    content: public override string GetLocalizedMessage(ValidationRule elementToTranslate, CultureInfo targetCulture)
+    parameters:
+    - id: elementToTranslate
+      type: TimeCockpit.Data.DataModel.ValidationRule
+      description: <xref href="TimeCockpit.Data.DataModel.ValidationRule" data-throw-if-not-resolved="false"></xref> for which the message has to be translated.
+    - id: targetCulture
+      type: System.Globalization.CultureInfo
+      description: Target culture for which the implementer has to provide a localized name. The CoFX UI will pass the current UI culture into this parameter.
+    return:
+      type: System.String
+      description: "Localized text that CoFX has to use. A return value of null indicates that the message has no translation. In this case CoFX will use the \n<xref href=\"TimeCockpit.Data.DataModel.ValidationRule.Message\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"TimeCockpit.Data.DataModel.ValidationRule\" data-throw-if-not-resolved=\"false\"></xref>."
+    content.vb: Public Overrides Function GetLocalizedMessage(elementToTranslate As ValidationRule, targetCulture As CultureInfo) As String
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  id: GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: GetLocalizedText(String, CultureInfo, String)
+  nameWithType: DefaultLocalizationManager.GetLocalizedText(String, CultureInfo, String)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText(System.String, System.Globalization.CultureInfo, System.String)
+  type: Method
+  source:
+    id: GetLocalizedText
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 436
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets the localized text by looking at the localizer table loaded. If the target culture\n"
+  example: []
+  syntax:
+    content: public override string GetLocalizedText(string textConstantIdentifier, CultureInfo targetCulture, string defaultText = null)
+    parameters:
+    - id: textConstantIdentifier
+      type: System.String
+      description: The identifier of the text to translate.
+    - id: targetCulture
+      type: System.Globalization.CultureInfo
+      description: The target culture to translate to.
+    - id: defaultText
+      type: System.String
+      description: The default text to fallback to.
+    return:
+      type: System.String
+      description: Returns a localized string.
+    content.vb: Public Overrides Function GetLocalizedText(textConstantIdentifier As String, targetCulture As CultureInfo, defaultText As String = Nothing) As String
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  id: PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: PrepareLocalizations(IDataContext)
+  nameWithType: DefaultLocalizationManager.PrepareLocalizations(IDataContext)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: PrepareLocalizations
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 461
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nprepares the localizer to serve localizations specified.\n"
+  example: []
+  syntax:
+    content: public override void PrepareLocalizations(IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: the data context to query for culture information.
+    content.vb: Public Overrides Sub PrepareLocalizations(dataContext As IDataContext)
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  id: PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: PrepareLocalizationsAsync(IDataContext)
+  nameWithType: DefaultLocalizationManager.PrepareLocalizationsAsync(IDataContext)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: PrepareLocalizationsAsync
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 473
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nPrepares the localizer using the provided dataContext.\n"
+  example: []
+  syntax:
+    content: public override Task PrepareLocalizationsAsync(IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The datacontext to use.
+    return:
+      type: System.Threading.Tasks.Task
+      description: Returns the data context when done loading the localizations.
+    content.vb: Public Overrides Function PrepareLocalizationsAsync(dataContext As IDataContext) As Task
+  overridden: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext)
+  id: SetFallbackCultures(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  langs:
+  - csharp
+  - vb
+  name: SetFallbackCultures(IDataContext)
+  nameWithType: DefaultLocalizationManager.SetFallbackCultures(IDataContext)
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures(TimeCockpit.Data.IDataContext)
+  type: Method
+  source:
+    id: SetFallbackCultures
+    path: E:\Projects\TimeCockpit.Development\Production\V 1.53\Hotfix\Source\TimeCockpit.Data\WPF\TimeCockpit.Data\Localization\Default\DefaultLocalizationManager.cs
+    startLine: 484
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nsets the fallback cultures.\n"
+  example: []
+  syntax:
+    content: public void SetFallbackCultures(IDataContext dataContext)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.IDataContext
+      description: The data context to load localizations from.
+    content.vb: Public Sub SetFallbackCultures(dataContext As IDataContext)
+  overload: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: DefaultLocalizer
+  nameWithType: DefaultLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizer
+- uid: TimeCockpit.Data.Localization.Default
+  commentId: N:TimeCockpit.Data.Localization.Default
+  isExternal: false
+  name: TimeCockpit.Data.Localization.Default
+  nameWithType: TimeCockpit.Data.Localization.Default
+  fullName: TimeCockpit.Data.Localization.Default
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: TimeCockpit.Data.Localization.NameLocalizer
+  commentId: T:TimeCockpit.Data.Localization.NameLocalizer
+  parent: TimeCockpit.Data.Localization
+  isExternal: false
+  name: NameLocalizer
+  nameWithType: NameLocalizer
+  fullName: TimeCockpit.Data.Localization.NameLocalizer
+- uid: TimeCockpit.Data.Localization.NameLocalizer.Resources
+  commentId: P:TimeCockpit.Data.Localization.NameLocalizer.Resources
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: false
+  name: Resources
+  nameWithType: NameLocalizer.Resources
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.Resources
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement,TimeCockpit.Data.DataModel.ModelEntityBase)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement,TimeCockpit.Data.DataModel.ModelEntityBase)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: false
+  name: GetLocalizedMemberNullMessage(ModelElement, ModelEntityBase)
+  nameWithType: NameLocalizer.GetLocalizedMemberNullMessage(ModelElement, ModelEntityBase)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement, TimeCockpit.Data.DataModel.ModelEntityBase)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement,TimeCockpit.Data.DataModel.ModelEntityBase)
+    name: GetLocalizedMemberNullMessage
+    nameWithType: NameLocalizer.GetLocalizedMemberNullMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ModelElement
+    name: ModelElement
+    nameWithType: ModelElement
+    fullName: TimeCockpit.Data.DataModel.ModelElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage(TimeCockpit.Data.DataModel.ModelElement,TimeCockpit.Data.DataModel.ModelEntityBase)
+    name: GetLocalizedMemberNullMessage
+    nameWithType: NameLocalizer.GetLocalizedMemberNullMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMemberNullMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ModelElement
+    name: ModelElement
+    nameWithType: ModelElement
+    fullName: TimeCockpit.Data.DataModel.ModelElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.Localization
+  commentId: N:TimeCockpit.Data.Localization
+  isExternal: false
+  name: TimeCockpit.Data.Localization
+  nameWithType: TimeCockpit.Data.Localization
+  fullName: TimeCockpit.Data.Localization
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+  isExternal: false
+  name: DefaultLocalizationManager
+  nameWithType: DefaultLocalizationManager
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.#ctor
+  isExternal: false
+  name: DefaultLocalizationManager
+  nameWithType: DefaultLocalizationManager.DefaultLocalizationManager
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.DefaultLocalizationManager
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations
+  isExternal: false
+  name: SaveDirtyUserLocalizations
+  nameWithType: DefaultLocalizationManager.SaveDirtyUserLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyUserLocalizations
+- uid: TimeCockpit.Data.IDataContext
+  commentId: T:TimeCockpit.Data.IDataContext
+  parent: TimeCockpit.Data
+  isExternal: false
+  name: IDataContext
+  nameWithType: IDataContext
+  fullName: TimeCockpit.Data.IDataContext
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: false
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations
+  isExternal: false
+  name: ClearUserLocalizations
+  nameWithType: DefaultLocalizationManager.ClearUserLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.ClearUserLocalizations
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations
+  isExternal: false
+  name: SaveDirtyApplicationLocalizations
+  nameWithType: DefaultLocalizationManager.SaveDirtyApplicationLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SaveDirtyApplicationLocalizations
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations
+  isExternal: false
+  name: GetApplicationLocalizations
+  nameWithType: DefaultLocalizationManager.GetApplicationLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetApplicationLocalizations
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations
+  isExternal: false
+  name: GetUserLocalizations
+  nameWithType: DefaultLocalizationManager.GetUserLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetUserLocalizations
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain
+  isExternal: false
+  name: BuildFallbackChain
+  nameWithType: DefaultLocalizationManager.BuildFallbackChain
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildFallbackChain
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams
+  isExternal: false
+  name: BuildCultureFilterAndParams
+  nameWithType: DefaultLocalizationManager.BuildCultureFilterAndParams
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.BuildCultureFilterAndParams
+- uid: System.Tuple{System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}}
+  commentId: T:System.Tuple{System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter}}
+  parent: System
+  definition: System.Tuple`2
+  name: Tuple<String, IEnumerable<QueryParameter>>
+  nameWithType: Tuple<String, IEnumerable<QueryParameter>>
+  fullName: System.Tuple<System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>>
+  nameWithType.vb: Tuple(Of String, IEnumerable(Of QueryParameter))
+  fullName.vb: System.Tuple(Of System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter))
+  name.vb: Tuple(Of String, IEnumerable(Of QueryParameter))
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Tuple`2
+  commentId: T:System.Tuple`2
+  isExternal: true
+  name: Tuple<T1, T2>
+  nameWithType: Tuple<T1, T2>
+  fullName: System.Tuple<T1, T2>
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullName.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures
+  isExternal: false
+  name: SetFallbackCultures
+  nameWithType: DefaultLocalizationManager.SetFallbackCultures
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.SetFallbackCultures
+- uid: TimeCockpit.Data.DataModel.ModelElement
+  commentId: T:TimeCockpit.Data.DataModel.ModelElement
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ModelElement
+  nameWithType: ModelElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: false
+  name: InvariantFriendlyName
+  nameWithType: ModelElement.InvariantFriendlyName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+- uid: TimeCockpit.Data.DataModel.ValidationRule.Message
+  commentId: P:TimeCockpit.Data.DataModel.ValidationRule.Message
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: true
+  name: GetLocalizedFriendlyName(ModelElement, CultureInfo)
+  nameWithType: NameLocalizer.GetLocalizedFriendlyName(ModelElement, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement, System.Globalization.CultureInfo)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+    name: GetLocalizedFriendlyName
+    nameWithType: NameLocalizer.GetLocalizedFriendlyName
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ModelElement
+    name: ModelElement
+    nameWithType: ModelElement
+    fullName: TimeCockpit.Data.DataModel.ModelElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName(TimeCockpit.Data.DataModel.ModelElement,System.Globalization.CultureInfo)
+    name: GetLocalizedFriendlyName
+    nameWithType: NameLocalizer.GetLocalizedFriendlyName
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedFriendlyName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ModelElement
+    name: ModelElement
+    nameWithType: ModelElement
+    fullName: TimeCockpit.Data.DataModel.ModelElement
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName
+  isExternal: false
+  name: GetLocalizedFriendlyName
+  nameWithType: DefaultLocalizationManager.GetLocalizedFriendlyName
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedFriendlyName
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: false
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: false
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+- uid: TimeCockpit.Data.DataModel.Relation.BackReferenceInvariantFriendlyName
+  commentId: P:TimeCockpit.Data.DataModel.Relation.BackReferenceInvariantFriendlyName
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: true
+  name: GetLocalizedBackReferenceFriendlyName(Relation, CultureInfo)
+  nameWithType: NameLocalizer.GetLocalizedBackReferenceFriendlyName(Relation, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation, System.Globalization.CultureInfo)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+    name: GetLocalizedBackReferenceFriendlyName
+    nameWithType: NameLocalizer.GetLocalizedBackReferenceFriendlyName
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Relation
+    name: Relation
+    nameWithType: Relation
+    fullName: TimeCockpit.Data.DataModel.Relation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName(TimeCockpit.Data.DataModel.Relation,System.Globalization.CultureInfo)
+    name: GetLocalizedBackReferenceFriendlyName
+    nameWithType: NameLocalizer.GetLocalizedBackReferenceFriendlyName
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedBackReferenceFriendlyName
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Relation
+    name: Relation
+    nameWithType: Relation
+    fullName: TimeCockpit.Data.DataModel.Relation
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName
+  isExternal: false
+  name: GetLocalizedBackReferenceFriendlyName
+  nameWithType: DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedBackReferenceFriendlyName
+- uid: TimeCockpit.Data.DataModel.Relation
+  commentId: T:TimeCockpit.Data.DataModel.Relation
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: Relation
+  nameWithType: Relation
+  fullName: TimeCockpit.Data.DataModel.Relation
+- uid: TimeCockpit.Data.Security.Permission
+  commentId: T:TimeCockpit.Data.Security.Permission
+  parent: TimeCockpit.Data.Security
+  isExternal: false
+  name: Permission
+  nameWithType: Permission
+  fullName: TimeCockpit.Data.Security.Permission
+- uid: TimeCockpit.Data.Security.Permission.Message
+  commentId: P:TimeCockpit.Data.Security.Permission.Message
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: true
+  name: GetLocalizedMessage(Permission, CultureInfo)
+  nameWithType: NameLocalizer.GetLocalizedMessage(Permission, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission, System.Globalization.CultureInfo)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+    name: GetLocalizedMessage
+    nameWithType: NameLocalizer.GetLocalizedMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Security.Permission
+    name: Permission
+    nameWithType: Permission
+    fullName: TimeCockpit.Data.Security.Permission
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.Security.Permission,System.Globalization.CultureInfo)
+    name: GetLocalizedMessage
+    nameWithType: NameLocalizer.GetLocalizedMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.Security.Permission
+    name: Permission
+    nameWithType: Permission
+    fullName: TimeCockpit.Data.Security.Permission
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage
+  isExternal: false
+  name: GetLocalizedMessage
+  nameWithType: DefaultLocalizationManager.GetLocalizedMessage
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedMessage
+- uid: TimeCockpit.Data.Security
+  commentId: N:TimeCockpit.Data.Security
+  isExternal: false
+  name: TimeCockpit.Data.Security
+  nameWithType: TimeCockpit.Data.Security
+  fullName: TimeCockpit.Data.Security
+- uid: TimeCockpit.Data.DataModel.ValidationRule
+  commentId: T:TimeCockpit.Data.DataModel.ValidationRule
+  parent: TimeCockpit.Data.DataModel
+  isExternal: false
+  name: ValidationRule
+  nameWithType: ValidationRule
+  fullName: TimeCockpit.Data.DataModel.ValidationRule
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: true
+  name: GetLocalizedMessage(ValidationRule, CultureInfo)
+  nameWithType: NameLocalizer.GetLocalizedMessage(ValidationRule, CultureInfo)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule, System.Globalization.CultureInfo)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+    name: GetLocalizedMessage
+    nameWithType: NameLocalizer.GetLocalizedMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ValidationRule
+    name: ValidationRule
+    nameWithType: ValidationRule
+    fullName: TimeCockpit.Data.DataModel.ValidationRule
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage(TimeCockpit.Data.DataModel.ValidationRule,System.Globalization.CultureInfo)
+    name: GetLocalizedMessage
+    nameWithType: NameLocalizer.GetLocalizedMessage
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.ValidationRule
+    name: ValidationRule
+    nameWithType: ValidationRule
+    fullName: TimeCockpit.Data.DataModel.ValidationRule
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: true
+  name: GetLocalizedText(String, CultureInfo, String)
+  nameWithType: NameLocalizer.GetLocalizedText(String, CultureInfo, String)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String, System.Globalization.CultureInfo, System.String)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+    name: GetLocalizedText
+    nameWithType: NameLocalizer.GetLocalizedText
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText(System.String,System.Globalization.CultureInfo,System.String)
+    name: GetLocalizedText
+    nameWithType: NameLocalizer.GetLocalizedText
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.GetLocalizedText
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Globalization.CultureInfo
+    name: CultureInfo
+    nameWithType: CultureInfo
+    fullName: System.Globalization.CultureInfo
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText
+  isExternal: false
+  name: GetLocalizedText
+  nameWithType: DefaultLocalizationManager.GetLocalizedText
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.GetLocalizedText
+- uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: false
+  name: PrepareLocalizations(IDataContext)
+  nameWithType: NameLocalizer.PrepareLocalizations(IDataContext)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+    name: PrepareLocalizations
+    nameWithType: NameLocalizer.PrepareLocalizations
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations(TimeCockpit.Data.IDataContext)
+    name: PrepareLocalizations
+    nameWithType: NameLocalizer.PrepareLocalizations
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizations
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations
+  isExternal: false
+  name: PrepareLocalizations
+  nameWithType: DefaultLocalizationManager.PrepareLocalizations
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizations
+- uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  commentId: M:TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  parent: TimeCockpit.Data.Localization.NameLocalizer
+  isExternal: false
+  name: PrepareLocalizationsAsync(IDataContext)
+  nameWithType: NameLocalizer.PrepareLocalizationsAsync(IDataContext)
+  fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+    name: PrepareLocalizationsAsync
+    nameWithType: NameLocalizer.PrepareLocalizationsAsync
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync(TimeCockpit.Data.IDataContext)
+    name: PrepareLocalizationsAsync
+    nameWithType: NameLocalizer.PrepareLocalizationsAsync
+    fullName: TimeCockpit.Data.Localization.NameLocalizer.PrepareLocalizationsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.IDataContext
+    name: IDataContext
+    nameWithType: IDataContext
+    fullName: TimeCockpit.Data.IDataContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync
+  isExternal: false
+  name: PrepareLocalizationsAsync
+  nameWithType: DefaultLocalizationManager.PrepareLocalizationsAsync
+  fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizationManager.PrepareLocalizationsAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
