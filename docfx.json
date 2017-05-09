@@ -1,0 +1,83 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**",
+            "_site/**"
+          ],
+          "src": "E:/Projects/TimeCockpit.Development/Dev/UI/Source/TimeCockpit.Data/WPF/"
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "doc/**.md",
+          "doc/**/toc.yml",
+          "release-notes/**.md",
+          "release-notes/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "release-notes/images/**"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    // "overwrite": [
+    //   {
+    //     "files": [
+    //       "apidoc/**.md"
+    //     ],
+    //     "exclude": [
+    //       "obj/**",
+    //       "_site/**"
+    //     ]
+    //   }
+    // ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "globalMetadata": {
+      "_appFaviconPath": "images/favicon.ico",
+      "_appFooter": "Copyright © 2017 software architects gmbh<br/>&nbsp;",
+      "_appLogoPath": "images/time-cockpit-logo.png",
+      "_appTitle": "Time Cockpit Help",
+      "_enableSearch": true
+    },
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "tctemplate"
+    ],
+    "postProcessors": [],
+    "noLangKeyword": false
+  }
+}

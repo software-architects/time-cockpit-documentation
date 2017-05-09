@@ -1,0 +1,2 @@
+# Time Cockpit Documentation
+If you are unable to find the information you are looking for on this page or at the [time cockpit website](http://www.timecockpit.com), please [contact us](http://www.timecockpit.com/help-support/contact-us).
