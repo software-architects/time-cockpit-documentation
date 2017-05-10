@@ -1,3 +1,3 @@
 # Product Documentation
 
-Documentation for this topic is still missing.
+[!include[test](../not-available.md)]
