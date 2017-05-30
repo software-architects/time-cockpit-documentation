@@ -8,12 +8,19 @@ time cockpit supports file attachments to database rows. To store the file's con
 
 The following example shows how to add a file property to the entity `Contact`:
 
-...
+[!code-python[Create file property](code/add-avatar-to-contact.py)]
 
 ## Using the Property
 
-You can use the TimeCockpit.Data.DataModel.FileProperty just like you use any other property type. You can add a TimeCockpit.Data.DataModel.View.BoundCell to your list and/or form and time cockpit will automatically discover that your property represents a file and will display it appropriately (e.g. if it is an image it will display the image in the list). If you want more control over how the file property is displayed in your list or form use TimeCockpit.Data.DataModel.View.FileCell instead of TimeCockpit.Data.DataModel.View.BoundCell.
+You can use the <xref:TimeCockpit.Data.DataModel.FileProperty> just like you use any other property type. You can add a <xref:TimeCockpit.Data.DataModel.View.BoundCell> to your list and form and time cockpit will automatically discover that your property represents a file and will display it appropriately (e.g. if it is an image it will display the image in the list). If you want more control over how the file property is displayed in your list or form use <xref:TimeCockpit.Data.DataModel.View.FileCell> instead of <xref:TimeCockpit.Data.DataModel.View.BoundCell>.
 
-The following example uses a TimeCockpit.Data.DataModel.View.BoundCell to display the file property `USR_Avatar`.
+The following example uses a <xref:TimeCockpit.Data.DataModel.View.BoundCell> to display the file property `USR_Avatar`.
 
-...
+```xml
+<List AllowDelete="True" AllowEdit="True" Query="From I In USR_Contact.Include(*) Select I" 
+    xmlns="clr-namespace:TimeCockpit.Data.DataModel.View;assembly=TimeCockpit.Data"> 
+    <BoundCell Content="=Current.USR_Avatar" /> 
+    <BoundCell Content="=Current.USR_FirstName" /> 
+    <BoundCell Content="=Current.USR_LastName" /> 
+</List>
+```
