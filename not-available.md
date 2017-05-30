@@ -1,1 +1,1 @@
-Documentation for this section is not yet available.
+Documentation for this section is not yet available in the new documentation. Please refer to our former documentation at [https://help.timecockpit.com](https://help.timecockpit.com).
