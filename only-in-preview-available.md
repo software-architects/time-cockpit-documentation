@@ -1,2 +1,2 @@
 > [!WARNING]
-> These features and fixes are as yet only available at https://web-preview.timecockpit.com.
+> These features and fixes are yet only available at https://web-preview.timecockpit.com.

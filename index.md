@@ -16,7 +16,7 @@
 </div>
 
 <div class="col-sm-4 tc-card">
-<div onclick="document.location.href='/release-notes/2017-05.html'">
+<div onclick="document.location.href='/release-notes/2017-06.html'">
     <p><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></p>
     <p>Release Notes</p>
 </div>
