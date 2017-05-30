@@ -1,3 +1,3 @@
 # How To: Modify the Data Model
 
-[!include[test](../not-available.md)]
+[!include[not available](~/not-available.md)]
