@@ -16,7 +16,7 @@ You can use the <xref:TimeCockpit.Data.DataModel.FileProperty> just like you use
 
 The following example uses a <xref:TimeCockpit.Data.DataModel.View.BoundCell> to display the file property `USR_Avatar`.
 
-```xml
+```
 <List AllowDelete="True" AllowEdit="True" Query="From I In USR_Contact.Include(*) Select I" 
     xmlns="clr-namespace:TimeCockpit.Data.DataModel.View;assembly=TimeCockpit.Data"> 
     <BoundCell Content="=Current.USR_Avatar" /> 
