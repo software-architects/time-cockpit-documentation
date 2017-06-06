@@ -35,13 +35,13 @@ Before an action is executed, time cockpit reloads the corresponding data rows b
 > [!WARNING]
 Be aware that the input set does not guarantee a defined object order. Sorting may be required depending on the use-case.
 
-For reloading the entities, time cockpit generates a [TCQL statement](~/doc/tcql/overview.md) with the following structure: `From C In [ModelEntityName][IncludeClause] Where C.[ModelEntityName]Uuid In {[SelectedUuids]} Select C`.
+For reloading the entities, time cockpit generates a [TCQL](xref:tcql) statement with the following structure: `From C In [ModelEntityName][IncludeClause] Where C.[ModelEntityName]Uuid In {[SelectedUuids]} Select C`.
 
 The <xref:TimeCockpit.Data.DataModel.ModelEntity> is determined by the list or form in which the user has called the action. If the user calls an action in the time sheet calendar, the underlying <xref:TimeCockpit.Data.DataModel.ModelEntity> is always `TimeSheet`.
 
 The SelectedUuids are determined by the form, the selected items in the list, or the selected items in the time sheet calendar.
 
-The `IncludeClause` (more about include clauses in [TCQL](~/doc/tcql/overview.md)) is determined by the following factors:
+The `IncludeClause` (more about include clauses in [TCQL](xref:tcql) is determined by the following factors:
 
 - The action can contain a processing directive # IncludeClause that specifies which relations should be included (details see chapter [IncludeClause Processing Directive](#includeclause-processing-directive)).
 
