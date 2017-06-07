@@ -4,12 +4,12 @@ For reporting purposes it is often necessary to automatically export data into M
 
 time cockpit supports two ways of exporting data to Microsoft Office Excel:
 
-- Use time cockpit's [built-in export function](data-exchange/excel-export.md).
+- Use time cockpit's [built-in export function](~/doc/data-exchange/export.md).
 - In case you need something very special (e.g. special formatting of the resulting Microsoft Office Excel file) you can use Microsoft Office automation in [IronPython](http://ironpython.net/).
 
 ## Using Built-In Microsoft Office Excel Export Function
 
-The following sample shows how to export the result of a [TCQL query](../tcql/overview.md) using an export [template file]((data-exchange/excel-export.md)) inside a script:
+The following sample shows how to export the result of a [TCQL query](~/doc/tcql/overview.md) using an export [template file](~/doc/data-exchange/export.md) inside a script:
 
 > [!NOTE]
 The Export method shown in the code below expects either a template file or a list definition. If you specify a template the list definition is ignored. If you do not specify a template file you have to specify a list definition (i.e. template is automatically built based on the list definition).

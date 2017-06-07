@@ -34,7 +34,7 @@ Yes and no. Custom reports in time cockpit use time cockpit's existing filtering
 No, this is currently not supported. The time cockpit list engine is very powerful. You can even create lists based on [time cockpit scripts](~/doc/scripting/overview.md). In such script you can put together data from all areas in time cockpit. However, this is a quite advanced scenario. If you want to build such a report and you have questions about it, please contact us at [support@timecockpit.com](mailto:support@timecockpit.com).
 
 1. **Can I combine data from time cockpit and other sources in a single report?**<br/>
-No, this is currently not supported. If you want to include data in your report, you have to first import it into time cockpit. You can use time cockpit's [Excel importer](~/doc/data-exchange/importer.md) for that.
+No, this is currently not supported. If you want to include data in your report, you have to first import it into time cockpit. You can use time cockpit's [Excel importer](~/doc/data-exchange/import.md) for that.
 
 1. **Can I automatically send reports to users?**<br/>
 No, this is currently not supported. Would you like to have this functionality? We would love to hear your feedback at [support@timecockpit.com](mailto:support@timecockpit.com).
