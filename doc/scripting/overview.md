@@ -24,7 +24,7 @@ You can execute scripts using the Execute button in the ribbon or the F5 key. If
 
 You can use all Python language constructs that are supported by IronPython. If you want to learn more about the language Python we recommend the [documentation web site for IronPython](http://ironpython.net/documentation/).
 
-If you want to interact with the data access layer of time cockpit from within your script you have to use the <xref:TimeCockpit.Data.DataContext> class. The time cockpit script runtime creates an instance of this class for you and assigns it to the `Context` variable. The following sample scripts shows how to execute a [TCQL statement](../tcql/overview.md) and print the result:
+If you want to interact with the data access layer of time cockpit from within your script you have to use the <xref:TimeCockpit.Data.DataContext> class. The time cockpit script runtime creates an instance of this class for you and assigns it to the `Context` variable. The following sample scripts shows how to execute a [TCQL statement](~/doc/tcql/overview.md) and print the result:
 
 ```python
 for proj in Context.Select("From P In Project Select P"):

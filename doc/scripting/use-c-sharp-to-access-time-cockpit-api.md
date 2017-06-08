@@ -3,7 +3,7 @@
 You can not only access time cockpit's API using [IronPython](http://ironpython.net/), you can also use your favorite .NET programming language (e.g. C#).
 
 > [!NOTE]
-Note that the code in this example connects to a user's [server data store](../getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
+Note that the code in this example connects to a user's [server data store](~/doc/getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
 
 ## Project References
 
@@ -29,7 +29,7 @@ You can find the assemblies mentioned in this list in time cockpit's installatio
 
 ## Web Service Endpoint Definition
 
-time cockpit uses a web service to locate the user's [server data store](../getting-started/system-architecture.md#central-data-storage). Therefore it is necessary to define the web service endpoint in the program's application config file:
+time cockpit uses a web service to locate the user's [server data store](~/doc/getting-started/system-architecture.md#central-data-storage). Therefore it is necessary to define the web service endpoint in the program's application config file:
 
 [!code-xml[Web service configuration](code/web-service-configuration.xml)]
 

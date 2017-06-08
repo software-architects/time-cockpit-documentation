@@ -49,7 +49,7 @@ if model.Entities.Contains("Project") == False:
 
 Entities (<xref:TimeCockpit.Data.DataModel.ModelEntity>) can have rules that define whether their content is valid ([ModelEntityBase.ValidationRules](xref:TimeCockpit.Data.DataModel.ModelEntityBase#TimeCockpit_Data_DataModel_ModelEntityBase_ValidationRules)). You can add, update and remove validation rules.
 
-Validation rules are based on time cockpit's [TCQL expression language](../tcql/overview.md).
+Validation rules are based on time cockpit's [TCQL expression language](~/doc/tcql/overview.md).
 
 The following example shows how to create a model entity with a validation rule in a Python script.
 
