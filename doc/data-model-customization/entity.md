@@ -12,7 +12,6 @@ Example: The standard data model featues a validation rule ```APP_ValidateCustom
 
 In the ```Customization``` module, a tree of all the entities, lists, forms, actions, modules, and sets contained in the data model are displayed. These can only be edited on the ```Server``` in order to avoid synchronization conflicts at data model level.
 
-> [!NOTE]
 > Each entity in the time cockpit data model corresponds to a table in the underlying database.
 
 ![Edit Entity](images/edit-entity.png "Edit Entity")
