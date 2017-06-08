@@ -12,4 +12,4 @@ Example: The standard data model featues a validation rule ```APP_ValidateCustom
 
 
 
-![Multi select in grid](images/2017-04/multi-select.png "Multi select in grid")
+![Edit Entity](images/edit-entity.png "Edit Entity")
