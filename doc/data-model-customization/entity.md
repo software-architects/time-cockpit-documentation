@@ -66,3 +66,7 @@ Entities can have relationships to other entities. These relationships correspon
 > [!NOTE]
 Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
 
+When creating a new relationship, the following properties can be set:
+
+* Specifies the other entity to which the source entity is related.
+* Back-reference name: From a database point of view, a relationship has two directions. For example, the relationship customer on the project entity has the direction ```Project -> Customer``` and on the other hand ```Customer -> Project```. ```Project -> Customer``` assigns exactly one project to one customer. ```Customer -> Project``` means all projects assigned to a customer. The latter direction is represented in time cockpit with a named back-reference. Back-references can be navigated using [TCQL subqueries](~/doc/tcql/expression-language.md). In addition, the back-reference name is used to create so-called back-reference tabs (see also [:N Hyperlinks](~/doc/scripting/customizing-lists.md)).
