@@ -52,4 +52,9 @@ Each property in the time cockpit data model corresponds to a column in a table 
 * **DateTime properties:** DateTime properties are used to store date values with time. As with date properties, users can specify with ```date format``` in which format a date and time property is displayed in the user interface. Possible values for date formats can be found at [Format Strings](http://msdn.microsoft.com/en-us/library/zdtaw1bw.aspx).
 
 * **Numeric property:** Numeric properties are used to store numeric values. For numeric properties, different parameters can be defined:
-  * Maximum number of digits: Sets the maximum number of digits before and after decimal digits.
+  * Maximum number of digits: Sets the maximum number of digits before and after the number's comma.
+  * Number of decimal places: Specifies the number of digits after the comma. That is, the number of decimal places for a number 3 is configured, the numeric value for the number property is rounded to 3 decimal places.
+  * Number format: Similar to date properties, the format can also be defined for number properties. For possible values, see [Format Strings](https://msdn.microsoft.com/en-us/library/fzeeb5cd.aspx).
+  
+  
+  
