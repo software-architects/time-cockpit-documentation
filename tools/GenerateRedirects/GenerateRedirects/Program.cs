@@ -13,13 +13,15 @@ namespace GenerateRedirects
 		static string namespaceName = string.Empty;
 		static string className = string.Empty;
 		static string result = string.Empty;
+        static string lastRedirect = string.Empty;
 
-		static void Main(string[] args)
+        static void Main(string[] args)
 		{
 			var document = XDocument.Load(@"..\..\WebTOC.xml");
 			var root = document.Descendants("HelpTOC").First();
 			ProcessElements(root, 0);
 			File.WriteAllText(@"..\..\redirects.xml", result);
+            Console.WriteLine("DONE");
 			Console.ReadLine();
 		}
 
@@ -57,22 +59,28 @@ namespace GenerateRedirects
 						switch (type)
 						{
 							case "Members":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html";
+                                result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							case "Constructor":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#constructors\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#constructors";
+								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							case "Methods":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#methods\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#methods";
+                                result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							case "Properties":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#properties\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#properties";
+                                result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							case "Fields":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#fields\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#fields";
+                                result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							case "Events":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#events\" />\r\n";
+                                lastRedirect = $"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#events";
+                                result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
 								break;
 							default:
 								Console.WriteLine($"ERROR - {namespaceName}.{className} {type}");
@@ -81,18 +89,12 @@ namespace GenerateRedirects
 
 						break;
 					case 4:
-						switch (type)
-						{
-							case "Property":
-								result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"https://docs.timecockpit.com/api/{namespaceName}.{className}.html#{namespaceName.Replace(".", "_")}_{className}_{name}\" />\r\n";
-								break;
-							default:
-								Console.WriteLine($"ERROR - {namespaceName}.{className}.{name} {type}");
-								break;
-						}
-
-						break;
-					default:
+                        result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
+                        break;
+                    case 5:
+                        result += $"<Mapping RequestPath=\"{mapping.Attribute("Url").Value}\" RewritePath=\"{lastRedirect}\" />\r\n";
+                        break;
+                    default:
 						Console.WriteLine($"{name} - {type}");
 						break;
 				}
