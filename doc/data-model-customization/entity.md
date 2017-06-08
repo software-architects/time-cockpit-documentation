@@ -23,3 +23,7 @@ In the editor you can add and modify the properties of the entity, relationships
 The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
 
 ![Edit Project](images/edit-project.png "Edit Project")
+
+## System Properties of an Entity
+
+* Invariant friendly name: The invariant friendly name represents the name of an entity in a user-friendly form. Each entity has two names. On the one hand, a unique name (technical name) is assigned in the entire data model when an entity is created. This name is used as a table name in the database and appears only in the administration area. The invariant friendly name is for display to users.
