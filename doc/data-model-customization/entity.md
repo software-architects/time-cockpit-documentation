@@ -36,4 +36,4 @@ The deletion of properties and relations, as well as the insertion of properties
 
 * **Default list for relations:** Users can create a custom list for an entity and set it as default list for relations. Example: If the entity ```APP_Project``` has a custom list for relations "CustomProjectRelationList", the list is used in the user interface whenever a list of projects needs to be displayed in a combo box.
 
-* **Default form:**
+* **Default form:** The default form property behaves similar to the default list property. The only difference is that a default form is used by the user interface whenever a single instance of a record (e.g., a project) is to be displayed. If no default form is stored, time cockpit generates a form with all properties and relations of the entity.
