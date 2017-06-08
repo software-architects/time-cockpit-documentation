@@ -47,4 +47,6 @@ Each property in the time cockpit data model corresponds to a column in a table 
 
 * **Text properties:** Text properties are used to store text. ```Maximum length``` allows users to define how long (in characters) the text may be. Text properties with a length of less than 100 characters are represented in the user interface with a single line input field. Texts with a maximum length of more than 100 lines are represented with multi-line input fields (this behavior can be changed in the respective form).
 
-* **Date property:** Date properties are used to store date values without time. With date format, users can define in which format a date value is displayed in the user interface. For possible values for date formats, see ([Format Strings](http://msdn.microsoft.com/en-us/library/zdtaw1bw.aspx)).
+* **Date property:** Date properties are used to store date values without time. With ```date format```, users can define in which format a date value is displayed in the user interface. For possible values for date formats, see [Format Strings](http://msdn.microsoft.com/en-us/library/zdtaw1bw.aspx).
+
+* **DateTime Properties:** DateTime properties are used to store date values with time. As with date properties, users can specify with date format in which format a date and time property is displayed in the user interface. Possible values for date formats can be found at [Format Strings](http://msdn.microsoft.com/en-us/library/zdtaw1bw.aspx).
