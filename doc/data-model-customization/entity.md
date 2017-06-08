@@ -12,6 +12,9 @@ Example: The standard data model featues a validation rule ```APP_ValidateCustom
 
 In the ```Customization``` module, a tree of all the entities, lists, forms, actions, modules, and sets contained in the data model are displayed. These can only be edited on the ```Server``` in order to avoid synchronization conflicts at data model level.
 
-> Each entity in the time cockpit data model corresponds to a table in the underlying database.
+> [!NOTE]
+Each entity in the time cockpit data model corresponds to a table in the underlying database.
 
 ![Edit Entity](images/edit-entity.png "Edit Entity")
+
+In the editor you can add and modify the properties of the entity, relationships to other entities, validation rules, permissions, and interfaces provided by the entity. Basically, each of the different elements can be added with the ```New``` button in the Ribbon. The ```New``` button is context-dependent, ie a new element of the selected type is created depending on which subgroup is selected on elements (properties, relationships, etc.).
