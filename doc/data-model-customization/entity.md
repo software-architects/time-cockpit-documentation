@@ -56,6 +56,8 @@ Each property in the time cockpit data model corresponds to a column in a table 
   * Number of decimal places: Specifies the number of digits after the comma. That is, the number of decimal places for a number 3 is configured, the numeric value for the number property is rounded to 3 decimal places.
   * Number format: Similar to date properties, the format can also be defined for number properties. For possible values, see [Format Strings](https://msdn.microsoft.com/en-us/library/fzeeb5cd.aspx).
   * Aggregation function: The aggregation function defines the behavior of a numeric property in the case of a grouping in a list. For example, if a project list is grouped by customer, and the budget property is stored as an aggregation function ```Sum```, the values of budget per customer are added up and a total sum is displayed.
+* **Boolean property:** Boolean properties are used to store true / false values.
+* **Calculated property:** Calculated properties are used to calculate values using ([TCQL expressions](~/doc/tcql/expression-language.md)). With calculated properties, non-concrete values are stored in the database, but only the formulas that lead to a value. For example, an example of a calculated property on the entity ```APP_Project``` is ```FullName```. The formula for determining the full name of a project is ```:Iif(Current.Customer = Null, '(n/a).', Current.Customer.Code + '.') + Current.Code```. As can be seen from the formula, the calculated property accesses other properties of the project entity and determines a project name for a project.
   
   
   
