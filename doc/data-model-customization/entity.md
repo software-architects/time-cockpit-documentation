@@ -29,3 +29,5 @@ The deletion of properties and relations, as well as the insertion of properties
 * **Invariant friendly name:** The invariant friendly name represents the name of an entity in a user-friendly form. Each entity has two names. On the one hand, a unique technical name (e.g. ```APP_Project```) is assigned when an entity is created. This name is used as a table name in the database and appears only in the administration area. The invariant friendly name is shown in the user interface.
 
 * **Default display property**: The default display property indicates which property is displayed by default (e.g., in a combo box) when an instance of an entity is displayed in the user interface. For example, in the case of customers, the default display property is ```CompanyName```.
+
+![Default Display Property](images/default-display-property.png "Default Display Property")
