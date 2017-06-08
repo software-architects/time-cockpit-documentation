@@ -59,7 +59,7 @@ Each property in the time cockpit data model corresponds to a column in a table 
 * **Boolean property:** Boolean properties are used to store true / false values.
 * **Calculated property:** Calculated properties are used to calculate values using [TCQL expressions](~/doc/tcql/expression-language.md). With calculated properties, non-concrete values are stored in the database, but only the formulas that lead to a value. For example, an example of a calculated property on the entity ```APP_Project``` is ```FullName```. The formula for determining the full name of a project is ```:Iif(Current.Customer = Null, '(n/a).', Current.Customer.Code + '.') + Current.Code```. As can be seen from the formula, the calculated property accesses other properties of the project entity and determines a project name for a project.
   
- ## Relations
+## Relations
  
 Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](~/doc/scripting/customizing-lists.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
 
@@ -76,4 +76,9 @@ Best practice for naming back-references using the example of the relationship `
 
 > [!ATTENTION]
 Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
+
+## M:N Relationships (multiple assignments)
+
+M:N relationships can be implemented with entities in time cockpit. A use case for a multiple assignment would be, for example, the assignment of a project to several customers. This scenario can be implemented with an assignment entity. An assignment entity consists at least of two relationships to the entities that are to be assigned in a multiple assignment. In the case of a multiple assignment from project to customer, the assignment entity ```CustomerProjectMapping``` would therefore have a relationship to ```Project``` and ```Customer```.
+
 
