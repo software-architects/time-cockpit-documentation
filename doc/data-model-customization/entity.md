@@ -32,7 +32,7 @@ The deletion of properties and relations, as well as the insertion of properties
 
 ![Default Display Property](images/default-display-property.png "Default Display Property")
 
-* **Default list:** Users can create custom lists for entities (see ([Custom Lists](~/doc/scripting/customizing-lists.md))) These custom lists can be set as a default list for an entity. If, for example, a list "MyProjectList" is defined for a project and set as a default list, MyProjectList is used in the user interface whenever a list of projects needs to be displayed. If no default list is selected, time cockpit automatically generates a list of all properties and relations of an entity on the fly.
+* **Default list:** Users can create custom lists for entities (see [Custom Lists](~/doc/scripting/customizing-lists.md)) These custom lists can be set as a default list for an entity. If, for example, a list "MyProjectList" is defined for a project and set as a default list, MyProjectList is used in the user interface whenever a list of projects needs to be displayed. If no default list is selected, time cockpit automatically generates a list of all properties and relations of an entity on the fly.
 
 * **Default list for relations:** Users can create a custom list for an entity and set it as default list for relations. Example: If the entity ```APP_Project``` has a custom list for relations "CustomProjectRelationList", the list is used in the user interface whenever a list of projects needs to be displayed in a combo box.
 
