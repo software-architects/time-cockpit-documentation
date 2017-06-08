@@ -59,5 +59,6 @@ Each property in the time cockpit data model corresponds to a column in a table 
 * **Boolean property:** Boolean properties are used to store true / false values.
 * **Calculated property:** Calculated properties are used to calculate values using [TCQL expressions](~/doc/tcql/expression-language.md). With calculated properties, non-concrete values are stored in the database, but only the formulas that lead to a value. For example, an example of a calculated property on the entity ```APP_Project``` is ```FullName```. The formula for determining the full name of a project is ```:Iif(Current.Customer = Null, '(n/a).', Current.Customer.Code + '.') + Current.Code```. As can be seen from the formula, the calculated property accesses other properties of the project entity and determines a project name for a project.
   
-  
-  
+ ## Relations
+ 
+Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](~/doc/scripting/customizing-lists.md). Just as one can access properties of an entity in TCQL, one can also access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
