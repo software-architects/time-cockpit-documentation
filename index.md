@@ -2,7 +2,7 @@
 
 <div class="row tc-card-row">
 <div class="col-sm-4 tc-card">
-<div onclick="document.location.href='/doc/'">
+<div onclick="document.location.href='/doc/getting-started/overview.md'">
     <p><span class="glyphicon glyphicon-book" aria-hidden="true"></span></p>
     <p>Product Documentation</p>
 </div>
