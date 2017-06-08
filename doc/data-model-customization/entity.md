@@ -21,3 +21,5 @@ In the editor you can add and modify the properties of the entity, relationships
 
 > [!NOTE]
 The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
+
+![Edit Project](images/edit-project.png "Edit Project")
