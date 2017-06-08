@@ -81,4 +81,4 @@ Back-references cannot be accessed in TCQL. For example, the expression ```Curre
 
 M:N relationships can be implemented with entities in time cockpit. A use case for a multiple assignment would be, for example, the assignment of a project to several customers. This scenario can be implemented with an assignment entity. An assignment entity consists at least of two relationships to the entities that are to be assigned in a multiple assignment. In the case of a multiple assignment from project to customer, the assignment entity ```CustomerProjectMapping``` would therefore have a relationship to ```Project``` and ```Customer```.
 
-
+![Customer Project Mapping](images/customer-project-mapping.png "Customer Project Mapping")
