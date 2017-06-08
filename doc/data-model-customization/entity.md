@@ -62,3 +62,7 @@ Each property in the time cockpit data model corresponds to a column in a table 
  ## Relations
  
 Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](~/doc/scripting/customizing-lists.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
+
+> [!NOTE]
+Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
+
