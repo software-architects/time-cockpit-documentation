@@ -42,4 +42,7 @@ The deletion of properties and relations, as well as the insertion of properties
 
 Properties can be managed in the editing mode of an entity. To create a property, select the ```Properties``` subgroup so that the ```New item``` button creates a new property. Time cockpit provides various predefined types of properties. Each of these different types has its own representation in the user interface.
 
+> [!NOTE]
+Each property in the time cockpit data model corresponds to a column in a table in the underlying database
 
+* **Text properties:** Text properties are used to store text. ```Maximum length``` allows users to define how long (in characters) the text may be. Text properties with a length of less than 100 characters are represented in the user interface with a single line input field. Texts with a maximum length of more than 100 lines are represented with multi-line input fields (this behavior can be changed in the respective form).
