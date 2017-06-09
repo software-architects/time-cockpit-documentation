@@ -56,5 +56,5 @@ Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, th
 
 ## Types of Permissions
 
-Time cockpit allows users to assign permissions to different elements of the data model. In the following, all elements that can be permissionized are described. The various types of permissions are described using concrete scenario. For the scenario, the following requirements should be fulfilled:
+Time cockpit allows users to assign permissions to different elements of the data model. In the following, all elements that can be permissionized are described. The various types of permissions are described using a concrete scenario. For the scenario, the following requirements should be fulfilled:
 
