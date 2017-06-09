@@ -118,4 +118,10 @@ A write permission for a property and relation is added or edited in the customi
 
 ![Read Permission On Budget](images/read-permission-on-budget.png "Read Permission On Budget")
 
+## Requirement 3
 
+For requirement 3, it is necessary to define an permission for the ```Budget``` property on the entity ```APP_Project```. The budget property should only be read by users who are assigned to the ```Projectadmin``` role. This requirement is implemented by the permission expression ```'PA' In Set ('CurrentUserRoles', 'Code')```. This condition states that the budget of a project is readable only if the logged-on user has the ```Projectadmin``` role. This applies to both custom lists and forms.
+
+The following figure shows two project lists. The left project list has been opened with ```Projectadmin``` permission, and the right project list with the permissions of a conventional user. Budget is displayed in the project list of the user in the ```Projectadmin``` role. Budget is not displayed in the right list without the ```Projectadmin``` role. In addition, the figure shows input form of a project that was opened without ```Projectadmin``` role. Budget is not visible in the form.
+
+![Project List Comparison](images/project-list-comparsion.png "Project List Comparison")
