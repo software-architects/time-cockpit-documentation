@@ -67,3 +67,40 @@ Time cockpit allows users to assign permissions to different elements of the dat
 A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
 
 ![Create Project Admin Role](images/create-project-admin-role.png "Create Project Admin Role")
+
+![Assign Project Admin](images/assign-project-admin.png "Assign Project Admin")
+
+To implement the ```MyProjects``` set, a multiple assignment between a user (```APP_UserDetail```) and a project (```APP_Project```) must be created (see [M: N relationships for the implementation of multiple assignments](~/doc/data-model-customization/entity.md)). The definition of the ```MyProjects``` set is as follows:
+
+```
+From P In UserDetailProject 
+Where P.UserDetail.UserDetailUuid = Environment.CurrentUser.UserDetailUuid 
+Select New With
+{
+  P.Project.Code
+}
+```
+
+The set is defined as a **logon** set and returns all projects that are assigned to the user currently logged on.
+
+## Permissions on Entities (Row-Level Permissions)
+
+Permissions on entities are row-level permissions, because e.g. a project record is represented by one single row in the database. Entity permissions ensure that records of an entity (e.g. Project) can not be read or edited. In our example, requirement (1) would be a candidate for an entity permission. Project records can only be created by users assigned to the ```Projectadmin``` role.
+
+## Requirement 1
+
+A write permission for an entity can be added customization module under ```Edit entity -> Permissions```. In principle, permissions for entities and for properties / relationships are created using the same mechanism. Whether a permission is defined for an entity is defined in the ```New permission``` form. When adding a new permission, you can also select either the entity itself or properties and relationships. If you select the entity name in the combo box, a permission is created for the entity (in this example Project). If you select a property or relationship, a permission that only applies to the property / relationship in question is created. Since an entity permission is required for requirement (1), the entity name (```APP_Project```) is selected.
+
+![Entity vs Property Permission](images/entity-vs-property-permission.png "Entity vs Property Permission")
+
+Like a validation rule, a permission has a ```Name```, an ```Error message```, and a ```Condition``` that determines whether or not a user has permission. In addition, a permission has a ```Type``` property that specifies whether the permission is a read or write permission.
+
+To ensure that only users assigned to the ```Projectadmin``` role are allowed to create projects, ```WriteProject``` is defined with the condition ```'PA' In Set ('CurrentUserRoles', 'Code')```. This permission ensures that only users in the ```Projectadmin``` role can create projects. **Users who do not have the ```Projectadmin``` role thus have only read access on project records.**
+
+![Read-only Project Form](images/read-only-project-form.png "Read-only Project Form")
+
+
+
+
+
+
