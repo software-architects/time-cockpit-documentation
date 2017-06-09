@@ -89,7 +89,7 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 
 * Hyperlink for assigned customers in project list
 
-```xml
+```
 <BoundCell Content="Customer Project Mapping"> 
    <BoundCell.Hyperlink> 
      <Hyperlink Target="MappedCustomer" Title="= 'Customers of Project ' + Current.Me"> 
@@ -108,7 +108,7 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 
 * Back-reference tab for assigned customers in project input form
 
-```xml
+```
 <BackReferenceTab BackReference="CustomerProjectMappings" />
 ``` 
 
@@ -123,8 +123,7 @@ A validation rule consists of the following properties:
 * **Name:** A validation rule must have a unique name in the validation rules.
 * **Validation rule:** A TCQL expression that specifies the conditions under which a record is valid. A record is valid if the expression is **true**.
 
-```sql
+```
 (Current.EndDate = Null Or Current.StartDate = Null Or Current.EndDate >= Current.StartDate)
 ``` 
-In the above example, ```Current``` represents an instace of ```APP_Project```. ```Current``` always represents a reference to the instance of an entity that is currently being processed. The point notation allows access to relationships or properties of a record in TCQL. Thus, in a validation rule, different properties or relationships can be checked for specific values. By means of TCQL, however, not only can properties of the current data set be accessed, but also properties of related data sets of other entities. For example, the following expression would be Current.Customer.Code = 'My Client'.
-
+In the above example, ```Current``` represents an instace of ```APP_Project```. ```Current``` always represents a reference to the instance of an entity that is currently being processed. The point notation allows access to relationships or properties of a record in TCQL. Thus, in a validation rule, different properties or relationships can be checked for specific values. By means of TCQL, however, not only can properties of the current record be accessed, but also properties of related records of other entities e.g: ```Current.Customer.Code = 'My Client'```.
