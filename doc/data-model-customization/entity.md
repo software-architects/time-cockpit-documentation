@@ -89,13 +89,13 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 
 * Hyperlink for assigned customers in project list
 ```xml
-<BoundCell Content="Zugeordnete Kunden"> 
+<BoundCell Content="Customer Project Mapping"> 
    <BoundCell.Hyperlink> 
-     <Hyperlink Target="MappedCustomer" Title="= 'Kunden des Projekts ' + Current.Me"> 
+     <Hyperlink Target="MappedCustomer" Title="= 'Customers of Project ' + Current.Me"> 
        <Hyperlink.NavigateContent> 
-         <p:NamedListConfiguration Condition="='Current.USR_Project.ProjectUuid = {' + Current.APP_ProjectUuid + '}'" ModelEntityName="USR_CustomerProjectMapping"> 
+         <p:NamedListConfiguration ModelEntityName="USR_CustomerProjectMapping"> 
            <p:NamedListConfiguration.Parameters> 
-             <ParameterCollection /> 
+             <Parameter Name="ProjectUuid" Value="=Current.ProjectUuid" /> 
            </p:NamedListConfiguration.Parameters> 
          </p:NamedListConfiguration> 
        </Hyperlink.NavigateContent> 
