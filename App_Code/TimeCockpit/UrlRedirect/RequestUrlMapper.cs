@@ -39,7 +39,7 @@ namespace TimeCockpit.UrlRedirect
 				if (mappings == null)
 				{
 					mappings = LoadMappings();
-					HttpContext.Current.Cache.Add("RequestUrlMappings", mappings, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 0, 0), CacheItemPriority.Normal, null);
+					HttpContext.Current.Cache.Add("RequestUrlMappings", mappings, null, Cache.NoAbsoluteExpiration, new TimeSpan(0, 5, 0), CacheItemPriority.Normal, null);
 				}
 
 				if (mappings != null)
