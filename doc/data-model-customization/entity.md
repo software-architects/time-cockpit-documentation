@@ -85,4 +85,4 @@ M:N relationships can be implemented with entities in time cockpit. A use case f
 
 The maintenance of multiple assignments from ```Project``` to ```Customer``` can be implemented in lists and input forms with the help of :N hyperlinks (back-references). As described above, there is an implicit back-reference from the ```Project``` entity to ```CustomerProjectMapping```. This back-reference can be implemented with a so-called <xref:TimeCockpit.Windows.Controls.ModelEntityControls.NamedListConfiguration> in user-defined lists or back-reference tabs in forms (see [back-reference tabs](~/doc/scripting/customizing-lists.md)).
 
-
+![Customer Project Mapping List](images/customer-project-mapping-list.png "Customer Project Mapping List")
