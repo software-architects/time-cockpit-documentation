@@ -70,4 +70,6 @@ A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a pre
 
 To implement the ```MyProjects``` set, a multiple assignment between a user (```APP_UserDetail```) and a project (```APP_Project```) must be created (see [M: N relationships for the implementation of multiple assignments](~/doc/data-model-customization/entity.md)). The definition of the ```MyProjects``` set is as follows:
 
+![Assign Project Admin](images/assign-project-admin.png "Assign Project Admin")
+
 
