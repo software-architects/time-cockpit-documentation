@@ -126,6 +126,5 @@ A validation rule consists of the following properties:
 ```sql
 (Current.EndDate = Null Or Current.StartDate = Null Or Current.EndDate >= Current.StartDate)
 ``` 
-
-
+In the above example, ```Current``` represents an instace of ```APP_Project```. ```Current``` always represents a reference to the instance of an entity that is currently being processed. The point notation allows access to relationships or properties of a record in TCQL. Thus, in a validation rule, different properties or relationships can be checked for specific values. By means of TCQL, however, not only can properties of the current data set be accessed, but also properties of related data sets of other entities. For example, the following expression would be Current.Customer.Code = 'My Client'.
 
