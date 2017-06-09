@@ -74,7 +74,7 @@ When creating a new relationship, the following properties can be set:
 > [!NOTE]
 Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
 
-> [!ATTENTION]
+> [!WARNING]
 Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
 
 ## M:N Relationships (multiple assignments)
@@ -89,7 +89,7 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 
 * Hyperlink for assigned customers in project list
 
-```xml
+```
 <BoundCell Content="Customer Project Mapping"> 
    <BoundCell.Hyperlink> 
      <Hyperlink Target="MappedCustomer" Title="= 'Customers of Project ' + Current.Me"> 
@@ -108,10 +108,29 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 
 * Back-reference tab for assigned customers in project input form
 
-```xml
+```
 <BackReferenceTab BackReference="CustomerProjectMappings" />
 ``` 
 
 ## Validation Rules
 
 Validation rules can be defined on entities to ensure that an instance of an entity, e.g. a record in the project table, meets certain criteria. These criteria results from business rules in a company. If a validation rule is not met, this prevents a record from being saved. This applies to saving a data record in the user interface as well as by means of a [Scripting](~/doc/scripting/overview.md) and via the [Web API](~/doc/web-api/overview.md).
+
+![Validation Rules](images/validation-rules.png "Validation Rules")
+
+A validation rule consists of the following properties:
+
+* **Name:** A validation rule must have a unique name in the validation rules.
+* **Validation rule:** A TCQL expression that specifies the conditions under which a record is valid. A record is valid if the expression is **true**.
+
+```
+(Current.EndDate = Null Or Current.StartDate = Null Or Current.EndDate >= Current.StartDate)
+``` 
+In the above example, ```Current``` represents an instace of ```APP_Project```. ```Current``` always represents a reference to the instance of an entity that is currently being processed. The point notation allows access to relationships or properties of a record in TCQL. Thus, in a validation rule, different properties or relationships can be checked for specific values. By means of TCQL, however, not only can properties of the current record be accessed, but also properties of related records of other entities e.g: ```Current.Customer.Code = 'My Client'```.
+
+* **Error message:** The error message is displayed as a hint in the user interface if a validation rule is not fulfilled. This error message is also used as exception text if a script violates the violation rule.
+
+Validation rules can be enabled or disabled. If a validation rule is disabled, time cockpit does not check if the criteria of the disabled validation rule is fulfilled.
+
+> [!NOTE]
+You can also disable validation rules shipped with the default data model, if necessary.
