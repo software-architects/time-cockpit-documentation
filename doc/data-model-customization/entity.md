@@ -115,3 +115,5 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 ## Validation Rules
 
 Validation rules can be defined on entities to ensure that an instance of an entity, e.g. a record in the project table, meets certain criteria. These criteria results from business rules in a company. If a validation rule is not met, this prevents a record from being saved. This applies to saving a data record in the user interface as well as by means of a [Scripting](~/doc/scripting/overview.md) and via the [Web API](~/doc/web-api/overview.md).
+
+![Validation Rules](images/validation-rules.png "Validation Rules")
