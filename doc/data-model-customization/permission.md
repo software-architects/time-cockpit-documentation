@@ -63,3 +63,5 @@ Time cockpit allows users to assign permissions to different elements of the dat
 1. Only users who are in the ```Projectadmin``` role are allowed to see the ```Projectbudget``` property
 1. The ```budgetary control of projects``` list should only be available to users with the role ```Evaluator```
 1. The ```Complete project``` action should only be executed by a ```Projectadmin```
+
+A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
