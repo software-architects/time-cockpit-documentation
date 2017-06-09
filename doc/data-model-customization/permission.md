@@ -58,3 +58,10 @@ Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, th
 
 Time cockpit allows users to assign permissions to different elements of the data model. In the following, all elements that can be permissionized are described. The various types of permissions are described using a concrete scenario. For the scenario, the following requirements should be fulfilled:
 
+1. Only users with the role ```Projectadmin``` should be able to create projects
+1. Users can only track time on projects which they are assigned to
+1. Only users who are in the ```Projectadmin``` role are allowed to see the ```Projectbudget``` property
+1. The ```budgetary control of projects``` list should only be available to users with the role ```Evaluator```
+1. The ```Complete project``` action should only be executed by a ```Projectadmin```
+
+A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
