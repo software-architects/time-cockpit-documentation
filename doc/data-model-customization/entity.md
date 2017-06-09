@@ -88,6 +88,7 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 ![Customer Project Mapping List](images/customer-project-mapping-list.png "Customer Project Mapping List")
 
 * Hyperlink for assigned customers in project list
+
 ```xml
 <BoundCell Content="Customer Project Mapping"> 
    <BoundCell.Hyperlink> 
@@ -105,3 +106,8 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 }
 ``` 
 
+* Back-reference tab for assigned customers in project input form
+
+```xml
+<BackReferenceTab BackReference="CustomerProjectMappings" />
+``` 
