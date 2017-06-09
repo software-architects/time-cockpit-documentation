@@ -1,8 +1,5 @@
 # Permissions
 
-> [!WARNING]
-This chapter is under construction. 
-
 Time cockpit has a fully configurable and extensible permission management system. In the standard configuration of time cockpit, the permission management system is based on assigning roles to users. 
 
 Time cockpit is delivered with two predefined roles, ```Admin``` and ```User```. Based on these two roles, permissions are defined in the time cockpit default configuration. All users are assigned to the ```User``` role when they are created via the website (www.timecockpit.com). Depending on whether a user was given the ```Admin``` role during the creation on the website, a user is also assigned the ```Admin``` role in time cockpit. Administrators have the right to use the customization module in time cockpit, edit the data model, issue queries, and to run IronPython scripts. Administrators may also create roles and assign roles to other users.
@@ -125,3 +122,6 @@ For requirement 3, it is necessary to define an permission for the ```Budget``` 
 The following figure shows two project lists. The left project list has been opened with ```Projectadmin``` permission, and the right project list with the permissions of a conventional user. Budget is displayed in the project list of the user in the ```Projectadmin``` role. Budget is not displayed in the right list without the ```Projectadmin``` role. In addition, the figure shows input form of a project that was opened without ```Projectadmin``` role. Budget is not visible in the form.
 
 ![Project List Comparison](images/project-list-comparison.png "Project List Comparison")
+
+> [!NOTE]
+At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document.
