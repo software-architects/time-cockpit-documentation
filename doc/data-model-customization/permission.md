@@ -15,3 +15,13 @@ In the standard data model of time cockpit, the role concept is implemented with
 It is not recommended to set restrictive permissions on the entity ```APP_UserDetail```. It must be possible for the application to store its own user entry at any time. This is because the user's language is stored in the user entry. A user can change his / her language and must always be able to store his / her own user entry. Incorrect permissions can cause time cockpit to stop working. If you are not sure about permissions on the ```APP_UserDetail``` entity, contact support@timecockpit.com. In terms of permissions we recommend **KISS** - Keep it small and simple!
 
 ![Permission Entities](images/permission-entities.png "Permission Entities")
+
+## Manage Roles
+
+Since roles are just conventional records like e.g. a project, a time sheet entry or a customer, they can also be created using the ```New item``` button. Only users in the ```Admin``` can create new roles. A role has 3 properties.
+
+* Code: The code of the role. The code be short and **must** be unique.
+* Name: The name of the role. This serves for easier identification of the role.
+* Description: An optional more elaborate description of the role.
+
+In the ```Users``` module in the section "Rolemanagement" you will find the list ```Roles``` where roles can be added, edited and removed. In addition, time cockpit provides a list ```Assign roles```. In this list, user-to-role assignments can be created.
