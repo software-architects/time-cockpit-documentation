@@ -74,7 +74,7 @@ When creating a new relationship, the following properties can be set:
 > [!NOTE]
 Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
 
-> [!ATTENTION]
+> [!WARNING]
 Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
 
 ## M:N Relationships (multiple assignments)
@@ -131,3 +131,6 @@ In the above example, ```Current``` represents an instace of ```APP_Project```. 
 * **Error message:** The error message is displayed as a hint in the user interface if a validation rule is not fulfilled. This error message is also used as exception text if a script violates the violation rule.
 
 Validation rules can be enabled or disabled. If a validation rule is disabled, time cockpit does not check if the criteria of the disabled validation rule is fulfilled.
+
+> [!NOTE]
+You can also disable validation rules shipped with the default data model, if necessary.
