@@ -45,7 +45,7 @@ namespace TimeCockpit.UrlRedirect
 				if (mappings != null)
 				{
 					var topic = HttpContext.Current.Request.QueryString["topic"];
-					var mapping = mappings.FirstOrDefault(m => HttpContext.Current.Request.Path.ToLower().EndsWith(m.Key) || (!string.IsNullOrEmpty(topic) && topic.EndsWith(m.Key)));
+					var mapping = mappings.FirstOrDefault(m => HttpContext.Current.Request.Path.ToLower().EndsWith(m.Key) || (!string.IsNullOrEmpty(topic) && topic.ToLower().EndsWith(m.Key)));
 					if (!string.IsNullOrEmpty(mapping.Value))
 					{
 						HttpContext.Current.Response.RedirectPermanent(mapping.Value);
