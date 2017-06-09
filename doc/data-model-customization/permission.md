@@ -110,4 +110,8 @@ To meet the requirement that users can only read the projects assigned to them, 
 
 The read permission ```Current.Code In Set ('MyProjects', 'Code') Or 'PA' Set ('CurrentUserRoles', 'Code')``` checks whether a project record is assigned to a user or whether a user is ```Projectadmin```. If so, the record is displayed in the project list of a user. As can be seen in the following figure, only those projects that are assigned to the logged-on user are displayed in the selection combo box of the projects when creating a time sheet entry. This means that when the read permission ```ReadProject``` is enabled, only projects are displayed in the user interface which are assigned to the logged-on user.
 
+![Read Only Assigned Projects](images/read-only-assinged-projects.png "Read Only Assigned Projects")
 
+## Permissions on Properties and Relations
+
+A write permission for a property and relation is added or edited in the customization module under ```Edit entity -> Permissions```. Basically, permissions for properties / relationships and for entities are created using the same mechanism. Whether a permission is defined for a property / relations is defined in the ```New permission``` form. As can be seen in the following figure, you can also select properties and relations in the permissions combo box for both the entity name. If you select the name of a property / relation in the combo box, an permission is created for the property / relationship.
