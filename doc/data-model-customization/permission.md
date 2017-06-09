@@ -95,6 +95,12 @@ A write permission for an entity can be added customization module under ```Edit
 
 Like a validation rule, a permission has a ```Name```, an ```Error message```, and a ```Condition``` that determines whether or not a user has permission. In addition, a permission has a ```Type``` property that specifies whether the permission is a read or write permission.
 
+To ensure that only users assigned to the ```Projectadmin``` role are allowed to create projects, ```WriteProject``` is defined with the condition ```'PA' In Set ('CurrentUserRoles', 'Code')```. This permission ensures that only users in the ```Projectadmin``` role can create projects. **Users who do not have the ```Projectadmin``` role thus have only read access on project records.**
+
+![Read-only Project Form](images/read-only-project-form.png "Read-only Project Form")
+
+
+
 
 
 
