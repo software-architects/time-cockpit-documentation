@@ -93,6 +93,7 @@ A write permission for an entity can be added customization module under ```Edit
 
 ![Entity vs Property Permission](images/entity-vs-property-permission.png "Entity vs Property Permission")
 
+Like a validation rule, a permission has a ```Name```, an ```Error message```, and a ```Condition``` that determines whether or not a user has permission. In addition, a permission has a ```Type``` property that specifies whether the permission is a read or write permission.
 
 
 
