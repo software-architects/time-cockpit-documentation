@@ -53,3 +53,8 @@ Using the set ```CurrentUserRoles```, you can create permissions to check whethe
 
 > [!NOTE]
 Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, the application must be restarted after changes to the role assignments. Logon sets are executed **only** once at the application startup and remain unchanged during the runtime of the application!
+
+## Types of Permissions
+
+Time cockpit allows users to assign permissions to different elements of the data model. In the following, all elements that can be permissionized are described. The various types of permissions are described using concrete scenario. For the scenario, the following requirements should be fulfilled:
+
