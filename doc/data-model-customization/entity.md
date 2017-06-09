@@ -129,3 +129,5 @@ A validation rule consists of the following properties:
 In the above example, ```Current``` represents an instace of ```APP_Project```. ```Current``` always represents a reference to the instance of an entity that is currently being processed. The point notation allows access to relationships or properties of a record in TCQL. Thus, in a validation rule, different properties or relationships can be checked for specific values. By means of TCQL, however, not only can properties of the current record be accessed, but also properties of related records of other entities e.g: ```Current.Customer.Code = 'My Client'```.
 
 * **Error message:** The error message is displayed as a hint in the user interface if a validation rule is not fulfilled. This error message is also used as exception text if a script violates the violation rule.
+
+Validation rules can be enabled or disabled. If a validation rule is disabled, time cockpit does not check if the criteria of the disabled validation rule is fulfilled.
