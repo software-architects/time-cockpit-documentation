@@ -65,3 +65,5 @@ Time cockpit allows users to assign permissions to different elements of the dat
 1. The ```Complete project``` action should only be executed by a ```Projectadmin```
 
 A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
+
+![Permission Entities](images/permission-entities.png "Permission Entities")
