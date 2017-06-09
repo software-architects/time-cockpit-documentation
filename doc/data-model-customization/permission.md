@@ -67,3 +67,7 @@ Time cockpit allows users to assign permissions to different elements of the dat
 A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
 
 ![Create Project Admin Role](images/create-project-admin-role.png "Create Project Admin Role")
+
+To implement the ```MyProjects``` set, a multiple assignment between a user (```APP_UserDetail```) and a project (```APP_Project```) must be created (see [M: N relationships for the implementation of multiple assignments](~/doc/data-model-customization/entity.md)). The definition of the ```MyProjects``` set is as follows:
+
+
