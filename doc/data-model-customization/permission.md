@@ -108,6 +108,6 @@ To meet the requirement that users can only read the projects assigned to them, 
 
 ![Read Project Permission](images/read-project-permission.png "Read Project Permission")
 
-
+The read permission ```Current.Code In Set ('MyProjects', 'Code') Or 'PA' Set ('CurrentUserRoles', 'Code')``` checks whether a project record is assigned to a user or whether a user is ```Projectadmin```. If so, the record is displayed in the project list of a user. As can be seen in the following figure, only those projects that are assigned to the logged-on user are displayed in the selection combo box of the projects when creating a time sheet entry. This means that when the read permission is enabled ```ReadProject``` is displayed on projects where projects are displayed in any form (no matter in which list) only the projects assigned to the logged-on user are displayed.
 
 
