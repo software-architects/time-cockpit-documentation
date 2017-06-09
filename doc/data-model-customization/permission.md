@@ -114,4 +114,8 @@ The read permission ```Current.Code In Set ('MyProjects', 'Code') Or 'PA' Set ('
 
 ## Permissions on Properties and Relations
 
-A write permission for a property and relation is added or edited in the customization module under ```Edit entity -> Permissions```. Basically, permissions for properties / relationships and for entities are created using the same mechanism. Whether a permission is defined for a property / relations is defined in the ```New permission``` form. As can be seen in the following figure, you can also select properties and relations in the permissions combo box for both the entity name. If you select the name of a property / relation in the combo box, an permission is created for the property / relationship.
+A write permission for a property and relation is added or edited in the customization module under ```Edit entity -> Permissions```. Basically, permissions for properties / relations and for entities are created using the same mechanism. Whether a permission is defined for a property / relations is defined in the ```New permission``` form. As can be seen in the following figure, you can also select properties and relations and the _entity name_ in the permissions combo box. If you select the name of a property / relation in the combo box a permission is created for the property / relations.
+
+![Read Permission On Budget](images/read-permission-on-budget.png "Read Permission On Budget")
+
+
