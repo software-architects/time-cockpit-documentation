@@ -124,4 +124,4 @@ For requirement 3, it is necessary to define an permission for the ```Budget``` 
 
 The following figure shows two project lists. The left project list has been opened with ```Projectadmin``` permission, and the right project list with the permissions of a conventional user. Budget is displayed in the project list of the user in the ```Projectadmin``` role. Budget is not displayed in the right list without the ```Projectadmin``` role. In addition, the figure shows input form of a project that was opened without ```Projectadmin``` role. Budget is not visible in the form.
 
-![Project List Comparison](images/project-list-comparsion.png "Project List Comparison")
+![Project List Comparison](images/project-list-comparison.png "Project List Comparison")
