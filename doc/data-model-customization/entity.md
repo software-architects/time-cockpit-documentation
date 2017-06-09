@@ -111,3 +111,7 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 ```xml
 <BackReferenceTab BackReference="CustomerProjectMappings" />
 ``` 
+
+## Validation Rules
+
+Validation rules can be defined on entities to ensure that an instance of an entity, e.g. A record in the project table, meets certain criteria. These criteria result from business rules applicable to a company. If a validation rule is not met, this prevents a record from being saved. This applies to the saving of a data record in the user interface as well as to the saving by means of a script.
