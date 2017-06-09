@@ -104,6 +104,10 @@ If you wanted to remove the write permissions for an element for all users, an e
 
 ## Requirement 2
 
+To meet the requirement that users can only read the projects assigned to them, it is necessary to define a read permission for the entity project. To do this, a permission is defined based on the ```MyProjects``` set.
+
+![Read Project Permission](images/read-project-permission.png "Read Project Permission")
+
 
 
 
