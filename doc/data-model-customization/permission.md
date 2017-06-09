@@ -99,8 +99,23 @@ To ensure that only users assigned to the ```Projectadmin``` role are allowed to
 
 ![Read-only Project Form](images/read-only-project-form.png "Read-only Project Form")
 
+> [!NOTE]
+If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
 
+## Requirement 2
 
+To meet the requirement that users can only read the projects assigned to them, it is necessary to define a read permission for the entity project. To do this, a permission is defined based on the ```MyProjects``` set.
 
+![Read Project Permission](images/read-project-permission.png "Read Project Permission")
+
+The read permission ```Current.Code In Set ('MyProjects', 'Code') Or 'PA' Set ('CurrentUserRoles', 'Code')``` checks whether a project record is assigned to a user or whether a user is ```Projectadmin```. If so, the record is displayed in the project list of a user. As can be seen in the following figure, only those projects that are assigned to the logged-on user are displayed in the selection combo box of the projects when creating a time sheet entry. This means that when the read permission ```ReadProject``` is enabled, only projects are displayed in the user interface which are assigned to the logged-on user.
+
+![Read Only Assigned Projects](images/read-only-assinged-projects.png "Read Only Assigned Projects")
+
+## Permissions on Properties and Relations
+
+A write permission for a property and relation is added or edited in the customization module under ```Edit entity -> Permissions```. Basically, permissions for properties / relations and for entities are created using the same mechanism. Whether a permission is defined for a property / relations is defined in the ```New permission``` form. As can be seen in the following figure, you can also select properties and relations and the _entity name_ in the permissions combo box. If you select the name of a property / relation in the combo box a permission is created for the property / relations.
+
+![Read Permission On Budget](images/read-permission-on-budget.png "Read Permission On Budget")
 
 
