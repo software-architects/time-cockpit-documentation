@@ -236,4 +236,4 @@ Additionally, <xref:TimeCockpit.Data.DataModel.View.RelationCell>s allow you to 
 
 ### Other Cell Types
 
-Time cockpit offers some more <xref:TimeCockpit.Data.DataModel.View.Cell>s. You can find all available cell types in the [API Documentation](~/api/TimeCockpit.Data.DataModel.View.Cell.md).
+Time cockpit offers some more <xref:TimeCockpit.Data.DataModel.View.Cell>s. You can find all available cell types in the API Documentation(<xref:TimeCockpit.Data.DataModel.View.Cell>).

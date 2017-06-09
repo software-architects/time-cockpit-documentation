@@ -1,4 +1,4 @@
-# Working with Time Sheet Entries
+# Working With Time Sheet Entries
 
 ## Create
 

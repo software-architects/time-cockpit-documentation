@@ -66,7 +66,7 @@ The font size of a term in the tag cloud represents the duration of the correspo
 
 ## LAN Connections
 
-The LAN connections are displayed as a [histogram](https://en.wikipedia.org/wiki/Histogram). It shows the LAN connections a device you were working on was connected to throughout a day. It is provided with data from [Signal Tracker for Network Connections](~/doc/signal-tracker/network-connections).
+The LAN connections are displayed as a [histogram](https://en.wikipedia.org/wiki/Histogram). It shows the LAN connections a device you were working on was connected to throughout a day. It is provided with data from [Signal Tracker for Network Connections](~/doc/signal-tracker/network-connections.md).
 
 The length of a bar in the histogram represents the duration how long you were connected to an available connection. As with all the other signal categories, if you select a network in the signal details pane, the period of time you were connected to the network is marked in the combined activity track in the time sheet calendar.
 
@@ -74,7 +74,7 @@ The length of a bar in the histogram represents the duration how long you were c
 
 ## Wi-Fi Networks
 
-The Wi-Fi Networks are displayed as a [histogram](https://en.wikipedia.org/wiki/Histogram). It shows the Wi-Fi networks a device you were working on was connected to throughout a day. It is provided with data from [Signal Tracker for Network Connections](~/doc/signal-tracker/network-connections).
+The Wi-Fi Networks are displayed as a [histogram](https://en.wikipedia.org/wiki/Histogram). It shows the Wi-Fi networks a device you were working on was connected to throughout a day. It is provided with data from [Signal Tracker for Network Connections](~/doc/signal-tracker/network-connections.md).
 
 The length of a bar in the histogram represents the duration how long an available Wi-Fi network was available. It does not matter if you were connected to the network. time cockpit only tracks the availability.
 

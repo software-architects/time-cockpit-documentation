@@ -276,4 +276,4 @@ def actionSample(actionContext):
 ```
 
 > [!NOTE]
-Take a look at [Actions](~/scripting/actions.md) to see how time cockpit actions can be implemented.
+Take a look at [Actions](~/doc/scripting/actions.md) to see how time cockpit actions can be implemented.

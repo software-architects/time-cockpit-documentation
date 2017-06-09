@@ -16,13 +16,13 @@ The time sheet calendar consists of the following parts:
 - [Time sheet calendar](#time-sheet-calendar-1)
 - [Working time](working-time.md)
 - [Formatting profiles](formatting-profiles.md)
-- [Signal details](signals.md#signal-details)
+- [Signal details](signal-details.md)
 
 ## User Selection
 
 Time cockpit synchronizes data automatically across all users of an account. In the user selection area you can select for which user the time sheet calendar should be displayed. Please note the following restrictions:
 
-- Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model/permissions.md).
+- Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model-customization/permission.md).
 - Automatically tracked [signals](~/doc/signal-tracker/overview.md) are only synchronized across the devices from one user. **You are never able to view signals from another user.** No matter which user is selected in the user selection, you will always see your own signals. It is not possible to grant users the permission to view signals from another user.
 
 Since version 1.7 of time cockpit you are able to hide users in the user selection list. Switch to **Users** in the main menu and open the **User Details** list. Open the user you want to hide and check the **Hidden** check box.

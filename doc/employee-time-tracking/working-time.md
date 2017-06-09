@@ -15,7 +15,7 @@ Planned hours of work are stored per week day. You can split the weekly working 
 > [!WARNING]
 Please note, that the validity periods **must not overlap**. It is not allowed to specify 38.5 weekly hours of work for 1/1/2013 until 12/31/2013 and 40 weekly hours of work for 12/1/2013 until 12/31/2014. For December 2013 both values would be valid and time cockpit is not able to calculate the correct planned hours of work.
 
-In [TCQL queries](~/tcql/overview.md) you are able to calculate the planned hours of work for an employee with help of the function [AverageHoursOfWorkPerDay](~/doc/tcql/functions-for-working-time-and-holidays.md#averagehoursofworkperday).
+In [TCQL queries](~/doc/tcql/overview.md) you are able to calculate the planned hours of work for an employee with help of the function [AverageHoursOfWorkPerDay](~/doc/tcql/functions-for-working-time-and-holidays.md#averagehoursofworkperday).
 
 ## Vacation Entitlement
 
@@ -46,7 +46,7 @@ For querying vacation data you can use two pre-defined lists in time cockpit:
 - The list **Vacations** shows the history of vacation entitlement, vacation usage and remaining leave for one employee.
 - The list **Remaining Leave** shows a list of all employees with the corresponding remaining leave for an effective date.
 
-In [TCQL queries](~/tcql/overview.md) you can calculate the remaining leave for an employee with the function [RemainingVacationWeeks](~/doc/tcql/functions-for-working-time-and-holidays.md#remainingvacationweeks).
+In [TCQL queries](~/doc/tcql/overview.md) you can calculate the remaining leave for an employee with the function [RemainingVacationWeeks](~/doc/tcql/functions-for-working-time-and-holidays.md#remainingvacationweeks).
 
 ## Legal Holidays
 
@@ -69,7 +69,7 @@ The **Target/Actual Comparison** list shows you the planned and actual hours of 
 - If an employee has worked more hours than the calculated planned hours incl. included overtime, the deviation between actual hours and planned hours incl. included overtime is displayed (positive value).
 - If the actual hours are between the calculated planned hours excl. included overtime and planned hours incl. included overtime, the deviation is 0.
 
-In [TCQL queries](~/tcql/overview.md) you can calculate the planned hours of work for an employee for a specific period of time with the function [PlannedHoursOfWork](~/doc/tcql/functions-for-working-time-and-holidays.html#plannedhoursofwork).
+In [TCQL queries](~/doc/tcql/overview.md) you can calculate the planned hours of work for an employee for a specific period of time with the function [PlannedHoursOfWork](~/doc/tcql/functions-for-working-time-and-holidays.md#plannedhoursofwork).
 
 ## Actual Hours of Work
 
@@ -78,7 +78,7 @@ The actual hours of work are calculated by summarizing all time sheet entries. I
 > [!NOTE]
 Please note that time cockpit does not provide functions to evaluate working time weights automatically. You have to specify the weight for each time sheet entry manually. You can model your effective calculation rules for working time weights in Scripts and Actions. If you have questions, please contact us at support@timecockpit.com.
 
-In [TCQL queries](~/tcql/overview.md) you can query the actual hours of work for an employee with the function [ActualHoursOfWork](~/doc/tcql/functions-for-working-time-and-holidays.html#actualhoursofwork).
+In [TCQL queries](~/doc/tcql/overview.md) you can query the actual hours of work for an employee with the function [ActualHoursOfWork](~/doc/tcql/functions-for-working-time-and-holidays.md#actualhoursofwork).
 
 ## Overtime Calculation
 
@@ -91,7 +91,7 @@ There is a menu item **Overtime Correction**, that allows you to manually set th
 > [!NOTE]
 Please note, that the overtime correction represents the number of overtime for the specified date. If you enter 100, that means the employee has 100 hours overtime at the specified date. It does not mean that the number of overtime is reduced or increased by 100 hours.
 
-In [TCQL queries](~/tcql/overview.md) you can calculate the overtime with the function [Overtime](~/doc/tcql/functions-for-working-time-and-holidays.html#overtime).
+In [TCQL queries](~/doc/tcql/overview.md) you can calculate the overtime with the function [Overtime](~/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
 
 > [!WARNING]
 Please note that the date of joining and the date of separation are not considered for the calculation. Only the validity period of the Weekly Hours of Work is used.

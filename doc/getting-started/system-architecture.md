@@ -31,7 +31,7 @@ Data in time cockpit can be divided into two categories:
 
 Master and time tracking data is stored in a relational database on the client pc. Tracked signals (e.g. computer activity, active window title) are stored as blobs (binary large objects) in the file system. We treat signal data other than master data because the amount of data can become much larger and because we think your private data is worth protecting still more. For these reasons signals are encrypted and compressed with your special [signal data password](configuration-wizard.md#step-5---choose-your-signal-data-password). This way we can minimize the amount of data and your data is protected strong because your signal data password never leaves your pc.
 
-You can [extend the data model](~/doc/data-model/customization.md) for time cockpit. There are various types of properties that you can add. Most of them are stored in the database. If you want to store data as a blob you can use the <xref:TimeCockpit.Data.DataModel.BinaryProperty> (see also [How To: Add a FileProperty](~/doc/scripting/add-file-property.md)).
+You can [extend the data model](~/doc/data-model-customization/entity.md) for time cockpit. There are various types of properties that you can add. Most of them are stored in the database. If you want to store data as a blob you can use the <xref:TimeCockpit.Data.DataModel.BinaryProperty> (see also [How To: Add a FileProperty](~/doc/scripting/add-file-property.md)).
 
 ## Local Data Storage
 

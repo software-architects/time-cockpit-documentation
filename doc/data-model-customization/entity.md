@@ -32,7 +32,7 @@ The deletion of properties and relations, as well as the insertion of properties
 
 ![Default Display Property](images/default-display-property.png "Default Display Property")
 
-* **Default list:** Users can create custom lists for entities (see [Custom Lists](~/doc/scripting/customizing-lists.md)) These custom lists can be set as a default list for an entity. If, for example, a list "MyProjectList" is defined for a project and set as a default list, MyProjectList is used in the user interface whenever a list of projects needs to be displayed. If no default list is selected, time cockpit automatically generates a list of all properties and relations of an entity on the fly.
+* **Default list:** Users can create custom lists for entities (see [Custom Lists](list.md)) These custom lists can be set as a default list for an entity. If, for example, a list "MyProjectList" is defined for a project and set as a default list, MyProjectList is used in the user interface whenever a list of projects needs to be displayed. If no default list is selected, time cockpit automatically generates a list of all properties and relations of an entity on the fly.
 
 * **Default list for relations:** Users can create a custom list for an entity and set it as default list for relations. Example: If the entity ```APP_Project``` has a custom list for relations "CustomProjectRelationList", the list is used in the user interface whenever a list of projects needs to be displayed in a combo box.
 
@@ -61,7 +61,7 @@ Each property in the time cockpit data model corresponds to a column in a table 
   
 ## Relations
  
-Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](~/doc/scripting/customizing-lists.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
+Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](list.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
 
 > [!NOTE]
 Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
@@ -69,7 +69,7 @@ Each relationship in the time cockpit data model corresponds to a foreign key re
 When creating a new relationship, the following properties can be set:
 
 * Specifies the other entity to which the source entity is related.
-* Back-reference name: From a database point of view, a relationship has two directions. For example, the relationship customer on the project entity has the direction ```Project -> Customer``` and on the other hand ```Customer -> Project```. ```Project -> Customer``` assigns exactly one project to one customer. ```Customer -> Project``` means all projects assigned to a customer. The latter direction is represented in time cockpit with a named back-reference. Back-references can be navigated using [TCQL subqueries](~/doc/tcql/expression-language.md). In addition, the back-reference name is used to create so-called back-reference tabs (see also [:N Hyperlinks](~/doc/scripting/customizing-lists.md)).
+* Back-reference name: From a database point of view, a relationship has two directions. For example, the relationship customer on the project entity has the direction ```Project -> Customer``` and on the other hand ```Customer -> Project```. ```Project -> Customer``` assigns exactly one project to one customer. ```Customer -> Project``` means all projects assigned to a customer. The latter direction is represented in time cockpit with a named back-reference. Back-references can be navigated using [TCQL subqueries](~/doc/tcql/expression-language.md). In addition, the back-reference name is used to create so-called back-reference tabs (see also [:N Hyperlinks](list.md)).
 
 > [!NOTE]
 Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
@@ -83,7 +83,7 @@ M:N relationships can be implemented with entities in time cockpit. A use case f
 
 ![Customer Project Mapping](images/customer-project-mapping.png "Customer Project Mapping")
 
-The maintenance of multiple assignments from ```Project``` to ```Customer``` can be implemented in lists and input forms with the help of :N hyperlinks (back-references). As described above, there is an implicit back-reference from the ```Project``` entity to ```CustomerProjectMapping```. This back-reference can be implemented with a so-called <xref:TimeCockpit.Windows.Controls.ModelEntityControls.NamedListConfiguration> in user-defined lists or back-reference tabs in forms (see [back-reference tabs](~/doc/scripting/customizing-lists.md)).
+The maintenance of multiple assignments from ```Project``` to ```Customer``` can be implemented in lists and input forms with the help of :N hyperlinks (back-references). As described above, there is an implicit back-reference from the ```Project``` entity to ```CustomerProjectMapping```. This back-reference can be implemented with a so-called `NamedListConfiguration` in user-defined lists or back-reference tabs in forms (see [back-reference tabs](list.md)).
 
 ![Customer Project Mapping List](images/customer-project-mapping-list.png "Customer Project Mapping List")
 
