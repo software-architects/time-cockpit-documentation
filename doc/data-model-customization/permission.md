@@ -99,7 +99,10 @@ To ensure that only users assigned to the ```Projectadmin``` role are allowed to
 
 ![Read-only Project Form](images/read-only-project-form.png "Read-only Project Form")
 
+> [!NOTE]
+If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
 
+## Requirement 2
 
 
 
