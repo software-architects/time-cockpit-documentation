@@ -117,3 +117,15 @@ The maintenance of multiple assignments from ```Project``` to ```Customer``` can
 Validation rules can be defined on entities to ensure that an instance of an entity, e.g. a record in the project table, meets certain criteria. These criteria results from business rules in a company. If a validation rule is not met, this prevents a record from being saved. This applies to saving a data record in the user interface as well as by means of a [Scripting](~/doc/scripting/overview.md) and via the [Web API](~/doc/web-api/overview.md).
 
 ![Validation Rules](images/validation-rules.png "Validation Rules")
+
+A validation rule consists of the following properties:
+
+* **Name:** A validation rule must have a unique name in the validation rules.
+* **Validation rule:** A TCQL expression that specifies the conditions under which a record is valid. A record is valid if the expression is **true**.
+
+```sql
+(Current.EndDate = Null Or Current.StartDate = Null Or Current.EndDate >= Current.StartDate)
+``` 
+
+
+
