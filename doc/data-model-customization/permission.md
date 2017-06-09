@@ -26,4 +26,4 @@ Since roles are just conventional records like e.g. a project, a time sheet entr
 
 In the ```Users``` module in the section "Rolemanagement" you will find the list ```Roles``` where roles can be added, edited and removed. In addition, time cockpit provides a list ```Assign roles```. In this list, user-to-role assignments can be created.
 
-![Permission Management in Users Module](images/permission-management-in-user-module.png "Permission Management in Users Module")
+![Permission Management in Users Module](images/permission-management-in-users-module.png "Permission Management in Users Module")
