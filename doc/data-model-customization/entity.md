@@ -2,7 +2,7 @@
 
 This chapter gives an overview of what can be customized in time cockpit and how.
 
-## A Metadata-driven Approch
+## A Metadata-Driven Approch
 
 time cockpit is driven by metadata. That is, as much information about customer-specific customizations as possible (entities, properties, relations, validation rules etc.) is configured in the data model. In most of the cases customizations of the data model influence how the user interface looks and behaves.
 
@@ -77,7 +77,7 @@ Best practice for naming back-references using the example of the relationship `
 > [!WARNING]
 Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
 
-## M:N Relationships (multiple assignments)
+## M:N Relationships (Multiple Assignments)
 
 M:N relationships can be implemented with entities in time cockpit. A use case for a multiple assignment would be, for example, the assignment of a project to several customers. This scenario can be implemented with an assignment entity. An assignment entity consists at least of two relationships to the entities that are to be assigned in a multiple assignment. In the case of a multiple assignment from project to customer, the assignment entity ```CustomerProjectMapping``` would therefore have a relationship to ```Project``` and ```Customer```.
 
