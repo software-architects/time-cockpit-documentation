@@ -17,7 +17,7 @@ The full client of time cockpit offers another way to export data of a list to M
 You can use the quick export with or without a template. A template allows you to format the data in a special way or to add analysis or charts.
 
 > [!NOTE]
-Please note, that time cockpit can only work with Microsoft Office 2017 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
+Please note, that time cockpit can only work with Microsoft Office 2007 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
 
 ### Default Format for Excel Export
 
