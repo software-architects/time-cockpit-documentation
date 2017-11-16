@@ -3,7 +3,7 @@ Starting with version May 2014 (1.24) time cockpit offers a web-based API. HTTP,
 
 ## Service Endpoint
 
-The preliminary base address of our web API is <https://api.timecockpit.com>. It is only accessible via HTTPS and with valid authentication.
+The address of our web API is <https://api.timecockpit.com>. It is only accessible via HTTPS and with valid authentication.
 
 ## Authentication
 
