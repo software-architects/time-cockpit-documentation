@@ -1,2 +1,2 @@
-# Force Iinital Sync of time cockpit
+# Force Initial Sync of time cockpit
 
