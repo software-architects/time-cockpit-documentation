@@ -1,9 +1,12 @@
-# You have got the error System.Security.Cryptography.CryptographicException… or next Button missing in configuration wizard
+# CryptographicException…
+
+In Case of a CryptographicException you have to delete time cockpits windows data protection key and perform an initial synchronization. 
+If case of an initial synchronization without to delte the data protection key before the next Button will be missing in the configuration wizard:
 
 ![Next Button Missing](images/next-button-missing-en.png "Next Button Missing")
 
 ## Error cause
-The data protection key of timecockpit provided by windows is no longer valid. This may happen e.g. when your windows profile was ported to another pc. Therefore, the existing privacy key must be deleted so that a new valid can be created.
+The data protection key of timecockpit provided by windows is no longer valid. This may happen e.g. when your windows profile was ported to another pc. Therefore, the existing protection key must be deleted so that a new valid can be created.
 
 ## Background
 To protect your personal data (e.g. signals) time cockpit uses the data protection function of windows. This ensures that protected data can only be read using your windows profile.
