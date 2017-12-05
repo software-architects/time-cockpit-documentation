@@ -8,7 +8,7 @@ Enter your e-mail address you were registered at timecockpit and click the Butto
 
 ![Reset Password](images/reset-password-2.png "Reset Password")
 
+After a few minutes you will receive a mail at your entered e-mail address. To set a new password click on the button 'Change password!' and fill in the fields in the opening web site and click on the button 'Change Password'
 
-After a few minutes you will receive a mail at your entered e-mail address. To set a new password click on button 'Change password!' and fill in the fields in the opening web site.
+![Change Password](images/reset-password-3.png "Change Password")
 
-![Reset Password](images/reset-password-3.png "Reset Password")
