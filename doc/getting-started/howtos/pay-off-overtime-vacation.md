@@ -10,7 +10,7 @@ To pay of overtime you have to insert a new overtime correction. When you insert
 | Overtime       | desired amount of hours of overtime to the effective date           |
 
 #### Example
-Tim Smith has 44h overtime to the end of April 2017 and he wants to get payed out 24 hours to that time. Therfore you have to create an overtime correction with an effecitve date of 2017-05-01 and a value for overtime of 20h (44-24).
+Tim Smith has 44h overtime to the end of April 2017 and he wants to get payed out 24 hours to that time. Therefore you have to create an overtime correction with an effecitve date of 2017-05-01 and a value for overtime of 20h (44-24).
 
 
 ## How to pay of Vacation
