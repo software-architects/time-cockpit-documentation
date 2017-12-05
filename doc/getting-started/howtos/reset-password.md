@@ -7,6 +7,7 @@ To reset your password just navigate to the login-page of our time cockpit web c
 Enter your e-mail address you were registered at timecockpit and click the Button 'Reset Password'.
 
 ![Reset Password](images/reset-password-2.png "Reset Password")
+
 > [!NOTE]
 In case of an unknown username please contact your time cockpit administrator to find out your registered e-mail address. If you are the time cockpit administrator please contact us at [support@timecockpit.com](mailto:support@timecockpit.com) to ask for your valid e-mail address.
 
