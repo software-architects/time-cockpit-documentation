@@ -20,7 +20,7 @@ To pay of vacation you have to insert a negative vacation entitlement. When you 
 | ------------------- | -------------------------------------------------------------------- |
 | User                | the employee who gets vacation payed out                             |
 | Date of Entitlement | the desired date (beginning of the day) for the vacation entitlement |
-| Number of Weeks     | desired amount of weeks to pay out to the effective date             |
+| Number of Weeks     | desired amount of weeks to pay out                                   |
 
 #### Example
 Tim Smith has 2 weeks vacation to the end of June 2017 and he wants to get payed out these 2 weeks because his employment ends with June 2017. In this case you have to crate a vacation entitlement with a 'Number of Weeks' of -2 and a 'Date of Entitlement' of 2017-07-01.
