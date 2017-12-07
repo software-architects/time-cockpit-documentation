@@ -1,7 +1,10 @@
-# CryptographicException…
+# CryptographicException error
 
-In Case of a CryptographicException you have to delete time cockpits windows data protection key and perform an initial synchronization. 
-If case of an initial synchronization without to delte the data protection key before the next Button will be missing in the configuration wizard:
+This error may have to effects in time cockpit:
+
+* When you see the ```CryptographicException``` error dialog during the startup of time cockpit you have to delete the time cockpits windows data protection key and perform an initial synchronization. 
+
+* When you try to initially set up time cockpit you may be missing the "Next" button in one step of the configuration wizard.
 
 ![Next Button Missing](images/next-button-missing-en.png "Next Button Missing")
 
