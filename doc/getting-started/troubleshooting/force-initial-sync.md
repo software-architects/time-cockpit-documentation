@@ -1,6 +1,8 @@
 # Force Initial Sync of time cockpit
 
-In some cases it’s necessary to force an initial synchronization for time cockpits full client. That means your local database (client database) will be deleted and replaced with the actual version of time cockpits server database. Be aware that not synchronized data of the client database will be lost after an initial sync.
+In some cases it’s necessary to force an initial synchronization for time cockpits full client. That means your local database (client database) will be deleted and replaced with the actual version of time cockpits server database. 
+> [!NOTE]
+Be aware that not synchronized data of the client database will be lost after an initial sync.
 
 Examples for needed initial synchronization:
 * General Error in Synchronization
