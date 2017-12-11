@@ -1,8 +1,8 @@
 # Signal tracking has been suspended
 
-## Possible raised exception 
+## Possible raised exception
 
-```MessageSecurityException```
+MessageSecurityException
 
 ## Error cause
 Due to an unexpected change in system time, signal tracking has been suspended to avoid overwriting or damaging existing signal data.
