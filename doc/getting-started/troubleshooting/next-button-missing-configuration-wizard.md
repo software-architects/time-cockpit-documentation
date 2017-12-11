@@ -26,8 +26,6 @@ https://statictimecockpit.blob.core.windows.net/utils/ResetTimeCockpitConfigurat
 
 1. In some cases, the data protection key can not be deleted by the application. Thus, you have to delete the key yourself in the file explorer. For this reason, please check whether the key still exists. The path and name of the key to be deleted can be found in the output file at the position “Possible TC key at”
 
-[>NOTE]
-ACHTUNG: WOLLEN WIR HIER NICHT AUF DEN ARTIKEL VERWEISEN?
 1. After removing the key, you have to reset your time cockpit. Therefore, in time cockpit's installation folder (typically C:\Program Files\software architects\time cockpit\time cockpit 2010) you find a shortcut called “time cockpit - reset configuration”. Please run it.
 
    The application will now try to delete the locally stored time cockpit configuration and then restart time cockpit with its setup dialog. In case of an error you have to delete the configuration yourself. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
