@@ -16,6 +16,6 @@ Examples for needed initial synchronization:
 
 1. The application will now try to delete the locally stored time cockpit configuration and then restart time cockpit with its setup dialog.
    
-   It the shortcut does not work, you have to delete the configuration yourself. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
+   If the shortcut does not work, you have to delete the configuration yourself. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
 
 1. Start time cockpit. It will walk you through the initial configuration wizard. After that, you should be able to use time cockpit as usual
