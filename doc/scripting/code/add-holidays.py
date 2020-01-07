@@ -169,7 +169,8 @@ def newYearsDay(year):
 
 # ########################## 
 # Epiphany 
-# Heligen 3 Könige 
+# Heiligen 3 
+ge 
 # ########################## 
 def epiphanyDay(year):
     return DateTime(year, 1, 6)
@@ -236,7 +237,7 @@ def addFixedHolidays(dc, holidayCalendar, year):
         dc.SaveObject(holiday)
 
         holiday = dc.CreateLegalHoliday()  
-        holiday.LegalHolidayName = "Helige 3 Könige"
+        holiday.LegalHolidayName = "Heilige 3 Könige"
         holiday.LegalHolidayDate = epiphanyDay(year)
         holiday.LegalHolidayCalendar = holidayCalendar
         dc.SaveObject(holiday)
