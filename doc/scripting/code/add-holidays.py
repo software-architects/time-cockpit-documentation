@@ -169,8 +169,7 @@ def newYearsDay(year):
 
 # ########################## 
 # Epiphany 
-# Heiligen 3 
-ge 
+# Heiligen 3 Könige 
 # ########################## 
 def epiphanyDay(year):
     return DateTime(year, 1, 6)
