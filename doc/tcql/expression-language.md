@@ -130,6 +130,7 @@ Function | Description
 `:BackreferenceFriendlyName(string-expression)` | returns the friendly name of the backreference of the relation passed
 `:Date(date-time-expression)` | 
 `:Day(date-time-expression)` | 
+`:DayOfWeek(date-time-expression)` | returns the weekday index for a given datetime: 0=Sunday, 1-6=Monday-Saturday
 `:DefaultDisplayPropertyFriendlyName(string-expression)` | returns the friendly name of the default display property of the entity
 `:DisplayValue(alias)` | returns the value of the default display property)
 `:FirstOfMonth(date-time-expression)` | 
