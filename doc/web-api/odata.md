@@ -7,7 +7,7 @@ The [Open Data Protocol (OData)](http://www.odata.org/) is a web service protoco
 
 ## Service Endpoint
 
-The preliminary address of our OData endpoint is <https://apipreview.timecockpit.com/odata>.
+The address of our OData endpoint is <https://api.timecockpit.com/odata>.
 
 ## Authentication
 
@@ -27,9 +27,9 @@ The following example shows how to query all items of the entity type APP_Countr
 ### Request
 
 ```
-GET https://apipreview.timecockpit.com/odata/APP_Country HTTP/1.1
+GET https://api.timecockpit.com/odata/APP_Country HTTP/1.1
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...
-Host: apipreview.timecockpit.com
+Host: api.timecockpit.com
 ```
 
 ### Response
@@ -43,11 +43,11 @@ Content-Type: application/json; odata=minimalmetadata; streaming=true; charset=u
 Server: Microsoft-IIS/8.0
 DataServiceVersion: 3.0
 X-Powered-By: ASP.NET
-Set-Cookie: ARRAffinity=244116e25a72155d832c22601a40ae87af7d9c2cb18a99a181efeffc297cbc64;Path=/;Domain=apipreview.timecockpit.com
+Set-Cookie: ARRAffinity=244116e25a72155d832c22601a40ae87af7d9c2cb18a99a181efeffc297cbc64;Path=/;Domain=api.timecockpit.com
 Date: Wed, 30 Apr 2014 14:19:29 GMT
 
 {
-  "odata.metadata":"https://apipreview.timecockpit.com/odata/$metadata#APP_Country","value":[
+  "odata.metadata":"https://api.timecockpit.com/odata/$metadata#APP_Country","value":[
     {
       "APP_CountryUuid":"94bac4d3-fdc3-4ef7-ab6b-3123a6f361e0","APP_CountryName":"Switzerland","APP_IsoCode":"CH"
     },{
@@ -68,7 +68,7 @@ This example selects the 101st time sheet entry for Austrian customers. It inclu
 ### Request URI (with line breaks added for readability)
 
 ```
-https://apipreview.timecockpit.com/odata/APP_Timesheet()
+https://api.timecockpit.com/odata/APP_Timesheet()
 ?$filter=APP_Project/APP_Customer/APP_Country/APP_CountryName eq 'Austria'
 &$orderby=APP_BeginTime
 &$skip=100
@@ -91,7 +91,7 @@ Select A
 
 ```
 {
-    "odata.metadata": "https://apipreview.timecockpit.com/odata/$metadata#APP_Timesheet",
+    "odata.metadata": "https://api.timecockpit.com/odata/$metadata#APP_Timesheet",
     "value": [
         {
             "APP_UserDetail": {
@@ -191,7 +191,7 @@ By using [TypeScript](http://www.typescriptlang.org/) and [JayData](http://jayda
 ```
 var data = new cofx.DataService({
     name: "oData",
-    oDataServiceHost: "https://apipreview.timecockpit.com/odata",
+    oDataServiceHost: "https://api.timecockpit.com/odata",
     user: "demo@timecockpit.com",
     password: "...",
     maxDataServiceVersion: '3.0'
@@ -212,7 +212,7 @@ A HTTP POST operation is used to insert new data into the APP_Country entity set
 ### Request Headers
 
 ```
-POST https://apipreview.timecockpit.com/odata/APP_Country HTTP/1.1
+POST https://api.timecockpit.com/odata/APP_Country HTTP/1.1
 Accept: application/atomsvc+xml;q=0.8, application/json;odata=fullmetadata;q=0.7, application/json;q=0.5, */*;q=0.1
 MaxDataServiceVersion: 3.0
 DataServiceVersion: 3.0
@@ -223,7 +223,7 @@ Accept-Language: de-AT
 Origin: http://localhost:20337
 Accept-Encoding: gzip, deflate
 User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)
-Host: apipreview.timecockpit.com
+Host: api.timecockpit.com
 Content-Length: 105
 DNT: 1
 Connection: Keep-Alive
@@ -248,14 +248,14 @@ The response body contains the new object including metadata while the headers r
 HTTP/1.1 201 Created
 Content-Length: 529
 Content-Type: application/json; odata=fullmetadata; charset=utf-8
-Location: https://apipreview.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')
+Location: https://api.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')
 Server: Microsoft-IIS/8.0
 Access-Control-Allow-Origin: http://localhost:20337
 Access-Control-Allow-Credentials: true
 Access-Control-Expose-Headers: DataServiceVersion
 DataServiceVersion: 3.0
 X-Powered-By: ASP.NET
-Set-Cookie: ARRAffinity=244116e25a72155d832c22601a40ae87af7d9c2cb18a99a181efeffc297cbc64;Path=/;Domain=apipreview.timecockpit.com
+Set-Cookie: ARRAffinity=244116e25a72155d832c22601a40ae87af7d9c2cb18a99a181efeffc297cbc64;Path=/;Domain=api.timecockpit.com
 Date: Wed, 30 Apr 2014 15:48:26 GMT
 ```
 
@@ -263,10 +263,10 @@ Date: Wed, 30 Apr 2014 15:48:26 GMT
 
 ```
 {
-    "odata.metadata" : "https://apipreview.timecockpit.com/odata/$metadata#APP_Country/@Element",
+    "odata.metadata" : "https://api.timecockpit.com/odata/$metadata#APP_Country/@Element",
     "odata.type" : "cofx.APP_Country",
-    "odata.id" : "https://apipreview.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')",
-    "Customers@odata.navigationLinkUrl" : "https://apipreview.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')/Customers",
+    "odata.id" : "https://api.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')",
+    "Customers@odata.navigationLinkUrl" : "https://api.timecockpit.com/odata/APP_Country(guid'046ac6cf-1c55-493c-b6dd-65249fcf669e')/Customers",
     "APP_CountryUuid@odata.type" : "Edm.Guid",
     "APP_CountryUuid" : "046ac6cf-1c55-493c-b6dd-65249fcf669e",
     "APP_CountryName" : "Ireland",
