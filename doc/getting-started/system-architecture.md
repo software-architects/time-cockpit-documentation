@@ -51,7 +51,7 @@ We do not save the access data for the central data storage on your computer, bu
 
 On the server we only store encrypted and compressed signals. Your signal data password will never be transferred to the server, so there is no way to decrypt your signal data.
 
-To connect to the central data store SQL Azure you need to configure your environment to allow outbound TCP connections over port TCP/1433. Microsoft publishes [Security Guidelines for SQL Azure](http://social.technet.microsoft.com/wiki/contents/articles/security-guidelines-for-sql-azure.aspx). You can [download the IP ranges for all Windows Azure data centers](http://www.microsoft.com/en-us/download/details.aspx?id=29840). If possible you should restrict the firewall rule to these IP ranges. If you prefer we can also give you the DNS name of your time cockpit database.
+To connect to the central data store SQL Azure you need to configure your environment to allow outbound TCP connections over port TCP/1433. Microsoft publishes [Security Guidelines for SQL Azure](http://social.technet.microsoft.com/wiki/contents/articles/security-guidelines-for-sql-azure.aspx). You can [download the IP ranges for all Windows Azure data centers](https://www.microsoft.com/en-us/download/details.aspx?id=56519). If possible you should restrict the firewall rule to these IP ranges. If you prefer we can also give you the DNS name of your time cockpit database.
 
 ## Synchronization
 
