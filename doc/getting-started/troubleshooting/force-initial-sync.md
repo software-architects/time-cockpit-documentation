@@ -12,10 +12,7 @@ Examples for needed initial synchronization:
 ## How to Force an Initial Sync
 1. Stop the signaltracker if it’s running
 
-1. Reset your time cockpit Configuration. Therefore, in time cockpit's installation folder (typically C:\Program Files\software architects\time cockpit\time cockpit 2010) you find a shortcut called “time cockpit - reset configuration”. Please run it.
-
-1. The application will now try to delete the locally stored time cockpit configuration and then restart time cockpit with its setup dialog.
-   
-   If the shortcut does not work, you have to delete the configuration yourself. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
+1. Reset your time cockpit configuration. 
+   Therefore you have to delete the configuration. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
 
 1. Start time cockpit. It will walk you through the initial configuration wizard. After that, you should be able to use time cockpit as usual
