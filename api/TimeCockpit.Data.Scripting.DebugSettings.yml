@@ -1,31 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TimeCockpit.Data.Database.DbCommandExtensions
-  commentId: T:TimeCockpit.Data.Database.DbCommandExtensions
-  id: DbCommandExtensions
-  parent: TimeCockpit.Data.Database
-  children: []
+- uid: TimeCockpit.Data.Scripting.DebugSettings
+  commentId: T:TimeCockpit.Data.Scripting.DebugSettings
+  id: DebugSettings
+  parent: TimeCockpit.Data.Scripting
+  children:
+  - TimeCockpit.Data.Scripting.DebugSettings.#ctor
+  - TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+  - TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+  - TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
   langs:
   - csharp
   - vb
-  name: DbCommandExtensions
-  nameWithType: DbCommandExtensions
-  fullName: TimeCockpit.Data.Database.DbCommandExtensions
+  name: DebugSettings
+  nameWithType: DebugSettings
+  fullName: TimeCockpit.Data.Scripting.DebugSettings
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/DbCommandExtensions.cs
-    id: DbCommandExtensions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/DbCommandExtensions.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Database
-  summary: "\nProvides extension methods for the <xref href=\"System.Data.Common.DbCommand\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
+  namespace: TimeCockpit.Data.Scripting
+  summary: "\nSettings for script debugging/execution.\n"
   syntax:
-    content: public static class DbCommandExtensions
-    content.vb: Public Module DbCommandExtensions
+    content: public class DebugSettings
+    content.vb: Public Class DebugSettings
   inheritance:
   - System.Object
   inheritedMembers:
@@ -38,25 +38,135 @@ items:
   - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
+  - Class
+- uid: TimeCockpit.Data.Scripting.DebugSettings.#ctor
+  commentId: M:TimeCockpit.Data.Scripting.DebugSettings.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Scripting.DebugSettings
+  langs:
+  - csharp
+  - vb
+  name: DebugSettings()
+  nameWithType: DebugSettings.DebugSettings()
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.DebugSettings()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Scripting
+  syntax:
+    content: public DebugSettings()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Scripting.DebugSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+  commentId: P:TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+  id: EnableDebugging
+  parent: TimeCockpit.Data.Scripting.DebugSettings
+  langs:
+  - csharp
+  - vb
+  name: EnableDebugging
+  nameWithType: DebugSettings.EnableDebugging
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Scripting
+  summary: "\nGets or sets a value indicating whether script debugging should be enabled.\n"
+  syntax:
+    content: public bool EnableDebugging { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableDebugging As Boolean
+  overload: TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+  commentId: P:TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+  id: BreakOnStartup
+  parent: TimeCockpit.Data.Scripting.DebugSettings
+  langs:
+  - csharp
+  - vb
+  name: BreakOnStartup
+  nameWithType: DebugSettings.BreakOnStartup
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Scripting
+  summary: "\nGets or sets a value indicating whether execution should break on script startup.\n"
+  syntax:
+    content: public bool BreakOnStartup { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property BreakOnStartup As Boolean
+  overload: TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
+  commentId: P:TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
+  id: ModelScriptBasePath
+  parent: TimeCockpit.Data.Scripting.DebugSettings
+  langs:
+  - csharp
+  - vb
+  name: ModelScriptBasePath
+  nameWithType: DebugSettings.ModelScriptBasePath
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Scripting
+  summary: "\nGets or sets the base path for model script storage.\n"
+  syntax:
+    content: public string ModelScriptBasePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModelScriptBasePath As String
+  overload: TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: System.Data.Common.DbCommand
-  commentId: T:System.Data.Common.DbCommand
-  parent: System.Data.Common
+- uid: TimeCockpit.Data.Scripting
+  commentId: N:TimeCockpit.Data.Scripting
   isExternal: true
-  name: DbCommand
-  nameWithType: DbCommand
-  fullName: System.Data.Common.DbCommand
-- uid: TimeCockpit.Data.Database
-  commentId: N:TimeCockpit.Data.Database
-  isExternal: false
-  name: TimeCockpit.Data.Database
-  nameWithType: TimeCockpit.Data.Database
-  fullName: TimeCockpit.Data.Database
+  name: TimeCockpit.Data.Scripting
+  nameWithType: TimeCockpit.Data.Scripting
+  fullName: TimeCockpit.Data.Scripting
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -343,15 +453,47 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Data.Common
-  commentId: N:System.Data.Common
-  isExternal: false
-  name: System.Data.Common
-  nameWithType: System.Data.Common
-  fullName: System.Data.Common
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Scripting.DebugSettings.#ctor*
+  commentId: Overload:TimeCockpit.Data.Scripting.DebugSettings.#ctor
+  isExternal: true
+  name: DebugSettings
+  nameWithType: DebugSettings.DebugSettings
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.DebugSettings
+- uid: TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging*
+  commentId: Overload:TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+  isExternal: true
+  name: EnableDebugging
+  nameWithType: DebugSettings.EnableDebugging
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.EnableDebugging
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup*
+  commentId: Overload:TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+  isExternal: true
+  name: BreakOnStartup
+  nameWithType: DebugSettings.BreakOnStartup
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.BreakOnStartup
+- uid: TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath*
+  commentId: Overload:TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
+  isExternal: true
+  name: ModelScriptBasePath
+  nameWithType: DebugSettings.ModelScriptBasePath
+  fullName: TimeCockpit.Data.Scripting.DebugSettings.ModelScriptBasePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

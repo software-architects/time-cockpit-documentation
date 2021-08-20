@@ -17,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    id: EntitySource
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAST Node representing the source of a query to a concrete entity.\ne.g.:\nIn \n<pre><code>From X In Timesheet.Include(*) Select X</code></pre>\nTableName corresponds to &quot;Timesheet&quot;\nInclude corresponds to the &quot;.Include(*)&quot; (IncludeAll) node.\n"
-  example: []
   syntax:
     content: 'public class EntitySource : QuerySource'
     content.vb: >-
@@ -62,16 +58,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntitySource(System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.EntitySource\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public EntitySource(string entityName, IEnumerable<EntitySourceInclude> includes = null)
     parameters:
@@ -90,6 +82,42 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntitySource(System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude))
   name.vb: EntitySource(String, IEnumerable(Of EntitySourceInclude))
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: EntitySource.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to the <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref> call.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName
   id: EntityName
@@ -102,16 +130,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    id: EntityName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    startLine: 56
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the name of the table.\n"
-  example: []
   syntax:
     content: public string EntityName { get; }
     parameters: []
@@ -137,16 +161,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Includes
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    id: Includes
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    startLine: 61
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the include statements for the source.\n"
-  example: []
   syntax:
     content: public ReadOnlyCollection<EntitySourceInclude> Includes { get; }
     parameters: []
@@ -160,50 +180,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
-  langs:
-  - csharp
-  - vb
-  name: Accept(Visitor)
-  nameWithType: EntitySource.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/EntitySource.cs
-    startLine: 68
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
-  example: []
-  syntax:
-    content: public override Node Accept(Visitor visitor)
-    parameters:
-    - id: visitor
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-      description: The visitor to dispatch.
-    return:
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
-      description: Returns the value returned by the call to the <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref> call.
-    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
-  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -217,14 +197,14 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: QuerySource
   nameWithType: QuerySource
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.QuerySource
@@ -509,20 +489,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: EntitySource
-  nameWithType: EntitySource
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.#ctor
-  isExternal: false
+  isExternal: true
   name: EntitySource
   nameWithType: EntitySource.EntitySource
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntitySource
@@ -556,6 +529,7 @@ references:
     name: EntitySourceInclude
     nameWithType: EntitySourceInclude
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -572,6 +546,7 @@ references:
     name: EntitySourceInclude
     nameWithType: EntitySourceInclude
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -616,19 +591,73 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: true
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept
+  isExternal: true
+  name: Accept
+  nameWithType: EntitySource.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: true
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName
-  isExternal: false
+  isExternal: true
   name: EntityName
   nameWithType: EntitySource.EntityName
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.EntityName
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Includes*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Includes
-  isExternal: false
+  isExternal: true
   name: Includes
   nameWithType: EntitySource.Includes
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Includes
@@ -655,6 +684,7 @@ references:
     name: EntitySourceInclude
     nameWithType: EntitySourceInclude
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -671,6 +701,7 @@ references:
     name: EntitySourceInclude
     nameWithType: EntitySourceInclude
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySourceInclude
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -715,94 +746,7 @@ references:
     fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
-  isExternal: false
+  isExternal: true
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
-  name: Accept(Visitor)
-  nameWithType: Node.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept
-  isExternal: false
-  name: Accept
-  nameWithType: EntitySource.Accept
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.EntitySource.Accept
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: Visitor
-  nameWithType: Visitor
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

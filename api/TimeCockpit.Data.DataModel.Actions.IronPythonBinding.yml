@@ -5,11 +5,12 @@ items:
   id: IronPythonBinding
   parent: TimeCockpit.Data.DataModel.Actions
   children:
+  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor
   - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Clone
   - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
-  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.String,System.Object)
+  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object)
   - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.GetDirectives
-  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(System.String,System.String)
+  - TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(TimeCockpit.Data.Scripting.ExecutionInfo,System.String)
   langs:
   - csharp
   - vb
@@ -18,28 +19,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: IronPythonBinding
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nRepresents a <xref href=\"TimeCockpit.Data.DataModel.Actions.SourceCodeBinding\" data-throw-if-not-resolved=\"false\"></xref> that establishes a relationship from a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>\nto executable code that is directly stored with the binding. The binding references \nsome executable python code.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public class IronPythonBinding : SourceCodeBinding, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public class IronPythonBinding : SourceCodeBinding, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public Class IronPythonBinding
           Inherits SourceCodeBinding
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -59,9 +47,9 @@ items:
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -72,48 +60,35 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(System.String,System.String)
-  commentId: M:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(System.String,System.String)
-  id: VerifySourceCode(System.String,System.String)
+- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(TimeCockpit.Data.Scripting.ExecutionInfo,System.String)
+  commentId: M:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(TimeCockpit.Data.Scripting.ExecutionInfo,System.String)
+  id: VerifySourceCode(TimeCockpit.Data.Scripting.ExecutionInfo,System.String)
   parent: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
   langs:
   - csharp
   - vb
-  name: VerifySourceCode(String, String)
-  nameWithType: IronPythonBinding.VerifySourceCode(String, String)
-  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(System.String, System.String)
+  name: VerifySourceCode(ExecutionInfo, String)
+  nameWithType: IronPythonBinding.VerifySourceCode(ExecutionInfo, String)
+  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode(TimeCockpit.Data.Scripting.ExecutionInfo, System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: VerifySourceCode
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 45
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nVerifies the IronPython source code.\n"
-  example: []
   syntax:
-    content: public static string VerifySourceCode(string sourceCode, string parameterName)
+    content: public static string VerifySourceCode(ExecutionInfo script, string parameterName)
     parameters:
-    - id: sourceCode
-      type: System.String
+    - id: script
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: The source code to verify.
     - id: parameterName
       type: System.String
@@ -121,7 +96,7 @@ items:
     return:
       type: System.String
       description: Returns the name of the function.
-    content.vb: Public Shared Function VerifySourceCode(sourceCode As String, parameterName As String) As String
+    content.vb: Public Shared Function VerifySourceCode(script As ExecutionInfo, parameterName As String) As String
   overload: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode*
   modifiers.csharp:
   - public
@@ -129,36 +104,32 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.String,System.Object)
-  commentId: M:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.String,System.Object)
-  id: ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.String,System.Object)
+- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object)
+  commentId: M:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object)
+  id: ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object)
   parent: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
   langs:
   - csharp
   - vb
-  name: ExecuteScript(DataContext, String, String, Object)
-  nameWithType: IronPythonBinding.ExecuteScript(DataContext, String, String, Object)
-  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext, System.String, System.String, System.Object)
+  name: ExecuteScript(DataContext, ExecutionInfo, String, Object)
+  nameWithType: IronPythonBinding.ExecuteScript(DataContext, ExecutionInfo, String, Object)
+  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo, System.String, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: ExecuteScript
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 96
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nExecutes an IronPython script.\n"
-  example: []
   syntax:
-    content: public static string ExecuteScript(DataContext dataContext, string sourceCode, string parameterName, object parameter)
+    content: public static string ExecuteScript(DataContext dataContext, ExecutionInfo sourceCode, string parameterName, object parameter)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: The data context to use.
     - id: sourceCode
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: The source code to use.
     - id: parameterName
       type: System.String
@@ -169,7 +140,7 @@ items:
     return:
       type: System.String
       description: Returns the output of the script.
-    content.vb: Public Shared Function ExecuteScript(dataContext As DataContext, sourceCode As String, parameterName As String, parameter As Object) As String
+    content.vb: Public Shared Function ExecuteScript(dataContext As DataContext, sourceCode As ExecutionInfo, parameterName As String, parameter As Object) As String
   overload: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript*
   modifiers.csharp:
   - public
@@ -189,11 +160,8 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.GetDirectives()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: GetDirectives
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 124
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
@@ -223,16 +191,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Clone()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 157
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nclones the model action.\n"
-  example: []
   syntax:
     content: public override ModelActionBinding Clone()
     return:
@@ -259,16 +223,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    id: Execute
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/IronPythonBinding.cs
-    startLine: 185
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nCalls an executable piece of code that is associated with the <xref href=\"TimeCockpit.Data.DataModel.Actions.IronPythonBinding\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: protected override void Execute(ExecutionContext context)
     parameters:
@@ -284,24 +244,35 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
+- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
+  langs:
+  - csharp
+  - vb
+  name: IronPythonBinding()
+  nameWithType: IronPythonBinding.IronPythonBinding()
+  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.IronPythonBinding()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  syntax:
+    content: public IronPythonBinding()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  commentId: T:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: SourceCodeBinding
-  nameWithType: SourceCodeBinding
-  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
@@ -315,34 +286,37 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: ModelActionBinding
   nameWithType: ModelActionBinding
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  commentId: T:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: SourceCodeBinding
+  nameWithType: SourceCodeBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
@@ -350,59 +324,45 @@ references:
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: ActionCall
   nameWithType: SourceCodeBinding.ActionCall
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: IsVerified
   nameWithType: SourceCodeBinding.IsVerified
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: Description
   nameWithType: SourceCodeBinding.Description
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: SourceCode
   nameWithType: SourceCodeBinding.SourceCode
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: Signature
   nameWithType: SourceCodeBinding.Signature
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
   parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  isExternal: false
+  isExternal: true
   name: Thumbprint
   nameWithType: SourceCodeBinding.Thumbprint
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -415,6 +375,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -431,6 +392,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -442,6 +404,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -454,6 +430,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -470,6 +447,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -493,6 +471,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -517,6 +496,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -548,6 +528,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -564,6 +545,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -856,40 +838,35 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode
-  isExternal: false
+  isExternal: true
   name: VerifySourceCode
   nameWithType: IronPythonBinding.VerifySourceCode
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.VerifySourceCode
+- uid: TimeCockpit.Data.Scripting.ExecutionInfo
+  commentId: T:TimeCockpit.Data.Scripting.ExecutionInfo
+  parent: TimeCockpit.Data.Scripting
+  isExternal: true
+  name: ExecutionInfo
+  nameWithType: ExecutionInfo
+  fullName: TimeCockpit.Data.Scripting.ExecutionInfo
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -897,22 +874,28 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: TimeCockpit.Data.Scripting
+  commentId: N:TimeCockpit.Data.Scripting
+  isExternal: true
+  name: TimeCockpit.Data.Scripting
+  nameWithType: TimeCockpit.Data.Scripting
+  fullName: TimeCockpit.Data.Scripting
 - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript
-  isExternal: false
+  isExternal: true
   name: ExecuteScript
   nameWithType: IronPythonBinding.ExecuteScript
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.ExecuteScript
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.GetDirectives*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.GetDirectives
-  isExternal: false
+  isExternal: true
   name: GetDirectives
   nameWithType: IronPythonBinding.GetDirectives
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.GetDirectives
@@ -1029,14 +1012,14 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
-  isExternal: false
+  isExternal: true
   name: Clone()
   nameWithType: ModelActionBinding.Clone()
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone()
@@ -1045,6 +1028,7 @@ references:
     name: Clone
     nameWithType: ModelActionBinding.Clone
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1056,6 +1040,7 @@ references:
     name: Clone
     nameWithType: ModelActionBinding.Clone
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1064,28 +1049,14 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Clone*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Clone
-  isExternal: false
+  isExternal: true
   name: Clone
   nameWithType: IronPythonBinding.Clone
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Clone
-- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
-  commentId: T:TimeCockpit.Data.DataModel.Actions.IronPythonBinding
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: IronPythonBinding
-  nameWithType: IronPythonBinding
-  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
-- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ExecutionContext
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ExecutionContext
-  nameWithType: ExecutionContext
-  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
-  isExternal: false
+  isExternal: true
   name: Execute(ExecutionContext)
   nameWithType: ModelActionBinding.Execute(ExecutionContext)
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
@@ -1094,6 +1065,7 @@ references:
     name: Execute
     nameWithType: ModelActionBinding.Execute
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1101,6 +1073,7 @@ references:
     name: ExecutionContext
     nameWithType: ExecutionContext
     fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1109,6 +1082,7 @@ references:
     name: Execute
     nameWithType: ModelActionBinding.Execute
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1116,12 +1090,26 @@ references:
     name: ExecutionContext
     nameWithType: ExecutionContext
     fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Execute*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Execute
-  isExternal: false
+  isExternal: true
   name: Execute
   nameWithType: IronPythonBinding.Execute
   fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.Execute
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: ExecutionContext
+  nameWithType: ExecutionContext
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+- uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.IronPythonBinding.#ctor
+  isExternal: true
+  name: IronPythonBinding
+  nameWithType: IronPythonBinding.IronPythonBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.IronPythonBinding.IronPythonBinding

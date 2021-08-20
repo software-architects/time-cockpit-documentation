@@ -20,29 +20,16 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: ModelEntityTypeCondition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nEncapsulates information about a condition which determines if the code of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction.Binding\" data-throw-if-not-resolved=\"false\"></xref> is executable.\n"
   remarks: "\n<p>\nThe <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref> is the only <xref href=\"TimeCockpit.Data.DataModel.Condition\" data-throw-if-not-resolved=\"false\"></xref> that is currently supported!\n</p>\n<p>\nIn order to create a valid instance of <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref>, the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref> property needs to be set.\nIt does not suffice to only set the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName\" data-throw-if-not-resolved=\"false\"></xref>. The latter property is only used for serialilzation purposes.\n</p>\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public class ModelEntityTypeCondition : Condition, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public class ModelEntityTypeCondition : Condition, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public Class ModelEntityTypeCondition
           Inherits Condition
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -55,9 +42,9 @@ items:
   - System.Dynamic.IDynamicMetaObjectProvider
   - System.ComponentModel.INotifyPropertyChanged
   inheritedMembers:
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -68,15 +55,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - class
@@ -95,16 +73,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityTypeCondition()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 59
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nInitializes a new instance of the ModelEntityTypeCondition class\n"
-  example: []
   syntax:
     content: public ModelEntityTypeCondition()
     content.vb: Public Sub New
@@ -125,16 +99,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityTypeCondition(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 68
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nInitializes a new instance of the ModelEntityTypeCondition class.\n"
-  example: []
   syntax:
     content: public ModelEntityTypeCondition(IEnumerable<KeyValuePair<object, object>> properties)
     parameters:
@@ -150,157 +120,6 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityTypeCondition(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Object, System.Object)))
   name.vb: ModelEntityTypeCondition(IEnumerable(Of KeyValuePair(Of Object, Object)))
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
-  id: ModelEntityName
-  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-  langs:
-  - csharp
-  - vb
-  name: ModelEntityName
-  nameWithType: ModelEntityTypeCondition.ModelEntityName
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: ModelEntityName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 84
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel.Actions
-  summary: "\nGets or sets the name of the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref> of the current <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  remarks: "\nThis property should not be set. It is only used for deferred loading (deserialization) of <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref>s in the data layer.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public string ModelEntityName { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public Property ModelEntityName As String
-  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-  id: ModelEntity
-  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-  langs:
-  - csharp
-  - vb
-  name: ModelEntity
-  nameWithType: ModelEntityTypeCondition.ModelEntity
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: ModelEntity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 111
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel.Actions
-  summary: "\nGets or sets a model entity that a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> may be applied to.\n"
-  remarks: "\nDuring the validation process of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>, it is checked that the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>\nrepresented by this property is attached to the same <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref> as the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> it belongs\nto.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public ModelEntityBase ModelEntity { get; set; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelEntityBase
-    content.vb: >-
-      <JsonIgnore>
-
-      Public Property ModelEntity As ModelEntityBase
-  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
-  id: MinimumInputSetSize
-  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-  langs:
-  - csharp
-  - vb
-  name: MinimumInputSetSize
-  nameWithType: ModelEntityTypeCondition.MinimumInputSetSize
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: MinimumInputSetSize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 135
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel.Actions
-  summary: "\nGets or sets the minimum number of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s in <xref href=\"TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public int MinimumInputSetSize { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public Property MinimumInputSetSize As Integer
-  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
   commentId: M:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
   id: Clone
@@ -313,16 +132,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 159
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nCreates a deep copy of the condition.\n"
-  example: []
   syntax:
     content: public override Condition Clone()
     return:
@@ -349,16 +164,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    id: GetStatus
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelEntityTypeCondition.cs
-    startLine: 171
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nChecks the status a <xref href=\"TimeCockpit.Data.DataModel.Condition\" data-throw-if-not-resolved=\"false\"></xref> has in respect to a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelActionContext\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: protected override Status GetStatus(ModelActionContext context)
     parameters:
@@ -377,30 +188,105 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-references:
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction.Binding
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelAction.Binding
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelEntityTypeCondition
-  nameWithType: ModelEntityTypeCondition
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
-- uid: TimeCockpit.Data.DataModel.Condition
-  commentId: T:TimeCockpit.Data.DataModel.Condition
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Condition
-  nameWithType: Condition
-  fullName: TimeCockpit.Data.DataModel.Condition
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
   commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
+  id: ModelEntityName
+  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
+  langs:
+  - csharp
+  - vb
+  name: ModelEntityName
+  nameWithType: ModelEntityTypeCondition.ModelEntityName
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the name of the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref> of the current <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\nThis property should not be set. It is only used for deferred loading (deserialization) of <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition\" data-throw-if-not-resolved=\"false\"></xref>s in the data layer.\n"
+  syntax:
+    content: public string ModelEntityName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModelEntityName As String
+  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
+  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
+  id: ModelEntity
+  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
+  langs:
+  - csharp
+  - vb
+  name: ModelEntity
+  nameWithType: ModelEntityTypeCondition.ModelEntity
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets a model entity that a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> may be applied to.\n"
+  remarks: "\nDuring the validation process of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>, it is checked that the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>\nrepresented by this property is attached to the same <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref> as the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> it belongs\nto.\n"
+  syntax:
+    content: public ModelEntityBase ModelEntity { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    content.vb: Public Property ModelEntity As ModelEntityBase
+  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
+  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
+  id: MinimumInputSetSize
+  parent: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition
+  langs:
+  - csharp
+  - vb
+  name: MinimumInputSetSize
+  nameWithType: ModelEntityTypeCondition.MinimumInputSetSize
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the minimum number of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s in <xref href=\"TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public int MinimumInputSetSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MinimumInputSetSize As Integer
+  overload: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
@@ -414,45 +300,34 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
+- uid: TimeCockpit.Data.DataModel.Condition
+  commentId: T:TimeCockpit.Data.DataModel.Condition
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: Condition
+  nameWithType: Condition
+  fullName: TimeCockpit.Data.DataModel.Condition
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -465,6 +340,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -481,6 +357,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -492,6 +369,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -504,6 +395,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -520,6 +412,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -543,6 +436,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -567,6 +461,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -598,6 +493,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -614,6 +510,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -904,39 +801,27 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: true
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.#ctor
-  isExternal: false
+  isExternal: true
   name: ModelEntityTypeCondition
   nameWithType: ModelEntityTypeCondition.ModelEntityTypeCondition
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityTypeCondition
@@ -1063,13 +948,111 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DataModel.Condition.Clone
+  commentId: M:TimeCockpit.Data.DataModel.Condition.Clone
+  parent: TimeCockpit.Data.DataModel.Condition
+  isExternal: true
+  name: Clone()
+  nameWithType: Condition.Clone()
+  fullName: TimeCockpit.Data.DataModel.Condition.Clone()
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.Condition.Clone
+    name: Clone
+    nameWithType: Condition.Clone
+    fullName: TimeCockpit.Data.DataModel.Condition.Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.Condition.Clone
+    name: Clone
+    nameWithType: Condition.Clone
+    fullName: TimeCockpit.Data.DataModel.Condition.Clone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
+  isExternal: true
+  name: Clone
+  nameWithType: ModelEntityTypeCondition.Clone
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
+- uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
+  commentId: M:TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
+  parent: TimeCockpit.Data.DataModel.Condition
+  isExternal: true
+  name: GetStatus(ModelActionContext)
+  nameWithType: Condition.GetStatus(ModelActionContext)
+  fullName: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
+    name: GetStatus
+    nameWithType: Condition.GetStatus
+    fullName: TimeCockpit.Data.DataModel.Condition.GetStatus
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+    name: ModelActionContext
+    nameWithType: ModelActionContext
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
+    name: GetStatus
+    nameWithType: Condition.GetStatus
+    fullName: TimeCockpit.Data.DataModel.Condition.GetStatus
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+    name: ModelActionContext
+    nameWithType: ModelActionContext
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus
+  isExternal: true
+  name: GetStatus
+  nameWithType: ModelEntityTypeCondition.GetStatus
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionContext
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: ModelActionContext
+  nameWithType: ModelActionContext
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
+- uid: TimeCockpit.Data.DataModel.Actions.Status
+  commentId: T:TimeCockpit.Data.DataModel.Actions.Status
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: Status
+  nameWithType: Status
+  fullName: TimeCockpit.Data.DataModel.Actions.Status
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
-  isExternal: false
+  isExternal: true
   name: ModelEntityName
   nameWithType: ModelEntityTypeCondition.ModelEntityName
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntityName
@@ -1080,45 +1063,22 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntityBase
-  nameWithType: ModelEntityBase
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-- uid: TimeCockpit.Data.DataModel.Model
-  commentId: T:TimeCockpit.Data.DataModel.Model
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Model
-  nameWithType: Model
-  fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-  isExternal: false
+  isExternal: true
   name: ModelEntity
   nameWithType: ModelEntityTypeCondition.ModelEntity
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.ModelEntity
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
-- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
-  isExternal: false
+  isExternal: true
   name: MinimumInputSetSize
   nameWithType: ModelEntityTypeCondition.MinimumInputSetSize
   fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.MinimumInputSetSize
@@ -1129,95 +1089,3 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TimeCockpit.Data.DataModel.Condition.Clone
-  commentId: M:TimeCockpit.Data.DataModel.Condition.Clone
-  parent: TimeCockpit.Data.DataModel.Condition
-  isExternal: false
-  name: Clone()
-  nameWithType: Condition.Clone()
-  fullName: TimeCockpit.Data.DataModel.Condition.Clone()
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.Condition.Clone
-    name: Clone
-    nameWithType: Condition.Clone
-    fullName: TimeCockpit.Data.DataModel.Condition.Clone
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.Condition.Clone
-    name: Clone
-    nameWithType: Condition.Clone
-    fullName: TimeCockpit.Data.DataModel.Condition.Clone
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone*
-  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
-  isExternal: false
-  name: Clone
-  nameWithType: ModelEntityTypeCondition.Clone
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.Clone
-- uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelActionContext
-  nameWithType: ModelActionContext
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-- uid: TimeCockpit.Data.DataModel.Actions.Status
-  commentId: T:TimeCockpit.Data.DataModel.Actions.Status
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: Status
-  nameWithType: Status
-  fullName: TimeCockpit.Data.DataModel.Actions.Status
-- uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
-  commentId: M:TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
-  parent: TimeCockpit.Data.DataModel.Condition
-  isExternal: false
-  name: GetStatus(ModelActionContext)
-  nameWithType: Condition.GetStatus(ModelActionContext)
-  fullName: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
-    name: GetStatus
-    nameWithType: Condition.GetStatus
-    fullName: TimeCockpit.Data.DataModel.Condition.GetStatus
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-    name: ModelActionContext
-    nameWithType: ModelActionContext
-    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.Condition.GetStatus(TimeCockpit.Data.DataModel.Actions.ModelActionContext)
-    name: GetStatus
-    nameWithType: Condition.GetStatus
-    fullName: TimeCockpit.Data.DataModel.Condition.GetStatus
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-    name: ModelActionContext
-    nameWithType: ModelActionContext
-    fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus*
-  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus
-  isExternal: false
-  name: GetStatus
-  nameWithType: ModelEntityTypeCondition.GetStatus
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelEntityTypeCondition.GetStatus

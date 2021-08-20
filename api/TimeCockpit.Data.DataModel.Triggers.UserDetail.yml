@@ -5,6 +5,7 @@ items:
   id: UserDetail
   parent: TimeCockpit.Data.DataModel.Triggers
   children:
+  - TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor
   - TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   langs:
   - csharp
@@ -14,19 +15,21 @@ items:
   fullName: TimeCockpit.Data.DataModel.Triggers.UserDetail
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/UserDetail.cs
-    id: UserDetail
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/UserDetail.cs
-    startLine: 15
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Triggers
   summary: "\nRepresents a class that holds trigger methods for APP_UserDetail\n"
-  example: []
   syntax:
-    content: public class UserDetail
-    content.vb: Public Class UserDetail
+    content: >-
+      [ModelEntityTrigger]
+
+      public class UserDetail
+    content.vb: >-
+      <ModelEntityTrigger>
+
+      Public Class UserDetail
   inheritance:
   - System.Object
   inheritedMembers:
@@ -37,6 +40,10 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: TimeCockpit.Data.DataModel.Triggers.ModelEntityTriggerAttribute
+    ctor: TimeCockpit.Data.DataModel.Triggers.ModelEntityTriggerAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -55,34 +62,65 @@ items:
   fullName: TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/UserDetail.cs
-    id: SetCurrentCulture
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/UserDetail.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Triggers
   summary: "\nSets the current culture if the culture of a user is updated.\n"
-  example: []
   syntax:
-    content: public static void SetCurrentCulture(ExecutionContext context)
+    content: >-
+      [TriggerMethod]
+
+      public static void SetCurrentCulture(ExecutionContext context)
     parameters:
     - id: context
       type: TimeCockpit.Data.DataModel.Actions.ExecutionContext
       description: The context to use.
-    content.vb: Public Shared Sub SetCurrentCulture(context As ExecutionContext)
+    content.vb: >-
+      <TriggerMethod>
+
+      Public Shared Sub SetCurrentCulture(context As ExecutionContext)
   overload: TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture*
+  attributes:
+  - type: TimeCockpit.Data.DataModel.Triggers.TriggerMethodAttribute
+    ctor: TimeCockpit.Data.DataModel.Triggers.TriggerMethodAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
+- uid: TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Triggers.UserDetail
+  langs:
+  - csharp
+  - vb
+  name: UserDetail()
+  nameWithType: UserDetail.UserDetail()
+  fullName: TimeCockpit.Data.DataModel.Triggers.UserDetail.UserDetail()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Triggers
+  syntax:
+    content: public UserDetail()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.DataModel.Triggers
   commentId: N:TimeCockpit.Data.DataModel.Triggers
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Triggers
   nameWithType: TimeCockpit.Data.DataModel.Triggers
   fullName: TimeCockpit.Data.DataModel.Triggers
@@ -374,26 +412,32 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture*
   commentId: Overload:TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture
-  isExternal: false
+  isExternal: true
   name: SetCurrentCulture
   nameWithType: UserDetail.SetCurrentCulture
   fullName: TimeCockpit.Data.DataModel.Triggers.UserDetail.SetCurrentCulture
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
   commentId: T:TimeCockpit.Data.DataModel.Actions.ExecutionContext
   parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: ExecutionContext
   nameWithType: ExecutionContext
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
+- uid: TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.UserDetail.#ctor
+  isExternal: true
+  name: UserDetail
+  nameWithType: UserDetail.UserDetail
+  fullName: TimeCockpit.Data.DataModel.Triggers.UserDetail.UserDetail

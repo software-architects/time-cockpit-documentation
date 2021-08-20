@@ -18,25 +18,16 @@ items:
   fullName: TimeCockpit.Data.DynamicObject
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: DynamicObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nImplementation of DynamicObject\n"
   remarks: "\n<p>Supports the library for integrating with the Dynamic Language Runtime. This class must not be used\noutside of this library!</p>\n<p>Caution! Will be replaced as soon as implementation of C# 4.0 becomes available.</p>\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      public abstract class DynamicObject : IDynamicMetaObjectProvider
+    content: 'public abstract class DynamicObject : IDynamicMetaObjectProvider'
     content.vb: >-
-      <DataContract>
-
       Public MustInherit Class DynamicObject
           Implements IDynamicMetaObjectProvider
   inheritance:
@@ -62,10 +53,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - abstract
@@ -86,16 +73,12 @@ items:
   fullName: TimeCockpit.Data.DynamicObject.DynamicObject()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 32
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInitializes a new instance of the DynamicObject class\n"
-  example: []
   syntax:
     content: protected DynamicObject()
     content.vb: Protected Sub New
@@ -116,18 +99,15 @@ items:
   fullName: TimeCockpit.Data.DynamicObject.DynamicObject(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 53
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInitializes a new instance of the DynamicObject class.\n"
   remarks: "\n<p>You can use this constructor to initialize a new instance of the\nDynamicObject class by specifying its properties in a list of key/value\npairs. This is especially useful for dynamic languages like python.</p>\n"
   example:
-  - "\n<pre><code class=\"Python\">flatDim = ModelEntity({ &quot;Name&quot;: &quot;Project&quot; })\nflatDim.Properties.Add(TextProperty({ &quot;Name&quot;: &quot;ProjectName&quot;, &quot;MaxStorageSize&quot;: 50 }))\nflatDim.Properties.Add(DateTimeProperty({ &quot;Name&quot;: &quot;BeginTime&quot;, &quot;FractionalSecondsPrecision&quot;: 2 }))\nContext.Model.Entities.Add(flatDim)</code></pre>\n"
+  - "\n<pre><code class=\"lang-Python\">flatDim = ModelEntity({ &quot;Name&quot;: &quot;Project&quot; })\nflatDim.Properties.Add(TextProperty({ &quot;Name&quot;: &quot;ProjectName&quot;, &quot;MaxStorageSize&quot;: 50 }))\nflatDim.Properties.Add(DateTimeProperty({ &quot;Name&quot;: &quot;BeginTime&quot;, &quot;FractionalSecondsPrecision&quot;: 2 }))\nContext.Model.Entities.Add(flatDim)</code></pre>\n"
   syntax:
     content: protected DynamicObject(IEnumerable<KeyValuePair<object, object>> properties)
     parameters:
@@ -155,16 +135,12 @@ items:
   fullName: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: GetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 149
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the value of a CLR property.\n"
-  example: []
   syntax:
     content: public virtual object GetMember(string name)
     parameters:
@@ -194,16 +170,12 @@ items:
   fullName: TimeCockpit.Data.DynamicObject.SetMember(System.String, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: SetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 172
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSets the value of a CLR property. \n"
-  example: []
   syntax:
     content: public virtual void SetMember(string name, object value)
     parameters:
@@ -233,16 +205,12 @@ items:
   fullName: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    id: GetMetaObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DynamicObject.cs
-    startLine: 193
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the meta object of the dynamic object.\n"
-  example: []
   syntax:
     content: public virtual DynamicMetaObject GetMetaObject(Expression parameter)
     parameters:
@@ -254,8 +222,6 @@ items:
       description: <xref href="TimeCockpit.Data.DynamicObject.DynamicMetaObject" data-throw-if-not-resolved="false"></xref> that represents this specific object’s binding logic.
     content.vb: Public Overridable Function GetMetaObject(parameter As Expression) As DynamicMetaObject
   overload: TimeCockpit.Data.DynamicObject.GetMetaObject*
-  implements:
-  - System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
   modifiers.csharp:
   - public
   - virtual
@@ -265,7 +231,7 @@ items:
 references:
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -277,8 +243,6 @@ references:
   nameWithType: Object
   fullName: System.Object
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
@@ -564,19 +528,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
 - uid: TimeCockpit.Data.DynamicObject.#ctor*
   commentId: Overload:TimeCockpit.Data.DynamicObject.#ctor
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject.DynamicObject
   fullName: TimeCockpit.Data.DynamicObject.DynamicObject
@@ -703,13 +661,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DynamicObject.GetMember*
   commentId: Overload:TimeCockpit.Data.DynamicObject.GetMember
-  isExternal: false
+  isExternal: true
   name: GetMember
   nameWithType: DynamicObject.GetMember
   fullName: TimeCockpit.Data.DynamicObject.GetMember
@@ -722,80 +680,23 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.DynamicObject.SetMember*
   commentId: Overload:TimeCockpit.Data.DynamicObject.SetMember
-  isExternal: false
+  isExternal: true
   name: SetMember
   nameWithType: DynamicObject.SetMember
   fullName: TimeCockpit.Data.DynamicObject.SetMember
-- uid: TimeCockpit.Data.DynamicObject.DynamicMetaObject
-  commentId: T:TimeCockpit.Data.DynamicObject.DynamicMetaObject
-  isExternal: false
-  name: DynamicObject.DynamicMetaObject
-  nameWithType: DynamicObject.DynamicMetaObject
-  fullName: TimeCockpit.Data.DynamicObject.DynamicMetaObject
 - uid: TimeCockpit.Data.DynamicObject.GetMetaObject*
   commentId: Overload:TimeCockpit.Data.DynamicObject.GetMetaObject
-  isExternal: false
+  isExternal: true
   name: GetMetaObject
   nameWithType: DynamicObject.GetMetaObject
   fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
-- uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
-  commentId: M:System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
-  parent: System.Dynamic.IDynamicMetaObjectProvider
-  isExternal: true
-  name: GetMetaObject(Expression)
-  nameWithType: IDynamicMetaObjectProvider.GetMetaObject(Expression)
-  fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
-  spec.csharp:
-  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
-    name: GetMetaObject
-    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
-    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Linq.Expressions.Expression
-    name: Expression
-    nameWithType: Expression
-    fullName: System.Linq.Expressions.Expression
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject(System.Linq.Expressions.Expression)
-    name: GetMetaObject
-    nameWithType: IDynamicMetaObjectProvider.GetMetaObject
-    fullName: System.Dynamic.IDynamicMetaObjectProvider.GetMetaObject
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Linq.Expressions.Expression
-    name: Expression
-    nameWithType: Expression
-    fullName: System.Linq.Expressions.Expression
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Linq.Expressions.Expression
-  commentId: T:System.Linq.Expressions.Expression
-  parent: System.Linq.Expressions
   isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: System.Linq.Expressions.Expression
 - uid: System.Dynamic.DynamicMetaObject
-  commentId: T:System.Dynamic.DynamicMetaObject
-  parent: System.Dynamic
   isExternal: true
   name: DynamicMetaObject
   nameWithType: DynamicMetaObject
   fullName: System.Dynamic.DynamicMetaObject
-- uid: System.Linq.Expressions
-  commentId: N:System.Linq.Expressions
-  isExternal: false
-  name: System.Linq.Expressions
-  nameWithType: System.Linq.Expressions
-  fullName: System.Linq.Expressions

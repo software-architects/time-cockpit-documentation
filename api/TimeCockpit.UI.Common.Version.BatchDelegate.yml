@@ -4,7 +4,11 @@ items:
   commentId: T:TimeCockpit.UI.Common.Version.BatchDelegate
   id: BatchDelegate
   parent: TimeCockpit.UI.Common.Version
-  children: []
+  children:
+  - TimeCockpit.UI.Common.Version.BatchDelegate.#ctor(System.Object,System.IntPtr)
+  - TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke(TimeCockpit.Data.Install.BatchParameters,System.AsyncCallback,System.Object)
+  - TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke(System.IAsyncResult)
+  - TimeCockpit.UI.Common.Version.BatchDelegate.Invoke(TimeCockpit.Data.Install.BatchParameters)
   langs:
   - csharp
   - vb
@@ -13,16 +17,12 @@ items:
   fullName: TimeCockpit.UI.Common.Version.BatchDelegate
   type: Delegate
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/BatchDelegate.cs
-    id: BatchDelegate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/BatchDelegate.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.UI.Common.Version
   summary: "\ndelegate method for batches.\n"
-  example: []
   syntax:
     content: public delegate void BatchDelegate(BatchParameters parameters);
     parameters:
@@ -36,23 +36,207 @@ items:
   modifiers.vb:
   - Public
   - Delegate
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.#ctor(System.Object,System.IntPtr)
+  commentId: M:TimeCockpit.UI.Common.Version.BatchDelegate.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TimeCockpit.UI.Common.Version.BatchDelegate
+  langs:
+  - csharp
+  - vb
+  name: BatchDelegate(Object, IntPtr)
+  nameWithType: BatchDelegate.BatchDelegate(Object, IntPtr)
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.BatchDelegate(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.UI.Common.Version
+  syntax:
+    content: public BatchDelegate(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: TimeCockpit.UI.Common.Version.BatchDelegate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.Invoke(TimeCockpit.Data.Install.BatchParameters)
+  commentId: M:TimeCockpit.UI.Common.Version.BatchDelegate.Invoke(TimeCockpit.Data.Install.BatchParameters)
+  id: Invoke(TimeCockpit.Data.Install.BatchParameters)
+  parent: TimeCockpit.UI.Common.Version.BatchDelegate
+  langs:
+  - csharp
+  - vb
+  name: Invoke(BatchParameters)
+  nameWithType: BatchDelegate.Invoke(BatchParameters)
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.Invoke(TimeCockpit.Data.Install.BatchParameters)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.UI.Common.Version
+  syntax:
+    content: public virtual void Invoke(BatchParameters parameters)
+    parameters:
+    - id: parameters
+      type: TimeCockpit.Data.Install.BatchParameters
+    content.vb: Public Overridable Sub Invoke(parameters As BatchParameters)
+  overload: TimeCockpit.UI.Common.Version.BatchDelegate.Invoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke(TimeCockpit.Data.Install.BatchParameters,System.AsyncCallback,System.Object)
+  commentId: M:TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke(TimeCockpit.Data.Install.BatchParameters,System.AsyncCallback,System.Object)
+  id: BeginInvoke(TimeCockpit.Data.Install.BatchParameters,System.AsyncCallback,System.Object)
+  parent: TimeCockpit.UI.Common.Version.BatchDelegate
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(BatchParameters, AsyncCallback, Object)
+  nameWithType: BatchDelegate.BeginInvoke(BatchParameters, AsyncCallback, Object)
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke(TimeCockpit.Data.Install.BatchParameters, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.UI.Common.Version
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(BatchParameters parameters, AsyncCallback callback, object object)
+    parameters:
+    - id: parameters
+      type: TimeCockpit.Data.Install.BatchParameters
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(parameters As BatchParameters, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke(System.IAsyncResult)
+  commentId: M:TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TimeCockpit.UI.Common.Version.BatchDelegate
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: BatchDelegate.EndInvoke(IAsyncResult)
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.UI.Common.Version
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
 - uid: TimeCockpit.UI.Common.Version
   commentId: N:TimeCockpit.UI.Common.Version
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.UI.Common.Version
   nameWithType: TimeCockpit.UI.Common.Version
   fullName: TimeCockpit.UI.Common.Version
 - uid: TimeCockpit.Data.Install.BatchParameters
   commentId: T:TimeCockpit.Data.Install.BatchParameters
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: BatchParameters
   nameWithType: BatchParameters
   fullName: TimeCockpit.Data.Install.BatchParameters
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.#ctor*
+  commentId: Overload:TimeCockpit.UI.Common.Version.BatchDelegate.#ctor
+  isExternal: true
+  name: BatchDelegate
+  nameWithType: BatchDelegate.BatchDelegate
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.BatchDelegate
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.Invoke*
+  commentId: Overload:TimeCockpit.UI.Common.Version.BatchDelegate.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: BatchDelegate.Invoke
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.Invoke
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke*
+  commentId: Overload:TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: BatchDelegate.BeginInvoke
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke*
+  commentId: Overload:TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: BatchDelegate.EndInvoke
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate.EndInvoke

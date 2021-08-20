@@ -17,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    id: CreateOperation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\nundoable operation for adding new entity objects.\n"
-  example: []
   syntax:
     content: 'public class CreateOperation : Operation'
     content.vb: >-
@@ -62,16 +58,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreateOperation(TimeCockpit.Data.EntityObject)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\nInitializes a new instance of the CreateOperation class.\n"
-  example: []
   syntax:
     content: public CreateOperation(EntityObject createdObject)
     parameters:
@@ -84,41 +76,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
-  commentId: P:TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
-  id: CreatedObject
-  parent: TimeCockpit.Data.UndoRedo.CreateOperation
-  langs:
-  - csharp
-  - vb
-  name: CreatedObject
-  nameWithType: CreateOperation.CreatedObject
-  fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    id: CreatedObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    startLine: 30
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.UndoRedo
-  summary: "\nGets the entity object that was added.\n"
-  example: []
-  syntax:
-    content: public EntityObject CreatedObject { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.EntityObject
-    content.vb: Public ReadOnly Property CreatedObject As EntityObject
-  overload: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.UndoRedo.CreateOperation.Undo(TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.CreateOperation.Undo(TimeCockpit.Data.ChangeTracker)
   id: Undo(TimeCockpit.Data.ChangeTracker)
@@ -131,16 +88,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.Undo(TimeCockpit.Data.ChangeTracker)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    id: Undo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    startLine: 40
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\ncalled to undo adding an entity object. Removes the object from the change tracker.\n"
-  example: []
   syntax:
     content: public override void Undo(ChangeTracker changeTracker)
     parameters:
@@ -168,16 +121,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.Redo(TimeCockpit.Data.ChangeTracker)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    id: Redo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/CreateOperation.cs
-    startLine: 50
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\nreadds the object to the change tracker.\n"
-  example: []
   syntax:
     content: public override void Redo(ChangeTracker changeTracker)
     parameters:
@@ -193,10 +142,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
+  commentId: P:TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
+  id: CreatedObject
+  parent: TimeCockpit.Data.UndoRedo.CreateOperation
+  langs:
+  - csharp
+  - vb
+  name: CreatedObject
+  nameWithType: CreateOperation.CreatedObject
+  fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  summary: "\nGets the entity object that was added.\n"
+  syntax:
+    content: public EntityObject CreatedObject { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject
+    content.vb: Public ReadOnly Property CreatedObject As EntityObject
+  overload: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.UndoRedo
   commentId: N:TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.UndoRedo
   nameWithType: TimeCockpit.Data.UndoRedo
   fullName: TimeCockpit.Data.UndoRedo
@@ -210,14 +190,14 @@ references:
 - uid: TimeCockpit.Data.UndoRedo.Operation
   commentId: T:TimeCockpit.Data.UndoRedo.Operation
   parent: TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: Operation
   nameWithType: Operation
   fullName: TimeCockpit.Data.UndoRedo.Operation
 - uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: TryMerge(Operation, ChangeTracker)
   nameWithType: Operation.TryMerge(Operation, ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation, TimeCockpit.Data.ChangeTracker)
@@ -226,6 +206,7 @@ references:
     name: TryMerge
     nameWithType: Operation.TryMerge
     fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -233,6 +214,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.UndoRedo.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -240,6 +222,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -248,6 +231,7 @@ references:
     name: TryMerge
     nameWithType: Operation.TryMerge
     fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -255,6 +239,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.UndoRedo.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -262,6 +247,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -546,39 +532,33 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.UndoRedo.CreateOperation.#ctor*
   commentId: Overload:TimeCockpit.Data.UndoRedo.CreateOperation.#ctor
-  isExternal: false
+  isExternal: true
   name: CreateOperation
   nameWithType: CreateOperation.CreateOperation
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreateOperation
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject*
-  commentId: Overload:TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
-  isExternal: false
-  name: CreatedObject
-  nameWithType: CreateOperation.CreatedObject
-  fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
 - uid: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: Undo(ChangeTracker)
   nameWithType: Operation.Undo(ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
@@ -587,6 +567,7 @@ references:
     name: Undo
     nameWithType: Operation.Undo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -594,6 +575,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -602,6 +584,7 @@ references:
     name: Undo
     nameWithType: Operation.Undo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -609,26 +592,27 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.UndoRedo.CreateOperation.Undo*
   commentId: Overload:TimeCockpit.Data.UndoRedo.CreateOperation.Undo
-  isExternal: false
+  isExternal: true
   name: Undo
   nameWithType: CreateOperation.Undo
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.Undo
 - uid: TimeCockpit.Data.ChangeTracker
   commentId: T:TimeCockpit.Data.ChangeTracker
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: ChangeTracker
   nameWithType: ChangeTracker
   fullName: TimeCockpit.Data.ChangeTracker
 - uid: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: Redo(ChangeTracker)
   nameWithType: Operation.Redo(ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
@@ -637,6 +621,7 @@ references:
     name: Redo
     nameWithType: Operation.Redo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -644,6 +629,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -652,6 +638,7 @@ references:
     name: Redo
     nameWithType: Operation.Redo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -659,12 +646,19 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.UndoRedo.CreateOperation.Redo*
   commentId: Overload:TimeCockpit.Data.UndoRedo.CreateOperation.Redo
-  isExternal: false
+  isExternal: true
   name: Redo
   nameWithType: CreateOperation.Redo
   fullName: TimeCockpit.Data.UndoRedo.CreateOperation.Redo
+- uid: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject
+  isExternal: true
+  name: CreatedObject
+  nameWithType: CreateOperation.CreatedObject
+  fullName: TimeCockpit.Data.UndoRedo.CreateOperation.CreatedObject

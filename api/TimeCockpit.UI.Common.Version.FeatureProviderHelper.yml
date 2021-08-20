@@ -1,35 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition
-  commentId: T:TimeCockpit.Data.Sync.SyncQueryDefinition
-  id: SyncQueryDefinition
-  parent: TimeCockpit.Data.Sync
+- uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper
+  commentId: T:TimeCockpit.UI.Common.Version.FeatureProviderHelper
+  id: FeatureProviderHelper
+  parent: TimeCockpit.UI.Common.Version
   children:
-  - TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor
-  - TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-  - TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-  - TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
+  - TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType(System.Type,TimeCockpit.UI.Common.Version.BatchDelegate[])
+  - TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies(System.Collections.Generic.List{TimeCockpit.Data.Install.Feature},System.Guid)
   langs:
   - csharp
   - vb
-  name: SyncQueryDefinition
-  nameWithType: SyncQueryDefinition
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition
+  name: FeatureProviderHelper
+  nameWithType: FeatureProviderHelper
+  fullName: TimeCockpit.UI.Common.Version.FeatureProviderHelper
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    id: SyncQueryDefinition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nDefines queries that are used during sync process for certain entities\n"
-  example: []
+  namespace: TimeCockpit.UI.Common.Version
+  summary: "\nHelper for feature provider.\n"
   syntax:
-    content: public sealed class SyncQueryDefinition
-    content.vb: Public NotInheritable Class SyncQueryDefinition
+    content: public static class FeatureProviderHelper
+    content.vb: Public Module FeatureProviderHelper
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,154 +36,97 @@ items:
   - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
-  - sealed
+  - static
   - class
   modifiers.vb:
   - Public
-  - NotInheritable
-  - Class
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor
-  commentId: M:TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor
-  id: '#ctor'
-  parent: TimeCockpit.Data.Sync.SyncQueryDefinition
+  - Module
+- uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies(System.Collections.Generic.List{TimeCockpit.Data.Install.Feature},System.Guid)
+  commentId: M:TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies(System.Collections.Generic.List{TimeCockpit.Data.Install.Feature},System.Guid)
+  id: FixFeatureDependencies(System.Collections.Generic.List{TimeCockpit.Data.Install.Feature},System.Guid)
+  parent: TimeCockpit.UI.Common.Version.FeatureProviderHelper
   langs:
   - csharp
   - vb
-  name: SyncQueryDefinition()
-  nameWithType: SyncQueryDefinition.SyncQueryDefinition()
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncQueryDefinition()
-  type: Constructor
+  name: FixFeatureDependencies(List<Feature>, Guid)
+  nameWithType: FeatureProviderHelper.FixFeatureDependencies(List<Feature>, Guid)
+  fullName: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies(System.Collections.Generic.List<TimeCockpit.Data.Install.Feature>, System.Guid)
+  type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    startLine: 18
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nInitializes a new instance of the SyncQueryDefinition class\n"
-  example: []
+  namespace: TimeCockpit.UI.Common.Version
+  summary: "\nAdds the feature prerequisites \n"
   syntax:
-    content: public SyncQueryDefinition()
-    content.vb: Public Sub New
-  overload: TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor*
+    content: public static void FixFeatureDependencies(List<Feature> features, Guid lastXamlFeatureGuid)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.List{TimeCockpit.Data.Install.Feature}
+      description: The features to batch up in a dependency chain.
+    - id: lastXamlFeatureGuid
+      type: System.Guid
+      description: the last guid to set as prerequisite to the first feature.
+    content.vb: Public Shared Sub FixFeatureDependencies(features As List(Of Feature), lastXamlFeatureGuid As Guid)
+  overload: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies*
+  nameWithType.vb: FeatureProviderHelper.FixFeatureDependencies(List(Of Feature), Guid)
   modifiers.csharp:
   - public
+  - static
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-  commentId: P:TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-  id: DefaultQueryForChanges
-  parent: TimeCockpit.Data.Sync.SyncQueryDefinition
+  - Shared
+  fullName.vb: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies(System.Collections.Generic.List(Of TimeCockpit.Data.Install.Feature), System.Guid)
+  name.vb: FixFeatureDependencies(List(Of Feature), Guid)
+- uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType(System.Type,TimeCockpit.UI.Common.Version.BatchDelegate[])
+  commentId: M:TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType(System.Type,TimeCockpit.UI.Common.Version.BatchDelegate[])
+  id: CreateFeatureFromType(System.Type,TimeCockpit.UI.Common.Version.BatchDelegate[])
+  parent: TimeCockpit.UI.Common.Version.FeatureProviderHelper
   langs:
   - csharp
   - vb
-  name: DefaultQueryForChanges
-  nameWithType: SyncQueryDefinition.DefaultQueryForChanges
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-  type: Property
+  name: CreateFeatureFromType(Type, BatchDelegate[])
+  nameWithType: FeatureProviderHelper.CreateFeatureFromType(Type, BatchDelegate[])
+  fullName: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType(System.Type, TimeCockpit.UI.Common.Version.BatchDelegate[])
+  type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    id: DefaultQueryForChanges
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    startLine: 27
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the query that is used to find changes for tables\nthat have no specific definition\n"
-  example: []
+  namespace: TimeCockpit.UI.Common.Version
+  summary: "\nCreates a feature from a set of batches.\n"
   syntax:
-    content: public string DefaultQueryForChanges { get; set; }
-    parameters: []
+    content: public static Feature CreateFeatureFromType(Type featureType, BatchDelegate[] batches)
+    parameters:
+    - id: featureType
+      type: System.Type
+      description: The type describing the feature.
+    - id: batches
+      type: TimeCockpit.UI.Common.Version.BatchDelegate[]
+      description: The batch delegates.
     return:
-      type: System.String
-    content.vb: Public Property DefaultQueryForChanges As String
-  overload: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges*
+      type: TimeCockpit.Data.Install.Feature
+      description: Returns a feature.
+    content.vb: Public Shared Function CreateFeatureFromType(featureType As Type, batches As BatchDelegate()) As Feature
+  overload: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType*
+  nameWithType.vb: FeatureProviderHelper.CreateFeatureFromType(Type, BatchDelegate())
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-  commentId: P:TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-  id: DefaultQueryForLocalVersion
-  parent: TimeCockpit.Data.Sync.SyncQueryDefinition
-  langs:
-  - csharp
-  - vb
-  name: DefaultQueryForLocalVersion
-  nameWithType: SyncQueryDefinition.DefaultQueryForLocalVersion
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    id: DefaultQueryForLocalVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    startLine: 33
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the query that is used to find local versions for tables\nthat have no specific definition\n"
-  example: []
-  syntax:
-    content: public string DefaultQueryForLocalVersion { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property DefaultQueryForLocalVersion As String
-  overload: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
-  commentId: P:TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
-  id: SyncTableDefinitions
-  parent: TimeCockpit.Data.Sync.SyncQueryDefinition
-  langs:
-  - csharp
-  - vb
-  name: SyncTableDefinitions
-  nameWithType: SyncQueryDefinition.SyncTableDefinitions
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    id: SyncTableDefinitions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncQueryDefinition.cs
-    startLine: 38
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the list of sync table definitions\n"
-  example: []
-  syntax:
-    content: public List<SyncTable> SyncTableDefinitions { get; set; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.List{TimeCockpit.Data.Sync.SyncTable}
-    content.vb: Public Property SyncTableDefinitions As List(Of SyncTable)
-  overload: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
+  - Shared
+  fullName.vb: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType(System.Type, TimeCockpit.UI.Common.Version.BatchDelegate())
+  name.vb: CreateFeatureFromType(Type, BatchDelegate())
 references:
-- uid: TimeCockpit.Data.Sync
-  commentId: N:TimeCockpit.Data.Sync
-  isExternal: false
-  name: TimeCockpit.Data.Sync
-  nameWithType: TimeCockpit.Data.Sync
-  fullName: TimeCockpit.Data.Sync
+- uid: TimeCockpit.UI.Common.Version
+  commentId: N:TimeCockpit.UI.Common.Version
+  isExternal: true
+  name: TimeCockpit.UI.Common.Version
+  nameWithType: TimeCockpit.UI.Common.Version
+  fullName: TimeCockpit.UI.Common.Version
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -478,51 +415,26 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncQueryDefinition.#ctor
-  isExternal: false
-  name: SyncQueryDefinition
-  nameWithType: SyncQueryDefinition.SyncQueryDefinition
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncQueryDefinition
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-  isExternal: false
-  name: DefaultQueryForChanges
-  nameWithType: SyncQueryDefinition.DefaultQueryForChanges
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForChanges
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies*
+  commentId: Overload:TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-  isExternal: false
-  name: DefaultQueryForLocalVersion
-  nameWithType: SyncQueryDefinition.DefaultQueryForLocalVersion
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.DefaultQueryForLocalVersion
-- uid: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
-  isExternal: false
-  name: SyncTableDefinitions
-  nameWithType: SyncQueryDefinition.SyncTableDefinitions
-  fullName: TimeCockpit.Data.Sync.SyncQueryDefinition.SyncTableDefinitions
-- uid: System.Collections.Generic.List{TimeCockpit.Data.Sync.SyncTable}
-  commentId: T:System.Collections.Generic.List{TimeCockpit.Data.Sync.SyncTable}
+  name: FixFeatureDependencies
+  nameWithType: FeatureProviderHelper.FixFeatureDependencies
+  fullName: TimeCockpit.UI.Common.Version.FeatureProviderHelper.FixFeatureDependencies
+- uid: System.Collections.Generic.List{TimeCockpit.Data.Install.Feature}
+  commentId: T:System.Collections.Generic.List{TimeCockpit.Data.Install.Feature}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<SyncTable>
-  nameWithType: List<SyncTable>
-  fullName: System.Collections.Generic.List<TimeCockpit.Data.Sync.SyncTable>
-  nameWithType.vb: List(Of SyncTable)
-  fullName.vb: System.Collections.Generic.List(Of TimeCockpit.Data.Sync.SyncTable)
-  name.vb: List(Of SyncTable)
+  name: List<Feature>
+  nameWithType: List<Feature>
+  fullName: System.Collections.Generic.List<TimeCockpit.Data.Install.Feature>
+  nameWithType.vb: List(Of Feature)
+  fullName.vb: System.Collections.Generic.List(Of TimeCockpit.Data.Install.Feature)
+  name.vb: List(Of Feature)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -532,10 +444,11 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: TimeCockpit.Data.Sync.SyncTable
-    name: SyncTable
-    nameWithType: SyncTable
-    fullName: TimeCockpit.Data.Sync.SyncTable
+  - uid: TimeCockpit.Data.Install.Feature
+    name: Feature
+    nameWithType: Feature
+    fullName: TimeCockpit.Data.Install.Feature
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -548,13 +461,21 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: TimeCockpit.Data.Sync.SyncTable
-    name: SyncTable
-    nameWithType: SyncTable
-    fullName: TimeCockpit.Data.Sync.SyncTable
+  - uid: TimeCockpit.Data.Install.Feature
+    name: Feature
+    nameWithType: Feature
+    fullName: TimeCockpit.Data.Install.Feature
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -596,7 +517,59 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType*
+  commentId: Overload:TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType
+  isExternal: true
+  name: CreateFeatureFromType
+  nameWithType: FeatureProviderHelper.CreateFeatureFromType
+  fullName: TimeCockpit.UI.Common.Version.FeatureProviderHelper.CreateFeatureFromType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TimeCockpit.UI.Common.Version.BatchDelegate[]
+  isExternal: true
+  name: BatchDelegate[]
+  nameWithType: BatchDelegate[]
+  fullName: TimeCockpit.UI.Common.Version.BatchDelegate[]
+  nameWithType.vb: BatchDelegate()
+  fullName.vb: TimeCockpit.UI.Common.Version.BatchDelegate()
+  name.vb: BatchDelegate()
+  spec.csharp:
+  - uid: TimeCockpit.UI.Common.Version.BatchDelegate
+    name: BatchDelegate
+    nameWithType: BatchDelegate
+    fullName: TimeCockpit.UI.Common.Version.BatchDelegate
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: TimeCockpit.UI.Common.Version.BatchDelegate
+    name: BatchDelegate
+    nameWithType: BatchDelegate
+    fullName: TimeCockpit.UI.Common.Version.BatchDelegate
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.Install.Feature
+  commentId: T:TimeCockpit.Data.Install.Feature
+  parent: TimeCockpit.Data.Install
+  isExternal: true
+  name: Feature
+  nameWithType: Feature
+  fullName: TimeCockpit.Data.Install.Feature
+- uid: TimeCockpit.Data.Install
+  commentId: N:TimeCockpit.Data.Install
+  isExternal: true
+  name: TimeCockpit.Data.Install
+  nameWithType: TimeCockpit.Data.Install
+  fullName: TimeCockpit.Data.Install

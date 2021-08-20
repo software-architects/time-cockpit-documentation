@@ -18,32 +18,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: NamedDynamicObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents a class that provides a name property and that implements the <xref href=\"System.ComponentModel.INotifyPropertyChanged\" data-throw-if-not-resolved=\"false\"></xref>\ninterface\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [KnownType(typeof (ModelElement))]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public class NamedDynamicObject : DynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public class NamedDynamicObject : DynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
-      <KnownType(GetType(ModelElement))>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public Class NamedDynamicObject
           Inherits DynamicObject
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -77,20 +60,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.ModelElement
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - class
@@ -109,16 +78,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.NamedDynamicObject()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the NamedDynamicObject class\n"
-  example: []
   syntax:
     content: protected NamedDynamicObject()
     content.vb: Protected Sub New
@@ -139,17 +104,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.NamedDynamicObject(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 51
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the NamedDynamicObject class.\n"
   remarks: "\n<p>\n  You can use this constructor to initialize a new instance of the\n  ModelElement class by specifying its properties in a list of key/value\n  pairs. This is especially useful for dynamic languages like python.\n</p>\n"
-  example: []
   syntax:
     content: protected NamedDynamicObject(IEnumerable<KeyValuePair<object, object>> properties)
     parameters:
@@ -165,93 +126,6 @@ items:
   - Protected
   fullName.vb: TimeCockpit.Data.DataModel.NamedDynamicObject.NamedDynamicObject(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.Object, System.Object)))
   name.vb: NamedDynamicObject(IEnumerable(Of KeyValuePair(Of Object, Object)))
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  id: PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  langs:
-  - csharp
-  - vb
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  type: Event
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: PropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 60
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nOccurs after the value of an application settings property is changed.\n"
-  example: []
-  syntax:
-    content: public event PropertyChangedEventHandler PropertyChanged
-    return:
-      type: System.ComponentModel.PropertyChangedEventHandler
-    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
-  implements:
-  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  id: Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  langs:
-  - csharp
-  - vb
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: Name
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 65
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets the name of the object.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public virtual string Name { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public Overridable Property Name As String
-  overload: TimeCockpit.Data.DataModel.NamedDynamicObject.Name*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - virtual
-  - get
-  - set
-  modifiers.vb:
-  - Public
-  - Overridable
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   id: OnPropertyChanged(System.String)
@@ -264,16 +138,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    id: OnPropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/NamedDynamicObject.cs
-    startLine: 87
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nFires the <xref href=\"TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged\" data-throw-if-not-resolved=\"false\"></xref> event\n"
-  example: []
   syntax:
     content: protected void OnPropertyChanged(string propertyName)
     parameters:
@@ -286,17 +156,70 @@ items:
   - protected
   modifiers.vb:
   - Protected
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  id: Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the name of the object.\n"
+  syntax:
+    content: public virtual string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property Name As String
+  overload: TimeCockpit.Data.DataModel.NamedDynamicObject.Name*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  id: PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  type: Event
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nOccurs after the value of an application settings property is changed.\n"
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
-  isExternal: true
-  name: INotifyPropertyChanged
-  nameWithType: INotifyPropertyChanged
-  fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -310,17 +233,20 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
+- uid: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -333,6 +259,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -349,6 +276,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -372,6 +300,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -396,6 +325,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -427,6 +357,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -443,6 +374,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -733,33 +665,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.NamedDynamicObject.#ctor
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject.NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.NamedDynamicObject
@@ -886,30 +806,16 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  parent: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged*
+  commentId: Overload:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
   isExternal: true
-  name: PropertyChanged
-  nameWithType: INotifyPropertyChanged.PropertyChanged
-  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-- uid: System.ComponentModel.PropertyChangedEventHandler
-  commentId: T:System.ComponentModel.PropertyChangedEventHandler
-  parent: System.ComponentModel
-  isExternal: true
-  name: PropertyChangedEventHandler
-  nameWithType: PropertyChangedEventHandler
-  fullName: System.ComponentModel.PropertyChangedEventHandler
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name*
-  commentId: Overload:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  name: OnPropertyChanged
+  nameWithType: NamedDynamicObject.OnPropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -917,23 +823,14 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged*
-  commentId: Overload:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
-  isExternal: false
-  name: OnPropertyChanged
-  nameWithType: NamedDynamicObject.OnPropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject
-  commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: NamedDynamicObject
-  nameWithType: NamedDynamicObject
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name*
+  commentId: Overload:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  isExternal: true
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler

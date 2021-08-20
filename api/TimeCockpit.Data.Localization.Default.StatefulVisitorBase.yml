@@ -5,6 +5,7 @@ items:
   id: StatefulVisitorBase
   parent: TimeCockpit.Data.Localization.Default
   children:
+  - TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor
   - TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
   - TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
   - TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
@@ -25,16 +26,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: StatefulVisitorBase
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nBase for stateful localizer traversal.\n"
-  example: []
   syntax:
     content: 'public abstract class StatefulVisitorBase : LocalizerVisitorBase'
     content.vb: >-
@@ -73,146 +70,6 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
-  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
-  id: CurrentEntityLocalizer
-  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
-  langs:
-  - csharp
-  - vb
-  name: CurrentEntityLocalizer
-  nameWithType: StatefulVisitorBase.CurrentEntityLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: CurrentEntityLocalizer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 21
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Localization.Default
-  summary: "\nGets internal state to associate properties with the correct entity.\n"
-  example: []
-  syntax:
-    content: protected EntityLocalizer CurrentEntityLocalizer { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Localization.Default.EntityLocalizer
-    content.vb: Protected ReadOnly Property CurrentEntityLocalizer As EntityLocalizer
-  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer*
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
-  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
-  id: CurrentPropertyLocalizer
-  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
-  langs:
-  - csharp
-  - vb
-  name: CurrentPropertyLocalizer
-  nameWithType: StatefulVisitorBase.CurrentPropertyLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: CurrentPropertyLocalizer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 26
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Localization.Default
-  summary: "\nGets internal state to associate permissions with properties and entities correctly.\n"
-  example: []
-  syntax:
-    content: protected PropertyLocalizer CurrentPropertyLocalizer { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Localization.Default.PropertyLocalizer
-    content.vb: Protected ReadOnly Property CurrentPropertyLocalizer As PropertyLocalizer
-  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer*
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
-  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
-  id: CurrentRelationLocalizer
-  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
-  langs:
-  - csharp
-  - vb
-  name: CurrentRelationLocalizer
-  nameWithType: StatefulVisitorBase.CurrentRelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: CurrentRelationLocalizer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 31
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Localization.Default
-  summary: "\nGets internal state to associate permissions with relations and entities correctly.\n"
-  example: []
-  syntax:
-    content: protected RelationLocalizer CurrentRelationLocalizer { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Localization.Default.RelationLocalizer
-    content.vb: Protected ReadOnly Property CurrentRelationLocalizer As RelationLocalizer
-  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer*
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  id: CurrentLogicalRelationLocalizer
-  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
-  langs:
-  - csharp
-  - vb
-  name: CurrentLogicalRelationLocalizer
-  nameWithType: StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: CurrentLogicalRelationLocalizer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 36
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Localization.Default
-  summary: "\nGets internal state to associate permissions with logical relations and entities correctly.\n"
-  example: []
-  syntax:
-    content: protected LogicalRelationLocalizer CurrentLogicalRelationLocalizer { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
-    content.vb: Protected ReadOnly Property CurrentLogicalRelationLocalizer As LogicalRelationLocalizer
-  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer*
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
 - uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   id: Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
@@ -225,16 +82,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 39
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nVisits a <xref href=\"TimeCockpit.Data.Localization.Default.EntityLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(EntityLocalizer entityLocalizer)
     parameters:
@@ -262,16 +115,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 49
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nvisits a <xref href=\"TimeCockpit.Data.Localization.Default.PropertyLocalizer\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
   syntax:
     content: public override void Visit(PropertyLocalizer propertyLocalizer)
     parameters:
@@ -299,16 +148,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 58
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nvisits a <xref href=\"TimeCockpit.Data.Localization.Default.RelationLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(RelationLocalizer relationLocalizer)
     parameters:
@@ -336,16 +181,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 67
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nVisits a <xref href=\"TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(LogicalRelationLocalizer logicalRelationLocalizer)
     parameters:
@@ -373,16 +214,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 76
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nVisits a <xref href=\"TimeCockpit.Data.Localization.Default.ActionLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(ActionLocalizer actionLocalizer)
     parameters:
@@ -410,16 +247,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 86
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nVisits a <xref href=\"TimeCockpit.Data.Localization.Default.EntityViewLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(EntityViewLocalizer entityViewLocalizer)
     parameters:
@@ -447,16 +280,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 96
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nVisits a <xref href=\"TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(NamedSetDefinitionLocalizer namedSetDefinitionLocalizer)
     parameters:
@@ -484,16 +313,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit(TimeCockpit.Data.Localization.Default.StringLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Default/StatefulVisitorBase.cs
-    startLine: 106
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization.Default
   summary: "\nvisits a <xref href=\"TimeCockpit.Data.Localization.Default.StringLocalizer\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override void Visit(StringLocalizer stringLocalizer)
     parameters:
@@ -509,10 +334,159 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor
+  commentId: M:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
+  langs:
+  - csharp
+  - vb
+  name: StatefulVisitorBase()
+  nameWithType: StatefulVisitorBase.StatefulVisitorBase()
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.StatefulVisitorBase()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  syntax:
+    content: protected StatefulVisitorBase()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
+  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
+  id: CurrentEntityLocalizer
+  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentEntityLocalizer
+  nameWithType: StatefulVisitorBase.CurrentEntityLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets internal state to associate properties with the correct entity.\n"
+  syntax:
+    content: protected EntityLocalizer CurrentEntityLocalizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.EntityLocalizer
+    content.vb: Protected ReadOnly Property CurrentEntityLocalizer As EntityLocalizer
+  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
+  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
+  id: CurrentPropertyLocalizer
+  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentPropertyLocalizer
+  nameWithType: StatefulVisitorBase.CurrentPropertyLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets internal state to associate permissions with properties and entities correctly.\n"
+  syntax:
+    content: protected PropertyLocalizer CurrentPropertyLocalizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+    content.vb: Protected ReadOnly Property CurrentPropertyLocalizer As PropertyLocalizer
+  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
+  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
+  id: CurrentRelationLocalizer
+  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentRelationLocalizer
+  nameWithType: StatefulVisitorBase.CurrentRelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets internal state to associate permissions with relations and entities correctly.\n"
+  syntax:
+    content: protected RelationLocalizer CurrentRelationLocalizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.RelationLocalizer
+    content.vb: Protected ReadOnly Property CurrentRelationLocalizer As RelationLocalizer
+  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  commentId: P:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  id: CurrentLogicalRelationLocalizer
+  parent: TimeCockpit.Data.Localization.Default.StatefulVisitorBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentLogicalRelationLocalizer
+  nameWithType: StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization.Default
+  summary: "\nGets internal state to associate permissions with logical relations and entities correctly.\n"
+  syntax:
+    content: protected LogicalRelationLocalizer CurrentLogicalRelationLocalizer { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+    content.vb: Protected ReadOnly Property CurrentLogicalRelationLocalizer As LogicalRelationLocalizer
+  overload: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.Localization.Default
   commentId: N:TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Localization.Default
   nameWithType: TimeCockpit.Data.Localization.Default
   fullName: TimeCockpit.Data.Localization.Default
@@ -526,21 +500,21 @@ references:
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor
   commentId: T:TimeCockpit.Data.Localization.Default.LocalizerVisitor
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: LocalizerVisitor
   nameWithType: LocalizerVisitor
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
   commentId: T:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: LocalizerVisitorBase
   nameWithType: LocalizerVisitorBase
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(PermissionLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(PermissionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
@@ -549,6 +523,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -556,6 +531,7 @@ references:
     name: PermissionLocalizer
     nameWithType: PermissionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PermissionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -564,6 +540,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -571,13 +548,14 @@ references:
     name: PermissionLocalizer
     nameWithType: PermissionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PermissionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(ValidationRuleLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(ValidationRuleLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
@@ -586,6 +564,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -593,6 +572,7 @@ references:
     name: ValidationRuleLocalizer
     nameWithType: ValidationRuleLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -601,6 +581,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -608,13 +589,14 @@ references:
     name: ValidationRuleLocalizer
     nameWithType: ValidationRuleLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(PermissionLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(PermissionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PermissionLocalizer)
@@ -623,6 +605,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -630,6 +613,7 @@ references:
     name: PermissionLocalizer
     nameWithType: PermissionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PermissionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -638,6 +622,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -645,13 +630,14 @@ references:
     name: PermissionLocalizer
     nameWithType: PermissionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PermissionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(RelationLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(RelationLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
@@ -660,6 +646,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -667,6 +654,7 @@ references:
     name: RelationLocalizer
     nameWithType: RelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -675,6 +663,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -682,13 +671,14 @@ references:
     name: RelationLocalizer
     nameWithType: RelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(LogicalRelationLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(LogicalRelationLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
@@ -697,6 +687,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -704,6 +695,7 @@ references:
     name: LogicalRelationLocalizer
     nameWithType: LogicalRelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -712,6 +704,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -719,13 +712,14 @@ references:
     name: LogicalRelationLocalizer
     nameWithType: LogicalRelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(PropertyLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(PropertyLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
@@ -734,6 +728,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -741,6 +736,7 @@ references:
     name: PropertyLocalizer
     nameWithType: PropertyLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -749,6 +745,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -756,13 +753,14 @@ references:
     name: PropertyLocalizer
     nameWithType: PropertyLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(ValidationRuleLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(ValidationRuleLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer)
@@ -771,6 +769,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -778,6 +777,7 @@ references:
     name: ValidationRuleLocalizer
     nameWithType: ValidationRuleLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -786,6 +786,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -793,13 +794,14 @@ references:
     name: ValidationRuleLocalizer
     nameWithType: ValidationRuleLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ValidationRuleLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(EntityLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(EntityLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
@@ -808,6 +810,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -815,6 +818,7 @@ references:
     name: EntityLocalizer
     nameWithType: EntityLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -823,6 +827,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -830,13 +835,14 @@ references:
     name: EntityLocalizer
     nameWithType: EntityLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(NamedSetDefinitionLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(NamedSetDefinitionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
@@ -845,6 +851,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -852,6 +859,7 @@ references:
     name: NamedSetDefinitionLocalizer
     nameWithType: NamedSetDefinitionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -860,6 +868,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -867,13 +876,14 @@ references:
     name: NamedSetDefinitionLocalizer
     nameWithType: NamedSetDefinitionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(ActionLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(ActionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
@@ -882,6 +892,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -889,6 +900,7 @@ references:
     name: ActionLocalizer
     nameWithType: ActionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ActionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -897,6 +909,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -904,13 +917,14 @@ references:
     name: ActionLocalizer
     nameWithType: ActionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ActionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitor
-  isExternal: false
+  isExternal: true
   name: PostVisit(EntityViewLocalizer)
   nameWithType: LocalizerVisitor.PostVisit(EntityViewLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
@@ -919,6 +933,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -926,6 +941,7 @@ references:
     name: EntityViewLocalizer
     nameWithType: EntityViewLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -934,6 +950,7 @@ references:
     name: PostVisit
     nameWithType: LocalizerVisitor.PostVisit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitor.PostVisit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -941,6 +958,7 @@ references:
     name: EntityViewLocalizer
     nameWithType: EntityViewLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1225,66 +1243,14 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer*
-  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
-  isExternal: false
-  name: CurrentEntityLocalizer
-  nameWithType: StatefulVisitorBase.CurrentEntityLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
-- uid: TimeCockpit.Data.Localization.Default.EntityLocalizer
-  commentId: T:TimeCockpit.Data.Localization.Default.EntityLocalizer
-  parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
-  name: EntityLocalizer
-  nameWithType: EntityLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer*
-  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
-  isExternal: false
-  name: CurrentPropertyLocalizer
-  nameWithType: StatefulVisitorBase.CurrentPropertyLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
-- uid: TimeCockpit.Data.Localization.Default.PropertyLocalizer
-  commentId: T:TimeCockpit.Data.Localization.Default.PropertyLocalizer
-  parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
-  name: PropertyLocalizer
-  nameWithType: PropertyLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer*
-  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
-  isExternal: false
-  name: CurrentRelationLocalizer
-  nameWithType: StatefulVisitorBase.CurrentRelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
-- uid: TimeCockpit.Data.Localization.Default.RelationLocalizer
-  commentId: T:TimeCockpit.Data.Localization.Default.RelationLocalizer
-  parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
-  name: RelationLocalizer
-  nameWithType: RelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
-- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer*
-  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  isExternal: false
-  name: CurrentLogicalRelationLocalizer
-  nameWithType: StatefulVisitorBase.CurrentLogicalRelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
-- uid: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
-  commentId: T:TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
-  parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
-  name: LogicalRelationLocalizer
-  nameWithType: LogicalRelationLocalizer
-  fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(EntityLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(EntityLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityLocalizer)
@@ -1293,6 +1259,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1300,6 +1267,7 @@ references:
     name: EntityLocalizer
     nameWithType: EntityLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1308,6 +1276,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1315,19 +1284,27 @@ references:
     name: EntityLocalizer
     nameWithType: EntityLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit*
   commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit
-  isExternal: false
+  isExternal: true
   name: Visit
   nameWithType: StatefulVisitorBase.Visit
   fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.Visit
+- uid: TimeCockpit.Data.Localization.Default.EntityLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.EntityLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: true
+  name: EntityLocalizer
+  nameWithType: EntityLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.EntityLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(PropertyLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(PropertyLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.PropertyLocalizer)
@@ -1336,6 +1313,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1343,6 +1321,7 @@ references:
     name: PropertyLocalizer
     nameWithType: PropertyLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1351,6 +1330,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1358,13 +1338,21 @@ references:
     name: PropertyLocalizer
     nameWithType: PropertyLocalizer
     fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Localization.Default.PropertyLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.PropertyLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: true
+  name: PropertyLocalizer
+  nameWithType: PropertyLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.PropertyLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(RelationLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(RelationLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.RelationLocalizer)
@@ -1373,6 +1361,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1380,6 +1369,7 @@ references:
     name: RelationLocalizer
     nameWithType: RelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1388,6 +1378,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1395,13 +1386,21 @@ references:
     name: RelationLocalizer
     nameWithType: RelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Localization.Default.RelationLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.RelationLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: true
+  name: RelationLocalizer
+  nameWithType: RelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.RelationLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(LogicalRelationLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(LogicalRelationLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer)
@@ -1410,6 +1409,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1417,6 +1417,7 @@ references:
     name: LogicalRelationLocalizer
     nameWithType: LogicalRelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1425,6 +1426,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1432,13 +1434,21 @@ references:
     name: LogicalRelationLocalizer
     nameWithType: LogicalRelationLocalizer
     fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+  commentId: T:TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
+  parent: TimeCockpit.Data.Localization.Default
+  isExternal: true
+  name: LogicalRelationLocalizer
+  nameWithType: LogicalRelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.LogicalRelationLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(ActionLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(ActionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.ActionLocalizer)
@@ -1447,6 +1457,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1454,6 +1465,7 @@ references:
     name: ActionLocalizer
     nameWithType: ActionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ActionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1462,6 +1474,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1469,20 +1482,21 @@ references:
     name: ActionLocalizer
     nameWithType: ActionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.ActionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.ActionLocalizer
   commentId: T:TimeCockpit.Data.Localization.Default.ActionLocalizer
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: ActionLocalizer
   nameWithType: ActionLocalizer
   fullName: TimeCockpit.Data.Localization.Default.ActionLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(EntityViewLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(EntityViewLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.EntityViewLocalizer)
@@ -1491,6 +1505,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1498,6 +1513,7 @@ references:
     name: EntityViewLocalizer
     nameWithType: EntityViewLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1506,6 +1522,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1513,20 +1530,21 @@ references:
     name: EntityViewLocalizer
     nameWithType: EntityViewLocalizer
     fullName: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
   commentId: T:TimeCockpit.Data.Localization.Default.EntityViewLocalizer
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: EntityViewLocalizer
   nameWithType: EntityViewLocalizer
   fullName: TimeCockpit.Data.Localization.Default.EntityViewLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(NamedSetDefinitionLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(NamedSetDefinitionLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer)
@@ -1535,6 +1553,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1542,6 +1561,7 @@ references:
     name: NamedSetDefinitionLocalizer
     nameWithType: NamedSetDefinitionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1550,6 +1570,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1557,20 +1578,21 @@ references:
     name: NamedSetDefinitionLocalizer
     nameWithType: NamedSetDefinitionLocalizer
     fullName: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
   commentId: T:TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: NamedSetDefinitionLocalizer
   nameWithType: NamedSetDefinitionLocalizer
   fullName: TimeCockpit.Data.Localization.Default.NamedSetDefinitionLocalizer
 - uid: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.StringLocalizer)
   commentId: M:TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.StringLocalizer)
   parent: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase
-  isExternal: false
+  isExternal: true
   name: Visit(StringLocalizer)
   nameWithType: LocalizerVisitorBase.Visit(StringLocalizer)
   fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit(TimeCockpit.Data.Localization.Default.StringLocalizer)
@@ -1579,6 +1601,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1586,6 +1609,7 @@ references:
     name: StringLocalizer
     nameWithType: StringLocalizer
     fullName: TimeCockpit.Data.Localization.Default.StringLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1594,6 +1618,7 @@ references:
     name: Visit
     nameWithType: LocalizerVisitorBase.Visit
     fullName: TimeCockpit.Data.Localization.Default.LocalizerVisitorBase.Visit
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1601,13 +1626,44 @@ references:
     name: StringLocalizer
     nameWithType: StringLocalizer
     fullName: TimeCockpit.Data.Localization.Default.StringLocalizer
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Localization.Default.StringLocalizer
   commentId: T:TimeCockpit.Data.Localization.Default.StringLocalizer
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: StringLocalizer
   nameWithType: StringLocalizer
   fullName: TimeCockpit.Data.Localization.Default.StringLocalizer
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.#ctor
+  isExternal: true
+  name: StatefulVisitorBase
+  nameWithType: StatefulVisitorBase.StatefulVisitorBase
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.StatefulVisitorBase
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
+  isExternal: true
+  name: CurrentEntityLocalizer
+  nameWithType: StatefulVisitorBase.CurrentEntityLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentEntityLocalizer
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
+  isExternal: true
+  name: CurrentPropertyLocalizer
+  nameWithType: StatefulVisitorBase.CurrentPropertyLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentPropertyLocalizer
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
+  isExternal: true
+  name: CurrentRelationLocalizer
+  nameWithType: StatefulVisitorBase.CurrentRelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentRelationLocalizer
+- uid: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer*
+  commentId: Overload:TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  isExternal: true
+  name: CurrentLogicalRelationLocalizer
+  nameWithType: StatefulVisitorBase.CurrentLogicalRelationLocalizer
+  fullName: TimeCockpit.Data.Localization.Default.StatefulVisitorBase.CurrentLogicalRelationLocalizer

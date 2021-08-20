@@ -5,6 +5,8 @@ items:
   id: ExecutionContext
   parent: TimeCockpit.Data.DataModel.Actions
   children:
+  - TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor
+  - TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
   - TimeCockpit.Data.DataModel.Actions.ExecutionContext.Deleted
   - TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
   - TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
@@ -19,17 +21,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: ExecutionContext
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nRepresents the main context a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> operates on during its execution.\n"
   remarks: "\nAll the properties of the class are optional. None of the is necessary for a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>\nto be executed successfully. This is of course only true if the executable code of the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction.Binding\" data-throw-if-not-resolved=\"false\"></xref>\nof the <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref> does not have references to the properties...\n"
-  example: []
   syntax:
     content: 'public class ExecutionContext : ModelActionContext'
     content.vb: >-
@@ -56,6 +54,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  langs:
+  - csharp
+  - vb
+  name: ExecutionContext()
+  nameWithType: ExecutionContext.ExecutionContext()
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ExecutionContext()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  syntax:
+    content: public ExecutionContext()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
   commentId: P:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
   id: InputSetUuids
@@ -68,11 +91,8 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: InputSetUuids
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 39
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
@@ -81,7 +101,6 @@ items:
     Be aware that neither <xref href="TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids" data-throw-if-not-resolved="false"></xref> nor <xref href="TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet" data-throw-if-not-resolved="false"></xref>
 
     provides a defined object order.
-  example: []
   syntax:
     content: public IEnumerable<Guid> InputSetUuids { get; set; }
     parameters: []
@@ -107,11 +126,8 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: InputSet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 47
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
@@ -120,7 +136,6 @@ items:
     Be aware that neither <xref href="TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids" data-throw-if-not-resolved="false"></xref> nor <xref href="TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet" data-throw-if-not-resolved="false"></xref>
 
     provides a defined object order. Sorting may be required depending on the use-case.
-  example: []
   syntax:
     content: public IEnumerable<EntityObject> InputSet { get; set; }
     parameters: []
@@ -146,17 +161,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Parameter
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: Parameter
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 60
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets a parameter that is handed to a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   remarks: "\nWhen this property is set, a validation is performed on basis of the \n<xref href=\"TimeCockpit.Data.DataModel.ValidationRule\" data-throw-if-not-resolved=\"false\"></xref>s the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> has.\n"
-  example: []
   syntax:
     content: public EntityObject Parameter { get; set; }
     parameters: []
@@ -168,6 +179,37 @@ items:
   - type: System.Exception
     commentId: T:System.Exception
     description: "\nIf the validation of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> does not succeed, an exception is thrown who&apos;s error message\nis the error message of the <xref href=\"TimeCockpit.Data.DataModel.ValidationRule\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
+  commentId: P:TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
+  id: ActionResult
+  parent: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  langs:
+  - csharp
+  - vb
+  name: ActionResult
+  nameWithType: ExecutionContext.ActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the action result.\n"
+  syntax:
+    content: public IActionResult ActionResult { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.Actions.IActionResult
+    content.vb: Public Property ActionResult As IActionResult
+  overload: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult*
   modifiers.csharp:
   - public
   - get
@@ -186,16 +228,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ScriptOutput
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: ScriptOutput
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 87
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets the script output.\n"
-  example: []
   syntax:
     content: public string ScriptOutput { get; }
     parameters: []
@@ -221,16 +259,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Inserted
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: Inserted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 92
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets a list of all inserted or updated entity objects for triggers.\n"
-  example: []
   syntax:
     content: public EntityObject[] Inserted { get; }
     parameters: []
@@ -256,16 +290,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Deleted
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    id: Deleted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ExecutionContext.cs
-    startLine: 97
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets a list of all updated or delete entity objects for triggers.\n"
-  example: []
   syntax:
     content: public EntityObject[] Deleted { get; }
     parameters: []
@@ -280,18 +310,9 @@ items:
   - Public
   - ReadOnly
 references:
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction.Binding
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ModelAction.Binding
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
@@ -305,35 +326,35 @@ references:
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext
   commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionContext
   parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: ModelActionContext
   nameWithType: ModelActionContext
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext.CurrentUserId
   commentId: P:TimeCockpit.Data.DataModel.Actions.ModelActionContext.CurrentUserId
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  isExternal: false
+  isExternal: true
   name: CurrentUserId
   nameWithType: ModelActionContext.CurrentUserId
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext.CurrentUserId
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext.DataContext
   commentId: P:TimeCockpit.Data.DataModel.Actions.ModelActionContext.DataContext
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: ModelActionContext.DataContext
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext.DataContext
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext.IDataContext
   commentId: P:TimeCockpit.Data.DataModel.Actions.ModelActionContext.IDataContext
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  isExternal: false
+  isExternal: true
   name: IDataContext
   nameWithType: ModelActionContext.IDataContext
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext.IDataContext
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionContext.ModelEntity
   commentId: P:TimeCockpit.Data.DataModel.Actions.ModelActionContext.ModelEntity
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionContext
-  isExternal: false
+  isExternal: true
   name: ModelEntity
   nameWithType: ModelActionContext.ModelEntity
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionContext.ModelEntity
@@ -618,24 +639,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
-- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
-- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
-  commentId: P:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.#ctor
+  isExternal: true
+  name: ExecutionContext
+  nameWithType: ExecutionContext.ExecutionContext
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ExecutionContext
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
-  isExternal: false
+  isExternal: true
   name: InputSetUuids
   nameWithType: ExecutionContext.InputSetUuids
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSetUuids
@@ -683,12 +699,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data
-  commentId: N:TimeCockpit.Data
-  isExternal: false
-  name: TimeCockpit.Data
-  nameWithType: TimeCockpit.Data
-  fullName: TimeCockpit.Data
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -730,13 +740,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
-  isExternal: false
+  isExternal: true
   name: InputSet
   nameWithType: ExecutionContext.InputSet
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.InputSet
@@ -763,6 +773,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -779,26 +790,13 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.ValidationRule
-  commentId: T:TimeCockpit.Data.DataModel.ValidationRule
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ValidationRule
-  nameWithType: ValidationRule
-  fullName: TimeCockpit.Data.DataModel.ValidationRule
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntityBase
-  nameWithType: ModelEntityBase
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Parameter*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.Parameter
-  isExternal: false
+  isExternal: true
   name: Parameter
   nameWithType: ExecutionContext.Parameter
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Parameter
@@ -809,15 +807,35 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: true
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ExecutionContext.ActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ActionResult
+- uid: TimeCockpit.Data.DataModel.Actions.IActionResult
+  commentId: T:TimeCockpit.Data.DataModel.Actions.IActionResult
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.IActionResult
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ScriptOutput*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.ScriptOutput
-  isExternal: false
+  isExternal: true
   name: ScriptOutput
   nameWithType: ExecutionContext.ScriptOutput
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.ScriptOutput
@@ -830,11 +848,12 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Inserted*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.Inserted
-  isExternal: false
+  isExternal: true
   name: Inserted
   nameWithType: ExecutionContext.Inserted
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Inserted
 - uid: TimeCockpit.Data.EntityObject[]
+  isExternal: true
   name: EntityObject[]
   nameWithType: EntityObject[]
   fullName: TimeCockpit.Data.EntityObject[]
@@ -846,6 +865,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -854,12 +874,13 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Deleted*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ExecutionContext.Deleted
-  isExternal: false
+  isExternal: true
   name: Deleted
   nameWithType: ExecutionContext.Deleted
   fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext.Deleted

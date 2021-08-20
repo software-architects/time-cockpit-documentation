@@ -5,7 +5,7 @@ items:
   id: ImportServiceClientFactory
   parent: TimeCockpit.Data.Import
   children:
-  - TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext)
+  - TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
   langs:
   - csharp
   - vb
@@ -14,16 +14,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientFactory
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientFactory.cs
-    id: ImportServiceClientFactory
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientFactory.cs
-    startLine: 11
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nfactory class for creating concrete instances of the <xref href=\"TimeCockpit.Data.Import.ImportServiceClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public static class ImportServiceClientFactory
     content.vb: Public Module ImportServiceClientFactory
@@ -44,38 +39,33 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext)
-  commentId: M:TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext)
-  id: Create(TimeCockpit.Data.DataContext)
+- uid: TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
+  commentId: M:TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
+  id: Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
   parent: TimeCockpit.Data.Import.ImportServiceClientFactory
   langs:
   - csharp
   - vb
-  name: Create(DataContext)
-  nameWithType: ImportServiceClientFactory.Create(DataContext)
-  fullName: TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext)
+  name: Create(DataContext, DataContextSettings)
+  nameWithType: ImportServiceClientFactory.Create(DataContext, DataContextSettings)
+  fullName: TimeCockpit.Data.Import.ImportServiceClientFactory.Create(TimeCockpit.Data.DataContext, TimeCockpit.Data.DataContextSettings)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientFactory.cs
-    id: Create
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientFactory.cs
-    startLine: 18
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\ncreate a service client either for remote executing (silverlight) or local execution (wpf)\n"
-  example: []
   syntax:
-    content: public static ImportServiceClient Create(DataContext dataContext)
+    content: public static ImportServiceClientLocal Create(DataContext existingDataContext, DataContextSettings dataContextSettings)
     parameters:
-    - id: dataContext
+    - id: existingDataContext
       type: TimeCockpit.Data.DataContext
-      description: the data context to use.
+    - id: dataContextSettings
+      type: TimeCockpit.Data.DataContextSettings
     return:
-      type: TimeCockpit.Data.Import.ImportServiceClient
-      description: Returns a new instance of the import service client.
-    content.vb: Public Shared Function Create(dataContext As DataContext) As ImportServiceClient
+      type: TimeCockpit.Data.Import.ImportServiceClientLocal
+    content.vb: Public Shared Function Create(existingDataContext As DataContext, dataContextSettings As DataContextSettings) As ImportServiceClientLocal
   overload: TimeCockpit.Data.Import.ImportServiceClientFactory.Create*
   modifiers.csharp:
   - public
@@ -84,16 +74,9 @@ items:
   - Public
   - Shared
 references:
-- uid: TimeCockpit.Data.Import.ImportServiceClient
-  commentId: T:TimeCockpit.Data.Import.ImportServiceClient
-  parent: TimeCockpit.Data.Import
-  isExternal: false
-  name: ImportServiceClient
-  nameWithType: ImportServiceClient
-  fullName: TimeCockpit.Data.Import.ImportServiceClient
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -385,26 +368,40 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.ImportServiceClientFactory.Create*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientFactory.Create
-  isExternal: false
+  isExternal: true
   name: Create
   nameWithType: ImportServiceClientFactory.Create
   fullName: TimeCockpit.Data.Import.ImportServiceClientFactory.Create
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data.DataContextSettings
+  commentId: T:TimeCockpit.Data.DataContextSettings
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContextSettings
+  nameWithType: DataContextSettings
+  fullName: TimeCockpit.Data.DataContextSettings
+- uid: TimeCockpit.Data.Import.ImportServiceClientLocal
+  commentId: T:TimeCockpit.Data.Import.ImportServiceClientLocal
+  parent: TimeCockpit.Data.Import
+  isExternal: true
+  name: ImportServiceClientLocal
+  nameWithType: ImportServiceClientLocal
+  fullName: TimeCockpit.Data.Import.ImportServiceClientLocal
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data

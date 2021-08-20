@@ -5,6 +5,7 @@ items:
   id: SourceCodeBinding
   parent: TimeCockpit.Data.DataModel.Actions
   children:
+  - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
   - TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
@@ -19,28 +20,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: SourceCodeBinding
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nRepresents a binding that establishes a relationship from a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>\nto executable code that is directly stored with the binding.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public abstract class SourceCodeBinding : ModelActionBinding, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public abstract class SourceCodeBinding : ModelActionBinding, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public MustInherit Class SourceCodeBinding
           Inherits ModelActionBinding
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -58,9 +46,9 @@ items:
   inheritedMembers:
   - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -71,15 +59,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - abstract
@@ -88,6 +67,31 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
+  langs:
+  - csharp
+  - vb
+  name: SourceCodeBinding()
+  nameWithType: SourceCodeBinding.SourceCodeBinding()
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCodeBinding()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  syntax:
+    content: protected SourceCodeBinding()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   commentId: P:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   id: ActionCall
@@ -100,33 +104,19 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: ActionCall
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 50
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets the function call derived from a function definition from source code.\n"
-  example: []
   syntax:
-    content: >-
-      [JsonIgnore]
-
-      public string ActionCall { get; protected set; }
+    content: public string ActionCall { get; protected set; }
     parameters: []
     return:
       type: System.String
-    content.vb: >-
-      <JsonIgnore>
-
-      Public Property ActionCall As String
+    content.vb: Public Property ActionCall As String
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -147,33 +137,19 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: IsVerified
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 70
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets a value indicating whether the source code has been verfied or not.\n"
-  example: []
   syntax:
-    content: >-
-      [JsonIgnore]
-
-      public bool IsVerified { get; set; }
+    content: public bool IsVerified { get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: >-
-      <JsonIgnore>
-
-      Public Property IsVerified As Boolean
+    content.vb: Public Property IsVerified As Boolean
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -192,40 +168,19 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: Description
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 90
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets the description of the current instance.\n"
-  example: []
   syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public string Description { get; set; }
+    content: public string Description { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public Property Description As String
+    content.vb: Public Property Description As String
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -244,34 +199,20 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: SourceCode
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 115
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets the source code of a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  remarks: "\nIf the source code is set, it is verified automatically by calling <xref href=\"TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
+  remarks: "\nIf the source code is set, it is verified automatically by calling <xref href=\"TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(TimeCockpit.Data.Scripting.ExecutionInfo)\" data-throw-if-not-resolved=\"false\"></xref>\n"
   syntax:
-    content: >-
-      [DataMember]
-
-      public string SourceCode { get; set; }
+    content: public string SourceCode { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: >-
-      <DataMember>
-
-      Public Property SourceCode As String
+    content.vb: Public Property SourceCode As String
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -290,22 +231,14 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: Signature
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 136
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets the signature. DEPRECATED.\n"
-  example: []
   syntax:
     content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
       [Obsolete("Signature is deprecated. Use embededded signatures instead.")]
 
       public byte[] Signature { get; set; }
@@ -313,21 +246,11 @@ items:
     return:
       type: System.Byte[]
     content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
       <Obsolete("Signature is deprecated. Use embededded signatures instead.")>
 
       Public Property Signature As Byte()
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature*
   attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
@@ -351,22 +274,14 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    id: Thumbprint
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/SourceCodeBinding.cs
-    startLine: 144
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nGets or sets the thumbprint. DEPRECATED.\n"
-  example: []
   syntax:
     content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
       [Obsolete("Thumbprint is deprecated. Use embededded signatures instead.")]
 
       public string Thumbprint { get; set; }
@@ -374,21 +289,11 @@ items:
     return:
       type: System.String
     content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
       <Obsolete("Thumbprint is deprecated. Use embededded signatures instead.")>
 
       Public Property Thumbprint As String
   overload: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint*
   attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
@@ -401,16 +306,9 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
@@ -424,34 +322,30 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: ModelActionBinding
   nameWithType: ModelActionBinding
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
@@ -459,7 +353,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
-  isExternal: false
+  isExternal: true
   name: Clone()
   nameWithType: ModelActionBinding.Clone()
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone()
@@ -468,6 +362,7 @@ references:
     name: Clone
     nameWithType: ModelActionBinding.Clone
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -479,6 +374,7 @@ references:
     name: Clone
     nameWithType: ModelActionBinding.Clone
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -488,7 +384,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
-  isExternal: false
+  isExternal: true
   name: Execute(ExecutionContext)
   nameWithType: ModelActionBinding.Execute(ExecutionContext)
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
@@ -497,6 +393,7 @@ references:
     name: Execute
     nameWithType: ModelActionBinding.Execute
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -504,6 +401,7 @@ references:
     name: ExecutionContext
     nameWithType: ExecutionContext
     fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -512,6 +410,7 @@ references:
     name: Execute
     nameWithType: ModelActionBinding.Execute
     fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -519,23 +418,10 @@ references:
     name: ExecutionContext
     nameWithType: ExecutionContext
     fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -548,6 +434,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -564,6 +451,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -575,6 +463,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -587,6 +489,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -603,6 +506,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -626,6 +530,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -650,6 +555,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -681,6 +587,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -697,6 +604,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -989,37 +897,31 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.#ctor
+  isExternal: true
+  name: SourceCodeBinding
+  nameWithType: SourceCodeBinding.SourceCodeBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCodeBinding
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
-  isExternal: false
+  isExternal: true
   name: ActionCall
   nameWithType: SourceCodeBinding.ActionCall
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.ActionCall
@@ -1032,7 +934,7 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
-  isExternal: false
+  isExternal: true
   name: IsVerified
   nameWithType: SourceCodeBinding.IsVerified
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.IsVerified
@@ -1045,25 +947,24 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
-  isExternal: false
+  isExternal: true
   name: Description
   nameWithType: SourceCodeBinding.Description
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Description
-- uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)
-  commentId: M:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Verify(System.String)
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
-  isExternal: false
+  isExternal: true
   name: SourceCode
   nameWithType: SourceCodeBinding.SourceCode
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.SourceCode
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
-  isExternal: false
+  isExternal: true
   name: Signature
   nameWithType: SourceCodeBinding.Signature
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Signature
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -1090,7 +991,7 @@ references:
     fullName: ()
 - uid: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint
-  isExternal: false
+  isExternal: true
   name: Thumbprint
   nameWithType: SourceCodeBinding.Thumbprint
   fullName: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding.Thumbprint

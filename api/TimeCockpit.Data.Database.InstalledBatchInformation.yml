@@ -5,6 +5,7 @@ items:
   id: InstalledBatchInformation
   parent: TimeCockpit.Data.Database
   children:
+  - TimeCockpit.Data.Database.InstalledBatchInformation.#ctor
   - TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
   - TimeCockpit.Data.Database.InstalledBatchInformation.FeatureGuid
   - TimeCockpit.Data.Database.InstalledBatchInformation.Mandatory
@@ -16,17 +17,13 @@ items:
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    id: InstalledBatchInformation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nRepresents information about an installed component\n"
   remarks: "\nCorresponds to a single row in SYS_InstalledBatches\n"
-  example: []
   syntax:
     content: public class InstalledBatchInformation
     content.vb: Public Class InstalledBatchInformation
@@ -46,6 +43,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Database.InstalledBatchInformation.#ctor
+  commentId: M:TimeCockpit.Data.Database.InstalledBatchInformation.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Database.InstalledBatchInformation
+  langs:
+  - csharp
+  - vb
+  name: InstalledBatchInformation()
+  nameWithType: InstalledBatchInformation.InstalledBatchInformation()
+  fullName: TimeCockpit.Data.Database.InstalledBatchInformation.InstalledBatchInformation()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public InstalledBatchInformation()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Database.InstalledBatchInformation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
   commentId: P:TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
   id: ComponentUuid
@@ -58,16 +80,12 @@ items:
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    id: ComponentUuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    startLine: 21
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets the guid that can be used to uniquely identify the installer component\n"
-  example: []
   syntax:
     content: public Guid ComponentUuid { get; set; }
     parameters: []
@@ -93,16 +111,12 @@ items:
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.Mandatory
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    id: Mandatory
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets a value indicating whether whether the application can run without this component installed.\n"
-  example: []
   syntax:
     content: public bool Mandatory { get; set; }
     parameters: []
@@ -128,17 +142,13 @@ items:
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.FeatureGuid
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    id: FeatureGuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/InstalledBatchInformation.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets the guid of the feature to which this component belongs\n"
   remarks: "\nCan be <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref> if component is not associated with a feature\n"
-  example: []
   syntax:
     content: public Guid? FeatureGuid { get; set; }
     parameters: []
@@ -155,7 +165,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -447,13 +457,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Database.InstalledBatchInformation.#ctor*
+  commentId: Overload:TimeCockpit.Data.Database.InstalledBatchInformation.#ctor
+  isExternal: true
+  name: InstalledBatchInformation
+  nameWithType: InstalledBatchInformation.InstalledBatchInformation
+  fullName: TimeCockpit.Data.Database.InstalledBatchInformation.InstalledBatchInformation
 - uid: TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid*
   commentId: Overload:TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstalledBatchInformation.ComponentUuid
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.ComponentUuid
@@ -466,7 +482,7 @@ references:
   fullName: System.Guid
 - uid: TimeCockpit.Data.Database.InstalledBatchInformation.Mandatory*
   commentId: Overload:TimeCockpit.Data.Database.InstalledBatchInformation.Mandatory
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstalledBatchInformation.Mandatory
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.Mandatory
@@ -479,7 +495,7 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.Database.InstalledBatchInformation.FeatureGuid*
   commentId: Overload:TimeCockpit.Data.Database.InstalledBatchInformation.FeatureGuid
-  isExternal: false
+  isExternal: true
   name: FeatureGuid
   nameWithType: InstalledBatchInformation.FeatureGuid
   fullName: TimeCockpit.Data.Database.InstalledBatchInformation.FeatureGuid

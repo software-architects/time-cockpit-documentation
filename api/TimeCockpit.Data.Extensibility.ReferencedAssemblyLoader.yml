@@ -5,6 +5,7 @@ items:
   id: ReferencedAssemblyLoader
   parent: TimeCockpit.Data.Extensibility
   children:
+  - TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor
   - TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.LoadAssembly(TimeCockpit.Data.Extensibility.ExternalType)
   langs:
   - csharp
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Extensibility/ReferencedAssemblyLoader.cs
-    id: ReferencedAssemblyLoader
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Extensibility/ReferencedAssemblyLoader.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Extensibility
   summary: "\nA class that returns an local assembly\n"
-  example: []
   syntax:
     content: 'public class ReferencedAssemblyLoader : IAssemblyLoader'
     content.vb: >-
@@ -59,16 +56,12 @@ items:
   fullName: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.LoadAssembly(TimeCockpit.Data.Extensibility.ExternalType)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Extensibility/ReferencedAssemblyLoader.cs
-    id: LoadAssembly
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Extensibility/ReferencedAssemblyLoader.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Extensibility
   summary: "\nLoads the assembly.\n"
-  example: []
   syntax:
     content: public Assembly LoadAssembly(ExternalType typeToLoad)
     parameters:
@@ -86,10 +79,35 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor
+  commentId: M:TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader
+  langs:
+  - csharp
+  - vb
+  name: ReferencedAssemblyLoader()
+  nameWithType: ReferencedAssemblyLoader.ReferencedAssemblyLoader()
+  fullName: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.ReferencedAssemblyLoader()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Extensibility
+  syntax:
+    content: public ReferencedAssemblyLoader()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Extensibility
   commentId: N:TimeCockpit.Data.Extensibility
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Extensibility
   nameWithType: TimeCockpit.Data.Extensibility
   fullName: TimeCockpit.Data.Extensibility
@@ -103,7 +121,7 @@ references:
 - uid: TimeCockpit.Data.Extensibility.IAssemblyLoader
   commentId: T:TimeCockpit.Data.Extensibility.IAssemblyLoader
   parent: TimeCockpit.Data.Extensibility
-  isExternal: false
+  isExternal: true
   name: IAssemblyLoader
   nameWithType: IAssemblyLoader
   fullName: TimeCockpit.Data.Extensibility.IAssemblyLoader
@@ -388,20 +406,20 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.LoadAssembly*
   commentId: Overload:TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.LoadAssembly
-  isExternal: false
+  isExternal: true
   name: LoadAssembly
   nameWithType: ReferencedAssemblyLoader.LoadAssembly
   fullName: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.LoadAssembly
 - uid: TimeCockpit.Data.Extensibility.IAssemblyLoader.LoadAssembly(TimeCockpit.Data.Extensibility.ExternalType)
   commentId: M:TimeCockpit.Data.Extensibility.IAssemblyLoader.LoadAssembly(TimeCockpit.Data.Extensibility.ExternalType)
   parent: TimeCockpit.Data.Extensibility.IAssemblyLoader
-  isExternal: false
+  isExternal: true
   name: LoadAssembly(ExternalType)
   nameWithType: IAssemblyLoader.LoadAssembly(ExternalType)
   fullName: TimeCockpit.Data.Extensibility.IAssemblyLoader.LoadAssembly(TimeCockpit.Data.Extensibility.ExternalType)
@@ -410,6 +428,7 @@ references:
     name: LoadAssembly
     nameWithType: IAssemblyLoader.LoadAssembly
     fullName: TimeCockpit.Data.Extensibility.IAssemblyLoader.LoadAssembly
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -417,6 +436,7 @@ references:
     name: ExternalType
     nameWithType: ExternalType
     fullName: TimeCockpit.Data.Extensibility.ExternalType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -425,6 +445,7 @@ references:
     name: LoadAssembly
     nameWithType: IAssemblyLoader.LoadAssembly
     fullName: TimeCockpit.Data.Extensibility.IAssemblyLoader.LoadAssembly
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -432,13 +453,14 @@ references:
     name: ExternalType
     nameWithType: ExternalType
     fullName: TimeCockpit.Data.Extensibility.ExternalType
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Extensibility.ExternalType
   commentId: T:TimeCockpit.Data.Extensibility.ExternalType
   parent: TimeCockpit.Data.Extensibility
-  isExternal: false
+  isExternal: true
   name: ExternalType
   nameWithType: ExternalType
   fullName: TimeCockpit.Data.Extensibility.ExternalType
@@ -451,7 +473,13 @@ references:
   fullName: System.Reflection.Assembly
 - uid: System.Reflection
   commentId: N:System.Reflection
-  isExternal: false
+  isExternal: true
   name: System.Reflection
   nameWithType: System.Reflection
   fullName: System.Reflection
+- uid: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor*
+  commentId: Overload:TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.#ctor
+  isExternal: true
+  name: ReferencedAssemblyLoader
+  nameWithType: ReferencedAssemblyLoader.ReferencedAssemblyLoader
+  fullName: TimeCockpit.Data.Extensibility.ReferencedAssemblyLoader.ReferencedAssemblyLoader

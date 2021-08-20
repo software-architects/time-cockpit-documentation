@@ -5,6 +5,7 @@ items:
   id: Column
   parent: TimeCockpit.Data.DataModel.View
   children:
+  - TimeCockpit.Data.DataModel.View.Column.#ctor
   - TimeCockpit.Data.DataModel.View.Column.Property
   langs:
   - csharp
@@ -14,24 +15,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.Column
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/Column.cs
-    id: Column
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/Column.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nRepresents one column in a <xref href=\"TimeCockpit.Data.DataModel.View.View\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      public class Column : ColumnBase, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public class Column : ColumnBase, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
       Public Class Column
           Inherits ColumnBase
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -46,9 +38,9 @@ items:
   inheritedMembers:
   - TimeCockpit.Data.DataModel.View.ColumnBase.Header
   - TimeCockpit.Data.DataModel.View.ColumnBase.EditModelEntity
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -59,16 +51,37 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.DataModel.View.Column.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.View.Column.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.View.Column
+  langs:
+  - csharp
+  - vb
+  name: Column()
+  nameWithType: Column.Column()
+  fullName: TimeCockpit.Data.DataModel.View.Column.Column()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  syntax:
+    content: public Column()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.View.Column.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.DataModel.View.Column.Property
   commentId: P:TimeCockpit.Data.DataModel.View.Column.Property
   id: Property
@@ -81,16 +94,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.Column.Property
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/Column.cs
-    id: Property
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/Column.cs
-    startLine: 29
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the name of the property to display.\n"
-  example: []
   syntax:
     content: public string Property { get; set; }
     parameters: []
@@ -105,16 +114,9 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TimeCockpit.Data.DataModel.View.View
-  commentId: T:TimeCockpit.Data.DataModel.View.View
-  parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
-  name: View
-  nameWithType: View
-  fullName: TimeCockpit.Data.DataModel.View.View
 - uid: TimeCockpit.Data.DataModel.View
   commentId: N:TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.View
   nameWithType: TimeCockpit.Data.DataModel.View
   fullName: TimeCockpit.Data.DataModel.View
@@ -128,34 +130,30 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.View.ColumnBase
   commentId: T:TimeCockpit.Data.DataModel.View.ColumnBase
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: ColumnBase
   nameWithType: ColumnBase
   fullName: TimeCockpit.Data.DataModel.View.ColumnBase
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
@@ -163,31 +161,17 @@ references:
 - uid: TimeCockpit.Data.DataModel.View.ColumnBase.Header
   commentId: P:TimeCockpit.Data.DataModel.View.ColumnBase.Header
   parent: TimeCockpit.Data.DataModel.View.ColumnBase
-  isExternal: false
+  isExternal: true
   name: Header
   nameWithType: ColumnBase.Header
   fullName: TimeCockpit.Data.DataModel.View.ColumnBase.Header
 - uid: TimeCockpit.Data.DataModel.View.ColumnBase.EditModelEntity
   commentId: P:TimeCockpit.Data.DataModel.View.ColumnBase.EditModelEntity
   parent: TimeCockpit.Data.DataModel.View.ColumnBase
-  isExternal: false
+  isExternal: true
   name: EditModelEntity
   nameWithType: ColumnBase.EditModelEntity
   fullName: TimeCockpit.Data.DataModel.View.ColumnBase.EditModelEntity
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -200,6 +184,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -216,6 +201,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -227,6 +213,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -239,6 +239,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -255,6 +256,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -278,6 +280,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -302,6 +305,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -333,6 +337,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -349,6 +354,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -641,37 +647,31 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
+- uid: TimeCockpit.Data.DataModel.View.Column.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.Column.#ctor
+  isExternal: true
+  name: Column
+  nameWithType: Column.Column
+  fullName: TimeCockpit.Data.DataModel.View.Column.Column
 - uid: TimeCockpit.Data.DataModel.View.Column.Property*
   commentId: Overload:TimeCockpit.Data.DataModel.View.Column.Property
-  isExternal: false
+  isExternal: true
   name: Property
   nameWithType: Column.Property
   fullName: TimeCockpit.Data.DataModel.View.Column.Property

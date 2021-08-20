@@ -5,6 +5,7 @@ items:
   id: Operation
   parent: TimeCockpit.Data.UndoRedo
   children:
+  - TimeCockpit.Data.UndoRedo.Operation.#ctor
   - TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   - TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
   - TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
@@ -16,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.Operation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    id: Operation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\nabstract base class for undoable operations within a change tracker.\n"
-  example: []
   syntax:
     content: public abstract class Operation
     content.vb: Public MustInherit Class Operation
@@ -64,16 +61,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    id: Undo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\ncalled when the operation is to be undone.\n"
-  example: []
   syntax:
     content: public abstract void Undo(ChangeTracker changeTracker)
     parameters:
@@ -100,16 +93,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    id: Redo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\ncalled when the operation is to be re applied.\n"
-  example: []
   syntax:
     content: public abstract void Redo(ChangeTracker changeTracker)
     parameters:
@@ -136,16 +125,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation, TimeCockpit.Data.ChangeTracker)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    id: TryMerge
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/Operation.cs
-    startLine: 38
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\ncalled when the operation should possibly be merged with the preceeding operation.\nmainly for setmember operations.\nThe default operation returns false, as most operations cannot be merged.\n"
-  example: []
   syntax:
     content: public virtual bool TryMerge(Operation newOperation, ChangeTracker changeTracker)
     parameters:
@@ -166,10 +151,35 @@ items:
   modifiers.vb:
   - Public
   - Overridable
+- uid: TimeCockpit.Data.UndoRedo.Operation.#ctor
+  commentId: M:TimeCockpit.Data.UndoRedo.Operation.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.UndoRedo.Operation
+  langs:
+  - csharp
+  - vb
+  name: Operation()
+  nameWithType: Operation.Operation()
+  fullName: TimeCockpit.Data.UndoRedo.Operation.Operation()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  syntax:
+    content: protected Operation()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.UndoRedo.Operation.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.UndoRedo
   commentId: N:TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.UndoRedo
   nameWithType: TimeCockpit.Data.UndoRedo
   fullName: TimeCockpit.Data.UndoRedo
@@ -461,45 +471,45 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.UndoRedo.Operation.Undo*
   commentId: Overload:TimeCockpit.Data.UndoRedo.Operation.Undo
-  isExternal: false
+  isExternal: true
   name: Undo
   nameWithType: Operation.Undo
   fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
 - uid: TimeCockpit.Data.ChangeTracker
   commentId: T:TimeCockpit.Data.ChangeTracker
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: ChangeTracker
   nameWithType: ChangeTracker
   fullName: TimeCockpit.Data.ChangeTracker
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.UndoRedo.Operation.Redo*
   commentId: Overload:TimeCockpit.Data.UndoRedo.Operation.Redo
-  isExternal: false
+  isExternal: true
   name: Redo
   nameWithType: Operation.Redo
   fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
 - uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge*
   commentId: Overload:TimeCockpit.Data.UndoRedo.Operation.TryMerge
-  isExternal: false
+  isExternal: true
   name: TryMerge
   nameWithType: Operation.TryMerge
   fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
 - uid: TimeCockpit.Data.UndoRedo.Operation
   commentId: T:TimeCockpit.Data.UndoRedo.Operation
   parent: TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: Operation
   nameWithType: Operation
   fullName: TimeCockpit.Data.UndoRedo.Operation
@@ -510,3 +520,9 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: TimeCockpit.Data.UndoRedo.Operation.#ctor*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.Operation.#ctor
+  isExternal: true
+  name: Operation
+  nameWithType: Operation.Operation
+  fullName: TimeCockpit.Data.UndoRedo.Operation.Operation

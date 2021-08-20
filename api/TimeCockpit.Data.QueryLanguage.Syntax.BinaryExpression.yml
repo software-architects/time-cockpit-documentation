@@ -18,16 +18,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: BinaryExpression
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 18
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAbstract node type representing binary expressions.\nBinaryExpression acts as the node type for all binary operations. The semantics of such\na node depends on the operator.\n"
-  example: []
   syntax:
     content: 'public class BinaryExpression : Expression'
     content.vb: >-
@@ -63,16 +59,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.BinaryExpression(TimeCockpit.Data.QueryLanguage.Syntax.Expression, TimeCockpit.Data.QueryLanguage.Syntax.BinaryOperator, TimeCockpit.Data.QueryLanguage.Syntax.Expression)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public BinaryExpression(Expression left, BinaryOperator op, Expression right)
     parameters:
@@ -91,6 +83,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: BinaryExpression.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call for this instance.\n"
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
   id: Left
@@ -103,16 +131,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: Left
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 46
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the left-hand operand of the expression.\n"
-  example: []
   syntax:
     content: public Expression Left { get; }
     parameters: []
@@ -138,16 +162,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: Operator
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 55
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the operator of the binary expression.\n"
-  example: []
   syntax:
     content: public BinaryOperator Operator { get; }
     parameters: []
@@ -173,16 +193,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: Right
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 64
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the right-hand operand of the expression.\n"
-  example: []
   syntax:
     content: public Expression Right { get; }
     parameters: []
@@ -196,50 +212,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
-  langs:
-  - csharp
-  - vb
-  name: Accept(Visitor)
-  nameWithType: BinaryExpression.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/BinaryExpression.cs
-    startLine: 75
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nDispatches the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call for this instance.\n"
-  example: []
-  syntax:
-    content: public override Node Accept(Visitor visitor)
-    parameters:
-    - id: visitor
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-      description: The visitor to dispatch.
-    return:
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
-      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
-  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -253,14 +229,14 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
@@ -545,89 +521,27 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: BinaryExpression
-  nameWithType: BinaryExpression
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.#ctor
-  isExternal: false
+  isExternal: true
   name: BinaryExpression
   nameWithType: BinaryExpression.BinaryExpression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.BinaryExpression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryOperator
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.BinaryOperator
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: BinaryOperator
   nameWithType: BinaryOperator
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryOperator
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
-  isExternal: false
-  name: Left
-  nameWithType: BinaryExpression.Left
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator
-  isExternal: false
-  name: Operator
-  nameWithType: BinaryExpression.Operator
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right
-  isExternal: false
-  name: Right
-  nameWithType: BinaryExpression.Right
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -636,6 +550,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -643,6 +558,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -651,6 +567,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -658,19 +575,38 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: BinaryExpression.Accept
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Accept
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Visitor
   nameWithType: Visitor
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
+  isExternal: true
+  name: Left
+  nameWithType: BinaryExpression.Left
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Left
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator
+  isExternal: true
+  name: Operator
+  nameWithType: BinaryExpression.Operator
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Operator
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right
+  isExternal: true
+  name: Right
+  nameWithType: BinaryExpression.Right
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression.Right

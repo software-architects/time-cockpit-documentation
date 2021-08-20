@@ -4,7 +4,8 @@ items:
   commentId: T:TimeCockpit.Data.Install.PythonInstallationScript
   id: PythonInstallationScript
   parent: TimeCockpit.Data.Install
-  children: []
+  children:
+  - TimeCockpit.Data.Install.PythonInstallationScript.#ctor
   langs:
   - csharp
   - vb
@@ -13,16 +14,12 @@ items:
   fullName: TimeCockpit.Data.Install.PythonInstallationScript
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/PythonInstallationScript.cs
-    id: PythonInstallationScript
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/PythonInstallationScript.cs
-    startLine: 11
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nRepresents an installation script that is based on IronPython.\n"
-  example: []
   syntax:
     content: 'public class PythonInstallationScript : InstallationScript'
     content.vb: >-
@@ -51,10 +48,35 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Install.PythonInstallationScript.#ctor
+  commentId: M:TimeCockpit.Data.Install.PythonInstallationScript.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Install.PythonInstallationScript
+  langs:
+  - csharp
+  - vb
+  name: PythonInstallationScript()
+  nameWithType: PythonInstallationScript.PythonInstallationScript()
+  fullName: TimeCockpit.Data.Install.PythonInstallationScript.PythonInstallationScript()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Install
+  syntax:
+    content: public PythonInstallationScript()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Install.PythonInstallationScript.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
@@ -68,49 +90,49 @@ references:
 - uid: TimeCockpit.Data.Install.InstallationComponent
   commentId: T:TimeCockpit.Data.Install.InstallationComponent
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponent
   nameWithType: InstallationComponent
   fullName: TimeCockpit.Data.Install.InstallationComponent
 - uid: TimeCockpit.Data.Install.InstallationScript
   commentId: T:TimeCockpit.Data.Install.InstallationScript
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationScript
   nameWithType: InstallationScript
   fullName: TimeCockpit.Data.Install.InstallationScript
 - uid: TimeCockpit.Data.Install.InstallationScript.Script
   commentId: P:TimeCockpit.Data.Install.InstallationScript.Script
   parent: TimeCockpit.Data.Install.InstallationScript
-  isExternal: false
+  isExternal: true
   name: Script
   nameWithType: InstallationScript.Script
   fullName: TimeCockpit.Data.Install.InstallationScript.Script
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstallationComponent.ComponentUuid
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
 - uid: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: InvariantFriendlyName
   nameWithType: InstallationComponent.InvariantFriendlyName
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
 - uid: TimeCockpit.Data.Install.InstallationComponent.Mandatory
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.Mandatory
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstallationComponent.Mandatory
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
 - uid: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ProviderInvariantName
   nameWithType: InstallationComponent.ProviderInvariantName
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
@@ -395,7 +417,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Install.PythonInstallationScript.#ctor*
+  commentId: Overload:TimeCockpit.Data.Install.PythonInstallationScript.#ctor
+  isExternal: true
+  name: PythonInstallationScript
+  nameWithType: PythonInstallationScript.PythonInstallationScript
+  fullName: TimeCockpit.Data.Install.PythonInstallationScript.PythonInstallationScript

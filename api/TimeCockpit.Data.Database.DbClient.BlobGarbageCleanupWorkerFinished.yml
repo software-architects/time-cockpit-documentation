@@ -4,7 +4,11 @@ items:
   commentId: T:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
   id: DbClient.BlobGarbageCleanupWorkerFinished
   parent: TimeCockpit.Data.Database
-  children: []
+  children:
+  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor(System.Object,System.IntPtr)
+  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke(System.Object,System.EventArgs,System.AsyncCallback,System.Object)
+  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke(System.IAsyncResult)
+  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke(System.Object,System.EventArgs)
   langs:
   - csharp
   - vb
@@ -13,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
   type: Delegate
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/DbClient.cs
-    id: BlobGarbageCleanupWorkerFinished
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/DbClient.cs
-    startLine: 186
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nA delegate for cleanup worker finished.\n"
-  example: []
   syntax:
     content: public delegate void BlobGarbageCleanupWorkerFinished(object sender, EventArgs e);
     parameters:
@@ -39,17 +39,140 @@ items:
   modifiers.vb:
   - Public
   - Delegate
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor(System.Object,System.IntPtr)
+  commentId: M:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
+  langs:
+  - csharp
+  - vb
+  name: BlobGarbageCleanupWorkerFinished(Object, IntPtr)
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.BlobGarbageCleanupWorkerFinished(Object, IntPtr)
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BlobGarbageCleanupWorkerFinished(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public BlobGarbageCleanupWorkerFinished(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke(System.Object,System.EventArgs)
+  commentId: M:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke(System.Object,System.EventArgs)
+  id: Invoke(System.Object,System.EventArgs)
+  parent: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
+  langs:
+  - csharp
+  - vb
+  name: Invoke(Object, EventArgs)
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.Invoke(Object, EventArgs)
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke(System.Object, System.EventArgs)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public virtual void Invoke(object sender, EventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    content.vb: Public Overridable Sub Invoke(sender As Object, e As EventArgs)
+  overload: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke(System.Object,System.EventArgs,System.AsyncCallback,System.Object)
+  commentId: M:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke(System.Object,System.EventArgs,System.AsyncCallback,System.Object)
+  id: BeginInvoke(System.Object,System.EventArgs,System.AsyncCallback,System.Object)
+  parent: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(Object, EventArgs, AsyncCallback, Object)
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke(Object, EventArgs, AsyncCallback, Object)
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke(System.Object, System.EventArgs, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(object sender, EventArgs e, AsyncCallback callback, object object)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(sender As Object, e As EventArgs, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke(System.IAsyncResult)
+  commentId: M:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke(IAsyncResult)
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
-- uid: System.EventArgs
-  commentId: T:System.EventArgs
-  parent: System
-  isExternal: true
-  name: EventArgs
-  nameWithType: EventArgs
-  fullName: System.EventArgs
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -60,9 +183,61 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor*
+  commentId: Overload:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.#ctor
+  isExternal: true
+  name: BlobGarbageCleanupWorkerFinished
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.BlobGarbageCleanupWorkerFinished
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BlobGarbageCleanupWorkerFinished
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke*
+  commentId: Overload:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.Invoke
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.Invoke
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke*
+  commentId: Overload:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke*
+  commentId: Overload:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished.EndInvoke

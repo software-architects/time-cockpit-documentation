@@ -27,6 +27,7 @@ items:
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetGarbageBlobs(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastReceivedAnchor(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastSentAnchor(System.String)
+  - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities(System.String,System.String[])
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLatestSuccessfulSyncDateOverAllClients(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetSyncPeriodInfo(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo(System.String,TimeCockpit.Data.DataModel.ModelEntityBase)
@@ -50,6 +51,8 @@ items:
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.TenantDatabaseVersion(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.TransformText
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.Update(System.String,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.DataModel.StorageColumn[])
+  - TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload(System.String)
+  - TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientSuccessful(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful(System.String)
   - TimeCockpit.Data.Database.StringTemplates.DataTemplates.UserTables(System.String)
@@ -61,16 +64,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: DataTemplates
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 25
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nClass to produce the template output\n"
-  example: []
   syntax:
     content: 'public class DataTemplates : SqlTransformBase'
     content.vb: >-
@@ -80,10 +79,6 @@ items:
   - System.Object
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
   inheritedMembers:
-  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
-  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
-  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
-  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Write(System.String)
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.SchemaTemplate(System.String)
@@ -95,6 +90,10 @@ items:
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName(TimeCockpit.Data.DataModel.RelationBase)
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName(TimeCockpit.Data.DataModel.StorageColumn)
   - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture(TimeCockpit.Data.DataModel.StorageColumn,TimeCockpit.Data.DataModel.Culture)
+  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
+  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
+  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
+  - TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -120,16 +119,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TransformText()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: TransformText
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 32
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nCreate the template output\n"
-  example: []
   syntax:
     content: public override string TransformText()
     return:
@@ -155,16 +150,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DataTemplates(TimeCockpit.Data.Database.StringTemplates.SqlDialect)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 43
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nInitializes a new instnace of the DataTemplates class.\n"
-  example: []
   syntax:
     content: public DataTemplates(SqlDialect dialect)
     parameters:
@@ -189,16 +180,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DataTemplates(System.Text.StringBuilder, TimeCockpit.Data.Database.StringTemplates.SqlDialect)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 53
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nInitializes a new instance of the DataTemplates class.\n"
-  example: []
   syntax:
     content: public DataTemplates(StringBuilder generationEnvironment, SqlDialect dialect)
     parameters:
@@ -226,16 +213,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Insert(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.StorageColumn[])
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: Insert
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 64
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an insert statement to the generation environment.\n"
-  example: []
   syntax:
     content: public void Insert(string schema, ModelEntityBase entity, StorageColumn[] columns)
     parameters:
@@ -269,16 +252,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Update(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.StorageColumn[])
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: Update
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 294
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an update statement to the generation environment.\n"
-  example: []
   syntax:
     content: public void Update(string schema, ModelEntityBase entity, StorageColumn[] columns)
     parameters:
@@ -312,16 +291,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Delete(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.Relation>>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: Delete
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 467
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a delete statement to the generation environment.\n"
-  example: []
   syntax:
     content: public void Delete(string schema, ModelEntityBase entity, IEnumerable<IEnumerable<Relation>> relationDependencyPath)
     parameters:
@@ -355,16 +330,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DeleteMultiple(System.String, TimeCockpit.Data.DataModel.ModelEntityBase)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: DeleteMultiple
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1274
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a delete multiple statement to the generation environment.\n"
-  example: []
   syntax:
     content: public void DeleteMultiple(string schema, ModelEntityBase entity)
     parameters:
@@ -392,16 +363,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DependencyHierarchy(System.String, TimeCockpit.Data.DataModel.DependencyHierarchy)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: DependencyHierarchy
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1451
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nJoin clause for included relations\nNote that this template must be applied to a list of RelationReference objects\n"
-  example: []
   syntax:
     content: public void DependencyHierarchy(string schema, DependencyHierarchy it)
     parameters:
@@ -429,16 +396,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TenantDatabaseVersion(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: TenantDatabaseVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1566
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nproduces a select statement returning the tenant database version.\n"
-  example: []
   syntax:
     content: public void TenantDatabaseVersion(string schema)
     parameters:
@@ -463,16 +426,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UserTables(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: UserTables
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1602
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nCreates a select statement returning the entities which have a User Ownership.\n"
-  example: []
   syntax:
     content: public void UserTables(string schema)
     parameters:
@@ -497,16 +456,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SystemTables(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: SystemTables
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1637
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nCreates a select statement returning the entities which have a System Ownership.\n"
-  example: []
   syntax:
     content: public void SystemTables(string schema)
     parameters:
@@ -531,16 +486,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetCurrentVersion(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetCurrentVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1672
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to get the current version.\n"
-  example: []
   syntax:
     content: public void GetCurrentVersion(string schema)
     parameters:
@@ -565,16 +516,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetCurrentVersion(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: SetCurrentVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1707
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an update statement to set the current version.\n"
-  example: []
   syntax:
     content: public void SetCurrentVersion(string schema)
     parameters:
@@ -599,16 +546,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetServerReplicaId(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: SetServerReplicaId
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1742
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an update statement to set the replica id.\n"
-  example: []
   syntax:
     content: public void SetServerReplicaId(string schema)
     parameters:
@@ -633,16 +576,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastSentAnchor(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: SetLastSentAnchor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1777
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an update statement to update the LastSentAnchor.\n"
-  example: []
   syntax:
     content: public void SetLastSentAnchor(string schema)
     parameters:
@@ -667,16 +606,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastReceivedAnchor(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: SetLastReceivedAnchor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1813
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an update statement to set the LastReceivedAnchor.\n"
-  example: []
   syntax:
     content: public void SetLastReceivedAnchor(string schema)
     parameters:
@@ -701,16 +636,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastSentAnchor(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetLastSentAnchor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1849
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to Get the LastSentAnchor.\n"
-  example: []
   syntax:
     content: public void GetLastSentAnchor(string schema)
     parameters:
@@ -735,16 +666,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastReceivedAnchor(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetLastReceivedAnchor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1884
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to get the LastReceived anchor.\n"
-  example: []
   syntax:
     content: public void GetLastReceivedAnchor(string schema)
     parameters:
@@ -769,16 +696,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledBatches(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: InstalledBatches
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1919
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to get the installed batches.\n"
-  example: []
   syntax:
     content: public void InstalledBatches(string schema)
     parameters:
@@ -803,16 +726,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledBatch(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AddInstalledBatch
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1954
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an insert statement to add a new installed batch.\n"
-  example: []
   syntax:
     content: public void AddInstalledBatch(string schema)
     parameters:
@@ -837,16 +756,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledBatch(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: RemoveInstalledBatch
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 1990
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrite the delete statement to remove an installed batch.\n"
-  example: []
   syntax:
     content: public void RemoveInstalledBatch(string schema)
     parameters:
@@ -871,16 +786,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CheckInstallBatchTableInstalled(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: CheckInstallBatchTableInstalled
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2025
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to check whether the table &apos;SYS_InstalledBatch&apos; is available.\n"
-  example: []
   syntax:
     content: public void CheckInstallBatchTableInstalled(string schema)
     parameters:
@@ -905,16 +816,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledFeatures(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: InstalledFeatures
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2054
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites a select statement to get all installed feature uuids.\n"
-  example: []
   syntax:
     content: public void InstalledFeatures(string schema)
     parameters:
@@ -939,16 +846,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledFeature(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AddInstalledFeature
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2089
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an insert statement to add an installed feature.\n"
-  example: []
   syntax:
     content: public void AddInstalledFeature(string schema)
     parameters:
@@ -973,16 +876,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledFeature(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: RemoveInstalledFeature
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2124
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a delete statement to remove an installed feature.\n"
-  example: []
   syntax:
     content: public void RemoveInstalledFeature(string schema)
     parameters:
@@ -1007,16 +906,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ExecuteDatabaseCommandOnServer(System.String, System.String, System.Boolean, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: ExecuteDatabaseCommandOnServer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2162
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nWrites an sql statement to execute another common on the server with a transaction.\n"
-  example: []
   syntax:
     content: public void ExecuteDatabaseCommandOnServer(string schema, string command, bool isSynced, bool transactionActive)
     parameters:
@@ -1050,16 +945,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsToGarbageCollection(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.BinaryProperty, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AddBlobsToGarbageCollection
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2346
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a command to add blobs to garbage collection.\n"
-  example: []
   syntax:
     content: public void AddBlobsToGarbageCollection(string schema, ModelEntityBase entity, BinaryProperty blobProperty, object newBlobGuid)
     parameters:
@@ -1093,16 +984,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsOfObjectsToGarbageCollection(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.BinaryProperty)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AddBlobsOfObjectsToGarbageCollection
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2538
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an insert statement to adds blobs from objects to garbage collection.\n"
-  example: []
   syntax:
     content: public void AddBlobsOfObjectsToGarbageCollection(string schema, ModelEntityBase entity, BinaryProperty blobProperty)
     parameters:
@@ -1133,16 +1020,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetGarbageBlobs(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetGarbageBlobs
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2670
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the top 100 next garbage blobs.\n"
-  example: []
   syntax:
     content: public void GetGarbageBlobs(string schema)
     parameters:
@@ -1167,16 +1050,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobToFetchQueueCommand(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AddBlobToFetchQueueCommand
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2705
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an insert statement to add a blob to the chunk fetch queue.\n"
-  example: []
   syntax:
     content: public void AddBlobToFetchQueueCommand(string schema)
     parameters:
@@ -1189,6 +1068,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities(System.String,System.String[])
+  commentId: M:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities(System.String,System.String[])
+  id: GetLastUpdateVersionsOfEntities(System.String,System.String[])
+  parent: TimeCockpit.Data.Database.StringTemplates.DataTemplates
+  langs:
+  - csharp
+  - vb
+  name: GetLastUpdateVersionsOfEntities(String, String[])
+  nameWithType: DataTemplates.GetLastUpdateVersionsOfEntities(String, String[])
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities(System.String, System.String[])
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database.StringTemplates
+  summary: "\nwrites a select statement to get last update versions of all entities.\n"
+  syntax:
+    content: public void GetLastUpdateVersionsOfEntities(string schema, string[] entities)
+    parameters:
+    - id: schema
+      type: System.String
+      description: the schema to use.
+    - id: entities
+      type: System.String[]
+      description: the entities to get the last update versions for.
+    content.vb: Public Sub GetLastUpdateVersionsOfEntities(schema As String, entities As String())
+  overload: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities*
+  nameWithType.vb: DataTemplates.GetLastUpdateVersionsOfEntities(String, String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities(System.String, System.String())
+  name.vb: GetLastUpdateVersionsOfEntities(String, String())
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo(System.String,TimeCockpit.Data.DataModel.ModelEntityBase)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo(System.String,TimeCockpit.Data.DataModel.ModelEntityBase)
   id: GetVersionInfo(System.String,TimeCockpit.Data.DataModel.ModelEntityBase)
@@ -1201,16 +1116,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo(System.String, TimeCockpit.Data.DataModel.ModelEntityBase)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetVersionInfo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2757
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the version information of a specific entity.\n"
-  example: []
   syntax:
     content: public void GetVersionInfo(string schema, ModelEntityBase entity)
     parameters:
@@ -1238,16 +1149,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfoOfDead(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetVersionInfoOfDead
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2835
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the version information of a specific dead entity.\n"
-  example: []
   syntax:
     content: public void GetVersionInfoOfDead(string schema)
     parameters:
@@ -1272,16 +1179,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetBlobsFromFetchQueueCommand(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetBlobsFromFetchQueueCommand
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2961
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrties a select statement to fetch the blobs from the chunk fetch queue.\n"
-  example: []
   syntax:
     content: public void GetBlobsFromFetchQueueCommand(string schema)
     parameters:
@@ -1306,16 +1209,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveBlobsFromFetchQueueCommand(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: RemoveBlobsFromFetchQueueCommand
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 2996
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrties a delete statement to remove a specific blob uuid from the chunk fetch queue.\n"
-  example: []
   syntax:
     content: public void RemoveBlobsFromFetchQueueCommand(string schema)
     parameters:
@@ -1340,16 +1239,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AttachClient(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: AttachClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3032
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an insert statement to add a new client to the SYS_SyncClient table.\n"
-  example: []
   syntax:
     content: public void AttachClient(string schema)
     parameters:
@@ -1374,16 +1269,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DetachClient(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: DetachClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3082
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an update statement to remove a sync client.\n"
-  example: []
   syntax:
     content: public void DetachClient(string schema)
     parameters:
@@ -1408,16 +1299,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientSuccessful(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: UpdateSyncClientSuccessful
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3117
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an update statement to update the last successful sync of a sync client.\n"
-  example: []
   syntax:
     content: public void UpdateSyncClientSuccessful(string schema)
     parameters:
@@ -1442,16 +1329,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: UpdateSyncClientUnSuccessful
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3167
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites an update statement to update the last unsuccessful sync of a sync client.\n"
-  example: []
   syntax:
     content: public void UpdateSyncClientUnSuccessful(string schema)
     parameters:
@@ -1460,6 +1343,66 @@ items:
       description: the schema to use.
     content.vb: Public Sub UpdateSyncClientUnSuccessful(schema As String)
   overload: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt(System.String)
+  commentId: M:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt(System.String)
+  id: UpdateSyncClientLastSyncAttempt(System.String)
+  parent: TimeCockpit.Data.Database.StringTemplates.DataTemplates
+  langs:
+  - csharp
+  - vb
+  name: UpdateSyncClientLastSyncAttempt(String)
+  nameWithType: DataTemplates.UpdateSyncClientLastSyncAttempt(String)
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database.StringTemplates
+  summary: "\nUpdate LastSyncAttempt within SyncClient.\n"
+  syntax:
+    content: public void UpdateSyncClientLastSyncAttempt(string schema)
+    parameters:
+    - id: schema
+      type: System.String
+      description: The schema to use.
+    content.vb: Public Sub UpdateSyncClientLastSyncAttempt(schema As String)
+  overload: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload(System.String)
+  commentId: M:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload(System.String)
+  id: UpdateSyncClientLastSuccessfulUpload(System.String)
+  parent: TimeCockpit.Data.Database.StringTemplates.DataTemplates
+  langs:
+  - csharp
+  - vb
+  name: UpdateSyncClientLastSuccessfulUpload(String)
+  nameWithType: DataTemplates.UpdateSyncClientLastSuccessfulUpload(String)
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database.StringTemplates
+  summary: "\nUpdate LastSuccessfulUpload within SyncClient.\n"
+  syntax:
+    content: public void UpdateSyncClientLastSuccessfulUpload(string schema)
+    parameters:
+    - id: schema
+      type: System.String
+      description: The schema to use.
+    content.vb: Public Sub UpdateSyncClientLastSuccessfulUpload(schema As String)
+  overload: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1476,16 +1419,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertSyncDate()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: InsertSyncDate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3215
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites the sync date.\n"
-  example: []
   syntax:
     content: public void InsertSyncDate()
     content.vb: Public Sub InsertSyncDate
@@ -1506,16 +1445,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertDeletionDate()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: InsertDeletionDate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3225
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites the sync date.\n"
-  example: []
   syntax:
     content: public void InsertDeletionDate()
     content.vb: Public Sub InsertDeletionDate
@@ -1536,16 +1471,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetActiveSyncClient(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetActiveSyncClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3236
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the active sync client.\n"
-  example: []
   syntax:
     content: public void GetActiveSyncClient(string schema)
     parameters:
@@ -1570,16 +1501,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetDeprecatedSyncClient(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetDeprecatedSyncClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3272
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the deprecated sync clients.\n"
-  example: []
   syntax:
     content: public void GetDeprecatedSyncClient(string schema)
     parameters:
@@ -1604,16 +1531,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetSyncPeriodInfo(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetSyncPeriodInfo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3309
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the sync period information.\n"
-  example: []
   syntax:
     content: public void GetSyncPeriodInfo(string schema)
     parameters:
@@ -1638,16 +1561,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLatestSuccessfulSyncDateOverAllClients(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: GetLatestSuccessfulSyncDateOverAllClients
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3359
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a select statement to get the latest successful sync client of all clients.\n"
-  example: []
   syntax:
     content: public void GetLatestSuccessfulSyncDateOverAllClients(string schema)
     parameters:
@@ -1672,16 +1591,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CleanupGraveyard(System.String, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: CleanupGraveyard
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3394
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a delete from statement to do a graveyard cleanup\n"
-  example: []
   syntax:
     content: public void CleanupGraveyard(string schema, bool serverGeneratedTime)
     parameters:
@@ -1708,16 +1623,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.IsInSchema(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: IsInSchema
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3462
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nwrites a IsInSchema check\n"
-  example: []
   syntax:
     content: public void IsInSchema(string schema)
     parameters:
@@ -1742,16 +1653,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ReadLocalizedTextValues(System.String, TimeCockpit.Data.EntityObject, TimeCockpit.Data.DataModel.Culture[])
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: ReadLocalizedTextValues
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3475
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nread localized text values\n"
-  example: []
   syntax:
     content: public void ReadLocalizedTextValues(string schema, EntityObject entityObject, Culture[] cultures)
     parameters:
@@ -1785,16 +1692,12 @@ items:
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.StoreLocalizedTextValues(System.String, TimeCockpit.Data.EntityObject)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    id: StoreLocalizedTextValues
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/StringTemplates/DataTemplates.cs
-    startLine: 3645
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database.StringTemplates
   summary: "\nstore localized text values\n"
-  example: []
   syntax:
     content: public void StoreLocalizedTextValues(string schema, EntityObject entityObject)
     parameters:
@@ -1813,7 +1716,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Database.StringTemplates
   commentId: N:TimeCockpit.Data.Database.StringTemplates
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database.StringTemplates
   nameWithType: TimeCockpit.Data.Database.StringTemplates
   fullName: TimeCockpit.Data.Database.StringTemplates
@@ -1827,38 +1730,10 @@ references:
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
   commentId: T:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
   parent: TimeCockpit.Data.Database.StringTemplates
-  isExternal: false
+  isExternal: true
   name: SqlTransformBase
   nameWithType: SqlTransformBase
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
-  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
-  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
-  name: Dialect
-  nameWithType: SqlTransformBase.Dialect
-  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
-- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
-  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
-  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
-  name: PrimaryCulture
-  nameWithType: SqlTransformBase.PrimaryCulture
-  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
-- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
-  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
-  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
-  name: GenerationEnvironment
-  nameWithType: SqlTransformBase.GenerationEnvironment
-  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
-- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
-  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
-  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
-  name: ToStringHelper
-  nameWithType: SqlTransformBase.ToStringHelper
-  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Write(System.String)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Write(System.String)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
@@ -1871,6 +1746,7 @@ references:
     name: Write
     nameWithType: SqlTransformBase.Write
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Write
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1887,6 +1763,7 @@ references:
     name: Write
     nameWithType: SqlTransformBase.Write
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Write
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1901,7 +1778,7 @@ references:
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: WriteLine()
   nameWithType: SqlTransformBase.WriteLine()
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine()
@@ -1910,6 +1787,7 @@ references:
     name: WriteLine
     nameWithType: SqlTransformBase.WriteLine
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1921,6 +1799,7 @@ references:
     name: WriteLine
     nameWithType: SqlTransformBase.WriteLine
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.WriteLine
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1939,6 +1818,7 @@ references:
     name: SchemaTemplate
     nameWithType: SqlTransformBase.SchemaTemplate
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.SchemaTemplate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1955,6 +1835,7 @@ references:
     name: SchemaTemplate
     nameWithType: SqlTransformBase.SchemaTemplate
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.SchemaTemplate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1978,6 +1859,7 @@ references:
     name: SchemaTemplateWithEquals
     nameWithType: SqlTransformBase.SchemaTemplateWithEquals
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.SchemaTemplateWithEquals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1994,6 +1876,7 @@ references:
     name: SchemaTemplateWithEquals
     nameWithType: SqlTransformBase.SchemaTemplateWithEquals
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.SchemaTemplateWithEquals
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2008,7 +1891,7 @@ references:
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GO
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GO
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: GO()
   nameWithType: SqlTransformBase.GO()
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GO()
@@ -2017,6 +1900,7 @@ references:
     name: GO
     nameWithType: SqlTransformBase.GO
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GO
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2028,6 +1912,7 @@ references:
     name: GO
     nameWithType: SqlTransformBase.GO
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GO
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2037,7 +1922,7 @@ references:
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DataType(TimeCockpit.Data.DataModel.StorageColumn)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DataType(TimeCockpit.Data.DataModel.StorageColumn)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: DataType(StorageColumn)
   nameWithType: SqlTransformBase.DataType(StorageColumn)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DataType(TimeCockpit.Data.DataModel.StorageColumn)
@@ -2046,6 +1931,7 @@ references:
     name: DataType
     nameWithType: SqlTransformBase.DataType
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DataType
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2053,6 +1939,7 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2061,6 +1948,7 @@ references:
     name: DataType
     nameWithType: SqlTransformBase.DataType
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DataType
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2068,13 +1956,14 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TableName(TimeCockpit.Data.DataModel.ModelElement)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TableName(TimeCockpit.Data.DataModel.ModelElement)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: TableName(ModelElement)
   nameWithType: SqlTransformBase.TableName(ModelElement)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TableName(TimeCockpit.Data.DataModel.ModelElement)
@@ -2083,6 +1972,7 @@ references:
     name: TableName
     nameWithType: SqlTransformBase.TableName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TableName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2090,6 +1980,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2098,6 +1989,7 @@ references:
     name: TableName
     nameWithType: SqlTransformBase.TableName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TableName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2105,13 +1997,14 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DatabaseName(TimeCockpit.Data.DataModel.ModelElement)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DatabaseName(TimeCockpit.Data.DataModel.ModelElement)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: DatabaseName(ModelElement)
   nameWithType: SqlTransformBase.DatabaseName(ModelElement)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DatabaseName(TimeCockpit.Data.DataModel.ModelElement)
@@ -2120,6 +2013,7 @@ references:
     name: DatabaseName
     nameWithType: SqlTransformBase.DatabaseName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DatabaseName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2127,6 +2021,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2135,6 +2030,7 @@ references:
     name: DatabaseName
     nameWithType: SqlTransformBase.DatabaseName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.DatabaseName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2142,13 +2038,14 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName(TimeCockpit.Data.DataModel.RelationBase)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName(TimeCockpit.Data.DataModel.RelationBase)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: RelationName(RelationBase)
   nameWithType: SqlTransformBase.RelationName(RelationBase)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName(TimeCockpit.Data.DataModel.RelationBase)
@@ -2157,6 +2054,7 @@ references:
     name: RelationName
     nameWithType: SqlTransformBase.RelationName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2164,6 +2062,7 @@ references:
     name: RelationBase
     nameWithType: RelationBase
     fullName: TimeCockpit.Data.DataModel.RelationBase
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2172,6 +2071,7 @@ references:
     name: RelationName
     nameWithType: SqlTransformBase.RelationName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.RelationName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2179,13 +2079,14 @@ references:
     name: RelationBase
     nameWithType: RelationBase
     fullName: TimeCockpit.Data.DataModel.RelationBase
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName(TimeCockpit.Data.DataModel.StorageColumn)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName(TimeCockpit.Data.DataModel.StorageColumn)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: ColumnName(StorageColumn)
   nameWithType: SqlTransformBase.ColumnName(StorageColumn)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName(TimeCockpit.Data.DataModel.StorageColumn)
@@ -2194,6 +2095,7 @@ references:
     name: ColumnName
     nameWithType: SqlTransformBase.ColumnName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2201,6 +2103,7 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2209,6 +2112,7 @@ references:
     name: ColumnName
     nameWithType: SqlTransformBase.ColumnName
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2216,13 +2120,14 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture(TimeCockpit.Data.DataModel.StorageColumn,TimeCockpit.Data.DataModel.Culture)
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture(TimeCockpit.Data.DataModel.StorageColumn,TimeCockpit.Data.DataModel.Culture)
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: ColumnNameWithCulture(StorageColumn, Culture)
   nameWithType: SqlTransformBase.ColumnNameWithCulture(StorageColumn, Culture)
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture(TimeCockpit.Data.DataModel.StorageColumn, TimeCockpit.Data.DataModel.Culture)
@@ -2231,6 +2136,7 @@ references:
     name: ColumnNameWithCulture
     nameWithType: SqlTransformBase.ColumnNameWithCulture
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2238,6 +2144,7 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2245,6 +2152,7 @@ references:
     name: Culture
     nameWithType: Culture
     fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2253,6 +2161,7 @@ references:
     name: ColumnNameWithCulture
     nameWithType: SqlTransformBase.ColumnNameWithCulture
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ColumnNameWithCulture
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2260,6 +2169,7 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2267,9 +2177,38 @@ references:
     name: Culture
     nameWithType: Culture
     fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
+  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
+  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
+  isExternal: true
+  name: Dialect
+  nameWithType: SqlTransformBase.Dialect
+  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.Dialect
+- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
+  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
+  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
+  isExternal: true
+  name: PrimaryCulture
+  nameWithType: SqlTransformBase.PrimaryCulture
+  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.PrimaryCulture
+- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
+  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
+  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
+  isExternal: true
+  name: GenerationEnvironment
+  nameWithType: SqlTransformBase.GenerationEnvironment
+  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.GenerationEnvironment
+- uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
+  commentId: P:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
+  parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
+  isExternal: true
+  name: ToStringHelper
+  nameWithType: SqlTransformBase.ToStringHelper
+  fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.ToStringHelper
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -2551,14 +2490,14 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TransformText
   commentId: M:TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TransformText
   parent: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase
-  isExternal: false
+  isExternal: true
   name: TransformText()
   nameWithType: SqlTransformBase.TransformText()
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TransformText()
@@ -2567,6 +2506,7 @@ references:
     name: TransformText
     nameWithType: SqlTransformBase.TransformText
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TransformText
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2578,6 +2518,7 @@ references:
     name: TransformText
     nameWithType: SqlTransformBase.TransformText
     fullName: TimeCockpit.Data.Database.StringTemplates.SqlTransformBase.TransformText
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2586,7 +2527,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TransformText*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.TransformText
-  isExternal: false
+  isExternal: true
   name: TransformText
   nameWithType: DataTemplates.TransformText
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TransformText
@@ -2599,14 +2540,14 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.#ctor*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.#ctor
-  isExternal: false
+  isExternal: true
   name: DataTemplates
   nameWithType: DataTemplates.DataTemplates
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DataTemplates
 - uid: TimeCockpit.Data.Database.StringTemplates.SqlDialect
   commentId: T:TimeCockpit.Data.Database.StringTemplates.SqlDialect
   parent: TimeCockpit.Data.Database.StringTemplates
-  isExternal: false
+  isExternal: true
   name: SqlDialect
   nameWithType: SqlDialect
   fullName: TimeCockpit.Data.Database.StringTemplates.SqlDialect
@@ -2619,24 +2560,25 @@ references:
   fullName: System.Text.StringBuilder
 - uid: System.Text
   commentId: N:System.Text
-  isExternal: false
+  isExternal: true
   name: System.Text
   nameWithType: System.Text
   fullName: System.Text
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Insert*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.Insert
-  isExternal: false
+  isExternal: true
   name: Insert
   nameWithType: DataTemplates.Insert
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Insert
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.DataModel.StorageColumn[]
+  isExternal: true
   name: StorageColumn[]
   nameWithType: StorageColumn[]
   fullName: TimeCockpit.Data.DataModel.StorageColumn[]
@@ -2648,6 +2590,7 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -2656,24 +2599,25 @@ references:
     name: StorageColumn
     nameWithType: StorageColumn
     fullName: TimeCockpit.Data.DataModel.StorageColumn
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Update*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.Update
-  isExternal: false
+  isExternal: true
   name: Update
   nameWithType: DataTemplates.Update
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Update
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Delete*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.Delete
-  isExternal: false
+  isExternal: true
   name: Delete
   nameWithType: DataTemplates.Delete
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.Delete
@@ -2708,6 +2652,7 @@ references:
     name: Relation
     nameWithType: Relation
     fullName: TimeCockpit.Data.DataModel.Relation
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2735,6 +2680,7 @@ references:
     name: Relation
     nameWithType: Relation
     fullName: TimeCockpit.Data.DataModel.Relation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2782,134 +2728,134 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DeleteMultiple*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.DeleteMultiple
-  isExternal: false
+  isExternal: true
   name: DeleteMultiple
   nameWithType: DataTemplates.DeleteMultiple
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DeleteMultiple
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DependencyHierarchy*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.DependencyHierarchy
-  isExternal: false
+  isExternal: true
   name: DependencyHierarchy
   nameWithType: DataTemplates.DependencyHierarchy
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DependencyHierarchy
 - uid: TimeCockpit.Data.DataModel.DependencyHierarchy
   commentId: T:TimeCockpit.Data.DataModel.DependencyHierarchy
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: DependencyHierarchy
   nameWithType: DependencyHierarchy
   fullName: TimeCockpit.Data.DataModel.DependencyHierarchy
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TenantDatabaseVersion*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.TenantDatabaseVersion
-  isExternal: false
+  isExternal: true
   name: TenantDatabaseVersion
   nameWithType: DataTemplates.TenantDatabaseVersion
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.TenantDatabaseVersion
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UserTables*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UserTables
-  isExternal: false
+  isExternal: true
   name: UserTables
   nameWithType: DataTemplates.UserTables
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UserTables
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SystemTables*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.SystemTables
-  isExternal: false
+  isExternal: true
   name: SystemTables
   nameWithType: DataTemplates.SystemTables
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SystemTables
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetCurrentVersion*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetCurrentVersion
-  isExternal: false
+  isExternal: true
   name: GetCurrentVersion
   nameWithType: DataTemplates.GetCurrentVersion
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetCurrentVersion
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetCurrentVersion*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetCurrentVersion
-  isExternal: false
+  isExternal: true
   name: SetCurrentVersion
   nameWithType: DataTemplates.SetCurrentVersion
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetCurrentVersion
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetServerReplicaId*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetServerReplicaId
-  isExternal: false
+  isExternal: true
   name: SetServerReplicaId
   nameWithType: DataTemplates.SetServerReplicaId
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetServerReplicaId
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastSentAnchor*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastSentAnchor
-  isExternal: false
+  isExternal: true
   name: SetLastSentAnchor
   nameWithType: DataTemplates.SetLastSentAnchor
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastSentAnchor
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastReceivedAnchor*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastReceivedAnchor
-  isExternal: false
+  isExternal: true
   name: SetLastReceivedAnchor
   nameWithType: DataTemplates.SetLastReceivedAnchor
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.SetLastReceivedAnchor
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastSentAnchor*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastSentAnchor
-  isExternal: false
+  isExternal: true
   name: GetLastSentAnchor
   nameWithType: DataTemplates.GetLastSentAnchor
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastSentAnchor
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastReceivedAnchor*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastReceivedAnchor
-  isExternal: false
+  isExternal: true
   name: GetLastReceivedAnchor
   nameWithType: DataTemplates.GetLastReceivedAnchor
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastReceivedAnchor
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledBatches*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledBatches
-  isExternal: false
+  isExternal: true
   name: InstalledBatches
   nameWithType: DataTemplates.InstalledBatches
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledBatches
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledBatch*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledBatch
-  isExternal: false
+  isExternal: true
   name: AddInstalledBatch
   nameWithType: DataTemplates.AddInstalledBatch
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledBatch
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledBatch*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledBatch
-  isExternal: false
+  isExternal: true
   name: RemoveInstalledBatch
   nameWithType: DataTemplates.RemoveInstalledBatch
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledBatch
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CheckInstallBatchTableInstalled*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.CheckInstallBatchTableInstalled
-  isExternal: false
+  isExternal: true
   name: CheckInstallBatchTableInstalled
   nameWithType: DataTemplates.CheckInstallBatchTableInstalled
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CheckInstallBatchTableInstalled
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledFeatures*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledFeatures
-  isExternal: false
+  isExternal: true
   name: InstalledFeatures
   nameWithType: DataTemplates.InstalledFeatures
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InstalledFeatures
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledFeature*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledFeature
-  isExternal: false
+  isExternal: true
   name: AddInstalledFeature
   nameWithType: DataTemplates.AddInstalledFeature
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddInstalledFeature
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledFeature*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledFeature
-  isExternal: false
+  isExternal: true
   name: RemoveInstalledFeature
   nameWithType: DataTemplates.RemoveInstalledFeature
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveInstalledFeature
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ExecuteDatabaseCommandOnServer*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.ExecuteDatabaseCommandOnServer
-  isExternal: false
+  isExternal: true
   name: ExecuteDatabaseCommandOnServer
   nameWithType: DataTemplates.ExecuteDatabaseCommandOnServer
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ExecuteDatabaseCommandOnServer
@@ -2922,145 +2868,190 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsToGarbageCollection*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsToGarbageCollection
-  isExternal: false
+  isExternal: true
   name: AddBlobsToGarbageCollection
   nameWithType: DataTemplates.AddBlobsToGarbageCollection
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsToGarbageCollection
 - uid: TimeCockpit.Data.DataModel.BinaryProperty
   commentId: T:TimeCockpit.Data.DataModel.BinaryProperty
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: BinaryProperty
   nameWithType: BinaryProperty
   fullName: TimeCockpit.Data.DataModel.BinaryProperty
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsOfObjectsToGarbageCollection*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsOfObjectsToGarbageCollection
-  isExternal: false
+  isExternal: true
   name: AddBlobsOfObjectsToGarbageCollection
   nameWithType: DataTemplates.AddBlobsOfObjectsToGarbageCollection
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobsOfObjectsToGarbageCollection
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetGarbageBlobs*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetGarbageBlobs
-  isExternal: false
+  isExternal: true
   name: GetGarbageBlobs
   nameWithType: DataTemplates.GetGarbageBlobs
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetGarbageBlobs
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobToFetchQueueCommand*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobToFetchQueueCommand
-  isExternal: false
+  isExternal: true
   name: AddBlobToFetchQueueCommand
   nameWithType: DataTemplates.AddBlobToFetchQueueCommand
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AddBlobToFetchQueueCommand
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities*
+  commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities
+  isExternal: true
+  name: GetLastUpdateVersionsOfEntities
+  nameWithType: DataTemplates.GetLastUpdateVersionsOfEntities
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLastUpdateVersionsOfEntities
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo
-  isExternal: false
+  isExternal: true
   name: GetVersionInfo
   nameWithType: DataTemplates.GetVersionInfo
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfo
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfoOfDead*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfoOfDead
-  isExternal: false
+  isExternal: true
   name: GetVersionInfoOfDead
   nameWithType: DataTemplates.GetVersionInfoOfDead
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetVersionInfoOfDead
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetBlobsFromFetchQueueCommand*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetBlobsFromFetchQueueCommand
-  isExternal: false
+  isExternal: true
   name: GetBlobsFromFetchQueueCommand
   nameWithType: DataTemplates.GetBlobsFromFetchQueueCommand
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetBlobsFromFetchQueueCommand
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveBlobsFromFetchQueueCommand*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveBlobsFromFetchQueueCommand
-  isExternal: false
+  isExternal: true
   name: RemoveBlobsFromFetchQueueCommand
   nameWithType: DataTemplates.RemoveBlobsFromFetchQueueCommand
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.RemoveBlobsFromFetchQueueCommand
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AttachClient*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.AttachClient
-  isExternal: false
+  isExternal: true
   name: AttachClient
   nameWithType: DataTemplates.AttachClient
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.AttachClient
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DetachClient*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.DetachClient
-  isExternal: false
+  isExternal: true
   name: DetachClient
   nameWithType: DataTemplates.DetachClient
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.DetachClient
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientSuccessful*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientSuccessful
-  isExternal: false
+  isExternal: true
   name: UpdateSyncClientSuccessful
   nameWithType: DataTemplates.UpdateSyncClientSuccessful
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientSuccessful
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful
-  isExternal: false
+  isExternal: true
   name: UpdateSyncClientUnSuccessful
   nameWithType: DataTemplates.UpdateSyncClientUnSuccessful
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientUnSuccessful
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt*
+  commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt
+  isExternal: true
+  name: UpdateSyncClientLastSyncAttempt
+  nameWithType: DataTemplates.UpdateSyncClientLastSyncAttempt
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSyncAttempt
+- uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload*
+  commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload
+  isExternal: true
+  name: UpdateSyncClientLastSuccessfulUpload
+  nameWithType: DataTemplates.UpdateSyncClientLastSuccessfulUpload
+  fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.UpdateSyncClientLastSuccessfulUpload
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertSyncDate*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertSyncDate
-  isExternal: false
+  isExternal: true
   name: InsertSyncDate
   nameWithType: DataTemplates.InsertSyncDate
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertSyncDate
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertDeletionDate*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertDeletionDate
-  isExternal: false
+  isExternal: true
   name: InsertDeletionDate
   nameWithType: DataTemplates.InsertDeletionDate
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.InsertDeletionDate
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetActiveSyncClient*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetActiveSyncClient
-  isExternal: false
+  isExternal: true
   name: GetActiveSyncClient
   nameWithType: DataTemplates.GetActiveSyncClient
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetActiveSyncClient
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetDeprecatedSyncClient*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetDeprecatedSyncClient
-  isExternal: false
+  isExternal: true
   name: GetDeprecatedSyncClient
   nameWithType: DataTemplates.GetDeprecatedSyncClient
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetDeprecatedSyncClient
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetSyncPeriodInfo*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetSyncPeriodInfo
-  isExternal: false
+  isExternal: true
   name: GetSyncPeriodInfo
   nameWithType: DataTemplates.GetSyncPeriodInfo
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetSyncPeriodInfo
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLatestSuccessfulSyncDateOverAllClients*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLatestSuccessfulSyncDateOverAllClients
-  isExternal: false
+  isExternal: true
   name: GetLatestSuccessfulSyncDateOverAllClients
   nameWithType: DataTemplates.GetLatestSuccessfulSyncDateOverAllClients
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.GetLatestSuccessfulSyncDateOverAllClients
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CleanupGraveyard*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.CleanupGraveyard
-  isExternal: false
+  isExternal: true
   name: CleanupGraveyard
   nameWithType: DataTemplates.CleanupGraveyard
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.CleanupGraveyard
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.IsInSchema*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.IsInSchema
-  isExternal: false
+  isExternal: true
   name: IsInSchema
   nameWithType: DataTemplates.IsInSchema
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.IsInSchema
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ReadLocalizedTextValues*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.ReadLocalizedTextValues
-  isExternal: false
+  isExternal: true
   name: ReadLocalizedTextValues
   nameWithType: DataTemplates.ReadLocalizedTextValues
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.ReadLocalizedTextValues
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.DataModel.Culture[]
+  isExternal: true
   name: Culture[]
   nameWithType: Culture[]
   fullName: TimeCockpit.Data.DataModel.Culture[]
@@ -3072,6 +3063,7 @@ references:
     name: Culture
     nameWithType: Culture
     fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -3080,18 +3072,19 @@ references:
     name: Culture
     nameWithType: Culture
     fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.Database.StringTemplates.DataTemplates.StoreLocalizedTextValues*
   commentId: Overload:TimeCockpit.Data.Database.StringTemplates.DataTemplates.StoreLocalizedTextValues
-  isExternal: false
+  isExternal: true
   name: StoreLocalizedTextValues
   nameWithType: DataTemplates.StoreLocalizedTextValues
   fullName: TimeCockpit.Data.Database.StringTemplates.DataTemplates.StoreLocalizedTextValues
