@@ -29,8 +29,6 @@ items:
   - TimeCockpit.Data.DataModel.Model.Permissions
   - TimeCockpit.Data.DataModel.Model.SetDefaultCulture(TimeCockpit.Data.DataModel.Culture)
   - TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-  - TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit
-  - TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit
   - TimeCockpit.Data.DataModel.Model.SystemEntities
   - TimeCockpit.Data.DataModel.Model.TrackChanges
   - TimeCockpit.Data.DataModel.Model.UserEntities
@@ -43,32 +41,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Model
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents a Time Cockpit metadata model\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract(Name = "Model")]
-
-      [KnownType(typeof (EntityView))]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public sealed class Model : ModelElement, IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, ISupportInitialize
+    content: 'public sealed class Model : ModelElement, IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, ISupportInitialize'
     content.vb: >-
-      <DataContract(Name:="Model")>
-
-      <KnownType(GetType(EntityView))>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public NotInheritable Class Model
           Inherits ModelElement
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, ISupportInitialize
@@ -83,6 +64,13 @@ items:
   - System.ComponentModel.IDataErrorInfo
   - System.ComponentModel.ISupportInitialize
   inheritedMembers:
+  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.Detach
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  - TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
+  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   - TimeCockpit.Data.DataModel.ModelElement.ElementGuid
   - TimeCockpit.Data.DataModel.ModelElement.Name
   - TimeCockpit.Data.DataModel.ModelElement.Parent
@@ -103,16 +91,8 @@ items:
   - TimeCockpit.Data.DataModel.ModelElement.Ownership
   - TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
   - TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  - TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.Detach
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  - TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
-  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -121,24 +101,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-    namedArguments:
-    - name: Name
-      type: System.String
-      value: Model
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.EntityView
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - sealed
@@ -159,16 +121,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Model()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 102
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the Model class.\n"
-  example: []
   syntax:
     content: public Model()
     content.vb: Public Sub New
@@ -189,17 +147,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Model(TimeCockpit.Data.DataModel.Model)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 119
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the Model class.\n"
   remarks: "\nCopy constructor for copying values of an instance of <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref>.\nThe constructor copies all the values of the value types, but creates new \ninstances of all <xref href=\"TimeCockpit.Data.DataModel.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref>s by calling their copy constructor.\n<xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>s, <xref href=\"TimeCockpit.Data.DataModel.EntityView\" data-throw-if-not-resolved=\"false\"></xref>s, <xref href=\"TimeCockpit.Data.DataModel.NamedSetDefinition\" data-throw-if-not-resolved=\"false\"></xref>s\nand <xref href=\"TimeCockpit.Data.Security.Permission\" data-throw-if-not-resolved=\"false\"></xref>s of the <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref> to copy are just added to the corresponding\ncollections.\n"
-  example: []
   syntax:
     content: public Model(Model element)
     parameters:
@@ -212,663 +166,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-  commentId: P:TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-  id: SkipEntityMemberNameValidation
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: SkipEntityMemberNameValidation
-  nameWithType: Model.SkipEntityMemberNameValidation
-  fullName: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: SkipEntityMemberNameValidation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 193
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets a value indicating whether the check for member name equals entity name in model validation should be skipped.\n"
-  remarks: "\nUse with caution! The validation check that can be disabled by this property is required for proper OData/EDM compatibility.\nFor COFX applications that do not require OData/EDM this flag may be set to true.\n"
-  example: []
-  syntax:
-    content: public static bool SkipEntityMemberNameValidation { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Property SkipEntityMemberNameValidation As Boolean
-  overload: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation*
-  modifiers.csharp:
-  - public
-  - static
-  - get
-  - set
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.DataModel.Model.Entities
-  commentId: P:TimeCockpit.Data.DataModel.Model.Entities
-  id: Entities
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: Entities
-  nameWithType: Model.Entities
-  fullName: TimeCockpit.Data.DataModel.Model.Entities
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Entities
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 198
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store the entities of the data model.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public ModelCollection<ModelEntityBase> Entities { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public ReadOnly Property Entities As ModelCollection(Of ModelEntityBase)
-  overload: TimeCockpit.Data.DataModel.Model.Entities*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.SystemEntities
-  commentId: P:TimeCockpit.Data.DataModel.Model.SystemEntities
-  id: SystemEntities
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: SystemEntities
-  nameWithType: Model.SystemEntities
-  fullName: TimeCockpit.Data.DataModel.Model.SystemEntities
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: SystemEntities
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 211
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store the system entities of the data model.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public IEnumerable<ModelEntityBase> SystemEntities { get; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
-    content.vb: >-
-      <JsonIgnore>
-
-      Public ReadOnly Property SystemEntities As IEnumerable(Of ModelEntityBase)
-  overload: TimeCockpit.Data.DataModel.Model.SystemEntities*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
-  commentId: P:TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
-  id: ApplicationSpecificEntities
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: ApplicationSpecificEntities
-  nameWithType: Model.ApplicationSpecificEntities
-  fullName: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: ApplicationSpecificEntities
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 223
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the application specific entities of the current model.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public IEnumerable<ModelEntityBase> ApplicationSpecificEntities { get; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
-    content.vb: >-
-      <JsonIgnore>
-
-      Public ReadOnly Property ApplicationSpecificEntities As IEnumerable(Of ModelEntityBase)
-  overload: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.UserEntities
-  commentId: P:TimeCockpit.Data.DataModel.Model.UserEntities
-  id: UserEntities
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: UserEntities
-  nameWithType: Model.UserEntities
-  fullName: TimeCockpit.Data.DataModel.Model.UserEntities
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: UserEntities
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 235
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the user entities of the current model.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public IEnumerable<ModelEntityBase> UserEntities { get; }
-    parameters: []
-    return:
-      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
-    content.vb: >-
-      <JsonIgnore>
-
-      Public ReadOnly Property UserEntities As IEnumerable(Of ModelEntityBase)
-  overload: TimeCockpit.Data.DataModel.Model.UserEntities*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.Actions
-  commentId: P:TimeCockpit.Data.DataModel.Model.Actions
-  id: Actions
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: Actions
-  nameWithType: Model.Actions
-  fullName: TimeCockpit.Data.DataModel.Model.Actions
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Actions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 247
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store all available model actions of a model.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonProperty]
-
-      public ModelCollection<ModelAction> Actions { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
-    content.vb: >-
-      <DataMember>
-
-      <JsonProperty>
-
-      Public ReadOnly Property Actions As ModelCollection(Of ModelAction)
-  overload: TimeCockpit.Data.DataModel.Model.Actions*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.ModelEntityViews
-  commentId: P:TimeCockpit.Data.DataModel.Model.ModelEntityViews
-  id: ModelEntityViews
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: ModelEntityViews
-  nameWithType: Model.ModelEntityViews
-  fullName: TimeCockpit.Data.DataModel.Model.ModelEntityViews
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: ModelEntityViews
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 260
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store all available entity views in a model.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [Obsolete("Use EntityViews instead")]
-
-      [JsonIgnore]
-
-      public ModelCollection<EntityView> ModelEntityViews { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
-    content.vb: >-
-      <DataMember>
-
-      <Obsolete("Use EntityViews instead")>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property ModelEntityViews As ModelCollection(Of EntityView)
-  overload: TimeCockpit.Data.DataModel.Model.ModelEntityViews*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: System.ObsoleteAttribute
-    ctor: System.ObsoleteAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: Use EntityViews instead
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.EntityViews
-  commentId: P:TimeCockpit.Data.DataModel.Model.EntityViews
-  id: EntityViews
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: EntityViews
-  nameWithType: Model.EntityViews
-  fullName: TimeCockpit.Data.DataModel.Model.EntityViews
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: EntityViews
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 274
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store all available entity views in a model.\n"
-  example: []
-  syntax:
-    content: public ModelCollection<EntityView> EntityViews { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
-    content.vb: Public ReadOnly Property EntityViews As ModelCollection(Of EntityView)
-  overload: TimeCockpit.Data.DataModel.Model.EntityViews*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
-  commentId: P:TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
-  id: NamedSetDefinitions
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: NamedSetDefinitions
-  nameWithType: Model.NamedSetDefinitions
-  fullName: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: NamedSetDefinitions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 285
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store named set definitions in a model.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public ModelCollection<NamedSetDefinition> NamedSetDefinitions { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
-    content.vb: >-
-      <JsonProperty>
-
-      Public ReadOnly Property NamedSetDefinitions As ModelCollection(Of NamedSetDefinition)
-  overload: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.Permissions
-  commentId: P:TimeCockpit.Data.DataModel.Model.Permissions
-  id: Permissions
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: Permissions
-  nameWithType: Model.Permissions
-  fullName: TimeCockpit.Data.DataModel.Model.Permissions
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Permissions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 297
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the collection used to store allowed permissions.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public ModelCollection<Permission> Permissions { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
-    content.vb: >-
-      <JsonProperty>
-
-      Public ReadOnly Property Permissions As ModelCollection(Of Permission)
-  overload: TimeCockpit.Data.DataModel.Model.Permissions*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.Cultures
-  commentId: P:TimeCockpit.Data.DataModel.Model.Cultures
-  id: Cultures
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: Cultures
-  nameWithType: Model.Cultures
-  fullName: TimeCockpit.Data.DataModel.Model.Cultures
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Cultures
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 309
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the cultures supported by the current instance of <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public ModelCollection<Culture> Cultures { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
-      description: "\nThe cultures.\n"
-    content.vb: >-
-      <JsonProperty>
-
-      Public ReadOnly Property Cultures As ModelCollection(Of Culture)
-  overload: TimeCockpit.Data.DataModel.Model.Cultures*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.IsFrozen
-  commentId: P:TimeCockpit.Data.DataModel.Model.IsFrozen
-  id: IsFrozen
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: IsFrozen
-  nameWithType: Model.IsFrozen
-  fullName: TimeCockpit.Data.DataModel.Model.IsFrozen
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: IsFrozen
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 326
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets a value indicating whether the model is frozen\n"
-  remarks: "\nFrozen models always have <xref href=\"TimeCockpit.Data.DataModel.Model.TrackChanges\" data-throw-if-not-resolved=\"false\"></xref> = <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>. You cannot change\na frozen model so that it tracks changes.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public bool IsFrozen { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <JsonIgnore>
-
-      Public ReadOnly Property IsFrozen As Boolean
-  overload: TimeCockpit.Data.DataModel.Model.IsFrozen*
-  seealso:
-  - linkId: TimeCockpit.Data.DataModel.Model.Freeze
-    commentId: M:TimeCockpit.Data.DataModel.Model.Freeze
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.TrackChanges
-  commentId: P:TimeCockpit.Data.DataModel.Model.TrackChanges
-  id: TrackChanges
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: TrackChanges
-  nameWithType: Model.TrackChanges
-  fullName: TimeCockpit.Data.DataModel.Model.TrackChanges
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: TrackChanges
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 350
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets a value indicating whether the model is currently tracking changes.\n"
-  remarks: "\n<p>\n  If <code>TrackChanges</code> is <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref> changes to the model and it&apos;s child\n  objects are collected. You can save all changes to a model using the \n<xref href=\"TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref> method.\n</p>\n<p>\n  If <code>TrackChanges</code> is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref> changes to the model and it&apos;s child\n  objects are not collected. As a result you cannot save changes to the underlying data\n  store.\n</p>\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public bool TrackChanges { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property TrackChanges As Boolean
-  overload: TimeCockpit.Data.DataModel.Model.TrackChanges*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Model.LocalModelVersion
-  commentId: P:TimeCockpit.Data.DataModel.Model.LocalModelVersion
-  id: LocalModelVersion
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: LocalModelVersion
-  nameWithType: Model.LocalModelVersion
-  fullName: TimeCockpit.Data.DataModel.Model.LocalModelVersion
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: LocalModelVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 382
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the local version number of this model\n"
-  remarks: "\nThe local model version is an internal version counter for the model. Whenever a model change is written to\ndisk the local model version is incremented. Note that this property is not incremented as long as changes\nhave not been written to disk using <xref href=\"TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonIgnore]
-
-      public int LocalModelVersion { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: >-
-      <JsonIgnore>
-
-      Public ReadOnly Property LocalModelVersion As Integer
-  overload: TimeCockpit.Data.DataModel.Model.LocalModelVersion*
-  attributes:
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.DataModel.Model.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   commentId: M:TimeCockpit.Data.DataModel.Model.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   id: Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
@@ -881,16 +178,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 457
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nAccepts a visitor. Dispatches the correct visit call (for <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref>)in the visitor.\n"
-  example: []
   syntax:
     content: public override void Accept(ModelElementVisitor visitor)
     parameters:
@@ -918,16 +211,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.GetDefaultCulture()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: GetDefaultCulture
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 466
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets the default culture.\n"
-  example: []
   syntax:
     content: public Culture GetDefaultCulture()
     return:
@@ -951,17 +240,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.GetDesiredCultureOrDefault(System.Globalization.CultureInfo)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: GetDesiredCultureOrDefault
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 485
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nTries to find the culture the current thread is using in the model cultures.\n"
   remarks: "\nExample: If the current thread culture is de-AT and de-AT is a registered culture in \nthe model the method returns de-AT. If de-AT is not registered in the model, the method\nchecks if the parent culture of the culture of the current thread (in this example de) is\nregistered in the model and if so, returns it.\nIf the parent thread culture is not registered either, the default culture is returned\n"
-  example: []
   syntax:
     content: public Culture GetDesiredCultureOrDefault(CultureInfo desiredCulture)
     parameters:
@@ -989,16 +274,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.HasCultures()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: HasCultures
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 515
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nDetermines whether this instance of a model has cultures.\n"
-  example: []
   syntax:
     content: public bool HasCultures()
     return:
@@ -1022,16 +303,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.SetDefaultCulture(TimeCockpit.Data.DataModel.Culture)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: SetDefaultCulture
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 525
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nSets the default culture.\n"
-  example: []
   syntax:
     content: public void SetDefaultCulture(Culture proposedDefaultCulture)
     parameters:
@@ -1048,68 +325,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit
-  commentId: M:TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit
-  id: System#ComponentModel#ISupportInitialize#BeginInit
-  isEii: true
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: ISupportInitialize.BeginInit()
-  nameWithType: Model.ISupportInitialize.BeginInit()
-  fullName: TimeCockpit.Data.DataModel.Model.System.ComponentModel.ISupportInitialize.BeginInit()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: System.ComponentModel.ISupportInitialize.BeginInit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 548
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nBegins the initialization of the control.\n"
-  example: []
-  syntax:
-    content: void ISupportInitialize.BeginInit()
-    content.vb: Sub System.ComponentModel.ISupportInitialize.BeginInit Implements ISupportInitialize.BeginInit
-  overload: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit*
-  implements:
-  - System.ComponentModel.ISupportInitialize.BeginInit
-  nameWithType.vb: Model.System.ComponentModel.ISupportInitialize.BeginInit()
-  name.vb: System.ComponentModel.ISupportInitialize.BeginInit()
-- uid: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit
-  commentId: M:TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit
-  id: System#ComponentModel#ISupportInitialize#EndInit
-  isEii: true
-  parent: TimeCockpit.Data.DataModel.Model
-  langs:
-  - csharp
-  - vb
-  name: ISupportInitialize.EndInit()
-  nameWithType: Model.ISupportInitialize.EndInit()
-  fullName: TimeCockpit.Data.DataModel.Model.System.ComponentModel.ISupportInitialize.EndInit()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: System.ComponentModel.ISupportInitialize.EndInit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 555
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nSignals the object that initialization is complete.\n"
-  example: []
-  syntax:
-    content: void ISupportInitialize.EndInit()
-    content.vb: Sub System.ComponentModel.ISupportInitialize.EndInit Implements ISupportInitialize.EndInit
-  overload: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit*
-  implements:
-  - System.ComponentModel.ISupportInitialize.EndInit
-  nameWithType.vb: Model.System.ComponentModel.ISupportInitialize.EndInit()
-  name.vb: System.ComponentModel.ISupportInitialize.EndInit()
 - uid: TimeCockpit.Data.DataModel.Model.GetMetaObject(System.Linq.Expressions.Expression)
   commentId: M:TimeCockpit.Data.DataModel.Model.GetMetaObject(System.Linq.Expressions.Expression)
   id: GetMetaObject(System.Linq.Expressions.Expression)
@@ -1122,16 +337,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.GetMetaObject(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: GetMetaObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 610
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets the meta object of the dynamic object.\n"
-  example: []
   syntax:
     content: public override DynamicMetaObject GetMetaObject(Expression parameter)
     parameters:
@@ -1162,16 +373,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.GetMember(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: GetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 620
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets a member dynamically.\n"
-  example: []
   syntax:
     content: public override object GetMember(string name)
     parameters:
@@ -1202,16 +409,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Freeze()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Freeze
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 646
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nFreezes the model\n"
-  example: []
   syntax:
     content: public void Freeze()
     content.vb: Public Sub Freeze
@@ -1235,11 +438,8 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.OnDeserializing(System.Runtime.Serialization.StreamingContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: OnDeserializing
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 667
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
@@ -1248,7 +448,6 @@ items:
     This method is part of the internal infrastructure of the <code>TimeCockpit.Data</code> and must not
 
     be called from outside.
-  example: []
   syntax:
     content: >-
       [OnDeserializing]
@@ -1283,16 +482,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.GetModelElementByUuid(System.Guid)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: GetModelElementByUuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 681
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets one of the following model elements according to its guid\nentities, properties, validation rules, model entity interface\n"
-  example: []
   syntax:
     content: public ModelElement GetModelElementByUuid(Guid guid)
     parameters:
@@ -1323,16 +518,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Attach(TimeCockpit.Data.DataModel.ModelElement)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Attach
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 1162
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nAttaches a model to a parent model element.\n"
-  example: []
   syntax:
     content: protected override void Attach(ModelElement newParent)
     parameters:
@@ -1364,17 +555,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.Model.Validate(ref System.Collections.Generic.IList<TimeCockpit.Data.DataModel.PropertyValidationMessage>, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    id: Validate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Model.cs
-    startLine: 1188
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nValidates a <xref href=\"TimeCockpit.Data.DataModel.ModelElement\" data-throw-if-not-resolved=\"false\"></xref> according to certain rules.\n"
   remarks: "\n<p>\nThe rules the <xref href=\"TimeCockpit.Data.DataModel.ModelElement\" data-throw-if-not-resolved=\"false\"></xref> is validated against are dependent on the \ntype of <xref href=\"TimeCockpit.Data.DataModel.ModelElement\" data-throw-if-not-resolved=\"false\"></xref> that is validated. \nThis method can be overridden to provide custom validation behavior for subclasses of \n<xref href=\"TimeCockpit.Data.DataModel.ModelElement\" data-throw-if-not-resolved=\"false\"></xref>\n</p>\n<p>\nWhen <xref href=\"TimeCockpit.Data.DataModel.Model.Validate(System.Collections.Generic.IList%7bTimeCockpit.Data.DataModel.PropertyValidationMessage%7d%40%2cSystem.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> is called on a modelelement, the <xref href=\"TimeCockpit.Data.DataModel.Model.Validate(System.Collections.Generic.IList%7bTimeCockpit.Data.DataModel.PropertyValidationMessage%7d%40%2cSystem.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> method\nof all children attatched to the modelelemnt are validated recursivly.\n</p>\n"
-  example: []
   syntax:
     content: protected override void Validate(ref IList<PropertyValidationMessage> messages, bool validateRecursively)
     parameters:
@@ -1396,10 +583,466 @@ items:
   - Overrides
   fullName.vb: TimeCockpit.Data.DataModel.Model.Validate(ByRef System.Collections.Generic.IList(Of TimeCockpit.Data.DataModel.PropertyValidationMessage), System.Boolean)
   name.vb: Validate(ByRef IList(Of PropertyValidationMessage), Boolean)
+- uid: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
+  commentId: P:TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
+  id: SkipEntityMemberNameValidation
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: SkipEntityMemberNameValidation
+  nameWithType: Model.SkipEntityMemberNameValidation
+  fullName: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets a value indicating whether the check for member name equals entity name in model validation should be skipped.\n"
+  remarks: "\nUse with caution! The validation check that can be disabled by this property is required for proper OData/EDM compatibility.\nFor COFX applications that do not require OData/EDM this flag may be set to true.\n"
+  syntax:
+    content: public static bool SkipEntityMemberNameValidation { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property SkipEntityMemberNameValidation As Boolean
+  overload: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.DataModel.Model.Entities
+  commentId: P:TimeCockpit.Data.DataModel.Model.Entities
+  id: Entities
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: Model.Entities
+  fullName: TimeCockpit.Data.DataModel.Model.Entities
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store the entities of the data model.\n"
+  syntax:
+    content: public ModelCollection<ModelEntityBase> Entities { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
+    content.vb: Public ReadOnly Property Entities As ModelCollection(Of ModelEntityBase)
+  overload: TimeCockpit.Data.DataModel.Model.Entities*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.SystemEntities
+  commentId: P:TimeCockpit.Data.DataModel.Model.SystemEntities
+  id: SystemEntities
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: SystemEntities
+  nameWithType: Model.SystemEntities
+  fullName: TimeCockpit.Data.DataModel.Model.SystemEntities
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store the system entities of the data model.\n"
+  syntax:
+    content: public IEnumerable<ModelEntityBase> SystemEntities { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
+    content.vb: Public ReadOnly Property SystemEntities As IEnumerable(Of ModelEntityBase)
+  overload: TimeCockpit.Data.DataModel.Model.SystemEntities*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
+  commentId: P:TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
+  id: ApplicationSpecificEntities
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: ApplicationSpecificEntities
+  nameWithType: Model.ApplicationSpecificEntities
+  fullName: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the application specific entities of the current model.\n"
+  syntax:
+    content: public IEnumerable<ModelEntityBase> ApplicationSpecificEntities { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
+    content.vb: Public ReadOnly Property ApplicationSpecificEntities As IEnumerable(Of ModelEntityBase)
+  overload: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.UserEntities
+  commentId: P:TimeCockpit.Data.DataModel.Model.UserEntities
+  id: UserEntities
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: UserEntities
+  nameWithType: Model.UserEntities
+  fullName: TimeCockpit.Data.DataModel.Model.UserEntities
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the user entities of the current model.\n"
+  syntax:
+    content: public IEnumerable<ModelEntityBase> UserEntities { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
+    content.vb: Public ReadOnly Property UserEntities As IEnumerable(Of ModelEntityBase)
+  overload: TimeCockpit.Data.DataModel.Model.UserEntities*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.Actions
+  commentId: P:TimeCockpit.Data.DataModel.Model.Actions
+  id: Actions
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: Model.Actions
+  fullName: TimeCockpit.Data.DataModel.Model.Actions
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store all available model actions of a model.\n"
+  syntax:
+    content: public ModelCollection<ModelAction> Actions { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
+    content.vb: Public ReadOnly Property Actions As ModelCollection(Of ModelAction)
+  overload: TimeCockpit.Data.DataModel.Model.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.ModelEntityViews
+  commentId: P:TimeCockpit.Data.DataModel.Model.ModelEntityViews
+  id: ModelEntityViews
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: ModelEntityViews
+  nameWithType: Model.ModelEntityViews
+  fullName: TimeCockpit.Data.DataModel.Model.ModelEntityViews
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store all available entity views in a model.\n"
+  syntax:
+    content: >-
+      [Obsolete("Use EntityViews instead")]
+
+      public ModelCollection<EntityView> ModelEntityViews { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
+    content.vb: >-
+      <Obsolete("Use EntityViews instead")>
+
+      Public ReadOnly Property ModelEntityViews As ModelCollection(Of EntityView)
+  overload: TimeCockpit.Data.DataModel.Model.ModelEntityViews*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use EntityViews instead
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.EntityViews
+  commentId: P:TimeCockpit.Data.DataModel.Model.EntityViews
+  id: EntityViews
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: EntityViews
+  nameWithType: Model.EntityViews
+  fullName: TimeCockpit.Data.DataModel.Model.EntityViews
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store all available entity views in a model.\n"
+  syntax:
+    content: public ModelCollection<EntityView> EntityViews { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
+    content.vb: Public ReadOnly Property EntityViews As ModelCollection(Of EntityView)
+  overload: TimeCockpit.Data.DataModel.Model.EntityViews*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
+  commentId: P:TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
+  id: NamedSetDefinitions
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: NamedSetDefinitions
+  nameWithType: Model.NamedSetDefinitions
+  fullName: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store named set definitions in a model.\n"
+  syntax:
+    content: public ModelCollection<NamedSetDefinition> NamedSetDefinitions { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
+    content.vb: Public ReadOnly Property NamedSetDefinitions As ModelCollection(Of NamedSetDefinition)
+  overload: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.Permissions
+  commentId: P:TimeCockpit.Data.DataModel.Model.Permissions
+  id: Permissions
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: Permissions
+  nameWithType: Model.Permissions
+  fullName: TimeCockpit.Data.DataModel.Model.Permissions
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the collection used to store allowed permissions.\n"
+  syntax:
+    content: public ModelCollection<Permission> Permissions { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
+    content.vb: Public ReadOnly Property Permissions As ModelCollection(Of Permission)
+  overload: TimeCockpit.Data.DataModel.Model.Permissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.Cultures
+  commentId: P:TimeCockpit.Data.DataModel.Model.Cultures
+  id: Cultures
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: Cultures
+  nameWithType: Model.Cultures
+  fullName: TimeCockpit.Data.DataModel.Model.Cultures
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the cultures supported by the current instance of <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public ModelCollection<Culture> Cultures { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
+      description: "\nThe cultures.\n"
+    content.vb: Public ReadOnly Property Cultures As ModelCollection(Of Culture)
+  overload: TimeCockpit.Data.DataModel.Model.Cultures*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.IsFrozen
+  commentId: P:TimeCockpit.Data.DataModel.Model.IsFrozen
+  id: IsFrozen
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: IsFrozen
+  nameWithType: Model.IsFrozen
+  fullName: TimeCockpit.Data.DataModel.Model.IsFrozen
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the model is frozen\n"
+  remarks: "\nFrozen models always have <xref href=\"TimeCockpit.Data.DataModel.Model.TrackChanges\" data-throw-if-not-resolved=\"false\"></xref> = <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>. You cannot change\na frozen model so that it tracks changes.\n"
+  syntax:
+    content: public bool IsFrozen { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFrozen As Boolean
+  overload: TimeCockpit.Data.DataModel.Model.IsFrozen*
+  seealso:
+  - linkId: TimeCockpit.Data.DataModel.Model.Freeze
+    commentId: M:TimeCockpit.Data.DataModel.Model.Freeze
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.TrackChanges
+  commentId: P:TimeCockpit.Data.DataModel.Model.TrackChanges
+  id: TrackChanges
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: TrackChanges
+  nameWithType: Model.TrackChanges
+  fullName: TimeCockpit.Data.DataModel.Model.TrackChanges
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets a value indicating whether the model is currently tracking changes.\n"
+  remarks: "\n<p>\n  If <code>TrackChanges</code> is <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref> changes to the model and it&apos;s child\n  objects are collected. You can save all changes to a model using the \n<xref href=\"TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref> method.\n</p>\n<p>\n  If <code>TrackChanges</code> is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref> changes to the model and it&apos;s child\n  objects are not collected. As a result you cannot save changes to the underlying data\n  store.\n</p>\n"
+  syntax:
+    content: public bool TrackChanges { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property TrackChanges As Boolean
+  overload: TimeCockpit.Data.DataModel.Model.TrackChanges*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Model.LocalModelVersion
+  commentId: P:TimeCockpit.Data.DataModel.Model.LocalModelVersion
+  id: LocalModelVersion
+  parent: TimeCockpit.Data.DataModel.Model
+  langs:
+  - csharp
+  - vb
+  name: LocalModelVersion
+  nameWithType: Model.LocalModelVersion
+  fullName: TimeCockpit.Data.DataModel.Model.LocalModelVersion
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the local version number of this model\n"
+  remarks: "\nThe local model version is an internal version counter for the model. Whenever a model change is written to\ndisk the local model version is incremented. Note that this property is not incremented as long as changes\nhave not been written to disk using <xref href=\"TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public int LocalModelVersion { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property LocalModelVersion As Integer
+  overload: TimeCockpit.Data.DataModel.Model.LocalModelVersion*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -1413,234 +1056,45 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.ModelElement
   commentId: T:TimeCockpit.Data.DataModel.ModelElement
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElement
   nameWithType: ModelElement
   fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: System.ComponentModel.IDataErrorInfo
-  commentId: T:System.ComponentModel.IDataErrorInfo
-  parent: System.ComponentModel
   isExternal: true
   name: IDataErrorInfo
   nameWithType: IDataErrorInfo
   fullName: System.ComponentModel.IDataErrorInfo
 - uid: System.ComponentModel.ISupportInitialize
-  commentId: T:System.ComponentModel.ISupportInitialize
-  parent: System.ComponentModel
+  commentId: '!:System.ComponentModel.ISupportInitialize'
   isExternal: true
   name: ISupportInitialize
   nameWithType: ISupportInitialize
   fullName: System.ComponentModel.ISupportInitialize
-- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ElementGuid
-  nameWithType: ModelElement.ElementGuid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Name
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Name
-  nameWithType: ModelElement.Name
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
-- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Parent
-  nameWithType: ModelElement.Parent
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
-- uid: TimeCockpit.Data.DataModel.ModelElement.Children
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Children
-  nameWithType: ModelElement.Children
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
-- uid: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: PersistBehavior
-  nameWithType: ModelElement.PersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsFullPersistBehavior
-  nameWithType: ModelElement.IsFullPersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsNonePersistBehavior
-  nameWithType: ModelElement.IsNonePersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemElement
-  nameWithType: ModelElement.IsSystemElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsApplicationSpecificElement
-  nameWithType: ModelElement.IsApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsUserElement
-  nameWithType: ModelElement.IsUserElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemOrApplicationSpecificElement
-  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: InvariantFriendlyName
-  nameWithType: ModelElement.InvariantFriendlyName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: CreationVersion
-  nameWithType: ModelElement.CreationVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: LastUpdateVersion
-  nameWithType: ModelElement.LastUpdateVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.Error
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Error
-  nameWithType: ModelElement.Error
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
-- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ErrorSummary
-  nameWithType: ModelElement.ErrorSummary
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsValid
-  nameWithType: ModelElement.IsValid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Ownership
-  nameWithType: ModelElement.Ownership
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
-- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: OwnershipPrefix
-  nameWithType: ModelElement.OwnershipPrefix
-  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: NonPrefixedName
-  nameWithType: ModelElement.NonPrefixedName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-- uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: true
-  name: IDataErrorInfo.Item[String]
-  nameWithType: ModelElement.IDataErrorInfo.Item[String]
-  fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item[System.String]
-  nameWithType.vb: ModelElement.System.ComponentModel.IDataErrorInfo.Item(String)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item(System.String)
-  name.vb: System.ComponentModel.IDataErrorInfo.Item(String)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: IDataErrorInfo.Item
-    nameWithType: ModelElement.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: '['
-    nameWithType: '['
-    fullName: '['
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ']'
-    nameWithType: ']'
-    fullName: ']'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: System.ComponentModel.IDataErrorInfo.Item
-    nameWithType: ModelElement.System.ComponentModel.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   parent: TimeCockpit.Data.DataModel.ModelElement
@@ -1653,6 +1107,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1669,6 +1124,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1683,7 +1139,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.Detach
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Detach
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Detach()
   nameWithType: ModelElement.Detach()
   fullName: TimeCockpit.Data.DataModel.ModelElement.Detach()
@@ -1692,6 +1148,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1703,6 +1160,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1721,6 +1179,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1737,6 +1196,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1760,6 +1220,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1776,6 +1237,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1790,7 +1252,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetPersistBehavior(PersistBehavior)
   nameWithType: ModelElement.SetPersistBehavior(PersistBehavior)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
@@ -1799,6 +1261,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1806,6 +1269,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1814,6 +1278,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1821,6 +1286,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1836,6 +1302,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1852,6 +1319,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1866,7 +1334,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetOwnership(Ownership)
   nameWithType: ModelElement.SetOwnership(Ownership)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
@@ -1875,6 +1343,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1882,6 +1351,7 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1890,6 +1360,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1897,16 +1368,150 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ElementGuid
+  nameWithType: ModelElement.ElementGuid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Name
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Name
+  nameWithType: ModelElement.Name
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
+- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Parent
+  nameWithType: ModelElement.Parent
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
+- uid: TimeCockpit.Data.DataModel.ModelElement.Children
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Children
+  nameWithType: ModelElement.Children
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
+- uid: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: PersistBehavior
+  nameWithType: ModelElement.PersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsFullPersistBehavior
+  nameWithType: ModelElement.IsFullPersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsNonePersistBehavior
+  nameWithType: ModelElement.IsNonePersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemElement
+  nameWithType: ModelElement.IsSystemElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsApplicationSpecificElement
+  nameWithType: ModelElement.IsApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsUserElement
+  nameWithType: ModelElement.IsUserElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemOrApplicationSpecificElement
+  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: InvariantFriendlyName
+  nameWithType: ModelElement.InvariantFriendlyName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: CreationVersion
+  nameWithType: ModelElement.CreationVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: LastUpdateVersion
+  nameWithType: ModelElement.LastUpdateVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.Error
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Error
+  nameWithType: ModelElement.Error
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
+- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ErrorSummary
+  nameWithType: ModelElement.ErrorSummary
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsValid
+  nameWithType: ModelElement.IsValid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Ownership
+  nameWithType: ModelElement.Ownership
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
+- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: OwnershipPrefix
+  nameWithType: ModelElement.OwnershipPrefix
+  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: NonPrefixedName
+  nameWithType: ModelElement.NonPrefixedName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -1919,6 +1524,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1935,6 +1541,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1946,6 +1553,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   parent: TimeCockpit.Data.DynamicObject
@@ -1958,6 +1572,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1982,6 +1597,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2282,560 +1898,33 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.DataModel.Model.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.#ctor
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model.Model
   fullName: TimeCockpit.Data.DataModel.Model.Model
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
-- uid: TimeCockpit.Data.DataModel.ModelEntity
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntity
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntity
-  nameWithType: ModelEntity
-  fullName: TimeCockpit.Data.DataModel.ModelEntity
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
-- uid: TimeCockpit.Data.DataModel.EntityView
-  commentId: T:TimeCockpit.Data.DataModel.EntityView
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: EntityView
-  nameWithType: EntityView
-  fullName: TimeCockpit.Data.DataModel.EntityView
-- uid: TimeCockpit.Data.DataModel.NamedSetDefinition
-  commentId: T:TimeCockpit.Data.DataModel.NamedSetDefinition
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: NamedSetDefinition
-  nameWithType: NamedSetDefinition
-  fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
-- uid: TimeCockpit.Data.Security.Permission
-  commentId: T:TimeCockpit.Data.Security.Permission
-  parent: TimeCockpit.Data.Security
-  isExternal: false
-  name: Permission
-  nameWithType: Permission
-  fullName: TimeCockpit.Data.Security.Permission
-- uid: TimeCockpit.Data.DataModel.Actions
-  commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: TimeCockpit.Data.DataModel.Actions
-  nameWithType: TimeCockpit.Data.DataModel.Actions
-  fullName: TimeCockpit.Data.DataModel.Actions
-- uid: TimeCockpit.Data.Security
-  commentId: N:TimeCockpit.Data.Security
-  isExternal: false
-  name: TimeCockpit.Data.Security
-  nameWithType: TimeCockpit.Data.Security
-  fullName: TimeCockpit.Data.Security
-- uid: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-  isExternal: false
-  name: SkipEntityMemberNameValidation
-  nameWithType: Model.SkipEntityMemberNameValidation
-  fullName: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: TimeCockpit.Data.DataModel.Model.Entities*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.Entities
-  isExternal: false
-  name: Entities
-  nameWithType: Model.Entities
-  fullName: TimeCockpit.Data.DataModel.Model.Entities
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<ModelEntityBase>
-  nameWithType: ModelCollection<ModelEntityBase>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.ModelEntityBase>
-  nameWithType.vb: ModelCollection(Of ModelEntityBase)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.ModelEntityBase)
-  name.vb: ModelCollection(Of ModelEntityBase)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.ModelCollection`1
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection`1
-  isExternal: false
-  name: ModelCollection<T>
-  nameWithType: ModelCollection<T>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>
-  nameWithType.vb: ModelCollection(Of T)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T)
-  name.vb: ModelCollection(Of T)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.SystemEntities*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.SystemEntities
-  isExternal: false
-  name: SystemEntities
-  nameWithType: Model.SystemEntities
-  fullName: TimeCockpit.Data.DataModel.Model.SystemEntities
-- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
-  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.IEnumerable`1
-  name: IEnumerable<ModelEntityBase>
-  nameWithType: IEnumerable<ModelEntityBase>
-  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.ModelEntityBase>
-  nameWithType.vb: IEnumerable(Of ModelEntityBase)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.DataModel.ModelEntityBase)
-  name.vb: IEnumerable(Of ModelEntityBase)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic.IEnumerable`1
-  commentId: T:System.Collections.Generic.IEnumerable`1
-  isExternal: true
-  name: IEnumerable<T>
-  nameWithType: IEnumerable<T>
-  fullName: System.Collections.Generic.IEnumerable<T>
-  nameWithType.vb: IEnumerable(Of T)
-  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
-  name.vb: IEnumerable(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-- uid: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
-  isExternal: false
-  name: ApplicationSpecificEntities
-  nameWithType: Model.ApplicationSpecificEntities
-  fullName: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
-- uid: TimeCockpit.Data.DataModel.Model.UserEntities*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.UserEntities
-  isExternal: false
-  name: UserEntities
-  nameWithType: Model.UserEntities
-  fullName: TimeCockpit.Data.DataModel.Model.UserEntities
-- uid: TimeCockpit.Data.DataModel.Model.Actions*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.Actions
-  isExternal: false
-  name: Actions
-  nameWithType: Model.Actions
-  fullName: TimeCockpit.Data.DataModel.Model.Actions
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<ModelAction>
-  nameWithType: ModelCollection<ModelAction>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.Actions.ModelAction>
-  nameWithType.vb: ModelCollection(Of ModelAction)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.Actions.ModelAction)
-  name.vb: ModelCollection(Of ModelAction)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-    name: ModelAction
-    nameWithType: ModelAction
-    fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-    name: ModelAction
-    nameWithType: ModelAction
-    fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.ModelEntityViews*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.ModelEntityViews
-  isExternal: false
-  name: ModelEntityViews
-  nameWithType: Model.ModelEntityViews
-  fullName: TimeCockpit.Data.DataModel.Model.ModelEntityViews
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<EntityView>
-  nameWithType: ModelCollection<EntityView>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.EntityView>
-  nameWithType.vb: ModelCollection(Of EntityView)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.EntityView)
-  name.vb: ModelCollection(Of EntityView)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.EntityView
-    name: EntityView
-    nameWithType: EntityView
-    fullName: TimeCockpit.Data.DataModel.EntityView
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.EntityView
-    name: EntityView
-    nameWithType: EntityView
-    fullName: TimeCockpit.Data.DataModel.EntityView
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.EntityViews*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.EntityViews
-  isExternal: false
-  name: EntityViews
-  nameWithType: Model.EntityViews
-  fullName: TimeCockpit.Data.DataModel.Model.EntityViews
-- uid: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
-  isExternal: false
-  name: NamedSetDefinitions
-  nameWithType: Model.NamedSetDefinitions
-  fullName: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<NamedSetDefinition>
-  nameWithType: ModelCollection<NamedSetDefinition>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.NamedSetDefinition>
-  nameWithType.vb: ModelCollection(Of NamedSetDefinition)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.NamedSetDefinition)
-  name.vb: ModelCollection(Of NamedSetDefinition)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.NamedSetDefinition
-    name: NamedSetDefinition
-    nameWithType: NamedSetDefinition
-    fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.NamedSetDefinition
-    name: NamedSetDefinition
-    nameWithType: NamedSetDefinition
-    fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.Permissions*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.Permissions
-  isExternal: false
-  name: Permissions
-  nameWithType: Model.Permissions
-  fullName: TimeCockpit.Data.DataModel.Model.Permissions
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<Permission>
-  nameWithType: ModelCollection<Permission>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.Security.Permission>
-  nameWithType.vb: ModelCollection(Of Permission)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.Security.Permission)
-  name.vb: ModelCollection(Of Permission)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.Security.Permission
-    name: Permission
-    nameWithType: Permission
-    fullName: TimeCockpit.Data.Security.Permission
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.Security.Permission
-    name: Permission
-    nameWithType: Permission
-    fullName: TimeCockpit.Data.Security.Permission
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.Cultures*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.Cultures
-  isExternal: false
-  name: Cultures
-  nameWithType: Model.Cultures
-  fullName: TimeCockpit.Data.DataModel.Model.Cultures
-- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
-  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
-  parent: TimeCockpit.Data.DataModel
-  definition: TimeCockpit.Data.DataModel.ModelCollection`1
-  name: ModelCollection<Culture>
-  nameWithType: ModelCollection<Culture>
-  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.Culture>
-  nameWithType.vb: ModelCollection(Of Culture)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.Culture)
-  name.vb: ModelCollection(Of Culture)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.Culture
-    name: Culture
-    nameWithType: Culture
-    fullName: TimeCockpit.Data.DataModel.Culture
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
-    name: ModelCollection
-    nameWithType: ModelCollection
-    fullName: TimeCockpit.Data.DataModel.ModelCollection
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.Culture
-    name: Culture
-    nameWithType: Culture
-    fullName: TimeCockpit.Data.DataModel.Culture
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.TrackChanges
-  commentId: P:TimeCockpit.Data.DataModel.Model.TrackChanges
-- uid: TimeCockpit.Data.DataModel.Model.Freeze
-  commentId: M:TimeCockpit.Data.DataModel.Model.Freeze
-- uid: TimeCockpit.Data.DataModel.Model.IsFrozen*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.IsFrozen
-  isExternal: false
-  name: IsFrozen
-  nameWithType: Model.IsFrozen
-  fullName: TimeCockpit.Data.DataModel.Model.IsFrozen
-- uid: TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)
-  commentId: M:TimeCockpit.Data.DataContext.SaveModel(TimeCockpit.Data.DataModel.Model)
-- uid: TimeCockpit.Data.DataModel.Model.TrackChanges*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.TrackChanges
-  isExternal: false
-  name: TrackChanges
-  nameWithType: Model.TrackChanges
-  fullName: TimeCockpit.Data.DataModel.Model.TrackChanges
-- uid: TimeCockpit.Data.DataModel.Model.LocalModelVersion*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.LocalModelVersion
-  isExternal: false
-  name: LocalModelVersion
-  nameWithType: Model.LocalModelVersion
-  fullName: TimeCockpit.Data.DataModel.Model.LocalModelVersion
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Accept(ModelElementVisitor)
   nameWithType: ModelElement.Accept(ModelElementVisitor)
   fullName: TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
@@ -2844,6 +1933,7 @@ references:
     name: Accept
     nameWithType: ModelElement.Accept
     fullName: TimeCockpit.Data.DataModel.ModelElement.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2851,6 +1941,7 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2859,6 +1950,7 @@ references:
     name: Accept
     nameWithType: ModelElement.Accept
     fullName: TimeCockpit.Data.DataModel.ModelElement.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2866,38 +1958,39 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Model.Accept*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: Model.Accept
   fullName: TimeCockpit.Data.DataModel.Model.Accept
 - uid: TimeCockpit.Data.DataModel.ModelElementVisitor
   commentId: T:TimeCockpit.Data.DataModel.ModelElementVisitor
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElementVisitor
   nameWithType: ModelElementVisitor
   fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
-- uid: TimeCockpit.Data.DataModel.Culture
-  commentId: T:TimeCockpit.Data.DataModel.Culture
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Culture
-  nameWithType: Culture
-  fullName: TimeCockpit.Data.DataModel.Culture
 - uid: TimeCockpit.Data.DataModel.Model.GetDefaultCulture*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.GetDefaultCulture
-  isExternal: false
+  isExternal: true
   name: GetDefaultCulture
   nameWithType: Model.GetDefaultCulture
   fullName: TimeCockpit.Data.DataModel.Model.GetDefaultCulture
+- uid: TimeCockpit.Data.DataModel.Culture
+  commentId: T:TimeCockpit.Data.DataModel.Culture
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: Culture
+  nameWithType: Culture
+  fullName: TimeCockpit.Data.DataModel.Culture
 - uid: TimeCockpit.Data.DataModel.Model.GetDesiredCultureOrDefault*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.GetDesiredCultureOrDefault
-  isExternal: false
+  isExternal: true
   name: GetDesiredCultureOrDefault
   nameWithType: Model.GetDesiredCultureOrDefault
   fullName: TimeCockpit.Data.DataModel.Model.GetDesiredCultureOrDefault
@@ -2910,102 +2003,32 @@ references:
   fullName: System.Globalization.CultureInfo
 - uid: System.Globalization
   commentId: N:System.Globalization
-  isExternal: false
+  isExternal: true
   name: System.Globalization
   nameWithType: System.Globalization
   fullName: System.Globalization
 - uid: TimeCockpit.Data.DataModel.Model.HasCultures*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.HasCultures
-  isExternal: false
+  isExternal: true
   name: HasCultures
   nameWithType: Model.HasCultures
   fullName: TimeCockpit.Data.DataModel.Model.HasCultures
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: TimeCockpit.Data.DataModel.Model.SetDefaultCulture*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.SetDefaultCulture
-  isExternal: false
+  isExternal: true
   name: SetDefaultCulture
   nameWithType: Model.SetDefaultCulture
   fullName: TimeCockpit.Data.DataModel.Model.SetDefaultCulture
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
-- uid: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#BeginInit
-  isExternal: false
-  name: ISupportInitialize.BeginInit
-  nameWithType: Model.ISupportInitialize.BeginInit
-  fullName: TimeCockpit.Data.DataModel.Model.System.ComponentModel.ISupportInitialize.BeginInit
-  nameWithType.vb: Model.System.ComponentModel.ISupportInitialize.BeginInit
-  name.vb: System.ComponentModel.ISupportInitialize.BeginInit
-- uid: System.ComponentModel.ISupportInitialize.BeginInit
-  commentId: M:System.ComponentModel.ISupportInitialize.BeginInit
-  parent: System.ComponentModel.ISupportInitialize
   isExternal: true
-  name: BeginInit()
-  nameWithType: ISupportInitialize.BeginInit()
-  fullName: System.ComponentModel.ISupportInitialize.BeginInit()
-  spec.csharp:
-  - uid: System.ComponentModel.ISupportInitialize.BeginInit
-    name: BeginInit
-    nameWithType: ISupportInitialize.BeginInit
-    fullName: System.ComponentModel.ISupportInitialize.BeginInit
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.ComponentModel.ISupportInitialize.BeginInit
-    name: BeginInit
-    nameWithType: ISupportInitialize.BeginInit
-    fullName: System.ComponentModel.ISupportInitialize.BeginInit
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit*
-  commentId: Overload:TimeCockpit.Data.DataModel.Model.System#ComponentModel#ISupportInitialize#EndInit
-  isExternal: false
-  name: ISupportInitialize.EndInit
-  nameWithType: Model.ISupportInitialize.EndInit
-  fullName: TimeCockpit.Data.DataModel.Model.System.ComponentModel.ISupportInitialize.EndInit
-  nameWithType.vb: Model.System.ComponentModel.ISupportInitialize.EndInit
-  name.vb: System.ComponentModel.ISupportInitialize.EndInit
-- uid: System.ComponentModel.ISupportInitialize.EndInit
-  commentId: M:System.ComponentModel.ISupportInitialize.EndInit
-  parent: System.ComponentModel.ISupportInitialize
-  isExternal: true
-  name: EndInit()
-  nameWithType: ISupportInitialize.EndInit()
-  fullName: System.ComponentModel.ISupportInitialize.EndInit()
-  spec.csharp:
-  - uid: System.ComponentModel.ISupportInitialize.EndInit
-    name: EndInit
-    nameWithType: ISupportInitialize.EndInit
-    fullName: System.ComponentModel.ISupportInitialize.EndInit
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.ComponentModel.ISupportInitialize.EndInit
-    name: EndInit
-    nameWithType: ISupportInitialize.EndInit
-    fullName: System.ComponentModel.ISupportInitialize.EndInit
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   parent: TimeCockpit.Data.DynamicObject
@@ -3018,6 +2041,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3034,6 +2058,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3047,30 +2072,20 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Model.GetMetaObject*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.GetMetaObject
-  isExternal: false
+  isExternal: true
   name: GetMetaObject
   nameWithType: Model.GetMetaObject
   fullName: TimeCockpit.Data.DataModel.Model.GetMetaObject
 - uid: System.Linq.Expressions.Expression
-  commentId: T:System.Linq.Expressions.Expression
-  parent: System.Linq.Expressions
   isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: System.Linq.Expressions.Expression
 - uid: System.Dynamic.DynamicMetaObject
-  commentId: T:System.Dynamic.DynamicMetaObject
-  parent: System.Dynamic
   isExternal: true
   name: DynamicMetaObject
   nameWithType: DynamicMetaObject
   fullName: System.Dynamic.DynamicMetaObject
-- uid: System.Linq.Expressions
-  commentId: N:System.Linq.Expressions
-  isExternal: false
-  name: System.Linq.Expressions
-  nameWithType: System.Linq.Expressions
-  fullName: System.Linq.Expressions
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -3083,6 +2098,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3099,6 +2115,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3112,7 +2129,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Model.GetMember*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.GetMember
-  isExternal: false
+  isExternal: true
   name: GetMember
   nameWithType: Model.GetMember
   fullName: TimeCockpit.Data.DataModel.Model.GetMember
@@ -3123,17 +2140,18 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.DataModel.Model.IsFrozen
-  commentId: P:TimeCockpit.Data.DataModel.Model.IsFrozen
 - uid: TimeCockpit.Data.DataModel.Model.Freeze*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.Freeze
-  isExternal: false
+  isExternal: true
   name: Freeze
   nameWithType: Model.Freeze
   fullName: TimeCockpit.Data.DataModel.Model.Freeze
+- uid: TimeCockpit.Data.DataModel.Model.IsFrozen
+  commentId: P:TimeCockpit.Data.DataModel.Model.IsFrozen
+  isExternal: true
 - uid: TimeCockpit.Data.DataModel.Model.OnDeserializing*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.OnDeserializing
-  isExternal: false
+  isExternal: true
   name: OnDeserializing
   nameWithType: Model.OnDeserializing
   fullName: TimeCockpit.Data.DataModel.Model.OnDeserializing
@@ -3146,13 +2164,13 @@ references:
   fullName: System.Runtime.Serialization.StreamingContext
 - uid: System.Runtime.Serialization
   commentId: N:System.Runtime.Serialization
-  isExternal: false
+  isExternal: true
   name: System.Runtime.Serialization
   nameWithType: System.Runtime.Serialization
   fullName: System.Runtime.Serialization
 - uid: TimeCockpit.Data.DataModel.Model.GetModelElementByUuid*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.GetModelElementByUuid
-  isExternal: false
+  isExternal: true
   name: GetModelElementByUuid
   nameWithType: Model.GetModelElementByUuid
   fullName: TimeCockpit.Data.DataModel.Model.GetModelElementByUuid
@@ -3166,7 +2184,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.Attach(TimeCockpit.Data.DataModel.ModelElement)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Attach(TimeCockpit.Data.DataModel.ModelElement)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Attach(ModelElement)
   nameWithType: ModelElement.Attach(ModelElement)
   fullName: TimeCockpit.Data.DataModel.ModelElement.Attach(TimeCockpit.Data.DataModel.ModelElement)
@@ -3175,6 +2193,7 @@ references:
     name: Attach
     nameWithType: ModelElement.Attach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3182,6 +2201,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3190,6 +2210,7 @@ references:
     name: Attach
     nameWithType: ModelElement.Attach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3197,24 +2218,19 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Model.Attach*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.Attach
-  isExternal: false
+  isExternal: true
   name: Attach
   nameWithType: Model.Attach
   fullName: TimeCockpit.Data.DataModel.Model.Attach
 - uid: System.InvalidOperationException
   commentId: T:System.InvalidOperationException
-  parent: System
   isExternal: true
-  name: InvalidOperationException
-  nameWithType: InvalidOperationException
-  fullName: System.InvalidOperationException
-- uid: TimeCockpit.Data.DataModel.Model.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
-  commentId: M:TimeCockpit.Data.DataModel.Model.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
 - uid: TimeCockpit.Data.DataModel.ModelElement.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
   parent: TimeCockpit.Data.DataModel.ModelElement
@@ -3230,6 +2246,7 @@ references:
     name: Validate
     nameWithType: ModelElement.Validate
     fullName: TimeCockpit.Data.DataModel.ModelElement.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3245,6 +2262,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3264,6 +2282,7 @@ references:
     name: Validate
     nameWithType: ModelElement.Validate
     fullName: TimeCockpit.Data.DataModel.ModelElement.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3279,6 +2298,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3295,7 +2315,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.Model.Validate*
   commentId: Overload:TimeCockpit.Data.DataModel.Model.Validate
-  isExternal: false
+  isExternal: true
   name: Validate
   nameWithType: Model.Validate
   fullName: TimeCockpit.Data.DataModel.Model.Validate
@@ -3322,6 +2342,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3338,6 +2359,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3380,3 +2402,489 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
+  isExternal: true
+  name: SkipEntityMemberNameValidation
+  nameWithType: Model.SkipEntityMemberNameValidation
+  fullName: TimeCockpit.Data.DataModel.Model.SkipEntityMemberNameValidation
+- uid: TimeCockpit.Data.DataModel.Model.Entities*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.Entities
+  isExternal: true
+  name: Entities
+  nameWithType: Model.Entities
+  fullName: TimeCockpit.Data.DataModel.Model.Entities
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.ModelEntityBase}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<ModelEntityBase>
+  nameWithType: ModelCollection<ModelEntityBase>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.ModelEntityBase>
+  nameWithType.vb: ModelCollection(Of ModelEntityBase)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.ModelEntityBase)
+  name.vb: ModelCollection(Of ModelEntityBase)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.ModelCollection`1
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection`1
+  isExternal: true
+  name: ModelCollection<T>
+  nameWithType: ModelCollection<T>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<T>
+  nameWithType.vb: ModelCollection(Of T)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of T)
+  name.vb: ModelCollection(Of T)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.SystemEntities*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.SystemEntities
+  isExternal: true
+  name: SystemEntities
+  nameWithType: Model.SystemEntities
+  fullName: TimeCockpit.Data.DataModel.Model.SystemEntities
+- uid: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
+  commentId: T:System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<ModelEntityBase>
+  nameWithType: IEnumerable<ModelEntityBase>
+  fullName: System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.ModelEntityBase>
+  nameWithType.vb: IEnumerable(Of ModelEntityBase)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.DataModel.ModelEntityBase)
+  name.vb: IEnumerable(Of ModelEntityBase)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
+    name: ModelEntityBase
+    nameWithType: ModelEntityBase
+    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
+  isExternal: true
+  name: ApplicationSpecificEntities
+  nameWithType: Model.ApplicationSpecificEntities
+  fullName: TimeCockpit.Data.DataModel.Model.ApplicationSpecificEntities
+- uid: TimeCockpit.Data.DataModel.Model.UserEntities*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.UserEntities
+  isExternal: true
+  name: UserEntities
+  nameWithType: Model.UserEntities
+  fullName: TimeCockpit.Data.DataModel.Model.UserEntities
+- uid: TimeCockpit.Data.DataModel.Model.Actions*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.Actions
+  isExternal: true
+  name: Actions
+  nameWithType: Model.Actions
+  fullName: TimeCockpit.Data.DataModel.Model.Actions
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Actions.ModelAction}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<ModelAction>
+  nameWithType: ModelCollection<ModelAction>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.Actions.ModelAction>
+  nameWithType.vb: ModelCollection(Of ModelAction)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.Actions.ModelAction)
+  name.vb: ModelCollection(Of ModelAction)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelAction
+    name: ModelAction
+    nameWithType: ModelAction
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.Actions.ModelAction
+    name: ModelAction
+    nameWithType: ModelAction
+    fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.ModelEntityViews*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.ModelEntityViews
+  isExternal: true
+  name: ModelEntityViews
+  nameWithType: Model.ModelEntityViews
+  fullName: TimeCockpit.Data.DataModel.Model.ModelEntityViews
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.EntityView}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<EntityView>
+  nameWithType: ModelCollection<EntityView>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.EntityView>
+  nameWithType.vb: ModelCollection(Of EntityView)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.EntityView)
+  name.vb: ModelCollection(Of EntityView)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.EntityView
+    name: EntityView
+    nameWithType: EntityView
+    fullName: TimeCockpit.Data.DataModel.EntityView
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.EntityView
+    name: EntityView
+    nameWithType: EntityView
+    fullName: TimeCockpit.Data.DataModel.EntityView
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.EntityViews*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.EntityViews
+  isExternal: true
+  name: EntityViews
+  nameWithType: Model.EntityViews
+  fullName: TimeCockpit.Data.DataModel.Model.EntityViews
+- uid: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
+  isExternal: true
+  name: NamedSetDefinitions
+  nameWithType: Model.NamedSetDefinitions
+  fullName: TimeCockpit.Data.DataModel.Model.NamedSetDefinitions
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.NamedSetDefinition}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<NamedSetDefinition>
+  nameWithType: ModelCollection<NamedSetDefinition>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.NamedSetDefinition>
+  nameWithType.vb: ModelCollection(Of NamedSetDefinition)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.NamedSetDefinition)
+  name.vb: ModelCollection(Of NamedSetDefinition)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.NamedSetDefinition
+    name: NamedSetDefinition
+    nameWithType: NamedSetDefinition
+    fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.NamedSetDefinition
+    name: NamedSetDefinition
+    nameWithType: NamedSetDefinition
+    fullName: TimeCockpit.Data.DataModel.NamedSetDefinition
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.Permissions*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.Permissions
+  isExternal: true
+  name: Permissions
+  nameWithType: Model.Permissions
+  fullName: TimeCockpit.Data.DataModel.Model.Permissions
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.Security.Permission}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<Permission>
+  nameWithType: ModelCollection<Permission>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.Security.Permission>
+  nameWithType.vb: ModelCollection(Of Permission)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.Security.Permission)
+  name.vb: ModelCollection(Of Permission)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.Security.Permission
+    name: Permission
+    nameWithType: Permission
+    fullName: TimeCockpit.Data.Security.Permission
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.Security.Permission
+    name: Permission
+    nameWithType: Permission
+    fullName: TimeCockpit.Data.Security.Permission
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.Cultures*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.Cultures
+  isExternal: true
+  name: Cultures
+  nameWithType: Model.Cultures
+  fullName: TimeCockpit.Data.DataModel.Model.Cultures
+- uid: TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
+  commentId: T:TimeCockpit.Data.DataModel.ModelCollection{TimeCockpit.Data.DataModel.Culture}
+  parent: TimeCockpit.Data.DataModel
+  definition: TimeCockpit.Data.DataModel.ModelCollection`1
+  name: ModelCollection<Culture>
+  nameWithType: ModelCollection<Culture>
+  fullName: TimeCockpit.Data.DataModel.ModelCollection<TimeCockpit.Data.DataModel.Culture>
+  nameWithType.vb: ModelCollection(Of Culture)
+  fullName.vb: TimeCockpit.Data.DataModel.ModelCollection(Of TimeCockpit.Data.DataModel.Culture)
+  name.vb: ModelCollection(Of Culture)
+  spec.csharp:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.DataModel.Culture
+    name: Culture
+    nameWithType: Culture
+    fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: TimeCockpit.Data.DataModel.ModelCollection`1
+    name: ModelCollection
+    nameWithType: ModelCollection
+    fullName: TimeCockpit.Data.DataModel.ModelCollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.DataModel.Culture
+    name: Culture
+    nameWithType: Culture
+    fullName: TimeCockpit.Data.DataModel.Culture
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataModel.Model.IsFrozen*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.IsFrozen
+  isExternal: true
+  name: IsFrozen
+  nameWithType: Model.IsFrozen
+  fullName: TimeCockpit.Data.DataModel.Model.IsFrozen
+- uid: TimeCockpit.Data.DataModel.Model.Freeze
+  commentId: M:TimeCockpit.Data.DataModel.Model.Freeze
+  isExternal: true
+- uid: TimeCockpit.Data.DataModel.Model.TrackChanges*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.TrackChanges
+  isExternal: true
+  name: TrackChanges
+  nameWithType: Model.TrackChanges
+  fullName: TimeCockpit.Data.DataModel.Model.TrackChanges
+- uid: TimeCockpit.Data.DataModel.Model.LocalModelVersion*
+  commentId: Overload:TimeCockpit.Data.DataModel.Model.LocalModelVersion
+  isExternal: true
+  name: LocalModelVersion
+  nameWithType: Model.LocalModelVersion
+  fullName: TimeCockpit.Data.DataModel.Model.LocalModelVersion
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

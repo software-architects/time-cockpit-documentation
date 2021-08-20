@@ -17,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    id: FunctionCall
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    startLine: 21
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAst Node representing a function call, e.g.\nin\n<pre><code>From X In Timesheet Where X.Description = :Iif(X.BeginTime > #2012-10-10#, &quot;Some Description&quot;, &quot;Some OtherDescription&quot;) Select X</code></pre>\nan instance of this class represents the &apos;:Iif(X.BeginTime > #2012-10-10#, &quot;Some Description&quot;, &quot;Some OtherDescription&quot;)&apos; function call\nand holds the parameter expressions as members (the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments\" data-throw-if-not-resolved=\"false\"></xref> collection).\n"
-  example: []
   syntax:
     content: 'public class FunctionCall : Expression'
     content.vb: >-
@@ -62,16 +58,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionCall(System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.Syntax.Expression>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public FunctionCall(string functionName, IEnumerable<Expression> arguments)
     parameters:
@@ -90,6 +82,42 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionCall(System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.Syntax.Expression))
   name.vb: FunctionCall(String, IEnumerable(Of Expression))
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: FunctionCall.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch to.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the node value returned by <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName
   id: FunctionName
@@ -102,16 +130,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    id: FunctionName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    startLine: 42
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the name of the function that is to be called, without leading &apos;:&apos;\n"
-  example: []
   syntax:
     content: public string FunctionName { get; }
     parameters: []
@@ -137,16 +161,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    id: Arguments
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    startLine: 51
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the parameter expressions.\n"
-  example: []
   syntax:
     content: public ReadOnlyCollection<Expression> Arguments { get; }
     parameters: []
@@ -160,52 +180,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
-  langs:
-  - csharp
-  - vb
-  name: Accept(Visitor)
-  nameWithType: FunctionCall.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/FunctionCall.cs
-    startLine: 62
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
-  example: []
-  syntax:
-    content: public override Node Accept(Visitor visitor)
-    parameters:
-    - id: visitor
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-      description: The visitor to dispatch to.
-    return:
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
-      description: Returns the node value returned by <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
-  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments
-  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -219,14 +197,14 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
@@ -511,20 +489,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: FunctionCall
-  nameWithType: FunctionCall
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.#ctor
-  isExternal: false
+  isExternal: true
   name: FunctionCall
   nameWithType: FunctionCall.FunctionCall
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionCall
@@ -558,6 +529,7 @@ references:
     name: Expression
     nameWithType: Expression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -574,6 +546,7 @@ references:
     name: Expression
     nameWithType: Expression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -618,19 +591,73 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: true
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept
+  isExternal: true
+  name: Accept
+  nameWithType: FunctionCall.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: true
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName
-  isExternal: false
+  isExternal: true
   name: FunctionName
   nameWithType: FunctionCall.FunctionName
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.FunctionName
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments
-  isExternal: false
+  isExternal: true
   name: Arguments
   nameWithType: FunctionCall.Arguments
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Arguments
@@ -657,6 +684,7 @@ references:
     name: Expression
     nameWithType: Expression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -673,6 +701,7 @@ references:
     name: Expression
     nameWithType: Expression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -717,94 +746,7 @@ references:
     fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
-  isExternal: false
+  isExternal: true
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
-  name: Accept(Visitor)
-  nameWithType: Node.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept
-  isExternal: false
-  name: Accept
-  nameWithType: FunctionCall.Accept
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.FunctionCall.Accept
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: Visitor
-  nameWithType: Visitor
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

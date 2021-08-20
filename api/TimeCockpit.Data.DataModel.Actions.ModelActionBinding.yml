@@ -5,6 +5,7 @@ items:
   id: ModelActionBinding
   parent: TimeCockpit.Data.DataModel.Actions
   children:
+  - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor
   - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
   - TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   langs:
@@ -15,44 +16,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    id: ModelActionBinding
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    startLine: 15
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nRepresents a binding that a <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelAction\" data-throw-if-not-resolved=\"false\"></xref>\ncan use to retrieve exectuable code, e.g. IronPython or C#\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [KnownType(typeof (SourceCodeBinding))]
-
-      [KnownType(typeof (AssemblyBinding))]
-
-      [KnownType(typeof (IronPythonBinding))]
-
-      [KnownType(typeof (IronPythonLibraryBinding))]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public abstract class ModelActionBinding : NamedDynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public abstract class ModelActionBinding : NamedDynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
-      <KnownType(GetType(SourceCodeBinding))>
-
-      <KnownType(GetType(AssemblyBinding))>
-
-      <KnownType(GetType(IronPythonBinding))>
-
-      <KnownType(GetType(IronPythonLibraryBinding))>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public MustInherit Class ModelActionBinding
           Inherits NamedDynamicObject
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -67,9 +39,9 @@ items:
   - System.Dynamic.IDynamicMetaObjectProvider
   - System.ComponentModel.INotifyPropertyChanged
   inheritedMembers:
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -80,35 +52,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.Actions.SourceCodeBinding
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.Actions.AssemblyBinding
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.Actions.IronPythonLibraryBinding
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - abstract
@@ -129,16 +72,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    startLine: 27
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nCreates a deep copy of the model action binding.\n"
-  example: []
   syntax:
     content: public abstract ModelActionBinding Clone()
     return:
@@ -164,16 +103,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute(TimeCockpit.Data.DataModel.Actions.ExecutionContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    id: Execute
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Actions/ModelActionBinding.cs
-    startLine: 33
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Actions
   summary: "\nCalls an executable piece of code that is associated with the current <xref href=\"TimeCockpit.Data.DataModel.Actions.ModelActionBinding\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: protected abstract void Execute(ExecutionContext context)
     parameters:
@@ -188,17 +123,35 @@ items:
   modifiers.vb:
   - Protected
   - MustOverride
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
+  langs:
+  - csharp
+  - vb
+  name: ModelActionBinding()
+  nameWithType: ModelActionBinding.ModelActionBinding()
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.ModelActionBinding()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  syntax:
+    content: protected ModelActionBinding()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
-- uid: TimeCockpit.Data.DataModel.Actions.ModelAction
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ModelAction
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ModelAction
-  nameWithType: ModelAction
-  fullName: TimeCockpit.Data.DataModel.Actions.ModelAction
 - uid: TimeCockpit.Data.DataModel.Actions
   commentId: N:TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Actions
   nameWithType: TimeCockpit.Data.DataModel.Actions
   fullName: TimeCockpit.Data.DataModel.Actions
@@ -212,45 +165,27 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -263,6 +198,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -279,6 +215,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -290,6 +227,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -302,6 +253,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -318,6 +270,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -341,6 +294,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -365,6 +319,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -396,6 +351,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -412,6 +368,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -704,57 +661,51 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
-  isExternal: false
+  isExternal: true
   name: Clone
   nameWithType: ModelActionBinding.Clone
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Clone
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   commentId: T:TimeCockpit.Data.DataModel.Actions.ModelActionBinding
   parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
+  isExternal: true
   name: ModelActionBinding
   nameWithType: ModelActionBinding
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding
-- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
-  commentId: T:TimeCockpit.Data.DataModel.Actions.ExecutionContext
-  parent: TimeCockpit.Data.DataModel.Actions
-  isExternal: false
-  name: ExecutionContext
-  nameWithType: ExecutionContext
-  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
 - uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute*
   commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
-  isExternal: false
+  isExternal: true
   name: Execute
   nameWithType: ModelActionBinding.Execute
   fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.Execute
+- uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  commentId: T:TimeCockpit.Data.DataModel.Actions.ExecutionContext
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: ExecutionContext
+  nameWithType: ExecutionContext
+  fullName: TimeCockpit.Data.DataModel.Actions.ExecutionContext
+- uid: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.ModelActionBinding.#ctor
+  isExternal: true
+  name: ModelActionBinding
+  nameWithType: ModelActionBinding.ModelActionBinding
+  fullName: TimeCockpit.Data.DataModel.Actions.ModelActionBinding.ModelActionBinding

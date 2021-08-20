@@ -5,19 +5,18 @@ items:
   id: PerformImportEventArgs
   parent: TimeCockpit.Data.Import.Events
   children:
-  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings,System.Action{System.String,System.Int64,System.Int64})
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
-  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
   - TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
-  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
+  - TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
   langs:
   - csharp
   - vb
@@ -26,16 +25,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: PerformImportEventArgs
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 15
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nEvent arguments passed to the perform import event.\n"
-  example: []
   syntax:
     content: public class PerformImportEventArgs
     content.vb: Public Class PerformImportEventArgs
@@ -55,70 +49,57 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
-  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})
-  id: '#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,System.Action{System.String,System.Int64,System.Int64})'
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings,System.Action{System.String,System.Int64,System.Int64})
+  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings,System.Action{System.String,System.Int64,System.Int64})
+  id: '#ctor(System.String,System.Byte[],System.String,System.Boolean,System.String,System.Guid,System.Nullable{System.Guid},System.Action,TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings,System.Action{System.String,System.Int64,System.Int64})'
   parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
   langs:
   - csharp
   - vb
-  name: PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, Action<String, Int64, Int64>)
-  nameWithType: PerformImportEventArgs.PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, Action<String, Int64, Int64>)
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte[], System.String, System.Boolean, System.String, System.Guid, System.Nullable<System.Guid>, System.Action, TimeCockpit.Data.DataContext, System.Action<System.String, System.Int64, System.Int64>)
+  name: PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, DataContextSettings, Action<String, Int64, Int64>)
+  nameWithType: PerformImportEventArgs.PerformImportEventArgs(String, Byte[], String, Boolean, String, Guid, Nullable<Guid>, Action, DataContext, DataContextSettings, Action<String, Int64, Int64>)
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte[], System.String, System.Boolean, System.String, System.Guid, System.Nullable<System.Guid>, System.Action, TimeCockpit.Data.DataContext, TimeCockpit.Data.DataContextSettings, System.Action<System.String, System.Int64, System.Int64>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 30
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Import.Events.PerformImportEventArgs\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
-    content: public PerformImportEventArgs(string definition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, string definitionName, Guid importTaskId, Guid? definitionId = default (Guid? ), Action completed = null, DataContext targetDataContext = null, Action<string, long, long> progress = null)
+    content: public PerformImportEventArgs(string definition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, string definitionName, Guid importTaskId, Guid? definitionId = default(Guid? ), Action completed = null, DataContext targetDataContext = null, DataContextSettings targetDataContextSettings = null, Action<string, long, long> progress = null)
     parameters:
     - id: definition
       type: System.String
-      description: the import definition
     - id: sourceData
       type: System.Byte[]
-      description: the source data to import from (the raw file data).
     - id: sourceFileName
       type: System.String
-      description: The name of the source file name.
     - id: saveOnSuccess
       type: System.Boolean
-      description: true if the imported entity objects should be imported immediately.
     - id: definitionName
       type: System.String
-      description: name of the definition to import.
     - id: importTaskId
       type: System.Guid
-      description: id of the associated import task.
     - id: definitionId
       type: System.Nullable{System.Guid}
-      description: the guid of the definition, or null if none was used.
     - id: completed
       type: System.Action
-      description: Action to be called when the import succeeded.
     - id: targetDataContext
       type: TimeCockpit.Data.DataContext
-      description: the target data context, null if the default should be used.
+    - id: targetDataContextSettings
+      type: TimeCockpit.Data.DataContextSettings
     - id: progress
       type: System.Action{System.String,System.Int64,System.Int64}
-      description: progress handler.
-    content.vb: Public Sub New(definition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, definitionName As String, importTaskId As Guid, definitionId As Guid? = Nothing, completed As Action = Nothing, targetDataContext As DataContext = Nothing, progress As Action(Of String, Long, Long) = Nothing)
+    content.vb: Public Sub New(definition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, definitionName As String, importTaskId As Guid, definitionId As Guid? = Nothing, completed As Action = Nothing, targetDataContext As DataContext = Nothing, targetDataContextSettings As DataContextSettings = Nothing, progress As Action(Of String, Long, Long) = Nothing)
   overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor*
-  nameWithType.vb: PerformImportEventArgs.PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, Action(Of String, Int64, Int64))
+  nameWithType.vb: PerformImportEventArgs.PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, DataContextSettings, Action(Of String, Int64, Int64))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte(), System.String, System.Boolean, System.String, System.Guid, System.Nullable(Of System.Guid), System.Action, TimeCockpit.Data.DataContext, System.Action(Of System.String, System.Int64, System.Int64))
-  name.vb: PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, Action(Of String, Int64, Int64))
+  fullName.vb: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs(System.String, System.Byte(), System.String, System.Boolean, System.String, System.Guid, System.Nullable(Of System.Guid), System.Action, TimeCockpit.Data.DataContext, TimeCockpit.Data.DataContextSettings, System.Action(Of System.String, System.Int64, System.Int64))
+  name.vb: PerformImportEventArgs(String, Byte(), String, Boolean, String, Guid, Nullable(Of Guid), Action, DataContext, DataContextSettings, Action(Of String, Int64, Int64))
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
   commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
   id: TargetDataContext
@@ -131,16 +112,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: TargetDataContext
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 47
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the target data context.\n"
-  example: []
   syntax:
     content: public DataContext TargetDataContext { get; }
     parameters: []
@@ -148,6 +124,36 @@ items:
       type: TimeCockpit.Data.DataContext
     content.vb: Public ReadOnly Property TargetDataContext As DataContext
   overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
+  commentId: P:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
+  id: TargetDataContextSettings
+  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
+  langs:
+  - csharp
+  - vb
+  name: TargetDataContextSettings
+  nameWithType: PerformImportEventArgs.TargetDataContextSettings
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
+  type: Property
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Events
+  syntax:
+    content: public DataContextSettings TargetDataContextSettings { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataContextSettings
+    content.vb: Public ReadOnly Property TargetDataContextSettings As DataContextSettings
+  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings*
   modifiers.csharp:
   - public
   - get
@@ -166,16 +172,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: Definition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 56
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the definition used for the import.\n"
-  example: []
   syntax:
     content: public string Definition { get; }
     parameters: []
@@ -201,16 +202,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: SourceData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 65
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the source data that should be imported.\n"
-  example: []
   syntax:
     content: public byte[] SourceData { get; }
     parameters: []
@@ -236,16 +232,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: SourceFileName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 74
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the name of the source file.\n"
-  example: []
   syntax:
     content: public string SourceFileName { get; }
     parameters: []
@@ -271,16 +262,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: SaveOnSucess
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 83
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets a value indicating whether the items should be saved upon success of an import.\n"
-  example: []
   syntax:
     content: public bool SaveOnSucess { get; }
     parameters: []
@@ -306,16 +292,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: DefinitionName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 92
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the name of the definition to import.\n"
-  example: []
   syntax:
     content: public string DefinitionName { get; }
     parameters: []
@@ -341,16 +322,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: ImportTaskId
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 101
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the guid of the import task.\n"
-  example: []
   syntax:
     content: public Guid ImportTaskId { get; }
     parameters: []
@@ -376,16 +352,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: DefinitionId
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 110
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the DefinitionId\n"
-  example: []
   syntax:
     content: public Guid? DefinitionId { get; }
     parameters: []
@@ -411,16 +382,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: Completed
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 119
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the action to be called when the import is completed.\n"
-  example: []
   syntax:
     content: public Action Completed { get; }
     parameters: []
@@ -446,16 +412,11 @@ items:
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: Progress
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 128
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Events
-  summary: "\nGets the action to be called when the import proceeds.\n"
-  example: []
   syntax:
     content: public Action<string, long, long> Progress { get; }
     parameters: []
@@ -469,88 +430,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
-  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
-  id: Read(Newtonsoft.Json.JsonReader)
-  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
-  langs:
-  - csharp
-  - vb
-  name: Read(JsonReader)
-  nameWithType: PerformImportEventArgs.Read(JsonReader)
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read(Newtonsoft.Json.JsonReader)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: Read
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 139
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Events
-  summary: "\nReats the perform import event args from \n"
-  example: []
-  syntax:
-    content: public static PerformImportEventArgs Read(JsonReader reader)
-    parameters:
-    - id: reader
-      type: Newtonsoft.Json.JsonReader
-      description: the reader to read the event args from.
-    return:
-      type: TimeCockpit.Data.Import.Events.PerformImportEventArgs
-      description: returns a new import event args object containing the deserialized data.
-    content.vb: Public Shared Function Read(reader As JsonReader) As PerformImportEventArgs
-  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
-  commentId: M:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
-  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.Events.PerformImportEventArgs)
-  parent: TimeCockpit.Data.Import.Events.PerformImportEventArgs
-  langs:
-  - csharp
-  - vb
-  name: Write(JsonWriter, PerformImportEventArgs)
-  nameWithType: PerformImportEventArgs.Write(JsonWriter, PerformImportEventArgs)
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.Events.PerformImportEventArgs)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    id: Write
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Events/PerformImportEventArgs.cs
-    startLine: 206
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Events
-  summary: "\nWrites the event args to a json writer.\n"
-  example: []
-  syntax:
-    content: public static void Write(JsonWriter writer, PerformImportEventArgs eventArgs)
-    parameters:
-    - id: writer
-      type: Newtonsoft.Json.JsonWriter
-      description: The writer.
-    - id: eventArgs
-      type: TimeCockpit.Data.Import.Events.PerformImportEventArgs
-      description: the event args to import.
-    content.vb: Public Shared Sub Write(writer As JsonWriter, eventArgs As PerformImportEventArgs)
-  overload: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: TimeCockpit.Data.Import.Events
   commentId: N:TimeCockpit.Data.Import.Events
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import.Events
   nameWithType: TimeCockpit.Data.Import.Events
   fullName: TimeCockpit.Data.Import.Events
@@ -842,20 +725,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs
-  commentId: T:TimeCockpit.Data.Import.Events.PerformImportEventArgs
-  parent: TimeCockpit.Data.Import.Events
-  isExternal: false
-  name: PerformImportEventArgs
-  nameWithType: PerformImportEventArgs
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.#ctor
-  isExternal: false
+  isExternal: true
   name: PerformImportEventArgs
   nameWithType: PerformImportEventArgs.PerformImportEventArgs
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.PerformImportEventArgs
@@ -867,6 +743,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -959,10 +836,17 @@ references:
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data.DataContextSettings
+  commentId: T:TimeCockpit.Data.DataContextSettings
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContextSettings
+  nameWithType: DataContextSettings
+  fullName: TimeCockpit.Data.DataContextSettings
 - uid: System.Action{System.String,System.Int64,System.Int64}
   commentId: T:System.Action{System.String,System.Int64,System.Int64}
   parent: System
@@ -1080,7 +964,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -1149,93 +1033,67 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
-  isExternal: false
+  isExternal: true
   name: TargetDataContext
   nameWithType: PerformImportEventArgs.TargetDataContext
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContext
+- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings*
+  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
+  isExternal: true
+  name: TargetDataContextSettings
+  nameWithType: PerformImportEventArgs.TargetDataContextSettings
+  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.TargetDataContextSettings
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
-  isExternal: false
+  isExternal: true
   name: Definition
   nameWithType: PerformImportEventArgs.Definition
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Definition
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
-  isExternal: false
+  isExternal: true
   name: SourceData
   nameWithType: PerformImportEventArgs.SourceData
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceData
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
-  isExternal: false
+  isExternal: true
   name: SourceFileName
   nameWithType: PerformImportEventArgs.SourceFileName
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SourceFileName
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
-  isExternal: false
+  isExternal: true
   name: SaveOnSucess
   nameWithType: PerformImportEventArgs.SaveOnSucess
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.SaveOnSucess
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
-  isExternal: false
+  isExternal: true
   name: DefinitionName
   nameWithType: PerformImportEventArgs.DefinitionName
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionName
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
-  isExternal: false
+  isExternal: true
   name: ImportTaskId
   nameWithType: PerformImportEventArgs.ImportTaskId
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.ImportTaskId
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
-  isExternal: false
+  isExternal: true
   name: DefinitionId
   nameWithType: PerformImportEventArgs.DefinitionId
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.DefinitionId
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
-  isExternal: false
+  isExternal: true
   name: Completed
   nameWithType: PerformImportEventArgs.Completed
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Completed
 - uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress*
   commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
-  isExternal: false
+  isExternal: true
   name: Progress
   nameWithType: PerformImportEventArgs.Progress
   fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Progress
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read*
-  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read
-  isExternal: false
-  name: Read
-  nameWithType: PerformImportEventArgs.Read
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Read
-- uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
-  isExternal: true
-  name: JsonReader
-  nameWithType: JsonReader
-  fullName: Newtonsoft.Json.JsonReader
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
-- uid: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write*
-  commentId: Overload:TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write
-  isExternal: false
-  name: Write
-  nameWithType: PerformImportEventArgs.Write
-  fullName: TimeCockpit.Data.Import.Events.PerformImportEventArgs.Write
-- uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
-  isExternal: true
-  name: JsonWriter
-  nameWithType: JsonWriter
-  fullName: Newtonsoft.Json.JsonWriter

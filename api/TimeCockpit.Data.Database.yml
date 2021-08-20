@@ -14,8 +14,6 @@ items:
   - TimeCockpit.Data.Database.DbClient
   - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
   - TimeCockpit.Data.Database.DbClientSettings
-  - TimeCockpit.Data.Database.DbCommandExtensions
-  - TimeCockpit.Data.Database.DbConnectionExtension
   - TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
   - TimeCockpit.Data.Database.ForeignKeyException
   - TimeCockpit.Data.Database.InstallationManager
@@ -25,7 +23,6 @@ items:
   - TimeCockpit.Data.Database.SelectCache
   - TimeCockpit.Data.Database.SelectSettings
   - TimeCockpit.Data.Database.SlimDataTable
-  - TimeCockpit.Data.Database.SqlCompactDbClient
   - TimeCockpit.Data.Database.SqlDbClient
   - TimeCockpit.Data.Database.SyncClient
   - TimeCockpit.Data.Database.TableValuedParameterHelper
@@ -40,177 +37,159 @@ items:
   assemblies:
   - TimeCockpit.Data
 references:
-- uid: TimeCockpit.Data.Database.InvalidTransactionException
-  commentId: T:TimeCockpit.Data.Database.InvalidTransactionException
-  isExternal: false
-  name: InvalidTransactionException
-  nameWithType: InvalidTransactionException
-  fullName: TimeCockpit.Data.Database.InvalidTransactionException
-- uid: TimeCockpit.Data.Database.ForeignKeyException
-  commentId: T:TimeCockpit.Data.Database.ForeignKeyException
-  isExternal: false
-  name: ForeignKeyException
-  nameWithType: ForeignKeyException
-  fullName: TimeCockpit.Data.Database.ForeignKeyException
-- uid: TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
-  commentId: T:TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
-  isExternal: false
-  name: ForeignKeyDeleteConflictException
-  nameWithType: ForeignKeyDeleteConflictException
-  fullName: TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
-- uid: TimeCockpit.Data.Database.SlimDataTable
-  commentId: T:TimeCockpit.Data.Database.SlimDataTable
-  isExternal: false
-  name: SlimDataTable
-  nameWithType: SlimDataTable
-  fullName: TimeCockpit.Data.Database.SlimDataTable
-- uid: TimeCockpit.Data.Database.TableValuedParameterHelper
-  commentId: T:TimeCockpit.Data.Database.TableValuedParameterHelper
-  isExternal: false
-  name: TableValuedParameterHelper
-  nameWithType: TableValuedParameterHelper
-  fullName: TimeCockpit.Data.Database.TableValuedParameterHelper
-- uid: TimeCockpit.Data.Database.SelectCache
-  commentId: T:TimeCockpit.Data.Database.SelectCache
-  parent: TimeCockpit.Data.Database
-  isExternal: false
-  name: SelectCache
-  nameWithType: SelectCache
-  fullName: TimeCockpit.Data.Database.SelectCache
 - uid: TimeCockpit.Data.Database.BlobGarbageRow
   commentId: T:TimeCockpit.Data.Database.BlobGarbageRow
-  isExternal: false
+  isExternal: true
   name: BlobGarbageRow
   nameWithType: BlobGarbageRow
   fullName: TimeCockpit.Data.Database.BlobGarbageRow
 - uid: TimeCockpit.Data.Database.BlobHandling
   commentId: T:TimeCockpit.Data.Database.BlobHandling
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: BlobHandling
   nameWithType: BlobHandling
   fullName: TimeCockpit.Data.Database.BlobHandling
+- uid: TimeCockpit.Data.Database.BlobStorage
+  commentId: T:TimeCockpit.Data.Database.BlobStorage
+  parent: TimeCockpit.Data.Database
+  isExternal: true
+  name: BlobStorage
+  nameWithType: BlobStorage
+  fullName: TimeCockpit.Data.Database.BlobStorage
 - uid: TimeCockpit.Data.Database.BlobStorageAccessType
   commentId: T:TimeCockpit.Data.Database.BlobStorageAccessType
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: BlobStorageAccessType
   nameWithType: BlobStorageAccessType
   fullName: TimeCockpit.Data.Database.BlobStorageAccessType
 - uid: TimeCockpit.Data.Database.BlobStorageType
   commentId: T:TimeCockpit.Data.Database.BlobStorageType
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: BlobStorageType
   nameWithType: BlobStorageType
   fullName: TimeCockpit.Data.Database.BlobStorageType
 - uid: TimeCockpit.Data.Database.CloudBlobStorage
   commentId: T:TimeCockpit.Data.Database.CloudBlobStorage
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: CloudBlobStorage
   nameWithType: CloudBlobStorage
   fullName: TimeCockpit.Data.Database.CloudBlobStorage
-- uid: TimeCockpit.Data.Database.DbClientSettings
-  commentId: T:TimeCockpit.Data.Database.DbClientSettings
-  parent: TimeCockpit.Data.Database
-  isExternal: false
-  name: DbClientSettings
-  nameWithType: DbClientSettings
-  fullName: TimeCockpit.Data.Database.DbClientSettings
-- uid: TimeCockpit.Data.Database.InstallationManager
-  commentId: T:TimeCockpit.Data.Database.InstallationManager
-  parent: TimeCockpit.Data.Database
-  isExternal: false
-  name: InstallationManager
-  nameWithType: InstallationManager
-  fullName: TimeCockpit.Data.Database.InstallationManager
-- uid: TimeCockpit.Data.Database.InstalledBatchInformation
-  commentId: T:TimeCockpit.Data.Database.InstalledBatchInformation
-  isExternal: false
-  name: InstalledBatchInformation
-  nameWithType: InstalledBatchInformation
-  fullName: TimeCockpit.Data.Database.InstalledBatchInformation
-- uid: TimeCockpit.Data.Database.LocalBlobStorage
-  commentId: T:TimeCockpit.Data.Database.LocalBlobStorage
-  isExternal: false
-  name: LocalBlobStorage
-  nameWithType: LocalBlobStorage
-  fullName: TimeCockpit.Data.Database.LocalBlobStorage
 - uid: TimeCockpit.Data.Database.DatabaseConnectionMode
   commentId: T:TimeCockpit.Data.Database.DatabaseConnectionMode
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: DatabaseConnectionMode
   nameWithType: DatabaseConnectionMode
   fullName: TimeCockpit.Data.Database.DatabaseConnectionMode
 - uid: TimeCockpit.Data.Database.DbClient
   commentId: T:TimeCockpit.Data.Database.DbClient
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: DbClient
   nameWithType: DbClient
   fullName: TimeCockpit.Data.Database.DbClient
 - uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
   commentId: T:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: DbClient.BlobGarbageCleanupWorkerFinished
   nameWithType: DbClient.BlobGarbageCleanupWorkerFinished
   fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupWorkerFinished
-- uid: TimeCockpit.Data.Database.DbCommandExtensions
-  commentId: T:TimeCockpit.Data.Database.DbCommandExtensions
-  isExternal: false
-  name: DbCommandExtensions
-  nameWithType: DbCommandExtensions
-  fullName: TimeCockpit.Data.Database.DbCommandExtensions
-- uid: TimeCockpit.Data.Database.DbConnectionExtension
-  commentId: T:TimeCockpit.Data.Database.DbConnectionExtension
-  isExternal: false
-  name: DbConnectionExtension
-  nameWithType: DbConnectionExtension
-  fullName: TimeCockpit.Data.Database.DbConnectionExtension
-- uid: TimeCockpit.Data.Database.BlobStorage
-  commentId: T:TimeCockpit.Data.Database.BlobStorage
+- uid: TimeCockpit.Data.Database.DbClientSettings
+  commentId: T:TimeCockpit.Data.Database.DbClientSettings
   parent: TimeCockpit.Data.Database
-  isExternal: false
-  name: BlobStorage
-  nameWithType: BlobStorage
-  fullName: TimeCockpit.Data.Database.BlobStorage
-- uid: TimeCockpit.Data.Database.SyncClient
-  commentId: T:TimeCockpit.Data.Database.SyncClient
-  isExternal: false
-  name: SyncClient
-  nameWithType: SyncClient
-  fullName: TimeCockpit.Data.Database.SyncClient
+  isExternal: true
+  name: DbClientSettings
+  nameWithType: DbClientSettings
+  fullName: TimeCockpit.Data.Database.DbClientSettings
+- uid: TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
+  commentId: T:TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
+  isExternal: true
+  name: ForeignKeyDeleteConflictException
+  nameWithType: ForeignKeyDeleteConflictException
+  fullName: TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
+- uid: TimeCockpit.Data.Database.ForeignKeyException
+  commentId: T:TimeCockpit.Data.Database.ForeignKeyException
+  isExternal: true
+  name: ForeignKeyException
+  nameWithType: ForeignKeyException
+  fullName: TimeCockpit.Data.Database.ForeignKeyException
+- uid: TimeCockpit.Data.Database.InstallationManager
+  commentId: T:TimeCockpit.Data.Database.InstallationManager
+  parent: TimeCockpit.Data.Database
+  isExternal: true
+  name: InstallationManager
+  nameWithType: InstallationManager
+  fullName: TimeCockpit.Data.Database.InstallationManager
+- uid: TimeCockpit.Data.Database.InstalledBatchInformation
+  commentId: T:TimeCockpit.Data.Database.InstalledBatchInformation
+  isExternal: true
+  name: InstalledBatchInformation
+  nameWithType: InstalledBatchInformation
+  fullName: TimeCockpit.Data.Database.InstalledBatchInformation
+- uid: TimeCockpit.Data.Database.InvalidTransactionException
+  commentId: T:TimeCockpit.Data.Database.InvalidTransactionException
+  isExternal: true
+  name: InvalidTransactionException
+  nameWithType: InvalidTransactionException
+  fullName: TimeCockpit.Data.Database.InvalidTransactionException
+- uid: TimeCockpit.Data.Database.LocalBlobStorage
+  commentId: T:TimeCockpit.Data.Database.LocalBlobStorage
+  isExternal: true
+  name: LocalBlobStorage
+  nameWithType: LocalBlobStorage
+  fullName: TimeCockpit.Data.Database.LocalBlobStorage
+- uid: TimeCockpit.Data.Database.SelectCache
+  commentId: T:TimeCockpit.Data.Database.SelectCache
+  parent: TimeCockpit.Data.Database
+  isExternal: true
+  name: SelectCache
+  nameWithType: SelectCache
+  fullName: TimeCockpit.Data.Database.SelectCache
 - uid: TimeCockpit.Data.Database.SelectSettings
   commentId: T:TimeCockpit.Data.Database.SelectSettings
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: SelectSettings
   nameWithType: SelectSettings
   fullName: TimeCockpit.Data.Database.SelectSettings
-- uid: TimeCockpit.Data.Database.SqlCompactDbClient
-  commentId: T:TimeCockpit.Data.Database.SqlCompactDbClient
-  isExternal: false
-  name: SqlCompactDbClient
-  nameWithType: SqlCompactDbClient
-  fullName: TimeCockpit.Data.Database.SqlCompactDbClient
+- uid: TimeCockpit.Data.Database.SlimDataTable
+  commentId: T:TimeCockpit.Data.Database.SlimDataTable
+  isExternal: true
+  name: SlimDataTable
+  nameWithType: SlimDataTable
+  fullName: TimeCockpit.Data.Database.SlimDataTable
 - uid: TimeCockpit.Data.Database.SqlDbClient
   commentId: T:TimeCockpit.Data.Database.SqlDbClient
-  isExternal: false
+  isExternal: true
   name: SqlDbClient
   nameWithType: SqlDbClient
   fullName: TimeCockpit.Data.Database.SqlDbClient
+- uid: TimeCockpit.Data.Database.SyncClient
+  commentId: T:TimeCockpit.Data.Database.SyncClient
+  isExternal: true
+  name: SyncClient
+  nameWithType: SyncClient
+  fullName: TimeCockpit.Data.Database.SyncClient
+- uid: TimeCockpit.Data.Database.TableValuedParameterHelper
+  commentId: T:TimeCockpit.Data.Database.TableValuedParameterHelper
+  isExternal: true
+  name: TableValuedParameterHelper
+  nameWithType: TableValuedParameterHelper
+  fullName: TimeCockpit.Data.Database.TableValuedParameterHelper
 - uid: TimeCockpit.Data.Database.VersionCheckException
   commentId: T:TimeCockpit.Data.Database.VersionCheckException
-  isExternal: false
+  isExternal: true
   name: VersionCheckException
   nameWithType: VersionCheckException
   fullName: TimeCockpit.Data.Database.VersionCheckException
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database

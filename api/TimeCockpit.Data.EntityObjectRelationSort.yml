@@ -5,6 +5,7 @@ items:
   id: EntityObjectRelationSort
   parent: TimeCockpit.Data
   children:
+  - TimeCockpit.Data.EntityObjectRelationSort.#ctor
   - TimeCockpit.Data.EntityObjectRelationSort.Topological(System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject})
   langs:
   - csharp
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.EntityObjectRelationSort
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectRelationSort.cs
-    id: EntityObjectRelationSort
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectRelationSort.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nClass containing helper methods for sorting a set of entities along their relation dependency.\n"
-  example: []
   syntax:
     content: public class EntityObjectRelationSort
     content.vb: Public Class EntityObjectRelationSort
@@ -55,16 +52,12 @@ items:
   fullName: TimeCockpit.Data.EntityObjectRelationSort.Topological(System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectRelationSort.cs
-    id: Topological
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectRelationSort.cs
-    startLine: 23
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nTopological sort by entity object relations.\n"
-  example: []
   syntax:
     content: public static IEnumerable<EntityObject> Topological(IEnumerable<EntityObject> objects)
     parameters:
@@ -85,10 +78,35 @@ items:
   - Shared
   fullName.vb: TimeCockpit.Data.EntityObjectRelationSort.Topological(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject))
   name.vb: Topological(IEnumerable(Of EntityObject))
+- uid: TimeCockpit.Data.EntityObjectRelationSort.#ctor
+  commentId: M:TimeCockpit.Data.EntityObjectRelationSort.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.EntityObjectRelationSort
+  langs:
+  - csharp
+  - vb
+  name: EntityObjectRelationSort()
+  nameWithType: EntityObjectRelationSort.EntityObjectRelationSort()
+  fullName: TimeCockpit.Data.EntityObjectRelationSort.EntityObjectRelationSort()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  syntax:
+    content: public EntityObjectRelationSort()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.EntityObjectRelationSort.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -380,13 +398,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.EntityObjectRelationSort.Topological*
   commentId: Overload:TimeCockpit.Data.EntityObjectRelationSort.Topological
-  isExternal: false
+  isExternal: true
   name: Topological
   nameWithType: EntityObjectRelationSort.Topological
   fullName: TimeCockpit.Data.EntityObjectRelationSort.Topological
@@ -413,6 +431,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -429,6 +448,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -473,7 +493,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.EntityObjectRelationSort.#ctor*
+  commentId: Overload:TimeCockpit.Data.EntityObjectRelationSort.#ctor
+  isExternal: true
+  name: EntityObjectRelationSort
+  nameWithType: EntityObjectRelationSort.EntityObjectRelationSort
+  fullName: TimeCockpit.Data.EntityObjectRelationSort.EntityObjectRelationSort

@@ -4,7 +4,8 @@ items:
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Constant
   id: Constant
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  children: []
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor
   langs:
   - csharp
   - vb
@@ -13,16 +14,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Constant
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Constant.cs
-    id: Constant
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Constant.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAbstract Node type representing constant elements.\n"
-  example: []
   syntax:
     content: 'public abstract class Constant : Expression'
     content.vb: >-
@@ -57,10 +54,35 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Constant
+  langs:
+  - csharp
+  - vb
+  name: Constant()
+  nameWithType: Constant.Constant()
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Constant.Constant()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  syntax:
+    content: protected Constant()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -74,21 +96,21 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -97,6 +119,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -104,6 +127,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -112,6 +136,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -119,6 +144,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -403,7 +429,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Constant.#ctor
+  isExternal: true
+  name: Constant
+  nameWithType: Constant.Constant
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Constant.Constant

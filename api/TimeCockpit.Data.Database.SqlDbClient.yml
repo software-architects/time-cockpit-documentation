@@ -20,16 +20,12 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: SqlDbClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nProvides the database client class for SQL Server\n"
-  example: []
   syntax:
     content: 'public sealed class SqlDbClient : DbClient, IDisposable'
     content.vb: >-
@@ -42,17 +38,6 @@ items:
   implements:
   - System.IDisposable
   inheritedMembers:
-  - TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
-  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
-  - TimeCockpit.Data.Database.DbClient.TenantSchema
-  - TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
-  - TimeCockpit.Data.Database.DbClient.TransactionCount
-  - TimeCockpit.Data.Database.DbClient.ConnectionName
-  - TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
-  - TimeCockpit.Data.Database.DbClient.UserAccountId
-  - TimeCockpit.Data.Database.DbClient.CurrentTransaction
-  - TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
-  - TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
   - TimeCockpit.Data.Database.DbClient.Create(TimeCockpit.Data.Database.DbClientSettings)
   - TimeCockpit.Data.Database.DbClient.ExecuteOperation(TimeCockpit.Data.DataModel.Operation,System.Nullable{System.Guid})
   - TimeCockpit.Data.Database.DbClient.Dispose
@@ -61,6 +46,7 @@ items:
   - TimeCockpit.Data.Database.DbClient.RollbackTransaction
   - TimeCockpit.Data.Database.DbClient.TryCommitTransaction
   - TimeCockpit.Data.Database.DbClient.TryRollbackTransaction
+  - TimeCockpit.Data.Database.DbClient.SetThreadCulture
   - TimeCockpit.Data.Database.DbClient.GetConnection
   - TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection
   - TimeCockpit.Data.Database.DbClient.ReleaseConnection(System.Boolean)
@@ -69,7 +55,21 @@ items:
   - TimeCockpit.Data.Database.DbClient.SplitAndExecuteCommandsInTransaction(System.Data.Common.DbCommand)
   - TimeCockpit.Data.Database.DbClient.BeginTransactionInternal
   - TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal
+  - TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
   - TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal
+  - TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
+  - TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+  - TimeCockpit.Data.Database.DbClient.TenantSchema
+  - TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
+  - TimeCockpit.Data.Database.DbClient.TransactionCount
+  - TimeCockpit.Data.Database.DbClient.ConnectionName
+  - TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
+  - TimeCockpit.Data.Database.DbClient.UserAccountId
+  - TimeCockpit.Data.Database.DbClient.RetryStrategy
+  - TimeCockpit.Data.Database.DbClient.CurrentTransaction
+  - TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
+  - TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
+  - TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -85,82 +85,6 @@ items:
   - Public
   - NotInheritable
   - Class
-- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
-  commentId: P:TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
-  id: SupportsTableValuedParameters
-  parent: TimeCockpit.Data.Database.SqlDbClient
-  langs:
-  - csharp
-  - vb
-  name: SupportsTableValuedParameters
-  nameWithType: SqlDbClient.SupportsTableValuedParameters
-  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: SupportsTableValuedParameters
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 43
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Database
-  summary: "\nGets a value indicating whether this db client supports TVPs.\n"
-  example: []
-  syntax:
-    content: public override bool SupportsTableValuedParameters { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Overrides ReadOnly Property SupportsTableValuedParameters As Boolean
-  overridden: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
-  overload: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters*
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  modifiers.vb:
-  - Public
-  - Overrides
-  - ReadOnly
-- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
-  commentId: P:TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
-  id: SupportsNoCheckConstraint
-  parent: TimeCockpit.Data.Database.SqlDbClient
-  langs:
-  - csharp
-  - vb
-  name: SupportsNoCheckConstraint
-  nameWithType: SqlDbClient.SupportsNoCheckConstraint
-  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: SupportsNoCheckConstraint
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 49
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Database
-  summary: "\nGets a value indicating whether this db client supports disabling constraints.\n"
-  example: []
-  syntax:
-    content: public override bool SupportsNoCheckConstraint { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Overrides ReadOnly Property SupportsNoCheckConstraint As Boolean
-  overridden: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
-  overload: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint*
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  modifiers.vb:
-  - Public
-  - Overrides
-  - ReadOnly
 - uid: TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync(System.Threading.CancellationToken)
   commentId: M:TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync(System.Threading.CancellationToken)
   id: OpenConnectionAsync(System.Threading.CancellationToken)
@@ -173,16 +97,12 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync(System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: OpenConnectionAsync
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 87
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nOpens a new connection.\n"
-  example: []
   syntax:
     content: protected override Task<DbConnection> OpenConnectionAsync(CancellationToken cancellationToken)
     parameters:
@@ -213,16 +133,12 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient.ExecuteDatabaseOperation(System.Func<System.Data.Common.DbConnection, System.UInt64, System.Data.Common.DbCommand>, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: ExecuteDatabaseOperation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 101
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nExecutes a database operation.\n"
-  example: []
   syntax:
     content: >-
       [CLSCompliant(false)]
@@ -271,16 +187,12 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient.DeleteBlobGarbage(System.Data.Common.DbConnection, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Database.BlobGarbageRow>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: DeleteBlobGarbage
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 155
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nDeletes rows from the blob garbage collection\n"
-  example: []
   syntax:
     content: protected override void DeleteBlobGarbage(DbConnection conn, IEnumerable<BlobGarbageRow> blobGarbageCollection)
     parameters:
@@ -314,17 +226,13 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient.FindOrCreateCommand(System.String, System.Data.Common.DbConnection)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: FindOrCreateCommand
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 187
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nCreate DB command by looking it up in a cache of prepared commands or creating it.\n"
   remarks: Command caching for SQL server is disabled.
-  example: []
   syntax:
     content: protected override DbCommand FindOrCreateCommand(string sqlText, DbConnection connection)
     parameters:
@@ -358,17 +266,13 @@ items:
   fullName: TimeCockpit.Data.Database.SqlDbClient.FinishCommand(System.Data.Common.DbCommand)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    id: FinishCommand
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SqlDbClient.cs
-    startLine: 198
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nCalled after <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> is done with the <code data-dev-comment-type=\"paramref\" class=\"paramref\">command</code>.\n"
   remarks: The SQL Server does not cache commands -> command is immediately disposed.
-  example: []
   syntax:
     content: protected override void FinishCommand(DbCommand command)
     parameters:
@@ -384,10 +288,78 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
+- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
+  commentId: P:TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
+  id: SupportsTableValuedParameters
+  parent: TimeCockpit.Data.Database.SqlDbClient
+  langs:
+  - csharp
+  - vb
+  name: SupportsTableValuedParameters
+  nameWithType: SqlDbClient.SupportsTableValuedParameters
+  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets a value indicating whether this db client supports TVPs.\n"
+  syntax:
+    content: public override bool SupportsTableValuedParameters { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property SupportsTableValuedParameters As Boolean
+  overridden: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
+  overload: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
+  commentId: P:TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
+  id: SupportsNoCheckConstraint
+  parent: TimeCockpit.Data.Database.SqlDbClient
+  langs:
+  - csharp
+  - vb
+  name: SupportsNoCheckConstraint
+  nameWithType: SqlDbClient.SupportsNoCheckConstraint
+  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  summary: "\nGets a value indicating whether this db client supports disabling constraints.\n"
+  syntax:
+    content: public override bool SupportsNoCheckConstraint { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property SupportsNoCheckConstraint As Boolean
+  overridden: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
+  overload: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -401,7 +373,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient
   commentId: T:TimeCockpit.Data.Database.DbClient
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: DbClient
   nameWithType: DbClient
   fullName: TimeCockpit.Data.Database.DbClient
@@ -412,158 +384,10 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
-- uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
-  commentId: M:TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: true
-  name: AddSqlParameters(IEnumerable<QueryParameter>, DbCommand)
-  nameWithType: DbClient.AddSqlParameters(IEnumerable<QueryParameter>, DbCommand)
-  fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, System.Data.Common.DbCommand)
-  nameWithType.vb: DbClient.AddSqlParameters(IEnumerable(Of QueryParameter), DbCommand)
-  fullName.vb: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), System.Data.Common.DbCommand)
-  name.vb: AddSqlParameters(IEnumerable(Of QueryParameter), DbCommand)
-  spec.csharp:
-  - uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
-    name: AddSqlParameters
-    nameWithType: DbClient.AddSqlParameters
-    fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
-    name: QueryParameter
-    nameWithType: QueryParameter
-    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Data.Common.DbCommand
-    name: DbCommand
-    nameWithType: DbCommand
-    fullName: System.Data.Common.DbCommand
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
-    name: AddSqlParameters
-    nameWithType: DbClient.AddSqlParameters
-    fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Collections.Generic.IEnumerable`1
-    name: IEnumerable
-    nameWithType: IEnumerable
-    fullName: System.Collections.Generic.IEnumerable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
-    name: QueryParameter
-    nameWithType: QueryParameter
-    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
-  - name: )
-    nameWithType: )
-    fullName: )
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Data.Common.DbCommand
-    name: DbCommand
-    nameWithType: DbCommand
-    fullName: System.Data.Common.DbCommand
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
-  commentId: E:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: BlobGarbageCleanupFinished
-  nameWithType: DbClient.BlobGarbageCleanupFinished
-  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
-- uid: TimeCockpit.Data.Database.DbClient.TenantSchema
-  commentId: P:TimeCockpit.Data.Database.DbClient.TenantSchema
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: TenantSchema
-  nameWithType: DbClient.TenantSchema
-  fullName: TimeCockpit.Data.Database.DbClient.TenantSchema
-- uid: TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
-  commentId: P:TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: DatabaseConnectionMode
-  nameWithType: DbClient.DatabaseConnectionMode
-  fullName: TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
-- uid: TimeCockpit.Data.Database.DbClient.TransactionCount
-  commentId: P:TimeCockpit.Data.Database.DbClient.TransactionCount
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: TransactionCount
-  nameWithType: DbClient.TransactionCount
-  fullName: TimeCockpit.Data.Database.DbClient.TransactionCount
-- uid: TimeCockpit.Data.Database.DbClient.ConnectionName
-  commentId: P:TimeCockpit.Data.Database.DbClient.ConnectionName
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: ConnectionName
-  nameWithType: DbClient.ConnectionName
-  fullName: TimeCockpit.Data.Database.DbClient.ConnectionName
-- uid: TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
-  commentId: P:TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: BlobEncryptionKey
-  nameWithType: DbClient.BlobEncryptionKey
-  fullName: TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
-- uid: TimeCockpit.Data.Database.DbClient.UserAccountId
-  commentId: P:TimeCockpit.Data.Database.DbClient.UserAccountId
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: UserAccountId
-  nameWithType: DbClient.UserAccountId
-  fullName: TimeCockpit.Data.Database.DbClient.UserAccountId
-- uid: TimeCockpit.Data.Database.DbClient.CurrentTransaction
-  commentId: P:TimeCockpit.Data.Database.DbClient.CurrentTransaction
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: CurrentTransaction
-  nameWithType: DbClient.CurrentTransaction
-  fullName: TimeCockpit.Data.Database.DbClient.CurrentTransaction
-- uid: TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
-  commentId: P:TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: SkipBlobGarbageCollection
-  nameWithType: DbClient.SkipBlobGarbageCollection
-  fullName: TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
-- uid: TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
-  commentId: P:TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: DbConnectionLockObject
-  nameWithType: DbClient.DbConnectionLockObject
-  fullName: TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
 - uid: TimeCockpit.Data.Database.DbClient.Create(TimeCockpit.Data.Database.DbClientSettings)
   commentId: M:TimeCockpit.Data.Database.DbClient.Create(TimeCockpit.Data.Database.DbClientSettings)
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: Create(DbClientSettings)
   nameWithType: DbClient.Create(DbClientSettings)
   fullName: TimeCockpit.Data.Database.DbClient.Create(TimeCockpit.Data.Database.DbClientSettings)
@@ -572,6 +396,7 @@ references:
     name: Create
     nameWithType: DbClient.Create
     fullName: TimeCockpit.Data.Database.DbClient.Create
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -579,6 +404,7 @@ references:
     name: DbClientSettings
     nameWithType: DbClientSettings
     fullName: TimeCockpit.Data.Database.DbClientSettings
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -587,6 +413,7 @@ references:
     name: Create
     nameWithType: DbClient.Create
     fullName: TimeCockpit.Data.Database.DbClient.Create
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -594,6 +421,7 @@ references:
     name: DbClientSettings
     nameWithType: DbClientSettings
     fullName: TimeCockpit.Data.Database.DbClientSettings
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -612,6 +440,7 @@ references:
     name: ExecuteOperation
     nameWithType: DbClient.ExecuteOperation
     fullName: TimeCockpit.Data.Database.DbClient.ExecuteOperation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -619,6 +448,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.DataModel.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -646,6 +476,7 @@ references:
     name: ExecuteOperation
     nameWithType: DbClient.ExecuteOperation
     fullName: TimeCockpit.Data.Database.DbClient.ExecuteOperation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -653,6 +484,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.DataModel.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -678,7 +510,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.Dispose
   commentId: M:TimeCockpit.Data.Database.DbClient.Dispose
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: Dispose()
   nameWithType: DbClient.Dispose()
   fullName: TimeCockpit.Data.Database.DbClient.Dispose()
@@ -687,6 +519,7 @@ references:
     name: Dispose
     nameWithType: DbClient.Dispose
     fullName: TimeCockpit.Data.Database.DbClient.Dispose
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -698,6 +531,7 @@ references:
     name: Dispose
     nameWithType: DbClient.Dispose
     fullName: TimeCockpit.Data.Database.DbClient.Dispose
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -707,7 +541,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.BeginTransaction
   commentId: M:TimeCockpit.Data.Database.DbClient.BeginTransaction
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: BeginTransaction()
   nameWithType: DbClient.BeginTransaction()
   fullName: TimeCockpit.Data.Database.DbClient.BeginTransaction()
@@ -716,6 +550,7 @@ references:
     name: BeginTransaction
     nameWithType: DbClient.BeginTransaction
     fullName: TimeCockpit.Data.Database.DbClient.BeginTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -727,6 +562,7 @@ references:
     name: BeginTransaction
     nameWithType: DbClient.BeginTransaction
     fullName: TimeCockpit.Data.Database.DbClient.BeginTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -736,7 +572,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.CommitTransaction
   commentId: M:TimeCockpit.Data.Database.DbClient.CommitTransaction
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: CommitTransaction()
   nameWithType: DbClient.CommitTransaction()
   fullName: TimeCockpit.Data.Database.DbClient.CommitTransaction()
@@ -745,6 +581,7 @@ references:
     name: CommitTransaction
     nameWithType: DbClient.CommitTransaction
     fullName: TimeCockpit.Data.Database.DbClient.CommitTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -756,6 +593,7 @@ references:
     name: CommitTransaction
     nameWithType: DbClient.CommitTransaction
     fullName: TimeCockpit.Data.Database.DbClient.CommitTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -765,7 +603,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.RollbackTransaction
   commentId: M:TimeCockpit.Data.Database.DbClient.RollbackTransaction
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: RollbackTransaction()
   nameWithType: DbClient.RollbackTransaction()
   fullName: TimeCockpit.Data.Database.DbClient.RollbackTransaction()
@@ -774,6 +612,7 @@ references:
     name: RollbackTransaction
     nameWithType: DbClient.RollbackTransaction
     fullName: TimeCockpit.Data.Database.DbClient.RollbackTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -785,6 +624,7 @@ references:
     name: RollbackTransaction
     nameWithType: DbClient.RollbackTransaction
     fullName: TimeCockpit.Data.Database.DbClient.RollbackTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -794,7 +634,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.TryCommitTransaction
   commentId: M:TimeCockpit.Data.Database.DbClient.TryCommitTransaction
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: TryCommitTransaction()
   nameWithType: DbClient.TryCommitTransaction()
   fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransaction()
@@ -803,6 +643,7 @@ references:
     name: TryCommitTransaction
     nameWithType: DbClient.TryCommitTransaction
     fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -814,6 +655,7 @@ references:
     name: TryCommitTransaction
     nameWithType: DbClient.TryCommitTransaction
     fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -823,7 +665,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.TryRollbackTransaction
   commentId: M:TimeCockpit.Data.Database.DbClient.TryRollbackTransaction
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: TryRollbackTransaction()
   nameWithType: DbClient.TryRollbackTransaction()
   fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransaction()
@@ -832,6 +674,7 @@ references:
     name: TryRollbackTransaction
     nameWithType: DbClient.TryRollbackTransaction
     fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -843,6 +686,38 @@ references:
     name: TryRollbackTransaction
     nameWithType: DbClient.TryRollbackTransaction
     fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransaction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.SetThreadCulture
+  commentId: M:TimeCockpit.Data.Database.DbClient.SetThreadCulture
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: SetThreadCulture()
+  nameWithType: DbClient.SetThreadCulture()
+  fullName: TimeCockpit.Data.Database.DbClient.SetThreadCulture()
+  spec.csharp:
+  - uid: TimeCockpit.Data.Database.DbClient.SetThreadCulture
+    name: SetThreadCulture
+    nameWithType: DbClient.SetThreadCulture
+    fullName: TimeCockpit.Data.Database.DbClient.SetThreadCulture
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Database.DbClient.SetThreadCulture
+    name: SetThreadCulture
+    nameWithType: DbClient.SetThreadCulture
+    fullName: TimeCockpit.Data.Database.DbClient.SetThreadCulture
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -852,7 +727,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.GetConnection
   commentId: M:TimeCockpit.Data.Database.DbClient.GetConnection
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: GetConnection()
   nameWithType: DbClient.GetConnection()
   fullName: TimeCockpit.Data.Database.DbClient.GetConnection()
@@ -861,6 +736,7 @@ references:
     name: GetConnection
     nameWithType: DbClient.GetConnection
     fullName: TimeCockpit.Data.Database.DbClient.GetConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -872,6 +748,7 @@ references:
     name: GetConnection
     nameWithType: DbClient.GetConnection
     fullName: TimeCockpit.Data.Database.DbClient.GetConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -881,7 +758,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection
   commentId: M:TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: CreateAndOpenConnection()
   nameWithType: DbClient.CreateAndOpenConnection()
   fullName: TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection()
@@ -890,6 +767,7 @@ references:
     name: CreateAndOpenConnection
     nameWithType: DbClient.CreateAndOpenConnection
     fullName: TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -901,6 +779,7 @@ references:
     name: CreateAndOpenConnection
     nameWithType: DbClient.CreateAndOpenConnection
     fullName: TimeCockpit.Data.Database.DbClient.CreateAndOpenConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -919,6 +798,7 @@ references:
     name: ReleaseConnection
     nameWithType: DbClient.ReleaseConnection
     fullName: TimeCockpit.Data.Database.DbClient.ReleaseConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -935,6 +815,7 @@ references:
     name: ReleaseConnection
     nameWithType: DbClient.ReleaseConnection
     fullName: TimeCockpit.Data.Database.DbClient.ReleaseConnection
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -949,7 +830,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.GetConnectionString(TimeCockpit.Data.Database.DbClientSettings)
   commentId: M:TimeCockpit.Data.Database.DbClient.GetConnectionString(TimeCockpit.Data.Database.DbClientSettings)
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: GetConnectionString(DbClientSettings)
   nameWithType: DbClient.GetConnectionString(DbClientSettings)
   fullName: TimeCockpit.Data.Database.DbClient.GetConnectionString(TimeCockpit.Data.Database.DbClientSettings)
@@ -958,6 +839,7 @@ references:
     name: GetConnectionString
     nameWithType: DbClient.GetConnectionString
     fullName: TimeCockpit.Data.Database.DbClient.GetConnectionString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -965,6 +847,7 @@ references:
     name: DbClientSettings
     nameWithType: DbClientSettings
     fullName: TimeCockpit.Data.Database.DbClientSettings
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -973,6 +856,7 @@ references:
     name: GetConnectionString
     nameWithType: DbClient.GetConnectionString
     fullName: TimeCockpit.Data.Database.DbClient.GetConnectionString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -980,13 +864,14 @@ references:
     name: DbClientSettings
     nameWithType: DbClientSettings
     fullName: TimeCockpit.Data.Database.DbClientSettings
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Database.DbClient.GetDataAdapter
   commentId: M:TimeCockpit.Data.Database.DbClient.GetDataAdapter
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: GetDataAdapter()
   nameWithType: DbClient.GetDataAdapter()
   fullName: TimeCockpit.Data.Database.DbClient.GetDataAdapter()
@@ -995,6 +880,7 @@ references:
     name: GetDataAdapter
     nameWithType: DbClient.GetDataAdapter
     fullName: TimeCockpit.Data.Database.DbClient.GetDataAdapter
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1006,6 +892,7 @@ references:
     name: GetDataAdapter
     nameWithType: DbClient.GetDataAdapter
     fullName: TimeCockpit.Data.Database.DbClient.GetDataAdapter
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1024,6 +911,7 @@ references:
     name: SplitAndExecuteCommandsInTransaction
     nameWithType: DbClient.SplitAndExecuteCommandsInTransaction
     fullName: TimeCockpit.Data.Database.DbClient.SplitAndExecuteCommandsInTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1040,6 +928,7 @@ references:
     name: SplitAndExecuteCommandsInTransaction
     nameWithType: DbClient.SplitAndExecuteCommandsInTransaction
     fullName: TimeCockpit.Data.Database.DbClient.SplitAndExecuteCommandsInTransaction
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1054,7 +943,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.BeginTransactionInternal
   commentId: M:TimeCockpit.Data.Database.DbClient.BeginTransactionInternal
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: BeginTransactionInternal()
   nameWithType: DbClient.BeginTransactionInternal()
   fullName: TimeCockpit.Data.Database.DbClient.BeginTransactionInternal()
@@ -1063,6 +952,7 @@ references:
     name: BeginTransactionInternal
     nameWithType: DbClient.BeginTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.BeginTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1074,6 +964,7 @@ references:
     name: BeginTransactionInternal
     nameWithType: DbClient.BeginTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.BeginTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1083,7 +974,7 @@ references:
 - uid: TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal
   commentId: M:TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: TryCommitTransactionInternal()
   nameWithType: DbClient.TryCommitTransactionInternal()
   fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal()
@@ -1092,6 +983,7 @@ references:
     name: TryCommitTransactionInternal
     nameWithType: DbClient.TryCommitTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1103,16 +995,58 @@ references:
     name: TryCommitTransactionInternal
     nameWithType: DbClient.TryCommitTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.TryCommitTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
+  commentId: M:TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: IgnoreExceptionDuringCyclicConstraintHandling(Exception)
+  nameWithType: DbClient.IgnoreExceptionDuringCyclicConstraintHandling(Exception)
+  fullName: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
+    name: IgnoreExceptionDuringCyclicConstraintHandling
+    nameWithType: DbClient.IgnoreExceptionDuringCyclicConstraintHandling
+    fullName: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling(System.Exception)
+    name: IgnoreExceptionDuringCyclicConstraintHandling
+    nameWithType: DbClient.IgnoreExceptionDuringCyclicConstraintHandling
+    fullName: TimeCockpit.Data.Database.DbClient.IgnoreExceptionDuringCyclicConstraintHandling
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal
   commentId: M:TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal
   parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
+  isExternal: true
   name: TryRollbackTransactionInternal()
   nameWithType: DbClient.TryRollbackTransactionInternal()
   fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal()
@@ -1121,6 +1055,7 @@ references:
     name: TryRollbackTransactionInternal
     nameWithType: DbClient.TryRollbackTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1132,12 +1067,222 @@ references:
     name: TryRollbackTransactionInternal
     nameWithType: DbClient.TryRollbackTransactionInternal
     fullName: TimeCockpit.Data.Database.DbClient.TryRollbackTransactionInternal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
+  commentId: M:TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: AddSqlParameters(IEnumerable<QueryParameter>, DbCommand)
+  nameWithType: DbClient.AddSqlParameters(IEnumerable<QueryParameter>, DbCommand)
+  fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>, System.Data.Common.DbCommand)
+  nameWithType.vb: DbClient.AddSqlParameters(IEnumerable(Of QueryParameter), DbCommand)
+  fullName.vb: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.QueryParameter), System.Data.Common.DbCommand)
+  name.vb: AddSqlParameters(IEnumerable(Of QueryParameter), DbCommand)
+  spec.csharp:
+  - uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
+    name: AddSqlParameters
+    nameWithType: DbClient.AddSqlParameters
+    fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.Common.DbCommand
+    name: DbCommand
+    nameWithType: DbCommand
+    fullName: System.Data.Common.DbCommand
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Database.DbClient.AddSqlParameters(System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},System.Data.Common.DbCommand)
+    name: AddSqlParameters
+    nameWithType: DbClient.AddSqlParameters
+    fullName: TimeCockpit.Data.Database.DbClient.AddSqlParameters
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
+    name: QueryParameter
+    nameWithType: QueryParameter
+    fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.Common.DbCommand
+    name: DbCommand
+    nameWithType: DbCommand
+    fullName: System.Data.Common.DbCommand
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+  commentId: M:TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: GetLastUpdateVersionsOfEntities(String[])
+  nameWithType: DbClient.GetLastUpdateVersionsOfEntities(String[])
+  fullName: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+  nameWithType.vb: DbClient.GetLastUpdateVersionsOfEntities(String())
+  fullName.vb: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String())
+  name.vb: GetLastUpdateVersionsOfEntities(String())
+  spec.csharp:
+  - uid: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+    name: GetLastUpdateVersionsOfEntities
+    nameWithType: DbClient.GetLastUpdateVersionsOfEntities
+    fullName: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities(System.String[])
+    name: GetLastUpdateVersionsOfEntities
+    nameWithType: DbClient.GetLastUpdateVersionsOfEntities
+    fullName: TimeCockpit.Data.Database.DbClient.GetLastUpdateVersionsOfEntities
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.TenantSchema
+  commentId: P:TimeCockpit.Data.Database.DbClient.TenantSchema
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: TenantSchema
+  nameWithType: DbClient.TenantSchema
+  fullName: TimeCockpit.Data.Database.DbClient.TenantSchema
+- uid: TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
+  commentId: P:TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: DatabaseConnectionMode
+  nameWithType: DbClient.DatabaseConnectionMode
+  fullName: TimeCockpit.Data.Database.DbClient.DatabaseConnectionMode
+- uid: TimeCockpit.Data.Database.DbClient.TransactionCount
+  commentId: P:TimeCockpit.Data.Database.DbClient.TransactionCount
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: TransactionCount
+  nameWithType: DbClient.TransactionCount
+  fullName: TimeCockpit.Data.Database.DbClient.TransactionCount
+- uid: TimeCockpit.Data.Database.DbClient.ConnectionName
+  commentId: P:TimeCockpit.Data.Database.DbClient.ConnectionName
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: ConnectionName
+  nameWithType: DbClient.ConnectionName
+  fullName: TimeCockpit.Data.Database.DbClient.ConnectionName
+- uid: TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
+  commentId: P:TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: BlobEncryptionKey
+  nameWithType: DbClient.BlobEncryptionKey
+  fullName: TimeCockpit.Data.Database.DbClient.BlobEncryptionKey
+- uid: TimeCockpit.Data.Database.DbClient.UserAccountId
+  commentId: P:TimeCockpit.Data.Database.DbClient.UserAccountId
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: UserAccountId
+  nameWithType: DbClient.UserAccountId
+  fullName: TimeCockpit.Data.Database.DbClient.UserAccountId
+- uid: TimeCockpit.Data.Database.DbClient.RetryStrategy
+  commentId: P:TimeCockpit.Data.Database.DbClient.RetryStrategy
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: RetryStrategy
+  nameWithType: DbClient.RetryStrategy
+  fullName: TimeCockpit.Data.Database.DbClient.RetryStrategy
+- uid: TimeCockpit.Data.Database.DbClient.CurrentTransaction
+  commentId: P:TimeCockpit.Data.Database.DbClient.CurrentTransaction
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: CurrentTransaction
+  nameWithType: DbClient.CurrentTransaction
+  fullName: TimeCockpit.Data.Database.DbClient.CurrentTransaction
+- uid: TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
+  commentId: P:TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: SkipBlobGarbageCollection
+  nameWithType: DbClient.SkipBlobGarbageCollection
+  fullName: TimeCockpit.Data.Database.DbClient.SkipBlobGarbageCollection
+- uid: TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
+  commentId: P:TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: DbConnectionLockObject
+  nameWithType: DbClient.DbConnectionLockObject
+  fullName: TimeCockpit.Data.Database.DbClient.DbConnectionLockObject
+- uid: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
+  commentId: E:TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: BlobGarbageCleanupFinished
+  nameWithType: DbClient.BlobGarbageCleanupFinished
+  fullName: TimeCockpit.Data.Database.DbClient.BlobGarbageCleanupFinished
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -1419,43 +1564,10 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
-  commentId: P:TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: SupportsTableValuedParameters
-  nameWithType: DbClient.SupportsTableValuedParameters
-  fullName: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
-- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters*
-  commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
-  isExternal: false
-  name: SupportsTableValuedParameters
-  nameWithType: SqlDbClient.SupportsTableValuedParameters
-  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
-  commentId: P:TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
-  parent: TimeCockpit.Data.Database.DbClient
-  isExternal: false
-  name: SupportsNoCheckConstraint
-  nameWithType: DbClient.SupportsNoCheckConstraint
-  fullName: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
-- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint*
-  commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
-  isExternal: false
-  name: SupportsNoCheckConstraint
-  nameWithType: SqlDbClient.SupportsNoCheckConstraint
-  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
 - uid: TimeCockpit.Data.Database.DbClient.OpenConnectionAsync(System.Threading.CancellationToken)
   commentId: M:TimeCockpit.Data.Database.DbClient.OpenConnectionAsync(System.Threading.CancellationToken)
   parent: TimeCockpit.Data.Database.DbClient
@@ -1468,6 +1580,7 @@ references:
     name: OpenConnectionAsync
     nameWithType: DbClient.OpenConnectionAsync
     fullName: TimeCockpit.Data.Database.DbClient.OpenConnectionAsync
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1484,6 +1597,7 @@ references:
     name: OpenConnectionAsync
     nameWithType: DbClient.OpenConnectionAsync
     fullName: TimeCockpit.Data.Database.DbClient.OpenConnectionAsync
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1497,7 +1611,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync*
   commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync
-  isExternal: false
+  isExternal: true
   name: OpenConnectionAsync
   nameWithType: SqlDbClient.OpenConnectionAsync
   fullName: TimeCockpit.Data.Database.SqlDbClient.OpenConnectionAsync
@@ -1554,7 +1668,7 @@ references:
     fullName: )
 - uid: System.Threading
   commentId: N:System.Threading
-  isExternal: false
+  isExternal: true
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
@@ -1599,17 +1713,10 @@ references:
     fullName: )
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
-  isExternal: false
+  isExternal: true
   name: System.Threading.Tasks
   nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
-- uid: TimeCockpit.Data.DataModel.ModelElement
-  commentId: T:TimeCockpit.Data.DataModel.ModelElement
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelElement
-  nameWithType: ModelElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: TimeCockpit.Data.Database.DbClient.ExecuteDatabaseOperation(System.Func{System.Data.Common.DbConnection,System.UInt64,System.Data.Common.DbCommand},System.Boolean)
   commentId: M:TimeCockpit.Data.Database.DbClient.ExecuteDatabaseOperation(System.Func{System.Data.Common.DbConnection,System.UInt64,System.Data.Common.DbCommand},System.Boolean)
   parent: TimeCockpit.Data.Database.DbClient
@@ -1625,6 +1732,7 @@ references:
     name: ExecuteDatabaseOperation
     nameWithType: DbClient.ExecuteDatabaseOperation
     fullName: TimeCockpit.Data.Database.DbClient.ExecuteDatabaseOperation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1676,6 +1784,7 @@ references:
     name: ExecuteDatabaseOperation
     nameWithType: DbClient.ExecuteDatabaseOperation
     fullName: TimeCockpit.Data.Database.DbClient.ExecuteDatabaseOperation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1724,7 +1833,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.SqlDbClient.ExecuteDatabaseOperation*
   commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.ExecuteDatabaseOperation
-  isExternal: false
+  isExternal: true
   name: ExecuteDatabaseOperation
   nameWithType: SqlDbClient.ExecuteDatabaseOperation
   fullName: TimeCockpit.Data.Database.SqlDbClient.ExecuteDatabaseOperation
@@ -1804,6 +1913,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: System.UInt64
   commentId: T:System.UInt64
   parent: System
@@ -1811,12 +1927,6 @@ references:
   name: UInt64
   nameWithType: UInt64
   fullName: System.UInt64
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
 - uid: System.Func`3
   commentId: T:System.Func`3
   isExternal: true
@@ -1895,6 +2005,7 @@ references:
     name: DeleteBlobGarbage
     nameWithType: DbClient.DeleteBlobGarbage
     fullName: TimeCockpit.Data.Database.DbClient.DeleteBlobGarbage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1918,6 +2029,7 @@ references:
     name: BlobGarbageRow
     nameWithType: BlobGarbageRow
     fullName: TimeCockpit.Data.Database.BlobGarbageRow
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1929,6 +2041,7 @@ references:
     name: DeleteBlobGarbage
     nameWithType: DbClient.DeleteBlobGarbage
     fullName: TimeCockpit.Data.Database.DbClient.DeleteBlobGarbage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1952,6 +2065,7 @@ references:
     name: BlobGarbageRow
     nameWithType: BlobGarbageRow
     fullName: TimeCockpit.Data.Database.BlobGarbageRow
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1960,13 +2074,11 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.SqlDbClient.DeleteBlobGarbage*
   commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.DeleteBlobGarbage
-  isExternal: false
+  isExternal: true
   name: DeleteBlobGarbage
   nameWithType: SqlDbClient.DeleteBlobGarbage
   fullName: TimeCockpit.Data.Database.SqlDbClient.DeleteBlobGarbage
 - uid: System.Data.Common.DbConnection
-  commentId: T:System.Data.Common.DbConnection
-  parent: System.Data.Common
   isExternal: true
   name: DbConnection
   nameWithType: DbConnection
@@ -1994,6 +2106,7 @@ references:
     name: BlobGarbageRow
     nameWithType: BlobGarbageRow
     fullName: TimeCockpit.Data.Database.BlobGarbageRow
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2010,15 +2123,10 @@ references:
     name: BlobGarbageRow
     nameWithType: BlobGarbageRow
     fullName: TimeCockpit.Data.Database.BlobGarbageRow
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Data.Common
-  commentId: N:System.Data.Common
-  isExternal: false
-  name: System.Data.Common
-  nameWithType: System.Data.Common
-  fullName: System.Data.Common
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -2060,7 +2168,7 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
@@ -2076,6 +2184,7 @@ references:
     name: FindOrCreateCommand
     nameWithType: DbClient.FindOrCreateCommand
     fullName: TimeCockpit.Data.Database.DbClient.FindOrCreateCommand
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2100,6 +2209,7 @@ references:
     name: FindOrCreateCommand
     nameWithType: DbClient.FindOrCreateCommand
     fullName: TimeCockpit.Data.Database.DbClient.FindOrCreateCommand
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2121,7 +2231,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.SqlDbClient.FindOrCreateCommand*
   commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.FindOrCreateCommand
-  isExternal: false
+  isExternal: true
   name: FindOrCreateCommand
   nameWithType: SqlDbClient.FindOrCreateCommand
   fullName: TimeCockpit.Data.Database.SqlDbClient.FindOrCreateCommand
@@ -2133,8 +2243,6 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.Data.Common.DbCommand
-  commentId: T:System.Data.Common.DbCommand
-  parent: System.Data.Common
   isExternal: true
   name: DbCommand
   nameWithType: DbCommand
@@ -2151,6 +2259,7 @@ references:
     name: FinishCommand
     nameWithType: DbClient.FinishCommand
     fullName: TimeCockpit.Data.Database.DbClient.FinishCommand
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2167,6 +2276,7 @@ references:
     name: FinishCommand
     nameWithType: DbClient.FinishCommand
     fullName: TimeCockpit.Data.Database.DbClient.FinishCommand
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2180,7 +2290,33 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Database.SqlDbClient.FinishCommand*
   commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.FinishCommand
-  isExternal: false
+  isExternal: true
   name: FinishCommand
   nameWithType: SqlDbClient.FinishCommand
   fullName: TimeCockpit.Data.Database.SqlDbClient.FinishCommand
+- uid: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
+  commentId: P:TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: SupportsTableValuedParameters
+  nameWithType: DbClient.SupportsTableValuedParameters
+  fullName: TimeCockpit.Data.Database.DbClient.SupportsTableValuedParameters
+- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters*
+  commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
+  isExternal: true
+  name: SupportsTableValuedParameters
+  nameWithType: SqlDbClient.SupportsTableValuedParameters
+  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsTableValuedParameters
+- uid: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
+  commentId: P:TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
+  parent: TimeCockpit.Data.Database.DbClient
+  isExternal: true
+  name: SupportsNoCheckConstraint
+  nameWithType: DbClient.SupportsNoCheckConstraint
+  fullName: TimeCockpit.Data.Database.DbClient.SupportsNoCheckConstraint
+- uid: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint*
+  commentId: Overload:TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint
+  isExternal: true
+  name: SupportsNoCheckConstraint
+  nameWithType: SqlDbClient.SupportsNoCheckConstraint
+  fullName: TimeCockpit.Data.Database.SqlDbClient.SupportsNoCheckConstraint

@@ -5,10 +5,11 @@ items:
   id: ActionResult
   parent: TimeCockpit.Data
   children:
-  - TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception)
+  - TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception,TimeCockpit.Data.DataModel.Actions.IActionResult)
   - TimeCockpit.Data.ActionResult.Exception
   - TimeCockpit.Data.ActionResult.ModifiedInputSet
   - TimeCockpit.Data.ActionResult.Output
+  - TimeCockpit.Data.ActionResult.Result
   - TimeCockpit.Data.ActionResult.Succeeded
   langs:
   - csharp
@@ -18,16 +19,12 @@ items:
   fullName: TimeCockpit.Data.ActionResult
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: ActionResult
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nclass representing the result of an action.\n"
-  example: []
   syntax:
     content: public class ActionResult
     content.vb: Public Class ActionResult
@@ -47,30 +44,26 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception)
-  commentId: M:TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception)
-  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception)'
+- uid: TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception,TimeCockpit.Data.DataModel.Actions.IActionResult)
+  commentId: M:TimeCockpit.Data.ActionResult.#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception,TimeCockpit.Data.DataModel.Actions.IActionResult)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject},System.Exception,TimeCockpit.Data.DataModel.Actions.IActionResult)'
   parent: TimeCockpit.Data.ActionResult
   langs:
   - csharp
   - vb
-  name: ActionResult(String, IEnumerable<EntityObject>, Exception)
-  nameWithType: ActionResult.ActionResult(String, IEnumerable<EntityObject>, Exception)
-  fullName: TimeCockpit.Data.ActionResult.ActionResult(System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Exception)
+  name: ActionResult(String, IEnumerable<EntityObject>, Exception, IActionResult)
+  nameWithType: ActionResult.ActionResult(String, IEnumerable<EntityObject>, Exception, IActionResult)
+  fullName: TimeCockpit.Data.ActionResult.ActionResult(System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Exception, TimeCockpit.Data.DataModel.Actions.IActionResult)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 25
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInitializes a new instance of the ActionResult class.\n"
-  example: []
   syntax:
-    content: public ActionResult(string output, IEnumerable<EntityObject> modifiedInputSet, Exception exception = null)
+    content: public ActionResult(string output, IEnumerable<EntityObject> modifiedInputSet, Exception exception = null, IActionResult result = null)
     parameters:
     - id: output
       type: System.String
@@ -81,15 +74,47 @@ items:
     - id: exception
       type: System.Exception
       description: optionally, an exception is one was thrown.
-    content.vb: Public Sub New(output As String, modifiedInputSet As IEnumerable(Of EntityObject), exception As Exception = Nothing)
+    - id: result
+      type: TimeCockpit.Data.DataModel.Actions.IActionResult
+      description: optionally, a result of the action.
+    content.vb: Public Sub New(output As String, modifiedInputSet As IEnumerable(Of EntityObject), exception As Exception = Nothing, result As IActionResult = Nothing)
   overload: TimeCockpit.Data.ActionResult.#ctor*
-  nameWithType.vb: ActionResult.ActionResult(String, IEnumerable(Of EntityObject), Exception)
+  nameWithType.vb: ActionResult.ActionResult(String, IEnumerable(Of EntityObject), Exception, IActionResult)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: TimeCockpit.Data.ActionResult.ActionResult(System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject), System.Exception)
-  name.vb: ActionResult(String, IEnumerable(Of EntityObject), Exception)
+  fullName.vb: TimeCockpit.Data.ActionResult.ActionResult(System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.EntityObject), System.Exception, TimeCockpit.Data.DataModel.Actions.IActionResult)
+  name.vb: ActionResult(String, IEnumerable(Of EntityObject), Exception, IActionResult)
+- uid: TimeCockpit.Data.ActionResult.Succeeded
+  commentId: M:TimeCockpit.Data.ActionResult.Succeeded
+  id: Succeeded
+  parent: TimeCockpit.Data.ActionResult
+  langs:
+  - csharp
+  - vb
+  name: Succeeded()
+  nameWithType: ActionResult.Succeeded()
+  fullName: TimeCockpit.Data.ActionResult.Succeeded()
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nDetermines if the action has been executed successfully.\n"
+  syntax:
+    content: public bool Succeeded()
+    return:
+      type: System.Boolean
+      description: Returns a value indicating if the action has been executed successfully.
+    content.vb: Public Function Succeeded As Boolean
+  overload: TimeCockpit.Data.ActionResult.Succeeded*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.ActionResult.Output
   commentId: P:TimeCockpit.Data.ActionResult.Output
   id: Output
@@ -102,16 +127,12 @@ items:
   fullName: TimeCockpit.Data.ActionResult.Output
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: Output
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 35
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the output of the action.\n"
-  example: []
   syntax:
     content: public string Output { get; }
     parameters: []
@@ -137,16 +158,12 @@ items:
   fullName: TimeCockpit.Data.ActionResult.ModifiedInputSet
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: ModifiedInputSet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 44
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the entityobjects in the state after they have been modified by the action.\n"
-  example: []
   syntax:
     content: public IEnumerable<EntityObject> ModifiedInputSet { get; }
     parameters: []
@@ -172,16 +189,12 @@ items:
   fullName: TimeCockpit.Data.ActionResult.Exception
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: Exception
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 53
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets a possible exception, may be null.\n"
-  example: []
   syntax:
     content: public Exception Exception { get; }
     parameters: []
@@ -195,43 +208,41 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.ActionResult.Succeeded
-  commentId: M:TimeCockpit.Data.ActionResult.Succeeded
-  id: Succeeded
+- uid: TimeCockpit.Data.ActionResult.Result
+  commentId: P:TimeCockpit.Data.ActionResult.Result
+  id: Result
   parent: TimeCockpit.Data.ActionResult
   langs:
   - csharp
   - vb
-  name: Succeeded()
-  nameWithType: ActionResult.Succeeded()
-  fullName: TimeCockpit.Data.ActionResult.Succeeded()
-  type: Method
+  name: Result
+  nameWithType: ActionResult.Result
+  fullName: TimeCockpit.Data.ActionResult.Result
+  type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    id: Succeeded
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/ActionResult.cs
-    startLine: 63
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
-  summary: "\nDetermines if the action has been executed successfully.\n"
-  example: []
+  summary: "\nGets a possible result from the action.\n"
   syntax:
-    content: public bool Succeeded()
+    content: public IActionResult Result { get; }
+    parameters: []
     return:
-      type: System.Boolean
-      description: Returns a value indicating if the action has been executed successfully.
-    content.vb: Public Function Succeeded As Boolean
-  overload: TimeCockpit.Data.ActionResult.Succeeded*
+      type: TimeCockpit.Data.DataModel.Actions.IActionResult
+    content.vb: Public ReadOnly Property Result As IActionResult
+  overload: TimeCockpit.Data.ActionResult.Result*
   modifiers.csharp:
   - public
+  - get
   modifiers.vb:
   - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -523,13 +534,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.ActionResult.#ctor*
   commentId: Overload:TimeCockpit.Data.ActionResult.#ctor
-  isExternal: false
+  isExternal: true
   name: ActionResult
   nameWithType: ActionResult.ActionResult
   fullName: TimeCockpit.Data.ActionResult.ActionResult
@@ -563,6 +574,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -579,6 +591,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -589,6 +602,13 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: System.Exception
+- uid: TimeCockpit.Data.DataModel.Actions.IActionResult
+  commentId: T:TimeCockpit.Data.DataModel.Actions.IActionResult
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.IActionResult
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -630,31 +650,19 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: TimeCockpit.Data.ActionResult.Output*
-  commentId: Overload:TimeCockpit.Data.ActionResult.Output
-  isExternal: false
-  name: Output
-  nameWithType: ActionResult.Output
-  fullName: TimeCockpit.Data.ActionResult.Output
-- uid: TimeCockpit.Data.ActionResult.ModifiedInputSet*
-  commentId: Overload:TimeCockpit.Data.ActionResult.ModifiedInputSet
-  isExternal: false
-  name: ModifiedInputSet
-  nameWithType: ActionResult.ModifiedInputSet
-  fullName: TimeCockpit.Data.ActionResult.ModifiedInputSet
-- uid: TimeCockpit.Data.ActionResult.Exception*
-  commentId: Overload:TimeCockpit.Data.ActionResult.Exception
-  isExternal: false
-  name: Exception
-  nameWithType: ActionResult.Exception
-  fullName: TimeCockpit.Data.ActionResult.Exception
+- uid: TimeCockpit.Data.DataModel.Actions
+  commentId: N:TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: TimeCockpit.Data.DataModel.Actions
+  nameWithType: TimeCockpit.Data.DataModel.Actions
+  fullName: TimeCockpit.Data.DataModel.Actions
 - uid: TimeCockpit.Data.ActionResult.Succeeded*
   commentId: Overload:TimeCockpit.Data.ActionResult.Succeeded
-  isExternal: false
+  isExternal: true
   name: Succeeded
   nameWithType: ActionResult.Succeeded
   fullName: TimeCockpit.Data.ActionResult.Succeeded
@@ -665,3 +673,27 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: TimeCockpit.Data.ActionResult.Output*
+  commentId: Overload:TimeCockpit.Data.ActionResult.Output
+  isExternal: true
+  name: Output
+  nameWithType: ActionResult.Output
+  fullName: TimeCockpit.Data.ActionResult.Output
+- uid: TimeCockpit.Data.ActionResult.ModifiedInputSet*
+  commentId: Overload:TimeCockpit.Data.ActionResult.ModifiedInputSet
+  isExternal: true
+  name: ModifiedInputSet
+  nameWithType: ActionResult.ModifiedInputSet
+  fullName: TimeCockpit.Data.ActionResult.ModifiedInputSet
+- uid: TimeCockpit.Data.ActionResult.Exception*
+  commentId: Overload:TimeCockpit.Data.ActionResult.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: ActionResult.Exception
+  fullName: TimeCockpit.Data.ActionResult.Exception
+- uid: TimeCockpit.Data.ActionResult.Result*
+  commentId: Overload:TimeCockpit.Data.ActionResult.Result
+  isExternal: true
+  name: Result
+  nameWithType: ActionResult.Result
+  fullName: TimeCockpit.Data.ActionResult.Result

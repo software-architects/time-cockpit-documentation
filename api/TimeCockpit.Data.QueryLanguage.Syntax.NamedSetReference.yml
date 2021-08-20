@@ -17,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    id: NamedSetReference
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    startLine: 21
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAST Node representing a reference to a named set defined in the model.\ne.g.\nIn \n<pre><code>From X In Timesheet Where X.Description In Set(&apos;ImportantDescriptions&apos;) Select X</code></pre>\nan instance of this class represents the &quot;Set(&apos;ImportantDescriptions&apos;)&quot; expression part.\n"
-  example: []
   syntax:
     content: 'public class NamedSetReference : Set'
     content.vb: >-
@@ -65,16 +61,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.NamedSetReference(System.String, System.String)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public NamedSetReference(string setName, string propertyName = null)
     parameters:
@@ -90,6 +82,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
+  langs:
+  - csharp
+  - vb
+  name: Accept(Visitor)
+  nameWithType: NamedSetReference.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
+  syntax:
+    content: public override Node Accept(Visitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+      description: The visitor to dispatch to.
+    return:
+      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
+      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
+  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
   id: SetName
@@ -102,16 +130,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    id: SetName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    startLine: 42
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the name of the set that is referred to.\n"
-  example: []
   syntax:
     content: public string SetName { get; }
     parameters: []
@@ -137,16 +161,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    id: PropertyName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    startLine: 51
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nGets the name of the property referred to (may be null)\n"
-  example: []
   syntax:
     content: public string PropertyName { get; }
     parameters: []
@@ -160,50 +180,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
-  langs:
-  - csharp
-  - vb
-  name: Accept(Visitor)
-  nameWithType: NamedSetReference.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/NamedSetReference.cs
-    startLine: 62
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
-  example: []
-  syntax:
-    content: public override Node Accept(Visitor visitor)
-    parameters:
-    - id: visitor
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-      description: The visitor to dispatch to.
-    return:
-      type: TimeCockpit.Data.QueryLanguage.Syntax.Node
-      description: Returns the value returned by the call to <xref href="TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)" data-throw-if-not-resolved="false"></xref>.
-    content.vb: Public Overrides Function Accept(visitor As Visitor) As Node
-  overridden: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -217,21 +197,21 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Set
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Set
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Set
   nameWithType: Set
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Set
@@ -516,20 +496,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: NamedSetReference
-  nameWithType: NamedSetReference
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.#ctor
-  isExternal: false
+  isExternal: true
   name: NamedSetReference
   nameWithType: NamedSetReference.NamedSetReference
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.NamedSetReference
@@ -540,59 +513,10 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
-  isExternal: false
-  name: SetName
-  nameWithType: NamedSetReference.SetName
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName
-  isExternal: false
-  name: PropertyName
-  nameWithType: NamedSetReference.PropertyName
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -601,6 +525,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -608,6 +533,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -616,6 +542,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -623,19 +550,32 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: NamedSetReference.Accept
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.Accept
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Visitor
   nameWithType: Visitor
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
+  isExternal: true
+  name: SetName
+  nameWithType: NamedSetReference.SetName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.SetName
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName
+  isExternal: true
+  name: PropertyName
+  nameWithType: NamedSetReference.PropertyName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.NamedSetReference.PropertyName

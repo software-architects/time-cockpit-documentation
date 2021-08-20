@@ -4,7 +4,11 @@ items:
   commentId: T:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
   id: ImportEngine.SaveReportCallback
   parent: TimeCockpit.Data.Import
-  children: []
+  children:
+  - TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor(System.Object,System.IntPtr)
+  - TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String,System.AsyncCallback,System.Object)
+  - TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke(System.IAsyncResult)
+  - TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String)
   langs:
   - csharp
   - vb
@@ -13,34 +17,24 @@ items:
   fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
   type: Delegate
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportEngine.cs
-    id: SaveReportCallback
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportEngine.cs
-    startLine: 102
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\ncallback used to indicate the import has finished and the report should be saved.\n"
-  example: []
   syntax:
     content: public delegate void SaveReportCallback(ImportEngine source, byte[] reportData, string reportMimeType, byte[] sourceData, string sourceMimeType);
     parameters:
     - id: source
       type: TimeCockpit.Data.Import.ImportEngine
-      description: the import engine producing the event.
     - id: reportData
       type: System.Byte[]
-      description: the report data produced.
     - id: reportMimeType
       type: System.String
-      description: the mime type of the report.
     - id: sourceData
       type: System.Byte[]
-      description: the source data.
     - id: sourceMimeType
       type: System.String
-      description: the mime type of the source data.
     content.vb: Public Delegate Sub SaveReportCallback(source As ImportEngine, reportData As Byte(), reportMimeType As String, sourceData As Byte(), sourceMimeType As String)
   modifiers.csharp:
   - public
@@ -48,21 +42,170 @@ items:
   modifiers.vb:
   - Public
   - Delegate
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor(System.Object,System.IntPtr)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  langs:
+  - csharp
+  - vb
+  name: SaveReportCallback(Object, IntPtr)
+  nameWithType: ImportEngine.SaveReportCallback.SaveReportCallback(Object, IntPtr)
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.SaveReportCallback(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public SaveReportCallback(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String)
+  id: Invoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String)
+  parent: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  langs:
+  - csharp
+  - vb
+  name: Invoke(ImportEngine, Byte[], String, Byte[], String)
+  nameWithType: ImportEngine.SaveReportCallback.Invoke(ImportEngine, Byte[], String, Byte[], String)
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke(TimeCockpit.Data.Import.ImportEngine, System.Byte[], System.String, System.Byte[], System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public virtual void Invoke(ImportEngine source, byte[] reportData, string reportMimeType, byte[] sourceData, string sourceMimeType)
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Import.ImportEngine
+    - id: reportData
+      type: System.Byte[]
+    - id: reportMimeType
+      type: System.String
+    - id: sourceData
+      type: System.Byte[]
+    - id: sourceMimeType
+      type: System.String
+    content.vb: Public Overridable Sub Invoke(source As ImportEngine, reportData As Byte(), reportMimeType As String, sourceData As Byte(), sourceMimeType As String)
+  overload: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke*
+  nameWithType.vb: ImportEngine.SaveReportCallback.Invoke(ImportEngine, Byte(), String, Byte(), String)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke(TimeCockpit.Data.Import.ImportEngine, System.Byte(), System.String, System.Byte(), System.String)
+  name.vb: Invoke(ImportEngine, Byte(), String, Byte(), String)
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String,System.AsyncCallback,System.Object)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String,System.AsyncCallback,System.Object)
+  id: BeginInvoke(TimeCockpit.Data.Import.ImportEngine,System.Byte[],System.String,System.Byte[],System.String,System.AsyncCallback,System.Object)
+  parent: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(ImportEngine, Byte[], String, Byte[], String, AsyncCallback, Object)
+  nameWithType: ImportEngine.SaveReportCallback.BeginInvoke(ImportEngine, Byte[], String, Byte[], String, AsyncCallback, Object)
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke(TimeCockpit.Data.Import.ImportEngine, System.Byte[], System.String, System.Byte[], System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(ImportEngine source, byte[] reportData, string reportMimeType, byte[] sourceData, string sourceMimeType, AsyncCallback callback, object object)
+    parameters:
+    - id: source
+      type: TimeCockpit.Data.Import.ImportEngine
+    - id: reportData
+      type: System.Byte[]
+    - id: reportMimeType
+      type: System.String
+    - id: sourceData
+      type: System.Byte[]
+    - id: sourceMimeType
+      type: System.String
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(source As ImportEngine, reportData As Byte(), reportMimeType As String, sourceData As Byte(), sourceMimeType As String, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke*
+  nameWithType.vb: ImportEngine.SaveReportCallback.BeginInvoke(ImportEngine, Byte(), String, Byte(), String, AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke(TimeCockpit.Data.Import.ImportEngine, System.Byte(), System.String, System.Byte(), System.String, System.AsyncCallback, System.Object)
+  name.vb: BeginInvoke(ImportEngine, Byte(), String, Byte(), String, AsyncCallback, Object)
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke(System.IAsyncResult)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: ImportEngine.SaveReportCallback.EndInvoke(IAsyncResult)
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public virtual void EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    content.vb: Public Overridable Sub EndInvoke(result As IAsyncResult)
+  overload: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
 - uid: TimeCockpit.Data.Import.ImportEngine
   commentId: T:TimeCockpit.Data.Import.ImportEngine
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportEngine
   nameWithType: ImportEngine
   fullName: TimeCockpit.Data.Import.ImportEngine
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -96,7 +239,59 @@ references:
   fullName: System.String
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.#ctor
+  isExternal: true
+  name: SaveReportCallback
+  nameWithType: ImportEngine.SaveReportCallback.SaveReportCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.SaveReportCallback
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke*
+  commentId: Overload:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: ImportEngine.SaveReportCallback.Invoke
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.Invoke
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke*
+  commentId: Overload:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: ImportEngine.SaveReportCallback.BeginInvoke
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke*
+  commentId: Overload:TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: ImportEngine.SaveReportCallback.EndInvoke
+  fullName: TimeCockpit.Data.Import.ImportEngine.SaveReportCallback.EndInvoke

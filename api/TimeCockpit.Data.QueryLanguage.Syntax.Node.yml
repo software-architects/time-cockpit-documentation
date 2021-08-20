@@ -5,6 +5,7 @@ items:
   id: Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
   children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor
   - TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   langs:
   - csharp
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Node.cs
-    id: Node
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Node.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nBase class for all AST Node.\n"
-  example: []
   syntax:
     content: public abstract class Node
     content.vb: Public MustInherit Class Node
@@ -67,16 +64,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Node.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Node.cs
-    startLine: 23
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\ndispatches a visitor to the node.\n"
-  example: []
   syntax:
     content: public abstract Node Accept(Visitor visitor)
     parameters:
@@ -94,10 +87,35 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  langs:
+  - csharp
+  - vb
+  name: Node()
+  nameWithType: Node.Node()
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Node()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  syntax:
+    content: protected Node()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -389,27 +407,33 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: Node.Accept
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Visitor
   nameWithType: Visitor
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Node.#ctor
+  isExternal: true
+  name: Node
+  nameWithType: Node.Node
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Node

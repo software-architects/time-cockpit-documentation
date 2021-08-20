@@ -5,6 +5,7 @@ items:
   id: Feature
   parent: TimeCockpit.Data.Install
   children:
+  - TimeCockpit.Data.Install.Feature.#ctor
   - TimeCockpit.Data.Install.Feature.FeaturePrerequisites
   - TimeCockpit.Data.Install.Feature.InstallComponents
   - TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
@@ -17,16 +18,12 @@ items:
   fullName: TimeCockpit.Data.Install.Feature
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    id: Feature
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nRepresents an installed feature\n"
-  example: []
   syntax:
     content: 'public class Feature : InstallationComponent'
     content.vb: >-
@@ -53,6 +50,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Install.Feature.#ctor
+  commentId: M:TimeCockpit.Data.Install.Feature.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Install.Feature
+  langs:
+  - csharp
+  - vb
+  name: Feature()
+  nameWithType: Feature.Feature()
+  fullName: TimeCockpit.Data.Install.Feature.Feature()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Install
+  syntax:
+    content: public Feature()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Install.Feature.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
   commentId: P:TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
   id: MinimumApplicationVersion
@@ -65,16 +87,12 @@ items:
   fullName: TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    id: MinimumApplicationVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    startLine: 48
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the minimum application version necessary for the feature.\n"
-  example: []
   syntax:
     content: public string MinimumApplicationVersion { get; set; }
     parameters: []
@@ -100,16 +118,12 @@ items:
   fullName: TimeCockpit.Data.Install.Feature.FeaturePrerequisites
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    id: FeaturePrerequisites
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    startLine: 70
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets the collection of feature guids that have to be installed in order to be able\nto install this feature.\n"
-  example: []
   syntax:
     content: public Collection<Guid> FeaturePrerequisites { get; }
     parameters: []
@@ -135,16 +149,12 @@ items:
   fullName: TimeCockpit.Data.Install.Feature.UninstallComponents
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    id: UninstallComponents
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    startLine: 82
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets the collection of installation components that are executed when the feature\nis uninstalled.\n"
-  example: []
   syntax:
     content: public InstallationComponentCollection UninstallComponents { get; }
     parameters: []
@@ -170,16 +180,12 @@ items:
   fullName: TimeCockpit.Data.Install.Feature.InstallComponents
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    id: InstallComponents
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/Feature.cs
-    startLine: 94
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets the collection of installation components that are executed when the feature\nis installed.\n"
-  example: []
   syntax:
     content: public InstallationComponentCollection InstallComponents { get; }
     parameters: []
@@ -196,7 +202,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
@@ -210,35 +216,35 @@ references:
 - uid: TimeCockpit.Data.Install.InstallationComponent
   commentId: T:TimeCockpit.Data.Install.InstallationComponent
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponent
   nameWithType: InstallationComponent
   fullName: TimeCockpit.Data.Install.InstallationComponent
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstallationComponent.ComponentUuid
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
 - uid: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: InvariantFriendlyName
   nameWithType: InstallationComponent.InvariantFriendlyName
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
 - uid: TimeCockpit.Data.Install.InstallationComponent.Mandatory
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.Mandatory
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstallationComponent.Mandatory
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
 - uid: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ProviderInvariantName
   nameWithType: InstallationComponent.ProviderInvariantName
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
@@ -523,13 +529,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Install.Feature.#ctor*
+  commentId: Overload:TimeCockpit.Data.Install.Feature.#ctor
+  isExternal: true
+  name: Feature
+  nameWithType: Feature.Feature
+  fullName: TimeCockpit.Data.Install.Feature.Feature
 - uid: TimeCockpit.Data.Install.Feature.MinimumApplicationVersion*
   commentId: Overload:TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
-  isExternal: false
+  isExternal: true
   name: MinimumApplicationVersion
   nameWithType: Feature.MinimumApplicationVersion
   fullName: TimeCockpit.Data.Install.Feature.MinimumApplicationVersion
@@ -542,7 +554,7 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.Install.Feature.FeaturePrerequisites*
   commentId: Overload:TimeCockpit.Data.Install.Feature.FeaturePrerequisites
-  isExternal: false
+  isExternal: true
   name: FeaturePrerequisites
   nameWithType: Feature.FeaturePrerequisites
   fullName: TimeCockpit.Data.Install.Feature.FeaturePrerequisites
@@ -631,26 +643,26 @@ references:
     fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
-  isExternal: false
+  isExternal: true
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
 - uid: TimeCockpit.Data.Install.Feature.UninstallComponents*
   commentId: Overload:TimeCockpit.Data.Install.Feature.UninstallComponents
-  isExternal: false
+  isExternal: true
   name: UninstallComponents
   nameWithType: Feature.UninstallComponents
   fullName: TimeCockpit.Data.Install.Feature.UninstallComponents
 - uid: TimeCockpit.Data.Install.InstallationComponentCollection
   commentId: T:TimeCockpit.Data.Install.InstallationComponentCollection
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponentCollection
   nameWithType: InstallationComponentCollection
   fullName: TimeCockpit.Data.Install.InstallationComponentCollection
 - uid: TimeCockpit.Data.Install.Feature.InstallComponents*
   commentId: Overload:TimeCockpit.Data.Install.Feature.InstallComponents
-  isExternal: false
+  isExternal: true
   name: InstallComponents
   nameWithType: Feature.InstallComponents
   fullName: TimeCockpit.Data.Install.Feature.InstallComponents

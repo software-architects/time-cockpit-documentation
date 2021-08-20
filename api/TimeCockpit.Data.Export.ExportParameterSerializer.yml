@@ -5,6 +5,7 @@ items:
   id: ExportParameterSerializer
   parent: TimeCockpit.Data.Export
   children:
+  - TimeCockpit.Data.Export.ExportParameterSerializer.#ctor
   - TimeCockpit.Data.Export.ExportParameterSerializer.ReadExportParameterArray(Newtonsoft.Json.JsonReader)
   - TimeCockpit.Data.Export.ExportParameterSerializer.WriteExportParameterArray(Newtonsoft.Json.JsonWriter,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter})
   langs:
@@ -15,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.Export.ExportParameterSerializer
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    id: ExportParameterSerializer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Export
   summary: "\nclass for serializing export parameters\n"
-  example: []
   syntax:
     content: public class ExportParameterSerializer
     content.vb: Public Class ExportParameterSerializer
@@ -56,16 +53,12 @@ items:
   fullName: TimeCockpit.Data.Export.ExportParameterSerializer.WriteExportParameterArray(Newtonsoft.Json.JsonWriter, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Export.ExportParameter>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    id: WriteExportParameterArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    startLine: 24
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Export
   summary: "\nwrites an array of export parameters to a json writer.\n"
-  example: []
   syntax:
     content: public static void WriteExportParameterArray(JsonWriter jsonWriter, IEnumerable<ExportParameter> parameters)
     parameters:
@@ -98,16 +91,12 @@ items:
   fullName: TimeCockpit.Data.Export.ExportParameterSerializer.ReadExportParameterArray(Newtonsoft.Json.JsonReader)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    id: ReadExportParameterArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Export/ExportParameterSerializer.cs
-    startLine: 55
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Export
   summary: "\nReads an array of export parameters.\n"
-  example: []
   syntax:
     content: public static IEnumerable<ExportParameter> ReadExportParameterArray(JsonReader jsonReader)
     parameters:
@@ -125,10 +114,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: TimeCockpit.Data.Export.ExportParameterSerializer.#ctor
+  commentId: M:TimeCockpit.Data.Export.ExportParameterSerializer.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Export.ExportParameterSerializer
+  langs:
+  - csharp
+  - vb
+  name: ExportParameterSerializer()
+  nameWithType: ExportParameterSerializer.ExportParameterSerializer()
+  fullName: TimeCockpit.Data.Export.ExportParameterSerializer.ExportParameterSerializer()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Export
+  syntax:
+    content: public ExportParameterSerializer()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Export.ExportParameterSerializer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Export
   commentId: N:TimeCockpit.Data.Export
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Export
   nameWithType: TimeCockpit.Data.Export
   fullName: TimeCockpit.Data.Export
@@ -420,19 +434,17 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Export.ExportParameterSerializer.WriteExportParameterArray*
   commentId: Overload:TimeCockpit.Data.Export.ExportParameterSerializer.WriteExportParameterArray
-  isExternal: false
+  isExternal: true
   name: WriteExportParameterArray
   nameWithType: ExportParameterSerializer.WriteExportParameterArray
   fullName: TimeCockpit.Data.Export.ExportParameterSerializer.WriteExportParameterArray
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
@@ -460,6 +472,7 @@ references:
     name: ExportParameter
     nameWithType: ExportParameter
     fullName: TimeCockpit.Data.Export.ExportParameter
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -476,15 +489,10 @@ references:
     name: ExportParameter
     nameWithType: ExportParameter
     fullName: TimeCockpit.Data.Export.ExportParameter
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -526,20 +534,24 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.Export.ExportParameterSerializer.ReadExportParameterArray*
   commentId: Overload:TimeCockpit.Data.Export.ExportParameterSerializer.ReadExportParameterArray
-  isExternal: false
+  isExternal: true
   name: ReadExportParameterArray
   nameWithType: ExportParameterSerializer.ReadExportParameterArray
   fullName: TimeCockpit.Data.Export.ExportParameterSerializer.ReadExportParameterArray
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
   fullName: Newtonsoft.Json.JsonReader
+- uid: TimeCockpit.Data.Export.ExportParameterSerializer.#ctor*
+  commentId: Overload:TimeCockpit.Data.Export.ExportParameterSerializer.#ctor
+  isExternal: true
+  name: ExportParameterSerializer
+  nameWithType: ExportParameterSerializer.ExportParameterSerializer
+  fullName: TimeCockpit.Data.Export.ExportParameterSerializer.ExportParameterSerializer

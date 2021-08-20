@@ -20,24 +20,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: RelationCellBase
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 15
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nRepresents a lookup field in a <xref href=\"TimeCockpit.Data.DataModel.View.RelationCellBase.List\" data-throw-if-not-resolved=\"false\"></xref> or a <xref href=\"TimeCockpit.Data.DataModel.View.Form\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      public abstract class RelationCellBase : BoundCell, IDynamicMetaObjectProvider, INotifyPropertyChanged, IWeakEventListener
+    content: 'public abstract class RelationCellBase : BoundCell, IDynamicMetaObjectProvider, INotifyPropertyChanged, IWeakEventListener'
     content.vb: >-
-      <DataContract>
-
       Public MustInherit Class RelationCellBase
           Inherits BoundCell
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged, IWeakEventListener
@@ -56,6 +47,7 @@ items:
   - System.ComponentModel.INotifyPropertyChanged
   - TimeCockpit.Common.IWeakEventListener
   inheritedMembers:
+  - TimeCockpit.Data.DataModel.View.BoundCell.Clone``1
   - TimeCockpit.Data.DataModel.View.BoundCell.Content
   - TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
   - TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
@@ -63,7 +55,8 @@ items:
   - TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
   - TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
   - TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
-  - TimeCockpit.Data.DataModel.View.BoundCell.Clone``1
+  - TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+  - TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
   - TimeCockpit.Data.DataModel.View.Cell.Header
   - TimeCockpit.Data.DataModel.View.Cell.Foreground
   - TimeCockpit.Data.DataModel.View.Cell.Background
@@ -80,11 +73,9 @@ items:
   - TimeCockpit.Data.DataModel.View.Cell.LabelPosition
   - TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
   - TimeCockpit.Data.DataModel.View.Cell.DataType
-  - TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
-  - TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent(System.Type,System.Object,System.EventArgs)
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -95,10 +86,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - abstract
@@ -119,16 +106,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.RelationCellBase()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 59
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nInitializes a new instance of the RelationCellBase class.\n"
-  example: []
   syntax:
     content: public RelationCellBase()
     content.vb: Public Sub New
@@ -149,16 +132,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.SortDirection
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: SortDirection
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 72
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the sort direction. This sort direction is only used\nif the relation target does not have a standard list defined. As\nsoon as there is a list defined, the sort direction of that list is\nused instead.\n"
-  example: []
   syntax:
     content: public SortDirection SortDirection { get; set; }
     parameters: []
@@ -184,16 +163,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.List
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: List
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 90
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the list, that is used for displaying the data int the combobox.\n"
-  example: []
   syntax:
     content: public string List { get; set; }
     parameters: []
@@ -219,16 +194,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.Condition
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: Condition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 109
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the condition.\n"
-  example: []
   syntax:
     content: public string Condition { get; set; }
     parameters: []
@@ -255,16 +226,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.DisplayProperty
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: DisplayProperty
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 129
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the display property that is used to determine which property to show \nin a combobox.\n"
-  example: []
   syntax:
     content: public string DisplayProperty { get; set; }
     parameters: []
@@ -291,18 +258,14 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.SelectFirstIfNew
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: SelectFirstIfNew
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 147
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the relation.\n"
-  example: []
   syntax:
-    content: public bool ? SelectFirstIfNew { get; set; }
+    content: public bool? SelectFirstIfNew { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Boolean}
@@ -326,16 +289,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.FilterValue
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    id: FilterValue
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/RelationCellBase.cs
-    startLine: 167
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the filter value property that is used to determine which property to show \nin a combobox.\n"
-  example: []
   syntax:
     content: public string FilterValue { get; set; }
     parameters: []
@@ -351,23 +310,9 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TimeCockpit.Data.DataModel.View.RelationCellBase.List
-  commentId: P:TimeCockpit.Data.DataModel.View.RelationCellBase.List
-  parent: TimeCockpit.Data.DataModel.View.RelationCellBase
-  isExternal: false
-  name: List
-  nameWithType: RelationCellBase.List
-  fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.List
-- uid: TimeCockpit.Data.DataModel.View.Form
-  commentId: T:TimeCockpit.Data.DataModel.View.Form
-  parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
-  name: Form
-  nameWithType: Form
-  fullName: TimeCockpit.Data.DataModel.View.Form
 - uid: TimeCockpit.Data.DataModel.View
   commentId: N:TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.View
   nameWithType: TimeCockpit.Data.DataModel.View
   fullName: TimeCockpit.Data.DataModel.View
@@ -381,105 +326,50 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.View.Cell
   commentId: T:TimeCockpit.Data.DataModel.View.Cell
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: Cell
   nameWithType: Cell
   fullName: TimeCockpit.Data.DataModel.View.Cell
 - uid: TimeCockpit.Data.DataModel.View.BoundCell
   commentId: T:TimeCockpit.Data.DataModel.View.BoundCell
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: BoundCell
   nameWithType: BoundCell
   fullName: TimeCockpit.Data.DataModel.View.BoundCell
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: TimeCockpit.Common.IWeakEventListener
-  commentId: T:TimeCockpit.Common.IWeakEventListener
-  parent: TimeCockpit.Common
-  isExternal: false
+  isExternal: true
   name: IWeakEventListener
   nameWithType: IWeakEventListener
   fullName: TimeCockpit.Common.IWeakEventListener
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.Content
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.Content
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: Content
-  nameWithType: BoundCell.Content
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.Content
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: DefaultValue
-  nameWithType: BoundCell.DefaultValue
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: FilterPath
-  nameWithType: BoundCell.FilterPath
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: FilterIgnorePathInQuery
-  nameWithType: BoundCell.FilterIgnorePathInQuery
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: FilterOperator
-  nameWithType: BoundCell.FilterOperator
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: FilterParameterName
-  nameWithType: BoundCell.FilterParameterName
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
-- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
-  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
-  parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
-  name: FilterIsMandatory
-  nameWithType: BoundCell.FilterIsMandatory
-  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
 - uid: TimeCockpit.Data.DataModel.View.BoundCell.Clone``1
   commentId: M:TimeCockpit.Data.DataModel.View.BoundCell.Clone``1
   parent: TimeCockpit.Data.DataModel.View.BoundCell
-  isExternal: false
+  isExternal: true
   name: Clone<T>()
   nameWithType: BoundCell.Clone<T>()
   fullName: TimeCockpit.Data.DataModel.View.BoundCell.Clone<T>()
@@ -491,6 +381,7 @@ references:
     name: Clone<T>
     nameWithType: BoundCell.Clone<T>
     fullName: TimeCockpit.Data.DataModel.View.BoundCell.Clone<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -502,128 +393,66 @@ references:
     name: Clone(Of T)
     nameWithType: BoundCell.Clone(Of T)
     fullName: TimeCockpit.Data.DataModel.View.BoundCell.Clone(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.View.Cell.Header
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Header
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: Header
-  nameWithType: Cell.Header
-  fullName: TimeCockpit.Data.DataModel.View.Cell.Header
-- uid: TimeCockpit.Data.DataModel.View.Cell.Foreground
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Foreground
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: Foreground
-  nameWithType: Cell.Foreground
-  fullName: TimeCockpit.Data.DataModel.View.Cell.Foreground
-- uid: TimeCockpit.Data.DataModel.View.Cell.Background
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Background
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: Background
-  nameWithType: Cell.Background
-  fullName: TimeCockpit.Data.DataModel.View.Cell.Background
-- uid: TimeCockpit.Data.DataModel.View.Cell.RowSpan
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.RowSpan
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: RowSpan
-  nameWithType: Cell.RowSpan
-  fullName: TimeCockpit.Data.DataModel.View.Cell.RowSpan
-- uid: TimeCockpit.Data.DataModel.View.Cell.ColSpan
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.ColSpan
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: ColSpan
-  nameWithType: Cell.ColSpan
-  fullName: TimeCockpit.Data.DataModel.View.Cell.ColSpan
-- uid: TimeCockpit.Data.DataModel.View.Cell.MinWidth
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MinWidth
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: MinWidth
-  nameWithType: Cell.MinWidth
-  fullName: TimeCockpit.Data.DataModel.View.Cell.MinWidth
-- uid: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MaxWidth
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: MaxWidth
-  nameWithType: Cell.MaxWidth
-  fullName: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
-- uid: TimeCockpit.Data.DataModel.View.Cell.Width
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Width
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: Width
-  nameWithType: Cell.Width
-  fullName: TimeCockpit.Data.DataModel.View.Cell.Width
-- uid: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Hyperlink
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: Hyperlink
-  nameWithType: Cell.Hyperlink
-  fullName: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
-- uid: TimeCockpit.Data.DataModel.View.Cell.IsVisible
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsVisible
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: IsVisible
-  nameWithType: Cell.IsVisible
-  fullName: TimeCockpit.Data.DataModel.View.Cell.IsVisible
-- uid: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: IsColumnVisible
-  nameWithType: Cell.IsColumnVisible
-  fullName: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
-- uid: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsEnabled
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: IsEnabled
-  nameWithType: Cell.IsEnabled
-  fullName: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
-- uid: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: IsReadOnly
-  nameWithType: Cell.IsReadOnly
-  fullName: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
-- uid: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.LabelPosition
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: LabelPosition
-  nameWithType: Cell.LabelPosition
-  fullName: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
-- uid: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: AggregateFunction
-  nameWithType: Cell.AggregateFunction
-  fullName: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
-- uid: TimeCockpit.Data.DataModel.View.Cell.DataType
-  commentId: P:TimeCockpit.Data.DataModel.View.Cell.DataType
-  parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
-  name: DataType
-  nameWithType: Cell.DataType
-  fullName: TimeCockpit.Data.DataModel.View.Cell.DataType
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.Content
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.Content
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: Content
+  nameWithType: BoundCell.Content
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.Content
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: DefaultValue
+  nameWithType: BoundCell.DefaultValue
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.DefaultValue
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: FilterPath
+  nameWithType: BoundCell.FilterPath
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterPath
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: FilterIgnorePathInQuery
+  nameWithType: BoundCell.FilterIgnorePathInQuery
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterIgnorePathInQuery
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: FilterOperator
+  nameWithType: BoundCell.FilterOperator
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterOperator
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: FilterParameterName
+  nameWithType: BoundCell.FilterParameterName
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterParameterName
+- uid: TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
+  commentId: P:TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
+  parent: TimeCockpit.Data.DataModel.View.BoundCell
+  isExternal: true
+  name: FilterIsMandatory
+  nameWithType: BoundCell.FilterIsMandatory
+  fullName: TimeCockpit.Data.DataModel.View.BoundCell.FilterIsMandatory
 - uid: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
   commentId: M:TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
   parent: TimeCockpit.Data.DataModel.View.Cell
-  isExternal: false
+  isExternal: true
   name: GetPropertyInfos()
   nameWithType: Cell.GetPropertyInfos()
   fullName: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos()
@@ -632,6 +461,7 @@ references:
     name: GetPropertyInfos
     nameWithType: Cell.GetPropertyInfos
     fullName: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -643,6 +473,7 @@ references:
     name: GetPropertyInfos
     nameWithType: Cell.GetPropertyInfos
     fullName: TimeCockpit.Data.DataModel.View.Cell.GetPropertyInfos
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -661,6 +492,7 @@ references:
     name: ReceiveWeakEvent
     nameWithType: Cell.ReceiveWeakEvent
     fullName: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -693,6 +525,7 @@ references:
     name: ReceiveWeakEvent
     nameWithType: Cell.ReceiveWeakEvent
     fullName: TimeCockpit.Data.DataModel.View.Cell.ReceiveWeakEvent
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -720,20 +553,118 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.View.Cell.Header
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Header
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: Header
+  nameWithType: Cell.Header
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Header
+- uid: TimeCockpit.Data.DataModel.View.Cell.Foreground
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Foreground
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: Foreground
+  nameWithType: Cell.Foreground
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Foreground
+- uid: TimeCockpit.Data.DataModel.View.Cell.Background
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Background
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: Background
+  nameWithType: Cell.Background
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Background
+- uid: TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.RowSpan
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: RowSpan
+  nameWithType: Cell.RowSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.RowSpan
+- uid: TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.ColSpan
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: ColSpan
+  nameWithType: Cell.ColSpan
+  fullName: TimeCockpit.Data.DataModel.View.Cell.ColSpan
+- uid: TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MinWidth
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: MinWidth
+  nameWithType: Cell.MinWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MinWidth
+- uid: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: MaxWidth
+  nameWithType: Cell.MaxWidth
+  fullName: TimeCockpit.Data.DataModel.View.Cell.MaxWidth
+- uid: TimeCockpit.Data.DataModel.View.Cell.Width
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Width
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: Width
+  nameWithType: Cell.Width
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Width
+- uid: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: Hyperlink
+  nameWithType: Cell.Hyperlink
+  fullName: TimeCockpit.Data.DataModel.View.Cell.Hyperlink
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsVisible
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: IsVisible
+  nameWithType: Cell.IsVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsVisible
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: IsColumnVisible
+  nameWithType: Cell.IsColumnVisible
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsColumnVisible
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: IsEnabled
+  nameWithType: Cell.IsEnabled
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsEnabled
+- uid: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: IsReadOnly
+  nameWithType: Cell.IsReadOnly
+  fullName: TimeCockpit.Data.DataModel.View.Cell.IsReadOnly
+- uid: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: LabelPosition
+  nameWithType: Cell.LabelPosition
+  fullName: TimeCockpit.Data.DataModel.View.Cell.LabelPosition
+- uid: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: AggregateFunction
+  nameWithType: Cell.AggregateFunction
+  fullName: TimeCockpit.Data.DataModel.View.Cell.AggregateFunction
+- uid: TimeCockpit.Data.DataModel.View.Cell.DataType
+  commentId: P:TimeCockpit.Data.DataModel.View.Cell.DataType
+  parent: TimeCockpit.Data.DataModel.View.Cell
+  isExternal: true
+  name: DataType
+  nameWithType: Cell.DataType
+  fullName: TimeCockpit.Data.DataModel.View.Cell.DataType
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -746,6 +677,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -762,6 +694,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -773,6 +706,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -785,6 +732,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -801,6 +749,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -824,6 +773,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -848,6 +798,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -879,6 +830,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -895,6 +847,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1185,71 +1138,46 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.View.RelationCellBase
-  commentId: T:TimeCockpit.Data.DataModel.View.RelationCellBase
-  parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
-  name: RelationCellBase
-  nameWithType: RelationCellBase
-  fullName: TimeCockpit.Data.DataModel.View.RelationCellBase
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
-- uid: TimeCockpit.Common
-  commentId: N:TimeCockpit.Common
-  isExternal: false
-  name: TimeCockpit.Common
-  nameWithType: TimeCockpit.Common
-  fullName: TimeCockpit.Common
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.#ctor
-  isExternal: false
+  isExternal: true
   name: RelationCellBase
   nameWithType: RelationCellBase.RelationCellBase
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.RelationCellBase
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.SortDirection*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.SortDirection
-  isExternal: false
+  isExternal: true
   name: SortDirection
   nameWithType: RelationCellBase.SortDirection
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.SortDirection
 - uid: TimeCockpit.Data.DataModel.View.SortDirection
   commentId: T:TimeCockpit.Data.DataModel.View.SortDirection
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: SortDirection
   nameWithType: SortDirection
   fullName: TimeCockpit.Data.DataModel.View.SortDirection
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.List*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.List
-  isExternal: false
+  isExternal: true
   name: List
   nameWithType: RelationCellBase.List
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.List
@@ -1262,19 +1190,19 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.Condition*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.Condition
-  isExternal: false
+  isExternal: true
   name: Condition
   nameWithType: RelationCellBase.Condition
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.Condition
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.DisplayProperty*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.DisplayProperty
-  isExternal: false
+  isExternal: true
   name: DisplayProperty
   nameWithType: RelationCellBase.DisplayProperty
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.DisplayProperty
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.SelectFirstIfNew*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.SelectFirstIfNew
-  isExternal: false
+  isExternal: true
   name: SelectFirstIfNew
   nameWithType: RelationCellBase.SelectFirstIfNew
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.SelectFirstIfNew
@@ -1363,7 +1291,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.View.RelationCellBase.FilterValue*
   commentId: Overload:TimeCockpit.Data.DataModel.View.RelationCellBase.FilterValue
-  isExternal: false
+  isExternal: true
   name: FilterValue
   nameWithType: RelationCellBase.FilterValue
   fullName: TimeCockpit.Data.DataModel.View.RelationCellBase.FilterValue

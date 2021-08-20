@@ -20,16 +20,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: ImportResult
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 16
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass holding references to the result of the import.\n"
-  example: []
   syntax:
     content: public class ImportResult
     content.vb: Public Class ImportResult
@@ -61,31 +56,22 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult.ImportResult(System.Collections.Generic.Dictionary<System.String, System.Int64>, System.Collections.Generic.Dictionary<System.String, System.Int64>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Import.ImportMessage>, System.Boolean)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 25
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Import.ImportResult\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public ImportResult(Dictionary<string, long> createdCounts, Dictionary<string, long> updatedCounts, IEnumerable<ImportMessage> messages, bool commited)
     parameters:
     - id: createdCounts
       type: System.Collections.Generic.Dictionary{System.String,System.Int64}
-      description: the counts of the number of newly created <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref>s per worksheet.
     - id: updatedCounts
       type: System.Collections.Generic.Dictionary{System.String,System.Int64}
-      description: the counts of the number of updated <xref href="TimeCockpit.Data.EntityObject" data-throw-if-not-resolved="false"></xref>s per worksheet.
     - id: messages
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportMessage}
-      description: Messages occurred during the import.
     - id: commited
       type: System.Boolean
-      description: true if the import was actually committed or not.
     content.vb: Public Sub New(createdCounts As Dictionary(Of String, Long), updatedCounts As Dictionary(Of String, Long), messages As IEnumerable(Of ImportMessage), commited As Boolean)
   overload: TimeCockpit.Data.Import.ImportResult.#ctor*
   nameWithType.vb: ImportResult.ImportResult(Dictionary(Of String, Int64), Dictionary(Of String, Int64), IEnumerable(Of ImportMessage), Boolean)
@@ -95,6 +81,72 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.Import.ImportResult.ImportResult(System.Collections.Generic.Dictionary(Of System.String, System.Int64), System.Collections.Generic.Dictionary(Of System.String, System.Int64), System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Import.ImportMessage), System.Boolean)
   name.vb: ImportResult(Dictionary(Of String, Int64), Dictionary(Of String, Int64), IEnumerable(Of ImportMessage), Boolean)
+- uid: TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
+  commentId: M:TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
+  id: ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
+  parent: TimeCockpit.Data.Import.ImportResult
+  langs:
+  - csharp
+  - vb
+  name: ToJSON(JsonWriter, ImportResult)
+  nameWithType: ImportResult.ToJSON(JsonWriter, ImportResult)
+  fullName: TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.ImportResult)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static void ToJSON(JsonWriter writer, ImportResult importResult)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+    - id: importResult
+      type: TimeCockpit.Data.Import.ImportResult
+    content.vb: Public Shared Sub ToJSON(writer As JsonWriter, importResult As ImportResult)
+  overload: TimeCockpit.Data.Import.ImportResult.ToJSON*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
+  commentId: M:TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
+  id: FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
+  parent: TimeCockpit.Data.Import.ImportResult
+  langs:
+  - csharp
+  - vb
+  name: FromJSON(JsonReader, Model)
+  nameWithType: ImportResult.FromJSON(JsonReader, Model)
+  fullName: TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static ImportResult FromJSON(JsonReader reader, Model model)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+    return:
+      type: TimeCockpit.Data.Import.ImportResult
+    content.vb: Public Shared Function FromJSON(reader As JsonReader, model As Model) As ImportResult
+  overload: TimeCockpit.Data.Import.ImportResult.FromJSON*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: TimeCockpit.Data.Import.ImportResult.CreatedCounts
   commentId: P:TimeCockpit.Data.Import.ImportResult.CreatedCounts
   id: CreatedCounts
@@ -107,16 +159,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult.CreatedCounts
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: CreatedCounts
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 36
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the counts per worksheet.\n"
-  example: []
   syntax:
     content: public Dictionary<string, long> CreatedCounts { get; }
     parameters: []
@@ -142,16 +189,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult.UpdatedCounts
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: UpdatedCounts
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 41
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the number of updated entities, per worksheet.\n"
-  example: []
   syntax:
     content: public Dictionary<string, long> UpdatedCounts { get; }
     parameters: []
@@ -177,16 +219,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult.Messages
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: Messages
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 46
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets an enumeration of messages that were logged during the import process.\n"
-  example: []
   syntax:
     content: public IEnumerable<ImportMessage> Messages { get; }
     parameters: []
@@ -212,16 +249,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportResult.Committed
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: Committed
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 54
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets a value indicating whether the import was actually committed or not.\n"
-  example: []
   syntax:
     content: public bool Committed { get; }
     parameters: []
@@ -235,91 +267,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
-  commentId: M:TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
-  id: ToJSON(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportResult)
-  parent: TimeCockpit.Data.Import.ImportResult
-  langs:
-  - csharp
-  - vb
-  name: ToJSON(JsonWriter, ImportResult)
-  nameWithType: ImportResult.ToJSON(JsonWriter, ImportResult)
-  fullName: TimeCockpit.Data.Import.ImportResult.ToJSON(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.ImportResult)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: ToJSON
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 65
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nWrites the json.\n"
-  example: []
-  syntax:
-    content: public static void ToJSON(JsonWriter writer, ImportResult importResult)
-    parameters:
-    - id: writer
-      type: Newtonsoft.Json.JsonWriter
-      description: The writer.
-    - id: importResult
-      type: TimeCockpit.Data.Import.ImportResult
-      description: the request parameters.
-    content.vb: Public Shared Sub ToJSON(writer As JsonWriter, importResult As ImportResult)
-  overload: TimeCockpit.Data.Import.ImportResult.ToJSON*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
-  commentId: M:TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
-  id: FromJSON(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
-  parent: TimeCockpit.Data.Import.ImportResult
-  langs:
-  - csharp
-  - vb
-  name: FromJSON(JsonReader, Model)
-  nameWithType: ImportResult.FromJSON(JsonReader, Model)
-  fullName: TimeCockpit.Data.Import.ImportResult.FromJSON(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    id: FromJSON
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/JsonConverters/ImportResult.cs
-    startLine: 123
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nReads a <see cref=\"!:ImportRequest\"></see> from a JSON reader.\n"
-  example: []
-  syntax:
-    content: public static ImportResult FromJSON(JsonReader reader, Model model)
-    parameters:
-    - id: reader
-      type: Newtonsoft.Json.JsonReader
-      description: the reader to read from.
-    - id: model
-      type: TimeCockpit.Data.DataModel.Model
-      description: the model used for deserialization.
-    return:
-      type: TimeCockpit.Data.Import.ImportResult
-      description: returns the read ImportRequest.
-    content.vb: Public Shared Function FromJSON(reader As JsonReader, model As Model) As ImportResult
-  overload: TimeCockpit.Data.Import.ImportResult.FromJSON*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -611,27 +562,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Import.ImportResult
-  commentId: T:TimeCockpit.Data.Import.ImportResult
-  parent: TimeCockpit.Data.Import
-  isExternal: false
-  name: ImportResult
-  nameWithType: ImportResult
-  fullName: TimeCockpit.Data.Import.ImportResult
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.Import.ImportResult.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.ImportResult.#ctor
-  isExternal: false
+  isExternal: true
   name: ImportResult
   nameWithType: ImportResult.ImportResult
   fullName: TimeCockpit.Data.Import.ImportResult.ImportResult
@@ -718,6 +655,7 @@ references:
     name: ImportMessage
     nameWithType: ImportMessage
     fullName: TimeCockpit.Data.Import.ImportMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -734,6 +672,7 @@ references:
     name: ImportMessage
     nameWithType: ImportMessage
     fullName: TimeCockpit.Data.Import.ImportMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -744,12 +683,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: TimeCockpit.Data
-  commentId: N:TimeCockpit.Data
-  isExternal: false
-  name: TimeCockpit.Data
-  nameWithType: TimeCockpit.Data
-  fullName: TimeCockpit.Data
 - uid: System.Collections.Generic.Dictionary`2
   commentId: T:System.Collections.Generic.Dictionary`2
   isExternal: true
@@ -803,7 +736,7 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
@@ -846,58 +779,31 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Import.ImportResult.CreatedCounts*
-  commentId: Overload:TimeCockpit.Data.Import.ImportResult.CreatedCounts
-  isExternal: false
-  name: CreatedCounts
-  nameWithType: ImportResult.CreatedCounts
-  fullName: TimeCockpit.Data.Import.ImportResult.CreatedCounts
-- uid: TimeCockpit.Data.Import.ImportResult.UpdatedCounts*
-  commentId: Overload:TimeCockpit.Data.Import.ImportResult.UpdatedCounts
-  isExternal: false
-  name: UpdatedCounts
-  nameWithType: ImportResult.UpdatedCounts
-  fullName: TimeCockpit.Data.Import.ImportResult.UpdatedCounts
-- uid: TimeCockpit.Data.Import.ImportResult.Messages*
-  commentId: Overload:TimeCockpit.Data.Import.ImportResult.Messages
-  isExternal: false
-  name: Messages
-  nameWithType: ImportResult.Messages
-  fullName: TimeCockpit.Data.Import.ImportResult.Messages
-- uid: TimeCockpit.Data.Import.ImportResult.Committed*
-  commentId: Overload:TimeCockpit.Data.Import.ImportResult.Committed
-  isExternal: false
-  name: Committed
-  nameWithType: ImportResult.Committed
-  fullName: TimeCockpit.Data.Import.ImportResult.Committed
 - uid: TimeCockpit.Data.Import.ImportResult.ToJSON*
   commentId: Overload:TimeCockpit.Data.Import.ImportResult.ToJSON
-  isExternal: false
+  isExternal: true
   name: ToJSON
   nameWithType: ImportResult.ToJSON
   fullName: TimeCockpit.Data.Import.ImportResult.ToJSON
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
   fullName: Newtonsoft.Json.JsonWriter
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
+- uid: TimeCockpit.Data.Import.ImportResult
+  commentId: T:TimeCockpit.Data.Import.ImportResult
+  parent: TimeCockpit.Data.Import
+  isExternal: true
+  name: ImportResult
+  nameWithType: ImportResult
+  fullName: TimeCockpit.Data.Import.ImportResult
 - uid: TimeCockpit.Data.Import.ImportResult.FromJSON*
   commentId: Overload:TimeCockpit.Data.Import.ImportResult.FromJSON
-  isExternal: false
+  isExternal: true
   name: FromJSON
   nameWithType: ImportResult.FromJSON
   fullName: TimeCockpit.Data.Import.ImportResult.FromJSON
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
@@ -905,13 +811,37 @@ references:
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.Import.ImportResult.CreatedCounts*
+  commentId: Overload:TimeCockpit.Data.Import.ImportResult.CreatedCounts
+  isExternal: true
+  name: CreatedCounts
+  nameWithType: ImportResult.CreatedCounts
+  fullName: TimeCockpit.Data.Import.ImportResult.CreatedCounts
+- uid: TimeCockpit.Data.Import.ImportResult.UpdatedCounts*
+  commentId: Overload:TimeCockpit.Data.Import.ImportResult.UpdatedCounts
+  isExternal: true
+  name: UpdatedCounts
+  nameWithType: ImportResult.UpdatedCounts
+  fullName: TimeCockpit.Data.Import.ImportResult.UpdatedCounts
+- uid: TimeCockpit.Data.Import.ImportResult.Messages*
+  commentId: Overload:TimeCockpit.Data.Import.ImportResult.Messages
+  isExternal: true
+  name: Messages
+  nameWithType: ImportResult.Messages
+  fullName: TimeCockpit.Data.Import.ImportResult.Messages
+- uid: TimeCockpit.Data.Import.ImportResult.Committed*
+  commentId: Overload:TimeCockpit.Data.Import.ImportResult.Committed
+  isExternal: true
+  name: Committed
+  nameWithType: ImportResult.Committed
+  fullName: TimeCockpit.Data.Import.ImportResult.Committed

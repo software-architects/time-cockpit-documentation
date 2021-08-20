@@ -17,24 +17,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.DeleteOperation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    id: DeleteOperation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    startLine: 14
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents a delete operation.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      public sealed class DeleteOperation : Operation
+    content: 'public sealed class DeleteOperation : Operation'
     content.vb: >-
-      <DataContract>
-
       Public NotInheritable Class DeleteOperation
           Inherits Operation
   inheritance:
@@ -49,10 +40,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - sealed
@@ -73,16 +60,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.DeleteOperation.DeleteOperation(TimeCockpit.Data.DataModel.ModelElement, TimeCockpit.Data.DataModel.ModelElement, TimeCockpit.Data.DataModel.Model)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    startLine: 33
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the DeleteOperation class.\n"
-  example: []
   syntax:
     content: public DeleteOperation(ModelElement element, ModelElement parent, Model model)
     parameters:
@@ -101,6 +84,39 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  commentId: M:TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  id: Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  parent: TimeCockpit.Data.DataModel.DeleteOperation
+  langs:
+  - csharp
+  - vb
+  name: Accept(OperationVisitor)
+  nameWithType: DeleteOperation.Accept(OperationVisitor)
+  fullName: TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nAccepts a visitor to dispatch by calling the corresponding visit call.\n"
+  syntax:
+    content: public override void Accept(OperationVisitor visitor)
+    parameters:
+    - id: visitor
+      type: TimeCockpit.Data.DataModel.OperationVisitor
+      description: the visitor to accept.
+    content.vb: Public Overrides Sub Accept(visitor As OperationVisitor)
+  overridden: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
+  overload: TimeCockpit.Data.DataModel.DeleteOperation.Accept*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
   commentId: P:TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
   id: ParentElement
@@ -113,33 +129,19 @@ items:
   fullName: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    id: ParentElement
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    startLine: 43
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets or sets the parent name of the <xref href=\"TimeCockpit.Data.DataModel.DeleteOperation\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
   syntax:
-    content: >-
-      [DataMember]
-
-      public ModelElement ParentElement { get; set; }
+    content: public ModelElement ParentElement { get; set; }
     parameters: []
     return:
       type: TimeCockpit.Data.DataModel.ModelElement
-    content.vb: >-
-      <DataMember>
-
-      Public Property ParentElement As ModelElement
+    content.vb: Public Property ParentElement As ModelElement
   overload: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -158,17 +160,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.DeleteOperation.Model
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    id: Model
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    startLine: 65
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets or sets the model on which the current delete operation was performed.\n"
   remarks: "\nThe model is needed for creating the sql drop statements. However, as both, \n<xref href=\"Element\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.DataModel.DeleteOperation.ParentElement\" data-throw-if-not-resolved=\"false\"></xref> are detached, we cannot\nderive the model from them. Therefore, we hold a reference to the model explicitely.\n"
-  example: []
   syntax:
     content: public Model Model { get; set; }
     parameters: []
@@ -182,47 +180,10 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
-  commentId: M:TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
-  id: Accept(TimeCockpit.Data.DataModel.OperationVisitor)
-  parent: TimeCockpit.Data.DataModel.DeleteOperation
-  langs:
-  - csharp
-  - vb
-  name: Accept(OperationVisitor)
-  nameWithType: DeleteOperation.Accept(OperationVisitor)
-  fullName: TimeCockpit.Data.DataModel.DeleteOperation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/DeleteOperation.cs
-    startLine: 82
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nAccepts a visitor to dispatch by calling the corresponding visit call.\n"
-  example: []
-  syntax:
-    content: public override void Accept(OperationVisitor visitor)
-    parameters:
-    - id: visitor
-      type: TimeCockpit.Data.DataModel.OperationVisitor
-      description: the visitor to accept.
-    content.vb: Public Overrides Sub Accept(visitor As OperationVisitor)
-  overridden: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
-  overload: TimeCockpit.Data.DataModel.DeleteOperation.Accept*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -236,14 +197,14 @@ references:
 - uid: TimeCockpit.Data.DataModel.Operation
   commentId: T:TimeCockpit.Data.DataModel.Operation
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Operation
   nameWithType: Operation
   fullName: TimeCockpit.Data.DataModel.Operation
 - uid: TimeCockpit.Data.DataModel.Operation.Element
   commentId: P:TimeCockpit.Data.DataModel.Operation.Element
   parent: TimeCockpit.Data.DataModel.Operation
-  isExternal: false
+  isExternal: true
   name: Element
   nameWithType: Operation.Element
   fullName: TimeCockpit.Data.DataModel.Operation.Element
@@ -528,57 +489,34 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.DataModel.ModelElement
-  commentId: T:TimeCockpit.Data.DataModel.ModelElement
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelElement
-  nameWithType: ModelElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: TimeCockpit.Data.DataModel.DeleteOperation.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.#ctor
-  isExternal: false
+  isExternal: true
   name: DeleteOperation
   nameWithType: DeleteOperation.DeleteOperation
   fullName: TimeCockpit.Data.DataModel.DeleteOperation.DeleteOperation
+- uid: TimeCockpit.Data.DataModel.ModelElement
+  commentId: T:TimeCockpit.Data.DataModel.ModelElement
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: ModelElement
+  nameWithType: ModelElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
-- uid: TimeCockpit.Data.DataModel.DeleteOperation
-  commentId: T:TimeCockpit.Data.DataModel.DeleteOperation
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: DeleteOperation
-  nameWithType: DeleteOperation
-  fullName: TimeCockpit.Data.DataModel.DeleteOperation
-- uid: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement*
-  commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
-  isExternal: false
-  name: ParentElement
-  nameWithType: DeleteOperation.ParentElement
-  fullName: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
-- uid: Element
-  commentId: M:Element
-- uid: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
-  commentId: P:TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
-- uid: TimeCockpit.Data.DataModel.DeleteOperation.Model*
-  commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.Model
-  isExternal: false
-  name: Model
-  nameWithType: DeleteOperation.Model
-  fullName: TimeCockpit.Data.DataModel.DeleteOperation.Model
 - uid: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
   commentId: M:TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
   parent: TimeCockpit.Data.DataModel.Operation
-  isExternal: false
+  isExternal: true
   name: Accept(OperationVisitor)
   nameWithType: Operation.Accept(OperationVisitor)
   fullName: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
@@ -587,6 +525,7 @@ references:
     name: Accept
     nameWithType: Operation.Accept
     fullName: TimeCockpit.Data.DataModel.Operation.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -594,6 +533,7 @@ references:
     name: OperationVisitor
     nameWithType: OperationVisitor
     fullName: TimeCockpit.Data.DataModel.OperationVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -602,6 +542,7 @@ references:
     name: Accept
     nameWithType: Operation.Accept
     fullName: TimeCockpit.Data.DataModel.Operation.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -609,19 +550,32 @@ references:
     name: OperationVisitor
     nameWithType: OperationVisitor
     fullName: TimeCockpit.Data.DataModel.OperationVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.DeleteOperation.Accept*
   commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: DeleteOperation.Accept
   fullName: TimeCockpit.Data.DataModel.DeleteOperation.Accept
 - uid: TimeCockpit.Data.DataModel.OperationVisitor
   commentId: T:TimeCockpit.Data.DataModel.OperationVisitor
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: OperationVisitor
   nameWithType: OperationVisitor
   fullName: TimeCockpit.Data.DataModel.OperationVisitor
+- uid: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement*
+  commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
+  isExternal: true
+  name: ParentElement
+  nameWithType: DeleteOperation.ParentElement
+  fullName: TimeCockpit.Data.DataModel.DeleteOperation.ParentElement
+- uid: TimeCockpit.Data.DataModel.DeleteOperation.Model*
+  commentId: Overload:TimeCockpit.Data.DataModel.DeleteOperation.Model
+  isExternal: true
+  name: Model
+  nameWithType: DeleteOperation.Model
+  fullName: TimeCockpit.Data.DataModel.DeleteOperation.Model

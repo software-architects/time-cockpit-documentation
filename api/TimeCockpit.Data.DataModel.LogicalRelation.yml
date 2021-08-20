@@ -22,29 +22,16 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: LogicalRelation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents a logical relation between two dimensions.\n"
   remarks: "\nLogical relations can either be based on an existing relation and a join condition\nor by just using a join condition.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public class LogicalRelation : RelationBase, IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, INullable
+    content: 'public class LogicalRelation : RelationBase, IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, INullable'
     content.vb: >-
-      <DataContract>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public Class LogicalRelation
           Inherits RelationBase
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo, INullable
@@ -60,11 +47,19 @@ items:
   - System.ComponentModel.IDataErrorInfo
   - TimeCockpit.Data.DataModel.INullable
   inheritedMembers:
-  - TimeCockpit.Data.DataModel.RelationBase.Permissions
-  - TimeCockpit.Data.DataModel.RelationBase.DataType
   - TimeCockpit.Data.DataModel.RelationBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
   - TimeCockpit.Data.DataModel.RelationBase.RemovePermissions
   - TimeCockpit.Data.DataModel.RelationBase.InitializeObject
+  - TimeCockpit.Data.DataModel.RelationBase.Permissions
+  - TimeCockpit.Data.DataModel.RelationBase.DataType
+  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.OnDeserializing(System.Runtime.Serialization.StreamingContext)
+  - TimeCockpit.Data.DataModel.ModelElement.Detach
+  - TimeCockpit.Data.DataModel.ModelElement.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   - TimeCockpit.Data.DataModel.ModelElement.ElementGuid
   - TimeCockpit.Data.DataModel.ModelElement.Name
   - TimeCockpit.Data.DataModel.ModelElement.Parent
@@ -85,17 +80,8 @@ items:
   - TimeCockpit.Data.DataModel.ModelElement.Ownership
   - TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
   - TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  - TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.OnDeserializing(System.Runtime.Serialization.StreamingContext)
-  - TimeCockpit.Data.DataModel.ModelElement.Detach
-  - TimeCockpit.Data.DataModel.ModelElement.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -106,15 +92,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - class
@@ -133,16 +110,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.LogicalRelation()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 41
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.DataModel.LogicalRelation\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public LogicalRelation()
     content.vb: Public Sub New
@@ -151,194 +124,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
-  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
-  id: IsNullable
-  parent: TimeCockpit.Data.DataModel.LogicalRelation
-  langs:
-  - csharp
-  - vb
-  name: IsNullable
-  nameWithType: LogicalRelation.IsNullable
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: IsNullable
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 65
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets a value indicating if the logical relation is nullable.\n"
-  remarks: "\nAlways returns true, setter does nothing.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public override bool IsNullable { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <JsonProperty>
-
-      Public Overrides Property IsNullable As Boolean
-  overridden: TimeCockpit.Data.DataModel.RelationBase.IsNullable
-  overload: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  - set
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.Condition
-  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.Condition
-  id: Condition
-  parent: TimeCockpit.Data.DataModel.LogicalRelation
-  langs:
-  - csharp
-  - vb
-  name: Condition
-  nameWithType: LogicalRelation.Condition
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Condition
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: Condition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 88
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets the condition constraining the relation.\n"
-  remarks: "\nThe condition can use the alias &quot;Current&quot; for addressing the current, source entity and\nthe alias &quot;Target&quot; for addressing the target entity the logical relation is pointing to.\nThis allows to create arbitrary correlations via non-relation guid properties, \ntext properties or even more complex expressions.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public string Condition { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <JsonProperty>
-
-      Public Property Condition As String
-  overload: TimeCockpit.Data.DataModel.LogicalRelation.Condition*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
-  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
-  id: CorrespondingRelation
-  parent: TimeCockpit.Data.DataModel.LogicalRelation
-  langs:
-  - csharp
-  - vb
-  name: CorrespondingRelation
-  nameWithType: LogicalRelation.CorrespondingRelation
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: CorrespondingRelation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 109
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets the physical relation this logical relation corresponds to.\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public Relation CorrespondingRelation { get; set; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.Relation
-    content.vb: >-
-      <JsonProperty>
-
-      Public Property CorrespondingRelation As Relation
-  overload: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation*
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.Target
-  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.Target
-  id: Target
-  parent: TimeCockpit.Data.DataModel.LogicalRelation
-  langs:
-  - csharp
-  - vb
-  name: Target
-  nameWithType: LogicalRelation.Target
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Target
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: Target
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 130
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets or sets the target of the relation.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      public override ModelEntityBase Target { get; set; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelEntityBase
-    content.vb: >-
-      <DataMember>
-
-      Public Overrides Property Target As ModelEntityBase
-  overridden: TimeCockpit.Data.DataModel.RelationBase.Target
-  overload: TimeCockpit.Data.DataModel.LogicalRelation.Target*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - override
-  - get
-  - set
-  modifiers.vb:
-  - Public
-  - Overrides
 - uid: TimeCockpit.Data.DataModel.LogicalRelation.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   commentId: M:TimeCockpit.Data.DataModel.LogicalRelation.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   id: Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
@@ -351,16 +136,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 149
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nAccepts a visitor dispatching the corresponding operation to the concrete type.\n"
-  example: []
   syntax:
     content: public override void Accept(ModelElementVisitor visitor)
     parameters:
@@ -388,16 +169,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.ShallowCopy()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: ShallowCopy
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 155
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nPerforms a shallow copy of the current <xref href=\"TimeCockpit.Data.DataModel.RelationBase\" data-throw-if-not-resolved=\"false\"></xref>/the derived class.\n"
-  example: []
   syntax:
     content: public override RelationBase ShallowCopy()
     return:
@@ -424,16 +201,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.ShallowCopy(System.String, TimeCockpit.Data.DataModel.PersistBehavior, TimeCockpit.Data.DataModel.Ownership, System.Boolean, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: ShallowCopy
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 161
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nPerforms a shallow copy of the current <xref href=\"TimeCockpit.Data.DataModel.RelationBase\" data-throw-if-not-resolved=\"false\"></xref>/the derived class.\n"
-  example: []
   syntax:
     content: public override RelationBase ShallowCopy(string name, PersistBehavior persistBehavior, Ownership ownership, bool ignorePermissions = false, bool ignoreDefaultValues = false)
     parameters:
@@ -476,16 +249,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    id: SetPersistBehavior
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/LogicalRelation.cs
-    startLine: 175
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nSets the persist behavior of the <xref href=\"TimeCockpit.Data.DataModel.LogicalRelation\" data-throw-if-not-resolved=\"false\"></xref>. Prevents setting\n<xref href=\"PersistBehavior.Full\" data-throw-if-not-resolved=\"false\"></xref> for logical relations.\n"
-  example: []
   syntax:
     content: protected override void SetPersistBehavior(PersistBehavior persistBehavior)
     parameters:
@@ -501,10 +270,142 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
+  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
+  id: IsNullable
+  parent: TimeCockpit.Data.DataModel.LogicalRelation
+  langs:
+  - csharp
+  - vb
+  name: IsNullable
+  nameWithType: LogicalRelation.IsNullable
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets a value indicating if the logical relation is nullable.\n"
+  remarks: "\nAlways returns true, setter does nothing.\n"
+  syntax:
+    content: public override bool IsNullable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Property IsNullable As Boolean
+  overridden: TimeCockpit.Data.DataModel.RelationBase.IsNullable
+  overload: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.Condition
+  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.Condition
+  id: Condition
+  parent: TimeCockpit.Data.DataModel.LogicalRelation
+  langs:
+  - csharp
+  - vb
+  name: Condition
+  nameWithType: LogicalRelation.Condition
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Condition
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the condition constraining the relation.\n"
+  remarks: "\nThe condition can use the alias &quot;Current&quot; for addressing the current, source entity and\nthe alias &quot;Target&quot; for addressing the target entity the logical relation is pointing to.\nThis allows to create arbitrary correlations via non-relation guid properties, \ntext properties or even more complex expressions.\n"
+  syntax:
+    content: public string Condition { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Condition As String
+  overload: TimeCockpit.Data.DataModel.LogicalRelation.Condition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
+  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
+  id: CorrespondingRelation
+  parent: TimeCockpit.Data.DataModel.LogicalRelation
+  langs:
+  - csharp
+  - vb
+  name: CorrespondingRelation
+  nameWithType: LogicalRelation.CorrespondingRelation
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the physical relation this logical relation corresponds to.\n"
+  syntax:
+    content: public Relation CorrespondingRelation { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.Relation
+    content.vb: Public Property CorrespondingRelation As Relation
+  overload: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.Target
+  commentId: P:TimeCockpit.Data.DataModel.LogicalRelation.Target
+  id: Target
+  parent: TimeCockpit.Data.DataModel.LogicalRelation
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: LogicalRelation.Target
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Target
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets or sets the target of the relation.\n"
+  syntax:
+    content: public override ModelEntityBase Target { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    content.vb: Public Overrides Property Target As ModelEntityBase
+  overridden: TimeCockpit.Data.DataModel.RelationBase.Target
+  overload: TimeCockpit.Data.DataModel.LogicalRelation.Target*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -518,48 +419,42 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.ModelElement
   commentId: T:TimeCockpit.Data.DataModel.ModelElement
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElement
   nameWithType: ModelElement
   fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: TimeCockpit.Data.DataModel.RelationBase
   commentId: T:TimeCockpit.Data.DataModel.RelationBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: RelationBase
   nameWithType: RelationBase
   fullName: TimeCockpit.Data.DataModel.RelationBase
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: System.ComponentModel.IDataErrorInfo
-  commentId: T:System.ComponentModel.IDataErrorInfo
-  parent: System.ComponentModel
   isExternal: true
   name: IDataErrorInfo
   nameWithType: IDataErrorInfo
@@ -567,28 +462,14 @@ references:
 - uid: TimeCockpit.Data.DataModel.INullable
   commentId: T:TimeCockpit.Data.DataModel.INullable
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: INullable
   nameWithType: INullable
   fullName: TimeCockpit.Data.DataModel.INullable
-- uid: TimeCockpit.Data.DataModel.RelationBase.Permissions
-  commentId: P:TimeCockpit.Data.DataModel.RelationBase.Permissions
-  parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
-  name: Permissions
-  nameWithType: RelationBase.Permissions
-  fullName: TimeCockpit.Data.DataModel.RelationBase.Permissions
-- uid: TimeCockpit.Data.DataModel.RelationBase.DataType
-  commentId: P:TimeCockpit.Data.DataModel.RelationBase.DataType
-  parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
-  name: DataType
-  nameWithType: RelationBase.DataType
-  fullName: TimeCockpit.Data.DataModel.RelationBase.DataType
 - uid: TimeCockpit.Data.DataModel.RelationBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
   commentId: M:TimeCockpit.Data.DataModel.RelationBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
   parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
+  isExternal: true
   name: Attach(ModelElement)
   nameWithType: RelationBase.Attach(ModelElement)
   fullName: TimeCockpit.Data.DataModel.RelationBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
@@ -597,6 +478,7 @@ references:
     name: Attach
     nameWithType: RelationBase.Attach
     fullName: TimeCockpit.Data.DataModel.RelationBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -604,6 +486,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -612,6 +495,7 @@ references:
     name: Attach
     nameWithType: RelationBase.Attach
     fullName: TimeCockpit.Data.DataModel.RelationBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -619,13 +503,14 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.RelationBase.RemovePermissions
   commentId: M:TimeCockpit.Data.DataModel.RelationBase.RemovePermissions
   parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
+  isExternal: true
   name: RemovePermissions()
   nameWithType: RelationBase.RemovePermissions()
   fullName: TimeCockpit.Data.DataModel.RelationBase.RemovePermissions()
@@ -634,6 +519,7 @@ references:
     name: RemovePermissions
     nameWithType: RelationBase.RemovePermissions
     fullName: TimeCockpit.Data.DataModel.RelationBase.RemovePermissions
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -645,6 +531,7 @@ references:
     name: RemovePermissions
     nameWithType: RelationBase.RemovePermissions
     fullName: TimeCockpit.Data.DataModel.RelationBase.RemovePermissions
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -654,7 +541,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.RelationBase.InitializeObject
   commentId: M:TimeCockpit.Data.DataModel.RelationBase.InitializeObject
   parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
+  isExternal: true
   name: InitializeObject()
   nameWithType: RelationBase.InitializeObject()
   fullName: TimeCockpit.Data.DataModel.RelationBase.InitializeObject()
@@ -663,6 +550,7 @@ references:
     name: InitializeObject
     nameWithType: RelationBase.InitializeObject
     fullName: TimeCockpit.Data.DataModel.RelationBase.InitializeObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -674,194 +562,27 @@ references:
     name: InitializeObject
     nameWithType: RelationBase.InitializeObject
     fullName: TimeCockpit.Data.DataModel.RelationBase.InitializeObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ElementGuid
-  nameWithType: ModelElement.ElementGuid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Name
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Name
-  nameWithType: ModelElement.Name
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
-- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Parent
-  nameWithType: ModelElement.Parent
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
-- uid: TimeCockpit.Data.DataModel.ModelElement.Children
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Children
-  nameWithType: ModelElement.Children
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
-- uid: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: PersistBehavior
-  nameWithType: ModelElement.PersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsFullPersistBehavior
-  nameWithType: ModelElement.IsFullPersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsNonePersistBehavior
-  nameWithType: ModelElement.IsNonePersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemElement
-  nameWithType: ModelElement.IsSystemElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsApplicationSpecificElement
-  nameWithType: ModelElement.IsApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsUserElement
-  nameWithType: ModelElement.IsUserElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemOrApplicationSpecificElement
-  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: InvariantFriendlyName
-  nameWithType: ModelElement.InvariantFriendlyName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: CreationVersion
-  nameWithType: ModelElement.CreationVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: LastUpdateVersion
-  nameWithType: ModelElement.LastUpdateVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.Error
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Error
-  nameWithType: ModelElement.Error
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
-- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ErrorSummary
-  nameWithType: ModelElement.ErrorSummary
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsValid
-  nameWithType: ModelElement.IsValid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Ownership
-  nameWithType: ModelElement.Ownership
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
-- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: OwnershipPrefix
-  nameWithType: ModelElement.OwnershipPrefix
-  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: NonPrefixedName
-  nameWithType: ModelElement.NonPrefixedName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-- uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  parent: TimeCockpit.Data.DataModel.ModelElement
+- uid: TimeCockpit.Data.DataModel.RelationBase.Permissions
+  commentId: P:TimeCockpit.Data.DataModel.RelationBase.Permissions
+  parent: TimeCockpit.Data.DataModel.RelationBase
   isExternal: true
-  name: IDataErrorInfo.Item[String]
-  nameWithType: ModelElement.IDataErrorInfo.Item[String]
-  fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item[System.String]
-  nameWithType.vb: ModelElement.System.ComponentModel.IDataErrorInfo.Item(String)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item(System.String)
-  name.vb: System.ComponentModel.IDataErrorInfo.Item(String)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: IDataErrorInfo.Item
-    nameWithType: ModelElement.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: '['
-    nameWithType: '['
-    fullName: '['
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ']'
-    nameWithType: ']'
-    fullName: ']'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: System.ComponentModel.IDataErrorInfo.Item
-    nameWithType: ModelElement.System.ComponentModel.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: Permissions
+  nameWithType: RelationBase.Permissions
+  fullName: TimeCockpit.Data.DataModel.RelationBase.Permissions
+- uid: TimeCockpit.Data.DataModel.RelationBase.DataType
+  commentId: P:TimeCockpit.Data.DataModel.RelationBase.DataType
+  parent: TimeCockpit.Data.DataModel.RelationBase
+  isExternal: true
+  name: DataType
+  nameWithType: RelationBase.DataType
+  fullName: TimeCockpit.Data.DataModel.RelationBase.DataType
 - uid: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   parent: TimeCockpit.Data.DataModel.ModelElement
@@ -874,6 +595,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -890,6 +612,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -913,6 +636,7 @@ references:
     name: OnDeserializing
     nameWithType: ModelElement.OnDeserializing
     fullName: TimeCockpit.Data.DataModel.ModelElement.OnDeserializing
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -929,6 +653,7 @@ references:
     name: OnDeserializing
     nameWithType: ModelElement.OnDeserializing
     fullName: TimeCockpit.Data.DataModel.ModelElement.OnDeserializing
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -943,7 +668,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.Detach
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Detach
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Detach()
   nameWithType: ModelElement.Detach()
   fullName: TimeCockpit.Data.DataModel.ModelElement.Detach()
@@ -952,6 +677,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -963,6 +689,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -984,6 +711,7 @@ references:
     name: Validate
     nameWithType: ModelElement.Validate
     fullName: TimeCockpit.Data.DataModel.ModelElement.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -999,6 +727,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1018,6 +747,7 @@ references:
     name: Validate
     nameWithType: ModelElement.Validate
     fullName: TimeCockpit.Data.DataModel.ModelElement.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1033,6 +763,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1059,6 +790,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1075,6 +807,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1098,6 +831,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1114,6 +848,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1137,6 +872,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1153,6 +889,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1167,7 +904,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetOwnership(Ownership)
   nameWithType: ModelElement.SetOwnership(Ownership)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
@@ -1176,6 +913,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1183,6 +921,7 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1191,6 +930,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1198,16 +938,150 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ElementGuid
+  nameWithType: ModelElement.ElementGuid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Name
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Name
+  nameWithType: ModelElement.Name
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
+- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Parent
+  nameWithType: ModelElement.Parent
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
+- uid: TimeCockpit.Data.DataModel.ModelElement.Children
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Children
+  nameWithType: ModelElement.Children
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
+- uid: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: PersistBehavior
+  nameWithType: ModelElement.PersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.PersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsFullPersistBehavior
+  nameWithType: ModelElement.IsFullPersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsNonePersistBehavior
+  nameWithType: ModelElement.IsNonePersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemElement
+  nameWithType: ModelElement.IsSystemElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsApplicationSpecificElement
+  nameWithType: ModelElement.IsApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsUserElement
+  nameWithType: ModelElement.IsUserElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemOrApplicationSpecificElement
+  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: InvariantFriendlyName
+  nameWithType: ModelElement.InvariantFriendlyName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: CreationVersion
+  nameWithType: ModelElement.CreationVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: LastUpdateVersion
+  nameWithType: ModelElement.LastUpdateVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.Error
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Error
+  nameWithType: ModelElement.Error
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
+- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ErrorSummary
+  nameWithType: ModelElement.ErrorSummary
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsValid
+  nameWithType: ModelElement.IsValid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Ownership
+  nameWithType: ModelElement.Ownership
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
+- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: OwnershipPrefix
+  nameWithType: ModelElement.OwnershipPrefix
+  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: NonPrefixedName
+  nameWithType: ModelElement.NonPrefixedName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -1220,6 +1094,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1236,6 +1111,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1247,6 +1123,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -1259,6 +1142,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1275,6 +1159,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1298,6 +1183,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1322,6 +1208,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1353,6 +1240,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1369,6 +1257,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1661,111 +1550,26 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
-- uid: TimeCockpit.Data.DataModel.LogicalRelation
-  commentId: T:TimeCockpit.Data.DataModel.LogicalRelation
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: LogicalRelation
-  nameWithType: LogicalRelation
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation
 - uid: TimeCockpit.Data.DataModel.LogicalRelation.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.#ctor
-  isExternal: false
+  isExternal: true
   name: LogicalRelation
   nameWithType: LogicalRelation.LogicalRelation
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.LogicalRelation
-- uid: TimeCockpit.Data.DataModel.RelationBase.IsNullable
-  commentId: P:TimeCockpit.Data.DataModel.RelationBase.IsNullable
-  parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
-  name: IsNullable
-  nameWithType: RelationBase.IsNullable
-  fullName: TimeCockpit.Data.DataModel.RelationBase.IsNullable
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable*
-  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
-  isExternal: false
-  name: IsNullable
-  nameWithType: LogicalRelation.IsNullable
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.Condition*
-  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.Condition
-  isExternal: false
-  name: Condition
-  nameWithType: LogicalRelation.Condition
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Condition
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation*
-  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
-  isExternal: false
-  name: CorrespondingRelation
-  nameWithType: LogicalRelation.CorrespondingRelation
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
-- uid: TimeCockpit.Data.DataModel.Relation
-  commentId: T:TimeCockpit.Data.DataModel.Relation
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Relation
-  nameWithType: Relation
-  fullName: TimeCockpit.Data.DataModel.Relation
-- uid: TimeCockpit.Data.DataModel.RelationBase.Target
-  commentId: P:TimeCockpit.Data.DataModel.RelationBase.Target
-  parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
-  name: Target
-  nameWithType: RelationBase.Target
-  fullName: TimeCockpit.Data.DataModel.RelationBase.Target
-- uid: TimeCockpit.Data.DataModel.LogicalRelation.Target*
-  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.Target
-  isExternal: false
-  name: Target
-  nameWithType: LogicalRelation.Target
-  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Target
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntityBase
-  nameWithType: ModelEntityBase
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Accept(ModelElementVisitor)
   nameWithType: ModelElement.Accept(ModelElementVisitor)
   fullName: TimeCockpit.Data.DataModel.ModelElement.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
@@ -1774,6 +1578,7 @@ references:
     name: Accept
     nameWithType: ModelElement.Accept
     fullName: TimeCockpit.Data.DataModel.ModelElement.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1781,6 +1586,7 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1789,6 +1595,7 @@ references:
     name: Accept
     nameWithType: ModelElement.Accept
     fullName: TimeCockpit.Data.DataModel.ModelElement.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1796,26 +1603,27 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.LogicalRelation.Accept*
   commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: LogicalRelation.Accept
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.Accept
 - uid: TimeCockpit.Data.DataModel.ModelElementVisitor
   commentId: T:TimeCockpit.Data.DataModel.ModelElementVisitor
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElementVisitor
   nameWithType: ModelElementVisitor
   fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
 - uid: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
   commentId: M:TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
   parent: TimeCockpit.Data.DataModel.RelationBase
-  isExternal: false
+  isExternal: true
   name: ShallowCopy()
   nameWithType: RelationBase.ShallowCopy()
   fullName: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy()
@@ -1824,6 +1632,7 @@ references:
     name: ShallowCopy
     nameWithType: RelationBase.ShallowCopy
     fullName: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1835,6 +1644,7 @@ references:
     name: ShallowCopy
     nameWithType: RelationBase.ShallowCopy
     fullName: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1843,7 +1653,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.LogicalRelation.ShallowCopy*
   commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.ShallowCopy
-  isExternal: false
+  isExternal: true
   name: ShallowCopy
   nameWithType: LogicalRelation.ShallowCopy
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.ShallowCopy
@@ -1859,6 +1669,7 @@ references:
     name: ShallowCopy
     nameWithType: RelationBase.ShallowCopy
     fullName: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1874,6 +1685,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1881,6 +1693,7 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1905,6 +1718,7 @@ references:
     name: ShallowCopy
     nameWithType: RelationBase.ShallowCopy
     fullName: TimeCockpit.Data.DataModel.RelationBase.ShallowCopy
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1920,6 +1734,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1927,6 +1742,7 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1946,30 +1762,38 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: TimeCockpit.Data.DataModel.PersistBehavior
   commentId: T:TimeCockpit.Data.DataModel.PersistBehavior
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: PersistBehavior
   nameWithType: PersistBehavior
   fullName: TimeCockpit.Data.DataModel.PersistBehavior
 - uid: TimeCockpit.Data.DataModel.Ownership
   commentId: T:TimeCockpit.Data.DataModel.Ownership
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Ownership
   nameWithType: Ownership
   fullName: TimeCockpit.Data.DataModel.Ownership
-- uid: PersistBehavior.Full
-  commentId: M:PersistBehavior.Full
-- uid: PersistBehavior.MetadataOnly
-  commentId: M:PersistBehavior.MetadataOnly
-- uid: PersistBehavior.None
-  commentId: M:PersistBehavior.None
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetPersistBehavior(PersistBehavior)
   nameWithType: ModelElement.SetPersistBehavior(PersistBehavior)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
@@ -1978,6 +1802,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1985,6 +1810,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1993,6 +1819,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2000,12 +1827,65 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.LogicalRelation.SetPersistBehavior*
   commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.SetPersistBehavior
-  isExternal: false
+  isExternal: true
   name: SetPersistBehavior
   nameWithType: LogicalRelation.SetPersistBehavior
   fullName: TimeCockpit.Data.DataModel.LogicalRelation.SetPersistBehavior
+- uid: TimeCockpit.Data.DataModel.RelationBase.IsNullable
+  commentId: P:TimeCockpit.Data.DataModel.RelationBase.IsNullable
+  parent: TimeCockpit.Data.DataModel.RelationBase
+  isExternal: true
+  name: IsNullable
+  nameWithType: RelationBase.IsNullable
+  fullName: TimeCockpit.Data.DataModel.RelationBase.IsNullable
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable*
+  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
+  isExternal: true
+  name: IsNullable
+  nameWithType: LogicalRelation.IsNullable
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.IsNullable
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.Condition*
+  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.Condition
+  isExternal: true
+  name: Condition
+  nameWithType: LogicalRelation.Condition
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Condition
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation*
+  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
+  isExternal: true
+  name: CorrespondingRelation
+  nameWithType: LogicalRelation.CorrespondingRelation
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.CorrespondingRelation
+- uid: TimeCockpit.Data.DataModel.Relation
+  commentId: T:TimeCockpit.Data.DataModel.Relation
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: Relation
+  nameWithType: Relation
+  fullName: TimeCockpit.Data.DataModel.Relation
+- uid: TimeCockpit.Data.DataModel.RelationBase.Target
+  commentId: P:TimeCockpit.Data.DataModel.RelationBase.Target
+  parent: TimeCockpit.Data.DataModel.RelationBase
+  isExternal: true
+  name: Target
+  nameWithType: RelationBase.Target
+  fullName: TimeCockpit.Data.DataModel.RelationBase.Target
+- uid: TimeCockpit.Data.DataModel.LogicalRelation.Target*
+  commentId: Overload:TimeCockpit.Data.DataModel.LogicalRelation.Target
+  isExternal: true
+  name: Target
+  nameWithType: LogicalRelation.Target
+  fullName: TimeCockpit.Data.DataModel.LogicalRelation.Target
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase

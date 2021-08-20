@@ -6,6 +6,8 @@
     name: ActionResult
   - uid: TimeCockpit.Data.ChangeTracker
     name: ChangeTracker
+  - uid: TimeCockpit.Data.DatabaseOperation
+    name: DatabaseOperation
   - uid: TimeCockpit.Data.DataContext
     name: DataContext
   - uid: TimeCockpit.Data.DataContextScriptExtensions
@@ -68,8 +70,6 @@
     name: StreamExtensions
   - uid: TimeCockpit.Data.StringExtension
     name: StringExtension
-  - uid: TimeCockpit.Data.SyncSettings
-    name: SyncSettings
   - uid: TimeCockpit.Data.TypedEntityObjectList
     name: TypedEntityObjectList
   - uid: TimeCockpit.Data.TypeExtension
@@ -106,10 +106,6 @@
     name: DbClient.BlobGarbageCleanupWorkerFinished
   - uid: TimeCockpit.Data.Database.DbClientSettings
     name: DbClientSettings
-  - uid: TimeCockpit.Data.Database.DbCommandExtensions
-    name: DbCommandExtensions
-  - uid: TimeCockpit.Data.Database.DbConnectionExtension
-    name: DbConnectionExtension
   - uid: TimeCockpit.Data.Database.ForeignKeyDeleteConflictException
     name: ForeignKeyDeleteConflictException
   - uid: TimeCockpit.Data.Database.ForeignKeyException
@@ -128,8 +124,6 @@
     name: SelectSettings
   - uid: TimeCockpit.Data.Database.SlimDataTable
     name: SlimDataTable
-  - uid: TimeCockpit.Data.Database.SqlCompactDbClient
-    name: SqlCompactDbClient
   - uid: TimeCockpit.Data.Database.SqlDbClient
     name: SqlDbClient
   - uid: TimeCockpit.Data.Database.SyncClient
@@ -377,6 +371,10 @@
     name: AssemblyBinding
   - uid: TimeCockpit.Data.DataModel.Actions.ExecutionContext
     name: ExecutionContext
+  - uid: TimeCockpit.Data.DataModel.Actions.FileActionResult
+    name: FileActionResult
+  - uid: TimeCockpit.Data.DataModel.Actions.IActionResult
+    name: IActionResult
   - uid: TimeCockpit.Data.DataModel.Actions.IronPythonBinding
     name: IronPythonBinding
   - uid: TimeCockpit.Data.DataModel.Actions.IronPythonCondition
@@ -645,6 +643,8 @@
     name: ImportBookDefinition
   - uid: TimeCockpit.Data.Import.ImportColumnDefinition
     name: ImportColumnDefinition
+  - uid: TimeCockpit.Data.Import.ImportColumnType
+    name: ImportColumnType
   - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder
     name: ImportDefinitionBuilder
   - uid: TimeCockpit.Data.Import.ImportEngine
@@ -894,120 +894,6 @@
     name: QueryLanguageLexer
   - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser
     name: QueryLanguageParser
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.additiveExpression_return
-    name: QueryLanguageParser.additiveExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.aggregationFunctionCall_return
-    name: QueryLanguageParser.aggregationFunctionCall_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.allIncludeClause_return
-    name: QueryLanguageParser.allIncludeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.atomicExpression_return
-    name: QueryLanguageParser.atomicExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.commonIncludeClause_return
-    name: QueryLanguageParser.commonIncludeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.conditionalAndExpression_return
-    name: QueryLanguageParser.conditionalAndExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.conditionalIncludeClause_return
-    name: QueryLanguageParser.conditionalIncludeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.conditionalOrExpression_return
-    name: QueryLanguageParser.conditionalOrExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.environmentAccess_return
-    name: QueryLanguageParser.environmentAccess_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.equalityExpression_return
-    name: QueryLanguageParser.equalityExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.expression_return
-    name: QueryLanguageParser.expression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.fromClause_return
-    name: QueryLanguageParser.fromClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.functionCall_return
-    name: QueryLanguageParser.functionCall_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.functionNameLiteral_return
-    name: QueryLanguageParser.functionNameLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.hasChangedFunction_return
-    name: QueryLanguageParser.hasChangedFunction_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.includeClause_return
-    name: QueryLanguageParser.includeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.inExpression_return
-    name: QueryLanguageParser.inExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.likeExpression_return
-    name: QueryLanguageParser.likeExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.literal_return
-    name: QueryLanguageParser.literal_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.logicalOperator_return
-    name: QueryLanguageParser.logicalOperator_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.memberAccess_return
-    name: QueryLanguageParser.memberAccess_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.memberDeclaratorLiteral_return
-    name: QueryLanguageParser.memberDeclaratorLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.mixedIncludeClause_return
-    name: QueryLanguageParser.mixedIncludeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.multiplicativeExpression_return
-    name: QueryLanguageParser.multiplicativeExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.nestedFromClause_return
-    name: QueryLanguageParser.nestedFromClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.nestedSelectClause_return
-    name: QueryLanguageParser.nestedSelectClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.nestedStatement_return
-    name: QueryLanguageParser.nestedStatement_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.notInExpression_return
-    name: QueryLanguageParser.notInExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.notInLiteral_return
-    name: QueryLanguageParser.notInLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.notLikeLiteral_return
-    name: QueryLanguageParser.notLikeLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.number_return
-    name: QueryLanguageParser.number_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.orderByClause_return
-    name: QueryLanguageParser.orderByClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.orderByExpression_return
-    name: QueryLanguageParser.orderByExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.orderByLiteral_return
-    name: QueryLanguageParser.orderByLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.parameterAccess_return
-    name: QueryLanguageParser.parameterAccess_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.parameterAggrFunction_return
-    name: QueryLanguageParser.parameterAggrFunction_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.parameterLessAggrFunction_return
-    name: QueryLanguageParser.parameterLessAggrFunction_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.parenthesizedExpression_return
-    name: QueryLanguageParser.parenthesizedExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.queryOption_return
-    name: QueryLanguageParser.queryOption_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.relationalExpression_return
-    name: QueryLanguageParser.relationalExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.searchCondition_return
-    name: QueryLanguageParser.searchCondition_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.selectClause_return
-    name: QueryLanguageParser.selectClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.selectListLiteral_return
-    name: QueryLanguageParser.selectListLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.set_return
-    name: QueryLanguageParser.set_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.skipClause_return
-    name: QueryLanguageParser.skipClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.sortLiteral_return
-    name: QueryLanguageParser.sortLiteral_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.source_return
-    name: QueryLanguageParser.source_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.standAloneExpression_return
-    name: QueryLanguageParser.standAloneExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.statement_return
-    name: QueryLanguageParser.statement_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.subSearchCondition_return
-    name: QueryLanguageParser.subSearchCondition_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.takeClause_return
-    name: QueryLanguageParser.takeClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.topClause_return
-    name: QueryLanguageParser.topClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.unary_operator_return
-    name: QueryLanguageParser.unary_operator_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.unaryExpression_return
-    name: QueryLanguageParser.unaryExpression_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.unsigned_number_return
-    name: QueryLanguageParser.unsigned_number_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.whereClause_return
-    name: QueryLanguageParser.whereClause_return
-  - uid: TimeCockpit.Data.QueryLanguage.QueryLanguageParser.withClause_return
-    name: QueryLanguageParser.withClause_return
   - uid: TimeCockpit.Data.QueryLanguage.QueryParameter
     name: QueryParameter
   - uid: TimeCockpit.Data.QueryLanguage.SemanticException
@@ -1016,8 +902,6 @@
     name: SemanticToSyntaxAST
   - uid: TimeCockpit.Data.QueryLanguage.SortOrder
     name: SortOrder
-  - uid: TimeCockpit.Data.QueryLanguage.SyncException
-    name: SyncException
   - uid: TimeCockpit.Data.QueryLanguage.SyntaxToSemanticAST
     name: SyntaxToSemanticAST
   - uid: TimeCockpit.Data.QueryLanguage.TCQLStringHelper
@@ -1151,6 +1035,18 @@
   items:
   - uid: TimeCockpit.Data.RequestHelper.RestRequestStringBuilder
     name: RestRequestStringBuilder
+- uid: TimeCockpit.Data.RoutingService
+  name: TimeCockpit.Data.RoutingService
+  items:
+  - uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+    name: ManagementServiceProxy
+- uid: TimeCockpit.Data.Scripting
+  name: TimeCockpit.Data.Scripting
+  items:
+  - uid: TimeCockpit.Data.Scripting.DebugSettings
+    name: DebugSettings
+  - uid: TimeCockpit.Data.Scripting.ExecutionInfo
+    name: ExecutionInfo
 - uid: TimeCockpit.Data.Security
   name: TimeCockpit.Data.Security
   items:
@@ -1171,16 +1067,10 @@
 - uid: TimeCockpit.Data.Sync
   name: TimeCockpit.Data.Sync
   items:
-  - uid: TimeCockpit.Data.Sync.DeprecatedSyncClientException
-    name: DeprecatedSyncClientException
   - uid: TimeCockpit.Data.Sync.SyncContent
     name: SyncContent
-  - uid: TimeCockpit.Data.Sync.SyncQueryDefinition
-    name: SyncQueryDefinition
   - uid: TimeCockpit.Data.Sync.SyncStep
     name: SyncStep
-  - uid: TimeCockpit.Data.Sync.SyncTable
-    name: SyncTable
   - uid: TimeCockpit.Data.Sync.TimeCockpitSyncProgressEventArgs
     name: TimeCockpitSyncProgressEventArgs
 - uid: TimeCockpit.Data.UndoRedo
@@ -1211,3 +1101,12 @@
     name: BatchMode
   - uid: TimeCockpit.UI.Common.Version.FeatureAttribute
     name: FeatureAttribute
+  - uid: TimeCockpit.UI.Common.Version.FeatureProviderHelper
+    name: FeatureProviderHelper
+  - uid: TimeCockpit.UI.Common.Version.FeatureProviderParameters
+    name: FeatureProviderParameters
+- uid: TimeCockpit.UI.Version.Common
+  name: TimeCockpit.UI.Version.Common
+  items:
+  - uid: TimeCockpit.UI.Version.Common.IFeatureProvider
+    name: IFeatureProvider

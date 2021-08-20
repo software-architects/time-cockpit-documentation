@@ -18,16 +18,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClient
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: ImportServiceClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 20
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclient to the import service.\n"
-  example: []
   syntax:
     content: public abstract class ImportServiceClient
     content.vb: Public MustInherit Class ImportServiceClient
@@ -63,63 +58,22 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClient.ImportServiceClient(TimeCockpit.Data.DataContext)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 26
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the ImportServiceClient class.\n"
-  example: []
   syntax:
     content: public ImportServiceClient(DataContext dataContext)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
-      description: the data context that the client should use for saving imported values.
     content.vb: Public Sub New(dataContext As DataContext)
   overload: TimeCockpit.Data.Import.ImportServiceClient.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Import.ImportServiceClient.DataContext
-  commentId: P:TimeCockpit.Data.Import.ImportServiceClient.DataContext
-  id: DataContext
-  parent: TimeCockpit.Data.Import.ImportServiceClient
-  langs:
-  - csharp
-  - vb
-  name: DataContext
-  nameWithType: ImportServiceClient.DataContext
-  fullName: TimeCockpit.Data.Import.ImportServiceClient.DataContext
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: DataContext
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 34
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nGets the reference to the datacontext to use.\n"
-  example: []
-  syntax:
-    content: protected DataContext DataContext { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataContext
-    content.vb: Protected ReadOnly Property DataContext As DataContext
-  overload: TimeCockpit.Data.Import.ImportServiceClient.DataContext*
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
 - uid: TimeCockpit.Data.Import.ImportServiceClient.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String)
   commentId: M:TimeCockpit.Data.Import.ImportServiceClient.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String)
   id: Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String)
@@ -132,40 +86,28 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClient.Import(System.String, System.Byte[], System.String, System.Boolean, System.Guid, System.Nullable<System.Guid>, System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: Import
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 46
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nimports data from the source data.\n"
-  example: []
   syntax:
     content: public abstract void Import(string importDefinition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, Guid importTaskId, Guid? definitionId, string definitionName)
     parameters:
     - id: importDefinition
       type: System.String
-      description: the definition of the import.
     - id: sourceData
       type: System.Byte[]
-      description: the source data to import from.
     - id: sourceFileName
       type: System.String
-      description: The name of the source file.
     - id: saveOnSuccess
       type: System.Boolean
-      description: true if the result should be saved if all rows imported successfully.
     - id: importTaskId
       type: System.Guid
-      description: guid of the associated import task.
     - id: definitionId
       type: System.Nullable{System.Guid}
-      description: the guid of the definition object, if one was used.
     - id: definitionName
       type: System.String
-      description: the name of the definition that is imported.
     content.vb: Public MustOverride Sub Import(importDefinition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, importTaskId As Guid, definitionId As Guid?, definitionName As String)
   overload: TimeCockpit.Data.Import.ImportServiceClient.Import*
   nameWithType.vb: ImportServiceClient.Import(String, Byte(), String, Boolean, Guid, Nullable(Of Guid), String)
@@ -189,37 +131,26 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData(System.String, System.Byte[], System.Int32, System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: LoadPreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 57
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nloads the preview data.\n"
-  example: []
   syntax:
     content: public abstract IObservable<PreviewWorkbook> LoadPreviewData(string sourceProvider, byte[] sourceData, int sampleSize, Dictionary<string, int> headerRowPositions = null, int defaultHeaderRowNumber = 1)
     parameters:
     - id: sourceProvider
       type: System.String
-      description: the source provider to use (xlsx or csv, etc.)
     - id: sourceData
       type: System.Byte[]
-      description: the source data to load from.
     - id: sampleSize
       type: System.Int32
-      description: the number of rows to load for each column.
     - id: headerRowPositions
       type: System.Collections.Generic.Dictionary{System.String,System.Int32}
-      description: a dictionary holding offsets (optional).
     - id: defaultHeaderRowNumber
       type: System.Int32
-      description: The default row number, in case no row number is passed for the worksheet with <code data-dev-comment-type="paramref" class="paramref">headerRowOffsets</code>.
     return:
       type: System.IObservable{TimeCockpit.Data.Import.PreviewWorkbook}
-      description: 'returns an observable producing the '
     content.vb: Public MustOverride Function LoadPreviewData(sourceProvider As String, sourceData As Byte(), sampleSize As Integer, headerRowPositions As Dictionary(Of String, Integer) = Nothing, defaultHeaderRowNumber As Integer = 1) As IObservable(Of PreviewWorkbook)
   overload: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData*
   nameWithType.vb: ImportServiceClient.LoadPreviewData(String, Byte(), Int32, Dictionary(Of String, Int32), Int32)
@@ -243,28 +174,20 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData(System.String, TimeCockpit.Data.Import.PreviewWorkbook)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    id: SavePreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClient.cs
-    startLine: 65
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nsaves the preview data.\n"
-  example: []
   syntax:
     content: public abstract IObservable<byte[]> SavePreviewData(string sourceProvider, PreviewWorkbook previewWorkbook)
     parameters:
     - id: sourceProvider
       type: System.String
-      description: the source provider to use (xlsx or csv, etc.)
     - id: previewWorkbook
       type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: the preview Workbook to save.
     return:
       type: System.IObservable{System.Byte[]}
-      description: 'returns an observable producing the '
     content.vb: Public MustOverride Function SavePreviewData(sourceProvider As String, previewWorkbook As PreviewWorkbook) As IObservable(Of Byte())
   overload: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData*
   modifiers.csharp:
@@ -273,10 +196,40 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
+- uid: TimeCockpit.Data.Import.ImportServiceClient.DataContext
+  commentId: P:TimeCockpit.Data.Import.ImportServiceClient.DataContext
+  id: DataContext
+  parent: TimeCockpit.Data.Import.ImportServiceClient
+  langs:
+  - csharp
+  - vb
+  name: DataContext
+  nameWithType: ImportServiceClient.DataContext
+  fullName: TimeCockpit.Data.Import.ImportServiceClient.DataContext
+  type: Property
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: protected DataContext DataContext { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataContext
+    content.vb: Protected ReadOnly Property DataContext As DataContext
+  overload: TimeCockpit.Data.Import.ImportServiceClient.DataContext*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -568,38 +521,32 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.ImportServiceClient.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.#ctor
-  isExternal: false
+  isExternal: true
   name: ImportServiceClient
   nameWithType: ImportServiceClient.ImportServiceClient
   fullName: TimeCockpit.Data.Import.ImportServiceClient.ImportServiceClient
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: TimeCockpit.Data.Import.ImportServiceClient.DataContext*
-  commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.DataContext
-  isExternal: false
-  name: DataContext
-  nameWithType: ImportServiceClient.DataContext
-  fullName: TimeCockpit.Data.Import.ImportServiceClient.DataContext
 - uid: TimeCockpit.Data.Import.ImportServiceClient.Import*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.Import
-  isExternal: false
+  isExternal: true
   name: Import
   nameWithType: ImportServiceClient.Import
   fullName: TimeCockpit.Data.Import.ImportServiceClient.Import
@@ -611,6 +558,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -734,7 +682,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData
-  isExternal: false
+  isExternal: true
   name: LoadPreviewData
   nameWithType: ImportServiceClient.LoadPreviewData
   fullName: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData
@@ -828,6 +776,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -844,6 +793,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -900,7 +850,7 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
@@ -945,14 +895,14 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData
-  isExternal: false
+  isExternal: true
   name: SavePreviewData
   nameWithType: ImportServiceClient.SavePreviewData
   fullName: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData
 - uid: TimeCockpit.Data.Import.PreviewWorkbook
   commentId: T:TimeCockpit.Data.Import.PreviewWorkbook
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewWorkbook
   nameWithType: PreviewWorkbook
   fullName: TimeCockpit.Data.Import.PreviewWorkbook
@@ -1006,3 +956,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Import.ImportServiceClient.DataContext*
+  commentId: Overload:TimeCockpit.Data.Import.ImportServiceClient.DataContext
+  isExternal: true
+  name: DataContext
+  nameWithType: ImportServiceClient.DataContext
+  fullName: TimeCockpit.Data.Import.ImportServiceClient.DataContext

@@ -1,0 +1,1543 @@
+### YamlMime:ManagedReference
+items:
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  commentId: T:TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  id: ManagementServiceProxy
+  parent: TimeCockpit.Data.RoutingService
+  children:
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser(WebManagementService.ConnectionInformation)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword(System.Guid,System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated(System.String,System.String,System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create(System.String,System.String,System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String,System.Boolean)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation(System.String,System.String,System.String,System.String,System.String,System.Boolean)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword(System.String)
+  - TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+  langs:
+  - csharp
+  - vb
+  name: ManagementServiceProxy
+  nameWithType: ManagementServiceProxy
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  type: Class
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nRepresents a proxy that wraps the calls to the management service.\n"
+  syntax:
+    content: 'public class ManagementServiceProxy : IManagementService, IUnsecuredManagementService, IRoutingService'
+    content.vb: >-
+      Public Class ManagementServiceProxy
+          Implements IManagementService, IUnsecuredManagementService, IRoutingService
+  inheritance:
+  - System.Object
+  implements:
+  - WebManagementService.IManagementService
+  - WebManagementService.IUnsecuredManagementService
+  - TimeCockpit.Data.RoutingService.IRoutingService
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create(System.String,System.String,System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create(System.String,System.String,System.String)
+  id: Create(System.String,System.String,System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: Create(String, String, String)
+  nameWithType: ManagementServiceProxy.Create(String, String, String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create(System.String, System.String, System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nCreates a management proxy using username, password and an endpoint name.\n"
+  syntax:
+    content: public static ManagementServiceProxy Create(string endpointAddress, string userName = null, string password = null)
+    parameters:
+    - id: endpointAddress
+      type: System.String
+      description: the address of the endpoint.
+    - id: userName
+      type: System.String
+      description: the username to use.
+    - id: password
+      type: System.String
+      description: the password for the user.
+    return:
+      type: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+      description: returns an new management proxy with given credentials.
+    content.vb: Public Shared Function Create(endpointAddress As String, userName As String = Nothing, password As String = Nothing) As ManagementServiceProxy
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String)
+  id: GetConnectionInformation(System.String,System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetConnectionInformation(String, String)
+  nameWithType: ManagementServiceProxy.GetConnectionInformation(String, String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String, System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets a set of connection information of a certain user\n"
+  remarks: "\nThis method should only be used the <see cref=\"!:ManagementServiceProxy(string)\"></see> constructor. This is because\nthe method itself passes username and password as credentials to the channel factor. That means that the \nusername parameter is both, the username for the channelfactory to authenticate and also the username to \nfetch <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref> about. Further, be aware, that this method returns a shared\naccess key for the blob store.\n"
+  syntax:
+    content: public ConnectionInformation GetConnectionInformation(string userName, string password)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The user name to fetch the connection information for
+    - id: password
+      type: System.String
+      description: The password of the user
+    return:
+      type: WebManagementService.ConnectionInformation
+      description: "\nAn instance of <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    content.vb: Public Function GetConnectionInformation(userName As String, password As String) As ConnectionInformation
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String,System.Boolean)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String,System.String,System.Boolean)
+  id: GetConnectionInformation(System.String,System.String,System.Boolean)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetConnectionInformation(String, String, Boolean)
+  nameWithType: ManagementServiceProxy.GetConnectionInformation(String, String, Boolean)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets a set of connection information of a certain user\n"
+  remarks: "\nThis method should only be used the <see cref=\"!:ManagementServiceProxy(string)\"></see> constructor. This is because\nthe method itself passes username and password as credentials to the channel factor. That means that the \nusername parameter is both, the username for the channelfactory to authenticate and also the username to \nfetch <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref> about. Further, be aware, that this method returns a shared\naccess key for the blob store.\n"
+  syntax:
+    content: public ConnectionInformation GetConnectionInformation(string userName, string password, bool callChangePasswordFunction)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The user name to fetch the connection information for
+    - id: password
+      type: System.String
+      description: The password of the user
+    - id: callChangePasswordFunction
+      type: System.Boolean
+      description: Indicates, if the ChangePasswordFunction should be called.
+    return:
+      type: WebManagementService.ConnectionInformation
+      description: "\nAn instance of <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    content.vb: Public Function GetConnectionInformation(userName As String, password As String, callChangePasswordFunction As Boolean) As ConnectionInformation
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus
+  id: GetStatus
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetStatus()
+  nameWithType: ManagementServiceProxy.GetStatus()
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus()
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nChecks if a service that provides <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref> is ready to provide the latter.\n"
+  syntax:
+    content: public RoutingServiceStatus GetStatus()
+    return:
+      type: TimeCockpit.Data.RoutingService.RoutingServiceStatus
+      description: an instance of <xref href="TimeCockpit.Data.RoutingService.RoutingServiceStatus" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function GetStatus As RoutingServiceStatus
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String)
+  id: GetConnectionInformation(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetConnectionInformation(String)
+  nameWithType: ManagementServiceProxy.GetConnectionInformation(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets a set of connection information of a certain user\n"
+  syntax:
+    content: public ConnectionInformation GetConnectionInformation(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The user name to fetch the connection information for
+    return:
+      type: WebManagementService.ConnectionInformation
+      description: "\nAn instance of <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    content.vb: Public Function GetConnectionInformation(userName As String) As ConnectionInformation
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended(System.String)
+  id: GetConnectionInformationExtended(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetConnectionInformationExtended(String)
+  nameWithType: ManagementServiceProxy.GetConnectionInformationExtended(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets a set of connection information of a certain user\n"
+  syntax:
+    content: public ConnectionInformation GetConnectionInformationExtended(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The user name to fetch the connection information for
+    return:
+      type: WebManagementService.ConnectionInformation
+      description: "\nAn instance of <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    content.vb: Public Function GetConnectionInformationExtended(userName As String) As ConnectionInformation
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation(System.String,System.String,System.String,System.String,System.String,System.Boolean)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation(System.String,System.String,System.String,System.String,System.String,System.Boolean)
+  id: RegisterForTenantCreation(System.String,System.String,System.String,System.String,System.String,System.Boolean)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: RegisterForTenantCreation(String, String, String, String, String, Boolean)
+  nameWithType: ManagementServiceProxy.RegisterForTenantCreation(String, String, String, String, String, Boolean)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation(System.String, System.String, System.String, System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nRegisters a user and adds an entry in the UserInfo table.\n"
+  syntax:
+    content: public void RegisterForTenantCreation(string userName, string password, string firstName, string lastName, string company, bool admin)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The username of the user.
+    - id: password
+      type: System.String
+      description: The password of the user.
+    - id: firstName
+      type: System.String
+      description: The firstname of the user.
+    - id: lastName
+      type: System.String
+      description: The lastname of the user.
+    - id: company
+      type: System.String
+      description: The company of the user.
+    - id: admin
+      type: System.Boolean
+      description: Indicates whether the user is admin or not
+    content.vb: Public Sub RegisterForTenantCreation(userName As String, password As String, firstName As String, lastName As String, company As String, admin As Boolean)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  id: CreateUserAndJoinTenant(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: CreateUserAndJoinTenant(String, String, String, String, Boolean, Boolean)
+  nameWithType: ManagementServiceProxy.CreateUserAndJoinTenant(String, String, String, String, Boolean, Boolean)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant(System.String, System.String, System.String, System.String, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nCreates a user in the userinfo table without registering for tenant creation. The user joins another tenant\n"
+  syntax:
+    content: public void CreateUserAndJoinTenant(string userName, string firstName, string lastName, string tenant, bool admin, bool disabled)
+    parameters:
+    - id: userName
+      type: System.String
+      description: The username of the user.
+    - id: firstName
+      type: System.String
+      description: The firstname of the user.
+    - id: lastName
+      type: System.String
+      description: The lastname of the user.
+    - id: tenant
+      type: System.String
+      description: The tenant name the user should join.
+    - id: admin
+      type: System.Boolean
+      description: Indicates whether the user is admin or not
+    - id: disabled
+      type: System.Boolean
+      description: Obsolete parameter, ignored.
+    content.vb: Public Sub CreateUserAndJoinTenant(userName As String, firstName As String, lastName As String, tenant As String, admin As Boolean, disabled As Boolean)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers(System.String)
+  id: GetUsers(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetUsers(String)
+  nameWithType: ManagementServiceProxy.GetUsers(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nFetches all the users that share one tenant.\n"
+  syntax:
+    content: public IList<ConnectionInformation> GetUsers(string tenantName)
+    parameters:
+    - id: tenantName
+      type: System.String
+      description: The name of the tenant to fetch the user for.
+    return:
+      type: System.Collections.Generic.IList{WebManagementService.ConnectionInformation}
+      description: "\nA list of <xref href=\"WebManagementService.ConnectionInformation\" data-throw-if-not-resolved=\"false\"></xref> objects.\n"
+    content.vb: Public Function GetUsers(tenantName As String) As IList(Of ConnectionInformation)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser(WebManagementService.ConnectionInformation)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser(WebManagementService.ConnectionInformation)
+  id: AlterUser(WebManagementService.ConnectionInformation)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: AlterUser(ConnectionInformation)
+  nameWithType: ManagementServiceProxy.AlterUser(ConnectionInformation)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser(WebManagementService.ConnectionInformation)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nAlters an existing user entry.\n"
+  syntax:
+    content: public void AlterUser(ConnectionInformation info)
+    parameters:
+    - id: info
+      type: WebManagementService.ConnectionInformation
+      description: A instance of <xref href="WebManagementService.ConnectionInformation" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub AlterUser(info As ConnectionInformation)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser(System.String)
+  id: DeleteUser(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: DeleteUser(String)
+  nameWithType: ManagementServiceProxy.DeleteUser(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nDeletes a user from its tenant and from the management context\n"
+  syntax:
+    content: public void DeleteUser(string username)
+    parameters:
+    - id: username
+      type: System.String
+      description: The username of the user to delete.
+    content.vb: Public Sub DeleteUser(username As String)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation
+  id: GetVersionInformation
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetVersionInformation()
+  nameWithType: ManagementServiceProxy.GetVersionInformation()
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation()
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets the version information for the current user/tenant.\n"
+  syntax:
+    content: public VersionInformationOverview GetVersionInformation()
+    return:
+      type: WebManagementService.VersionInformationOverview
+      description: "\nThe version information for the current user/tenant or null if the user uses a deprecated (pre-ownership) tenant.\n"
+    content.vb: Public Function GetVersionInformation As VersionInformationOverview
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename(System.String)
+  id: GetDownloadFilename(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetDownloadFilename(String)
+  nameWithType: ManagementServiceProxy.GetDownloadFilename(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets the filename referencing the provided software version.\n"
+  remarks: The user should not use the version if it is not compatible with his tenant or the tenant is deprecated (pre-ownership).
+  syntax:
+    content: public string GetDownloadFilename(string version)
+    parameters:
+    - id: version
+      type: System.String
+      description: Software version to get filename for.
+    return:
+      type: System.String
+      description: "\nThe filename referencing the provided software version or null if the current user should not use this version.\n"
+    content.vb: Public Function GetDownloadFilename(version As String) As String
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword(System.Guid,System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword(System.Guid,System.String)
+  id: ChangePassword(System.Guid,System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: ChangePassword(Guid, String)
+  nameWithType: ManagementServiceProxy.ChangePassword(Guid, String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword(System.Guid, System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nChanges the password for a given user.\n"
+  syntax:
+    content: public void ChangePassword(Guid passwordChangeToken, string newPassword)
+    parameters:
+    - id: passwordChangeToken
+      type: System.Guid
+      description: The password change token.
+    - id: newPassword
+      type: System.String
+      description: The new password.
+    content.vb: Public Sub ChangePassword(passwordChangeToken As Guid, newPassword As String)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword(System.String)
+  id: ResetPassword(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: ResetPassword(String)
+  nameWithType: ManagementServiceProxy.ResetPassword(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nResets the password for a given user.\n"
+  syntax:
+    content: public void ResetPassword(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+      description: Name of the user to change the password for.
+    content.vb: Public Sub ResetPassword(userName As String)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated(System.String,System.String,System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated(System.String,System.String,System.String)
+  id: ChangePasswordAuthenticated(System.String,System.String,System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: ChangePasswordAuthenticated(String, String, String)
+  nameWithType: ManagementServiceProxy.ChangePasswordAuthenticated(String, String, String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated(System.String, System.String, System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nChanges the password.\n"
+  syntax:
+    content: public void ChangePasswordAuthenticated(string userName, string oldPassword, string newPassword)
+    parameters:
+    - id: userName
+      type: System.String
+      description: Name of the user.
+    - id: oldPassword
+      type: System.String
+      description: The old password.
+    - id: newPassword
+      type: System.String
+      description: The new password.
+    content.vb: Public Sub ChangePasswordAuthenticated(userName As String, oldPassword As String, newPassword As String)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync(System.String)
+  commentId: M:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync(System.String)
+  id: GetConnectionInformationExtendedAsync(System.String)
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: GetConnectionInformationExtendedAsync(String)
+  nameWithType: ManagementServiceProxy.GetConnectionInformationExtendedAsync(String)
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  syntax:
+    content: public Task<ConnectionInformation> GetConnectionInformationExtendedAsync(string userName)
+    parameters:
+    - id: userName
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{WebManagementService.ConnectionInformation}
+    content.vb: Public Function GetConnectionInformationExtendedAsync(userName As String) As Task(Of ConnectionInformation)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+  commentId: P:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+  id: ChangeCredentialsFunction
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: ChangeCredentialsFunction
+  nameWithType: ManagementServiceProxy.ChangeCredentialsFunction
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets or sets a function called when the password needs to be changed for a user.\n"
+  syntax:
+    content: public Func<IRoutingService, Credentials> ChangeCredentialsFunction { get; set; }
+    parameters: []
+    return:
+      type: System.Func{TimeCockpit.Data.RoutingService.IRoutingService,TimeCockpit.Data.RoutingService.Credentials}
+    content.vb: Public Property ChangeCredentialsFunction As Func(Of IRoutingService, Credentials)
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+  commentId: P:TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+  id: UserName
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: ManagementServiceProxy.UserName
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets the username that is used to access the management service.\n"
+  syntax:
+    content: public string UserName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UserName As String
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+  commentId: P:TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+  id: Password
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: ManagementServiceProxy.Password
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets the username that is used to access the management service.\n"
+  syntax:
+    content: public string Password { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Password As String
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress
+  commentId: P:TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress
+  id: EndpointAddress
+  parent: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  langs:
+  - csharp
+  - vb
+  name: EndpointAddress
+  nameWithType: ManagementServiceProxy.EndpointAddress
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.RoutingService
+  summary: "\nGets the name of the endpoit address to use, null if config-file defined.\n"
+  syntax:
+    content: public string EndpointAddress { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property EndpointAddress As String
+  overload: TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: TimeCockpit.Data.RoutingService
+  commentId: N:TimeCockpit.Data.RoutingService
+  isExternal: true
+  name: TimeCockpit.Data.RoutingService
+  nameWithType: TimeCockpit.Data.RoutingService
+  fullName: TimeCockpit.Data.RoutingService
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: WebManagementService.IManagementService
+  commentId: '!:WebManagementService.IManagementService'
+  isExternal: true
+  name: IManagementService
+  nameWithType: IManagementService
+  fullName: WebManagementService.IManagementService
+- uid: WebManagementService.IUnsecuredManagementService
+  commentId: '!:WebManagementService.IUnsecuredManagementService'
+  isExternal: true
+  name: IUnsecuredManagementService
+  nameWithType: IUnsecuredManagementService
+  fullName: WebManagementService.IUnsecuredManagementService
+- uid: TimeCockpit.Data.RoutingService.IRoutingService
+  commentId: '!:TimeCockpit.Data.RoutingService.IRoutingService'
+  isExternal: true
+  name: IRoutingService
+  nameWithType: IRoutingService
+  fullName: TimeCockpit.Data.RoutingService.IRoutingService
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create
+  isExternal: true
+  name: Create
+  nameWithType: ManagementServiceProxy.Create
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Create
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  commentId: T:TimeCockpit.Data.RoutingService.ManagementServiceProxy
+  parent: TimeCockpit.Data.RoutingService
+  isExternal: true
+  name: ManagementServiceProxy
+  nameWithType: ManagementServiceProxy
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation
+  isExternal: true
+  name: GetConnectionInformation
+  nameWithType: ManagementServiceProxy.GetConnectionInformation
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformation
+- uid: WebManagementService.ConnectionInformation
+  isExternal: true
+  name: ConnectionInformation
+  nameWithType: ConnectionInformation
+  fullName: WebManagementService.ConnectionInformation
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus
+  isExternal: true
+  name: GetStatus
+  nameWithType: ManagementServiceProxy.GetStatus
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetStatus
+- uid: TimeCockpit.Data.RoutingService.RoutingServiceStatus
+  commentId: '!:TimeCockpit.Data.RoutingService.RoutingServiceStatus'
+  isExternal: true
+  name: RoutingServiceStatus
+  nameWithType: RoutingServiceStatus
+  fullName: TimeCockpit.Data.RoutingService.RoutingServiceStatus
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended
+  isExternal: true
+  name: GetConnectionInformationExtended
+  nameWithType: ManagementServiceProxy.GetConnectionInformationExtended
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtended
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation
+  isExternal: true
+  name: RegisterForTenantCreation
+  nameWithType: ManagementServiceProxy.RegisterForTenantCreation
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.RegisterForTenantCreation
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant
+  isExternal: true
+  name: CreateUserAndJoinTenant
+  nameWithType: ManagementServiceProxy.CreateUserAndJoinTenant
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.CreateUserAndJoinTenant
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers
+  isExternal: true
+  name: GetUsers
+  nameWithType: ManagementServiceProxy.GetUsers
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetUsers
+- uid: System.Collections.Generic.IList{WebManagementService.ConnectionInformation}
+  commentId: T:System.Collections.Generic.IList{WebManagementService.ConnectionInformation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<ConnectionInformation>
+  nameWithType: IList<ConnectionInformation>
+  fullName: System.Collections.Generic.IList<WebManagementService.ConnectionInformation>
+  nameWithType.vb: IList(Of ConnectionInformation)
+  fullName.vb: System.Collections.Generic.IList(Of WebManagementService.ConnectionInformation)
+  name.vb: IList(Of ConnectionInformation)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebManagementService.ConnectionInformation
+    name: ConnectionInformation
+    nameWithType: ConnectionInformation
+    fullName: WebManagementService.ConnectionInformation
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebManagementService.ConnectionInformation
+    name: ConnectionInformation
+    nameWithType: ConnectionInformation
+    fullName: WebManagementService.ConnectionInformation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser
+  isExternal: true
+  name: AlterUser
+  nameWithType: ManagementServiceProxy.AlterUser
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.AlterUser
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser
+  isExternal: true
+  name: DeleteUser
+  nameWithType: ManagementServiceProxy.DeleteUser
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.DeleteUser
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation
+  isExternal: true
+  name: GetVersionInformation
+  nameWithType: ManagementServiceProxy.GetVersionInformation
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetVersionInformation
+- uid: WebManagementService.VersionInformationOverview
+  isExternal: true
+  name: VersionInformationOverview
+  nameWithType: VersionInformationOverview
+  fullName: WebManagementService.VersionInformationOverview
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename
+  isExternal: true
+  name: GetDownloadFilename
+  nameWithType: ManagementServiceProxy.GetDownloadFilename
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetDownloadFilename
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword
+  isExternal: true
+  name: ChangePassword
+  nameWithType: ManagementServiceProxy.ChangePassword
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePassword
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword
+  isExternal: true
+  name: ResetPassword
+  nameWithType: ManagementServiceProxy.ResetPassword
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ResetPassword
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated
+  isExternal: true
+  name: ChangePasswordAuthenticated
+  nameWithType: ManagementServiceProxy.ChangePasswordAuthenticated
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangePasswordAuthenticated
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync
+  isExternal: true
+  name: GetConnectionInformationExtendedAsync
+  nameWithType: ManagementServiceProxy.GetConnectionInformationExtendedAsync
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.GetConnectionInformationExtendedAsync
+- uid: System.Threading.Tasks.Task{WebManagementService.ConnectionInformation}
+  commentId: T:System.Threading.Tasks.Task{WebManagementService.ConnectionInformation}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ConnectionInformation>
+  nameWithType: Task<ConnectionInformation>
+  fullName: System.Threading.Tasks.Task<WebManagementService.ConnectionInformation>
+  nameWithType.vb: Task(Of ConnectionInformation)
+  fullName.vb: System.Threading.Tasks.Task(Of WebManagementService.ConnectionInformation)
+  name.vb: Task(Of ConnectionInformation)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WebManagementService.ConnectionInformation
+    name: ConnectionInformation
+    nameWithType: ConnectionInformation
+    fullName: WebManagementService.ConnectionInformation
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WebManagementService.ConnectionInformation
+    name: ConnectionInformation
+    nameWithType: ConnectionInformation
+    fullName: WebManagementService.ConnectionInformation
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+  isExternal: true
+  name: ChangeCredentialsFunction
+  nameWithType: ManagementServiceProxy.ChangeCredentialsFunction
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.ChangeCredentialsFunction
+- uid: System.Func{TimeCockpit.Data.RoutingService.IRoutingService,TimeCockpit.Data.RoutingService.Credentials}
+  commentId: T:System.Func{TimeCockpit.Data.RoutingService.IRoutingService,TimeCockpit.Data.RoutingService.Credentials}
+  parent: System
+  definition: System.Func`2
+  name: Func<IRoutingService, Credentials>
+  nameWithType: Func<IRoutingService, Credentials>
+  fullName: System.Func<TimeCockpit.Data.RoutingService.IRoutingService, TimeCockpit.Data.RoutingService.Credentials>
+  nameWithType.vb: Func(Of IRoutingService, Credentials)
+  fullName.vb: System.Func(Of TimeCockpit.Data.RoutingService.IRoutingService, TimeCockpit.Data.RoutingService.Credentials)
+  name.vb: Func(Of IRoutingService, Credentials)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: TimeCockpit.Data.RoutingService.IRoutingService
+    name: IRoutingService
+    nameWithType: IRoutingService
+    fullName: TimeCockpit.Data.RoutingService.IRoutingService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.RoutingService.Credentials
+    name: Credentials
+    nameWithType: Credentials
+    fullName: TimeCockpit.Data.RoutingService.Credentials
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: TimeCockpit.Data.RoutingService.IRoutingService
+    name: IRoutingService
+    nameWithType: IRoutingService
+    fullName: TimeCockpit.Data.RoutingService.IRoutingService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeCockpit.Data.RoutingService.Credentials
+    name: Credentials
+    nameWithType: Credentials
+    fullName: TimeCockpit.Data.RoutingService.Credentials
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+  isExternal: true
+  name: UserName
+  nameWithType: ManagementServiceProxy.UserName
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.UserName
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+  isExternal: true
+  name: Password
+  nameWithType: ManagementServiceProxy.Password
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.Password
+- uid: TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress*
+  commentId: Overload:TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress
+  isExternal: true
+  name: EndpointAddress
+  nameWithType: ManagementServiceProxy.EndpointAddress
+  fullName: TimeCockpit.Data.RoutingService.ManagementServiceProxy.EndpointAddress

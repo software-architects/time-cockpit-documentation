@@ -20,16 +20,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: ImportMessage
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 18
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass representing a single message such as an error or a warning from an import process.\nIt contains information such as the sheet name and\n"
-  example: []
   syntax:
     content: public class ImportMessage
     content.vb: Public Class ImportMessage
@@ -61,37 +56,92 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage.ImportMessage(System.String, System.Int32, TimeCockpit.Data.Import.ImportMessage.Kind, System.String)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 27
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the ImportMessage class.\n"
-  example: []
   syntax:
     content: public ImportMessage(string sheetName, int rowNumber, ImportMessage.Kind severity, string message)
     parameters:
     - id: sheetName
       type: System.String
-      description: the name of the sheet for which the message occurred.
     - id: rowNumber
       type: System.Int32
-      description: the row number for which the message occurred.
     - id: severity
       type: TimeCockpit.Data.Import.ImportMessage.Kind
-      description: the severity of the message.
     - id: message
       type: System.String
-      description: the message.
     content.vb: Public Sub New(sheetName As String, rowNumber As Integer, severity As ImportMessage.Kind, message As String)
   overload: TimeCockpit.Data.Import.ImportMessage.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  commentId: M:TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, ImportMessage)
+  nameWithType: ImportMessage.Write(JsonWriter, ImportMessage)
+  fullName: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.ImportMessage)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static void Write(JsonWriter writer, ImportMessage message)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+    - id: message
+      type: TimeCockpit.Data.Import.ImportMessage
+    content.vb: Public Shared Sub Write(writer As JsonWriter, message As ImportMessage)
+  overload: TimeCockpit.Data.Import.ImportMessage.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  commentId: M:TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  id: Read(Newtonsoft.Json.JsonReader)
+  parent: TimeCockpit.Data.Import.ImportMessage
+  langs:
+  - csharp
+  - vb
+  name: Read(JsonReader)
+  nameWithType: ImportMessage.Read(JsonReader)
+  fullName: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static ImportMessage Read(JsonReader reader)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+    return:
+      type: TimeCockpit.Data.Import.ImportMessage
+    content.vb: Public Shared Function Read(reader As JsonReader) As ImportMessage
+  overload: TimeCockpit.Data.Import.ImportMessage.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: TimeCockpit.Data.Import.ImportMessage.SheetName
   commentId: P:TimeCockpit.Data.Import.ImportMessage.SheetName
   id: SheetName
@@ -104,16 +154,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage.SheetName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: SheetName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 59
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the name of the sheet that produced the message.\n"
-  example: []
   syntax:
     content: public string SheetName { get; }
     parameters: []
@@ -139,16 +184,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage.RowNumber
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: RowNumber
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 64
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the rownumber that produced the message.\n"
-  example: []
   syntax:
     content: public int RowNumber { get; }
     parameters: []
@@ -174,16 +214,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage.Message
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: Message
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 69
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the message.\n"
-  example: []
   syntax:
     content: public string Message { get; }
     parameters: []
@@ -209,16 +244,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportMessage.Severity
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: Severity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 74
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the severity of the message.\n"
-  example: []
   syntax:
     content: public ImportMessage.Kind Severity { get; }
     parameters: []
@@ -232,88 +262,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
-  commentId: M:TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
-  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.ImportMessage)
-  parent: TimeCockpit.Data.Import.ImportMessage
-  langs:
-  - csharp
-  - vb
-  name: Write(JsonWriter, ImportMessage)
-  nameWithType: ImportMessage.Write(JsonWriter, ImportMessage)
-  fullName: TimeCockpit.Data.Import.ImportMessage.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.ImportMessage)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: Write
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 81
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nWrites a message to a json writer.\n"
-  example: []
-  syntax:
-    content: public static void Write(JsonWriter writer, ImportMessage message)
-    parameters:
-    - id: writer
-      type: Newtonsoft.Json.JsonWriter
-      description: the writer to write to.
-    - id: message
-      type: TimeCockpit.Data.Import.ImportMessage
-      description: the message to write.
-    content.vb: Public Shared Sub Write(writer As JsonWriter, message As ImportMessage)
-  overload: TimeCockpit.Data.Import.ImportMessage.Write*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
-  commentId: M:TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
-  id: Read(Newtonsoft.Json.JsonReader)
-  parent: TimeCockpit.Data.Import.ImportMessage
-  langs:
-  - csharp
-  - vb
-  name: Read(JsonReader)
-  nameWithType: ImportMessage.Read(JsonReader)
-  fullName: TimeCockpit.Data.Import.ImportMessage.Read(Newtonsoft.Json.JsonReader)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    id: Read
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportMessage.cs
-    startLine: 96
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nReads a ImportMessage from a json reader.\n"
-  example: []
-  syntax:
-    content: public static ImportMessage Read(JsonReader reader)
-    parameters:
-    - id: reader
-      type: Newtonsoft.Json.JsonReader
-      description: the reader to read from.
-    return:
-      type: TimeCockpit.Data.Import.ImportMessage
-      description: Returns the import message read from the reader.
-    content.vb: Public Shared Function Read(reader As JsonReader) As ImportMessage
-  overload: TimeCockpit.Data.Import.ImportMessage.Read*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -605,13 +557,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.ImportMessage.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.ImportMessage.#ctor
-  isExternal: false
+  isExternal: true
   name: ImportMessage
   nameWithType: ImportMessage.ImportMessage
   fullName: TimeCockpit.Data.Import.ImportMessage.ImportMessage
@@ -632,43 +584,17 @@ references:
 - uid: TimeCockpit.Data.Import.ImportMessage.Kind
   commentId: T:TimeCockpit.Data.Import.ImportMessage.Kind
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportMessage.Kind
   nameWithType: ImportMessage.Kind
   fullName: TimeCockpit.Data.Import.ImportMessage.Kind
-- uid: TimeCockpit.Data.Import.ImportMessage.SheetName*
-  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.SheetName
-  isExternal: false
-  name: SheetName
-  nameWithType: ImportMessage.SheetName
-  fullName: TimeCockpit.Data.Import.ImportMessage.SheetName
-- uid: TimeCockpit.Data.Import.ImportMessage.RowNumber*
-  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.RowNumber
-  isExternal: false
-  name: RowNumber
-  nameWithType: ImportMessage.RowNumber
-  fullName: TimeCockpit.Data.Import.ImportMessage.RowNumber
-- uid: TimeCockpit.Data.Import.ImportMessage.Message*
-  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Message
-  isExternal: false
-  name: Message
-  nameWithType: ImportMessage.Message
-  fullName: TimeCockpit.Data.Import.ImportMessage.Message
-- uid: TimeCockpit.Data.Import.ImportMessage.Severity*
-  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Severity
-  isExternal: false
-  name: Severity
-  nameWithType: ImportMessage.Severity
-  fullName: TimeCockpit.Data.Import.ImportMessage.Severity
 - uid: TimeCockpit.Data.Import.ImportMessage.Write*
   commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Write
-  isExternal: false
+  isExternal: true
   name: Write
   nameWithType: ImportMessage.Write
   fullName: TimeCockpit.Data.Import.ImportMessage.Write
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
@@ -676,26 +602,42 @@ references:
 - uid: TimeCockpit.Data.Import.ImportMessage
   commentId: T:TimeCockpit.Data.Import.ImportMessage
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportMessage
   nameWithType: ImportMessage
   fullName: TimeCockpit.Data.Import.ImportMessage
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
 - uid: TimeCockpit.Data.Import.ImportMessage.Read*
   commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Read
-  isExternal: false
+  isExternal: true
   name: Read
   nameWithType: ImportMessage.Read
   fullName: TimeCockpit.Data.Import.ImportMessage.Read
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
   fullName: Newtonsoft.Json.JsonReader
+- uid: TimeCockpit.Data.Import.ImportMessage.SheetName*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.SheetName
+  isExternal: true
+  name: SheetName
+  nameWithType: ImportMessage.SheetName
+  fullName: TimeCockpit.Data.Import.ImportMessage.SheetName
+- uid: TimeCockpit.Data.Import.ImportMessage.RowNumber*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.RowNumber
+  isExternal: true
+  name: RowNumber
+  nameWithType: ImportMessage.RowNumber
+  fullName: TimeCockpit.Data.Import.ImportMessage.RowNumber
+- uid: TimeCockpit.Data.Import.ImportMessage.Message*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Message
+  isExternal: true
+  name: Message
+  nameWithType: ImportMessage.Message
+  fullName: TimeCockpit.Data.Import.ImportMessage.Message
+- uid: TimeCockpit.Data.Import.ImportMessage.Severity*
+  commentId: Overload:TimeCockpit.Data.Import.ImportMessage.Severity
+  isExternal: true
+  name: Severity
+  nameWithType: ImportMessage.Severity
+  fullName: TimeCockpit.Data.Import.ImportMessage.Severity

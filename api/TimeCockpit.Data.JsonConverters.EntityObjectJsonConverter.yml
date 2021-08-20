@@ -5,7 +5,8 @@ items:
   id: EntityObjectJsonConverter
   parent: TimeCockpit.Data.JsonConverters
   children:
-  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment)
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Boolean)
   - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject(Newtonsoft.Json.JsonReader,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Collections.Generic.Dictionary{System.Guid,TimeCockpit.Data.EntityObject})
   - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject(Newtonsoft.Json.Linq.JObject,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Collections.Generic.Dictionary{System.Guid,TimeCockpit.Data.EntityObject})
   - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObjectArray(Newtonsoft.Json.JsonReader,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment)
@@ -29,16 +30,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: EntityObjectJsonConverter
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nCustom serializer for <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s into Json.\n"
-  example: []
   syntax:
     content: public class EntityObjectJsonConverter
     content.vb: Public Class EntityObjectJsonConverter
@@ -70,16 +67,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObjectArray(Newtonsoft.Json.JsonReader, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Environment)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadEntityObjectArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 78
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s out of an array of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s.\n"
-  example: []
   syntax:
     content: public static List<EntityObject> ReadEntityObjectArray(JsonReader reader, Dictionary<string, ModelEntityBase> anonymousTypes, Model model, Environment environment)
     parameters:
@@ -121,16 +114,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject(Newtonsoft.Json.JsonReader, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Environment, System.Collections.Generic.Dictionary<System.Guid, TimeCockpit.Data.EntityObject>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadEntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 110
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the entity object.\n"
-  example: []
   syntax:
     content: public static EntityObject ReadEntityObject(JsonReader reader, Dictionary<string, ModelEntityBase> anonymousTypes, Model model, Environment environment, Dictionary<Guid, EntityObject> alreadyLoaded)
     parameters:
@@ -175,16 +164,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject(Newtonsoft.Json.Linq.JObject, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Environment, System.Collections.Generic.Dictionary<System.Guid, TimeCockpit.Data.EntityObject>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadEntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 130
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads an instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that is serialized in Json\n"
-  example: []
   syntax:
     content: public static EntityObject ReadEntityObject(JObject obj, Dictionary<string, ModelEntityBase> anonymousTypes, Model model, Environment environment, Dictionary<Guid, EntityObject> alreadyLoaded)
     parameters:
@@ -229,16 +214,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObjectArray(System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet<System.Guid>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: WriteEntityObjectArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 230
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrites an Enumerable of EntityObjects to the JsonWriter.\n"
-  example: []
   syntax:
     content: public static void WriteEntityObjectArray(IEnumerable<EntityObject> entityObjects, JsonWriter writer, HashSet<Guid> writtenObjects)
     parameters:
@@ -274,16 +255,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObjectArray(System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet<System.Guid>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: WriteHomogenousEntityObjectArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 248
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrites an Enumerable of homogenious EntityObjects to the JsonWriter.\n"
-  example: []
   syntax:
     content: public static void WriteHomogenousEntityObjectArray(IEnumerable<EntityObject> entityObjects, JsonWriter writer, HashSet<Guid> writtenObjects)
     parameters:
@@ -319,16 +296,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArray(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.Environment)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadHomogenousEntityObjectArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 308
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the homogenous entity object array.\n"
-  example: []
   syntax:
     content: public static IEnumerable<EntityObject> ReadHomogenousEntityObjectArray(JsonReader reader, Model modelBase, Dictionary<string, ModelEntityBase> additionalTypes, Environment environment)
     parameters:
@@ -370,16 +343,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArrayValues(Newtonsoft.Json.JsonReader, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity, System.Collections.Generic.Dictionary<System.Guid, TimeCockpit.Data.EntityObject>, TimeCockpit.Data.Environment, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadHomogenousEntityObjectArrayValues
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 367
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the homogenous entity object array values.\n"
-  example: []
   syntax:
     content: public static IEnumerable<EntityObject> ReadHomogenousEntityObjectArrayValues(JsonReader reader, EntityObjectJsonConverter.JsonSchemaModelEntity schema, Dictionary<Guid, EntityObject> objectCache, Environment environment, Model model, Dictionary<string, ModelEntityBase> additionalTypes)
     parameters:
@@ -427,16 +396,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObject(TimeCockpit.Data.EntityObject, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet<System.Guid>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: WriteHomogenousEntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 396
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrites the homogenous entity object.\n"
-  example: []
   syntax:
     content: public static void WriteHomogenousEntityObject(EntityObject eo, EntityObjectJsonConverter.JsonSchemaModelEntity schema, JsonWriter writer, HashSet<Guid> writtenObjects)
     parameters:
@@ -475,16 +440,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObject(Newtonsoft.Json.JsonReader, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity, System.Collections.Generic.Dictionary<System.Guid, TimeCockpit.Data.EntityObject>, TimeCockpit.Data.Environment, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, out System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadHomogenousEntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 520
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads an homogenous entity object from a reader.\n"
-  example: []
   syntax:
     content: public static EntityObject ReadHomogenousEntityObject(JsonReader reader, EntityObjectJsonConverter.JsonSchemaModelEntity schema, Dictionary<Guid, EntityObject> entityObjectCache, Environment environment, Model model, Dictionary<string, ModelEntityBase> additionalTypes, out bool done)
     parameters:
@@ -535,16 +496,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteSchema(TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet<TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: WriteSchema
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 745
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrites the schema.\n"
-  example: []
   syntax:
     content: public static void WriteSchema(EntityObjectJsonConverter.JsonSchemaModelEntity schema, JsonWriter writer, HashSet<EntityObjectJsonConverter.JsonSchemaModelEntity> visitedModelEntities)
     parameters:
@@ -580,16 +537,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchema(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadSchema
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 816
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the schema from a json reader.\n"
-  example: []
   syntax:
     content: public static EntityObjectJsonConverter.JsonSchemaModelEntity ReadSchema(JsonReader reader, Model baseModel, Dictionary<string, ModelEntityBase> additionalTypes, Dictionary<string, EntityObjectJsonConverter.JsonSchemaModelEntity> deserializedSchemas)
     parameters:
@@ -631,16 +584,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaMembers(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>, System.Collections.Generic.List<TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaProperty>, System.Collections.Generic.List<TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadSchemaMembers
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 880
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the members of theschema\n"
-  example: []
   syntax:
     content: public static void ReadSchemaMembers(JsonReader reader, ModelEntityBase modelEntity, Model baseModel, Dictionary<string, ModelEntityBase> additionalTypes, Dictionary<string, EntityObjectJsonConverter.JsonSchemaModelEntity> deserializedSchemas, List<EntityObjectJsonConverter.JsonSchemaProperty> properties, List<EntityObjectJsonConverter.JsonSchemaRelation> relations)
     parameters:
@@ -688,16 +637,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelation(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.DataModel.ModelEntityBase, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadSchemaRelation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 923
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the schema of a relation.\n"
-  example: []
   syntax:
     content: public static EntityObjectJsonConverter.JsonSchemaRelation ReadSchemaRelation(JsonReader reader, Model baseModel, Dictionary<string, ModelEntityBase> additionalTypes, ModelEntityBase ownerModelEntity, Dictionary<string, EntityObjectJsonConverter.JsonSchemaModelEntity> deserializedSchemas)
     parameters:
@@ -742,16 +687,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelationTargets(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, System.Collections.Generic.List<TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: ReadSchemaRelationTargets
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 967
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads the targets of a SchemaRelation.\n"
-  example: []
   syntax:
     content: public static void ReadSchemaRelationTargets(JsonReader reader, Model baseModel, Dictionary<string, ModelEntityBase> additionalTypes, List<EntityObjectJsonConverter.JsonSchemaModelEntity> targets, Dictionary<string, EntityObjectJsonConverter.JsonSchemaModelEntity> deserializedSchemas)
     parameters:
@@ -793,16 +734,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObject(TimeCockpit.Data.EntityObject, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet<System.Guid>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: WriteEntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 994
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrite an EntityObject to the JsonWriter.\n"
-  example: []
   syntax:
     content: public static void WriteEntityObject(EntityObject entityObject, JsonWriter writer, HashSet<Guid> writtenObjects)
     parameters:
@@ -826,30 +763,26 @@ items:
   - Shared
   fullName.vb: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObject(TimeCockpit.Data.EntityObject, Newtonsoft.Json.JsonWriter, System.Collections.Generic.HashSet(Of System.Guid))
   name.vb: WriteEntityObject(EntityObject, JsonWriter, HashSet(Of Guid))
-- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment)
-  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment)
-  id: CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment)
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Boolean)
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Boolean)
+  id: CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Environment,System.Boolean)
   parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter
   langs:
   - csharp
   - vb
-  name: CreateEntityObjectFromPrototype(JsonReader, Model, Environment)
-  nameWithType: EntityObjectJsonConverter.CreateEntityObjectFromPrototype(JsonReader, Model, Environment)
-  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Environment)
+  name: CreateEntityObjectFromPrototype(JsonReader, Model, Environment, Boolean)
+  nameWithType: EntityObjectJsonConverter.CreateEntityObjectFromPrototype(JsonReader, Model, Environment, Boolean)
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Environment, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: CreateEntityObjectFromPrototype
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 1037
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nCreate an entity object from a json prototype (igoring missing members etc.).\n"
-  example: []
   syntax:
-    content: public static EntityObject CreateEntityObjectFromPrototype(JsonReader reader, Model model, Environment environment)
+    content: public static EntityObject CreateEntityObjectFromPrototype(JsonReader reader, Model model, Environment environment, bool evaluateMissingDefaultValues)
     parameters:
     - id: reader
       type: Newtonsoft.Json.JsonReader
@@ -860,10 +793,12 @@ items:
     - id: environment
       type: TimeCockpit.Data.Environment
       description: The environment of the current datacontext used to validate permissions.
+    - id: evaluateMissingDefaultValues
+      type: System.Boolean
     return:
       type: TimeCockpit.Data.EntityObject
       description: New entity object from prototype.
-    content.vb: Public Shared Function CreateEntityObjectFromPrototype(reader As JsonReader, model As Model, environment As Environment) As EntityObject
+    content.vb: Public Shared Function CreateEntityObjectFromPrototype(reader As JsonReader, model As Model, environment As Environment, evaluateMissingDefaultValues As Boolean) As EntityObject
   overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype*
   modifiers.csharp:
   - public
@@ -871,17 +806,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter
+  langs:
+  - csharp
+  - vb
+  name: EntityObjectJsonConverter()
+  nameWithType: EntityObjectJsonConverter.EntityObjectJsonConverter()
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.EntityObjectJsonConverter()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public EntityObjectJsonConverter()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.JsonConverters
   commentId: N:TimeCockpit.Data.JsonConverters
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.JsonConverters
   nameWithType: TimeCockpit.Data.JsonConverters
   fullName: TimeCockpit.Data.JsonConverters
@@ -1171,34 +1124,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data
-  commentId: N:TimeCockpit.Data
-  isExternal: false
-  name: TimeCockpit.Data
-  nameWithType: TimeCockpit.Data
-  fullName: TimeCockpit.Data
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.DataModel.Model
-  commentId: T:TimeCockpit.Data.DataModel.Model
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Model
-  nameWithType: Model
-  fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObjectArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObjectArray
-  isExternal: false
+  isExternal: true
   name: ReadEntityObjectArray
   nameWithType: EntityObjectJsonConverter.ReadEntityObjectArray
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObjectArray
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
@@ -1234,6 +1172,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1258,13 +1197,21 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.Environment
   commentId: T:TimeCockpit.Data.Environment
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: Environment
   fullName: TimeCockpit.Data.Environment
@@ -1291,6 +1238,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1307,21 +1255,10 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
 - uid: System.Collections.Generic.Dictionary`2
   commentId: T:System.Collections.Generic.Dictionary`2
   isExternal: true
@@ -1375,10 +1312,22 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: true
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: true
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
 - uid: System.Collections.Generic.List`1
   commentId: T:System.Collections.Generic.List`1
   isExternal: true
@@ -1420,7 +1369,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject
-  isExternal: false
+  isExternal: true
   name: ReadEntityObject
   nameWithType: EntityObjectJsonConverter.ReadEntityObject
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadEntityObject
@@ -1455,6 +1404,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1479,25 +1429,25 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
 - uid: Newtonsoft.Json.Linq.JObject
-  commentId: T:Newtonsoft.Json.Linq.JObject
-  parent: Newtonsoft.Json.Linq
   isExternal: true
   name: JObject
   nameWithType: JObject
   fullName: Newtonsoft.Json.Linq.JObject
-- uid: Newtonsoft.Json.Linq
-  commentId: N:Newtonsoft.Json.Linq
-  isExternal: false
-  name: Newtonsoft.Json.Linq
-  nameWithType: Newtonsoft.Json.Linq
-  fullName: Newtonsoft.Json.Linq
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObjectArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObjectArray
-  isExternal: false
+  isExternal: true
   name: WriteEntityObjectArray
   nameWithType: EntityObjectJsonConverter.WriteEntityObjectArray
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObjectArray
@@ -1524,6 +1474,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1540,19 +1491,17 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
   fullName: Newtonsoft.Json.JsonWriter
 - uid: System.Collections.Generic.HashSet{System.Guid}
-  commentId: T:System.Collections.Generic.HashSet{System.Guid}
-  parent: System.Collections.Generic
+  commentId: '!:System.Collections.Generic.HashSet{System.Guid}'
   definition: System.Collections.Generic.HashSet`1
   name: HashSet<Guid>
   nameWithType: HashSet<Guid>
@@ -1634,14 +1583,13 @@ references:
     nameWithType: )
     fullName: )
 - uid: System.Collections.Generic.HashSet`1
-  commentId: T:System.Collections.Generic.HashSet`1
   isExternal: true
-  name: HashSet<T>
-  nameWithType: HashSet<T>
-  fullName: System.Collections.Generic.HashSet<T>
-  nameWithType.vb: HashSet(Of T)
-  fullName.vb: System.Collections.Generic.HashSet(Of T)
-  name.vb: HashSet(Of T)
+  name: HashSet<>
+  nameWithType: HashSet<>
+  fullName: System.Collections.Generic.HashSet<>
+  nameWithType.vb: HashSet(Of )
+  fullName.vb: System.Collections.Generic.HashSet(Of )
+  name.vb: HashSet(Of )
   spec.csharp:
   - uid: System.Collections.Generic.HashSet`1
     name: HashSet
@@ -1651,9 +1599,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1666,46 +1614,46 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObjectArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObjectArray
-  isExternal: false
+  isExternal: true
   name: WriteHomogenousEntityObjectArray
   nameWithType: EntityObjectJsonConverter.WriteHomogenousEntityObjectArray
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObjectArray
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArray
-  isExternal: false
+  isExternal: true
   name: ReadHomogenousEntityObjectArray
   nameWithType: EntityObjectJsonConverter.ReadHomogenousEntityObjectArray
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArray
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArrayValues*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArrayValues
-  isExternal: false
+  isExternal: true
   name: ReadHomogenousEntityObjectArrayValues
   nameWithType: EntityObjectJsonConverter.ReadHomogenousEntityObjectArrayValues
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObjectArrayValues
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
   commentId: T:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
   parent: TimeCockpit.Data.JsonConverters
-  isExternal: false
+  isExternal: true
   name: EntityObjectJsonConverter.JsonSchemaModelEntity
   nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObject*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObject
-  isExternal: false
+  isExternal: true
   name: WriteHomogenousEntityObject
   nameWithType: EntityObjectJsonConverter.WriteHomogenousEntityObject
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteHomogenousEntityObject
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObject*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObject
-  isExternal: false
+  isExternal: true
   name: ReadHomogenousEntityObject
   nameWithType: EntityObjectJsonConverter.ReadHomogenousEntityObject
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadHomogenousEntityObject
@@ -1718,13 +1666,12 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteSchema*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteSchema
-  isExternal: false
+  isExternal: true
   name: WriteSchema
   nameWithType: EntityObjectJsonConverter.WriteSchema
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteSchema
 - uid: System.Collections.Generic.HashSet{TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity}
-  commentId: T:System.Collections.Generic.HashSet{TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity}
-  parent: System.Collections.Generic
+  commentId: '!:System.Collections.Generic.HashSet{TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity}'
   definition: System.Collections.Generic.HashSet`1
   name: HashSet<EntityObjectJsonConverter.JsonSchemaModelEntity>
   nameWithType: HashSet<EntityObjectJsonConverter.JsonSchemaModelEntity>
@@ -1745,6 +1692,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1761,12 +1709,13 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchema*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchema
-  isExternal: false
+  isExternal: true
   name: ReadSchema
   nameWithType: EntityObjectJsonConverter.ReadSchema
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchema
@@ -1801,6 +1750,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1825,19 +1775,20 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaMembers*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaMembers
-  isExternal: false
+  isExternal: true
   name: ReadSchemaMembers
   nameWithType: EntityObjectJsonConverter.ReadSchemaMembers
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaMembers
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
@@ -1864,6 +1815,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaProperty
     nameWithType: EntityObjectJsonConverter.JsonSchemaProperty
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaProperty
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1880,6 +1832,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaProperty
     nameWithType: EntityObjectJsonConverter.JsonSchemaProperty
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaProperty
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1906,6 +1859,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaRelation
     nameWithType: EntityObjectJsonConverter.JsonSchemaRelation
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1922,25 +1876,26 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaRelation
     nameWithType: EntityObjectJsonConverter.JsonSchemaRelation
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelation*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelation
-  isExternal: false
+  isExternal: true
   name: ReadSchemaRelation
   nameWithType: EntityObjectJsonConverter.ReadSchemaRelation
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelation
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation
   commentId: T:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation
   parent: TimeCockpit.Data.JsonConverters
-  isExternal: false
+  isExternal: true
   name: EntityObjectJsonConverter.JsonSchemaRelation
   nameWithType: EntityObjectJsonConverter.JsonSchemaRelation
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaRelation
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelationTargets*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelationTargets
-  isExternal: false
+  isExternal: true
   name: ReadSchemaRelationTargets
   nameWithType: EntityObjectJsonConverter.ReadSchemaRelationTargets
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.ReadSchemaRelationTargets
@@ -1967,6 +1922,7 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1983,18 +1939,25 @@ references:
     name: EntityObjectJsonConverter.JsonSchemaModelEntity
     nameWithType: EntityObjectJsonConverter.JsonSchemaModelEntity
     fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.JsonSchemaModelEntity
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObject*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObject
-  isExternal: false
+  isExternal: true
   name: WriteEntityObject
   nameWithType: EntityObjectJsonConverter.WriteEntityObject
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.WriteEntityObject
 - uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype*
   commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype
-  isExternal: false
+  isExternal: true
   name: CreateEntityObjectFromPrototype
   nameWithType: EntityObjectJsonConverter.CreateEntityObjectFromPrototype
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.CreateEntityObjectFromPrototype
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.#ctor
+  isExternal: true
+  name: EntityObjectJsonConverter
+  nameWithType: EntityObjectJsonConverter.EntityObjectJsonConverter
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.EntityObjectJsonConverter

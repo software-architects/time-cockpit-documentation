@@ -16,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectCache
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    id: SelectCache
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    startLine: 27
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nclass hiding the cache. A User can create such a cache and provide it as a lookup to queries, but cannot access the data itself.\nA select cache represents entity objects that have been loaded previously. \nSelect methods from the <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref> take a select cache as an optional parameter. If such a parameter\nis provided, the passed in cache is queried for pre-existing entity objects and those <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>s are reused without\nfurther deserializing the relation.\nUse the <xref href=\"TimeCockpit.Data.Database.SelectCache.CreateInstance\" data-throw-if-not-resolved=\"false\"></xref> method to create a fresh instance of the select cache. Passing the same instance to the select\nmethods will cause referenced entity objects to be the same object / reference identical.\n<example>\n<pre><code source=\"..\\TimeCockpit.Test\\TimeCockpit.Test.Data.DataModel\\TestQueryDataModel.cs\" region=\"SelectCache example\"></code></pre>\n</example>\n"
-  example: []
   syntax:
     content: public class SelectCache
     content.vb: Public Class SelectCache
@@ -57,16 +53,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectCache.CreateInstance()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    id: CreateInstance
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    startLine: 46
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\ncreates a new instance of the select cache.\n"
-  example: []
   syntax:
     content: public static SelectCache CreateInstance()
     return:
@@ -92,16 +84,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectCache.TryGetValue(TimeCockpit.Data.DataModel.ModelEntityBase, System.Guid, out TimeCockpit.Data.EntityObject)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    id: TryGetValue
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    startLine: 58
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nPerforms a 2 stage lookup to the cache structure to retrieve the entity object.\n"
-  example: []
   syntax:
     content: public bool TryGetValue(ModelEntityBase entity, Guid guid, out EntityObject entityObject)
     parameters:
@@ -138,16 +126,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectCache.GetOrAdd(TimeCockpit.Data.DataModel.ModelEntityBase, System.Guid, System.Func<System.Guid, TimeCockpit.Data.EntityObject>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    id: GetOrAdd
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectCache.cs
-    startLine: 77
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets an entity object or calls the factory for a value to add.\n"
-  example: []
   syntax:
     content: public EntityObject GetOrAdd(ModelEntityBase entity, Guid guid, Func<Guid, EntityObject> factory)
     parameters:
@@ -173,25 +157,9 @@ items:
   fullName.vb: TimeCockpit.Data.Database.SelectCache.GetOrAdd(TimeCockpit.Data.DataModel.ModelEntityBase, System.Guid, System.Func(Of System.Guid, TimeCockpit.Data.EntityObject))
   name.vb: GetOrAdd(ModelEntityBase, Guid, Func(Of Guid, EntityObject))
 references:
-- uid: TimeCockpit.Data.DataContext
-  commentId: T:TimeCockpit.Data.DataContext
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: DataContext
-  nameWithType: DataContext
-  fullName: TimeCockpit.Data.DataContext
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
-- uid: TimeCockpit.Data.Database.SelectCache.CreateInstance
-  commentId: M:TimeCockpit.Data.Database.SelectCache.CreateInstance
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -481,41 +449,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data
-  commentId: N:TimeCockpit.Data
-  isExternal: false
-  name: TimeCockpit.Data
-  nameWithType: TimeCockpit.Data
-  fullName: TimeCockpit.Data
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Database.SelectCache.CreateInstance*
   commentId: Overload:TimeCockpit.Data.Database.SelectCache.CreateInstance
-  isExternal: false
+  isExternal: true
   name: CreateInstance
   nameWithType: SelectCache.CreateInstance
   fullName: TimeCockpit.Data.Database.SelectCache.CreateInstance
 - uid: TimeCockpit.Data.Database.SelectCache
   commentId: T:TimeCockpit.Data.Database.SelectCache
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: SelectCache
   nameWithType: SelectCache
   fullName: TimeCockpit.Data.Database.SelectCache
 - uid: TimeCockpit.Data.Database.SelectCache.TryGetValue*
   commentId: Overload:TimeCockpit.Data.Database.SelectCache.TryGetValue
-  isExternal: false
+  isExternal: true
   name: TryGetValue
   nameWithType: SelectCache.TryGetValue
   fullName: TimeCockpit.Data.Database.SelectCache.TryGetValue
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
@@ -526,6 +488,13 @@ references:
   name: Guid
   nameWithType: Guid
   fullName: System.Guid
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -535,13 +504,19 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data
+  commentId: N:TimeCockpit.Data
+  isExternal: true
+  name: TimeCockpit.Data
+  nameWithType: TimeCockpit.Data
+  fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.Database.SelectCache.GetOrAdd*
   commentId: Overload:TimeCockpit.Data.Database.SelectCache.GetOrAdd
-  isExternal: false
+  isExternal: true
   name: GetOrAdd
   nameWithType: SelectCache.GetOrAdd
   fullName: TimeCockpit.Data.Database.SelectCache.GetOrAdd
@@ -576,6 +551,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -600,6 +576,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )

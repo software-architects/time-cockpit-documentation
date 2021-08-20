@@ -17,24 +17,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    id: BackReferenceTab
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nRepresents a tab in a <xref href=\"TimeCockpit.Data.DataModel.View.Form\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      public class BackReferenceTab : Tab, IDynamicMetaObjectProvider, INotifyPropertyChanged
+    content: 'public class BackReferenceTab : Tab, IDynamicMetaObjectProvider, INotifyPropertyChanged'
     content.vb: >-
-      <DataContract>
-
       Public Class BackReferenceTab
           Inherits Tab
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged
@@ -47,14 +38,14 @@ items:
   - System.Dynamic.IDynamicMetaObjectProvider
   - System.ComponentModel.INotifyPropertyChanged
   inheritedMembers:
+  - TimeCockpit.Data.DataModel.View.Tab.SectionChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
+  - TimeCockpit.Data.DataModel.View.Tab.InitializeObject
   - TimeCockpit.Data.DataModel.View.Tab.Header
   - TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
   - TimeCockpit.Data.DataModel.View.Tab.Sections
-  - TimeCockpit.Data.DataModel.View.Tab.SectionChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
-  - TimeCockpit.Data.DataModel.View.Tab.InitializeObject
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.GetMember(System.String)
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
@@ -65,10 +56,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -87,16 +74,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReferenceTab()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    startLine: 39
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nInitializes a new instance of the BackReferenceTab class.\n"
-  example: []
   syntax:
     content: public BackReferenceTab()
     content.vb: Public Sub New
@@ -105,6 +88,42 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  commentId: M:TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  id: SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  parent: TimeCockpit.Data.DataModel.View.BackReferenceTab
+  langs:
+  - csharp
+  - vb
+  name: SectionsChanged(Object, NotifyCollectionChangedEventArgs)
+  nameWithType: BackReferenceTab.SectionsChanged(Object, NotifyCollectionChangedEventArgs)
+  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object, System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.View
+  summary: "\nRaised, when an item is added to the <xref href=\"Sections\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  syntax:
+    content: protected override void SectionsChanged(object sender, NotifyCollectionChangedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: The sender that fired the event
+    - id: e
+      type: System.Collections.Specialized.NotifyCollectionChangedEventArgs
+      description: Provides information about event arguments
+    content.vb: Protected Overrides Sub SectionsChanged(sender As Object, e As NotifyCollectionChangedEventArgs)
+  overridden: TimeCockpit.Data.DataModel.View.Tab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  overload: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.List
   commentId: P:TimeCockpit.Data.DataModel.View.BackReferenceTab.List
   id: List
@@ -117,16 +136,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.List
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    id: List
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    startLine: 50
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the list, that is used for displaying the data int the combobox.\n"
-  example: []
   syntax:
     content: public string List { get; set; }
     parameters: []
@@ -152,16 +167,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    id: BackReference
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    startLine: 68
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.View
   summary: "\nGets or sets the name of the back reference.\n"
-  example: []
   syntax:
     content: public string BackReference { get; set; }
     parameters: []
@@ -175,57 +186,10 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  commentId: M:TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  id: SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  parent: TimeCockpit.Data.DataModel.View.BackReferenceTab
-  langs:
-  - csharp
-  - vb
-  name: SectionsChanged(Object, NotifyCollectionChangedEventArgs)
-  nameWithType: BackReferenceTab.SectionsChanged(Object, NotifyCollectionChangedEventArgs)
-  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged(System.Object, System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    id: SectionsChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/View/BackReferenceTab.cs
-    startLine: 91
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel.View
-  summary: "\nRaised, when an item is added to the <xref href=\"Sections\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
-  example: []
-  syntax:
-    content: protected override void SectionsChanged(object sender, NotifyCollectionChangedEventArgs e)
-    parameters:
-    - id: sender
-      type: System.Object
-      description: The sender that fired the event
-    - id: e
-      type: System.Collections.Specialized.NotifyCollectionChangedEventArgs
-      description: Provides information about event arguments
-    content.vb: Protected Overrides Sub SectionsChanged(sender As Object, e As NotifyCollectionChangedEventArgs)
-  overridden: TimeCockpit.Data.DataModel.View.Tab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  overload: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged*
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
 references:
-- uid: TimeCockpit.Data.DataModel.View.Form
-  commentId: T:TimeCockpit.Data.DataModel.View.Form
-  parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
-  name: Form
-  nameWithType: Form
-  fullName: TimeCockpit.Data.DataModel.View.Form
 - uid: TimeCockpit.Data.DataModel.View
   commentId: N:TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.View
   nameWithType: TimeCockpit.Data.DataModel.View
   fullName: TimeCockpit.Data.DataModel.View
@@ -239,59 +203,34 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.View.Tab
   commentId: T:TimeCockpit.Data.DataModel.View.Tab
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: Tab
   nameWithType: Tab
   fullName: TimeCockpit.Data.DataModel.View.Tab
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
-- uid: TimeCockpit.Data.DataModel.View.Tab.Header
-  commentId: P:TimeCockpit.Data.DataModel.View.Tab.Header
-  parent: TimeCockpit.Data.DataModel.View.Tab
-  isExternal: false
-  name: Header
-  nameWithType: Tab.Header
-  fullName: TimeCockpit.Data.DataModel.View.Tab.Header
-- uid: TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
-  commentId: P:TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
-  parent: TimeCockpit.Data.DataModel.View.Tab
-  isExternal: false
-  name: VerticalTabOrder
-  nameWithType: Tab.VerticalTabOrder
-  fullName: TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
-- uid: TimeCockpit.Data.DataModel.View.Tab.Sections
-  commentId: P:TimeCockpit.Data.DataModel.View.Tab.Sections
-  parent: TimeCockpit.Data.DataModel.View.Tab
-  isExternal: false
-  name: Sections
-  nameWithType: Tab.Sections
-  fullName: TimeCockpit.Data.DataModel.View.Tab.Sections
 - uid: TimeCockpit.Data.DataModel.View.Tab.SectionChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
   commentId: M:TimeCockpit.Data.DataModel.View.Tab.SectionChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)
   parent: TimeCockpit.Data.DataModel.View.Tab
@@ -304,6 +243,7 @@ references:
     name: SectionChanged
     nameWithType: Tab.SectionChanged
     fullName: TimeCockpit.Data.DataModel.View.Tab.SectionChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -328,6 +268,7 @@ references:
     name: SectionChanged
     nameWithType: Tab.SectionChanged
     fullName: TimeCockpit.Data.DataModel.View.Tab.SectionChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -350,7 +291,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.View.Tab.InitializeObject
   commentId: M:TimeCockpit.Data.DataModel.View.Tab.InitializeObject
   parent: TimeCockpit.Data.DataModel.View.Tab
-  isExternal: false
+  isExternal: true
   name: InitializeObject()
   nameWithType: Tab.InitializeObject()
   fullName: TimeCockpit.Data.DataModel.View.Tab.InitializeObject()
@@ -359,6 +300,7 @@ references:
     name: InitializeObject
     nameWithType: Tab.InitializeObject
     fullName: TimeCockpit.Data.DataModel.View.Tab.InitializeObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -370,26 +312,34 @@ references:
     name: InitializeObject
     nameWithType: Tab.InitializeObject
     fullName: TimeCockpit.Data.DataModel.View.Tab.InitializeObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: Name
-  nameWithType: NamedDynamicObject.Name
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.View.Tab.Header
+  commentId: P:TimeCockpit.Data.DataModel.View.Tab.Header
+  parent: TimeCockpit.Data.DataModel.View.Tab
+  isExternal: true
+  name: Header
+  nameWithType: Tab.Header
+  fullName: TimeCockpit.Data.DataModel.View.Tab.Header
+- uid: TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
+  commentId: P:TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
+  parent: TimeCockpit.Data.DataModel.View.Tab
+  isExternal: true
+  name: VerticalTabOrder
+  nameWithType: Tab.VerticalTabOrder
+  fullName: TimeCockpit.Data.DataModel.View.Tab.VerticalTabOrder
+- uid: TimeCockpit.Data.DataModel.View.Tab.Sections
+  commentId: P:TimeCockpit.Data.DataModel.View.Tab.Sections
+  parent: TimeCockpit.Data.DataModel.View.Tab
+  isExternal: true
+  name: Sections
+  nameWithType: Tab.Sections
+  fullName: TimeCockpit.Data.DataModel.View.Tab.Sections
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -402,6 +352,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -418,6 +369,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -429,6 +381,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  commentId: P:TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: Name
+  nameWithType: NamedDynamicObject.Name
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.Name
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.GetMember(System.String)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMember(System.String)
   parent: TimeCockpit.Data.DynamicObject
@@ -441,6 +407,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -457,6 +424,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -480,6 +448,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -504,6 +473,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -535,6 +505,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -551,6 +522,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -843,61 +815,28 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.#ctor
-  isExternal: false
+  isExternal: true
   name: BackReferenceTab
   nameWithType: BackReferenceTab.BackReferenceTab
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReferenceTab
-- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.List*
-  commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.List
-  isExternal: false
-  name: List
-  nameWithType: BackReferenceTab.List
-  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.List
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference*
-  commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference
-  isExternal: false
-  name: BackReference
-  nameWithType: BackReferenceTab.BackReference
-  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference
-- uid: Sections
-  commentId: M:Sections
 - uid: TimeCockpit.Data.DataModel.View.Tab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
   commentId: M:TimeCockpit.Data.DataModel.View.Tab.SectionsChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)
   parent: TimeCockpit.Data.DataModel.View.Tab
@@ -910,6 +849,7 @@ references:
     name: SectionsChanged
     nameWithType: Tab.SectionsChanged
     fullName: TimeCockpit.Data.DataModel.View.Tab.SectionsChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -934,6 +874,7 @@ references:
     name: SectionsChanged
     nameWithType: Tab.SectionsChanged
     fullName: TimeCockpit.Data.DataModel.View.Tab.SectionsChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -955,20 +896,31 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged*
   commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged
-  isExternal: false
+  isExternal: true
   name: SectionsChanged
   nameWithType: BackReferenceTab.SectionsChanged
   fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.SectionsChanged
 - uid: System.Collections.Specialized.NotifyCollectionChangedEventArgs
-  commentId: T:System.Collections.Specialized.NotifyCollectionChangedEventArgs
-  parent: System.Collections.Specialized
   isExternal: true
   name: NotifyCollectionChangedEventArgs
   nameWithType: NotifyCollectionChangedEventArgs
   fullName: System.Collections.Specialized.NotifyCollectionChangedEventArgs
-- uid: System.Collections.Specialized
-  commentId: N:System.Collections.Specialized
-  isExternal: false
-  name: System.Collections.Specialized
-  nameWithType: System.Collections.Specialized
-  fullName: System.Collections.Specialized
+- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.List*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.List
+  isExternal: true
+  name: List
+  nameWithType: BackReferenceTab.List
+  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.List
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference*
+  commentId: Overload:TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference
+  isExternal: true
+  name: BackReference
+  nameWithType: BackReferenceTab.BackReference
+  fullName: TimeCockpit.Data.DataModel.View.BackReferenceTab.BackReference

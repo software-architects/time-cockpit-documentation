@@ -4,7 +4,8 @@ items:
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Set
   id: Set
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  children: []
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor
   langs:
   - csharp
   - vb
@@ -13,16 +14,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Set
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Set.cs
-    id: Set
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Set.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nabstract AST node for sets, either explicit as in\n<pre><code>From X In Timesheet Where &apos;SomeDesc&apos; In (X.Description, X.Project.Description) Select X</code></pre>\nor \nas a named set reference, as in\n<pre><code>From X In Timesheet Where &apos;SomeDesc&apos; In Set(&apos;SomeNamedSet&apos;) Select X</code></pre>.\n"
-  example: []
   syntax:
     content: 'public abstract class Set : Expression'
     content.vb: >-
@@ -52,10 +49,35 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Set
+  langs:
+  - csharp
+  - vb
+  name: Set()
+  nameWithType: Set.Set()
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Set.Set()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  syntax:
+    content: protected Set()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -69,21 +91,21 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -92,6 +114,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -99,6 +122,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -107,6 +131,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -114,6 +139,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -398,7 +424,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Set.#ctor
+  isExternal: true
+  name: Set
+  nameWithType: Set.Set
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Set.Set

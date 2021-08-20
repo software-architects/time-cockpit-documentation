@@ -4,7 +4,8 @@ items:
   commentId: T:TimeCockpit.Data.UndoRedo.ScopeOperation
   id: ScopeOperation
   parent: TimeCockpit.Data.UndoRedo
-  children: []
+  children:
+  - TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor
   langs:
   - csharp
   - vb
@@ -13,16 +14,12 @@ items:
   fullName: TimeCockpit.Data.UndoRedo.ScopeOperation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/ScopeOperation.cs
-    id: ScopeOperation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/UndoRedo/ScopeOperation.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.UndoRedo
   summary: "\nmarker base class for scope operations.\n"
-  example: []
   syntax:
     content: 'public abstract class ScopeOperation : Operation'
     content.vb: >-
@@ -53,10 +50,35 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor
+  commentId: M:TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.UndoRedo.ScopeOperation
+  langs:
+  - csharp
+  - vb
+  name: ScopeOperation()
+  nameWithType: ScopeOperation.ScopeOperation()
+  fullName: TimeCockpit.Data.UndoRedo.ScopeOperation.ScopeOperation()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.UndoRedo
+  syntax:
+    content: protected ScopeOperation()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.UndoRedo
   commentId: N:TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.UndoRedo
   nameWithType: TimeCockpit.Data.UndoRedo
   fullName: TimeCockpit.Data.UndoRedo
@@ -70,14 +92,14 @@ references:
 - uid: TimeCockpit.Data.UndoRedo.Operation
   commentId: T:TimeCockpit.Data.UndoRedo.Operation
   parent: TimeCockpit.Data.UndoRedo
-  isExternal: false
+  isExternal: true
   name: Operation
   nameWithType: Operation
   fullName: TimeCockpit.Data.UndoRedo.Operation
 - uid: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: Undo(ChangeTracker)
   nameWithType: Operation.Undo(ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.Undo(TimeCockpit.Data.ChangeTracker)
@@ -86,6 +108,7 @@ references:
     name: Undo
     nameWithType: Operation.Undo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -93,6 +116,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -101,6 +125,7 @@ references:
     name: Undo
     nameWithType: Operation.Undo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Undo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -108,13 +133,14 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: Redo(ChangeTracker)
   nameWithType: Operation.Redo(ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.Redo(TimeCockpit.Data.ChangeTracker)
@@ -123,6 +149,7 @@ references:
     name: Redo
     nameWithType: Operation.Redo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -130,6 +157,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -138,6 +166,7 @@ references:
     name: Redo
     nameWithType: Operation.Redo
     fullName: TimeCockpit.Data.UndoRedo.Operation.Redo
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -145,13 +174,14 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
   commentId: M:TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation,TimeCockpit.Data.ChangeTracker)
   parent: TimeCockpit.Data.UndoRedo.Operation
-  isExternal: false
+  isExternal: true
   name: TryMerge(Operation, ChangeTracker)
   nameWithType: Operation.TryMerge(Operation, ChangeTracker)
   fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge(TimeCockpit.Data.UndoRedo.Operation, TimeCockpit.Data.ChangeTracker)
@@ -160,6 +190,7 @@ references:
     name: TryMerge
     nameWithType: Operation.TryMerge
     fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -167,6 +198,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.UndoRedo.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -174,6 +206,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -182,6 +215,7 @@ references:
     name: TryMerge
     nameWithType: Operation.TryMerge
     fullName: TimeCockpit.Data.UndoRedo.Operation.TryMerge
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -189,6 +223,7 @@ references:
     name: Operation
     nameWithType: Operation
     fullName: TimeCockpit.Data.UndoRedo.Operation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -196,6 +231,7 @@ references:
     name: ChangeTracker
     nameWithType: ChangeTracker
     fullName: TimeCockpit.Data.ChangeTracker
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -480,7 +516,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor*
+  commentId: Overload:TimeCockpit.Data.UndoRedo.ScopeOperation.#ctor
+  isExternal: true
+  name: ScopeOperation
+  nameWithType: ScopeOperation.ScopeOperation
+  fullName: TimeCockpit.Data.UndoRedo.ScopeOperation.ScopeOperation

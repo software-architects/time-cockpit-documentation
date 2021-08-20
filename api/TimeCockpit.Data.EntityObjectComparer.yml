@@ -5,6 +5,7 @@ items:
   id: EntityObjectComparer
   parent: TimeCockpit.Data
   children:
+  - TimeCockpit.Data.EntityObjectComparer.#ctor
   - TimeCockpit.Data.EntityObjectComparer.Equals(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject)
   - TimeCockpit.Data.EntityObjectComparer.GetHashCode(TimeCockpit.Data.EntityObject)
   langs:
@@ -15,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.EntityObjectComparer
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    id: EntityObjectComparer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    startLine: 14
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCompares EntityObjects for equality based on their reference and then ObjectUuid.\n"
-  example: []
   syntax:
     content: 'public sealed class EntityObjectComparer : IEqualityComparer<EntityObject>'
     content.vb: >-
@@ -62,16 +59,12 @@ items:
   fullName: TimeCockpit.Data.EntityObjectComparer.Equals(TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    id: Equals
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nDetermines whether the specified objects are equal.\n"
-  example: []
   syntax:
     content: public bool Equals(EntityObject x, EntityObject y)
     parameters:
@@ -104,16 +97,12 @@ items:
   fullName: TimeCockpit.Data.EntityObjectComparer.GetHashCode(TimeCockpit.Data.EntityObject)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    id: GetHashCode
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObjectComparer.cs
-    startLine: 43
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nReturns a hash code for the specified object.\n"
-  example: []
   syntax:
     content: public int GetHashCode(EntityObject obj)
     parameters:
@@ -131,10 +120,35 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.EntityObjectComparer.#ctor
+  commentId: M:TimeCockpit.Data.EntityObjectComparer.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.EntityObjectComparer
+  langs:
+  - csharp
+  - vb
+  name: EntityObjectComparer()
+  nameWithType: EntityObjectComparer.EntityObjectComparer()
+  fullName: TimeCockpit.Data.EntityObjectComparer.EntityObjectComparer()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  syntax:
+    content: public EntityObjectComparer()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.EntityObjectComparer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -168,6 +182,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -184,6 +199,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -468,7 +484,7 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
@@ -513,13 +529,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.EntityObjectComparer.Equals*
   commentId: Overload:TimeCockpit.Data.EntityObjectComparer.Equals
-  isExternal: false
+  isExternal: true
   name: Equals
   nameWithType: EntityObjectComparer.Equals
   fullName: TimeCockpit.Data.EntityObjectComparer.Equals
@@ -545,6 +561,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -552,6 +569,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -568,6 +586,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -575,13 +594,14 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
@@ -644,7 +664,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.EntityObjectComparer.GetHashCode*
   commentId: Overload:TimeCockpit.Data.EntityObjectComparer.GetHashCode
-  isExternal: false
+  isExternal: true
   name: GetHashCode
   nameWithType: EntityObjectComparer.GetHashCode
   fullName: TimeCockpit.Data.EntityObjectComparer.GetHashCode
@@ -670,6 +690,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -686,6 +707,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -734,3 +756,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.EntityObjectComparer.#ctor*
+  commentId: Overload:TimeCockpit.Data.EntityObjectComparer.#ctor
+  isExternal: true
+  name: EntityObjectComparer
+  nameWithType: EntityObjectComparer.EntityObjectComparer
+  fullName: TimeCockpit.Data.EntityObjectComparer.EntityObjectComparer

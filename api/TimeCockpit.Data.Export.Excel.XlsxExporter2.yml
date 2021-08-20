@@ -5,6 +5,7 @@ items:
   id: XlsxExporter2
   parent: TimeCockpit.Data.Export.Excel
   children:
+  - TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor
   - TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate(ClosedXML.Excel.XLWorkbook,System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell})
   - TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate(ClosedXML.Excel.XLWorkbook,System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell},System.Boolean,TimeCockpit.Data.DataModel.View.Form,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter},System.String)
   - TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm(ClosedXML.Excel.IXLWorksheet,TimeCockpit.Data.DataModel.View.Form,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter})
@@ -24,16 +25,11 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: XlsxExporter2
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 22
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nexcel exporter using ClosedXML\n"
-  example: []
   syntax:
     content: public class XlsxExporter2
     content.vb: Public Class XlsxExporter2
@@ -65,37 +61,26 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile(System.String, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Action<System.Int32>, System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: ExportToFile
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 33
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nExports to file.\n"
-  example: []
   syntax:
     content: public static void ExportToFile(string templatePath, string filePath, IEnumerable<EntityObject> entityObjects, IEnumerable<BoundCell> columns, Action<int> progressCallback, CancellationToken cancelToken)
     parameters:
     - id: templatePath
       type: System.String
-      description: The template path.
     - id: filePath
       type: System.String
-      description: The file path.
     - id: entityObjects
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
-      description: The entity objects.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: The columns.
     - id: progressCallback
       type: System.Action{System.Int32}
-      description: The progress callback.
     - id: cancelToken
       type: System.Threading.CancellationToken
-      description: The cancel token.
     content.vb: Public Shared Sub ExportToFile(templatePath As String, filePath As String, entityObjects As IEnumerable(Of EntityObject), columns As IEnumerable(Of BoundCell), progressCallback As Action(Of Integer), cancelToken As CancellationToken)
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile*
   nameWithType.vb: XlsxExporter2.ExportToFile(String, String, IEnumerable(Of EntityObject), IEnumerable(Of BoundCell), Action(Of Int32), CancellationToken)
@@ -119,52 +104,36 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile(System.String, System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Boolean, TimeCockpit.Data.DataModel.View.Form, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Export.ExportParameter>, System.String, System.Action<System.Int32>, System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: ExportToFile
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 52
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nExports to file.\n"
-  example: []
   syntax:
     content: public static void ExportToFile(string templatePath, string filePath, IEnumerable<EntityObject> entityObjects, IEnumerable<BoundCell> columns, bool exportFilterParams, Form filterForm, EntityObject filterObject, IEnumerable<ExportParameter> advancedFilters, string listName, Action<int> progressCallback, CancellationToken cancelToken)
     parameters:
     - id: templatePath
       type: System.String
-      description: The template path.
     - id: filePath
       type: System.String
-      description: The file path.
     - id: entityObjects
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
-      description: The entity objects.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: The columns.
     - id: exportFilterParams
       type: System.Boolean
-      description: filter parameter to export.
     - id: filterForm
       type: TimeCockpit.Data.DataModel.View.Form
-      description: filter form.
     - id: filterObject
       type: TimeCockpit.Data.EntityObject
-      description: filter object for the filter form.
     - id: advancedFilters
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter}
-      description: query parameters, may be null.
     - id: listName
       type: System.String
-      description: name of the list that is being exported.
     - id: progressCallback
       type: System.Action{System.Int32}
-      description: The progress callback.
     - id: cancelToken
       type: System.Threading.CancellationToken
-      description: The cancel token.
     content.vb: Public Shared Sub ExportToFile(templatePath As String, filePath As String, entityObjects As IEnumerable(Of EntityObject), columns As IEnumerable(Of BoundCell), exportFilterParams As Boolean, filterForm As Form, filterObject As EntityObject, advancedFilters As IEnumerable(Of ExportParameter), listName As String, progressCallback As Action(Of Integer), cancelToken As CancellationToken)
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile*
   nameWithType.vb: XlsxExporter2.ExportToFile(String, String, IEnumerable(Of EntityObject), IEnumerable(Of BoundCell), Boolean, Form, EntityObject, IEnumerable(Of ExportParameter), String, Action(Of Int32), CancellationToken)
@@ -188,37 +157,26 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export(System.Byte[], System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Action<System.Int32>, System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: Export
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 108
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nExports the list of entityobjects to the non-existing file at filePath\n"
-  example: []
   syntax:
     content: public static byte[] Export(byte[] templateData, IEnumerable<EntityObject> entityObjects, IEnumerable<BoundCell> columns, Action<int> progressCallback, CancellationToken cancelToken)
     parameters:
     - id: templateData
       type: System.Byte[]
-      description: The template data.
     - id: entityObjects
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
-      description: list of entityobjects that should be serialized
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: if template is null, contains the descriptions of the columns to export.
     - id: progressCallback
       type: System.Action{System.Int32}
-      description: callback notifying the amount of entityobjects exported.
     - id: cancelToken
       type: System.Threading.CancellationToken
-      description: cancellation token for the operation.
     return:
       type: System.Byte[]
-      description: returns the binary data to be written to the desintation file.
     content.vb: Public Shared Function Export(templateData As Byte(), entityObjects As IEnumerable(Of EntityObject), columns As IEnumerable(Of BoundCell), progressCallback As Action(Of Integer), cancelToken As CancellationToken) As Byte()
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export*
   nameWithType.vb: XlsxExporter2.Export(Byte(), IEnumerable(Of EntityObject), IEnumerable(Of BoundCell), Action(Of Int32), CancellationToken)
@@ -242,52 +200,36 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export(System.Byte[], System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Boolean, TimeCockpit.Data.DataModel.View.Form, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Export.ExportParameter>, System.String, System.Action<System.Int32>, System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: Export
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 127
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nExports the list of entityobjects to the non-existing file at filePath\n"
-  example: []
   syntax:
     content: public static byte[] Export(byte[] templateData, IEnumerable<EntityObject> entityObjects, IEnumerable<BoundCell> columns, bool showFilterParams, Form filterForm, EntityObject filterObject, IEnumerable<ExportParameter> advancedFilters, string listName, Action<int> progressCallback, CancellationToken cancelToken)
     parameters:
     - id: templateData
       type: System.Byte[]
-      description: The template data.
     - id: entityObjects
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
-      description: list of entityobjects that should be serialized
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: if template is null, contains the descriptions of the columns to export.
     - id: showFilterParams
       type: System.Boolean
-      description: true if filter params should be exported as well, false if not.
     - id: filterForm
       type: TimeCockpit.Data.DataModel.View.Form
-      description: filter form to export, may be null.
     - id: filterObject
       type: TimeCockpit.Data.EntityObject
-      description: object containing values for filter form, may be null if filterForm is also null.
     - id: advancedFilters
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter}
-      description: query parameters, may be null.
     - id: listName
       type: System.String
-      description: name of list to export.
     - id: progressCallback
       type: System.Action{System.Int32}
-      description: callback notifying the amount of entityobjects exported.
     - id: cancelToken
       type: System.Threading.CancellationToken
-      description: cancellation token for the operation.
     return:
       type: System.Byte[]
-      description: returns the binary data to be written to the destination file.
     content.vb: Public Shared Function Export(templateData As Byte(), entityObjects As IEnumerable(Of EntityObject), columns As IEnumerable(Of BoundCell), showFilterParams As Boolean, filterForm As Form, filterObject As EntityObject, advancedFilters As IEnumerable(Of ExportParameter), listName As String, progressCallback As Action(Of Integer), cancelToken As CancellationToken) As Byte()
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export*
   nameWithType.vb: XlsxExporter2.Export(Byte(), IEnumerable(Of EntityObject), IEnumerable(Of BoundCell), Boolean, Form, EntityObject, IEnumerable(Of ExportParameter), String, Action(Of Int32), CancellationToken)
@@ -311,34 +253,24 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.FillWorkBook(ClosedXML.Excel.XLWorkbook, System.Collections.Generic.IEnumerable<TimeCockpit.Data.EntityObject>, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Action<System.Int32>, System.Threading.CancellationToken)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: FillWorkBook
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 198
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nFills the work book.\n"
-  example: []
   syntax:
     content: public static void FillWorkBook(XLWorkbook wb, IEnumerable<EntityObject> entityObjects, IEnumerable<BoundCell> columns, Action<int> progressCallback, CancellationToken cancelToken)
     parameters:
     - id: wb
       type: ClosedXML.Excel.XLWorkbook
-      description: The workbook to write to.
     - id: entityObjects
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.EntityObject}
-      description: The entity objects.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: The columns.
     - id: progressCallback
       type: System.Action{System.Int32}
-      description: The progress callback.
     - id: cancelToken
       type: System.Threading.CancellationToken
-      description: The cancel token.
     content.vb: Public Shared Sub FillWorkBook(wb As XLWorkbook, entityObjects As IEnumerable(Of EntityObject), columns As IEnumerable(Of BoundCell), progressCallback As Action(Of Integer), cancelToken As CancellationToken)
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.FillWorkBook*
   nameWithType.vb: XlsxExporter2.FillWorkBook(XLWorkbook, IEnumerable(Of EntityObject), IEnumerable(Of BoundCell), Action(Of Int32), CancellationToken)
@@ -362,25 +294,18 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate(ClosedXML.Excel.XLWorkbook, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: BuildDefaultTemplate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 321
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nBuilds the default template.\n"
-  example: []
   syntax:
     content: public static void BuildDefaultTemplate(XLWorkbook wb, IEnumerable<BoundCell> columns)
     parameters:
     - id: wb
       type: ClosedXML.Excel.XLWorkbook
-      description: The workbook to write to.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: The columns.
     content.vb: Public Shared Sub BuildDefaultTemplate(wb As XLWorkbook, columns As IEnumerable(Of BoundCell))
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate*
   nameWithType.vb: XlsxExporter2.BuildDefaultTemplate(XLWorkbook, IEnumerable(Of BoundCell))
@@ -404,25 +329,18 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.SanitizeWorksheetName(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: SanitizeWorksheetName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 331
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nSanitizes the worksheet name to be Excel compatible (used for all import engines).\n"
-  example: []
   syntax:
     content: public static string SanitizeWorksheetName(string sourceName)
     parameters:
     - id: sourceName
       type: System.String
-      description: The source name to sanitize.
     return:
       type: System.String
-      description: Returns a new string, valid for use with excel.
     content.vb: Public Shared Function SanitizeWorksheetName(sourceName As String) As String
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.SanitizeWorksheetName*
   modifiers.csharp:
@@ -443,40 +361,28 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate(ClosedXML.Excel.XLWorkbook, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.View.BoundCell>, System.Boolean, TimeCockpit.Data.DataModel.View.Form, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Export.ExportParameter>, System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: BuildDefaultTemplate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 357
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nBuilds the default template.\n"
-  example: []
   syntax:
     content: public static void BuildDefaultTemplate(XLWorkbook wb, IEnumerable<BoundCell> columns, bool showFilterParams, Form filterForm, EntityObject filterObject, IEnumerable<ExportParameter> advancedFilters, string listName)
     parameters:
     - id: wb
       type: ClosedXML.Excel.XLWorkbook
-      description: The workbook to write to.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.View.BoundCell}
-      description: The columns.
     - id: showFilterParams
       type: System.Boolean
-      description: true if the filter options should be exported as well, false if not.
     - id: filterForm
       type: TimeCockpit.Data.DataModel.View.Form
-      description: filter form to export, may be null.
     - id: filterObject
       type: TimeCockpit.Data.EntityObject
-      description: filter object for filter form to export, may be null if filterform is null.
     - id: advancedFilters
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter}
-      description: query parameters, may be null.
     - id: listName
       type: System.String
-      description: name of the list to export.
     content.vb: Public Shared Sub BuildDefaultTemplate(wb As XLWorkbook, columns As IEnumerable(Of BoundCell), showFilterParams As Boolean, filterForm As Form, filterObject As EntityObject, advancedFilters As IEnumerable(Of ExportParameter), listName As String)
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate*
   nameWithType.vb: XlsxExporter2.BuildDefaultTemplate(XLWorkbook, IEnumerable(Of BoundCell), Boolean, Form, EntityObject, IEnumerable(Of ExportParameter), String)
@@ -500,25 +406,18 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.SetCellStyle(TimeCockpit.Data.DataModel.View.BoundCell, ClosedXML.Excel.IXLCell)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: SetCellStyle
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 409
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nSets the style of the cell.\n"
-  example: []
   syntax:
     content: public static void SetCellStyle(BoundCell boundCell, IXLCell cell)
     parameters:
     - id: boundCell
       type: TimeCockpit.Data.DataModel.View.BoundCell
-      description: cell to derive style from.
     - id: cell
       type: ClosedXML.Excel.IXLCell
-      description: cell to set style on.
     content.vb: Public Shared Sub SetCellStyle(boundCell As BoundCell, cell As IXLCell)
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.SetCellStyle*
   modifiers.csharp:
@@ -539,34 +438,24 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm(ClosedXML.Excel.IXLWorksheet, TimeCockpit.Data.DataModel.View.Form, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Export.ExportParameter>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: BuildFilterForm
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 495
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nbuilds the filter form.\n"
-  example: []
   syntax:
     content: public static int BuildFilterForm(IXLWorksheet ws, Form filterForm, EntityObject filterObject, IEnumerable<ExportParameter> advancedFilters)
     parameters:
     - id: ws
       type: ClosedXML.Excel.IXLWorksheet
-      description: Worksheet to write to.
     - id: filterForm
       type: TimeCockpit.Data.DataModel.View.Form
-      description: filterForm to write out.
     - id: filterObject
       type: TimeCockpit.Data.EntityObject
-      description: values for the filter form.
     - id: advancedFilters
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Export.ExportParameter}
-      description: query parameters to use, may be null.
     return:
       type: System.Int32
-      description: returns the column offset, after which the filter may start.
     content.vb: Public Shared Function BuildFilterForm(ws As IXLWorksheet, filterForm As Form, filterObject As EntityObject, advancedFilters As IEnumerable(Of ExportParameter)) As Integer
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm*
   nameWithType.vb: XlsxExporter2.BuildFilterForm(IXLWorksheet, Form, EntityObject, IEnumerable(Of ExportParameter))
@@ -590,28 +479,20 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.CheckTemplate(System.String, TimeCockpit.Data.DataModel.ModelEntityBase)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    id: CheckTemplate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/XlsxExporter2.cs
-    startLine: 582
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nChecks whether the expressions in a template file will work agains the given modelEntity.\n"
-  example: []
   syntax:
     content: public static bool CheckTemplate(string templatePath, ModelEntityBase modelEntity)
     parameters:
     - id: templatePath
       type: System.String
-      description: path to the template
     - id: modelEntity
       type: TimeCockpit.Data.DataModel.ModelEntityBase
-      description: model entity to check against.
     return:
       type: System.Boolean
-      description: returns true if the template is valid for the passed model.
     content.vb: Public Shared Function CheckTemplate(templatePath As String, modelEntity As ModelEntityBase) As Boolean
   overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.CheckTemplate*
   modifiers.csharp:
@@ -620,10 +501,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor
+  commentId: M:TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Export.Excel.XlsxExporter2
+  langs:
+  - csharp
+  - vb
+  name: XlsxExporter2()
+  nameWithType: XlsxExporter2.XlsxExporter2()
+  fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.XlsxExporter2()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data.Export
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  syntax:
+    content: public XlsxExporter2()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Export.Excel
   commentId: N:TimeCockpit.Data.Export.Excel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Export.Excel
   nameWithType: TimeCockpit.Data.Export.Excel
   fullName: TimeCockpit.Data.Export.Excel
@@ -915,13 +821,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile
-  isExternal: false
+  isExternal: true
   name: ExportToFile
   nameWithType: XlsxExporter2.ExportToFile
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.ExportToFile
@@ -955,6 +861,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -971,6 +878,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -997,6 +905,7 @@ references:
     name: BoundCell
     nameWithType: BoundCell
     fullName: TimeCockpit.Data.DataModel.View.BoundCell
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1013,6 +922,7 @@ references:
     name: BoundCell
     nameWithType: BoundCell
     fullName: TimeCockpit.Data.DataModel.View.BoundCell
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1108,7 +1018,7 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
@@ -1153,7 +1063,7 @@ references:
     fullName: )
 - uid: System.Threading
   commentId: N:System.Threading
-  isExternal: false
+  isExternal: true
   name: System.Threading
   nameWithType: System.Threading
   fullName: System.Threading
@@ -1167,14 +1077,14 @@ references:
 - uid: TimeCockpit.Data.DataModel.View.Form
   commentId: T:TimeCockpit.Data.DataModel.View.Form
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: Form
   nameWithType: Form
   fullName: TimeCockpit.Data.DataModel.View.Form
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
@@ -1201,6 +1111,7 @@ references:
     name: ExportParameter
     nameWithType: ExportParameter
     fullName: TimeCockpit.Data.Export.ExportParameter
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1217,28 +1128,30 @@ references:
     name: ExportParameter
     nameWithType: ExportParameter
     fullName: TimeCockpit.Data.Export.ExportParameter
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.View
   commentId: N:TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.View
   nameWithType: TimeCockpit.Data.DataModel.View
   fullName: TimeCockpit.Data.DataModel.View
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.Export
-  isExternal: false
+  isExternal: true
   name: Export
   nameWithType: XlsxExporter2.Export
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.Export
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -1265,64 +1178,54 @@ references:
     fullName: ()
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.FillWorkBook*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.FillWorkBook
-  isExternal: false
+  isExternal: true
   name: FillWorkBook
   nameWithType: XlsxExporter2.FillWorkBook
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.FillWorkBook
 - uid: ClosedXML.Excel.XLWorkbook
-  commentId: T:ClosedXML.Excel.XLWorkbook
-  parent: ClosedXML.Excel
   isExternal: true
   name: XLWorkbook
   nameWithType: XLWorkbook
   fullName: ClosedXML.Excel.XLWorkbook
-- uid: ClosedXML.Excel
-  commentId: N:ClosedXML.Excel
-  isExternal: false
-  name: ClosedXML.Excel
-  nameWithType: ClosedXML.Excel
-  fullName: ClosedXML.Excel
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate
-  isExternal: false
+  isExternal: true
   name: BuildDefaultTemplate
   nameWithType: XlsxExporter2.BuildDefaultTemplate
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildDefaultTemplate
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.SanitizeWorksheetName*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.SanitizeWorksheetName
-  isExternal: false
+  isExternal: true
   name: SanitizeWorksheetName
   nameWithType: XlsxExporter2.SanitizeWorksheetName
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.SanitizeWorksheetName
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.SetCellStyle*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.SetCellStyle
-  isExternal: false
+  isExternal: true
   name: SetCellStyle
   nameWithType: XlsxExporter2.SetCellStyle
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.SetCellStyle
 - uid: TimeCockpit.Data.DataModel.View.BoundCell
   commentId: T:TimeCockpit.Data.DataModel.View.BoundCell
   parent: TimeCockpit.Data.DataModel.View
-  isExternal: false
+  isExternal: true
   name: BoundCell
   nameWithType: BoundCell
   fullName: TimeCockpit.Data.DataModel.View.BoundCell
 - uid: ClosedXML.Excel.IXLCell
-  commentId: T:ClosedXML.Excel.IXLCell
-  parent: ClosedXML.Excel
+  commentId: '!:ClosedXML.Excel.IXLCell'
   isExternal: true
   name: IXLCell
   nameWithType: IXLCell
   fullName: ClosedXML.Excel.IXLCell
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm
-  isExternal: false
+  isExternal: true
   name: BuildFilterForm
   nameWithType: XlsxExporter2.BuildFilterForm
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.BuildFilterForm
 - uid: ClosedXML.Excel.IXLWorksheet
-  commentId: T:ClosedXML.Excel.IXLWorksheet
-  parent: ClosedXML.Excel
+  commentId: '!:ClosedXML.Excel.IXLWorksheet'
   isExternal: true
   name: IXLWorksheet
   nameWithType: IXLWorksheet
@@ -1336,20 +1239,26 @@ references:
   fullName: System.Int32
 - uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.CheckTemplate*
   commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.CheckTemplate
-  isExternal: false
+  isExternal: true
   name: CheckTemplate
   nameWithType: XlsxExporter2.CheckTemplate
   fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.CheckTemplate
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor*
+  commentId: Overload:TimeCockpit.Data.Export.Excel.XlsxExporter2.#ctor
+  isExternal: true
+  name: XlsxExporter2
+  nameWithType: XlsxExporter2.XlsxExporter2
+  fullName: TimeCockpit.Data.Export.Excel.XlsxExporter2.XlsxExporter2

@@ -5,6 +5,7 @@ items:
   id: SystemObjectInstall
   parent: TimeCockpit.Data.Install
   children:
+  - TimeCockpit.Data.Install.SystemObjectInstall.#ctor
   - TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
   - TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
   - TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
@@ -16,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.Install.SystemObjectInstall
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    id: SystemObjectInstall
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\ncall representing an system object install, instancing t4 templates.\n"
-  example: []
   syntax:
     content: 'public class SystemObjectInstall : InstallationComponent'
     content.vb: >-
@@ -52,6 +49,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Install.SystemObjectInstall.#ctor
+  commentId: M:TimeCockpit.Data.Install.SystemObjectInstall.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Install.SystemObjectInstall
+  langs:
+  - csharp
+  - vb
+  name: SystemObjectInstall()
+  nameWithType: SystemObjectInstall.SystemObjectInstall()
+  fullName: TimeCockpit.Data.Install.SystemObjectInstall.SystemObjectInstall()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Install
+  syntax:
+    content: public SystemObjectInstall()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Install.SystemObjectInstall.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
   commentId: P:TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
   id: ContentTemplate
@@ -64,16 +86,12 @@ items:
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    id: ContentTemplate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    startLine: 36
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the ContentTemplate.\n"
-  example: []
   syntax:
     content: public string ContentTemplate { get; set; }
     parameters: []
@@ -99,17 +117,13 @@ items:
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    id: MatchCriteriaQuery
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    startLine: 65
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the match criteria query\n"
   remarks: "\n<p>\n  The match criteria query is used to determine whether the script should be executed.\n  If specified this query is executed against the target database. Depending on the\n  setting of the <xref href=\"TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition\" data-throw-if-not-resolved=\"false\"></xref> property and the query&apos;s result\n  the system executes or ignores the script.\n</p>\n<p>\n  Note that the match criteria query has to return a scalar int value. A resulting value >= 1\n  indicates that the object in question exists, &lt;= 0 means that the object in question \n  does not exist.\n</p>\n"
-  example: []
   syntax:
     content: public string MatchCriteriaQuery { get; set; }
     parameters: []
@@ -135,17 +149,13 @@ items:
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    id: MatchCriteriaCondition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/SystemObjectInstall.cs
-    startLine: 87
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the match criteria condition\n"
   remarks: "\nThe match criteria query (<xref href=\"TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery\" data-throw-if-not-resolved=\"false\"></xref>) is used to determine whether the \nscript should be executed. If specified this query is executed against the target database. Depending on the\nsetting of the <xref href=\"TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition\" data-throw-if-not-resolved=\"false\"></xref> property and the query&apos;s result\nthe system executes or ignores the script.\n"
-  example: []
   syntax:
     content: public StatementExecution MatchCriteriaCondition { get; set; }
     parameters: []
@@ -162,7 +172,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
@@ -176,35 +186,35 @@ references:
 - uid: TimeCockpit.Data.Install.InstallationComponent
   commentId: T:TimeCockpit.Data.Install.InstallationComponent
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponent
   nameWithType: InstallationComponent
   fullName: TimeCockpit.Data.Install.InstallationComponent
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstallationComponent.ComponentUuid
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
 - uid: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: InvariantFriendlyName
   nameWithType: InstallationComponent.InvariantFriendlyName
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
 - uid: TimeCockpit.Data.Install.InstallationComponent.Mandatory
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.Mandatory
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstallationComponent.Mandatory
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
 - uid: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ProviderInvariantName
   nameWithType: InstallationComponent.ProviderInvariantName
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
@@ -489,13 +499,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Install.SystemObjectInstall.#ctor*
+  commentId: Overload:TimeCockpit.Data.Install.SystemObjectInstall.#ctor
+  isExternal: true
+  name: SystemObjectInstall
+  nameWithType: SystemObjectInstall.SystemObjectInstall
+  fullName: TimeCockpit.Data.Install.SystemObjectInstall.SystemObjectInstall
 - uid: TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate*
   commentId: Overload:TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
-  isExternal: false
+  isExternal: true
   name: ContentTemplate
   nameWithType: SystemObjectInstall.ContentTemplate
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.ContentTemplate
@@ -506,26 +522,22 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
-  commentId: P:TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
 - uid: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery*
   commentId: Overload:TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
-  isExternal: false
+  isExternal: true
   name: MatchCriteriaQuery
   nameWithType: SystemObjectInstall.MatchCriteriaQuery
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
-- uid: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
-  commentId: P:TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaQuery
 - uid: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition*
   commentId: Overload:TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
-  isExternal: false
+  isExternal: true
   name: MatchCriteriaCondition
   nameWithType: SystemObjectInstall.MatchCriteriaCondition
   fullName: TimeCockpit.Data.Install.SystemObjectInstall.MatchCriteriaCondition
 - uid: TimeCockpit.Data.Install.StatementExecution
   commentId: T:TimeCockpit.Data.Install.StatementExecution
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: StatementExecution
   nameWithType: StatementExecution
   fullName: TimeCockpit.Data.Install.StatementExecution

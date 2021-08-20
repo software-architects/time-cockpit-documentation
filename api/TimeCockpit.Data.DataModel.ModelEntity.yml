@@ -17,27 +17,19 @@ items:
   fullName: TimeCockpit.Data.DataModel.ModelEntity
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    id: ModelEntity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents a flat dimension in the data model.\n"
-  example: []
   syntax:
     content: >-
-      [EntityObjectType(typeof (EntityObject))]
-
-      [DataContract]
+      [EntityObjectType(typeof(EntityObject))]
 
       public class ModelEntity : ModelEntityBase, IDynamicMetaObjectProvider, INotifyPropertyChanged, IDataErrorInfo
     content.vb: >-
       <EntityObjectType(GetType(EntityObject))>
-
-      <DataContract>
 
       Public Class ModelEntity
           Inherits ModelEntityBase
@@ -53,6 +45,28 @@ items:
   - System.ComponentModel.INotifyPropertyChanged
   - System.ComponentModel.IDataErrorInfo
   inheritedMembers:
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.OnDeserializing(System.Runtime.Serialization.StreamingContext)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.GetMember(System.String)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.AddImplementedInterface(System.String)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate``1(System.String)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate``1(System.String,TimeCockpit.Data.Environment,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.RemoveImplementedInterface(System.String)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(TimeCockpit.Data.Environment)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Boolean)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}},System.Boolean)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Guid,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage(System.String)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
+  - TimeCockpit.Data.DataModel.ModelEntityBase.ToString
+  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Guid,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}},System.Boolean,System.Boolean,System.Boolean,TimeCockpit.Data.Environment)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement,System.Boolean)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
+  - TimeCockpit.Data.DataModel.ModelEntityBase.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
   - TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
   - TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
   - TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
@@ -78,28 +92,12 @@ items:
   - TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
   - TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
   - TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.OnDeserializing(System.Runtime.Serialization.StreamingContext)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.GetMember(System.String)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.AddImplementedInterface(System.String)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate``1(System.String)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate``1(System.String,TimeCockpit.Data.Environment,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.EntityObject)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.RemoveImplementedInterface(System.String)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(TimeCockpit.Data.Environment)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Boolean)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}},System.Boolean)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Guid,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}})
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage(System.String)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
-  - TimeCockpit.Data.DataModel.ModelEntityBase.ToString
-  - TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(System.Guid,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Object,System.Object}},System.Boolean,System.Boolean,System.Boolean,TimeCockpit.Data.Environment)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement,System.Boolean)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
-  - TimeCockpit.Data.DataModel.ModelEntityBase.Validate(System.Collections.Generic.IList{TimeCockpit.Data.DataModel.PropertyValidationMessage}@,System.Boolean)
+  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
+  - TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
+  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
+  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   - TimeCockpit.Data.DataModel.ModelElement.ElementGuid
   - TimeCockpit.Data.DataModel.ModelElement.Name
   - TimeCockpit.Data.DataModel.ModelElement.Parent
@@ -119,15 +117,8 @@ items:
   - TimeCockpit.Data.DataModel.ModelElement.Ownership
   - TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
   - TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  - TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.UpdateChildren(System.Collections.Specialized.NotifyCollectionChangedEventArgs)
-  - TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
-  - TimeCockpit.Data.DataModel.ModelElement.SetName(System.String)
-  - TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
-  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
+  - TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
   - TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   - TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   - System.Object.Equals(System.Object)
@@ -142,9 +133,6 @@ items:
     arguments:
     - type: System.Type
       value: TimeCockpit.Data.EntityObject
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -163,16 +151,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ModelEntity.ModelEntity()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the ModelEntity class.\n"
-  example: []
   syntax:
     content: public ModelEntity()
     content.vb: Public Sub New
@@ -193,17 +177,13 @@ items:
   fullName: TimeCockpit.Data.DataModel.ModelEntity.ModelEntity(TimeCockpit.Data.DataModel.ModelEntity)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    startLine: 36
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the ModelEntity class.\n"
   remarks: Copy constructor for copying values of an instance of <xref href="TimeCockpit.Data.DataModel.ModelEntity" data-throw-if-not-resolved="false"></xref>.
-  example: []
   syntax:
     content: public ModelEntity(ModelEntity element)
     parameters:
@@ -228,16 +208,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ModelEntity.ModelEntity(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.Object, System.Object>>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    startLine: 45
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the ModelEntity class.\n"
-  example: []
   syntax:
     content: public ModelEntity(IEnumerable<KeyValuePair<object, object>> properties)
     parameters:
@@ -265,16 +241,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ModelEntity.Detach()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    id: Detach
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ModelEntity.cs
-    startLine: 59
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nDetaches a model element from a parent model element.\n"
-  example: []
   syntax:
     content: protected override void Detach()
     content.vb: Protected Overrides Sub Detach
@@ -292,7 +264,7 @@ items:
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -306,231 +278,50 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject
   commentId: T:TimeCockpit.Data.DataModel.NamedDynamicObject
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: NamedDynamicObject
   nameWithType: NamedDynamicObject
   fullName: TimeCockpit.Data.DataModel.NamedDynamicObject
 - uid: TimeCockpit.Data.DataModel.ModelElement
   commentId: T:TimeCockpit.Data.DataModel.ModelElement
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElement
   nameWithType: ModelElement
   fullName: TimeCockpit.Data.DataModel.ModelElement
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
   fullName: System.ComponentModel.INotifyPropertyChanged
 - uid: System.ComponentModel.IDataErrorInfo
-  commentId: T:System.ComponentModel.IDataErrorInfo
-  parent: System.ComponentModel
   isExternal: true
   name: IDataErrorInfo
   nameWithType: IDataErrorInfo
   fullName: System.ComponentModel.IDataErrorInfo
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DefaultDisplayPropertyName
-  nameWithType: ModelEntityBase.DefaultDisplayPropertyName
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: ReadOnlyExpression
-  nameWithType: ModelEntityBase.ReadOnlyExpression
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DefaultListName
-  nameWithType: ModelEntityBase.DefaultListName
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DefaultFormName
-  nameWithType: ModelEntityBase.DefaultFormName
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DefaultRelationListName
-  nameWithType: ModelEntityBase.DefaultRelationListName
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: AuditMode
-  nameWithType: ModelEntityBase.AuditMode
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Properties
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Properties
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: Properties
-  nameWithType: ModelEntityBase.Properties
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Properties
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Relations
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Relations
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: Relations
-  nameWithType: ModelEntityBase.Relations
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Relations
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: LogicalRelations
-  nameWithType: ModelEntityBase.LogicalRelations
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: AllRelations
-  nameWithType: ModelEntityBase.AllRelations
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: CyclicRelations
-  nameWithType: ModelEntityBase.CyclicRelations
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: ValidationRules
-  nameWithType: ModelEntityBase.ValidationRules
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: ImplementedInterfaces
-  nameWithType: ModelEntityBase.ImplementedInterfaces
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: Permissions
-  nameWithType: ModelEntityBase.Permissions
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: SyncBehavior
-  nameWithType: ModelEntityBase.SyncBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: IsDataSynced
-  nameWithType: ModelEntityBase.IsDataSynced
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: IsModelSynced
-  nameWithType: ModelEntityBase.IsModelSynced
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: PersistBehavior
-  nameWithType: ModelEntityBase.PersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: PersistedProperties
-  nameWithType: ModelEntityBase.PersistedProperties
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DependentModelEntities
-  nameWithType: ModelEntityBase.DependentModelEntities
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: DependentRelationPaths
-  nameWithType: ModelEntityBase.DependentRelationPaths
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: IsGenericRelationEntity
-  nameWithType: ModelEntityBase.IsGenericRelationEntity
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: Triggers
-  nameWithType: ModelEntityBase.Triggers
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: PreSaveTriggers
-  nameWithType: ModelEntityBase.PreSaveTriggers
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: PostSaveTriggers
-  nameWithType: ModelEntityBase.PostSaveTriggers
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: Accept(ModelElementVisitor)
   nameWithType: ModelEntityBase.Accept(ModelElementVisitor)
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Accept(TimeCockpit.Data.DataModel.ModelElementVisitor)
@@ -539,6 +330,7 @@ references:
     name: Accept
     nameWithType: ModelEntityBase.Accept
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -546,6 +338,7 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -554,6 +347,7 @@ references:
     name: Accept
     nameWithType: ModelEntityBase.Accept
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -561,6 +355,7 @@ references:
     name: ModelElementVisitor
     nameWithType: ModelElementVisitor
     fullName: TimeCockpit.Data.DataModel.ModelElementVisitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -576,6 +371,7 @@ references:
     name: OnDeserializing
     nameWithType: ModelEntityBase.OnDeserializing
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.OnDeserializing
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -592,6 +388,7 @@ references:
     name: OnDeserializing
     nameWithType: ModelEntityBase.OnDeserializing
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.OnDeserializing
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -615,6 +412,7 @@ references:
     name: GetMember
     nameWithType: ModelEntityBase.GetMember
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -631,6 +429,7 @@ references:
     name: GetMember
     nameWithType: ModelEntityBase.GetMember
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -654,6 +453,7 @@ references:
     name: AddImplementedInterface
     nameWithType: ModelEntityBase.AddImplementedInterface
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AddImplementedInterface
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -670,6 +470,7 @@ references:
     name: AddImplementedInterface
     nameWithType: ModelEntityBase.AddImplementedInterface
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AddImplementedInterface
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -696,6 +497,7 @@ references:
     name: Evaluate<T>
     nameWithType: ModelEntityBase.Evaluate<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -712,6 +514,7 @@ references:
     name: Evaluate(Of T)
     nameWithType: ModelEntityBase.Evaluate(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -738,6 +541,7 @@ references:
     name: Evaluate<T>
     nameWithType: ModelEntityBase.Evaluate<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -753,6 +557,7 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -768,6 +573,7 @@ references:
     name: QueryParameter
     nameWithType: QueryParameter
     fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -778,6 +584,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -786,6 +593,7 @@ references:
     name: Evaluate(Of T)
     nameWithType: ModelEntityBase.Evaluate(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Evaluate(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -801,6 +609,7 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -816,6 +625,7 @@ references:
     name: QueryParameter
     nameWithType: QueryParameter
     fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -826,6 +636,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -841,6 +652,7 @@ references:
     name: RemoveImplementedInterface
     nameWithType: ModelEntityBase.RemoveImplementedInterface
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.RemoveImplementedInterface
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -857,6 +669,7 @@ references:
     name: RemoveImplementedInterface
     nameWithType: ModelEntityBase.RemoveImplementedInterface
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.RemoveImplementedInterface
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -871,7 +684,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: NewInstance()
   nameWithType: ModelEntityBase.NewInstance()
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance()
@@ -880,6 +693,7 @@ references:
     name: NewInstance
     nameWithType: ModelEntityBase.NewInstance
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -891,6 +705,7 @@ references:
     name: NewInstance
     nameWithType: ModelEntityBase.NewInstance
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.NewInstance
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -900,7 +715,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: CreateEntityObject<T>()
   nameWithType: ModelEntityBase.CreateEntityObject<T>()
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>()
@@ -912,6 +727,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -923,6 +739,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -932,7 +749,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(TimeCockpit.Data.Environment)
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject``1(TimeCockpit.Data.Environment)
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: CreateEntityObject<T>(Environment)
   nameWithType: ModelEntityBase.CreateEntityObject<T>(Environment)
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>(TimeCockpit.Data.Environment)
@@ -944,6 +761,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -951,6 +769,7 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -959,6 +778,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -966,6 +786,7 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -984,6 +805,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1000,6 +822,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1026,6 +849,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1072,6 +896,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1128,6 +953,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1182,6 +1008,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1246,6 +1073,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1300,6 +1128,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1361,6 +1190,7 @@ references:
     name: CreateAuditTrailMessage
     nameWithType: ModelEntityBase.CreateAuditTrailMessage
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1377,6 +1207,7 @@ references:
     name: CreateAuditTrailMessage
     nameWithType: ModelEntityBase.CreateAuditTrailMessage
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1391,7 +1222,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: CreateAuditTrailMessage()
   nameWithType: ModelEntityBase.CreateAuditTrailMessage()
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage()
@@ -1400,6 +1231,7 @@ references:
     name: CreateAuditTrailMessage
     nameWithType: ModelEntityBase.CreateAuditTrailMessage
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1411,6 +1243,7 @@ references:
     name: CreateAuditTrailMessage
     nameWithType: ModelEntityBase.CreateAuditTrailMessage
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateAuditTrailMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1420,7 +1253,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.ToString
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.ToString
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: ToString()
   nameWithType: ModelEntityBase.ToString()
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ToString()
@@ -1429,6 +1262,7 @@ references:
     name: ToString
     nameWithType: ModelEntityBase.ToString
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ToString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1440,6 +1274,7 @@ references:
     name: ToString
     nameWithType: ModelEntityBase.ToString
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ToString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1461,6 +1296,7 @@ references:
     name: CreateEntityObject<T>
     nameWithType: ModelEntityBase.CreateEntityObject<T>
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject<T>
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1538,6 +1374,7 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1546,6 +1383,7 @@ references:
     name: CreateEntityObject(Of T)
     nameWithType: ModelEntityBase.CreateEntityObject(Of T)
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CreateEntityObject(Of T)
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1623,13 +1461,14 @@ references:
     name: Environment
     nameWithType: Environment
     fullName: TimeCockpit.Data.Environment
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: GetAutoIncludedRelations()
   nameWithType: ModelEntityBase.GetAutoIncludedRelations()
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations()
@@ -1638,6 +1477,7 @@ references:
     name: GetAutoIncludedRelations
     nameWithType: ModelEntityBase.GetAutoIncludedRelations
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1649,6 +1489,7 @@ references:
     name: GetAutoIncludedRelations
     nameWithType: ModelEntityBase.GetAutoIncludedRelations
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.GetAutoIncludedRelations
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1667,6 +1508,7 @@ references:
     name: Attach
     nameWithType: ModelEntityBase.Attach
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1674,6 +1516,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1690,6 +1533,7 @@ references:
     name: Attach
     nameWithType: ModelEntityBase.Attach
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1697,6 +1541,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1711,7 +1556,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
   commentId: M:TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
   parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
+  isExternal: true
   name: Attach(ModelElement)
   nameWithType: ModelEntityBase.Attach(ModelElement)
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Attach(TimeCockpit.Data.DataModel.ModelElement)
@@ -1720,6 +1565,7 @@ references:
     name: Attach
     nameWithType: ModelEntityBase.Attach
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1727,6 +1573,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1735,6 +1582,7 @@ references:
     name: Attach
     nameWithType: ModelEntityBase.Attach
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Attach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1742,6 +1590,7 @@ references:
     name: ModelElement
     nameWithType: ModelElement
     fullName: TimeCockpit.Data.DataModel.ModelElement
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1760,6 +1609,7 @@ references:
     name: Validate
     nameWithType: ModelEntityBase.Validate
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1775,6 +1625,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1794,6 +1645,7 @@ references:
     name: Validate
     nameWithType: ModelEntityBase.Validate
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Validate
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1809,6 +1661,7 @@ references:
     name: PropertyValidationMessage
     nameWithType: PropertyValidationMessage
     fullName: TimeCockpit.Data.DataModel.PropertyValidationMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1823,181 +1676,181 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ElementGuid
-  nameWithType: ModelElement.ElementGuid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Name
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Name
-  nameWithType: ModelElement.Name
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
-- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Parent
-  nameWithType: ModelElement.Parent
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
-- uid: TimeCockpit.Data.DataModel.ModelElement.Children
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Children
-  nameWithType: ModelElement.Children
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsFullPersistBehavior
-  nameWithType: ModelElement.IsFullPersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsNonePersistBehavior
-  nameWithType: ModelElement.IsNonePersistBehavior
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemElement
-  nameWithType: ModelElement.IsSystemElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsApplicationSpecificElement
-  nameWithType: ModelElement.IsApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsUserElement
-  nameWithType: ModelElement.IsUserElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsSystemOrApplicationSpecificElement
-  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
-- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: InvariantFriendlyName
-  nameWithType: ModelElement.InvariantFriendlyName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
-- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: CreationVersion
-  nameWithType: ModelElement.CreationVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: LastUpdateVersion
-  nameWithType: ModelElement.LastUpdateVersion
-  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
-- uid: TimeCockpit.Data.DataModel.ModelElement.Error
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Error
-  nameWithType: ModelElement.Error
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
-- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: ErrorSummary
-  nameWithType: ModelElement.ErrorSummary
-  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
-- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: IsValid
-  nameWithType: ModelElement.IsValid
-  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
-- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: Ownership
-  nameWithType: ModelElement.Ownership
-  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
-- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: OwnershipPrefix
-  nameWithType: ModelElement.OwnershipPrefix
-  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
-- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-  parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
-  name: NonPrefixedName
-  nameWithType: ModelElement.NonPrefixedName
-  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
-- uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  commentId: P:TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-  parent: TimeCockpit.Data.DataModel.ModelElement
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
   isExternal: true
-  name: IDataErrorInfo.Item[String]
-  nameWithType: ModelElement.IDataErrorInfo.Item[String]
-  fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item[System.String]
-  nameWithType.vb: ModelElement.System.ComponentModel.IDataErrorInfo.Item(String)
-  fullName.vb: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item(System.String)
-  name.vb: System.ComponentModel.IDataErrorInfo.Item(String)
-  spec.csharp:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: IDataErrorInfo.Item
-    nameWithType: ModelElement.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: '['
-    nameWithType: '['
-    fullName: '['
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ']'
-    nameWithType: ']'
-    fullName: ']'
-  spec.vb:
-  - uid: TimeCockpit.Data.DataModel.ModelElement.System#ComponentModel#IDataErrorInfo#Item(System.String)
-    name: System.ComponentModel.IDataErrorInfo.Item
-    nameWithType: ModelElement.System.ComponentModel.IDataErrorInfo.Item
-    fullName: TimeCockpit.Data.DataModel.ModelElement.System.ComponentModel.IDataErrorInfo.Item
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: DefaultDisplayPropertyName
+  nameWithType: ModelEntityBase.DefaultDisplayPropertyName
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultDisplayPropertyName
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: ReadOnlyExpression
+  nameWithType: ModelEntityBase.ReadOnlyExpression
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: DefaultListName
+  nameWithType: ModelEntityBase.DefaultListName
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultListName
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: DefaultFormName
+  nameWithType: ModelEntityBase.DefaultFormName
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultFormName
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: DefaultRelationListName
+  nameWithType: ModelEntityBase.DefaultRelationListName
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DefaultRelationListName
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: AuditMode
+  nameWithType: ModelEntityBase.AuditMode
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AuditMode
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Properties
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Properties
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: Properties
+  nameWithType: ModelEntityBase.Properties
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Properties
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Relations
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Relations
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: Relations
+  nameWithType: ModelEntityBase.Relations
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Relations
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: LogicalRelations
+  nameWithType: ModelEntityBase.LogicalRelations
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.LogicalRelations
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: AllRelations
+  nameWithType: ModelEntityBase.AllRelations
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.AllRelations
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: CyclicRelations
+  nameWithType: ModelEntityBase.CyclicRelations
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.CyclicRelations
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: ValidationRules
+  nameWithType: ModelEntityBase.ValidationRules
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ValidationRules
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: ImplementedInterfaces
+  nameWithType: ModelEntityBase.ImplementedInterfaces
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ImplementedInterfaces
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: Permissions
+  nameWithType: ModelEntityBase.Permissions
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Permissions
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: SyncBehavior
+  nameWithType: ModelEntityBase.SyncBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.SyncBehavior
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: IsDataSynced
+  nameWithType: ModelEntityBase.IsDataSynced
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsDataSynced
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: IsModelSynced
+  nameWithType: ModelEntityBase.IsModelSynced
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsModelSynced
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: PersistBehavior
+  nameWithType: ModelEntityBase.PersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: PersistedProperties
+  nameWithType: ModelEntityBase.PersistedProperties
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PersistedProperties
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: DependentModelEntities
+  nameWithType: ModelEntityBase.DependentModelEntities
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DependentModelEntities
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: DependentRelationPaths
+  nameWithType: ModelEntityBase.DependentRelationPaths
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.DependentRelationPaths
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: IsGenericRelationEntity
+  nameWithType: ModelEntityBase.IsGenericRelationEntity
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.IsGenericRelationEntity
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: Triggers
+  nameWithType: ModelEntityBase.Triggers
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.Triggers
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: PreSaveTriggers
+  nameWithType: ModelEntityBase.PreSaveTriggers
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PreSaveTriggers
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
+  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
+  parent: TimeCockpit.Data.DataModel.ModelEntityBase
+  isExternal: true
+  name: PostSaveTriggers
+  nameWithType: ModelEntityBase.PostSaveTriggers
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.PostSaveTriggers
 - uid: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier(System.String)
   parent: TimeCockpit.Data.DataModel.ModelElement
@@ -2010,6 +1863,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2026,6 +1880,7 @@ references:
     name: IsValidIdentifier
     nameWithType: ModelElement.IsValidIdentifier
     fullName: TimeCockpit.Data.DataModel.ModelElement.IsValidIdentifier
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2049,6 +1904,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2065,6 +1921,7 @@ references:
     name: SetOwnershipPrefix
     nameWithType: ModelElement.SetOwnershipPrefix
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnershipPrefix
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2088,6 +1945,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2104,6 +1962,7 @@ references:
     name: UpdateChildren
     nameWithType: ModelElement.UpdateChildren
     fullName: TimeCockpit.Data.DataModel.ModelElement.UpdateChildren
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2118,7 +1977,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetPersistBehavior(PersistBehavior)
   nameWithType: ModelElement.SetPersistBehavior(PersistBehavior)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior(TimeCockpit.Data.DataModel.PersistBehavior)
@@ -2127,6 +1986,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2134,6 +1994,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2142,6 +2003,7 @@ references:
     name: SetPersistBehavior
     nameWithType: ModelElement.SetPersistBehavior
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetPersistBehavior
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2149,6 +2011,7 @@ references:
     name: PersistBehavior
     nameWithType: PersistBehavior
     fullName: TimeCockpit.Data.DataModel.PersistBehavior
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2164,6 +2027,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2180,6 +2044,7 @@ references:
     name: SetName
     nameWithType: ModelElement.SetName
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetName
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2194,7 +2059,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: SetOwnership(Ownership)
   nameWithType: ModelElement.SetOwnership(Ownership)
   fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership(TimeCockpit.Data.DataModel.Ownership)
@@ -2203,6 +2068,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2210,6 +2076,7 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2218,6 +2085,7 @@ references:
     name: SetOwnership
     nameWithType: ModelElement.SetOwnership
     fullName: TimeCockpit.Data.DataModel.ModelElement.SetOwnership
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2225,16 +2093,143 @@ references:
     name: Ownership
     nameWithType: Ownership
     fullName: TimeCockpit.Data.DataModel.Ownership
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
-  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
-  isExternal: false
-  name: PropertyChanged
-  nameWithType: NamedDynamicObject.PropertyChanged
-  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+- uid: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ElementGuid
+  nameWithType: ModelElement.ElementGuid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ElementGuid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Name
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Name
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Name
+  nameWithType: ModelElement.Name
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Name
+- uid: TimeCockpit.Data.DataModel.ModelElement.Parent
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Parent
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Parent
+  nameWithType: ModelElement.Parent
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Parent
+- uid: TimeCockpit.Data.DataModel.ModelElement.Children
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Children
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Children
+  nameWithType: ModelElement.Children
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Children
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsFullPersistBehavior
+  nameWithType: ModelElement.IsFullPersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsFullPersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsNonePersistBehavior
+  nameWithType: ModelElement.IsNonePersistBehavior
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsNonePersistBehavior
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemElement
+  nameWithType: ModelElement.IsSystemElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsApplicationSpecificElement
+  nameWithType: ModelElement.IsApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsUserElement
+  nameWithType: ModelElement.IsUserElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsUserElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsSystemOrApplicationSpecificElement
+  nameWithType: ModelElement.IsSystemOrApplicationSpecificElement
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsSystemOrApplicationSpecificElement
+- uid: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: InvariantFriendlyName
+  nameWithType: ModelElement.InvariantFriendlyName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.InvariantFriendlyName
+- uid: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: CreationVersion
+  nameWithType: ModelElement.CreationVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.CreationVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: LastUpdateVersion
+  nameWithType: ModelElement.LastUpdateVersion
+  fullName: TimeCockpit.Data.DataModel.ModelElement.LastUpdateVersion
+- uid: TimeCockpit.Data.DataModel.ModelElement.Error
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Error
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Error
+  nameWithType: ModelElement.Error
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Error
+- uid: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: ErrorSummary
+  nameWithType: ModelElement.ErrorSummary
+  fullName: TimeCockpit.Data.DataModel.ModelElement.ErrorSummary
+- uid: TimeCockpit.Data.DataModel.ModelElement.IsValid
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.IsValid
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: IsValid
+  nameWithType: ModelElement.IsValid
+  fullName: TimeCockpit.Data.DataModel.ModelElement.IsValid
+- uid: TimeCockpit.Data.DataModel.ModelElement.Ownership
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.Ownership
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: Ownership
+  nameWithType: ModelElement.Ownership
+  fullName: TimeCockpit.Data.DataModel.ModelElement.Ownership
+- uid: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: OwnershipPrefix
+  nameWithType: ModelElement.OwnershipPrefix
+  fullName: TimeCockpit.Data.DataModel.ModelElement.OwnershipPrefix
+- uid: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  commentId: P:TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
+  parent: TimeCockpit.Data.DataModel.ModelElement
+  isExternal: true
+  name: NonPrefixedName
+  nameWithType: ModelElement.NonPrefixedName
+  fullName: TimeCockpit.Data.DataModel.ModelElement.NonPrefixedName
 - uid: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   commentId: M:TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged(System.String)
   parent: TimeCockpit.Data.DataModel.NamedDynamicObject
@@ -2247,6 +2242,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2263,6 +2259,7 @@ references:
     name: OnPropertyChanged
     nameWithType: NamedDynamicObject.OnPropertyChanged
     fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.OnPropertyChanged
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2274,6 +2271,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
+  parent: TimeCockpit.Data.DataModel.NamedDynamicObject
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: NamedDynamicObject.PropertyChanged
+  fullName: TimeCockpit.Data.DataModel.NamedDynamicObject.PropertyChanged
 - uid: TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   commentId: M:TimeCockpit.Data.DynamicObject.SetMember(System.String,System.Object)
   parent: TimeCockpit.Data.DynamicObject
@@ -2286,6 +2290,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2310,6 +2315,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2341,6 +2347,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2357,6 +2364,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2618,38 +2626,26 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.DataModel.ModelEntity.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.ModelEntity.#ctor
-  isExternal: false
+  isExternal: true
   name: ModelEntity
   nameWithType: ModelEntity.ModelEntity
   fullName: TimeCockpit.Data.DataModel.ModelEntity.ModelEntity
 - uid: TimeCockpit.Data.DataModel.ModelEntity
   commentId: T:TimeCockpit.Data.DataModel.ModelEntity
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntity
   nameWithType: ModelEntity
   fullName: TimeCockpit.Data.DataModel.ModelEntity
@@ -2776,14 +2772,14 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DataModel.ModelElement.Detach
   commentId: M:TimeCockpit.Data.DataModel.ModelElement.Detach
   parent: TimeCockpit.Data.DataModel.ModelElement
-  isExternal: false
+  isExternal: true
   name: Detach()
   nameWithType: ModelElement.Detach()
   fullName: TimeCockpit.Data.DataModel.ModelElement.Detach()
@@ -2792,6 +2788,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2803,6 +2800,7 @@ references:
     name: Detach
     nameWithType: ModelElement.Detach
     fullName: TimeCockpit.Data.DataModel.ModelElement.Detach
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2811,7 +2809,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel.ModelEntity.Detach*
   commentId: Overload:TimeCockpit.Data.DataModel.ModelEntity.Detach
-  isExternal: false
+  isExternal: true
   name: Detach
   nameWithType: ModelEntity.Detach
   fullName: TimeCockpit.Data.DataModel.ModelEntity.Detach

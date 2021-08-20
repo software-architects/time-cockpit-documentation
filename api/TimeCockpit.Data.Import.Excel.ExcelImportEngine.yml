@@ -35,16 +35,11 @@ items:
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: ExcelImportEngine
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 20
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nimport engine for excel worksheets.\n"
-  example: []
   syntax:
     content: 'public class ExcelImportEngine : ImportEngine'
     content.vb: >-
@@ -54,27 +49,27 @@ items:
   - System.Object
   - TimeCockpit.Data.Import.ImportEngine
   inheritedMembers:
-  - TimeCockpit.Data.Import.ImportEngine.OnProgress
-  - TimeCockpit.Data.Import.ImportEngine.OnMessage
-  - TimeCockpit.Data.Import.ImportEngine.OnReportFinished
-  - TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
+  - TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32,System.Boolean)
+  - TimeCockpit.Data.Import.ImportEngine.PreprocessValue(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Import.ImportColumnDefinition,System.Object)
+  - TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition},System.Boolean)
+  - TimeCockpit.Data.Import.ImportEngine.PerformImport(TimeCockpit.Data.Import.ImportBookDefinition,System.Boolean,System.Byte[],System.String,System.Guid,System.Nullable{System.Guid},System.Nullable{System.Threading.CancellationToken})
+  - TimeCockpit.Data.Import.ImportEngine.ImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  - TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject,System.Boolean)
+  - TimeCockpit.Data.Import.ImportEngine.GetKeyValue(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.ModelEntityBase,System.Collections.Generic.Dictionary{TimeCockpit.Data.Import.ImportColumnDefinition,System.Int32},TimeCockpit.Data.Import.ImportColumnDefinition,System.Collections.Generic.Dictionary{TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.ModelProperty},System.Object)
+  - TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,System.Boolean,TimeCockpit.Data.EntityObject@)
+  - TimeCockpit.Data.Import.ImportEngine.TrySetProperty(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.EntityObject,System.Object)
+  - TimeCockpit.Data.Import.ImportEngine.AddMessage(TimeCockpit.Data.Import.ImportMessage.Kind,System.String)
+  - TimeCockpit.Data.Import.ImportEngine.AddMessage(System.Exception)
+  - TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject,System.Boolean)
   - TimeCockpit.Data.Import.ImportEngine.MessageCount
   - TimeCockpit.Data.Import.ImportEngine.SourceFileName
   - TimeCockpit.Data.Import.ImportEngine.OriginalSource
   - TimeCockpit.Data.Import.ImportEngine.DataContext
   - TimeCockpit.Data.Import.ImportEngine.DefinitionName
-  - TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
-  - TimeCockpit.Data.Import.ImportEngine.PreprocessValue(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Import.ImportColumnDefinition,System.Object)
-  - TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition})
-  - TimeCockpit.Data.Import.ImportEngine.PerformImport(TimeCockpit.Data.Import.ImportBookDefinition,System.Boolean,System.Byte[],System.String,System.Guid,System.Nullable{System.Guid},System.Nullable{System.Threading.CancellationToken})
-  - TimeCockpit.Data.Import.ImportEngine.ImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  - TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject)
-  - TimeCockpit.Data.Import.ImportEngine.GetKeyValue(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataModel.ModelEntityBase,System.Collections.Generic.Dictionary{TimeCockpit.Data.Import.ImportColumnDefinition,System.Int32},TimeCockpit.Data.Import.ImportColumnDefinition,System.Collections.Generic.Dictionary{TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.ModelProperty},System.Object)
-  - TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,TimeCockpit.Data.EntityObject@)
-  - TimeCockpit.Data.Import.ImportEngine.TrySetProperty(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.ModelProperty,TimeCockpit.Data.EntityObject,System.Object)
-  - TimeCockpit.Data.Import.ImportEngine.AddMessage(TimeCockpit.Data.Import.ImportMessage.Kind,System.String)
-  - TimeCockpit.Data.Import.ImportEngine.AddMessage(System.Exception)
-  - TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject)
+  - TimeCockpit.Data.Import.ImportEngine.OnProgress
+  - TimeCockpit.Data.Import.ImportEngine.OnMessage
+  - TimeCockpit.Data.Import.ImportEngine.OnReportFinished
+  - TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -100,28 +95,693 @@ items:
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.ExcelImportEngine(TimeCockpit.Data.DataContext)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 56
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.Import.Excel.ExcelImportEngine\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public ExcelImportEngine(DataContext dataContext)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
-      description: the data context used for importing.
     content.vb: Public Sub New(dataContext As DataContext)
   overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  id: LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: LoadPreviewData(Int32, Byte[], Dictionary<String, Int32>, Int32)
+  nameWithType: ExcelImportEngine.LoadPreviewData(Int32, Byte[], Dictionary<String, Int32>, Int32)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32, System.Byte[], System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override PreviewWorkbook LoadPreviewData(int sampleSize, byte[] sourceData, Dictionary<string, int> headerRowNumbers = null, int defaultHeaderRowNumber = 1)
+    parameters:
+    - id: sampleSize
+      type: System.Int32
+    - id: sourceData
+      type: System.Byte[]
+    - id: headerRowNumbers
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    - id: defaultHeaderRowNumber
+      type: System.Int32
+    return:
+      type: TimeCockpit.Data.Import.PreviewWorkbook
+    content.vb: Public Overrides Function LoadPreviewData(sampleSize As Integer, sourceData As Byte(), headerRowNumbers As Dictionary(Of String, Integer) = Nothing, defaultHeaderRowNumber As Integer = 1) As PreviewWorkbook
+  overridden: TimeCockpit.Data.Import.ImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData*
+  nameWithType.vb: ExcelImportEngine.LoadPreviewData(Int32, Byte(), Dictionary(Of String, Int32), Int32)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32, System.Byte(), System.Collections.Generic.Dictionary(Of System.String, System.Int32), System.Int32)
+  name.vb: LoadPreviewData(Int32, Byte(), Dictionary(Of String, Int32), Int32)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
+  id: SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: SavePreviewData(PreviewWorkbook)
+  nameWithType: ExcelImportEngine.SavePreviewData(PreviewWorkbook)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override byte[] SavePreviewData(PreviewWorkbook previewWorkbook)
+    parameters:
+    - id: previewWorkbook
+      type: TimeCockpit.Data.Import.PreviewWorkbook
+    return:
+      type: System.Byte[]
+    content.vb: Public Overrides Function SavePreviewData(previewWorkbook As PreviewWorkbook) As Byte()
+  overridden: TimeCockpit.Data.Import.ImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(System.String@,System.String@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(System.String@,System.String@)
+  id: GetSourceMetadata(System.String@,System.String@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetSourceMetadata(out String, out String)
+  nameWithType: ExcelImportEngine.GetSourceMetadata(out String, out String)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(out System.String, out System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override void GetSourceMetadata(out string filename, out string mimeType)
+    parameters:
+    - id: filename
+      type: System.String
+    - id: mimeType
+      type: System.String
+    content.vb: Public Overrides Sub GetSourceMetadata(ByRef filename As String, ByRef mimeType As String)
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetSourceMetadata(System.String@,System.String@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata*
+  nameWithType.vb: ExcelImportEngine.GetSourceMetadata(ByRef String, ByRef String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(ByRef System.String, ByRef System.String)
+  name.vb: GetSourceMetadata(ByRef String, ByRef String)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
+  id: GetReportData
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetReportData()
+  nameWithType: ExcelImportEngine.GetReportData()
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData()
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override byte[] GetReportData()
+    return:
+      type: System.Byte[]
+    content.vb: Public Overrides Function GetReportData As Byte()
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetReportData
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
+  id: GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetReportMetadata(String, DateTime, out String, out String)
+  nameWithType: ExcelImportEngine.GetReportMetadata(String, DateTime, out String, out String)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String, System.DateTime, out System.String, out System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override void GetReportMetadata(string definitionName, DateTime exportTimestamp, out string filename, out string mimeType)
+    parameters:
+    - id: definitionName
+      type: System.String
+    - id: exportTimestamp
+      type: System.DateTime
+    - id: filename
+      type: System.String
+    - id: mimeType
+      type: System.String
+    content.vb: Public Overrides Sub GetReportMetadata(definitionName As String, exportTimestamp As Date, ByRef filename As String, ByRef mimeType As String)
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata*
+  nameWithType.vb: ExcelImportEngine.GetReportMetadata(String, DateTime, ByRef String, ByRef String)
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String, System.DateTime, ByRef System.String, ByRef System.String)
+  name.vb: GetReportMetadata(String, DateTime, ByRef String, ByRef String)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
+  id: PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: PrepareImportWorkbook(ImportBookDefinition)
+  nameWithType: ExcelImportEngine.PrepareImportWorkbook(ImportBookDefinition)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override bool PrepareImportWorkbook(ImportBookDefinition book)
+    parameters:
+    - id: book
+      type: TimeCockpit.Data.Import.ImportBookDefinition
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function PrepareImportWorkbook(book As ImportBookDefinition) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  id: PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: PrepareImportSheet(ImportSheetDefinition)
+  nameWithType: ExcelImportEngine.PrepareImportSheet(ImportSheetDefinition)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override bool PrepareImportSheet(ImportSheetDefinition sheetDefinition)
+    parameters:
+    - id: sheetDefinition
+      type: TimeCockpit.Data.Import.ImportSheetDefinition
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function PrepareImportSheet(sheetDefinition As ImportSheetDefinition) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
+  id: HasMoreRows
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: HasMoreRows()
+  nameWithType: ExcelImportEngine.HasMoreRows()
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows()
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override bool HasMoreRows()
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function HasMoreRows As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.HasMoreRows
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
+  id: MoveToNextRow
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: MoveToNextRow()
+  nameWithType: ExcelImportEngine.MoveToNextRow()
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow()
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override void MoveToNextRow()
+    content.vb: Public Overrides Sub MoveToNextRow
+  overridden: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
+  id: SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: SetRowMessage(ImportSheetDefinition, String, Boolean, Boolean)
+  nameWithType: ExcelImportEngine.SetRowMessage(ImportSheetDefinition, String, Boolean, Boolean)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition, System.String, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override void SetRowMessage(ImportSheetDefinition sheetDefinition, string text, bool isError, bool isModification)
+    parameters:
+    - id: sheetDefinition
+      type: TimeCockpit.Data.Import.ImportSheetDefinition
+    - id: text
+      type: System.String
+    - id: isError
+      type: System.Boolean
+    - id: isModification
+      type: System.Boolean
+    content.vb: Public Overrides Sub SetRowMessage(sheetDefinition As ImportSheetDefinition, text As String, isError As Boolean, isModification As Boolean)
+  overridden: TimeCockpit.Data.Import.ImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  id: GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValue(ImportColumnDefinition)
+  nameWithType: ExcelImportEngine.GetCellValue(ImportColumnDefinition)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override object GetCellValue(ImportColumnDefinition column)
+    parameters:
+    - id: column
+      type: TimeCockpit.Data.Import.ImportColumnDefinition
+    return:
+      type: System.Object
+    content.vb: Public Overrides Function GetCellValue(column As ImportColumnDefinition) As Object
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  id: GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellKeyValue(ImportColumnDefinition)
+  nameWithType: ExcelImportEngine.GetCellKeyValue(ImportColumnDefinition)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: public override object GetCellKeyValue(ImportColumnDefinition column)
+    parameters:
+    - id: column
+      type: TimeCockpit.Data.Import.ImportColumnDefinition
+    return:
+      type: System.Object
+    content.vb: Public Overrides Function GetCellKeyValue(column As ImportColumnDefinition) As Object
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
+  id: IsCellEmpty(System.Object)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: IsCellEmpty(Object)
+  nameWithType: ExcelImportEngine.IsCellEmpty(Object)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool IsCellEmpty(object cellValue)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function IsCellEmpty(cellValue As Object) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.IsCellEmpty(System.Object)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object,System.String@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object,System.String@)
+  id: GetCellValueString(System.Object,System.String@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValueString(Object, out String)
+  nameWithType: ExcelImportEngine.GetCellValueString(Object, out String)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object, out System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool GetCellValueString(object cellValue, out string s)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    - id: s
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function GetCellValueString(cellValue As Object, ByRef s As String) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueString(System.Object,System.String@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString*
+  nameWithType.vb: ExcelImportEngine.GetCellValueString(Object, ByRef String)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object, ByRef System.String)
+  name.vb: GetCellValueString(Object, ByRef String)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
+  id: GetCellValueDateTime(System.Object,System.DateTime@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValueDateTime(Object, out DateTime)
+  nameWithType: ExcelImportEngine.GetCellValueDateTime(Object, out DateTime)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object, out System.DateTime)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool GetCellValueDateTime(object cellValue, out DateTime dt)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    - id: dt
+      type: System.DateTime
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function GetCellValueDateTime(cellValue As Object, ByRef dt As Date) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime*
+  nameWithType.vb: ExcelImportEngine.GetCellValueDateTime(Object, ByRef DateTime)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object, ByRef System.DateTime)
+  name.vb: GetCellValueDateTime(Object, ByRef DateTime)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object,System.Guid@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object,System.Guid@)
+  id: GetCellValueGuid(System.Object,System.Guid@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValueGuid(Object, out Guid)
+  nameWithType: ExcelImportEngine.GetCellValueGuid(Object, out Guid)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object, out System.Guid)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool GetCellValueGuid(object cellValue, out Guid g)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    - id: g
+      type: System.Guid
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function GetCellValueGuid(cellValue As Object, ByRef g As Guid) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueGuid(System.Object,System.Guid@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid*
+  nameWithType.vb: ExcelImportEngine.GetCellValueGuid(Object, ByRef Guid)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object, ByRef System.Guid)
+  name.vb: GetCellValueGuid(Object, ByRef Guid)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
+  id: GetCellValueDecimal(System.Object,System.Decimal@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValueDecimal(Object, out Decimal)
+  nameWithType: ExcelImportEngine.GetCellValueDecimal(Object, out Decimal)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object, out System.Decimal)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool GetCellValueDecimal(object cellValue, out decimal d)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    - id: d
+      type: System.Decimal
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function GetCellValueDecimal(cellValue As Object, ByRef d As Decimal) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal*
+  nameWithType.vb: ExcelImportEngine.GetCellValueDecimal(Object, ByRef Decimal)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object, ByRef System.Decimal)
+  name.vb: GetCellValueDecimal(Object, ByRef Decimal)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
+  id: GetCellValueBoolean(System.Object,System.Boolean@)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: GetCellValueBoolean(Object, out Boolean)
+  nameWithType: ExcelImportEngine.GetCellValueBoolean(Object, out Boolean)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object, out System.Boolean)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override bool GetCellValueBoolean(object cellValue, out bool b)
+    parameters:
+    - id: cellValue
+      type: System.Object
+    - id: b
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides Function GetCellValueBoolean(cellValue As Object, ByRef b As Boolean) As Boolean
+  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean*
+  nameWithType.vb: ExcelImportEngine.GetCellValueBoolean(Object, ByRef Boolean)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object, ByRef System.Boolean)
+  name.vb: GetCellValueBoolean(Object, ByRef Boolean)
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
+  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
+  id: FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
+  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
+  langs:
+  - csharp
+  - vb
+  name: FetchUpdateKeys(ImportColumnDefinition[], ModelEntityBase, Int32)
+  nameWithType: ExcelImportEngine.FetchUpdateKeys(ImportColumnDefinition[], ModelEntityBase, Int32)
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[], TimeCockpit.Data.DataModel.ModelEntityBase, System.Int32)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import.Excel
+  syntax:
+    content: protected override Dictionary<int, string> FetchUpdateKeys(ImportColumnDefinition[] keyColumns, ModelEntityBase targetEntity, int defaultHeaderRowNumber = 1)
+    parameters:
+    - id: keyColumns
+      type: TimeCockpit.Data.Import.ImportColumnDefinition[]
+    - id: targetEntity
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    - id: defaultHeaderRowNumber
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.String}
+    content.vb: Protected Overrides Function FetchUpdateKeys(keyColumns As ImportColumnDefinition(), targetEntity As ModelEntityBase, defaultHeaderRowNumber As Integer = 1) As Dictionary(Of Integer, String)
+  overridden: TimeCockpit.Data.Import.ImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
+  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys*
+  nameWithType.vb: ExcelImportEngine.FetchUpdateKeys(ImportColumnDefinition(), ModelEntityBase, Int32)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition(), TimeCockpit.Data.DataModel.ModelEntityBase, System.Int32)
+  name.vb: FetchUpdateKeys(ImportColumnDefinition(), ModelEntityBase, Int32)
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
   commentId: P:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
   id: SourceWorkbook
@@ -134,16 +794,11 @@ items:
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: SourceWorkbook
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 64
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the work\n"
-  example: []
   syntax:
     content: public XLWorkbook SourceWorkbook { get; }
     parameters: []
@@ -169,16 +824,11 @@ items:
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: CurrentRowCount
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 70
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the row count for the currently imported sheet.\nWe subtract 2 because a) the excel engine is bases on 1 instead of a sane 0, and b) it is a count not an index.\n"
-  example: []
   syntax:
     content: public override int CurrentRowCount { get; }
     parameters: []
@@ -195,824 +845,10 @@ items:
   - Public
   - Overrides
   - ReadOnly
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
-  id: LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: LoadPreviewData(Int32, Byte[], Dictionary<String, Int32>, Int32)
-  nameWithType: ExcelImportEngine.LoadPreviewData(Int32, Byte[], Dictionary<String, Int32>, Int32)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32, System.Byte[], System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: LoadPreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 83
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nloads the preview data for an excel file.\n"
-  example: []
-  syntax:
-    content: public override PreviewWorkbook LoadPreviewData(int sampleSize, byte[] sourceData, Dictionary<string, int> headerRowNumbers = null, int defaultHeaderRowNumber = 1)
-    parameters:
-    - id: sampleSize
-      type: System.Int32
-      description: the number of samples to import.
-    - id: sourceData
-      type: System.Byte[]
-      description: the source data to load the preview data from.
-    - id: headerRowNumbers
-      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
-      description: a dictionary holding offsets (optional).
-    - id: defaultHeaderRowNumber
-      type: System.Int32
-      description: The default row number, in case no row number is passed for the worksheet with <code data-dev-comment-type="paramref" class="paramref">headerRowOffsets</code>.
-    return:
-      type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: returns a preview workbook containing data to import.
-    content.vb: Public Overrides Function LoadPreviewData(sampleSize As Integer, sourceData As Byte(), headerRowNumbers As Dictionary(Of String, Integer) = Nothing, defaultHeaderRowNumber As Integer = 1) As PreviewWorkbook
-  overridden: TimeCockpit.Data.Import.ImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData*
-  nameWithType.vb: ExcelImportEngine.LoadPreviewData(Int32, Byte(), Dictionary(Of String, Int32), Int32)
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData(System.Int32, System.Byte(), System.Collections.Generic.Dictionary(Of System.String, System.Int32), System.Int32)
-  name.vb: LoadPreviewData(Int32, Byte(), Dictionary(Of String, Int32), Int32)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
-  id: SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: SavePreviewData(PreviewWorkbook)
-  nameWithType: ExcelImportEngine.SavePreviewData(PreviewWorkbook)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: SavePreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 127
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nSaves the preview data to the format of the specified engine.\n"
-  example: []
-  syntax:
-    content: public override byte[] SavePreviewData(PreviewWorkbook previewWorkbook)
-    parameters:
-    - id: previewWorkbook
-      type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: the preview workbook to save.
-    return:
-      type: System.Byte[]
-      description: Returns the preview workbook as binary data.
-    content.vb: Public Overrides Function SavePreviewData(previewWorkbook As PreviewWorkbook) As Byte()
-  overridden: TimeCockpit.Data.Import.ImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(System.String@,System.String@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(System.String@,System.String@)
-  id: GetSourceMetadata(System.String@,System.String@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetSourceMetadata(out String, out String)
-  nameWithType: ExcelImportEngine.GetSourceMetadata(out String, out String)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(out System.String, out System.String)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetSourceMetadata
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 179
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the source meta data.\n"
-  example: []
-  syntax:
-    content: public override void GetSourceMetadata(out string filename, out string mimeType)
-    parameters:
-    - id: filename
-      type: System.String
-      description: the filename of the source imported.
-    - id: mimeType
-      type: System.String
-      description: the mime type of the source.
-    content.vb: Public Overrides Sub GetSourceMetadata(ByRef filename As String, ByRef mimeType As String)
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetSourceMetadata(System.String@,System.String@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata*
-  nameWithType.vb: ExcelImportEngine.GetSourceMetadata(ByRef String, ByRef String)
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata(ByRef System.String, ByRef System.String)
-  name.vb: GetSourceMetadata(ByRef String, ByRef String)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
-  id: GetReportData
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetReportData()
-  nameWithType: ExcelImportEngine.GetReportData()
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetReportData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 189
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nreturns the report data.\n"
-  example: []
-  syntax:
-    content: public override byte[] GetReportData()
-    return:
-      type: System.Byte[]
-      description: Saves the modified workbook to a byte array.
-    content.vb: Public Overrides Function GetReportData As Byte()
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetReportData
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
-  id: GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetReportMetadata(String, DateTime, out String, out String)
-  nameWithType: ExcelImportEngine.GetReportMetadata(String, DateTime, out String, out String)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String, System.DateTime, out System.String, out System.String)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetReportMetadata
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 223
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the report meta data.\n"
-  example: []
-  syntax:
-    content: public override void GetReportMetadata(string definitionName, DateTime exportTimestamp, out string filename, out string mimeType)
-    parameters:
-    - id: definitionName
-      type: System.String
-      description: the name of the definition that is imported.
-    - id: exportTimestamp
-      type: System.DateTime
-      description: the time stamp that the export happened at.
-    - id: filename
-      type: System.String
-      description: the filename of the report to save.
-    - id: mimeType
-      type: System.String
-      description: the MIME type of the report.
-    content.vb: Public Overrides Sub GetReportMetadata(definitionName As String, exportTimestamp As Date, ByRef filename As String, ByRef mimeType As String)
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetReportMetadata(System.String,System.DateTime,System.String@,System.String@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata*
-  nameWithType.vb: ExcelImportEngine.GetReportMetadata(String, DateTime, ByRef String, ByRef String)
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata(System.String, System.DateTime, ByRef System.String, ByRef System.String)
-  name.vb: GetReportMetadata(String, DateTime, ByRef String, ByRef String)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
-  id: PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: PrepareImportWorkbook(ImportBookDefinition)
-  nameWithType: ExcelImportEngine.PrepareImportWorkbook(ImportBookDefinition)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: PrepareImportWorkbook
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 234
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\ncalled when importing the workbook is started.\n"
-  example: []
-  syntax:
-    content: public override bool PrepareImportWorkbook(ImportBookDefinition book)
-    parameters:
-    - id: book
-      type: TimeCockpit.Data.Import.ImportBookDefinition
-      description: the import book definition.
-    return:
-      type: System.Boolean
-      description: returns true if the import can continue, false otherwise.
-    content.vb: Public Overrides Function PrepareImportWorkbook(book As ImportBookDefinition) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  id: PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: PrepareImportSheet(ImportSheetDefinition)
-  nameWithType: ExcelImportEngine.PrepareImportSheet(ImportSheetDefinition)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: PrepareImportSheet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 246
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nsets the current sheet to import.\n"
-  example: []
-  syntax:
-    content: public override bool PrepareImportSheet(ImportSheetDefinition sheetDefinition)
-    parameters:
-    - id: sheetDefinition
-      type: TimeCockpit.Data.Import.ImportSheetDefinition
-      description: the definition of the currently imported sheet.
-    return:
-      type: System.Boolean
-      description: Returns true if the import was successful, false otherwise.
-    content.vb: Public Overrides Function PrepareImportSheet(sheetDefinition As ImportSheetDefinition) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
-  id: HasMoreRows
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: HasMoreRows()
-  nameWithType: ExcelImportEngine.HasMoreRows()
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: HasMoreRows
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 312
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nChecks whether there are more rows available.\n"
-  example: []
-  syntax:
-    content: public override bool HasMoreRows()
-    return:
-      type: System.Boolean
-      description: Returns true if there are more rows, false otherwise.
-    content.vb: Public Overrides Function HasMoreRows As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.HasMoreRows
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
-  id: MoveToNextRow
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: MoveToNextRow()
-  nameWithType: ExcelImportEngine.MoveToNextRow()
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: MoveToNextRow
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 320
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nTells the concrete implementation to move to the next row.\n"
-  example: []
-  syntax:
-    content: public override void MoveToNextRow()
-    content.vb: Public Overrides Sub MoveToNextRow
-  overridden: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
-  id: SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: SetRowMessage(ImportSheetDefinition, String, Boolean, Boolean)
-  nameWithType: ExcelImportEngine.SetRowMessage(ImportSheetDefinition, String, Boolean, Boolean)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition, System.String, System.Boolean, System.Boolean)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: SetRowMessage
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 327
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nSets the message of the current row.\n"
-  example: []
-  syntax:
-    content: public override void SetRowMessage(ImportSheetDefinition sheetDefinition, string text, bool isError, bool isModification)
-    parameters:
-    - id: sheetDefinition
-      type: TimeCockpit.Data.Import.ImportSheetDefinition
-      description: the sheet definition.
-    - id: text
-      type: System.String
-      description: the text to set.
-    - id: isError
-      type: System.Boolean
-      description: true if it is an error, false otherwise.
-    - id: isModification
-      type: System.Boolean
-      description: true if an actual modification happened, false if no update was needed.
-    content.vb: Public Overrides Sub SetRowMessage(sheetDefinition As ImportSheetDefinition, text As String, isError As Boolean, isModification As Boolean)
-  overridden: TimeCockpit.Data.Import.ImportEngine.SetRowMessage(TimeCockpit.Data.Import.ImportSheetDefinition,System.String,System.Boolean,System.Boolean)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  id: GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValue(ImportColumnDefinition)
-  nameWithType: ExcelImportEngine.GetCellValue(ImportColumnDefinition)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValue
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 343
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the value of the current cell.\n"
-  example: []
-  syntax:
-    content: public override object GetCellValue(ImportColumnDefinition column)
-    parameters:
-    - id: column
-      type: TimeCockpit.Data.Import.ImportColumnDefinition
-      description: the column to get.
-    return:
-      type: System.Object
-      description: Returns an object that will be passed to the GetCellValue values.
-    content.vb: Public Overrides Function GetCellValue(column As ImportColumnDefinition) As Object
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  id: GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellKeyValue(ImportColumnDefinition)
-  nameWithType: ExcelImportEngine.GetCellKeyValue(ImportColumnDefinition)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellKeyValue
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 354
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the cell key value of the column.\n"
-  example: []
-  syntax:
-    content: public override object GetCellKeyValue(ImportColumnDefinition column)
-    parameters:
-    - id: column
-      type: TimeCockpit.Data.Import.ImportColumnDefinition
-      description: The column to import.
-    return:
-      type: System.Object
-      description: Returns the key value.
-    content.vb: Public Overrides Function GetCellKeyValue(column As ImportColumnDefinition) As Object
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
-  id: IsCellEmpty(System.Object)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: IsCellEmpty(Object)
-  nameWithType: ExcelImportEngine.IsCellEmpty(Object)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty(System.Object)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: IsCellEmpty
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 365
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nChecks whether the cell is empty.\n"
-  example: []
-  syntax:
-    content: protected override bool IsCellEmpty(object cellValue)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell value to check.
-    return:
-      type: System.Boolean
-      description: 'Returns true if the cell is empty, false otherwise. '
-    content.vb: Protected Overrides Function IsCellEmpty(cellValue As Object) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.IsCellEmpty(System.Object)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty*
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object,System.String@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object,System.String@)
-  id: GetCellValueString(System.Object,System.String@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValueString(Object, out String)
-  nameWithType: ExcelImportEngine.GetCellValueString(Object, out String)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object, out System.String)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValueString
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 376
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\ndefault method that converts the cell-value object of a string using ToString()\n"
-  example: []
-  syntax:
-    content: protected override bool GetCellValueString(object cellValue, out string s)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell-value object.
-    - id: s
-      type: System.String
-      description: the resulting string value.
-    return:
-      type: System.Boolean
-      description: returns true.
-    content.vb: Protected Overrides Function GetCellValueString(cellValue As Object, ByRef s As String) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueString(System.Object,System.String@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString*
-  nameWithType.vb: ExcelImportEngine.GetCellValueString(Object, ByRef String)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString(System.Object, ByRef System.String)
-  name.vb: GetCellValueString(Object, ByRef String)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
-  id: GetCellValueDateTime(System.Object,System.DateTime@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValueDateTime(Object, out DateTime)
-  nameWithType: ExcelImportEngine.GetCellValueDateTime(Object, out DateTime)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object, out System.DateTime)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValueDateTime
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 388
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the date time from a cell value.\n"
-  example: []
-  syntax:
-    content: protected override bool GetCellValueDateTime(object cellValue, out DateTime dt)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell value to convert.
-    - id: dt
-      type: System.DateTime
-      description: the resulting date time object.
-    return:
-      type: System.Boolean
-      description: Returns true if the conversion was successful, false otherwise.
-    content.vb: Protected Overrides Function GetCellValueDateTime(cellValue As Object, ByRef dt As Date) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueDateTime(System.Object,System.DateTime@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime*
-  nameWithType.vb: ExcelImportEngine.GetCellValueDateTime(Object, ByRef DateTime)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime(System.Object, ByRef System.DateTime)
-  name.vb: GetCellValueDateTime(Object, ByRef DateTime)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object,System.Guid@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object,System.Guid@)
-  id: GetCellValueGuid(System.Object,System.Guid@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValueGuid(Object, out Guid)
-  nameWithType: ExcelImportEngine.GetCellValueGuid(Object, out Guid)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object, out System.Guid)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValueGuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 400
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets the GUID from a cell value.\n"
-  example: []
-  syntax:
-    content: protected override bool GetCellValueGuid(object cellValue, out Guid g)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell value to convert.
-    - id: g
-      type: System.Guid
-      description: the result GUID.
-    return:
-      type: System.Boolean
-      description: Returns true if the conversion was successful, false otherwise.
-    content.vb: Protected Overrides Function GetCellValueGuid(cellValue As Object, ByRef g As Guid) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueGuid(System.Object,System.Guid@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid*
-  nameWithType.vb: ExcelImportEngine.GetCellValueGuid(Object, ByRef Guid)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid(System.Object, ByRef System.Guid)
-  name.vb: GetCellValueGuid(Object, ByRef Guid)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
-  id: GetCellValueDecimal(System.Object,System.Decimal@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValueDecimal(Object, out Decimal)
-  nameWithType: ExcelImportEngine.GetCellValueDecimal(Object, out Decimal)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object, out System.Decimal)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValueDecimal
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 411
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets a decimal from a cell value.\n"
-  example: []
-  syntax:
-    content: protected override bool GetCellValueDecimal(object cellValue, out decimal d)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell value to convert.
-    - id: d
-      type: System.Decimal
-      description: the resulting decimal.
-    return:
-      type: System.Boolean
-      description: Returns true if the conversion was successful, false otherwise.
-    content.vb: Protected Overrides Function GetCellValueDecimal(cellValue As Object, ByRef d As Decimal) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueDecimal(System.Object,System.Decimal@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal*
-  nameWithType.vb: ExcelImportEngine.GetCellValueDecimal(Object, ByRef Decimal)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal(System.Object, ByRef System.Decimal)
-  name.vb: GetCellValueDecimal(Object, ByRef Decimal)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
-  id: GetCellValueBoolean(System.Object,System.Boolean@)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: GetCellValueBoolean(Object, out Boolean)
-  nameWithType: ExcelImportEngine.GetCellValueBoolean(Object, out Boolean)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object, out System.Boolean)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: GetCellValueBoolean
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 423
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nGets a boolean from a cell value.\n"
-  example: []
-  syntax:
-    content: protected override bool GetCellValueBoolean(object cellValue, out bool b)
-    parameters:
-    - id: cellValue
-      type: System.Object
-      description: the cell value to convert.
-    - id: b
-      type: System.Boolean
-      description: the resulting boolean.
-    return:
-      type: System.Boolean
-      description: Returns true if the conversion was successful, false otherwise.
-    content.vb: Protected Overrides Function GetCellValueBoolean(cellValue As Object, ByRef b As Boolean) As Boolean
-  overridden: TimeCockpit.Data.Import.ImportEngine.GetCellValueBoolean(System.Object,System.Boolean@)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean*
-  nameWithType.vb: ExcelImportEngine.GetCellValueBoolean(Object, ByRef Boolean)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean(System.Object, ByRef System.Boolean)
-  name.vb: GetCellValueBoolean(Object, ByRef Boolean)
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
-  commentId: M:TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
-  id: FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
-  parent: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  langs:
-  - csharp
-  - vb
-  name: FetchUpdateKeys(ImportColumnDefinition[], ModelEntityBase, Int32)
-  nameWithType: ExcelImportEngine.FetchUpdateKeys(ImportColumnDefinition[], ModelEntityBase, Int32)
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[], TimeCockpit.Data.DataModel.ModelEntityBase, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    id: FetchUpdateKeys
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/Excel/ExcelImportEngine.cs
-    startLine: 462
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import.Excel
-  summary: "\nFetch the update keys from the excel sheet.\n"
-  example: []
-  syntax:
-    content: protected override Dictionary<int, string> FetchUpdateKeys(ImportColumnDefinition[] keyColumns, ModelEntityBase targetEntity, int defaultHeaderRowNumber = 1)
-    parameters:
-    - id: keyColumns
-      type: TimeCockpit.Data.Import.ImportColumnDefinition[]
-      description: The columns to check.
-    - id: targetEntity
-      type: TimeCockpit.Data.DataModel.ModelEntityBase
-      description: Target entity type.
-    - id: defaultHeaderRowNumber
-      type: System.Int32
-      description: The position of the header row.
-    return:
-      type: System.Collections.Generic.Dictionary{System.Int32,System.String}
-      description: Returns the values for.
-    content.vb: Protected Overrides Function FetchUpdateKeys(keyColumns As ImportColumnDefinition(), targetEntity As ModelEntityBase, defaultHeaderRowNumber As Integer = 1) As Dictionary(Of Integer, String)
-  overridden: TimeCockpit.Data.Import.ImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.DataModel.ModelEntityBase,System.Int32)
-  overload: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys*
-  nameWithType.vb: ExcelImportEngine.FetchUpdateKeys(ImportColumnDefinition(), ModelEntityBase, Int32)
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-  fullName.vb: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys(TimeCockpit.Data.Import.ImportColumnDefinition(), TimeCockpit.Data.DataModel.ModelEntityBase, System.Int32)
-  name.vb: FetchUpdateKeys(ImportColumnDefinition(), ModelEntityBase, Int32)
 references:
 - uid: TimeCockpit.Data.Import.Excel
   commentId: N:TimeCockpit.Data.Import.Excel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import.Excel
   nameWithType: TimeCockpit.Data.Import.Excel
   fullName: TimeCockpit.Data.Import.Excel
@@ -1026,85 +862,23 @@ references:
 - uid: TimeCockpit.Data.Import.ImportEngine
   commentId: T:TimeCockpit.Data.Import.ImportEngine
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportEngine
   nameWithType: ImportEngine
   fullName: TimeCockpit.Data.Import.ImportEngine
-- uid: TimeCockpit.Data.Import.ImportEngine.OnProgress
-  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnProgress
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: OnProgress
-  nameWithType: ImportEngine.OnProgress
-  fullName: TimeCockpit.Data.Import.ImportEngine.OnProgress
-- uid: TimeCockpit.Data.Import.ImportEngine.OnMessage
-  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnMessage
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: OnMessage
-  nameWithType: ImportEngine.OnMessage
-  fullName: TimeCockpit.Data.Import.ImportEngine.OnMessage
-- uid: TimeCockpit.Data.Import.ImportEngine.OnReportFinished
-  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnReportFinished
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: OnReportFinished
-  nameWithType: ImportEngine.OnReportFinished
-  fullName: TimeCockpit.Data.Import.ImportEngine.OnReportFinished
-- uid: TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
-  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: OnEntityObjectSaved
-  nameWithType: ImportEngine.OnEntityObjectSaved
-  fullName: TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
-- uid: TimeCockpit.Data.Import.ImportEngine.MessageCount
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.MessageCount
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: MessageCount
-  nameWithType: ImportEngine.MessageCount
-  fullName: TimeCockpit.Data.Import.ImportEngine.MessageCount
-- uid: TimeCockpit.Data.Import.ImportEngine.SourceFileName
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.SourceFileName
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: SourceFileName
-  nameWithType: ImportEngine.SourceFileName
-  fullName: TimeCockpit.Data.Import.ImportEngine.SourceFileName
-- uid: TimeCockpit.Data.Import.ImportEngine.OriginalSource
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.OriginalSource
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: OriginalSource
-  nameWithType: ImportEngine.OriginalSource
-  fullName: TimeCockpit.Data.Import.ImportEngine.OriginalSource
-- uid: TimeCockpit.Data.Import.ImportEngine.DataContext
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.DataContext
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: DataContext
-  nameWithType: ImportEngine.DataContext
-  fullName: TimeCockpit.Data.Import.ImportEngine.DataContext
-- uid: TimeCockpit.Data.Import.ImportEngine.DefinitionName
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.DefinitionName
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: DefinitionName
-  nameWithType: ImportEngine.DefinitionName
-  fullName: TimeCockpit.Data.Import.ImportEngine.DefinitionName
-- uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
-  commentId: M:TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
+- uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32,System.Boolean)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32,System.Boolean)
   parent: TimeCockpit.Data.Import.ImportEngine
   isExternal: true
-  name: FormatStatusMessage(Int32)
-  nameWithType: ImportEngine.FormatStatusMessage(Int32)
-  fullName: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
+  name: FormatStatusMessage(Int32, Boolean)
+  nameWithType: ImportEngine.FormatStatusMessage(Int32, Boolean)
+  fullName: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32, System.Boolean)
   spec.csharp:
-  - uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
+  - uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32,System.Boolean)
     name: FormatStatusMessage
     nameWithType: ImportEngine.FormatStatusMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1113,14 +887,23 @@ references:
     nameWithType: Int32
     fullName: System.Int32
     isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32)
+  - uid: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage(System.Int32,System.Boolean)
     name: FormatStatusMessage
     nameWithType: ImportEngine.FormatStatusMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.FormatStatusMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1128,6 +911,14 @@ references:
     name: Int32
     nameWithType: Int32
     fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
     isExternal: true
   - name: )
     nameWithType: )
@@ -1144,6 +935,7 @@ references:
     name: PreprocessValue
     nameWithType: ImportEngine.PreprocessValue
     fullName: TimeCockpit.Data.Import.ImportEngine.PreprocessValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1151,6 +943,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1158,6 +951,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1165,6 +959,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1181,6 +976,7 @@ references:
     name: PreprocessValue
     nameWithType: ImportEngine.PreprocessValue
     fullName: TimeCockpit.Data.Import.ImportEngine.PreprocessValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1188,6 +984,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1195,6 +992,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1202,6 +1000,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1213,21 +1012,22 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition})
-  commentId: M:TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition})
+- uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition},System.Boolean)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition},System.Boolean)
   parent: TimeCockpit.Data.Import.ImportEngine
   isExternal: true
-  name: PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable<ImportColumnDefinition>)
-  nameWithType: ImportEngine.PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable<ImportColumnDefinition>)
-  fullName: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Import.ImportColumnDefinition>)
-  nameWithType.vb: ImportEngine.PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable(Of ImportColumnDefinition))
-  fullName.vb: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Import.ImportColumnDefinition))
-  name.vb: PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable(Of ImportColumnDefinition))
+  name: PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable<ImportColumnDefinition>, Boolean)
+  nameWithType: ImportEngine.PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable<ImportColumnDefinition>, Boolean)
+  fullName: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Import.ImportColumnDefinition>, System.Boolean)
+  nameWithType.vb: ImportEngine.PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable(Of ImportColumnDefinition), Boolean)
+  fullName.vb: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Import.ImportColumnDefinition), System.Boolean)
+  name.vb: PerformPostProcessExpressions(DataContext, EntityObject, IEnumerable(Of ImportColumnDefinition), Boolean)
   spec.csharp:
-  - uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition})
+  - uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition},System.Boolean)
     name: PerformPostProcessExpressions
     nameWithType: ImportEngine.PerformPostProcessExpressions
     fullName: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1235,6 +1035,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1242,6 +1043,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1257,17 +1059,27 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition})
+  - uid: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject,System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.ImportColumnDefinition},System.Boolean)
     name: PerformPostProcessExpressions
     nameWithType: ImportEngine.PerformPostProcessExpressions
     fullName: TimeCockpit.Data.Import.ImportEngine.PerformPostProcessExpressions
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1275,6 +1087,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1282,6 +1095,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1297,9 +1111,18 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1318,6 +1141,7 @@ references:
     name: PerformImport
     nameWithType: ImportEngine.PerformImport
     fullName: TimeCockpit.Data.Import.ImportEngine.PerformImport
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1325,6 +1149,7 @@ references:
     name: ImportBookDefinition
     nameWithType: ImportBookDefinition
     fullName: TimeCockpit.Data.Import.ImportBookDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1406,6 +1231,7 @@ references:
     name: PerformImport
     nameWithType: ImportEngine.PerformImport
     fullName: TimeCockpit.Data.Import.ImportEngine.PerformImport
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1413,6 +1239,7 @@ references:
     name: ImportBookDefinition
     nameWithType: ImportBookDefinition
     fullName: TimeCockpit.Data.Import.ImportBookDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1492,7 +1319,7 @@ references:
 - uid: TimeCockpit.Data.Import.ImportEngine.ImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.ImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: ImportSheet(ImportSheetDefinition)
   nameWithType: ImportEngine.ImportSheet(ImportSheetDefinition)
   fullName: TimeCockpit.Data.Import.ImportEngine.ImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
@@ -1501,6 +1328,7 @@ references:
     name: ImportSheet
     nameWithType: ImportEngine.ImportSheet
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportSheet
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1508,6 +1336,7 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1516,6 +1345,7 @@ references:
     name: ImportSheet
     nameWithType: ImportEngine.ImportSheet
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportSheet
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1523,24 +1353,26 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject)
-  commentId: M:TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject)
+- uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject,System.Boolean)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject,System.Boolean)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: ImportRow(ImportColumnDefinition[], EntityObject)
-  nameWithType: ImportEngine.ImportRow(ImportColumnDefinition[], EntityObject)
-  fullName: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[], TimeCockpit.Data.EntityObject)
-  nameWithType.vb: ImportEngine.ImportRow(ImportColumnDefinition(), EntityObject)
-  fullName.vb: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition(), TimeCockpit.Data.EntityObject)
-  name.vb: ImportRow(ImportColumnDefinition(), EntityObject)
+  isExternal: true
+  name: ImportRow(ImportColumnDefinition[], EntityObject, Boolean)
+  nameWithType: ImportEngine.ImportRow(ImportColumnDefinition[], EntityObject, Boolean)
+  fullName: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[], TimeCockpit.Data.EntityObject, System.Boolean)
+  nameWithType.vb: ImportEngine.ImportRow(ImportColumnDefinition(), EntityObject, Boolean)
+  fullName.vb: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition(), TimeCockpit.Data.EntityObject, System.Boolean)
+  name.vb: ImportRow(ImportColumnDefinition(), EntityObject, Boolean)
   spec.csharp:
-  - uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject)
+  - uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject,System.Boolean)
     name: ImportRow
     nameWithType: ImportEngine.ImportRow
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportRow
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1548,6 +1380,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -1558,14 +1391,24 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject)
+  - uid: TimeCockpit.Data.Import.ImportEngine.ImportRow(TimeCockpit.Data.Import.ImportColumnDefinition[],TimeCockpit.Data.EntityObject,System.Boolean)
     name: ImportRow
     nameWithType: ImportEngine.ImportRow
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportRow
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1573,6 +1416,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -1583,6 +1427,15 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1601,6 +1454,7 @@ references:
     name: GetKeyValue
     nameWithType: ImportEngine.GetKeyValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetKeyValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1608,6 +1462,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1615,6 +1470,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1630,6 +1486,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1648,6 +1505,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1663,6 +1521,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1670,6 +1529,7 @@ references:
     name: ModelProperty
     nameWithType: ModelProperty
     fullName: TimeCockpit.Data.DataModel.ModelProperty
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1689,6 +1549,7 @@ references:
     name: GetKeyValue
     nameWithType: ImportEngine.GetKeyValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetKeyValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1696,6 +1557,7 @@ references:
     name: DataContext
     nameWithType: DataContext
     fullName: TimeCockpit.Data.DataContext
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1703,6 +1565,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1718,6 +1581,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1736,6 +1600,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1751,6 +1616,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1758,6 +1624,7 @@ references:
     name: ModelProperty
     nameWithType: ModelProperty
     fullName: TimeCockpit.Data.DataModel.ModelProperty
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1772,18 +1639,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,TimeCockpit.Data.EntityObject@)
-  commentId: M:TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,TimeCockpit.Data.EntityObject@)
+- uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,System.Boolean,TimeCockpit.Data.EntityObject@)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,System.Boolean,TimeCockpit.Data.EntityObject@)
   parent: TimeCockpit.Data.Import.ImportEngine
   isExternal: true
-  name: TryFindRelation(ImportColumnDefinition, Relation, String, EntityObject)
-  nameWithType: ImportEngine.TryFindRelation(ImportColumnDefinition, Relation, String, EntityObject)
-  fullName: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition, TimeCockpit.Data.DataModel.Relation, System.String, TimeCockpit.Data.EntityObject)
+  name: TryFindRelation(ImportColumnDefinition, Relation, String, Boolean, EntityObject)
+  nameWithType: ImportEngine.TryFindRelation(ImportColumnDefinition, Relation, String, Boolean, EntityObject)
+  fullName: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition, TimeCockpit.Data.DataModel.Relation, System.String, System.Boolean, TimeCockpit.Data.EntityObject)
   spec.csharp:
-  - uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,TimeCockpit.Data.EntityObject@)
+  - uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,System.Boolean,TimeCockpit.Data.EntityObject@)
     name: TryFindRelation
     nameWithType: ImportEngine.TryFindRelation
     fullName: TimeCockpit.Data.Import.ImportEngine.TryFindRelation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1791,6 +1659,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1798,6 +1667,7 @@ references:
     name: Relation
     nameWithType: Relation
     fullName: TimeCockpit.Data.DataModel.Relation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1809,18 +1679,28 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: TimeCockpit.Data.EntityObject
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,TimeCockpit.Data.EntityObject@)
+  - uid: TimeCockpit.Data.Import.ImportEngine.TryFindRelation(TimeCockpit.Data.Import.ImportColumnDefinition,TimeCockpit.Data.DataModel.Relation,System.String,System.Boolean,TimeCockpit.Data.EntityObject@)
     name: TryFindRelation
     nameWithType: ImportEngine.TryFindRelation
     fullName: TimeCockpit.Data.Import.ImportEngine.TryFindRelation
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1828,6 +1708,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1835,6 +1716,7 @@ references:
     name: Relation
     nameWithType: Relation
     fullName: TimeCockpit.Data.DataModel.Relation
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1846,10 +1728,19 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
   - uid: TimeCockpit.Data.EntityObject
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1865,6 +1756,7 @@ references:
     name: TrySetProperty
     nameWithType: ImportEngine.TrySetProperty
     fullName: TimeCockpit.Data.Import.ImportEngine.TrySetProperty
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1872,6 +1764,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1879,6 +1772,7 @@ references:
     name: ModelProperty
     nameWithType: ModelProperty
     fullName: TimeCockpit.Data.DataModel.ModelProperty
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1886,6 +1780,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1902,6 +1797,7 @@ references:
     name: TrySetProperty
     nameWithType: ImportEngine.TrySetProperty
     fullName: TimeCockpit.Data.Import.ImportEngine.TrySetProperty
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1909,6 +1805,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1916,6 +1813,7 @@ references:
     name: ModelProperty
     nameWithType: ModelProperty
     fullName: TimeCockpit.Data.DataModel.ModelProperty
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1923,6 +1821,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1946,6 +1845,7 @@ references:
     name: AddMessage
     nameWithType: ImportEngine.AddMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.AddMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1953,6 +1853,7 @@ references:
     name: ImportMessage.Kind
     nameWithType: ImportMessage.Kind
     fullName: TimeCockpit.Data.Import.ImportMessage.Kind
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1969,6 +1870,7 @@ references:
     name: AddMessage
     nameWithType: ImportEngine.AddMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.AddMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1976,6 +1878,7 @@ references:
     name: ImportMessage.Kind
     nameWithType: ImportMessage.Kind
     fullName: TimeCockpit.Data.Import.ImportMessage.Kind
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -1999,6 +1902,7 @@ references:
     name: AddMessage
     nameWithType: ImportEngine.AddMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.AddMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2015,6 +1919,7 @@ references:
     name: AddMessage
     nameWithType: ImportEngine.AddMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.AddMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2026,18 +1931,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject)
-  commentId: M:TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject)
+- uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject,System.Boolean)
+  commentId: M:TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject,System.Boolean)
   parent: TimeCockpit.Data.Import.ImportEngine
   isExternal: true
-  name: ImportColumn(ImportColumnDefinition, Object, EntityObject)
-  nameWithType: ImportEngine.ImportColumn(ImportColumnDefinition, Object, EntityObject)
-  fullName: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition, System.Object, TimeCockpit.Data.EntityObject)
+  name: ImportColumn(ImportColumnDefinition, Object, EntityObject, Boolean)
+  nameWithType: ImportEngine.ImportColumn(ImportColumnDefinition, Object, EntityObject, Boolean)
+  fullName: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition, System.Object, TimeCockpit.Data.EntityObject, System.Boolean)
   spec.csharp:
-  - uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject)
+  - uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject,System.Boolean)
     name: ImportColumn
     nameWithType: ImportEngine.ImportColumn
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportColumn
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2045,6 +1951,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2060,14 +1967,24 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject)
+  - uid: TimeCockpit.Data.Import.ImportEngine.ImportColumn(TimeCockpit.Data.Import.ImportColumnDefinition,System.Object,TimeCockpit.Data.EntityObject,System.Boolean)
     name: ImportColumn
     nameWithType: ImportEngine.ImportColumn
     fullName: TimeCockpit.Data.Import.ImportEngine.ImportColumn
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2075,6 +1992,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2090,9 +2008,81 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Import.ImportEngine.MessageCount
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.MessageCount
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: MessageCount
+  nameWithType: ImportEngine.MessageCount
+  fullName: TimeCockpit.Data.Import.ImportEngine.MessageCount
+- uid: TimeCockpit.Data.Import.ImportEngine.SourceFileName
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.SourceFileName
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: SourceFileName
+  nameWithType: ImportEngine.SourceFileName
+  fullName: TimeCockpit.Data.Import.ImportEngine.SourceFileName
+- uid: TimeCockpit.Data.Import.ImportEngine.OriginalSource
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.OriginalSource
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: OriginalSource
+  nameWithType: ImportEngine.OriginalSource
+  fullName: TimeCockpit.Data.Import.ImportEngine.OriginalSource
+- uid: TimeCockpit.Data.Import.ImportEngine.DataContext
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.DataContext
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: DataContext
+  nameWithType: ImportEngine.DataContext
+  fullName: TimeCockpit.Data.Import.ImportEngine.DataContext
+- uid: TimeCockpit.Data.Import.ImportEngine.DefinitionName
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.DefinitionName
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: DefinitionName
+  nameWithType: ImportEngine.DefinitionName
+  fullName: TimeCockpit.Data.Import.ImportEngine.DefinitionName
+- uid: TimeCockpit.Data.Import.ImportEngine.OnProgress
+  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnProgress
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: OnProgress
+  nameWithType: ImportEngine.OnProgress
+  fullName: TimeCockpit.Data.Import.ImportEngine.OnProgress
+- uid: TimeCockpit.Data.Import.ImportEngine.OnMessage
+  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnMessage
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: OnMessage
+  nameWithType: ImportEngine.OnMessage
+  fullName: TimeCockpit.Data.Import.ImportEngine.OnMessage
+- uid: TimeCockpit.Data.Import.ImportEngine.OnReportFinished
+  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnReportFinished
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: OnReportFinished
+  nameWithType: ImportEngine.OnReportFinished
+  fullName: TimeCockpit.Data.Import.ImportEngine.OnReportFinished
+- uid: TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
+  commentId: E:TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: OnEntityObjectSaved
+  nameWithType: ImportEngine.OnEntityObjectSaved
+  fullName: TimeCockpit.Data.Import.ImportEngine.OnEntityObjectSaved
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -2374,80 +2364,35 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  commentId: T:TimeCockpit.Data.Import.Excel.ExcelImportEngine
-  isExternal: false
-  name: ExcelImportEngine
-  nameWithType: ExcelImportEngine
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.#ctor
-  isExternal: false
+  isExternal: true
   name: ExcelImportEngine
   nameWithType: ExcelImportEngine.ExcelImportEngine
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.ExcelImportEngine
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook*
-  commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
-  isExternal: false
-  name: SourceWorkbook
-  nameWithType: ExcelImportEngine.SourceWorkbook
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
-- uid: ClosedXML.Excel.XLWorkbook
-  commentId: T:ClosedXML.Excel.XLWorkbook
-  parent: ClosedXML.Excel
-  isExternal: true
-  name: XLWorkbook
-  nameWithType: XLWorkbook
-  fullName: ClosedXML.Excel.XLWorkbook
-- uid: ClosedXML.Excel
-  commentId: N:ClosedXML.Excel
-  isExternal: false
-  name: ClosedXML.Excel
-  nameWithType: ClosedXML.Excel
-  fullName: ClosedXML.Excel
-- uid: TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
-  commentId: P:TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
-  parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
-  name: CurrentRowCount
-  nameWithType: ImportEngine.CurrentRowCount
-  fullName: TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
-- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount*
-  commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount
-  isExternal: false
-  name: CurrentRowCount
-  nameWithType: ExcelImportEngine.CurrentRowCount
-  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: TimeCockpit.Data.Import.ImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.LoadPreviewData(System.Int32,System.Byte[],System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   parent: TimeCockpit.Data.Import.ImportEngine
@@ -2463,6 +2408,7 @@ references:
     name: LoadPreviewData
     nameWithType: ImportEngine.LoadPreviewData
     fullName: TimeCockpit.Data.Import.ImportEngine.LoadPreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2525,6 +2471,7 @@ references:
     name: LoadPreviewData
     nameWithType: ImportEngine.LoadPreviewData
     fullName: TimeCockpit.Data.Import.ImportEngine.LoadPreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2584,11 +2531,19 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData
-  isExternal: false
+  isExternal: true
   name: LoadPreviewData
   nameWithType: ExcelImportEngine.LoadPreviewData
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.LoadPreviewData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -2676,7 +2631,7 @@ references:
 - uid: TimeCockpit.Data.Import.PreviewWorkbook
   commentId: T:TimeCockpit.Data.Import.PreviewWorkbook
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewWorkbook
   nameWithType: PreviewWorkbook
   fullName: TimeCockpit.Data.Import.PreviewWorkbook
@@ -2733,14 +2688,14 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.Import.ImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: SavePreviewData(PreviewWorkbook)
   nameWithType: ImportEngine.SavePreviewData(PreviewWorkbook)
   fullName: TimeCockpit.Data.Import.ImportEngine.SavePreviewData(TimeCockpit.Data.Import.PreviewWorkbook)
@@ -2749,6 +2704,7 @@ references:
     name: SavePreviewData
     nameWithType: ImportEngine.SavePreviewData
     fullName: TimeCockpit.Data.Import.ImportEngine.SavePreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2756,6 +2712,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -2764,6 +2721,7 @@ references:
     name: SavePreviewData
     nameWithType: ImportEngine.SavePreviewData
     fullName: TimeCockpit.Data.Import.ImportEngine.SavePreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2771,12 +2729,13 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData
-  isExternal: false
+  isExternal: true
   name: SavePreviewData
   nameWithType: ExcelImportEngine.SavePreviewData
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SavePreviewData
@@ -2792,6 +2751,7 @@ references:
     name: GetSourceMetadata
     nameWithType: ImportEngine.GetSourceMetadata
     fullName: TimeCockpit.Data.Import.ImportEngine.GetSourceMetadata
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2816,6 +2776,7 @@ references:
     name: GetSourceMetadata
     nameWithType: ImportEngine.GetSourceMetadata
     fullName: TimeCockpit.Data.Import.ImportEngine.GetSourceMetadata
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2837,7 +2798,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata
-  isExternal: false
+  isExternal: true
   name: GetSourceMetadata
   nameWithType: ExcelImportEngine.GetSourceMetadata
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetSourceMetadata
@@ -2851,7 +2812,7 @@ references:
 - uid: TimeCockpit.Data.Import.ImportEngine.GetReportData
   commentId: M:TimeCockpit.Data.Import.ImportEngine.GetReportData
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: GetReportData()
   nameWithType: ImportEngine.GetReportData()
   fullName: TimeCockpit.Data.Import.ImportEngine.GetReportData()
@@ -2860,6 +2821,7 @@ references:
     name: GetReportData
     nameWithType: ImportEngine.GetReportData
     fullName: TimeCockpit.Data.Import.ImportEngine.GetReportData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2871,6 +2833,7 @@ references:
     name: GetReportData
     nameWithType: ImportEngine.GetReportData
     fullName: TimeCockpit.Data.Import.ImportEngine.GetReportData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2879,7 +2842,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
-  isExternal: false
+  isExternal: true
   name: GetReportData
   nameWithType: ExcelImportEngine.GetReportData
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportData
@@ -2895,6 +2858,7 @@ references:
     name: GetReportMetadata
     nameWithType: ImportEngine.GetReportMetadata
     fullName: TimeCockpit.Data.Import.ImportEngine.GetReportMetadata
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2935,6 +2899,7 @@ references:
     name: GetReportMetadata
     nameWithType: ImportEngine.GetReportMetadata
     fullName: TimeCockpit.Data.Import.ImportEngine.GetReportMetadata
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2972,7 +2937,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata
-  isExternal: false
+  isExternal: true
   name: GetReportMetadata
   nameWithType: ExcelImportEngine.GetReportMetadata
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetReportMetadata
@@ -2986,7 +2951,7 @@ references:
 - uid: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: PrepareImportWorkbook(ImportBookDefinition)
   nameWithType: ImportEngine.PrepareImportWorkbook(ImportBookDefinition)
   fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook(TimeCockpit.Data.Import.ImportBookDefinition)
@@ -2995,6 +2960,7 @@ references:
     name: PrepareImportWorkbook
     nameWithType: ImportEngine.PrepareImportWorkbook
     fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3002,6 +2968,7 @@ references:
     name: ImportBookDefinition
     nameWithType: ImportBookDefinition
     fullName: TimeCockpit.Data.Import.ImportBookDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3010,6 +2977,7 @@ references:
     name: PrepareImportWorkbook
     nameWithType: ImportEngine.PrepareImportWorkbook
     fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportWorkbook
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3017,19 +2985,20 @@ references:
     name: ImportBookDefinition
     nameWithType: ImportBookDefinition
     fullName: TimeCockpit.Data.Import.ImportBookDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook
-  isExternal: false
+  isExternal: true
   name: PrepareImportWorkbook
   nameWithType: ExcelImportEngine.PrepareImportWorkbook
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportWorkbook
 - uid: TimeCockpit.Data.Import.ImportBookDefinition
   commentId: T:TimeCockpit.Data.Import.ImportBookDefinition
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportBookDefinition
   nameWithType: ImportBookDefinition
   fullName: TimeCockpit.Data.Import.ImportBookDefinition
@@ -3043,7 +3012,7 @@ references:
 - uid: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: PrepareImportSheet(ImportSheetDefinition)
   nameWithType: ImportEngine.PrepareImportSheet(ImportSheetDefinition)
   fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet(TimeCockpit.Data.Import.ImportSheetDefinition)
@@ -3052,6 +3021,7 @@ references:
     name: PrepareImportSheet
     nameWithType: ImportEngine.PrepareImportSheet
     fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3059,6 +3029,7 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3067,6 +3038,7 @@ references:
     name: PrepareImportSheet
     nameWithType: ImportEngine.PrepareImportSheet
     fullName: TimeCockpit.Data.Import.ImportEngine.PrepareImportSheet
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3074,26 +3046,27 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet
-  isExternal: false
+  isExternal: true
   name: PrepareImportSheet
   nameWithType: ExcelImportEngine.PrepareImportSheet
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.PrepareImportSheet
 - uid: TimeCockpit.Data.Import.ImportSheetDefinition
   commentId: T:TimeCockpit.Data.Import.ImportSheetDefinition
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportSheetDefinition
   nameWithType: ImportSheetDefinition
   fullName: TimeCockpit.Data.Import.ImportSheetDefinition
 - uid: TimeCockpit.Data.Import.ImportEngine.HasMoreRows
   commentId: M:TimeCockpit.Data.Import.ImportEngine.HasMoreRows
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: HasMoreRows()
   nameWithType: ImportEngine.HasMoreRows()
   fullName: TimeCockpit.Data.Import.ImportEngine.HasMoreRows()
@@ -3102,6 +3075,7 @@ references:
     name: HasMoreRows
     nameWithType: ImportEngine.HasMoreRows
     fullName: TimeCockpit.Data.Import.ImportEngine.HasMoreRows
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3113,6 +3087,7 @@ references:
     name: HasMoreRows
     nameWithType: ImportEngine.HasMoreRows
     fullName: TimeCockpit.Data.Import.ImportEngine.HasMoreRows
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3121,14 +3096,14 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
-  isExternal: false
+  isExternal: true
   name: HasMoreRows
   nameWithType: ExcelImportEngine.HasMoreRows
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.HasMoreRows
 - uid: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
   commentId: M:TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: MoveToNextRow()
   nameWithType: ImportEngine.MoveToNextRow()
   fullName: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow()
@@ -3137,6 +3112,7 @@ references:
     name: MoveToNextRow
     nameWithType: ImportEngine.MoveToNextRow
     fullName: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3148,6 +3124,7 @@ references:
     name: MoveToNextRow
     nameWithType: ImportEngine.MoveToNextRow
     fullName: TimeCockpit.Data.Import.ImportEngine.MoveToNextRow
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3156,7 +3133,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
-  isExternal: false
+  isExternal: true
   name: MoveToNextRow
   nameWithType: ExcelImportEngine.MoveToNextRow
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.MoveToNextRow
@@ -3172,6 +3149,7 @@ references:
     name: SetRowMessage
     nameWithType: ImportEngine.SetRowMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.SetRowMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3179,6 +3157,7 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -3211,6 +3190,7 @@ references:
     name: SetRowMessage
     nameWithType: ImportEngine.SetRowMessage
     fullName: TimeCockpit.Data.Import.ImportEngine.SetRowMessage
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3218,6 +3198,7 @@ references:
     name: ImportSheetDefinition
     nameWithType: ImportSheetDefinition
     fullName: TimeCockpit.Data.Import.ImportSheetDefinition
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -3247,14 +3228,14 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage
-  isExternal: false
+  isExternal: true
   name: SetRowMessage
   nameWithType: ExcelImportEngine.SetRowMessage
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SetRowMessage
 - uid: TimeCockpit.Data.Import.ImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: GetCellValue(ImportColumnDefinition)
   nameWithType: ImportEngine.GetCellValue(ImportColumnDefinition)
   fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValue(TimeCockpit.Data.Import.ImportColumnDefinition)
@@ -3263,6 +3244,7 @@ references:
     name: GetCellValue
     nameWithType: ImportEngine.GetCellValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3270,6 +3252,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3278,6 +3261,7 @@ references:
     name: GetCellValue
     nameWithType: ImportEngine.GetCellValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3285,26 +3269,27 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue
-  isExternal: false
+  isExternal: true
   name: GetCellValue
   nameWithType: ExcelImportEngine.GetCellValue
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValue
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition
   commentId: T:TimeCockpit.Data.Import.ImportColumnDefinition
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportColumnDefinition
   nameWithType: ImportColumnDefinition
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition
 - uid: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
   commentId: M:TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
   parent: TimeCockpit.Data.Import.ImportEngine
-  isExternal: false
+  isExternal: true
   name: GetCellKeyValue(ImportColumnDefinition)
   nameWithType: ImportEngine.GetCellKeyValue(ImportColumnDefinition)
   fullName: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue(TimeCockpit.Data.Import.ImportColumnDefinition)
@@ -3313,6 +3298,7 @@ references:
     name: GetCellKeyValue
     nameWithType: ImportEngine.GetCellKeyValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3320,6 +3306,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3328,6 +3315,7 @@ references:
     name: GetCellKeyValue
     nameWithType: ImportEngine.GetCellKeyValue
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellKeyValue
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3335,12 +3323,13 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue
-  isExternal: false
+  isExternal: true
   name: GetCellKeyValue
   nameWithType: ExcelImportEngine.GetCellKeyValue
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellKeyValue
@@ -3356,6 +3345,7 @@ references:
     name: IsCellEmpty
     nameWithType: ImportEngine.IsCellEmpty
     fullName: TimeCockpit.Data.Import.ImportEngine.IsCellEmpty
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3372,6 +3362,7 @@ references:
     name: IsCellEmpty
     nameWithType: ImportEngine.IsCellEmpty
     fullName: TimeCockpit.Data.Import.ImportEngine.IsCellEmpty
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3385,7 +3376,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty
-  isExternal: false
+  isExternal: true
   name: IsCellEmpty
   nameWithType: ExcelImportEngine.IsCellEmpty
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.IsCellEmpty
@@ -3401,6 +3392,7 @@ references:
     name: GetCellValueString
     nameWithType: ImportEngine.GetCellValueString
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3425,6 +3417,7 @@ references:
     name: GetCellValueString
     nameWithType: ImportEngine.GetCellValueString
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueString
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3446,7 +3439,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString
-  isExternal: false
+  isExternal: true
   name: GetCellValueString
   nameWithType: ExcelImportEngine.GetCellValueString
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueString
@@ -3462,6 +3455,7 @@ references:
     name: GetCellValueDateTime
     nameWithType: ImportEngine.GetCellValueDateTime
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueDateTime
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3486,6 +3480,7 @@ references:
     name: GetCellValueDateTime
     nameWithType: ImportEngine.GetCellValueDateTime
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueDateTime
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3507,7 +3502,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime
-  isExternal: false
+  isExternal: true
   name: GetCellValueDateTime
   nameWithType: ExcelImportEngine.GetCellValueDateTime
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDateTime
@@ -3523,6 +3518,7 @@ references:
     name: GetCellValueGuid
     nameWithType: ImportEngine.GetCellValueGuid
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueGuid
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3547,6 +3543,7 @@ references:
     name: GetCellValueGuid
     nameWithType: ImportEngine.GetCellValueGuid
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueGuid
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3568,7 +3565,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid
-  isExternal: false
+  isExternal: true
   name: GetCellValueGuid
   nameWithType: ExcelImportEngine.GetCellValueGuid
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueGuid
@@ -3591,6 +3588,7 @@ references:
     name: GetCellValueDecimal
     nameWithType: ImportEngine.GetCellValueDecimal
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueDecimal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3615,6 +3613,7 @@ references:
     name: GetCellValueDecimal
     nameWithType: ImportEngine.GetCellValueDecimal
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueDecimal
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3636,7 +3635,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal
-  isExternal: false
+  isExternal: true
   name: GetCellValueDecimal
   nameWithType: ExcelImportEngine.GetCellValueDecimal
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueDecimal
@@ -3659,6 +3658,7 @@ references:
     name: GetCellValueBoolean
     nameWithType: ImportEngine.GetCellValueBoolean
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueBoolean
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3683,6 +3683,7 @@ references:
     name: GetCellValueBoolean
     nameWithType: ImportEngine.GetCellValueBoolean
     fullName: TimeCockpit.Data.Import.ImportEngine.GetCellValueBoolean
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3704,7 +3705,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean
-  isExternal: false
+  isExternal: true
   name: GetCellValueBoolean
   nameWithType: ExcelImportEngine.GetCellValueBoolean
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.GetCellValueBoolean
@@ -3723,6 +3724,7 @@ references:
     name: FetchUpdateKeys
     nameWithType: ImportEngine.FetchUpdateKeys
     fullName: TimeCockpit.Data.Import.ImportEngine.FetchUpdateKeys
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3730,6 +3732,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -3740,6 +3743,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -3756,6 +3760,7 @@ references:
     name: FetchUpdateKeys
     nameWithType: ImportEngine.FetchUpdateKeys
     fullName: TimeCockpit.Data.Import.ImportEngine.FetchUpdateKeys
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3763,6 +3768,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
@@ -3773,6 +3779,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -3786,11 +3793,12 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys*
   commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys
-  isExternal: false
+  isExternal: true
   name: FetchUpdateKeys
   nameWithType: ExcelImportEngine.FetchUpdateKeys
   fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.FetchUpdateKeys
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition[]
+  isExternal: true
   name: ImportColumnDefinition[]
   nameWithType: ImportColumnDefinition[]
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition[]
@@ -3802,6 +3810,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -3810,13 +3819,14 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
@@ -3882,7 +3892,31 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook*
+  commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
+  isExternal: true
+  name: SourceWorkbook
+  nameWithType: ExcelImportEngine.SourceWorkbook
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.SourceWorkbook
+- uid: ClosedXML.Excel.XLWorkbook
+  isExternal: true
+  name: XLWorkbook
+  nameWithType: XLWorkbook
+  fullName: ClosedXML.Excel.XLWorkbook
+- uid: TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
+  commentId: P:TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
+  parent: TimeCockpit.Data.Import.ImportEngine
+  isExternal: true
+  name: CurrentRowCount
+  nameWithType: ImportEngine.CurrentRowCount
+  fullName: TimeCockpit.Data.Import.ImportEngine.CurrentRowCount
+- uid: TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount*
+  commentId: Overload:TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount
+  isExternal: true
+  name: CurrentRowCount
+  nameWithType: ExcelImportEngine.CurrentRowCount
+  fullName: TimeCockpit.Data.Import.Excel.ExcelImportEngine.CurrentRowCount
