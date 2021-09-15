@@ -24,6 +24,7 @@ items:
   - TimeCockpit.Data.EntityObject.GetChangedMembers
   - TimeCockpit.Data.EntityObject.GetMember(System.Int32)
   - TimeCockpit.Data.EntityObject.GetMember(System.String)
+  - TimeCockpit.Data.EntityObject.GetMembersByState(TimeCockpit.Data.MemberStatus)
   - TimeCockpit.Data.EntityObject.GetMetaObject(System.Linq.Expressions.Expression)
   - TimeCockpit.Data.EntityObject.GetPropertyIndex(System.String)
   - TimeCockpit.Data.EntityObject.GetValidationMessages(TimeCockpit.Data.Localization.NameLocalizer)
@@ -65,28 +66,15 @@ items:
   fullName: TimeCockpit.Data.EntityObject
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: EntityObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nRepresents an instance of a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [JsonObject(MemberSerialization.OptIn)]
-
-      public class EntityObject : DynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged, IEntityObject, IComparable
+    content: 'public class EntityObject : DynamicObject, IDynamicMetaObjectProvider, INotifyPropertyChanged, IEntityObject, IComparable'
     content.vb: >-
-      <DataContract>
-
-      <JsonObject(MemberSerialization.OptIn)>
-
       Public Class EntityObject
           Inherits DynamicObject
           Implements IDynamicMetaObjectProvider, INotifyPropertyChanged, IEntityObject, IComparable
@@ -107,15 +95,6 @@ items:
   - System.Object.MemberwiseClone
   extensionMethods:
   - TimeCockpit.Data.EntityObject.TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated(System.String,System.String)
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonObjectAttribute
-    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
-    arguments:
-    - type: Newtonsoft.Json.MemberSerialization
-      value: 1
   modifiers.csharp:
   - public
   - class
@@ -134,16 +113,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.EntityObject()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 76
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public EntityObject()
     content.vb: Public Sub New
@@ -152,806 +127,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.EntityObject.PropertyChanged
-  commentId: E:TimeCockpit.Data.EntityObject.PropertyChanged
-  id: PropertyChanged
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: PropertyChanged
-  nameWithType: EntityObject.PropertyChanged
-  fullName: TimeCockpit.Data.EntityObject.PropertyChanged
-  type: Event
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: PropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 132
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nOccurs after the value of an application settings property is changed.\n"
-  example: []
-  syntax:
-    content: public event PropertyChangedEventHandler PropertyChanged
-    return:
-      type: System.ComponentModel.PropertyChangedEventHandler
-    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
-  implements:
-  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.EntityObject.Entity
-  commentId: P:TimeCockpit.Data.EntityObject.Entity
-  id: Entity
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: Entity
-  nameWithType: EntityObject.Entity
-  fullName: TimeCockpit.Data.EntityObject.Entity
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Entity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 137
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets or sets the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> of the object.\n"
-  example: []
-  syntax:
-    content: public ModelEntityBase Entity { get; protected set; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelEntityBase
-    content.vb: Public Property Entity As ModelEntityBase
-  overload: TimeCockpit.Data.EntityObject.Entity*
-  modifiers.csharp:
-  - public
-  - get
-  - protected set
-  modifiers.vb:
-  - Public
-  - Get
-  - Protected Set
-- uid: TimeCockpit.Data.EntityObject.ObjectUuid
-  commentId: P:TimeCockpit.Data.EntityObject.ObjectUuid
-  id: ObjectUuid
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: ObjectUuid
-  nameWithType: EntityObject.ObjectUuid
-  fullName: TimeCockpit.Data.EntityObject.ObjectUuid
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: ObjectUuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 142
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the unique id of the object.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      public Guid ObjectUuid { get; }
-    parameters: []
-    return:
-      type: System.Guid
-    content.vb: >-
-      <DataMember>
-
-      Public ReadOnly Property ObjectUuid As Guid
-  overload: TimeCockpit.Data.EntityObject.ObjectUuid*
-  implements:
-  - TimeCockpit.Data.IEntityObject.ObjectUuid
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.ModelEntityName
-  commentId: P:TimeCockpit.Data.EntityObject.ModelEntityName
-  id: ModelEntityName
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: ModelEntityName
-  nameWithType: EntityObject.ModelEntityName
-  fullName: TimeCockpit.Data.EntityObject.ModelEntityName
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: ModelEntityName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 148
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the name of the current instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
-  syntax:
-    content: >-
-      [JsonProperty]
-
-      public string ModelEntityName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: >-
-      <JsonProperty>
-
-      Public ReadOnly Property ModelEntityName As String
-  overload: TimeCockpit.Data.EntityObject.ModelEntityName*
-  implements:
-  - TimeCockpit.Data.IEntityObject.ModelEntityName
-  attributes:
-  - type: Newtonsoft.Json.JsonPropertyAttribute
-    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.IsNew
-  commentId: P:TimeCockpit.Data.EntityObject.IsNew
-  id: IsNew
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: IsNew
-  nameWithType: EntityObject.IsNew
-  fullName: TimeCockpit.Data.EntityObject.IsNew
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: IsNew
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 161
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a value indicating whether the object is new.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public bool IsNew { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property IsNew As Boolean
-  overload: TimeCockpit.Data.EntityObject.IsNew*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.IsChanged
-  commentId: P:TimeCockpit.Data.EntityObject.IsChanged
-  id: IsChanged
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: IsChanged
-  nameWithType: EntityObject.IsChanged
-  fullName: TimeCockpit.Data.EntityObject.IsChanged
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: IsChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 185
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a value indicating whether the object was changed.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public bool IsChanged { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property IsChanged As Boolean
-  overload: TimeCockpit.Data.EntityObject.IsChanged*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.IsDeleted
-  commentId: P:TimeCockpit.Data.EntityObject.IsDeleted
-  id: IsDeleted
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: IsDeleted
-  nameWithType: EntityObject.IsDeleted
-  fullName: TimeCockpit.Data.EntityObject.IsDeleted
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: IsDeleted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 209
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a value indicating whether the object was deleted.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public bool IsDeleted { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property IsDeleted As Boolean
-  overload: TimeCockpit.Data.EntityObject.IsDeleted*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.IsCloned
-  commentId: P:TimeCockpit.Data.EntityObject.IsCloned
-  id: IsCloned
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: IsCloned
-  nameWithType: EntityObject.IsCloned
-  fullName: TimeCockpit.Data.EntityObject.IsCloned
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: IsCloned
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 232
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a value indicating whether this instance is cloned.\n"
-  example: []
-  syntax:
-    content: public bool IsCloned { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsCloned As Boolean
-  overload: TimeCockpit.Data.EntityObject.IsCloned*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.Me
-  commentId: P:TimeCockpit.Data.EntityObject.Me
-  id: Me
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: Me
-  nameWithType: EntityObject.Me
-  fullName: TimeCockpit.Data.EntityObject.Me
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Me
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 248
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the it self\n"
-  remarks: "\nThis property is needed for DataBinding reasons. \nWhenever a property of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> is changed (e.g. via z.SetMember(&quot;X&quot;, &quot;Y&quot;)), the <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> event\nof that property + the <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> event of the Me property is fired.\n"
-  example: []
-  syntax:
-    content: public EntityObject Me { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.EntityObject
-    content.vb: Public ReadOnly Property Me As EntityObject
-  overload: TimeCockpit.Data.EntityObject.Me*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.RelationIdentifiers
-  commentId: P:TimeCockpit.Data.EntityObject.RelationIdentifiers
-  id: RelationIdentifiers
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: RelationIdentifiers
-  nameWithType: EntityObject.RelationIdentifiers
-  fullName: TimeCockpit.Data.EntityObject.RelationIdentifiers
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: RelationIdentifiers
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 259
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the relation identifiers for the <code>EntityObject</code>\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public RelationIdentifiers RelationIdentifiers { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.RelationIdentifiers
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property RelationIdentifiers As RelationIdentifiers
-  overload: TimeCockpit.Data.EntityObject.RelationIdentifiers*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.CreationVersion
-  commentId: P:TimeCockpit.Data.EntityObject.CreationVersion
-  id: CreationVersion
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: CreationVersion
-  nameWithType: EntityObject.CreationVersion
-  fullName: TimeCockpit.Data.EntityObject.CreationVersion
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: CreationVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 266
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the creation version of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
-  syntax:
-    content: public ulong CreationVersion { get; }
-    parameters: []
-    return:
-      type: System.UInt64
-    content.vb: Public ReadOnly Property CreationVersion As ULong
-  overload: TimeCockpit.Data.EntityObject.CreationVersion*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.LastUpdateVersion
-  commentId: P:TimeCockpit.Data.EntityObject.LastUpdateVersion
-  id: LastUpdateVersion
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: LastUpdateVersion
-  nameWithType: EntityObject.LastUpdateVersion
-  fullName: TimeCockpit.Data.EntityObject.LastUpdateVersion
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: LastUpdateVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 271
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the update version of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
-  syntax:
-    content: public ulong LastUpdateVersion { get; }
-    parameters: []
-    return:
-      type: System.UInt64
-    content.vb: Public ReadOnly Property LastUpdateVersion As ULong
-  overload: TimeCockpit.Data.EntityObject.LastUpdateVersion*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.IsReadOnly
-  commentId: P:TimeCockpit.Data.EntityObject.IsReadOnly
-  id: IsReadOnly
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: IsReadOnly
-  nameWithType: EntityObject.IsReadOnly
-  fullName: TimeCockpit.Data.EntityObject.IsReadOnly
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: IsReadOnly
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 283
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a value indicating whether an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nis locked depending on the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyFunction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  remarks: "\nIf the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> that underlies the current <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nhas no <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression\" data-throw-if-not-resolved=\"false\"></xref> set the property always returns false.\nIf the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> has a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression\" data-throw-if-not-resolved=\"false\"></xref> set, it\nis evaluated with the values of the current <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> an returns a boolean value accordingly.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public bool IsReadOnly { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property IsReadOnly As Boolean
-  overload: TimeCockpit.Data.EntityObject.IsReadOnly*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
-  commentId: P:TimeCockpit.Data.EntityObject.LocalizedPropertyValues
-  id: LocalizedPropertyValues
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: LocalizedPropertyValues
-  nameWithType: EntityObject.LocalizedPropertyValues
-  fullName: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: LocalizedPropertyValues
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 303
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the localized property values.\n"
-  example: []
-  syntax:
-    content: public LocalizedTextPropertyCollection LocalizedPropertyValues { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
-    content.vb: Public ReadOnly Property LocalizedPropertyValues As LocalizedTextPropertyCollection
-  overload: TimeCockpit.Data.EntityObject.LocalizedPropertyValues*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.Permission
-  commentId: P:TimeCockpit.Data.EntityObject.Permission
-  id: Permission
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: Permission
-  nameWithType: EntityObject.Permission
-  fullName: TimeCockpit.Data.EntityObject.Permission
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Permission
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 308
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the permissions of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      public PermissionType Permission { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.Security.PermissionType
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Public ReadOnly Property Permission As PermissionType
-  overload: TimeCockpit.Data.EntityObject.Permission*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.Values
-  commentId: P:TimeCockpit.Data.EntityObject.Values
-  id: Values
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: Values
-  nameWithType: EntityObject.Values
-  fullName: TimeCockpit.Data.EntityObject.Values
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Values
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 376
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a dictionary of values for an object.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      protected object[] Values { get; }
-    parameters: []
-    return:
-      type: System.Object[]
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Protected ReadOnly Property Values As Object()
-  overload: TimeCockpit.Data.EntityObject.Values*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.States
-  commentId: P:TimeCockpit.Data.EntityObject.States
-  id: States
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: States
-  nameWithType: EntityObject.States
-  fullName: TimeCockpit.Data.EntityObject.States
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: States
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 383
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets a dictionary of property states for an object.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      [JsonIgnore]
-
-      protected MemberStatus[] States { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.MemberStatus[]
-    content.vb: >-
-      <DataMember>
-
-      <JsonIgnore>
-
-      Protected ReadOnly Property States As MemberStatus()
-  overload: TimeCockpit.Data.EntityObject.States*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  - type: Newtonsoft.Json.JsonIgnoreAttribute
-    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - protected
-  - get
-  modifiers.vb:
-  - Protected
-  - ReadOnly
-- uid: TimeCockpit.Data.EntityObject.Item(System.String)
-  commentId: P:TimeCockpit.Data.EntityObject.Item(System.String)
-  id: Item(System.String)
-  parent: TimeCockpit.Data.EntityObject
-  langs:
-  - csharp
-  - vb
-  name: Item[String]
-  nameWithType: EntityObject.Item[String]
-  fullName: TimeCockpit.Data.EntityObject.Item[System.String]
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: this[]
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 406
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data
-  summary: "\nGets the value of a specified member\n"
-  remarks: "\nInternally, this indexer calls <xref href=\"TimeCockpit.Data.EntityObject.GetMember(System.String)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.EntityObject.SetMember(System.String%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\nThe indexer was introduced for the use in IronPython, where no <xref href=\"TimeCockpit.Data.EntityObject.GetMember(System.String)\" data-throw-if-not-resolved=\"false\"></xref> or \n<xref href=\"TimeCockpit.Data.EntityObject.SetMember(System.String%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> can be called. Without the indexer it was not possible in Python\nto run through the properties/ relations of a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> and set the values\nof a dependent <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: public object this[string propertyName] { get; set; }
-    parameters:
-    - id: propertyName
-      type: System.String
-      description: The name of the member to get the value for.
-    return:
-      type: System.Object
-      description: Returns the value of the specified member.
-    content.vb: Public Property Item(propertyName As String) As Object
-  overload: TimeCockpit.Data.EntityObject.Item*
-  nameWithType.vb: EntityObject.Item(String)
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-  fullName.vb: TimeCockpit.Data.EntityObject.Item(System.String)
-  name.vb: Item(String)
 - uid: TimeCockpit.Data.EntityObject.Deserialize(System.Xml.Linq.XElement,TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataModel.Model)
   commentId: M:TimeCockpit.Data.EntityObject.Deserialize(System.Xml.Linq.XElement,TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataModel.Model)
   id: Deserialize(System.Xml.Linq.XElement,TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataModel.Model)
@@ -964,17 +139,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Deserialize(System.Xml.Linq.XElement, TimeCockpit.Data.EntityObject, TimeCockpit.Data.DataModel.Model)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Deserialize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 437
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nDeserializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> from a string in XML format.\n"
   remarks: "\n<p>\nFor <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that have relations, this method calls itself recursively\nto deserialize all the properties/ relations of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>. See also <xref href=\"TimeCockpit.Data.EntityObject.Serialize\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n"
-  example: []
   syntax:
     content: public static EntityObject Deserialize(XElement root, EntityObject parentEntity, Model model)
     parameters:
@@ -1014,16 +185,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Deserialize(System.String, TimeCockpit.Data.EntityObject, TimeCockpit.Data.DataModel.Model)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Deserialize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 578
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nDeserializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> from a string in XML format.\n"
-  example: []
   syntax:
     content: public static EntityObject Deserialize(string data, EntityObject parentEntity, Model model)
     parameters:
@@ -1059,16 +226,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetMetaObject(System.Linq.Expressions.Expression)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetMetaObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 589
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the meta object of the dynamic object.\n"
-  example: []
   syntax:
     content: public override DynamicMetaObject GetMetaObject(Expression parameter)
     parameters:
@@ -1099,17 +262,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.ToString()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: ToString
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 605
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nReturns a <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> that represents this instance.\n"
   remarks: "\nThis methods returns the value of the default display property as string. \nIf the default display property happens to be a relation, it returns the value\nof the default display property of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that is behind the relation.\n"
-  example: []
   syntax:
     content: public override string ToString()
     return:
@@ -1136,16 +295,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Clone()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 644
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMakes a deep clone an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> while preserving the type of the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public EntityObject Clone()
     return:
@@ -1169,16 +324,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Clone(System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 656
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMakes a deep clone an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> while preserving the type of the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public EntityObject Clone(bool deepClone)
     parameters:
@@ -1206,16 +357,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Clone(System.Boolean, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 669
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMakes a deep clone an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> while preserving the type of the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public EntityObject Clone(bool deepClone, bool resetMembersInReadonlyExpression)
     parameters:
@@ -1246,16 +393,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Clone(System.Boolean, System.Boolean, TimeCockpit.Data.Environment)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 683
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMakes a deep clone an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> while preserving the type of the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public EntityObject Clone(bool deepClone, bool resetMembersInReadonlyExpression, Environment environment)
     parameters:
@@ -1289,16 +432,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Clone(TimeCockpit.Data.DataModel.ModelEntityBase)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Clone
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 693
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMakes a deep clone of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> but does not preserve the orignial <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public EntityObject Clone(ModelEntityBase entity)
     parameters:
@@ -1326,16 +465,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.CopyTo(TimeCockpit.Data.EntityObject)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: CopyTo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 703
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCopies the values of an instance of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> to another instance.\nThis method only copies first level relations and properties.\n/// "
-  example: []
   syntax:
     content: public void CopyTo(EntityObject target)
     parameters:
@@ -1360,17 +495,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetMember(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 749
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the value of the specified member.\n"
   remarks: "\nThis method also returns the clr properties &apos;{ModelEntityName}Uuid&apos; and &apos;IsReadOnly&apos; of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public override object GetMember(string name)
     parameters:
@@ -1401,16 +532,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetMember(System.Int32)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 759
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the value of the specified member.\n"
-  example: []
   syntax:
     content: public object GetMember(int index)
     parameters:
@@ -1438,16 +565,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetActualMember(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetActualMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 775
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the actual value of the specified member.\n"
-  example: []
   syntax:
     content: public virtual object GetActualMember(string name)
     parameters:
@@ -1477,16 +600,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.CalculateMember(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: CalculateMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 787
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nEvaluates a formla, applies it to this <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> and returns the result.\n"
-  example: []
   syntax:
     content: public object CalculateMember(string formula)
     parameters:
@@ -1521,16 +640,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.SetMember(System.Int32, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: SetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 823
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSets a dynamic member.\n"
-  example: []
   syntax:
     content: public void SetMember(int index, object value)
     parameters:
@@ -1558,16 +673,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.SetMember(System.String, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: SetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 833
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSets a dynamic member.\n"
-  example: []
   syntax:
     content: public override void SetMember(string name, object value)
     parameters:
@@ -1598,16 +709,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Serialize()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Serialize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 842
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSerializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> in XML\n"
-  example: []
   syntax:
     content: public XmlReader Serialize()
     return:
@@ -1631,17 +738,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Serialize(System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Serialize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 866
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSerializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> in XML.\n"
   remarks: "\n<p>\nIf the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that should be serialized has not been attatched to an instance of <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref> the method serializes the type information of \nthe underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> as well. During deserialization (see <xref href=\"TimeCockpit.Data.EntityObject.Deserialize(System.String%2cTimeCockpit.Data.EntityObject%2cTimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref>) the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> type is reconstructed and \nthe <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> can be deserialized on its basis.\n</p>\n<p>\nThis method serializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> in UTF8 XML\n</p>\n<p>\nThis method serializes properties of a <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> by converting their value into a Base64 string. Therefore, e.g. a <xref href=\"TimeCockpit.Data.DataModel.TextProperty\" data-throw-if-not-resolved=\"false\"></xref>\ncan contain all ASCII character. If the values would not be encoded, control characters e.g. would lead to invalid XML.\n</p>\n"
-  example: []
   syntax:
     content: public XmlReader Serialize(bool idsOnly)
     parameters:
@@ -1669,17 +772,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Serialize(System.Xml.XmlWriter, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Serialize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 903
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nWrites the XML representation of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> to a predifined \ninstance of <xref href=\"System.Xml.XmlWriter\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   remarks: "\n<p>\nIf the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> that should be serialized has not been attatched to an instance of <xref href=\"TimeCockpit.Data.DataModel.Model\" data-throw-if-not-resolved=\"false\"></xref> the method serializes the type information of \nthe underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> as well. During deserialization (see <xref href=\"TimeCockpit.Data.EntityObject.Deserialize(System.String%2cTimeCockpit.Data.EntityObject%2cTimeCockpit.Data.DataModel.Model)\" data-throw-if-not-resolved=\"false\"></xref>) the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> type is reconstructed and \nthe <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> can be deserialized on its basis.\n</p>\n<p>\nThis method serializes an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> in UTF8 XML\n</p>\n<p>\nThis method serializes properties of a <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> by converting their value into a Base64 string. Therefore, e.g. a <xref href=\"TimeCockpit.Data.DataModel.TextProperty\" data-throw-if-not-resolved=\"false\"></xref>\ncan contain all ASCII character. If the values would not be encoded, control characters e.g. would lead to invalid XML.\n</p>\n"
-  example: []
   syntax:
     content: public void Serialize(XmlWriter xmlWriter, bool idsOnly)
     parameters:
@@ -1707,16 +806,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.MarkAsNew(System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: MarkAsNew
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 912
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMarks an entity object as new\n"
-  example: []
   syntax:
     content: public void MarkAsNew(bool resetMemberStates = true)
     parameters:
@@ -1741,16 +836,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.MarkAsDeleted()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: MarkAsDeleted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 927
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nMarks the object as deleted.\n"
-  example: []
   syntax:
     content: public void MarkAsDeleted()
     content.vb: Public Sub MarkAsDeleted
@@ -1771,16 +862,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Evaluate<T>(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Evaluate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 939
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nEvaluates the specified expression and returns a compiled function \n"
-  example: []
   syntax:
     content: public T Evaluate<T>(string expression)
     parameters:
@@ -1814,16 +901,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Evaluate<T>(System.String, TimeCockpit.Data.Environment, System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.QueryParameter>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Evaluate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 954
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nEvaluates the specified expression and returns a compiled function\n"
-  example: []
   syntax:
     content: public T Evaluate<T>(string expression, Environment environment, IEnumerable<QueryParameter> parameters = null)
     parameters:
@@ -1863,16 +946,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.HasPermission(System.String, TimeCockpit.Data.Security.PermissionType)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: HasPermission
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 965
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nChecks if a user has a permission of a certain type.\n"
-  example: []
   syntax:
     content: public bool HasPermission(string memberName, PermissionType permissionType)
     parameters:
@@ -1903,16 +982,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.CompareTo(System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: CompareTo
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 981
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCompares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object. \n"
-  example: []
   syntax:
     content: public int CompareTo(object obj)
     parameters:
@@ -1942,16 +1017,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Validate(System.String, out System.String, out TimeCockpit.Data.DataModel.ValidationRule, TimeCockpit.Data.Localization.NameLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Validate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1010
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nValidates a property of an instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> in accordance to the <xref href=\"TimeCockpit.Data.DataModel.ValidationRule\" data-throw-if-not-resolved=\"false\"></xref>s defined\nin the underlying <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
   syntax:
     content: public bool Validate(string name, out string message, out ValidationRule failingValidationRule, NameLocalizer localizer)
     parameters:
@@ -1995,16 +1066,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetValidationMessages(TimeCockpit.Data.Localization.NameLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetValidationMessages
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1090
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the validation messages.\n"
-  example: []
   syntax:
     content: public IEnumerable<ValidationMessage> GetValidationMessages(NameLocalizer localizer)
     parameters:
@@ -2032,17 +1099,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.Validate(out System.Collections.Generic.List<System.String>, out System.Collections.Generic.List<TimeCockpit.Data.DataModel.ValidationRule>, TimeCockpit.Data.Localization.NameLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: Validate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1169
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nValidates all values (properties and relations) of an instance of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
   remarks: "\nInternally, this method calls <xref href=\"TimeCockpit.Data.EntityObject.Validate(System.String%2cSystem.String%40%2cTimeCockpit.Data.DataModel.ValidationRule%40%2cTimeCockpit.Data.Localization.NameLocalizer)\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  example: []
   syntax:
     content: public bool Validate(out List<string> errorMessages, out List<ValidationRule> failingValidationRules, NameLocalizer localizer)
     parameters:
@@ -2079,16 +1142,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.SetMember(System.String, System.Object, System.Boolean, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: SetMember
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1246
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nSets a dynamic member.\n"
-  example: []
   syntax:
     content: public void SetMember(string name, object value, bool initialization, bool ignoreDefaultValues = false)
     parameters:
@@ -2110,6 +1169,39 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.EntityObject.GetMembersByState(TimeCockpit.Data.MemberStatus)
+  commentId: M:TimeCockpit.Data.EntityObject.GetMembersByState(TimeCockpit.Data.MemberStatus)
+  id: GetMembersByState(TimeCockpit.Data.MemberStatus)
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: GetMembersByState(MemberStatus)
+  nameWithType: EntityObject.GetMembersByState(MemberStatus)
+  fullName: TimeCockpit.Data.EntityObject.GetMembersByState(TimeCockpit.Data.MemberStatus)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a list of member names that have the requested state.\n"
+  syntax:
+    content: public IEnumerable<string> GetMembersByState(MemberStatus state)
+    parameters:
+    - id: state
+      type: TimeCockpit.Data.MemberStatus
+      description: Reqested state.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of member name that have the requested state.
+    content.vb: Public Function GetMembersByState(state As MemberStatus) As IEnumerable(Of String)
+  overload: TimeCockpit.Data.EntityObject.GetMembersByState*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.EntityObject.GetChangedMembers
   commentId: M:TimeCockpit.Data.EntityObject.GetChangedMembers
   id: GetChangedMembers
@@ -2122,16 +1214,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetChangedMembers()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetChangedMembers
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1299
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets a list of member names that have the status <xref href=\"TimeCockpit.Data.MemberStatus.Changed\" data-throw-if-not-resolved=\"false\"></xref> \n"
-  example: []
   syntax:
     content: public IEnumerable<string> GetChangedMembers()
     return:
@@ -2155,16 +1243,12 @@ items:
   fullName: TimeCockpit.Data.EntityObject.GetPropertyIndex(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: GetPropertyIndex
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1928
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets ContentMap index for a name.\n"
-  example: []
   syntax:
     content: protected virtual int GetPropertyIndex(string name)
     parameters:
@@ -2194,17 +1278,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String, System.Object, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: OnPropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1945
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInvoked whenever the value of any property on this object has been updated. \nThe specific property that changed is reported in the event data. \n"
   remarks: "\nThis method sets a property in the <xref href=\"TimeCockpit.Data.EntityObject.Values\" data-throw-if-not-resolved=\"false\"></xref> collection of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nto MemberStatus.Changed. Each call of the method calls <xref href=\"OnPropertyChanged\" data-throw-if-not-resolved=\"false\"></xref> for the \nclr properties &apos;Me&apos;, &apos;IsReadonly&apos;.\n"
-  example: []
   syntax:
     content: protected virtual void OnPropertyChanged(string propertyName, object previousValue, object currentValue)
     parameters:
@@ -2237,17 +1317,13 @@ items:
   fullName: TimeCockpit.Data.EntityObject.OnPropertyChanged(System.Int32, System.Object, System.Object)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    id: OnPropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/EntityObject.cs
-    startLine: 1973
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInvoked whenever the value of any property on this object has been updated. \nThe specific property that changed is reported in the event data. \n"
   remarks: "\nThis method sets a property in the <xref href=\"TimeCockpit.Data.EntityObject.Values\" data-throw-if-not-resolved=\"false\"></xref> collection of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nto MemberStatus.Changed. Each call of the method calls <xref href=\"OnPropertyChanged\" data-throw-if-not-resolved=\"false\"></xref> for the \nclr properties &apos;IsNew&apos;, &apos;IsChanged&apos;, &apos;Me&apos;, &apos;IsReadonly&apos;.\n"
-  example: []
   syntax:
     content: protected virtual void OnPropertyChanged(int index, object previousValue, object currentValue)
     parameters:
@@ -2268,17 +1344,580 @@ items:
   modifiers.vb:
   - Protected
   - Overridable
+- uid: TimeCockpit.Data.EntityObject.Entity
+  commentId: P:TimeCockpit.Data.EntityObject.Entity
+  id: Entity
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: EntityObject.Entity
+  fullName: TimeCockpit.Data.EntityObject.Entity
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> of the object.\n"
+  syntax:
+    content: public ModelEntityBase Entity { get; protected set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelEntityBase
+    content.vb: Public Property Entity As ModelEntityBase
+  overload: TimeCockpit.Data.EntityObject.Entity*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: TimeCockpit.Data.EntityObject.ObjectUuid
+  commentId: P:TimeCockpit.Data.EntityObject.ObjectUuid
+  id: ObjectUuid
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: ObjectUuid
+  nameWithType: EntityObject.ObjectUuid
+  fullName: TimeCockpit.Data.EntityObject.ObjectUuid
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the unique id of the object.\n"
+  syntax:
+    content: public Guid ObjectUuid { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public ReadOnly Property ObjectUuid As Guid
+  overload: TimeCockpit.Data.EntityObject.ObjectUuid*
+  implements:
+  - TimeCockpit.Data.IEntityObject.ObjectUuid
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.ModelEntityName
+  commentId: P:TimeCockpit.Data.EntityObject.ModelEntityName
+  id: ModelEntityName
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: ModelEntityName
+  nameWithType: EntityObject.ModelEntityName
+  fullName: TimeCockpit.Data.EntityObject.ModelEntityName
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the name of the current instance of <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public string ModelEntityName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ModelEntityName As String
+  overload: TimeCockpit.Data.EntityObject.ModelEntityName*
+  implements:
+  - TimeCockpit.Data.IEntityObject.ModelEntityName
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.IsNew
+  commentId: P:TimeCockpit.Data.EntityObject.IsNew
+  id: IsNew
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: IsNew
+  nameWithType: EntityObject.IsNew
+  fullName: TimeCockpit.Data.EntityObject.IsNew
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether the object is new.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public bool IsNew { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNew As Boolean
+  overload: TimeCockpit.Data.EntityObject.IsNew*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.IsChanged
+  commentId: P:TimeCockpit.Data.EntityObject.IsChanged
+  id: IsChanged
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: IsChanged
+  nameWithType: EntityObject.IsChanged
+  fullName: TimeCockpit.Data.EntityObject.IsChanged
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether the object was changed.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public bool IsChanged { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsChanged As Boolean
+  overload: TimeCockpit.Data.EntityObject.IsChanged*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.IsDeleted
+  commentId: P:TimeCockpit.Data.EntityObject.IsDeleted
+  id: IsDeleted
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: IsDeleted
+  nameWithType: EntityObject.IsDeleted
+  fullName: TimeCockpit.Data.EntityObject.IsDeleted
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether the object was deleted.\nSee also <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public bool IsDeleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeleted As Boolean
+  overload: TimeCockpit.Data.EntityObject.IsDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.IsCloned
+  commentId: P:TimeCockpit.Data.EntityObject.IsCloned
+  id: IsCloned
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: IsCloned
+  nameWithType: EntityObject.IsCloned
+  fullName: TimeCockpit.Data.EntityObject.IsCloned
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether this instance is cloned.\n"
+  syntax:
+    content: public bool IsCloned { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCloned As Boolean
+  overload: TimeCockpit.Data.EntityObject.IsCloned*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.Me
+  commentId: P:TimeCockpit.Data.EntityObject.Me
+  id: Me
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: Me
+  nameWithType: EntityObject.Me
+  fullName: TimeCockpit.Data.EntityObject.Me
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the it self\n"
+  remarks: "\nThis property is needed for DataBinding reasons. \nWhenever a property of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> is changed (e.g. via z.SetMember(&quot;X&quot;, &quot;Y&quot;)), the <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> event\nof that property + the <xref href=\"TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String%2cSystem.Object%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> event of the Me property is fired.\n"
+  syntax:
+    content: public EntityObject Me { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject
+    content.vb: Public ReadOnly Property Me As EntityObject
+  overload: TimeCockpit.Data.EntityObject.Me*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.RelationIdentifiers
+  commentId: P:TimeCockpit.Data.EntityObject.RelationIdentifiers
+  id: RelationIdentifiers
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: RelationIdentifiers
+  nameWithType: EntityObject.RelationIdentifiers
+  fullName: TimeCockpit.Data.EntityObject.RelationIdentifiers
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the relation identifiers for the <code>EntityObject</code>\n"
+  syntax:
+    content: public RelationIdentifiers RelationIdentifiers { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.RelationIdentifiers
+    content.vb: Public ReadOnly Property RelationIdentifiers As RelationIdentifiers
+  overload: TimeCockpit.Data.EntityObject.RelationIdentifiers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.CreationVersion
+  commentId: P:TimeCockpit.Data.EntityObject.CreationVersion
+  id: CreationVersion
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: CreationVersion
+  nameWithType: EntityObject.CreationVersion
+  fullName: TimeCockpit.Data.EntityObject.CreationVersion
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the creation version of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public ulong CreationVersion { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property CreationVersion As ULong
+  overload: TimeCockpit.Data.EntityObject.CreationVersion*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.LastUpdateVersion
+  commentId: P:TimeCockpit.Data.EntityObject.LastUpdateVersion
+  id: LastUpdateVersion
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: LastUpdateVersion
+  nameWithType: EntityObject.LastUpdateVersion
+  fullName: TimeCockpit.Data.EntityObject.LastUpdateVersion
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the update version of the <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public ulong LastUpdateVersion { get; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public ReadOnly Property LastUpdateVersion As ULong
+  overload: TimeCockpit.Data.EntityObject.LastUpdateVersion*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.IsReadOnly
+  commentId: P:TimeCockpit.Data.EntityObject.IsReadOnly
+  id: IsReadOnly
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly
+  nameWithType: EntityObject.IsReadOnly
+  fullName: TimeCockpit.Data.EntityObject.IsReadOnly
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a value indicating whether an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nis locked depending on the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyFunction\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: "\nIf the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> that underlies the current <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\nhas no <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression\" data-throw-if-not-resolved=\"false\"></xref> set the property always returns false.\nIf the <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> has a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression\" data-throw-if-not-resolved=\"false\"></xref> set, it\nis evaluated with the values of the current <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> an returns a boolean value accordingly.\n"
+  syntax:
+    content: public bool IsReadOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReadOnly As Boolean
+  overload: TimeCockpit.Data.EntityObject.IsReadOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
+  commentId: P:TimeCockpit.Data.EntityObject.LocalizedPropertyValues
+  id: LocalizedPropertyValues
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: LocalizedPropertyValues
+  nameWithType: EntityObject.LocalizedPropertyValues
+  fullName: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the localized property values.\n"
+  syntax:
+    content: public LocalizedTextPropertyCollection LocalizedPropertyValues { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
+    content.vb: Public ReadOnly Property LocalizedPropertyValues As LocalizedTextPropertyCollection
+  overload: TimeCockpit.Data.EntityObject.LocalizedPropertyValues*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.Permission
+  commentId: P:TimeCockpit.Data.EntityObject.Permission
+  id: Permission
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: Permission
+  nameWithType: EntityObject.Permission
+  fullName: TimeCockpit.Data.EntityObject.Permission
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the permissions of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  syntax:
+    content: public PermissionType Permission { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Security.PermissionType
+    content.vb: Public ReadOnly Property Permission As PermissionType
+  overload: TimeCockpit.Data.EntityObject.Permission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.Values
+  commentId: P:TimeCockpit.Data.EntityObject.Values
+  id: Values
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: Values
+  nameWithType: EntityObject.Values
+  fullName: TimeCockpit.Data.EntityObject.Values
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a dictionary of values for an object.\n"
+  syntax:
+    content: protected object[] Values { get; }
+    parameters: []
+    return:
+      type: System.Object[]
+    content.vb: Protected ReadOnly Property Values As Object()
+  overload: TimeCockpit.Data.EntityObject.Values*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.States
+  commentId: P:TimeCockpit.Data.EntityObject.States
+  id: States
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: States
+  nameWithType: EntityObject.States
+  fullName: TimeCockpit.Data.EntityObject.States
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets a dictionary of property states for an object.\n"
+  syntax:
+    content: protected MemberStatus[] States { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.MemberStatus[]
+    content.vb: Protected ReadOnly Property States As MemberStatus()
+  overload: TimeCockpit.Data.EntityObject.States*
+  modifiers.csharp:
+  - protected
+  - get
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: TimeCockpit.Data.EntityObject.Item(System.String)
+  commentId: P:TimeCockpit.Data.EntityObject.Item(System.String)
+  id: Item(System.String)
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: Item[String]
+  nameWithType: EntityObject.Item[String]
+  fullName: TimeCockpit.Data.EntityObject.Item[System.String]
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets the value of a specified member\n"
+  remarks: "\nInternally, this indexer calls <xref href=\"TimeCockpit.Data.EntityObject.GetMember(System.String)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.EntityObject.SetMember(System.String%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref>.\nThe indexer was introduced for the use in IronPython, where no <xref href=\"TimeCockpit.Data.EntityObject.GetMember(System.String)\" data-throw-if-not-resolved=\"false\"></xref> or \n<xref href=\"TimeCockpit.Data.EntityObject.SetMember(System.String%2cSystem.Object)\" data-throw-if-not-resolved=\"false\"></xref> can be called. Without the indexer it was not possible in Python\nto run through the properties/ relations of a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> and set the values\nof a dependent <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  syntax:
+    content: public object this[string propertyName] { get; set; }
+    parameters:
+    - id: propertyName
+      type: System.String
+      description: The name of the member to get the value for.
+    return:
+      type: System.Object
+      description: Returns the value of the specified member.
+    content.vb: Public Property Item(propertyName As String) As Object
+  overload: TimeCockpit.Data.EntityObject.Item*
+  nameWithType.vb: EntityObject.Item(String)
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.EntityObject.Item(System.String)
+  name.vb: Item(String)
+- uid: TimeCockpit.Data.EntityObject.PropertyChanged
+  commentId: E:TimeCockpit.Data.EntityObject.PropertyChanged
+  id: PropertyChanged
+  parent: TimeCockpit.Data.EntityObject
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: EntityObject.PropertyChanged
+  fullName: TimeCockpit.Data.EntityObject.PropertyChanged
+  type: Event
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nOccurs after the value of an application settings property is changed.\n"
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntityBase
-  nameWithType: ModelEntityBase
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -2292,20 +1931,16 @@ references:
 - uid: TimeCockpit.Data.DynamicObject
   commentId: T:TimeCockpit.Data.DynamicObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DynamicObject
   nameWithType: DynamicObject
   fullName: TimeCockpit.Data.DynamicObject
 - uid: System.Dynamic.IDynamicMetaObjectProvider
-  commentId: T:System.Dynamic.IDynamicMetaObjectProvider
-  parent: System.Dynamic
   isExternal: true
   name: IDynamicMetaObjectProvider
   nameWithType: IDynamicMetaObjectProvider
   fullName: System.Dynamic.IDynamicMetaObjectProvider
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
@@ -2313,7 +1948,7 @@ references:
 - uid: TimeCockpit.Data.IEntityObject
   commentId: T:TimeCockpit.Data.IEntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: IEntityObject
   nameWithType: IEntityObject
   fullName: TimeCockpit.Data.IEntityObject
@@ -2584,6 +2219,7 @@ references:
     name: SetTextMemberTruncated
     nameWithType: EntityObjectExtensions.SetTextMemberTruncated
     fullName: TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2608,6 +2244,7 @@ references:
     name: SetTextMemberTruncated
     nameWithType: EntityObjectExtensions.SetTextMemberTruncated
     fullName: TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2627,30 +2264,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Dynamic
-  commentId: N:System.Dynamic
-  isExternal: false
-  name: System.Dynamic
-  nameWithType: System.Dynamic
-  fullName: System.Dynamic
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated(TimeCockpit.Data.EntityObject,System.String,System.String)
   commentId: M:TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated(TimeCockpit.Data.EntityObject,System.String,System.String)
   isExternal: true
@@ -2662,6 +2281,7 @@ references:
     name: SetTextMemberTruncated
     nameWithType: EntityObjectExtensions.SetTextMemberTruncated
     fullName: TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2669,6 +2289,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2693,6 +2314,7 @@ references:
     name: SetTextMemberTruncated
     nameWithType: EntityObjectExtensions.SetTextMemberTruncated
     fullName: TimeCockpit.Data.EntityObjectExtensions.SetTextMemberTruncated
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2700,6 +2322,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -2722,76 +2345,53 @@ references:
 - uid: TimeCockpit.Data.EntityObjectExtensions
   commentId: T:TimeCockpit.Data.EntityObjectExtensions
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObjectExtensions
   nameWithType: EntityObjectExtensions
   fullName: TimeCockpit.Data.EntityObjectExtensions
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.EntityObject.#ctor*
   commentId: Overload:TimeCockpit.Data.EntityObject.#ctor
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject.EntityObject
   fullName: TimeCockpit.Data.EntityObject.EntityObject
-- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  parent: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.EntityObject.Deserialize*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Deserialize
   isExternal: true
-  name: PropertyChanged
-  nameWithType: INotifyPropertyChanged.PropertyChanged
-  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-- uid: System.ComponentModel.PropertyChangedEventHandler
-  commentId: T:System.ComponentModel.PropertyChangedEventHandler
-  parent: System.ComponentModel
+  name: Deserialize
+  nameWithType: EntityObject.Deserialize
+  fullName: TimeCockpit.Data.EntityObject.Deserialize
+- uid: TimeCockpit.Data.DataModel.UnknownEncodingException
+  commentId: T:TimeCockpit.Data.DataModel.UnknownEncodingException
   isExternal: true
-  name: PropertyChangedEventHandler
-  nameWithType: PropertyChangedEventHandler
-  fullName: System.ComponentModel.PropertyChangedEventHandler
-- uid: TimeCockpit.Data.EntityObject.Entity*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Entity
-  isExternal: false
-  name: Entity
-  nameWithType: EntityObject.Entity
-  fullName: TimeCockpit.Data.EntityObject.Entity
-- uid: TimeCockpit.Data.EntityObject.ObjectUuid*
-  commentId: Overload:TimeCockpit.Data.EntityObject.ObjectUuid
-  isExternal: false
-  name: ObjectUuid
-  nameWithType: EntityObject.ObjectUuid
-  fullName: TimeCockpit.Data.EntityObject.ObjectUuid
-- uid: TimeCockpit.Data.IEntityObject.ObjectUuid
-  commentId: P:TimeCockpit.Data.IEntityObject.ObjectUuid
-  parent: TimeCockpit.Data.IEntityObject
-  isExternal: false
-  name: ObjectUuid
-  nameWithType: IEntityObject.ObjectUuid
-  fullName: TimeCockpit.Data.IEntityObject.ObjectUuid
-- uid: System.Guid
-  commentId: T:System.Guid
-  parent: System
+  name: UnknownEncodingException
+  nameWithType: UnknownEncodingException
+  fullName: TimeCockpit.Data.DataModel.UnknownEncodingException
+- uid: System.Xml.Linq.XElement
   isExternal: true
-  name: Guid
-  nameWithType: Guid
-  fullName: System.Guid
-- uid: TimeCockpit.Data.EntityObject.ModelEntityName*
-  commentId: Overload:TimeCockpit.Data.EntityObject.ModelEntityName
-  isExternal: false
-  name: ModelEntityName
-  nameWithType: EntityObject.ModelEntityName
-  fullName: TimeCockpit.Data.EntityObject.ModelEntityName
-- uid: TimeCockpit.Data.IEntityObject.ModelEntityName
-  commentId: P:TimeCockpit.Data.IEntityObject.ModelEntityName
-  parent: TimeCockpit.Data.IEntityObject
-  isExternal: false
-  name: ModelEntityName
-  nameWithType: IEntityObject.ModelEntityName
-  fullName: TimeCockpit.Data.IEntityObject.ModelEntityName
+  name: XElement
+  nameWithType: XElement
+  fullName: System.Xml.Linq.XElement
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
+- uid: TimeCockpit.Data.DataModel.Model
+  commentId: T:TimeCockpit.Data.DataModel.Model
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: Model
+  nameWithType: Model
+  fullName: TimeCockpit.Data.DataModel.Model
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: true
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -2799,241 +2399,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String,System.Object,System.Object)
-  commentId: M:TimeCockpit.Data.EntityObject.OnPropertyChanged(System.String,System.Object,System.Object)
-- uid: TimeCockpit.Data.EntityObject.IsNew*
-  commentId: Overload:TimeCockpit.Data.EntityObject.IsNew
-  isExternal: false
-  name: IsNew
-  nameWithType: EntityObject.IsNew
-  fullName: TimeCockpit.Data.EntityObject.IsNew
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: TimeCockpit.Data.EntityObject.IsChanged*
-  commentId: Overload:TimeCockpit.Data.EntityObject.IsChanged
-  isExternal: false
-  name: IsChanged
-  nameWithType: EntityObject.IsChanged
-  fullName: TimeCockpit.Data.EntityObject.IsChanged
-- uid: TimeCockpit.Data.EntityObject.IsDeleted*
-  commentId: Overload:TimeCockpit.Data.EntityObject.IsDeleted
-  isExternal: false
-  name: IsDeleted
-  nameWithType: EntityObject.IsDeleted
-  fullName: TimeCockpit.Data.EntityObject.IsDeleted
-- uid: TimeCockpit.Data.EntityObject.IsCloned*
-  commentId: Overload:TimeCockpit.Data.EntityObject.IsCloned
-  isExternal: false
-  name: IsCloned
-  nameWithType: EntityObject.IsCloned
-  fullName: TimeCockpit.Data.EntityObject.IsCloned
-- uid: TimeCockpit.Data.EntityObject.Me*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Me
-  isExternal: false
-  name: Me
-  nameWithType: EntityObject.Me
-  fullName: TimeCockpit.Data.EntityObject.Me
-- uid: TimeCockpit.Data.EntityObject.RelationIdentifiers*
-  commentId: Overload:TimeCockpit.Data.EntityObject.RelationIdentifiers
-  isExternal: false
-  name: RelationIdentifiers
-  nameWithType: EntityObject.RelationIdentifiers
-  fullName: TimeCockpit.Data.EntityObject.RelationIdentifiers
-- uid: TimeCockpit.Data.RelationIdentifiers
-  commentId: T:TimeCockpit.Data.RelationIdentifiers
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: RelationIdentifiers
-  nameWithType: RelationIdentifiers
-  fullName: TimeCockpit.Data.RelationIdentifiers
-- uid: TimeCockpit.Data.EntityObject.CreationVersion*
-  commentId: Overload:TimeCockpit.Data.EntityObject.CreationVersion
-  isExternal: false
-  name: CreationVersion
-  nameWithType: EntityObject.CreationVersion
-  fullName: TimeCockpit.Data.EntityObject.CreationVersion
-- uid: System.UInt64
-  commentId: T:System.UInt64
-  parent: System
-  isExternal: true
-  name: UInt64
-  nameWithType: UInt64
-  fullName: System.UInt64
-- uid: TimeCockpit.Data.EntityObject.LastUpdateVersion*
-  commentId: Overload:TimeCockpit.Data.EntityObject.LastUpdateVersion
-  isExternal: false
-  name: LastUpdateVersion
-  nameWithType: EntityObject.LastUpdateVersion
-  fullName: TimeCockpit.Data.EntityObject.LastUpdateVersion
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyFunction
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyFunction
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-  commentId: P:TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-  parent: TimeCockpit.Data.DataModel.ModelEntityBase
-  isExternal: false
-  name: ReadOnlyExpression
-  nameWithType: ModelEntityBase.ReadOnlyExpression
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase.ReadOnlyExpression
-- uid: TimeCockpit.Data.EntityObject.IsReadOnly*
-  commentId: Overload:TimeCockpit.Data.EntityObject.IsReadOnly
-  isExternal: false
-  name: IsReadOnly
-  nameWithType: EntityObject.IsReadOnly
-  fullName: TimeCockpit.Data.EntityObject.IsReadOnly
-- uid: TimeCockpit.Data.EntityObject.LocalizedPropertyValues*
-  commentId: Overload:TimeCockpit.Data.EntityObject.LocalizedPropertyValues
-  isExternal: false
-  name: LocalizedPropertyValues
-  nameWithType: EntityObject.LocalizedPropertyValues
-  fullName: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
-- uid: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
-  commentId: T:TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
-  parent: TimeCockpit.Data.Localization
-  isExternal: false
-  name: LocalizedTextPropertyCollection
-  nameWithType: LocalizedTextPropertyCollection
-  fullName: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
-- uid: TimeCockpit.Data.Localization
-  commentId: N:TimeCockpit.Data.Localization
-  isExternal: false
-  name: TimeCockpit.Data.Localization
-  nameWithType: TimeCockpit.Data.Localization
-  fullName: TimeCockpit.Data.Localization
-- uid: TimeCockpit.Data.EntityObject.Permission*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Permission
-  isExternal: false
-  name: Permission
-  nameWithType: EntityObject.Permission
-  fullName: TimeCockpit.Data.EntityObject.Permission
-- uid: TimeCockpit.Data.Security.PermissionType
-  commentId: T:TimeCockpit.Data.Security.PermissionType
-  parent: TimeCockpit.Data.Security
-  isExternal: false
-  name: PermissionType
-  nameWithType: PermissionType
-  fullName: TimeCockpit.Data.Security.PermissionType
-- uid: TimeCockpit.Data.Security
-  commentId: N:TimeCockpit.Data.Security
-  isExternal: false
-  name: TimeCockpit.Data.Security
-  nameWithType: TimeCockpit.Data.Security
-  fullName: TimeCockpit.Data.Security
-- uid: TimeCockpit.Data.EntityObject.Values*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Values
-  isExternal: false
-  name: Values
-  nameWithType: EntityObject.Values
-  fullName: TimeCockpit.Data.EntityObject.Values
-- uid: System.Object[]
-  name: Object[]
-  nameWithType: Object[]
-  fullName: System.Object[]
-  nameWithType.vb: Object()
-  fullName.vb: System.Object()
-  name.vb: Object()
-  spec.csharp:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: TimeCockpit.Data.EntityObject.States*
-  commentId: Overload:TimeCockpit.Data.EntityObject.States
-  isExternal: false
-  name: States
-  nameWithType: EntityObject.States
-  fullName: TimeCockpit.Data.EntityObject.States
-- uid: TimeCockpit.Data.MemberStatus[]
-  name: MemberStatus[]
-  nameWithType: MemberStatus[]
-  fullName: TimeCockpit.Data.MemberStatus[]
-  nameWithType.vb: MemberStatus()
-  fullName.vb: TimeCockpit.Data.MemberStatus()
-  name.vb: MemberStatus()
-  spec.csharp:
-  - uid: TimeCockpit.Data.MemberStatus
-    name: MemberStatus
-    nameWithType: MemberStatus
-    fullName: TimeCockpit.Data.MemberStatus
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: TimeCockpit.Data.MemberStatus
-    name: MemberStatus
-    nameWithType: MemberStatus
-    fullName: TimeCockpit.Data.MemberStatus
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: TimeCockpit.Data.EntityObject.GetMember(System.String)
-  commentId: M:TimeCockpit.Data.EntityObject.GetMember(System.String)
-- uid: TimeCockpit.Data.EntityObject.SetMember(System.String,System.Object)
-  commentId: M:TimeCockpit.Data.EntityObject.SetMember(System.String,System.Object)
-- uid: TimeCockpit.Data.EntityObject.Item*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Item
-  isExternal: false
-  name: Item
-  nameWithType: EntityObject.Item
-  fullName: TimeCockpit.Data.EntityObject.Item
-- uid: System.Xml.Linq.XElement
-  commentId: T:System.Xml.Linq.XElement
-  parent: System.Xml.Linq
-  isExternal: true
-  name: XElement
-  nameWithType: XElement
-  fullName: System.Xml.Linq.XElement
-- uid: TimeCockpit.Data.DataModel.Model
-  commentId: T:TimeCockpit.Data.DataModel.Model
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: Model
-  nameWithType: Model
-  fullName: TimeCockpit.Data.DataModel.Model
-- uid: TimeCockpit.Data.EntityObject.Serialize
-  commentId: M:TimeCockpit.Data.EntityObject.Serialize
-- uid: TimeCockpit.Data.DataModel.UnknownEncodingException
-  commentId: T:TimeCockpit.Data.DataModel.UnknownEncodingException
-  isExternal: false
-  name: UnknownEncodingException
-  nameWithType: UnknownEncodingException
-  fullName: TimeCockpit.Data.DataModel.UnknownEncodingException
-- uid: TimeCockpit.Data.EntityObject.Deserialize*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Deserialize
-  isExternal: false
-  name: Deserialize
-  nameWithType: EntityObject.Deserialize
-  fullName: TimeCockpit.Data.EntityObject.Deserialize
-- uid: System.Xml.Linq
-  commentId: N:System.Xml.Linq
-  isExternal: false
-  name: System.Xml.Linq
-  nameWithType: System.Xml.Linq
-  fullName: System.Xml.Linq
-- uid: System.Dynamic.DynamicMetaObject
-  commentId: T:System.Dynamic.DynamicMetaObject
-  parent: System.Dynamic
-  isExternal: true
-  name: DynamicMetaObject
-  nameWithType: DynamicMetaObject
-  fullName: System.Dynamic.DynamicMetaObject
 - uid: TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   commentId: M:TimeCockpit.Data.DynamicObject.GetMetaObject(System.Linq.Expressions.Expression)
   parent: TimeCockpit.Data.DynamicObject
@@ -3046,6 +2411,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3062,6 +2428,7 @@ references:
     name: GetMetaObject
     nameWithType: DynamicObject.GetMetaObject
     fullName: TimeCockpit.Data.DynamicObject.GetMetaObject
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3075,23 +2442,20 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.EntityObject.GetMetaObject*
   commentId: Overload:TimeCockpit.Data.EntityObject.GetMetaObject
-  isExternal: false
+  isExternal: true
   name: GetMetaObject
   nameWithType: EntityObject.GetMetaObject
   fullName: TimeCockpit.Data.EntityObject.GetMetaObject
 - uid: System.Linq.Expressions.Expression
-  commentId: T:System.Linq.Expressions.Expression
-  parent: System.Linq.Expressions
   isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: System.Linq.Expressions.Expression
-- uid: System.Linq.Expressions
-  commentId: N:System.Linq.Expressions
-  isExternal: false
-  name: System.Linq.Expressions
-  nameWithType: System.Linq.Expressions
-  fullName: System.Linq.Expressions
+- uid: System.Dynamic.DynamicMetaObject
+  isExternal: true
+  name: DynamicMetaObject
+  nameWithType: DynamicMetaObject
+  fullName: System.Dynamic.DynamicMetaObject
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -3125,26 +2489,40 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.EntityObject.ToString*
   commentId: Overload:TimeCockpit.Data.EntityObject.ToString
-  isExternal: false
+  isExternal: true
   name: ToString
   nameWithType: EntityObject.ToString
   fullName: TimeCockpit.Data.EntityObject.ToString
 - uid: TimeCockpit.Data.EntityObject.Clone*
   commentId: Overload:TimeCockpit.Data.EntityObject.Clone
-  isExternal: false
+  isExternal: true
   name: Clone
   nameWithType: EntityObject.Clone
   fullName: TimeCockpit.Data.EntityObject.Clone
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: TimeCockpit.Data.Environment
   commentId: T:TimeCockpit.Data.Environment
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: Environment
   fullName: TimeCockpit.Data.Environment
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
 - uid: TimeCockpit.Data.EntityObject.CopyTo*
   commentId: Overload:TimeCockpit.Data.EntityObject.CopyTo
-  isExternal: false
+  isExternal: true
   name: CopyTo
   nameWithType: EntityObject.CopyTo
   fullName: TimeCockpit.Data.EntityObject.CopyTo
@@ -3160,6 +2538,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3176,6 +2555,7 @@ references:
     name: GetMember
     nameWithType: DynamicObject.GetMember
     fullName: TimeCockpit.Data.DynamicObject.GetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3189,7 +2569,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.EntityObject.GetMember*
   commentId: Overload:TimeCockpit.Data.EntityObject.GetMember
-  isExternal: false
+  isExternal: true
   name: GetMember
   nameWithType: EntityObject.GetMember
   fullName: TimeCockpit.Data.EntityObject.GetMember
@@ -3202,28 +2582,29 @@ references:
   fullName: System.Int32
 - uid: TimeCockpit.Data.EntityObject.GetActualMember*
   commentId: Overload:TimeCockpit.Data.EntityObject.GetActualMember
-  isExternal: false
+  isExternal: true
   name: GetActualMember
   nameWithType: EntityObject.GetActualMember
   fullName: TimeCockpit.Data.EntityObject.GetActualMember
-- uid: TimeCockpit.Data.DataModel.CalculatedProperty
-  commentId: T:TimeCockpit.Data.DataModel.CalculatedProperty
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: CalculatedProperty
-  nameWithType: CalculatedProperty
-  fullName: TimeCockpit.Data.DataModel.CalculatedProperty
 - uid: TimeCockpit.Data.EntityObject.CalculateMember*
   commentId: Overload:TimeCockpit.Data.EntityObject.CalculateMember
-  isExternal: false
+  isExternal: true
   name: CalculateMember
   nameWithType: EntityObject.CalculateMember
   fullName: TimeCockpit.Data.EntityObject.CalculateMember
 - uid: System.NullReferenceException
   commentId: T:System.NullReferenceException
+  isExternal: true
+- uid: TimeCockpit.Data.DataModel.CalculatedProperty
+  commentId: T:TimeCockpit.Data.DataModel.CalculatedProperty
+  parent: TimeCockpit.Data.DataModel
+  isExternal: true
+  name: CalculatedProperty
+  nameWithType: CalculatedProperty
+  fullName: TimeCockpit.Data.DataModel.CalculatedProperty
 - uid: TimeCockpit.Data.EntityObject.SetMember*
   commentId: Overload:TimeCockpit.Data.EntityObject.SetMember
-  isExternal: false
+  isExternal: true
   name: SetMember
   nameWithType: EntityObject.SetMember
   fullName: TimeCockpit.Data.EntityObject.SetMember
@@ -3239,6 +2620,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3263,6 +2645,7 @@ references:
     name: SetMember
     nameWithType: DynamicObject.SetMember
     fullName: TimeCockpit.Data.DynamicObject.SetMember
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -3282,56 +2665,37 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.EntityObject.Serialize*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Serialize
+  isExternal: true
+  name: Serialize
+  nameWithType: EntityObject.Serialize
+  fullName: TimeCockpit.Data.EntityObject.Serialize
 - uid: System.Xml.XmlReader
-  commentId: T:System.Xml.XmlReader
-  parent: System.Xml
   isExternal: true
   name: XmlReader
   nameWithType: XmlReader
   fullName: System.Xml.XmlReader
-- uid: TimeCockpit.Data.EntityObject.Serialize*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Serialize
-  isExternal: false
-  name: Serialize
-  nameWithType: EntityObject.Serialize
-  fullName: TimeCockpit.Data.EntityObject.Serialize
-- uid: System.Xml
-  commentId: N:System.Xml
-  isExternal: false
-  name: System.Xml
-  nameWithType: System.Xml
-  fullName: System.Xml
-- uid: TimeCockpit.Data.EntityObject.Deserialize(System.String,TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataModel.Model)
-  commentId: M:TimeCockpit.Data.EntityObject.Deserialize(System.String,TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataModel.Model)
-- uid: TimeCockpit.Data.DataModel.TextProperty
-  commentId: T:TimeCockpit.Data.DataModel.TextProperty
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TextProperty
-  nameWithType: TextProperty
-  fullName: TimeCockpit.Data.DataModel.TextProperty
 - uid: System.Xml.XmlWriter
-  commentId: T:System.Xml.XmlWriter
-  parent: System.Xml
   isExternal: true
   name: XmlWriter
   nameWithType: XmlWriter
   fullName: System.Xml.XmlWriter
 - uid: TimeCockpit.Data.EntityObject.MarkAsNew*
   commentId: Overload:TimeCockpit.Data.EntityObject.MarkAsNew
-  isExternal: false
+  isExternal: true
   name: MarkAsNew
   nameWithType: EntityObject.MarkAsNew
   fullName: TimeCockpit.Data.EntityObject.MarkAsNew
 - uid: TimeCockpit.Data.EntityObject.MarkAsDeleted*
   commentId: Overload:TimeCockpit.Data.EntityObject.MarkAsDeleted
-  isExternal: false
+  isExternal: true
   name: MarkAsDeleted
   nameWithType: EntityObject.MarkAsDeleted
   fullName: TimeCockpit.Data.EntityObject.MarkAsDeleted
 - uid: TimeCockpit.Data.EntityObject.Evaluate*
   commentId: Overload:TimeCockpit.Data.EntityObject.Evaluate
-  isExternal: false
+  isExternal: true
   name: Evaluate
   nameWithType: EntityObject.Evaluate
   fullName: TimeCockpit.Data.EntityObject.Evaluate
@@ -3342,7 +2706,6 @@ references:
   nameWithType: T
   fullName: T
 - uid: T
-  isExternal: false
   name: T
   nameWithType: T
   fullName: T
@@ -3369,6 +2732,7 @@ references:
     name: QueryParameter
     nameWithType: QueryParameter
     fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3385,6 +2749,7 @@ references:
     name: QueryParameter
     nameWithType: QueryParameter
     fullName: TimeCockpit.Data.QueryLanguage.QueryParameter
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3429,19 +2794,32 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.EntityObject.HasPermission*
   commentId: Overload:TimeCockpit.Data.EntityObject.HasPermission
-  isExternal: false
+  isExternal: true
   name: HasPermission
   nameWithType: EntityObject.HasPermission
   fullName: TimeCockpit.Data.EntityObject.HasPermission
+- uid: TimeCockpit.Data.Security.PermissionType
+  commentId: T:TimeCockpit.Data.Security.PermissionType
+  parent: TimeCockpit.Data.Security
+  isExternal: true
+  name: PermissionType
+  nameWithType: PermissionType
+  fullName: TimeCockpit.Data.Security.PermissionType
+- uid: TimeCockpit.Data.Security
+  commentId: N:TimeCockpit.Data.Security
+  isExternal: true
+  name: TimeCockpit.Data.Security
+  nameWithType: TimeCockpit.Data.Security
+  fullName: TimeCockpit.Data.Security
 - uid: TimeCockpit.Data.EntityObject.CompareTo*
   commentId: Overload:TimeCockpit.Data.EntityObject.CompareTo
-  isExternal: false
+  isExternal: true
   name: CompareTo
   nameWithType: EntityObject.CompareTo
   fullName: TimeCockpit.Data.EntityObject.CompareTo
@@ -3486,29 +2864,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.EntityObject.Validate*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Validate
+  isExternal: true
+  name: Validate
+  nameWithType: EntityObject.Validate
+  fullName: TimeCockpit.Data.EntityObject.Validate
 - uid: TimeCockpit.Data.DataModel.ValidationRule
   commentId: T:TimeCockpit.Data.DataModel.ValidationRule
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ValidationRule
   nameWithType: ValidationRule
   fullName: TimeCockpit.Data.DataModel.ValidationRule
 - uid: TimeCockpit.Data.Localization.NameLocalizer
   commentId: T:TimeCockpit.Data.Localization.NameLocalizer
   parent: TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: NameLocalizer
   nameWithType: NameLocalizer
   fullName: TimeCockpit.Data.Localization.NameLocalizer
-- uid: TimeCockpit.Data.EntityObject.Validate*
-  commentId: Overload:TimeCockpit.Data.EntityObject.Validate
-  isExternal: false
-  name: Validate
-  nameWithType: EntityObject.Validate
-  fullName: TimeCockpit.Data.EntityObject.Validate
+- uid: TimeCockpit.Data.Localization
+  commentId: N:TimeCockpit.Data.Localization
+  isExternal: true
+  name: TimeCockpit.Data.Localization
+  nameWithType: TimeCockpit.Data.Localization
+  fullName: TimeCockpit.Data.Localization
 - uid: TimeCockpit.Data.EntityObject.GetValidationMessages*
   commentId: Overload:TimeCockpit.Data.EntityObject.GetValidationMessages
-  isExternal: false
+  isExternal: true
   name: GetValidationMessages
   nameWithType: EntityObject.GetValidationMessages
   fullName: TimeCockpit.Data.EntityObject.GetValidationMessages
@@ -3535,6 +2919,7 @@ references:
     name: ValidationMessage
     nameWithType: ValidationMessage
     fullName: TimeCockpit.Data.ValidationMessage
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3551,11 +2936,10 @@ references:
     name: ValidationMessage
     nameWithType: ValidationMessage
     fullName: TimeCockpit.Data.ValidationMessage
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.EntityObject.Validate(System.String,System.String@,TimeCockpit.Data.DataModel.ValidationRule@,TimeCockpit.Data.Localization.NameLocalizer)
-  commentId: M:TimeCockpit.Data.EntityObject.Validate(System.String,System.String@,TimeCockpit.Data.DataModel.ValidationRule@,TimeCockpit.Data.Localization.NameLocalizer)
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -3623,6 +3007,7 @@ references:
     name: ValidationRule
     nameWithType: ValidationRule
     fullName: TimeCockpit.Data.DataModel.ValidationRule
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3639,6 +3024,7 @@ references:
     name: ValidationRule
     nameWithType: ValidationRule
     fullName: TimeCockpit.Data.DataModel.ValidationRule
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -3681,14 +3067,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.MemberStatus.Changed
-  commentId: F:TimeCockpit.Data.MemberStatus.Changed
-- uid: TimeCockpit.Data.EntityObject.GetChangedMembers*
-  commentId: Overload:TimeCockpit.Data.EntityObject.GetChangedMembers
-  isExternal: false
-  name: GetChangedMembers
-  nameWithType: EntityObject.GetChangedMembers
-  fullName: TimeCockpit.Data.EntityObject.GetChangedMembers
+- uid: TimeCockpit.Data.EntityObject.GetMembersByState*
+  commentId: Overload:TimeCockpit.Data.EntityObject.GetMembersByState
+  isExternal: true
+  name: GetMembersByState
+  nameWithType: EntityObject.GetMembersByState
+  fullName: TimeCockpit.Data.EntityObject.GetMembersByState
+- uid: TimeCockpit.Data.MemberStatus
+  commentId: T:TimeCockpit.Data.MemberStatus
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: MemberStatus
+  nameWithType: MemberStatus
+  fullName: TimeCockpit.Data.MemberStatus
 - uid: System.Collections.Generic.IEnumerable{System.String}
   commentId: T:System.Collections.Generic.IEnumerable{System.String}
   parent: System.Collections.Generic
@@ -3733,19 +3124,222 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.EntityObject.GetChangedMembers*
+  commentId: Overload:TimeCockpit.Data.EntityObject.GetChangedMembers
+  isExternal: true
+  name: GetChangedMembers
+  nameWithType: EntityObject.GetChangedMembers
+  fullName: TimeCockpit.Data.EntityObject.GetChangedMembers
 - uid: TimeCockpit.Data.EntityObject.GetPropertyIndex*
   commentId: Overload:TimeCockpit.Data.EntityObject.GetPropertyIndex
-  isExternal: false
+  isExternal: true
   name: GetPropertyIndex
   nameWithType: EntityObject.GetPropertyIndex
   fullName: TimeCockpit.Data.EntityObject.GetPropertyIndex
-- uid: TimeCockpit.Data.EntityObject.Values
-  commentId: P:TimeCockpit.Data.EntityObject.Values
-- uid: OnPropertyChanged
-  commentId: M:OnPropertyChanged
 - uid: TimeCockpit.Data.EntityObject.OnPropertyChanged*
   commentId: Overload:TimeCockpit.Data.EntityObject.OnPropertyChanged
-  isExternal: false
+  isExternal: true
   name: OnPropertyChanged
   nameWithType: EntityObject.OnPropertyChanged
   fullName: TimeCockpit.Data.EntityObject.OnPropertyChanged
+- uid: TimeCockpit.Data.EntityObject.Entity*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: EntityObject.Entity
+  fullName: TimeCockpit.Data.EntityObject.Entity
+- uid: TimeCockpit.Data.EntityObject.ObjectUuid*
+  commentId: Overload:TimeCockpit.Data.EntityObject.ObjectUuid
+  isExternal: true
+  name: ObjectUuid
+  nameWithType: EntityObject.ObjectUuid
+  fullName: TimeCockpit.Data.EntityObject.ObjectUuid
+- uid: TimeCockpit.Data.IEntityObject.ObjectUuid
+  commentId: P:TimeCockpit.Data.IEntityObject.ObjectUuid
+  parent: TimeCockpit.Data.IEntityObject
+  isExternal: true
+  name: ObjectUuid
+  nameWithType: IEntityObject.ObjectUuid
+  fullName: TimeCockpit.Data.IEntityObject.ObjectUuid
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: TimeCockpit.Data.EntityObject.ModelEntityName*
+  commentId: Overload:TimeCockpit.Data.EntityObject.ModelEntityName
+  isExternal: true
+  name: ModelEntityName
+  nameWithType: EntityObject.ModelEntityName
+  fullName: TimeCockpit.Data.EntityObject.ModelEntityName
+- uid: TimeCockpit.Data.IEntityObject.ModelEntityName
+  commentId: P:TimeCockpit.Data.IEntityObject.ModelEntityName
+  parent: TimeCockpit.Data.IEntityObject
+  isExternal: true
+  name: ModelEntityName
+  nameWithType: IEntityObject.ModelEntityName
+  fullName: TimeCockpit.Data.IEntityObject.ModelEntityName
+- uid: TimeCockpit.Data.EntityObject.IsNew*
+  commentId: Overload:TimeCockpit.Data.EntityObject.IsNew
+  isExternal: true
+  name: IsNew
+  nameWithType: EntityObject.IsNew
+  fullName: TimeCockpit.Data.EntityObject.IsNew
+- uid: TimeCockpit.Data.EntityObject.IsChanged*
+  commentId: Overload:TimeCockpit.Data.EntityObject.IsChanged
+  isExternal: true
+  name: IsChanged
+  nameWithType: EntityObject.IsChanged
+  fullName: TimeCockpit.Data.EntityObject.IsChanged
+- uid: TimeCockpit.Data.EntityObject.IsDeleted*
+  commentId: Overload:TimeCockpit.Data.EntityObject.IsDeleted
+  isExternal: true
+  name: IsDeleted
+  nameWithType: EntityObject.IsDeleted
+  fullName: TimeCockpit.Data.EntityObject.IsDeleted
+- uid: TimeCockpit.Data.EntityObject.IsCloned*
+  commentId: Overload:TimeCockpit.Data.EntityObject.IsCloned
+  isExternal: true
+  name: IsCloned
+  nameWithType: EntityObject.IsCloned
+  fullName: TimeCockpit.Data.EntityObject.IsCloned
+- uid: TimeCockpit.Data.EntityObject.Me*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Me
+  isExternal: true
+  name: Me
+  nameWithType: EntityObject.Me
+  fullName: TimeCockpit.Data.EntityObject.Me
+- uid: TimeCockpit.Data.EntityObject.RelationIdentifiers*
+  commentId: Overload:TimeCockpit.Data.EntityObject.RelationIdentifiers
+  isExternal: true
+  name: RelationIdentifiers
+  nameWithType: EntityObject.RelationIdentifiers
+  fullName: TimeCockpit.Data.EntityObject.RelationIdentifiers
+- uid: TimeCockpit.Data.RelationIdentifiers
+  commentId: T:TimeCockpit.Data.RelationIdentifiers
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: RelationIdentifiers
+  nameWithType: RelationIdentifiers
+  fullName: TimeCockpit.Data.RelationIdentifiers
+- uid: TimeCockpit.Data.EntityObject.CreationVersion*
+  commentId: Overload:TimeCockpit.Data.EntityObject.CreationVersion
+  isExternal: true
+  name: CreationVersion
+  nameWithType: EntityObject.CreationVersion
+  fullName: TimeCockpit.Data.EntityObject.CreationVersion
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: TimeCockpit.Data.EntityObject.LastUpdateVersion*
+  commentId: Overload:TimeCockpit.Data.EntityObject.LastUpdateVersion
+  isExternal: true
+  name: LastUpdateVersion
+  nameWithType: EntityObject.LastUpdateVersion
+  fullName: TimeCockpit.Data.EntityObject.LastUpdateVersion
+- uid: TimeCockpit.Data.EntityObject.IsReadOnly*
+  commentId: Overload:TimeCockpit.Data.EntityObject.IsReadOnly
+  isExternal: true
+  name: IsReadOnly
+  nameWithType: EntityObject.IsReadOnly
+  fullName: TimeCockpit.Data.EntityObject.IsReadOnly
+- uid: TimeCockpit.Data.EntityObject.LocalizedPropertyValues*
+  commentId: Overload:TimeCockpit.Data.EntityObject.LocalizedPropertyValues
+  isExternal: true
+  name: LocalizedPropertyValues
+  nameWithType: EntityObject.LocalizedPropertyValues
+  fullName: TimeCockpit.Data.EntityObject.LocalizedPropertyValues
+- uid: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
+  commentId: T:TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
+  parent: TimeCockpit.Data.Localization
+  isExternal: true
+  name: LocalizedTextPropertyCollection
+  nameWithType: LocalizedTextPropertyCollection
+  fullName: TimeCockpit.Data.Localization.LocalizedTextPropertyCollection
+- uid: TimeCockpit.Data.EntityObject.Permission*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Permission
+  isExternal: true
+  name: Permission
+  nameWithType: EntityObject.Permission
+  fullName: TimeCockpit.Data.EntityObject.Permission
+- uid: TimeCockpit.Data.EntityObject.Values*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Values
+  isExternal: true
+  name: Values
+  nameWithType: EntityObject.Values
+  fullName: TimeCockpit.Data.EntityObject.Values
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.EntityObject.States*
+  commentId: Overload:TimeCockpit.Data.EntityObject.States
+  isExternal: true
+  name: States
+  nameWithType: EntityObject.States
+  fullName: TimeCockpit.Data.EntityObject.States
+- uid: TimeCockpit.Data.MemberStatus[]
+  isExternal: true
+  name: MemberStatus[]
+  nameWithType: MemberStatus[]
+  fullName: TimeCockpit.Data.MemberStatus[]
+  nameWithType.vb: MemberStatus()
+  fullName.vb: TimeCockpit.Data.MemberStatus()
+  name.vb: MemberStatus()
+  spec.csharp:
+  - uid: TimeCockpit.Data.MemberStatus
+    name: MemberStatus
+    nameWithType: MemberStatus
+    fullName: TimeCockpit.Data.MemberStatus
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: TimeCockpit.Data.MemberStatus
+    name: MemberStatus
+    nameWithType: MemberStatus
+    fullName: TimeCockpit.Data.MemberStatus
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: TimeCockpit.Data.EntityObject.Item*
+  commentId: Overload:TimeCockpit.Data.EntityObject.Item
+  isExternal: true
+  name: Item
+  nameWithType: EntityObject.Item
+  fullName: TimeCockpit.Data.EntityObject.Item
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  isExternal: true
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler

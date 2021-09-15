@@ -5,6 +5,7 @@ items:
   id: Resources
   parent: TimeCockpit.Data.Localization
   children:
+  - TimeCockpit.Data.Localization.Resources.#ctor
   - TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet
   langs:
   - csharp
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.Localization.Resources
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Resources.cs
-    id: Resources
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Resources.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization
   summary: "\nAbstraction for resource texts.\n"
-  example: []
   syntax:
     content: public class Resources
     content.vb: Public Class Resources
@@ -43,6 +40,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Localization.Resources.#ctor
+  commentId: M:TimeCockpit.Data.Localization.Resources.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Localization.Resources
+  langs:
+  - csharp
+  - vb
+  name: Resources()
+  nameWithType: Resources.Resources()
+  fullName: TimeCockpit.Data.Localization.Resources.Resources()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Localization
+  syntax:
+    content: public Resources()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Localization.Resources.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet
   commentId: P:TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet
   id: EntityObject_RequiredFieldNotSet
@@ -55,11 +77,8 @@ items:
   fullName: TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Resources.cs
-    id: EntityObject_RequiredFieldNotSet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Localization/Resources.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Localization
@@ -68,7 +87,6 @@ items:
     The message contains a string.Format marker for the member name.
 
     e.g. &quot;{0} is a mandatory field, but has no value!&quot;
-  example: []
   syntax:
     content: >-
       [Obsolete("User NameLocalizer.GetLocalizedMemberNullMessage instead.")]
@@ -99,7 +117,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Localization
   commentId: N:TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Localization
   nameWithType: TimeCockpit.Data.Localization
   fullName: TimeCockpit.Data.Localization
@@ -391,13 +409,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Localization.Resources.#ctor*
+  commentId: Overload:TimeCockpit.Data.Localization.Resources.#ctor
+  isExternal: true
+  name: Resources
+  nameWithType: Resources.Resources
+  fullName: TimeCockpit.Data.Localization.Resources.Resources
 - uid: TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet*
   commentId: Overload:TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet
-  isExternal: false
+  isExternal: true
   name: EntityObject_RequiredFieldNotSet
   nameWithType: Resources.EntityObject_RequiredFieldNotSet
   fullName: TimeCockpit.Data.Localization.Resources.EntityObject_RequiredFieldNotSet

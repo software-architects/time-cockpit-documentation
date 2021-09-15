@@ -16,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    id: StringConstant
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAST Node representing a string constant.\ne.g.\nIn\n<pre><code>From X In Timesheet Where X.Description == &apos;SomeDescription&apos; Select X</code></pre>\nan instance of this node represents &apos;SomeDescription&apos;.\n"
-  example: []
   syntax:
     content: 'public class StringConstant : Constant'
     content.vb: >-
@@ -62,16 +58,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.StringConstant(System.String)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.StringConstant\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public StringConstant(string value)
     parameters:
@@ -84,41 +76,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
-  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
-  id: Value
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
-  langs:
-  - csharp
-  - vb
-  name: Value
-  nameWithType: StringConstant.Value
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    id: Value
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    startLine: 39
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nGets the value of the string constant.\n"
-  example: []
-  syntax:
-    content: public string Value { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property Value As String
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -131,16 +88,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/StringConstant.cs
-    startLine: 46
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nDispatches the call to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
-  example: []
   syntax:
     content: public override Node Accept(Visitor visitor)
     parameters:
@@ -159,10 +112,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
+  id: Value
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: StringConstant.Value
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the value of the string constant.\n"
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -176,21 +160,21 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Constant
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Constant
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Constant
   nameWithType: Constant
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Constant
@@ -475,20 +459,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: StringConstant
-  nameWithType: StringConstant
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.#ctor
-  isExternal: false
+  isExternal: true
   name: StringConstant
   nameWithType: StringConstant.StringConstant
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.StringConstant
@@ -499,53 +476,10 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
-  isExternal: false
-  name: Value
-  nameWithType: StringConstant.Value
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -554,6 +488,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -561,6 +496,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -569,6 +505,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -576,19 +513,26 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: StringConstant.Accept
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Accept
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Visitor
   nameWithType: Visitor
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value
+  isExternal: true
+  name: Value
+  nameWithType: StringConstant.Value
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.StringConstant.Value

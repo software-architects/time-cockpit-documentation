@@ -16,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.OSRM
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    id: OSRM
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nRouting service using project-osrm.org.\n"
-  example: []
   syntax:
     content: public class OSRM
     content.vb: Public Class OSRM
@@ -57,16 +53,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.OSRM(System.String)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nInitializes a new instance of the OSRM class.\n"
-  example: []
   syntax:
     content: public OSRM(string osrmBaseUri)
     parameters:
@@ -77,41 +69,6 @@ items:
   overload: TimeCockpit.Data.Geolocation.OSM.OSRM.#ctor*
   modifiers.csharp:
   - public
-  modifiers.vb:
-  - Public
-- uid: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
-  commentId: P:TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
-  id: UserAgent
-  parent: TimeCockpit.Data.Geolocation.OSM.OSRM
-  langs:
-  - csharp
-  - vb
-  name: UserAgent
-  nameWithType: OSRM.UserAgent
-  fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    id: UserAgent
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    startLine: 39
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Geolocation.OSM
-  summary: "\nGets or sets the optional, custom user agent.\n"
-  example: []
-  syntax:
-    content: public string UserAgent { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property UserAgent As String
-  overload: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent*
-  modifiers.csharp:
-  - public
-  - get
-  - set
   modifiers.vb:
   - Public
 - uid: TimeCockpit.Data.Geolocation.OSM.OSRM.GetRoute(System.Decimal,System.Decimal,System.Decimal,System.Decimal)
@@ -126,16 +83,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.GetRoute(System.Decimal, System.Decimal, System.Decimal, System.Decimal)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    id: GetRoute
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/OSRM.cs
-    startLine: 54
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nTries to resolve a route between two locations.\n"
-  example: []
   syntax:
     content: public Route GetRoute(decimal latitude1, decimal longitude1, decimal latitude2, decimal longitude2)
     parameters:
@@ -160,10 +113,41 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
+  commentId: P:TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
+  id: UserAgent
+  parent: TimeCockpit.Data.Geolocation.OSM.OSRM
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: OSRM.UserAgent
+  fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  summary: "\nGets or sets the optional, custom user agent.\n"
+  syntax:
+    content: public string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Geolocation.OSM
   commentId: N:TimeCockpit.Data.Geolocation.OSM
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Geolocation.OSM
   nameWithType: TimeCockpit.Data.Geolocation.OSM
   fullName: TimeCockpit.Data.Geolocation.OSM
@@ -455,13 +439,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Geolocation.OSM.OSRM.#ctor*
   commentId: Overload:TimeCockpit.Data.Geolocation.OSM.OSRM.#ctor
-  isExternal: false
+  isExternal: true
   name: OSRM
   nameWithType: OSRM.OSRM
   fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.OSRM
@@ -472,15 +456,9 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent*
-  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
-  isExternal: false
-  name: UserAgent
-  nameWithType: OSRM.UserAgent
-  fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
 - uid: TimeCockpit.Data.Geolocation.OSM.OSRM.GetRoute*
   commentId: Overload:TimeCockpit.Data.Geolocation.OSM.OSRM.GetRoute
-  isExternal: false
+  isExternal: true
   name: GetRoute
   nameWithType: OSRM.GetRoute
   fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.GetRoute
@@ -494,7 +472,13 @@ references:
 - uid: TimeCockpit.Data.Geolocation.OSM.Route
   commentId: T:TimeCockpit.Data.Geolocation.OSM.Route
   parent: TimeCockpit.Data.Geolocation.OSM
-  isExternal: false
+  isExternal: true
   name: Route
   nameWithType: Route
   fullName: TimeCockpit.Data.Geolocation.OSM.Route
+- uid: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent
+  isExternal: true
+  name: UserAgent
+  nameWithType: OSRM.UserAgent
+  fullName: TimeCockpit.Data.Geolocation.OSM.OSRM.UserAgent

@@ -4,7 +4,11 @@ items:
   commentId: T:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
   id: EntityObjectJsonConverter.FromJson
   parent: TimeCockpit.Data.JsonConverters
-  children: []
+  children:
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor(System.Object,System.IntPtr)
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment,System.AsyncCallback,System.Object)
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke(System.IAsyncResult)
+  - TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment)
   langs:
   - csharp
   - vb
@@ -13,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
   type: Delegate
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    id: FromJson
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/EntityObjectJsonConverter.cs
-    startLine: 61
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\ndelegate describing a function reading a property value from a json reader.\n"
-  example: []
   syntax:
     content: public delegate object FromJson(JsonReader reader, Model model, Dictionary<string, ModelEntityBase> anonymousTypes, Environment environment);
     parameters:
@@ -48,16 +48,162 @@ items:
   modifiers.vb:
   - Public
   - Delegate
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor(System.Object,System.IntPtr)
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor(System.Object,System.IntPtr)
+  id: '#ctor(System.Object,System.IntPtr)'
+  parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
+  langs:
+  - csharp
+  - vb
+  name: FromJson(Object, IntPtr)
+  nameWithType: EntityObjectJsonConverter.FromJson.FromJson(Object, IntPtr)
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.FromJson(System.Object, System.IntPtr)
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public FromJson(object object, IntPtr method)
+    parameters:
+    - id: object
+      type: System.Object
+    - id: method
+      type: System.IntPtr
+    content.vb: Public Sub New(object As Object, method As IntPtr)
+  overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment)
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment)
+  id: Invoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment)
+  parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
+  langs:
+  - csharp
+  - vb
+  name: Invoke(JsonReader, Model, Dictionary<String, ModelEntityBase>, Environment)
+  nameWithType: EntityObjectJsonConverter.FromJson.Invoke(JsonReader, Model, Dictionary<String, ModelEntityBase>, Environment)
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.Environment)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public virtual object Invoke(JsonReader reader, Model model, Dictionary<string, ModelEntityBase> anonymousTypes, Environment environment)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+    - id: anonymousTypes
+      type: System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase}
+    - id: environment
+      type: TimeCockpit.Data.Environment
+    return:
+      type: System.Object
+    content.vb: Public Overridable Function Invoke(reader As JsonReader, model As Model, anonymousTypes As Dictionary(Of String, ModelEntityBase), environment As Environment) As Object
+  overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke*
+  nameWithType.vb: EntityObjectJsonConverter.FromJson.Invoke(JsonReader, Model, Dictionary(Of String, ModelEntityBase), Environment)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary(Of System.String, TimeCockpit.Data.DataModel.ModelEntityBase), TimeCockpit.Data.Environment)
+  name.vb: Invoke(JsonReader, Model, Dictionary(Of String, ModelEntityBase), Environment)
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment,System.AsyncCallback,System.Object)
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment,System.AsyncCallback,System.Object)
+  id: BeginInvoke(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase},TimeCockpit.Data.Environment,System.AsyncCallback,System.Object)
+  parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
+  langs:
+  - csharp
+  - vb
+  name: BeginInvoke(JsonReader, Model, Dictionary<String, ModelEntityBase>, Environment, AsyncCallback, Object)
+  nameWithType: EntityObjectJsonConverter.FromJson.BeginInvoke(JsonReader, Model, Dictionary<String, ModelEntityBase>, Environment, AsyncCallback, Object)
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary<System.String, TimeCockpit.Data.DataModel.ModelEntityBase>, TimeCockpit.Data.Environment, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public virtual IAsyncResult BeginInvoke(JsonReader reader, Model model, Dictionary<string, ModelEntityBase> anonymousTypes, Environment environment, AsyncCallback callback, object object)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+    - id: model
+      type: TimeCockpit.Data.DataModel.Model
+    - id: anonymousTypes
+      type: System.Collections.Generic.Dictionary{System.String,TimeCockpit.Data.DataModel.ModelEntityBase}
+    - id: environment
+      type: TimeCockpit.Data.Environment
+    - id: callback
+      type: System.AsyncCallback
+    - id: object
+      type: System.Object
+    return:
+      type: System.IAsyncResult
+    content.vb: Public Overridable Function BeginInvoke(reader As JsonReader, model As Model, anonymousTypes As Dictionary(Of String, ModelEntityBase), environment As Environment, callback As AsyncCallback, object As Object) As IAsyncResult
+  overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke*
+  nameWithType.vb: EntityObjectJsonConverter.FromJson.BeginInvoke(JsonReader, Model, Dictionary(Of String, ModelEntityBase), Environment, AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.Dictionary(Of System.String, TimeCockpit.Data.DataModel.ModelEntityBase), TimeCockpit.Data.Environment, System.AsyncCallback, System.Object)
+  name.vb: BeginInvoke(JsonReader, Model, Dictionary(Of String, ModelEntityBase), Environment, AsyncCallback, Object)
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke(System.IAsyncResult)
+  commentId: M:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke(System.IAsyncResult)
+  id: EndInvoke(System.IAsyncResult)
+  parent: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson
+  langs:
+  - csharp
+  - vb
+  name: EndInvoke(IAsyncResult)
+  nameWithType: EntityObjectJsonConverter.FromJson.EndInvoke(IAsyncResult)
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke(System.IAsyncResult)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public virtual object EndInvoke(IAsyncResult result)
+    parameters:
+    - id: result
+      type: System.IAsyncResult
+    return:
+      type: System.Object
+    content.vb: Public Overridable Function EndInvoke(result As IAsyncResult) As Object
+  overload: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
 references:
 - uid: TimeCockpit.Data.JsonConverters
   commentId: N:TimeCockpit.Data.JsonConverters
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.JsonConverters
   nameWithType: TimeCockpit.Data.JsonConverters
   fullName: TimeCockpit.Data.JsonConverters
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
@@ -65,7 +211,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
@@ -100,6 +246,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -124,13 +271,14 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Environment
   commentId: T:TimeCockpit.Data.Environment
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: Environment
   fullName: TimeCockpit.Data.Environment
@@ -141,15 +289,9 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -206,19 +348,64 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.#ctor
+  isExternal: true
+  name: FromJson
+  nameWithType: EntityObjectJsonConverter.FromJson.FromJson
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.FromJson
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke
+  isExternal: true
+  name: Invoke
+  nameWithType: EntityObjectJsonConverter.FromJson.Invoke
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.Invoke
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke
+  isExternal: true
+  name: BeginInvoke
+  nameWithType: EntityObjectJsonConverter.FromJson.BeginInvoke
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.BeginInvoke
+- uid: System.AsyncCallback
+  commentId: T:System.AsyncCallback
+  parent: System
+  isExternal: true
+  name: AsyncCallback
+  nameWithType: AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke
+  isExternal: true
+  name: EndInvoke
+  nameWithType: EntityObjectJsonConverter.FromJson.EndInvoke
+  fullName: TimeCockpit.Data.JsonConverters.EntityObjectJsonConverter.FromJson.EndInvoke

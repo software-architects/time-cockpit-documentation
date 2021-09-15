@@ -5,9 +5,10 @@ items:
   id: ImportServiceClientLocal
   parent: TimeCockpit.Data.Import
   children:
-  - TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext)
+  - TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
   - TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState(TimeCockpit.Data.EntityObject,TimeCockpit.Data.DataContext,TimeCockpit.Data.Import.ImportResult)
   - TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String)
+  - TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String,TimeCockpit.Data.Import.ImportEngine.MessageCallback,TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
   - TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   - TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject(System.Guid,TimeCockpit.Data.DataContext)
   - TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData(System.String,TimeCockpit.Data.Import.PreviewWorkbook)
@@ -19,16 +20,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: ImportServiceClientLocal
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 23
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass forwarding the import calls to the service.\n"
-  example: []
   syntax:
     content: 'public class ImportServiceClientLocal : ImportServiceClient'
     content.vb: >-
@@ -52,35 +48,31 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext)
-  commentId: M:TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext)
-  id: '#ctor(TimeCockpit.Data.DataContext)'
+- uid: TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
+  commentId: M:TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)
+  id: '#ctor(TimeCockpit.Data.DataContext,TimeCockpit.Data.DataContextSettings)'
   parent: TimeCockpit.Data.Import.ImportServiceClientLocal
   langs:
   - csharp
   - vb
-  name: ImportServiceClientLocal(DataContext)
-  nameWithType: ImportServiceClientLocal.ImportServiceClientLocal(DataContext)
-  fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.ImportServiceClientLocal(TimeCockpit.Data.DataContext)
+  name: ImportServiceClientLocal(DataContext, DataContextSettings)
+  nameWithType: ImportServiceClientLocal.ImportServiceClientLocal(DataContext, DataContextSettings)
+  fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.ImportServiceClientLocal(TimeCockpit.Data.DataContext, TimeCockpit.Data.DataContextSettings)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 29
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the ImportServiceClientLocal class.\n"
-  example: []
   syntax:
-    content: public ImportServiceClientLocal(DataContext dataContext)
+    content: public ImportServiceClientLocal(DataContext existingDataContext, DataContextSettings dataContextSettings)
     parameters:
-    - id: dataContext
+    - id: existingDataContext
       type: TimeCockpit.Data.DataContext
-      description: the data context to use.
-    content.vb: Public Sub New(dataContext As DataContext)
+    - id: dataContextSettings
+      type: TimeCockpit.Data.DataContextSettings
+    content.vb: Public Sub New(existingDataContext As DataContext, dataContextSettings As DataContextSettings)
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor*
   modifiers.csharp:
   - public
@@ -98,40 +90,28 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String, System.Byte[], System.String, System.Boolean, System.Guid, System.Nullable<System.Guid>, System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: Import
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 44
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nimports data from the source data.\n"
-  example: []
   syntax:
     content: public override void Import(string importDefinition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, Guid importTaskId, Guid? definitionId, string definitionName)
     parameters:
     - id: importDefinition
       type: System.String
-      description: the definition of the import.
     - id: sourceData
       type: System.Byte[]
-      description: the source data to import from.
     - id: sourceFileName
       type: System.String
-      description: The name of the source file.
     - id: saveOnSuccess
       type: System.Boolean
-      description: true if the result should be saved if all rows imported successfully.
     - id: importTaskId
       type: System.Guid
-      description: guid of the associated import task.
     - id: definitionId
       type: System.Nullable{System.Guid}
-      description: the guid of the definition object, if one was used.
     - id: definitionName
       type: System.String
-      description: the name of the definition that is imported.
     content.vb: Public Overrides Sub Import(importDefinition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, importTaskId As Guid, definitionId As Guid?, definitionName As String)
   overridden: TimeCockpit.Data.Import.ImportServiceClient.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String)
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.Import*
@@ -144,6 +124,55 @@ items:
   - Overrides
   fullName.vb: TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String, System.Byte(), System.String, System.Boolean, System.Guid, System.Nullable(Of System.Guid), System.String)
   name.vb: Import(String, Byte(), String, Boolean, Guid, Nullable(Of Guid), String)
+- uid: TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String,TimeCockpit.Data.Import.ImportEngine.MessageCallback,TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
+  commentId: M:TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String,TimeCockpit.Data.Import.ImportEngine.MessageCallback,TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
+  id: Import(System.String,System.Byte[],System.String,System.Boolean,System.Guid,System.Nullable{System.Guid},System.String,TimeCockpit.Data.Import.ImportEngine.MessageCallback,TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
+  parent: TimeCockpit.Data.Import.ImportServiceClientLocal
+  langs:
+  - csharp
+  - vb
+  name: Import(String, Byte[], String, Boolean, Guid, Nullable<Guid>, String, ImportEngine.MessageCallback, ImportEngine.ProgressCallback)
+  nameWithType: ImportServiceClientLocal.Import(String, Byte[], String, Boolean, Guid, Nullable<Guid>, String, ImportEngine.MessageCallback, ImportEngine.ProgressCallback)
+  fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String, System.Byte[], System.String, System.Boolean, System.Guid, System.Nullable<System.Guid>, System.String, TimeCockpit.Data.Import.ImportEngine.MessageCallback, TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public Task Import(string importDefinition, byte[] sourceData, string sourceFileName, bool saveOnSuccess, Guid importTaskId, Guid? definitionId, string definitionName, ImportEngine.MessageCallback onMessage, ImportEngine.ProgressCallback onProgress)
+    parameters:
+    - id: importDefinition
+      type: System.String
+    - id: sourceData
+      type: System.Byte[]
+    - id: sourceFileName
+      type: System.String
+    - id: saveOnSuccess
+      type: System.Boolean
+    - id: importTaskId
+      type: System.Guid
+    - id: definitionId
+      type: System.Nullable{System.Guid}
+    - id: definitionName
+      type: System.String
+    - id: onMessage
+      type: TimeCockpit.Data.Import.ImportEngine.MessageCallback
+    - id: onProgress
+      type: TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Import(importDefinition As String, sourceData As Byte(), sourceFileName As String, saveOnSuccess As Boolean, importTaskId As Guid, definitionId As Guid?, definitionName As String, onMessage As ImportEngine.MessageCallback, onProgress As ImportEngine.ProgressCallback) As Task
+  overload: TimeCockpit.Data.Import.ImportServiceClientLocal.Import*
+  nameWithType.vb: ImportServiceClientLocal.Import(String, Byte(), String, Boolean, Guid, Nullable(Of Guid), String, ImportEngine.MessageCallback, ImportEngine.ProgressCallback)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: TimeCockpit.Data.Import.ImportServiceClientLocal.Import(System.String, System.Byte(), System.String, System.Boolean, System.Guid, System.Nullable(Of System.Guid), System.String, TimeCockpit.Data.Import.ImportEngine.MessageCallback, TimeCockpit.Data.Import.ImportEngine.ProgressCallback)
+  name.vb: Import(String, Byte(), String, Boolean, Guid, Nullable(Of Guid), String, ImportEngine.MessageCallback, ImportEngine.ProgressCallback)
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   commentId: M:TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   id: LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
@@ -156,37 +185,26 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData(System.String, System.Byte[], System.Int32, System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: LoadPreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 101
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nloads the preview data directly.\n"
-  example: []
   syntax:
     content: public override IObservable<PreviewWorkbook> LoadPreviewData(string sourceProvider, byte[] sourceData, int sampleSize, Dictionary<string, int> headerRowPositions = null, int defaultHeaderRowNumber = 1)
     parameters:
     - id: sourceProvider
       type: System.String
-      description: the source provider to use (xlsx or csv, etc.)
     - id: sourceData
       type: System.Byte[]
-      description: the source data to load from.
     - id: sampleSize
       type: System.Int32
-      description: the number of rows to load for each column.
     - id: headerRowPositions
       type: System.Collections.Generic.Dictionary{System.String,System.Int32}
-      description: a dictionary holding offsets (optional).
     - id: defaultHeaderRowNumber
       type: System.Int32
-      description: The default row number, in case no row number is passed for the worksheet with <code data-dev-comment-type="paramref" class="paramref">headerRowOffsets</code>.
     return:
       type: System.IObservable{TimeCockpit.Data.Import.PreviewWorkbook}
-      description: 'returns an observable producing the '
     content.vb: Public Overrides Function LoadPreviewData(sourceProvider As String, sourceData As Byte(), sampleSize As Integer, headerRowPositions As Dictionary(Of String, Integer) = Nothing, defaultHeaderRowNumber As Integer = 1) As IObservable(Of PreviewWorkbook)
   overridden: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData*
@@ -211,28 +229,20 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData(System.String, TimeCockpit.Data.Import.PreviewWorkbook)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: SavePreviewData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 122
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nsaves the preview data directly.\n"
-  example: []
   syntax:
     content: public override IObservable<byte[]> SavePreviewData(string sourceProvider, PreviewWorkbook previewWorkbook)
     parameters:
     - id: sourceProvider
       type: System.String
-      description: the source provider to use (xlsx or csv, etc.)
     - id: previewWorkbook
       type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: the preview Workbook to save.
     return:
       type: System.IObservable{System.Byte[]}
-      description: 'returns an observable producing the '
     content.vb: Public Overrides Function SavePreviewData(sourceProvider As String, previewWorkbook As PreviewWorkbook) As IObservable(Of Byte())
   overridden: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData(System.String,TimeCockpit.Data.Import.PreviewWorkbook)
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData*
@@ -254,28 +264,20 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState(TimeCockpit.Data.EntityObject, TimeCockpit.Data.DataContext, TimeCockpit.Data.Import.ImportResult)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: FinishImportState
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 143
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\ncalled when the import progress finished.\n"
-  example: []
   syntax:
     content: protected static void FinishImportState(EntityObject importState, DataContext progressStateContext, ImportResult importResult)
     parameters:
     - id: importState
       type: TimeCockpit.Data.EntityObject
-      description: the import state.
     - id: progressStateContext
       type: TimeCockpit.Data.DataContext
-      description: the progress state datacontext.
     - id: importResult
       type: TimeCockpit.Data.Import.ImportResult
-      description: the result of the import, will be saved to the import state.
     content.vb: Protected Shared Sub FinishImportState(importState As EntityObject, progressStateContext As DataContext, importResult As ImportResult)
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState*
   modifiers.csharp:
@@ -296,28 +298,20 @@ items:
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject(System.Guid, TimeCockpit.Data.DataContext)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    id: PrepareImportStateObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportServiceClientLocal.cs
-    startLine: 168
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nSelects the import state object from the database.\n"
-  example: []
   syntax:
     content: protected static EntityObject PrepareImportStateObject(Guid importStateId, DataContext progressStateDataContext)
     parameters:
     - id: importStateId
       type: System.Guid
-      description: the id of the import state object.
     - id: progressStateDataContext
       type: TimeCockpit.Data.DataContext
-      description: the datacontext to use for selecting.
     return:
       type: TimeCockpit.Data.EntityObject
-      description: returns the entityobject representing the import state.
     content.vb: Protected Shared Function PrepareImportStateObject(importStateId As Guid, progressStateDataContext As DataContext) As EntityObject
   overload: TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject*
   modifiers.csharp:
@@ -329,7 +323,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -343,14 +337,14 @@ references:
 - uid: TimeCockpit.Data.Import.ImportServiceClient
   commentId: T:TimeCockpit.Data.Import.ImportServiceClient
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportServiceClient
   nameWithType: ImportServiceClient
   fullName: TimeCockpit.Data.Import.ImportServiceClient
 - uid: TimeCockpit.Data.Import.ImportServiceClient.DataContext
   commentId: P:TimeCockpit.Data.Import.ImportServiceClient.DataContext
   parent: TimeCockpit.Data.Import.ImportServiceClient
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: ImportServiceClient.DataContext
   fullName: TimeCockpit.Data.Import.ImportServiceClient.DataContext
@@ -635,26 +629,33 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.#ctor
-  isExternal: false
+  isExternal: true
   name: ImportServiceClientLocal
   nameWithType: ImportServiceClientLocal.ImportServiceClientLocal
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.ImportServiceClientLocal
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data.DataContextSettings
+  commentId: T:TimeCockpit.Data.DataContextSettings
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContextSettings
+  nameWithType: DataContextSettings
+  fullName: TimeCockpit.Data.DataContextSettings
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -673,6 +674,7 @@ references:
     name: Import
     nameWithType: ImportServiceClient.Import
     fullName: TimeCockpit.Data.Import.ImportServiceClient.Import
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -751,6 +753,7 @@ references:
     name: Import
     nameWithType: ImportServiceClient.Import
     fullName: TimeCockpit.Data.Import.ImportServiceClient.Import
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -826,7 +829,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.Import*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.Import
-  isExternal: false
+  isExternal: true
   name: Import
   nameWithType: ImportServiceClientLocal.Import
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.Import
@@ -838,6 +841,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -959,6 +963,33 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Import.ImportEngine.MessageCallback
+  commentId: T:TimeCockpit.Data.Import.ImportEngine.MessageCallback
+  parent: TimeCockpit.Data.Import
+  isExternal: true
+  name: ImportEngine.MessageCallback
+  nameWithType: ImportEngine.MessageCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.MessageCallback
+- uid: TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+  commentId: T:TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+  parent: TimeCockpit.Data.Import
+  isExternal: true
+  name: ImportEngine.ProgressCallback
+  nameWithType: ImportEngine.ProgressCallback
+  fullName: TimeCockpit.Data.Import.ImportEngine.ProgressCallback
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
 - uid: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   commentId: M:TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData(System.String,System.Byte[],System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32},System.Int32)
   parent: TimeCockpit.Data.Import.ImportServiceClient
@@ -974,6 +1005,7 @@ references:
     name: LoadPreviewData
     nameWithType: ImportServiceClient.LoadPreviewData
     fullName: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1044,6 +1076,7 @@ references:
     name: LoadPreviewData
     nameWithType: ImportServiceClient.LoadPreviewData
     fullName: TimeCockpit.Data.Import.ImportServiceClient.LoadPreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1111,7 +1144,7 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData
-  isExternal: false
+  isExternal: true
   name: LoadPreviewData
   nameWithType: ImportServiceClientLocal.LoadPreviewData
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.LoadPreviewData
@@ -1205,6 +1238,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1221,6 +1255,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1277,7 +1312,7 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
@@ -1332,6 +1367,7 @@ references:
     name: SavePreviewData
     nameWithType: ImportServiceClient.SavePreviewData
     fullName: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1347,6 +1383,7 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1355,6 +1392,7 @@ references:
     name: SavePreviewData
     nameWithType: ImportServiceClient.SavePreviewData
     fullName: TimeCockpit.Data.Import.ImportServiceClient.SavePreviewData
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -1370,19 +1408,20 @@ references:
     name: PreviewWorkbook
     nameWithType: PreviewWorkbook
     fullName: TimeCockpit.Data.Import.PreviewWorkbook
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData
-  isExternal: false
+  isExternal: true
   name: SavePreviewData
   nameWithType: ImportServiceClientLocal.SavePreviewData
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.SavePreviewData
 - uid: TimeCockpit.Data.Import.PreviewWorkbook
   commentId: T:TimeCockpit.Data.Import.PreviewWorkbook
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewWorkbook
   nameWithType: PreviewWorkbook
   fullName: TimeCockpit.Data.Import.PreviewWorkbook
@@ -1438,27 +1477,27 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState
-  isExternal: false
+  isExternal: true
   name: FinishImportState
   nameWithType: ImportServiceClientLocal.FinishImportState
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.FinishImportState
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.Import.ImportResult
   commentId: T:TimeCockpit.Data.Import.ImportResult
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportResult
   nameWithType: ImportResult
   fullName: TimeCockpit.Data.Import.ImportResult
 - uid: TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject*
   commentId: Overload:TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject
-  isExternal: false
+  isExternal: true
   name: PrepareImportStateObject
   nameWithType: ImportServiceClientLocal.PrepareImportStateObject
   fullName: TimeCockpit.Data.Import.ImportServiceClientLocal.PrepareImportStateObject

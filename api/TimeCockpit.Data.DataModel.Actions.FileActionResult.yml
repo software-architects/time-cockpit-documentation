@@ -1,37 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TimeCockpit.Data.Sync.SyncTable
-  commentId: T:TimeCockpit.Data.Sync.SyncTable
-  id: SyncTable
-  parent: TimeCockpit.Data.Sync
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult
+  commentId: T:TimeCockpit.Data.DataModel.Actions.FileActionResult
+  id: FileActionResult
+  parent: TimeCockpit.Data.DataModel.Actions
   children:
-  - TimeCockpit.Data.Sync.SyncTable.EntityName
-  - TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
-  - TimeCockpit.Data.Sync.SyncTable.QueryForChanges
-  - TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
+  - TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor
+  - TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
+  - TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
+  - TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
+  - TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
   langs:
   - csharp
   - vb
-  name: SyncTable
-  nameWithType: SyncTable
-  fullName: TimeCockpit.Data.Sync.SyncTable
+  name: FileActionResult
+  nameWithType: FileActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    id: SyncTable
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    startLine: 11
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nDefines queries that are used during sync process for certain entities\n"
-  example: []
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nRepresents an <xref href=\"TimeCockpit.Data.DataModel.Actions.IActionResult\" data-throw-if-not-resolved=\"false\"></xref> with a file as response.\n"
   syntax:
-    content: public sealed class SyncTable
-    content.vb: Public NotInheritable Class SyncTable
+    content: 'public class FileActionResult : IActionResult'
+    content.vb: >-
+      Public Class FileActionResult
+          Implements IActionResult
   inheritance:
   - System.Object
+  implements:
+  - TimeCockpit.Data.DataModel.Actions.IActionResult
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -42,146 +43,153 @@ items:
   - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
-  - sealed
   - class
   modifiers.vb:
   - Public
-  - NotInheritable
   - Class
-- uid: TimeCockpit.Data.Sync.SyncTable.EntityName
-  commentId: P:TimeCockpit.Data.Sync.SyncTable.EntityName
-  id: EntityName
-  parent: TimeCockpit.Data.Sync.SyncTable
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.Actions.FileActionResult
   langs:
   - csharp
   - vb
-  name: EntityName
-  nameWithType: SyncTable.EntityName
-  fullName: TimeCockpit.Data.Sync.SyncTable.EntityName
-  type: Property
+  name: FileActionResult()
+  nameWithType: FileActionResult.FileActionResult()
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileActionResult()
+  type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    id: EntityName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the name of the entity\n"
-  example: []
+  namespace: TimeCockpit.Data.DataModel.Actions
   syntax:
-    content: public string EntityName { get; set; }
+    content: public FileActionResult()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
+  commentId: P:TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
+  id: ContentType
+  parent: TimeCockpit.Data.DataModel.Actions.FileActionResult
+  langs:
+  - csharp
+  - vb
+  name: ContentType
+  nameWithType: FileActionResult.ContentType
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the content type of the file.\n"
+  syntax:
+    content: public string ContentType { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property EntityName As String
-  overload: TimeCockpit.Data.Sync.SyncTable.EntityName*
+    content.vb: Public Property ContentType As String
+  overload: TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
-  commentId: P:TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
-  id: IsSystemEntity
-  parent: TimeCockpit.Data.Sync.SyncTable
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
+  commentId: P:TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
+  id: Inline
+  parent: TimeCockpit.Data.DataModel.Actions.FileActionResult
   langs:
   - csharp
   - vb
-  name: IsSystemEntity
-  nameWithType: SyncTable.IsSystemEntity
-  fullName: TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
+  name: Inline
+  nameWithType: FileActionResult.Inline
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    id: IsSystemEntity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    startLine: 21
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets a value indicating whether the entity is a system entity\n"
-  example: []
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets a value indicating whether the file should be displayed inline or downloaded.\n"
   syntax:
-    content: public bool IsSystemEntity { get; set; }
+    content: public bool Inline { get; set; }
     parameters: []
     return:
       type: System.Boolean
-    content.vb: Public Property IsSystemEntity As Boolean
-  overload: TimeCockpit.Data.Sync.SyncTable.IsSystemEntity*
+    content.vb: Public Property Inline As Boolean
+  overload: TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Sync.SyncTable.QueryForChanges
-  commentId: P:TimeCockpit.Data.Sync.SyncTable.QueryForChanges
-  id: QueryForChanges
-  parent: TimeCockpit.Data.Sync.SyncTable
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
+  commentId: P:TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
+  id: FileDownloadName
+  parent: TimeCockpit.Data.DataModel.Actions.FileActionResult
   langs:
   - csharp
   - vb
-  name: QueryForChanges
-  nameWithType: SyncTable.QueryForChanges
-  fullName: TimeCockpit.Data.Sync.SyncTable.QueryForChanges
+  name: FileDownloadName
+  nameWithType: FileActionResult.FileDownloadName
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    id: QueryForChanges
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the query that is used to find changes\n"
-  example: []
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the name of the file.\n"
   syntax:
-    content: public string QueryForChanges { get; set; }
+    content: public string FileDownloadName { get; set; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property QueryForChanges As String
-  overload: TimeCockpit.Data.Sync.SyncTable.QueryForChanges*
+    content.vb: Public Property FileDownloadName As String
+  overload: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
-  commentId: P:TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
-  id: QueryForLocalVersion
-  parent: TimeCockpit.Data.Sync.SyncTable
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
+  commentId: P:TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
+  id: FileContents
+  parent: TimeCockpit.Data.DataModel.Actions.FileActionResult
   langs:
   - csharp
   - vb
-  name: QueryForLocalVersion
-  nameWithType: SyncTable.QueryForLocalVersion
-  fullName: TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
+  name: FileContents
+  nameWithType: FileActionResult.FileContents
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    id: QueryForLocalVersion
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Sync/SyncTable.cs
-    startLine: 31
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
-  namespace: TimeCockpit.Data.Sync
-  summary: "\nGets or sets the query that is used to find local versions\n"
-  example: []
+  namespace: TimeCockpit.Data.DataModel.Actions
+  summary: "\nGets or sets the content of the file.\n"
   syntax:
-    content: public string QueryForLocalVersion { get; set; }
+    content: public byte[] FileContents { get; set; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Property QueryForLocalVersion As String
-  overload: TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion*
+      type: System.Byte[]
+    content.vb: Public Property FileContents As Byte()
+  overload: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents*
   modifiers.csharp:
   - public
   - get
@@ -189,12 +197,12 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TimeCockpit.Data.Sync
-  commentId: N:TimeCockpit.Data.Sync
-  isExternal: false
-  name: TimeCockpit.Data.Sync
-  nameWithType: TimeCockpit.Data.Sync
-  fullName: TimeCockpit.Data.Sync
+- uid: TimeCockpit.Data.DataModel.Actions
+  commentId: N:TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: TimeCockpit.Data.DataModel.Actions
+  nameWithType: TimeCockpit.Data.DataModel.Actions
+  fullName: TimeCockpit.Data.DataModel.Actions
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -202,6 +210,13 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: TimeCockpit.Data.DataModel.Actions.IActionResult
+  commentId: T:TimeCockpit.Data.DataModel.Actions.IActionResult
+  parent: TimeCockpit.Data.DataModel.Actions
+  isExternal: true
+  name: IActionResult
+  nameWithType: IActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.IActionResult
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -483,16 +498,22 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Sync.SyncTable.EntityName*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncTable.EntityName
-  isExternal: false
-  name: EntityName
-  nameWithType: SyncTable.EntityName
-  fullName: TimeCockpit.Data.Sync.SyncTable.EntityName
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.FileActionResult.#ctor
+  isExternal: true
+  name: FileActionResult
+  nameWithType: FileActionResult.FileActionResult
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileActionResult
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
+  isExternal: true
+  name: ContentType
+  nameWithType: FileActionResult.ContentType
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.ContentType
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -500,12 +521,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: TimeCockpit.Data.Sync.SyncTable.IsSystemEntity*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
-  isExternal: false
-  name: IsSystemEntity
-  nameWithType: SyncTable.IsSystemEntity
-  fullName: TimeCockpit.Data.Sync.SyncTable.IsSystemEntity
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
+  isExternal: true
+  name: Inline
+  nameWithType: FileActionResult.Inline
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.Inline
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -513,15 +534,41 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: TimeCockpit.Data.Sync.SyncTable.QueryForChanges*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncTable.QueryForChanges
-  isExternal: false
-  name: QueryForChanges
-  nameWithType: SyncTable.QueryForChanges
-  fullName: TimeCockpit.Data.Sync.SyncTable.QueryForChanges
-- uid: TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion*
-  commentId: Overload:TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
-  isExternal: false
-  name: QueryForLocalVersion
-  nameWithType: SyncTable.QueryForLocalVersion
-  fullName: TimeCockpit.Data.Sync.SyncTable.QueryForLocalVersion
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
+  isExternal: true
+  name: FileDownloadName
+  nameWithType: FileActionResult.FileDownloadName
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileDownloadName
+- uid: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents*
+  commentId: Overload:TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
+  isExternal: true
+  name: FileContents
+  nameWithType: FileActionResult.FileContents
+  fullName: TimeCockpit.Data.DataModel.Actions.FileActionResult.FileContents
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

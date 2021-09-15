@@ -5,7 +5,8 @@ items:
   id: XmlAuditTrailWriter
   parent: TimeCockpit.Data.AuditTrail
   children:
-  - TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,System.Boolean)
+  - TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor
+  - TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,TimeCockpit.Data.DatabaseOperation)
   langs:
   - csharp
   - vb
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/AuditTrail/XmlAuditTrailWriter.cs
-    id: XmlAuditTrailWriter
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/AuditTrail/XmlAuditTrailWriter.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.AuditTrail
   summary: "\nRepresents an class that can write an audit trail entry for two given entity objects.\n"
-  example: []
   syntax:
     content: public class XmlAuditTrailWriter
     content.vb: Public Class XmlAuditTrailWriter
@@ -43,30 +40,26 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,System.Boolean)
-  commentId: M:TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,System.Boolean)
-  id: WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,System.Boolean)
+- uid: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,TimeCockpit.Data.DatabaseOperation)
+  commentId: M:TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,TimeCockpit.Data.DatabaseOperation)
+  id: WriteAuditTrail(TimeCockpit.Data.EntityObject,TimeCockpit.Data.EntityObject,System.Xml.XmlWriter,System.Collections.Generic.IEnumerable{System.String}@,TimeCockpit.Data.DatabaseOperation)
   parent: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter
   langs:
   - csharp
   - vb
-  name: WriteAuditTrail(EntityObject, EntityObject, XmlWriter, out IEnumerable<String>, Boolean)
-  nameWithType: XmlAuditTrailWriter.WriteAuditTrail(EntityObject, EntityObject, XmlWriter, out IEnumerable<String>, Boolean)
-  fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject, System.Xml.XmlWriter, out System.Collections.Generic.IEnumerable<System.String>, System.Boolean)
+  name: WriteAuditTrail(EntityObject, EntityObject, XmlWriter, out IEnumerable<String>, DatabaseOperation)
+  nameWithType: XmlAuditTrailWriter.WriteAuditTrail(EntityObject, EntityObject, XmlWriter, out IEnumerable<String>, DatabaseOperation)
+  fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject, System.Xml.XmlWriter, out System.Collections.Generic.IEnumerable<System.String>, TimeCockpit.Data.DatabaseOperation)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/AuditTrail/XmlAuditTrailWriter.cs
-    id: WriteAuditTrail
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/AuditTrail/XmlAuditTrailWriter.cs
-    startLine: 54
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.AuditTrail
   summary: "\nTakes two instance of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref>  (old and new) and writes an entry for every differing value.\n"
-  example: []
   syntax:
-    content: public static void WriteAuditTrail(EntityObject oldEntityObject, EntityObject newEntityObject, XmlWriter xmlWriter, out IEnumerable<string> changedMemberNames, bool isDeletion = false)
+    content: public static void WriteAuditTrail(EntityObject oldEntityObject, EntityObject newEntityObject, XmlWriter xmlWriter, out IEnumerable<string> changedMemberNames, DatabaseOperation operationType = DatabaseOperation.Update)
     parameters:
     - id: oldEntityObject
       type: TimeCockpit.Data.EntityObject
@@ -80,10 +73,10 @@ items:
     - id: changedMemberNames
       type: System.Collections.Generic.IEnumerable{System.String}
       description: Names of changed members.
-    - id: isDeletion
-      type: System.Boolean
-      description: A value indicating whether the operation is a deletion.
-    content.vb: Public Shared Sub WriteAuditTrail(oldEntityObject As EntityObject, newEntityObject As EntityObject, xmlWriter As XmlWriter, ByRef changedMemberNames As IEnumerable(Of String), isDeletion As Boolean = False)
+    - id: operationType
+      type: TimeCockpit.Data.DatabaseOperation
+      description: A value indicating the type of the operation.
+    content.vb: Public Shared Sub WriteAuditTrail(oldEntityObject As EntityObject, newEntityObject As EntityObject, xmlWriter As XmlWriter, ByRef changedMemberNames As IEnumerable(Of String), operationType As DatabaseOperation = DatabaseOperation.Update)
   overload: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail*
   exceptions:
   - type: System.InvalidOperationException
@@ -92,19 +85,44 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if xmlWriter is null.
-  nameWithType.vb: XmlAuditTrailWriter.WriteAuditTrail(EntityObject, EntityObject, XmlWriter, ByRef IEnumerable(Of String), Boolean)
+  nameWithType.vb: XmlAuditTrailWriter.WriteAuditTrail(EntityObject, EntityObject, XmlWriter, ByRef IEnumerable(Of String), DatabaseOperation)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject, System.Xml.XmlWriter, ByRef System.Collections.Generic.IEnumerable(Of System.String), System.Boolean)
-  name.vb: WriteAuditTrail(EntityObject, EntityObject, XmlWriter, ByRef IEnumerable(Of String), Boolean)
+  fullName.vb: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail(TimeCockpit.Data.EntityObject, TimeCockpit.Data.EntityObject, System.Xml.XmlWriter, ByRef System.Collections.Generic.IEnumerable(Of System.String), TimeCockpit.Data.DatabaseOperation)
+  name.vb: WriteAuditTrail(EntityObject, EntityObject, XmlWriter, ByRef IEnumerable(Of String), DatabaseOperation)
+- uid: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor
+  commentId: M:TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter
+  langs:
+  - csharp
+  - vb
+  name: XmlAuditTrailWriter()
+  nameWithType: XmlAuditTrailWriter.XmlAuditTrailWriter()
+  fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.XmlAuditTrailWriter()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.AuditTrail
+  syntax:
+    content: public XmlAuditTrailWriter()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.AuditTrail
   commentId: N:TimeCockpit.Data.AuditTrail
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.AuditTrail
   nameWithType: TimeCockpit.Data.AuditTrail
   fullName: TimeCockpit.Data.AuditTrail
@@ -396,35 +414,30 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail*
   commentId: Overload:TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail
-  isExternal: false
+  isExternal: true
   name: WriteAuditTrail
   nameWithType: XmlAuditTrailWriter.WriteAuditTrail
   fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.WriteAuditTrail
 - uid: System.InvalidOperationException
   commentId: T:System.InvalidOperationException
-  parent: System
   isExternal: true
-  name: InvalidOperationException
-  nameWithType: InvalidOperationException
-  fullName: System.InvalidOperationException
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
+  isExternal: true
+- uid: TimeCockpit.Data.EntityObject
+  commentId: T:TimeCockpit.Data.EntityObject
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: EntityObject
+  nameWithType: EntityObject
+  fullName: TimeCockpit.Data.EntityObject
 - uid: System.Xml.XmlWriter
-  commentId: T:System.Xml.XmlWriter
-  parent: System.Xml
   isExternal: true
   name: XmlWriter
   nameWithType: XmlWriter
@@ -473,25 +486,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: TimeCockpit.Data.DatabaseOperation
+  commentId: T:TimeCockpit.Data.DatabaseOperation
+  parent: TimeCockpit.Data
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
+  name: DatabaseOperation
+  nameWithType: DatabaseOperation
+  fullName: TimeCockpit.Data.DatabaseOperation
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: System.Xml
-  commentId: N:System.Xml
-  isExternal: false
-  name: System.Xml
-  nameWithType: System.Xml
-  fullName: System.Xml
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -533,7 +540,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor*
+  commentId: Overload:TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.#ctor
+  isExternal: true
+  name: XmlAuditTrailWriter
+  nameWithType: XmlAuditTrailWriter.XmlAuditTrailWriter
+  fullName: TimeCockpit.Data.AuditTrail.XmlAuditTrailWriter.XmlAuditTrailWriter

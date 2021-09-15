@@ -9,13 +9,17 @@ items:
   - TimeCockpit.Data.DataContextSettings.AllowUnsignedScripts
   - TimeCockpit.Data.DataContextSettings.AuditTrailReloadDataOfDeletedObject
   - TimeCockpit.Data.DataContextSettings.Certificates
+  - TimeCockpit.Data.DataContextSettings.CloneForFork(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
   - TimeCockpit.Data.DataContextSettings.DataContextType
   - TimeCockpit.Data.DataContextSettings.DbClient
   - TimeCockpit.Data.DataContextSettings.DbClientSettings
   - TimeCockpit.Data.DataContextSettings.Environment
+  - TimeCockpit.Data.DataContextSettings.GenerateClrProperties
   - TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
   - TimeCockpit.Data.DataContextSettings.Localizer
   - TimeCockpit.Data.DataContextSettings.Model
+  - TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+  - TimeCockpit.Data.DataContextSettings.OriginalUsername
   - TimeCockpit.Data.DataContextSettings.PerformVersionCheck
   - TimeCockpit.Data.DataContextSettings.PrepareLocalizations
   - TimeCockpit.Data.DataContextSettings.ValidateModelOnLoad
@@ -27,16 +31,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: DataContextSettings
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nRepresents settings used to create new instances of the <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public class DataContextSettings
     content.vb: Public Class DataContextSettings
@@ -68,20 +68,52 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.DataContextSettings()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 24
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nInitializes a new instance of the DataContextSettings class\n"
-  example: []
   syntax:
     content: public DataContextSettings()
     content.vb: Public Sub New
   overload: TimeCockpit.Data.DataContextSettings.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataContextSettings.CloneForFork(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  commentId: M:TimeCockpit.Data.DataContextSettings.CloneForFork(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  id: CloneForFork(TimeCockpit.Data.DataContext,TimeCockpit.Data.Environment)
+  parent: TimeCockpit.Data.DataContextSettings
+  langs:
+  - csharp
+  - vb
+  name: CloneForFork(DataContext, Environment)
+  nameWithType: DataContextSettings.CloneForFork(DataContext, Environment)
+  fullName: TimeCockpit.Data.DataContextSettings.CloneForFork(TimeCockpit.Data.DataContext, TimeCockpit.Data.Environment)
+  type: Method
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nCreates a copy of the settings for forking.\n"
+  syntax:
+    content: public DataContextSettings CloneForFork(DataContext dataContext, Environment environment = null)
+    parameters:
+    - id: dataContext
+      type: TimeCockpit.Data.DataContext
+      description: Data context to fork from.
+    - id: environment
+      type: TimeCockpit.Data.Environment
+      description: Optional environment.
+    return:
+      type: TimeCockpit.Data.DataContextSettings
+      description: Cloned settings.
+    content.vb: Public Function CloneForFork(dataContext As DataContext, environment As Environment = Nothing) As DataContextSettings
+  overload: TimeCockpit.Data.DataContextSettings.CloneForFork*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -98,17 +130,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.DbClient
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: DbClient
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 55
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets the <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> that should be used\nby the newly created <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref> to access the underlying data store.\n"
   remarks: "\n<p>\nThe default value for this property is <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref>.\n</p>\n<p>\nIf you specify a value for this property the newly created <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>\nwill use the specified <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> and will\nnot create a new one.\n</p>\n<p>\nIf you specify a value for this property you must not specify a value for the\n<xref href=\"TimeCockpit.Data.DataContextSettings.DbClientSettings\" data-throw-if-not-resolved=\"false\"></xref> property (i.e. <xref href=\"TimeCockpit.Data.DataContextSettings.DbClientSettings\" data-throw-if-not-resolved=\"false\"></xref>\nhas to be <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref>).\n</p>\n"
-  example: []
   syntax:
     content: public DbClient DbClient { get; set; }
     parameters: []
@@ -134,17 +162,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.DbClientSettings
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: DbClientSettings
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 75
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets the settings that are used when the \n<xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> instance is created that \nthe newly created <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref> uses to access the underlying data store.\n"
   remarks: "\n<p>\nThe default value for this property is <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref>.\n</p>\n<p>\nIf you specify a value for this property a new <xref href=\"TimeCockpit.Data.Database.DbClient\" data-throw-if-not-resolved=\"false\"></xref> \ninstance will be created for the new <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>.\n</p>\n<p>\nIf you specify a value for this property you must not specify a value for the\n<xref href=\"TimeCockpit.Data.DataContextSettings.DbClient\" data-throw-if-not-resolved=\"false\"></xref> property.\n</p>\n"
-  example: []
   syntax:
     content: public DbClientSettings DbClientSettings { get; set; }
     parameters: []
@@ -170,17 +194,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.DataContextType
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: DataContextType
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 83
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets the type of the newly created <xref href=\"TimeCockpit.Data.DataContext\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   remarks: "\nThe default value for this property is DataContextType.NotSet (see <xref href=\"TimeCockpit.Data.DataContextSettings.DataContextType\" data-throw-if-not-resolved=\"false\"></xref>).\n"
-  example: []
   syntax:
     content: public DataContextType DataContextType { get; set; }
     parameters: []
@@ -206,17 +226,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.ValidateModelOnLoad
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: ValidateModelOnLoad
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 94
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether to validate the model after it has been deserialized \nfrom the database, and after all install batches where executed.\n"
   remarks: "\n<p>\nThe default value for this property is <xref uid=\"langword_csharp_true\" name=\"true\" href=\"\"></xref>.\n</p>\n"
-  example: []
   syntax:
     content: public bool ValidateModelOnLoad { get; set; }
     parameters: []
@@ -242,17 +258,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: InstallMissingSystemEntities
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 103
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether missing system entities should be automatically installed or updated\nwhen the connection to the underlying database is established.\n"
   remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>.\n"
-  example: []
   syntax:
     content: public bool InstallMissingSystemEntities { get; set; }
     parameters: []
@@ -278,17 +290,13 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.PerformVersionCheck
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: PerformVersionCheck
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 113
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether the system should check if the system entities in the underlying database \nmatch the system objects for this program version.\n"
   remarks: "\nNote that this property is only evaluated if <xref href=\"TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities\" data-throw-if-not-resolved=\"false\"></xref> is <xref uid=\"langword_csharp_false\" name=\"false\" href=\"\"></xref>\nbecause otherwise system entities are automatically installed or updated.\n"
-  example: []
   syntax:
     content: public bool PerformVersionCheck { get; set; }
     parameters: []
@@ -314,16 +322,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.AllowUnsignedScripts
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: AllowUnsignedScripts
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 121
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether [allow unsigned scripts].\n"
-  example: []
   syntax:
     content: public bool AllowUnsignedScripts { get; set; }
     parameters: []
@@ -350,16 +354,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.Localizer
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: Localizer
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 126
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a Localizer for the current data context.\n"
-  example: []
   syntax:
     content: public NameLocalizer Localizer { get; set; }
     parameters: []
@@ -385,16 +385,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.Certificates
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: Certificates
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 134
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets the certificates.\n"
-  example: []
   syntax:
     content: public IEnumerable<X509Certificate2> Certificates { get; set; }
     parameters: []
@@ -421,16 +417,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.AuditTrailReloadDataOfDeletedObject
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: AuditTrailReloadDataOfDeletedObject
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 140
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether when an object is deleted and an audit trail is enabled, the default\ndisplay property is evaluated. If this property is set to false, only the guid of the deleted object is added to the xml audit trail.\n"
-  example: []
   syntax:
     content: public bool AuditTrailReloadDataOfDeletedObject { get; set; }
     parameters: []
@@ -456,16 +448,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.Model
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: Model
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 145
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a preprovided model.\n"
-  example: []
   syntax:
     content: public Model Model { get; set; }
     parameters: []
@@ -491,16 +479,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.Environment
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: Environment
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 150
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a preprovided environment.\n"
-  example: []
   syntax:
     content: public Environment Environment { get; set; }
     parameters: []
@@ -508,6 +492,68 @@ items:
       type: TimeCockpit.Data.Environment
     content.vb: Public Property Environment As Environment
   overload: TimeCockpit.Data.DataContextSettings.Environment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+  commentId: P:TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+  id: OriginalUserDetailUuid
+  parent: TimeCockpit.Data.DataContextSettings
+  langs:
+  - csharp
+  - vb
+  name: OriginalUserDetailUuid
+  nameWithType: DataContextSettings.OriginalUserDetailUuid
+  fullName: TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the original user detail id (for audit/impersonation scenarios).\n"
+  syntax:
+    content: public Guid? OriginalUserDetailUuid { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Guid}
+    content.vb: Public Property OriginalUserDetailUuid As Guid?
+  overload: TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.DataContextSettings.OriginalUsername
+  commentId: P:TimeCockpit.Data.DataContextSettings.OriginalUsername
+  id: OriginalUsername
+  parent: TimeCockpit.Data.DataContextSettings
+  langs:
+  - csharp
+  - vb
+  name: OriginalUsername
+  nameWithType: DataContextSettings.OriginalUsername
+  fullName: TimeCockpit.Data.DataContextSettings.OriginalUsername
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets the original user name (for audit/impersonation scenarios).\n"
+  syntax:
+    content: public string OriginalUsername { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginalUsername As String
+  overload: TimeCockpit.Data.DataContextSettings.OriginalUsername*
   modifiers.csharp:
   - public
   - get
@@ -526,16 +572,12 @@ items:
   fullName: TimeCockpit.Data.DataContextSettings.PrepareLocalizations
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    id: PrepareLocalizations
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextSettings.cs
-    startLine: 155
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets or sets a value indicating whether localizations should be prepared/initialized.\n"
-  example: []
   syntax:
     content: public bool PrepareLocalizations { get; set; }
     parameters: []
@@ -549,17 +591,43 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.DataContextSettings.GenerateClrProperties
+  commentId: P:TimeCockpit.Data.DataContextSettings.GenerateClrProperties
+  id: GenerateClrProperties
+  parent: TimeCockpit.Data.DataContextSettings
+  langs:
+  - csharp
+  - vb
+  name: GenerateClrProperties
+  nameWithType: DataContextSettings.GenerateClrProperties
+  fullName: TimeCockpit.Data.DataContextSettings.GenerateClrProperties
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data
+  summary: "\nGets or sets a value indicating whether when creating \nnew instance of an <xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> clr properties\nshould be generated for <xref href=\"TimeCockpit.Data.DataModel.ModelProperty\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"TimeCockpit.Data.DataModel.Relation\" data-throw-if-not-resolved=\"false\"></xref>s\n"
+  remarks: "\nThe default for this property is true that is, properties are generated by default.\n"
+  syntax:
+    content: public bool GenerateClrProperties { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if clr properties should be generated; otherwise, <code>false</code>.\n"
+    content.vb: Public Property GenerateClrProperties As Boolean
+  overload: TimeCockpit.Data.DataContextSettings.GenerateClrProperties*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: TimeCockpit.Data.DataContext
-  commentId: T:TimeCockpit.Data.DataContext
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: DataContext
-  nameWithType: DataContext
-  fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -851,70 +919,91 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataContextSettings.#ctor*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.#ctor
-  isExternal: false
+  isExternal: true
   name: DataContextSettings
   nameWithType: DataContextSettings.DataContextSettings
   fullName: TimeCockpit.Data.DataContextSettings.DataContextSettings
-- uid: TimeCockpit.Data.Database.DbClient
-  commentId: T:TimeCockpit.Data.Database.DbClient
-  parent: TimeCockpit.Data.Database
-  isExternal: false
-  name: DbClient
-  nameWithType: DbClient
-  fullName: TimeCockpit.Data.Database.DbClient
-- uid: TimeCockpit.Data.DataContextSettings.DbClientSettings
-  commentId: P:TimeCockpit.Data.DataContextSettings.DbClientSettings
+- uid: TimeCockpit.Data.DataContextSettings.CloneForFork*
+  commentId: Overload:TimeCockpit.Data.DataContextSettings.CloneForFork
+  isExternal: true
+  name: CloneForFork
+  nameWithType: DataContextSettings.CloneForFork
+  fullName: TimeCockpit.Data.DataContextSettings.CloneForFork
+- uid: TimeCockpit.Data.DataContext
+  commentId: T:TimeCockpit.Data.DataContext
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContext
+  nameWithType: DataContext
+  fullName: TimeCockpit.Data.DataContext
+- uid: TimeCockpit.Data.Environment
+  commentId: T:TimeCockpit.Data.Environment
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: Environment
+  nameWithType: Environment
+  fullName: TimeCockpit.Data.Environment
+- uid: TimeCockpit.Data.DataContextSettings
+  commentId: T:TimeCockpit.Data.DataContextSettings
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContextSettings
+  nameWithType: DataContextSettings
+  fullName: TimeCockpit.Data.DataContextSettings
 - uid: TimeCockpit.Data.DataContextSettings.DbClient*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.DbClient
-  isExternal: false
+  isExternal: true
   name: DbClient
   nameWithType: DataContextSettings.DbClient
   fullName: TimeCockpit.Data.DataContextSettings.DbClient
+- uid: TimeCockpit.Data.Database.DbClient
+  commentId: T:TimeCockpit.Data.Database.DbClient
+  parent: TimeCockpit.Data.Database
+  isExternal: true
+  name: DbClient
+  nameWithType: DbClient
+  fullName: TimeCockpit.Data.Database.DbClient
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
-- uid: TimeCockpit.Data.DataContextSettings.DbClient
-  commentId: P:TimeCockpit.Data.DataContextSettings.DbClient
 - uid: TimeCockpit.Data.DataContextSettings.DbClientSettings*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.DbClientSettings
-  isExternal: false
+  isExternal: true
   name: DbClientSettings
   nameWithType: DataContextSettings.DbClientSettings
   fullName: TimeCockpit.Data.DataContextSettings.DbClientSettings
 - uid: TimeCockpit.Data.Database.DbClientSettings
   commentId: T:TimeCockpit.Data.Database.DbClientSettings
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: DbClientSettings
   nameWithType: DbClientSettings
   fullName: TimeCockpit.Data.Database.DbClientSettings
-- uid: TimeCockpit.Data.DataContextSettings.DataContextType
-  commentId: P:TimeCockpit.Data.DataContextSettings.DataContextType
 - uid: TimeCockpit.Data.DataContextSettings.DataContextType*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.DataContextType
-  isExternal: false
+  isExternal: true
   name: DataContextType
   nameWithType: DataContextSettings.DataContextType
   fullName: TimeCockpit.Data.DataContextSettings.DataContextType
 - uid: TimeCockpit.Data.DataContextType
   commentId: T:TimeCockpit.Data.DataContextType
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContextType
   nameWithType: DataContextType
   fullName: TimeCockpit.Data.DataContextType
 - uid: TimeCockpit.Data.DataContextSettings.ValidateModelOnLoad*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.ValidateModelOnLoad
-  isExternal: false
+  isExternal: true
   name: ValidateModelOnLoad
   nameWithType: DataContextSettings.ValidateModelOnLoad
   fullName: TimeCockpit.Data.DataContextSettings.ValidateModelOnLoad
@@ -927,46 +1016,44 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
-  isExternal: false
+  isExternal: true
   name: InstallMissingSystemEntities
   nameWithType: DataContextSettings.InstallMissingSystemEntities
   fullName: TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
-- uid: TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
-  commentId: P:TimeCockpit.Data.DataContextSettings.InstallMissingSystemEntities
 - uid: TimeCockpit.Data.DataContextSettings.PerformVersionCheck*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.PerformVersionCheck
-  isExternal: false
+  isExternal: true
   name: PerformVersionCheck
   nameWithType: DataContextSettings.PerformVersionCheck
   fullName: TimeCockpit.Data.DataContextSettings.PerformVersionCheck
 - uid: TimeCockpit.Data.DataContextSettings.AllowUnsignedScripts*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.AllowUnsignedScripts
-  isExternal: false
+  isExternal: true
   name: AllowUnsignedScripts
   nameWithType: DataContextSettings.AllowUnsignedScripts
   fullName: TimeCockpit.Data.DataContextSettings.AllowUnsignedScripts
 - uid: TimeCockpit.Data.DataContextSettings.Localizer*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.Localizer
-  isExternal: false
+  isExternal: true
   name: Localizer
   nameWithType: DataContextSettings.Localizer
   fullName: TimeCockpit.Data.DataContextSettings.Localizer
 - uid: TimeCockpit.Data.Localization.NameLocalizer
   commentId: T:TimeCockpit.Data.Localization.NameLocalizer
   parent: TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: NameLocalizer
   nameWithType: NameLocalizer
   fullName: TimeCockpit.Data.Localization.NameLocalizer
 - uid: TimeCockpit.Data.Localization
   commentId: N:TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Localization
   nameWithType: TimeCockpit.Data.Localization
   fullName: TimeCockpit.Data.Localization
 - uid: TimeCockpit.Data.DataContextSettings.Certificates*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.Certificates
-  isExternal: false
+  isExternal: true
   name: Certificates
   nameWithType: DataContextSettings.Certificates
   fullName: TimeCockpit.Data.DataContextSettings.Certificates
@@ -1055,51 +1142,152 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DataContextSettings.AuditTrailReloadDataOfDeletedObject*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.AuditTrailReloadDataOfDeletedObject
-  isExternal: false
+  isExternal: true
   name: AuditTrailReloadDataOfDeletedObject
   nameWithType: DataContextSettings.AuditTrailReloadDataOfDeletedObject
   fullName: TimeCockpit.Data.DataContextSettings.AuditTrailReloadDataOfDeletedObject
 - uid: TimeCockpit.Data.DataContextSettings.Model*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.Model
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: DataContextSettings.Model
   fullName: TimeCockpit.Data.DataContextSettings.Model
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.DataContextSettings.Environment*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.Environment
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: DataContextSettings.Environment
   fullName: TimeCockpit.Data.DataContextSettings.Environment
-- uid: TimeCockpit.Data.Environment
-  commentId: T:TimeCockpit.Data.Environment
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: Environment
-  nameWithType: Environment
-  fullName: TimeCockpit.Data.Environment
+- uid: TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid*
+  commentId: Overload:TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+  isExternal: true
+  name: OriginalUserDetailUuid
+  nameWithType: DataContextSettings.OriginalUserDetailUuid
+  fullName: TimeCockpit.Data.DataContextSettings.OriginalUserDetailUuid
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<System.Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of System.Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.DataContextSettings.OriginalUsername*
+  commentId: Overload:TimeCockpit.Data.DataContextSettings.OriginalUsername
+  isExternal: true
+  name: OriginalUsername
+  nameWithType: DataContextSettings.OriginalUsername
+  fullName: TimeCockpit.Data.DataContextSettings.OriginalUsername
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: TimeCockpit.Data.DataContextSettings.PrepareLocalizations*
   commentId: Overload:TimeCockpit.Data.DataContextSettings.PrepareLocalizations
-  isExternal: false
+  isExternal: true
   name: PrepareLocalizations
   nameWithType: DataContextSettings.PrepareLocalizations
   fullName: TimeCockpit.Data.DataContextSettings.PrepareLocalizations
+- uid: TimeCockpit.Data.DataContextSettings.GenerateClrProperties*
+  commentId: Overload:TimeCockpit.Data.DataContextSettings.GenerateClrProperties
+  isExternal: true
+  name: GenerateClrProperties
+  nameWithType: DataContextSettings.GenerateClrProperties
+  fullName: TimeCockpit.Data.DataContextSettings.GenerateClrProperties

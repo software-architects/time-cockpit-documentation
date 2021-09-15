@@ -5,6 +5,7 @@ items:
   id: InstallationComponent
   parent: TimeCockpit.Data.Install
   children:
+  - TimeCockpit.Data.Install.InstallationComponent.#ctor
   - TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   - TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   - TimeCockpit.Data.Install.InstallationComponent.Mandatory
@@ -17,16 +18,12 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationComponent
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    id: InstallationComponent
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nRepresents a component that is used in the installation and update process\n"
-  example: []
   syntax:
     content: public abstract class InstallationComponent
     content.vb: Public MustInherit Class InstallationComponent
@@ -54,6 +51,31 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.Install.InstallationComponent.#ctor
+  commentId: M:TimeCockpit.Data.Install.InstallationComponent.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Install.InstallationComponent
+  langs:
+  - csharp
+  - vb
+  name: InstallationComponent()
+  nameWithType: InstallationComponent.InstallationComponent()
+  fullName: TimeCockpit.Data.Install.InstallationComponent.InstallationComponent()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Install
+  syntax:
+    content: protected InstallationComponent()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.Install.InstallationComponent.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   id: ComponentUuid
@@ -66,17 +88,13 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    id: ComponentUuid
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    startLine: 49
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the guid that can be used to uniquely identify the installer component\n"
   remarks: "\nYou need not explicitly set the component uuid because the system automatically assigns\na new uuid to each new installer component. However, you can set the value of the property\nif you need to.\n"
-  example: []
   syntax:
     content: public Guid ComponentUuid { get; set; }
     parameters: []
@@ -102,16 +120,12 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    id: InvariantFriendlyName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    startLine: 65
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the culture-invariant friendly name of the component.\n"
-  example: []
   syntax:
     content: public string InvariantFriendlyName { get; set; }
     parameters: []
@@ -137,16 +151,12 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    id: Mandatory
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    startLine: 81
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets a value indicating whether whether the application can run without this component installed.\n"
-  example: []
   syntax:
     content: public bool Mandatory { get; set; }
     parameters: []
@@ -172,17 +182,13 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    id: ProviderInvariantName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationComponent.cs
-    startLine: 107
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets or sets the invariant provider name on which the script should be executed.\n"
   remarks: "\n<p>\n  Property can be set to &quot;All&quot; if the script should be executed on all providers or\n  to a known provider name (see also <xref href=\"System.Data.Common.DbProviderFactories.GetFactoryClasses\" data-throw-if-not-resolved=\"false\"></xref>).\n</p>\n<p>\n  The default value for this property is &quot;All&quot;.\n</p>\n"
-  example: []
   syntax:
     content: public string ProviderInvariantName { get; set; }
     parameters: []
@@ -203,7 +209,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
@@ -495,13 +501,19 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Install.InstallationComponent.#ctor*
+  commentId: Overload:TimeCockpit.Data.Install.InstallationComponent.#ctor
+  isExternal: true
+  name: InstallationComponent
+  nameWithType: InstallationComponent.InstallationComponent
+  fullName: TimeCockpit.Data.Install.InstallationComponent.InstallationComponent
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid*
   commentId: Overload:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstallationComponent.ComponentUuid
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
@@ -514,7 +526,7 @@ references:
   fullName: System.Guid
 - uid: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName*
   commentId: Overload:TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
-  isExternal: false
+  isExternal: true
   name: InvariantFriendlyName
   nameWithType: InstallationComponent.InvariantFriendlyName
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
@@ -527,7 +539,7 @@ references:
   fullName: System.String
 - uid: TimeCockpit.Data.Install.InstallationComponent.Mandatory*
   commentId: Overload:TimeCockpit.Data.Install.InstallationComponent.Mandatory
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstallationComponent.Mandatory
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
@@ -538,13 +550,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.Data.Common.DbProviderFactories.GetFactoryClasses
-  commentId: M:System.Data.Common.DbProviderFactories.GetFactoryClasses
 - uid: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName*
   commentId: Overload:TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
-  isExternal: false
+  isExternal: true
   name: ProviderInvariantName
   nameWithType: InstallationComponent.ProviderInvariantName
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
 - uid: System.ArgumentException
   commentId: T:System.ArgumentException
+  isExternal: true

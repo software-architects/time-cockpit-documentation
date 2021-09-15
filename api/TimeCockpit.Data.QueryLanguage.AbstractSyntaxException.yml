@@ -23,55 +23,18 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: AbstractSyntaxException
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 19
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nRepresents an abstract class for returning custom Syntax Exceptions.\nAs the Timecockpit.Data project should be decoupled from underlying parsers, \nthis interface should go into an &quot;interface project&quot; that is shared by both, \nTimeCockpit.Data and Timecockpit.QueryLanguage\n"
-  example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public abstract class AbstractSyntaxException : Exception, ISerializable, _Exception
+    content: 'public abstract class AbstractSyntaxException : Exception'
     content.vb: >-
-      <Serializable>
-
       Public MustInherit Class AbstractSyntaxException
           Inherits Exception
-          Implements ISerializable, _Exception
   inheritance:
   - System.Object
-  - System.Exception
-  implements:
-  - System.Runtime.Serialization.ISerializable
-  - System.Runtime.InteropServices._Exception
-  inheritedMembers:
-  - System.Exception.GetBaseException
-  - System.Exception.ToString
-  - System.Exception.GetType
-  - System.Exception.Message
-  - System.Exception.Data
-  - System.Exception.InnerException
-  - System.Exception.TargetSite
-  - System.Exception.StackTrace
-  - System.Exception.HelpLink
-  - System.Exception.Source
-  - System.Exception.HResult
-  - System.Exception.SerializeObjectState
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.MemberwiseClone
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - abstract
@@ -92,31 +55,86 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.AbstractSyntaxException(System.String, System.Exception)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 27
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nInitializes a new instance of the SyntaxException class\n"
-  example: []
   syntax:
     content: public AbstractSyntaxException(string message, Exception innerException)
     parameters:
     - id: message
       type: System.String
-      description: A message that describes the error.
     - id: innerException
       type: System.Exception
-      description: The exception that is the cause of the current exception, or a null reference if no inner exception is specified.
     content.vb: Public Sub New(message As String, innerException As Exception)
   overload: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  parent: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+  langs:
+  - csharp
+  - vb
+  name: AbstractSyntaxException(SerializationInfo, StreamingContext)
+  nameWithType: AbstractSyntaxException.AbstractSyntaxException(SerializationInfo, StreamingContext)
+  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.AbstractSyntaxException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Constructor
+  source:
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.QueryLanguage
+  namespace: TimeCockpit.Data.QueryLanguage
+  syntax:
+    content: protected AbstractSyntaxException(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+    content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
+  overload: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  parent: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
+  langs:
+  - csharp
+  - vb
+  name: GetObjectData(SerializationInfo, StreamingContext)
+  nameWithType: AbstractSyntaxException.GetObjectData(SerializationInfo, StreamingContext)
+  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Method
+  source:
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.QueryLanguage
+  namespace: TimeCockpit.Data.QueryLanguage
+  syntax:
+    content: public override void GetObjectData(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+    content.vb: Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
+  overload: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace
   commentId: P:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace
   id: RuleInvocationStackTrace
@@ -129,16 +147,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: RuleInvocationStackTrace
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 35
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets a stack trace of the rules that have been entered by the parser\n"
-  example: []
   syntax:
     content: public IList<string> RuleInvocationStackTrace { get; set; }
     parameters: []
@@ -164,16 +177,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ErrorToken
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: ErrorToken
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 40
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets information about the token that caused the syntax error\n"
-  example: []
   syntax:
     content: public string ErrorToken { get; set; }
     parameters: []
@@ -199,16 +207,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.Input
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: Input
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 45
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets the input that contains the syntax error\n"
-  example: []
   syntax:
     content: public string Input { get; set; }
     parameters: []
@@ -234,16 +237,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineNumber
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: LineNumber
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 50
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets the line number in which a syntax error occurred\n"
-  example: []
   syntax:
     content: public int LineNumber { get; set; }
     parameters: []
@@ -269,16 +267,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineIndex
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: LineIndex
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 55
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets the line index in which a syntax error occurred\n"
-  example: []
   syntax:
     content: public int LineIndex { get; set; }
     parameters: []
@@ -304,16 +297,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.FriendlyMessge
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: FriendlyMessge
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 60
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets a paraphrased message text \n"
-  example: []
   syntax:
     content: public string FriendlyMessge { get; set; }
     parameters: []
@@ -339,16 +327,11 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ParserException
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: ParserException
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 65
+    path: TimeCockpit.Data.QueryLanguage
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.QueryLanguage
   namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nGets or sets the Exception thrown by the parser\n"
-  example: []
   syntax:
     content: public Exception ParserException { get; set; }
     parameters: []
@@ -362,103 +345,10 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  commentId: M:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
-  parent: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
-  langs:
-  - csharp
-  - vb
-  name: AbstractSyntaxException(SerializationInfo, StreamingContext)
-  nameWithType: AbstractSyntaxException.AbstractSyntaxException(SerializationInfo, StreamingContext)
-  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.AbstractSyntaxException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  type: Constructor
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 72
-  assemblies:
-  - TimeCockpit.Data.QueryLanguage
-  namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nInitializes a new instance of the AbstractSyntaxException class\n"
-  example: []
-  syntax:
-    content: protected AbstractSyntaxException(SerializationInfo info, StreamingContext context)
-    parameters:
-    - id: info
-      type: System.Runtime.Serialization.SerializationInfo
-      description: The SerializationInfo that holds the serialized object data about the exception being thrown.
-    - id: context
-      type: System.Runtime.Serialization.StreamingContext
-      description: The StreamingContext that contains contextual information about the source or destination.
-    content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
-  overload: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  commentId: M:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  id: GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  parent: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException
-  langs:
-  - csharp
-  - vb
-  name: GetObjectData(SerializationInfo, StreamingContext)
-  nameWithType: AbstractSyntaxException.GetObjectData(SerializationInfo, StreamingContext)
-  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    id: GetObjectData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.QueryLanguage/AbstractSyntaxException.cs
-    startLine: 82
-  assemblies:
-  - TimeCockpit.Data.QueryLanguage
-  namespace: TimeCockpit.Data.QueryLanguage
-  summary: "\nSets the SerializationInfo with information about the exception.\n"
-  example: []
-  syntax:
-    content: >-
-      [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-
-      public override void GetObjectData(SerializationInfo info, StreamingContext context)
-    parameters:
-    - id: info
-      type: System.Runtime.Serialization.SerializationInfo
-      description: The SerializationInfo that holds the serialized object data about the exception being thrown.
-    - id: context
-      type: System.Runtime.Serialization.StreamingContext
-      description: The StreamingContext that contains contextual information about the source or destination.
-    content.vb: >-
-      <SecurityPermission(SecurityAction.Demand, SerializationFormatter:=True)>
-
-      Public Overrides Sub GetObjectData(info As SerializationInfo, context As StreamingContext)
-  overridden: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  overload: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData*
-  attributes:
-  - type: System.Security.Permissions.SecurityPermissionAttribute
-    ctor: System.Security.Permissions.SecurityPermissionAttribute.#ctor(System.Security.Permissions.SecurityAction)
-    arguments:
-    - type: System.Security.Permissions.SecurityAction
-      value: 2
-    namedArguments:
-    - name: SerializationFormatter
-      type: System.Boolean
-      value: true
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.QueryLanguage
   commentId: N:TimeCockpit.Data.QueryLanguage
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage
   nameWithType: TimeCockpit.Data.QueryLanguage
   fullName: TimeCockpit.Data.QueryLanguage
@@ -469,421 +359,15 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Exception
-  commentId: T:System.Exception
-  parent: System
-  isExternal: true
-  name: Exception
-  nameWithType: Exception
-  fullName: System.Exception
-- uid: System.Runtime.Serialization.ISerializable
-  commentId: T:System.Runtime.Serialization.ISerializable
-  parent: System.Runtime.Serialization
-  isExternal: true
-  name: ISerializable
-  nameWithType: ISerializable
-  fullName: System.Runtime.Serialization.ISerializable
-- uid: System.Runtime.InteropServices._Exception
-  commentId: T:System.Runtime.InteropServices._Exception
-  parent: System.Runtime.InteropServices
-  isExternal: true
-  name: _Exception
-  nameWithType: _Exception
-  fullName: System.Runtime.InteropServices._Exception
-- uid: System.Exception.GetBaseException
-  commentId: M:System.Exception.GetBaseException
-  parent: System.Exception
-  isExternal: true
-  name: GetBaseException()
-  nameWithType: Exception.GetBaseException()
-  fullName: System.Exception.GetBaseException()
-  spec.csharp:
-  - uid: System.Exception.GetBaseException
-    name: GetBaseException
-    nameWithType: Exception.GetBaseException
-    fullName: System.Exception.GetBaseException
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Exception.GetBaseException
-    name: GetBaseException
-    nameWithType: Exception.GetBaseException
-    fullName: System.Exception.GetBaseException
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Exception.ToString
-  commentId: M:System.Exception.ToString
-  parent: System.Exception
-  isExternal: true
-  name: ToString()
-  nameWithType: Exception.ToString()
-  fullName: System.Exception.ToString()
-  spec.csharp:
-  - uid: System.Exception.ToString
-    name: ToString
-    nameWithType: Exception.ToString
-    fullName: System.Exception.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Exception.ToString
-    name: ToString
-    nameWithType: Exception.ToString
-    fullName: System.Exception.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Exception.GetType
-  commentId: M:System.Exception.GetType
-  parent: System.Exception
-  isExternal: true
-  name: GetType()
-  nameWithType: Exception.GetType()
-  fullName: System.Exception.GetType()
-  spec.csharp:
-  - uid: System.Exception.GetType
-    name: GetType
-    nameWithType: Exception.GetType
-    fullName: System.Exception.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Exception.GetType
-    name: GetType
-    nameWithType: Exception.GetType
-    fullName: System.Exception.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Exception.Message
-  commentId: P:System.Exception.Message
-  parent: System.Exception
-  isExternal: true
-  name: Message
-  nameWithType: Exception.Message
-  fullName: System.Exception.Message
-- uid: System.Exception.Data
-  commentId: P:System.Exception.Data
-  parent: System.Exception
-  isExternal: true
-  name: Data
-  nameWithType: Exception.Data
-  fullName: System.Exception.Data
-- uid: System.Exception.InnerException
-  commentId: P:System.Exception.InnerException
-  parent: System.Exception
-  isExternal: true
-  name: InnerException
-  nameWithType: Exception.InnerException
-  fullName: System.Exception.InnerException
-- uid: System.Exception.TargetSite
-  commentId: P:System.Exception.TargetSite
-  parent: System.Exception
-  isExternal: true
-  name: TargetSite
-  nameWithType: Exception.TargetSite
-  fullName: System.Exception.TargetSite
-- uid: System.Exception.StackTrace
-  commentId: P:System.Exception.StackTrace
-  parent: System.Exception
-  isExternal: true
-  name: StackTrace
-  nameWithType: Exception.StackTrace
-  fullName: System.Exception.StackTrace
-- uid: System.Exception.HelpLink
-  commentId: P:System.Exception.HelpLink
-  parent: System.Exception
-  isExternal: true
-  name: HelpLink
-  nameWithType: Exception.HelpLink
-  fullName: System.Exception.HelpLink
-- uid: System.Exception.Source
-  commentId: P:System.Exception.Source
-  parent: System.Exception
-  isExternal: true
-  name: Source
-  nameWithType: Exception.Source
-  fullName: System.Exception.Source
-- uid: System.Exception.HResult
-  commentId: P:System.Exception.HResult
-  parent: System.Exception
-  isExternal: true
-  name: HResult
-  nameWithType: Exception.HResult
-  fullName: System.Exception.HResult
-- uid: System.Exception.SerializeObjectState
-  commentId: E:System.Exception.SerializeObjectState
-  parent: System.Exception
-  isExternal: true
-  name: SerializeObjectState
-  nameWithType: Exception.SerializeObjectState
-  fullName: System.Exception.SerializeObjectState
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Runtime.Serialization
-  commentId: N:System.Runtime.Serialization
-  isExternal: false
-  name: System.Runtime.Serialization
-  nameWithType: System.Runtime.Serialization
-  fullName: System.Runtime.Serialization
-- uid: System.Runtime.InteropServices
-  commentId: N:System.Runtime.InteropServices
-  isExternal: false
-  name: System.Runtime.InteropServices
-  nameWithType: System.Runtime.InteropServices
-  fullName: System.Runtime.InteropServices
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.#ctor
-  isExternal: false
+  isExternal: true
   name: AbstractSyntaxException
   nameWithType: AbstractSyntaxException.AbstractSyntaxException
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.AbstractSyntaxException
@@ -894,15 +378,47 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Runtime.Serialization.SerializationInfo
+  commentId: T:System.Runtime.Serialization.SerializationInfo
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  commentId: T:System.Runtime.Serialization.StreamingContext
+  parent: System.Runtime.Serialization
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData
+  isExternal: true
+  name: GetObjectData
+  nameWithType: AbstractSyntaxException.GetObjectData
+  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace
-  isExternal: false
+  isExternal: true
   name: RuleInvocationStackTrace
   nameWithType: AbstractSyntaxException.RuleInvocationStackTrace
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.RuleInvocationStackTrace
 - uid: System.Collections.Generic.IList{System.String}
-  commentId: T:System.Collections.Generic.IList{System.String}
-  parent: System.Collections.Generic
+  commentId: '!:System.Collections.Generic.IList{System.String}'
   definition: System.Collections.Generic.IList`1
   name: IList<String>
   nameWithType: IList<String>
@@ -983,27 +499,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: false
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ErrorToken*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ErrorToken
-  isExternal: false
+  isExternal: true
   name: ErrorToken
   nameWithType: AbstractSyntaxException.ErrorToken
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ErrorToken
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.Input*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.Input
-  isExternal: false
+  isExternal: true
   name: Input
   nameWithType: AbstractSyntaxException.Input
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.Input
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineNumber*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineNumber
-  isExternal: false
+  isExternal: true
   name: LineNumber
   nameWithType: AbstractSyntaxException.LineNumber
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineNumber
@@ -1016,96 +526,19 @@ references:
   fullName: System.Int32
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineIndex*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineIndex
-  isExternal: false
+  isExternal: true
   name: LineIndex
   nameWithType: AbstractSyntaxException.LineIndex
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.LineIndex
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.FriendlyMessge*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.FriendlyMessge
-  isExternal: false
+  isExternal: true
   name: FriendlyMessge
   nameWithType: AbstractSyntaxException.FriendlyMessge
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.FriendlyMessge
 - uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ParserException*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ParserException
-  isExternal: false
+  isExternal: true
   name: ParserException
   nameWithType: AbstractSyntaxException.ParserException
   fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.ParserException
-- uid: System.Runtime.Serialization.SerializationInfo
-  commentId: T:System.Runtime.Serialization.SerializationInfo
-  parent: System.Runtime.Serialization
-  isExternal: true
-  name: SerializationInfo
-  nameWithType: SerializationInfo
-  fullName: System.Runtime.Serialization.SerializationInfo
-- uid: System.Runtime.Serialization.StreamingContext
-  commentId: T:System.Runtime.Serialization.StreamingContext
-  parent: System.Runtime.Serialization
-  isExternal: true
-  name: StreamingContext
-  nameWithType: StreamingContext
-  fullName: System.Runtime.Serialization.StreamingContext
-- uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  commentId: M:System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  parent: System.Exception
-  isExternal: true
-  name: GetObjectData(SerializationInfo, StreamingContext)
-  nameWithType: Exception.GetObjectData(SerializationInfo, StreamingContext)
-  fullName: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  spec.csharp:
-  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-    name: GetObjectData
-    nameWithType: Exception.GetObjectData
-    fullName: System.Exception.GetObjectData
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Runtime.Serialization.SerializationInfo
-    name: SerializationInfo
-    nameWithType: SerializationInfo
-    fullName: System.Runtime.Serialization.SerializationInfo
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Runtime.Serialization.StreamingContext
-    name: StreamingContext
-    nameWithType: StreamingContext
-    fullName: System.Runtime.Serialization.StreamingContext
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-    name: GetObjectData
-    nameWithType: Exception.GetObjectData
-    fullName: System.Exception.GetObjectData
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Runtime.Serialization.SerializationInfo
-    name: SerializationInfo
-    nameWithType: SerializationInfo
-    fullName: System.Runtime.Serialization.SerializationInfo
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Runtime.Serialization.StreamingContext
-    name: StreamingContext
-    nameWithType: StreamingContext
-    fullName: System.Runtime.Serialization.StreamingContext
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData
-  isExternal: false
-  name: GetObjectData
-  nameWithType: AbstractSyntaxException.GetObjectData
-  fullName: TimeCockpit.Data.QueryLanguage.AbstractSyntaxException.GetObjectData

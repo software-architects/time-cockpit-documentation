@@ -5,6 +5,7 @@ items:
   id: LocalizationExporter
   parent: TimeCockpit.Data.Export.Excel
   children:
+  - TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor
   - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
   - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.GenericKeysCollection,System.Boolean)
   - TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet``1(ClosedXML.Excel.IXLRow,TimeCockpit.Data.Localization.Default.LocalizerCollection{``0},System.Boolean)
@@ -16,16 +17,11 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    id: LocalizationExporter
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    startLine: 19
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nThe localization exporter.\n"
-  example: []
   syntax:
     content: public class LocalizationExporter
     content.vb: Public Class LocalizationExporter
@@ -57,25 +53,18 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook(TimeCockpit.Data.Localization.Default.DefaultLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    id: ExportToWorkbook
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    startLine: 26
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nexports a localizer to a workbook.\n"
-  example: []
   syntax:
     content: public static byte[] ExportToWorkbook(DefaultLocalizer localizer)
     parameters:
     - id: localizer
       type: TimeCockpit.Data.Localization.Default.DefaultLocalizer
-      description: The localizer to export.
     return:
       type: System.Byte[]
-      description: Returns the workbook, serialized as an byte array.
     content.vb: Public Shared Function ExportToWorkbook(localizer As DefaultLocalizer) As Byte()
   overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook*
   modifiers.csharp:
@@ -96,28 +85,20 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.GenericKeysCollection, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    id: ExportToWorksheet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    startLine: 56
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nexports a localizer collection to a row in a worksheet.\n"
-  example: []
   syntax:
     content: public static void ExportToWorksheet(IXLRow firstRow, GenericKeysCollection localizers, bool writeCultureHeader = false)
     parameters:
     - id: firstRow
       type: ClosedXML.Excel.IXLRow
-      description: The first row of the excel sheet to export to.
     - id: localizers
       type: TimeCockpit.Data.Localization.Default.GenericKeysCollection
-      description: The localizers to export.
     - id: writeCultureHeader
       type: System.Boolean
-      description: True if the culture name should be in the first column
     content.vb: Public Shared Sub ExportToWorksheet(firstRow As IXLRow, localizers As GenericKeysCollection, writeCultureHeader As Boolean = False)
   overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
   modifiers.csharp:
@@ -138,31 +119,24 @@ items:
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet<T>(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.LocalizerCollection<T>, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    id: ExportToWorksheet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Export/Excel/LocalizationExporter.cs
-    startLine: 76
+    path: TimeCockpit.Data.Export
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Export
   namespace: TimeCockpit.Data.Export.Excel
-  summary: "\nexports a localizer collection to a row in a worksheet.\n"
-  example: []
   syntax:
-    content: 'public static void ExportToWorksheet<T>(IXLRow firstRow, LocalizerCollection<T> localizers, bool writeCultureHeader = true)where T : ModelElementLocalizer'
+    content: >-
+      public static void ExportToWorksheet<T>(IXLRow firstRow, LocalizerCollection<T> localizers, bool writeCultureHeader = true)
+          where T : ModelElementLocalizer
     parameters:
     - id: firstRow
       type: ClosedXML.Excel.IXLRow
-      description: The first row of the excel sheet to export to.
     - id: localizers
       type: TimeCockpit.Data.Localization.Default.LocalizerCollection{{T}}
-      description: The localizers to export.
     - id: writeCultureHeader
       type: System.Boolean
-      description: True if the cultures header should be written to the excel sheet.
     typeParameters:
     - id: T
-      description: The type of the localizers.
     content.vb: Public Shared Sub ExportToWorksheet(Of T As ModelElementLocalizer)(firstRow As IXLRow, localizers As LocalizerCollection(Of T), writeCultureHeader As Boolean = True)
   overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
   nameWithType.vb: LocalizationExporter.ExportToWorksheet(Of T)(IXLRow, LocalizerCollection(Of T), Boolean)
@@ -174,10 +148,35 @@ items:
   - Shared
   fullName.vb: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet(Of T)(ClosedXML.Excel.IXLRow, TimeCockpit.Data.Localization.Default.LocalizerCollection(Of T), System.Boolean)
   name.vb: ExportToWorksheet(Of T)(IXLRow, LocalizerCollection(Of T), Boolean)
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor
+  commentId: M:TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Export.Excel.LocalizationExporter
+  langs:
+  - csharp
+  - vb
+  name: LocalizationExporter()
+  nameWithType: LocalizationExporter.LocalizationExporter()
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.LocalizationExporter()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data.Export
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Export
+  namespace: TimeCockpit.Data.Export.Excel
+  syntax:
+    content: public LocalizationExporter()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Export.Excel
   commentId: N:TimeCockpit.Data.Export.Excel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Export.Excel
   nameWithType: TimeCockpit.Data.Export.Excel
   fullName: TimeCockpit.Data.Export.Excel
@@ -469,24 +468,25 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook*
   commentId: Overload:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook
-  isExternal: false
+  isExternal: true
   name: ExportToWorkbook
   nameWithType: LocalizationExporter.ExportToWorkbook
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorkbook
 - uid: TimeCockpit.Data.Localization.Default.DefaultLocalizer
   commentId: T:TimeCockpit.Data.Localization.Default.DefaultLocalizer
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: DefaultLocalizer
   nameWithType: DefaultLocalizer
   fullName: TimeCockpit.Data.Localization.Default.DefaultLocalizer
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -513,19 +513,17 @@ references:
     fullName: ()
 - uid: TimeCockpit.Data.Localization.Default
   commentId: N:TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Localization.Default
   nameWithType: TimeCockpit.Data.Localization.Default
   fullName: TimeCockpit.Data.Localization.Default
 - uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet*
   commentId: Overload:TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet
-  isExternal: false
+  isExternal: true
   name: ExportToWorksheet
   nameWithType: LocalizationExporter.ExportToWorksheet
   fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.ExportToWorksheet
 - uid: ClosedXML.Excel.IXLRow
-  commentId: T:ClosedXML.Excel.IXLRow
-  parent: ClosedXML.Excel
   isExternal: true
   name: IXLRow
   nameWithType: IXLRow
@@ -533,7 +531,7 @@ references:
 - uid: TimeCockpit.Data.Localization.Default.GenericKeysCollection
   commentId: T:TimeCockpit.Data.Localization.Default.GenericKeysCollection
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: GenericKeysCollection
   nameWithType: GenericKeysCollection
   fullName: TimeCockpit.Data.Localization.Default.GenericKeysCollection
@@ -544,12 +542,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: ClosedXML.Excel
-  commentId: N:ClosedXML.Excel
-  isExternal: false
-  name: ClosedXML.Excel
-  nameWithType: ClosedXML.Excel
-  fullName: ClosedXML.Excel
 - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection{{T}}
   commentId: T:TimeCockpit.Data.Localization.Default.LocalizerCollection{``0}
   parent: TimeCockpit.Data.Localization.Default
@@ -565,6 +557,7 @@ references:
     name: LocalizerCollection
     nameWithType: LocalizerCollection
     fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
@@ -579,6 +572,7 @@ references:
     name: LocalizerCollection
     nameWithType: LocalizerCollection
     fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -591,7 +585,7 @@ references:
 - uid: TimeCockpit.Data.Localization.Default.LocalizerCollection`1
   commentId: T:TimeCockpit.Data.Localization.Default.LocalizerCollection`1
   parent: TimeCockpit.Data.Localization.Default
-  isExternal: false
+  isExternal: true
   name: LocalizerCollection<T>
   nameWithType: LocalizerCollection<T>
   fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection<T>
@@ -603,6 +597,7 @@ references:
     name: LocalizerCollection
     nameWithType: LocalizerCollection
     fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
@@ -617,6 +612,7 @@ references:
     name: LocalizerCollection
     nameWithType: LocalizerCollection
     fullName: TimeCockpit.Data.Localization.Default.LocalizerCollection
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -626,3 +622,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor*
+  commentId: Overload:TimeCockpit.Data.Export.Excel.LocalizationExporter.#ctor
+  isExternal: true
+  name: LocalizationExporter
+  nameWithType: LocalizationExporter.LocalizationExporter
+  fullName: TimeCockpit.Data.Export.Excel.LocalizationExporter.LocalizationExporter

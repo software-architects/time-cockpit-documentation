@@ -16,37 +16,15 @@ items:
   fullName: TimeCockpit.Data.DataModel.Operation
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    id: Operation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nRepresents an operation.\n"
-  example: []
   syntax:
-    content: >-
-      [DataContract]
-
-      [KnownType(typeof (CreateOperation))]
-
-      [KnownType(typeof (UpdateOperation))]
-
-      [KnownType(typeof (DeleteOperation))]
-
-      public abstract class Operation
-    content.vb: >-
-      <DataContract>
-
-      <KnownType(GetType(CreateOperation))>
-
-      <KnownType(GetType(UpdateOperation))>
-
-      <KnownType(GetType(DeleteOperation))>
-
-      Public MustInherit Class Operation
+    content: public abstract class Operation
+    content.vb: Public MustInherit Class Operation
   inheritance:
   - System.Object
   derivedClasses:
@@ -61,25 +39,6 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
-  attributes:
-  - type: System.Runtime.Serialization.DataContractAttribute
-    ctor: System.Runtime.Serialization.DataContractAttribute.#ctor
-    arguments: []
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.CreateOperation
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.UpdateOperation
-  - type: System.Runtime.Serialization.KnownTypeAttribute
-    ctor: System.Runtime.Serialization.KnownTypeAttribute.#ctor(System.Type)
-    arguments:
-    - type: System.Type
-      value: TimeCockpit.Data.DataModel.DeleteOperation
   modifiers.csharp:
   - public
   - abstract
@@ -100,16 +59,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Operation.Operation(TimeCockpit.Data.DataModel.ModelElement)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    startLine: 23
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInitializes a new instance of the Operation class.\n"
-  example: []
   syntax:
     content: protected Operation(ModelElement element)
     parameters:
@@ -122,51 +77,6 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: TimeCockpit.Data.DataModel.Operation.Element
-  commentId: P:TimeCockpit.Data.DataModel.Operation.Element
-  id: Element
-  parent: TimeCockpit.Data.DataModel.Operation
-  langs:
-  - csharp
-  - vb
-  name: Element
-  nameWithType: Operation.Element
-  fullName: TimeCockpit.Data.DataModel.Operation.Element
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    id: Element
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    startLine: 31
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel
-  summary: "\nGets the model element on which the operation should be performed.\n"
-  example: []
-  syntax:
-    content: >-
-      [DataMember]
-
-      public ModelElement Element { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.DataModel.ModelElement
-    content.vb: >-
-      <DataMember>
-
-      Public ReadOnly Property Element As ModelElement
-  overload: TimeCockpit.Data.DataModel.Operation.Element*
-  attributes:
-  - type: System.Runtime.Serialization.DataMemberAttribute
-    ctor: System.Runtime.Serialization.DataMemberAttribute.#ctor
-    arguments: []
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
   commentId: M:TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
   id: Accept(TimeCockpit.Data.DataModel.OperationVisitor)
@@ -179,16 +89,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Operation.Accept(TimeCockpit.Data.DataModel.OperationVisitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Operation.cs
-    startLine: 38
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nAccepts a visitor for operations.\n"
-  example: []
   syntax:
     content: public abstract void Accept(OperationVisitor visitor)
     parameters:
@@ -203,10 +109,41 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
+- uid: TimeCockpit.Data.DataModel.Operation.Element
+  commentId: P:TimeCockpit.Data.DataModel.Operation.Element
+  id: Element
+  parent: TimeCockpit.Data.DataModel.Operation
+  langs:
+  - csharp
+  - vb
+  name: Element
+  nameWithType: Operation.Element
+  fullName: TimeCockpit.Data.DataModel.Operation.Element
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  summary: "\nGets the model element on which the operation should be performed.\n"
+  syntax:
+    content: public ModelElement Element { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.DataModel.ModelElement
+    content.vb: Public ReadOnly Property Element As ModelElement
+  overload: TimeCockpit.Data.DataModel.Operation.Element*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -498,39 +435,39 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataModel.Operation.#ctor*
   commentId: Overload:TimeCockpit.Data.DataModel.Operation.#ctor
-  isExternal: false
+  isExternal: true
   name: Operation
   nameWithType: Operation.Operation
   fullName: TimeCockpit.Data.DataModel.Operation.Operation
 - uid: TimeCockpit.Data.DataModel.ModelElement
   commentId: T:TimeCockpit.Data.DataModel.ModelElement
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelElement
   nameWithType: ModelElement
   fullName: TimeCockpit.Data.DataModel.ModelElement
-- uid: TimeCockpit.Data.DataModel.Operation.Element*
-  commentId: Overload:TimeCockpit.Data.DataModel.Operation.Element
-  isExternal: false
-  name: Element
-  nameWithType: Operation.Element
-  fullName: TimeCockpit.Data.DataModel.Operation.Element
 - uid: TimeCockpit.Data.DataModel.Operation.Accept*
   commentId: Overload:TimeCockpit.Data.DataModel.Operation.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: Operation.Accept
   fullName: TimeCockpit.Data.DataModel.Operation.Accept
 - uid: TimeCockpit.Data.DataModel.OperationVisitor
   commentId: T:TimeCockpit.Data.DataModel.OperationVisitor
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: OperationVisitor
   nameWithType: OperationVisitor
   fullName: TimeCockpit.Data.DataModel.OperationVisitor
+- uid: TimeCockpit.Data.DataModel.Operation.Element*
+  commentId: Overload:TimeCockpit.Data.DataModel.Operation.Element
+  isExternal: true
+  name: Element
+  nameWithType: Operation.Element
+  fullName: TimeCockpit.Data.DataModel.Operation.Element

@@ -20,33 +20,29 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: EntityQuery
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Queryable
   summary: "\nIQueryable implementation for entity queries.\n"
-  example: []
   syntax:
-    content: 'public class EntityQuery<T> : IOrderedQueryable<T>, IQueryable<T>, IEnumerable<T>, IOrderedQueryable, IQueryable, IEnumerable'
+    content: 'public class EntityQuery<T> : IQueryable<T>, IEnumerable<T>, IEnumerable, IQueryable, IOrderedQueryable<T>, IOrderedQueryable'
     typeParameters:
     - id: T
       description: The type, derived from EntityObject.
     content.vb: >-
       Public Class EntityQuery(Of T)
-          Implements IOrderedQueryable(Of T), IQueryable(Of T), IEnumerable(Of T), IOrderedQueryable, IQueryable, IEnumerable
+          Implements IQueryable(Of T), IEnumerable(Of T), IEnumerable, IQueryable, IOrderedQueryable(Of T), IOrderedQueryable
   inheritance:
   - System.Object
   implements:
-  - System.Linq.IOrderedQueryable{{T}}
   - System.Linq.IQueryable{{T}}
   - System.Collections.Generic.IEnumerable{{T}}
-  - System.Linq.IOrderedQueryable
-  - System.Linq.IQueryable
   - System.Collections.IEnumerable
+  - System.Linq.IQueryable
+  - System.Linq.IOrderedQueryable{{T}}
+  - System.Linq.IOrderedQueryable
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -76,16 +72,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.EntityQuery(TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 35
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Queryable
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public EntityQuery(EntityQueryProvider provider)
     parameters:
@@ -112,16 +104,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.EntityQuery(TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider, System.Linq.Expressions.Expression)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 46
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Queryable
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public EntityQuery(EntityQueryProvider provider, Expression expression)
     parameters:
@@ -139,123 +127,6 @@ items:
   modifiers.vb:
   - Public
   fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).EntityQuery(TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider, System.Linq.Expressions.Expression)
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
-  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
-  id: ElementType
-  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-  langs:
-  - csharp
-  - vb
-  name: ElementType
-  nameWithType: EntityQuery<T>.ElementType
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.ElementType
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: ElementType
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 55
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Queryable
-  summary: "\nGets the element type.\n"
-  example: []
-  syntax:
-    content: public Type ElementType { get; }
-    parameters: []
-    return:
-      type: System.Type
-    content.vb: Public ReadOnly Property ElementType As Type
-  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType*
-  implements:
-  - System.Linq.IQueryable.ElementType
-  nameWithType.vb: EntityQuery(Of T).ElementType
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).ElementType
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
-  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
-  id: Expression
-  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-  langs:
-  - csharp
-  - vb
-  name: Expression
-  nameWithType: EntityQuery<T>.Expression
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Expression
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: Expression
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 63
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Queryable
-  summary: "\nGets the expression of the query.\n"
-  example: []
-  syntax:
-    content: public Expression Expression { get; }
-    parameters: []
-    return:
-      type: System.Linq.Expressions.Expression
-    content.vb: Public ReadOnly Property Expression As Expression
-  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression*
-  implements:
-  - System.Linq.IQueryable.Expression
-  nameWithType.vb: EntityQuery(Of T).Expression
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Expression
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
-  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
-  id: Provider
-  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-  langs:
-  - csharp
-  - vb
-  name: Provider
-  nameWithType: EntityQuery<T>.Provider
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Provider
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: Provider
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 71
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Queryable
-  summary: "\nGets the query provider.\n"
-  example: []
-  syntax:
-    content: public IQueryProvider Provider { get; }
-    parameters: []
-    return:
-      type: System.Linq.IQueryProvider
-    content.vb: Public ReadOnly Property Provider As IQueryProvider
-  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider*
-  implements:
-  - System.Linq.IQueryable.Provider
-  nameWithType.vb: EntityQuery(Of T).Provider
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Provider
 - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.GetEnumerator
   commentId: M:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.GetEnumerator
   id: GetEnumerator
@@ -268,16 +139,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.GetEnumerator()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: GetEnumerator
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 80
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Queryable
   summary: "\nGets the enumerator.\n"
-  example: []
   syntax:
     content: public IEnumerator GetEnumerator()
     return:
@@ -306,16 +173,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    id: System.Collections.Generic.IEnumerable<T>.GetEnumerator
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Queryable/EntityQuery.cs
-    startLine: 89
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Queryable
   summary: "\nGets the enumerator.\n"
-  example: []
   syntax:
     content: IEnumerator<T> IEnumerable<T>.GetEnumerator()
     return:
@@ -328,10 +191,109 @@ items:
   nameWithType.vb: EntityQuery(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
   fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).System.Collections.Generic.IEnumerable<T>.GetEnumerator()
   name.vb: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
+  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
+  id: ElementType
+  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
+  langs:
+  - csharp
+  - vb
+  name: ElementType
+  nameWithType: EntityQuery<T>.ElementType
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.ElementType
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Queryable
+  summary: "\nGets the element type.\n"
+  syntax:
+    content: public Type ElementType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ElementType As Type
+  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType*
+  nameWithType.vb: EntityQuery(Of T).ElementType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).ElementType
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
+  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
+  id: Expression
+  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
+  langs:
+  - csharp
+  - vb
+  name: Expression
+  nameWithType: EntityQuery<T>.Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Expression
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Queryable
+  summary: "\nGets the expression of the query.\n"
+  syntax:
+    content: public Expression Expression { get; }
+    parameters: []
+    return:
+      type: System.Linq.Expressions.Expression
+    content.vb: Public ReadOnly Property Expression As Expression
+  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression*
+  nameWithType.vb: EntityQuery(Of T).Expression
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Expression
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
+  commentId: P:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
+  id: Provider
+  parent: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
+  langs:
+  - csharp
+  - vb
+  name: Provider
+  nameWithType: EntityQuery<T>.Provider
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Provider
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Queryable
+  summary: "\nGets the query provider.\n"
+  syntax:
+    content: public IQueryProvider Provider { get; }
+    parameters: []
+    return:
+      type: System.Linq.IQueryProvider
+    content.vb: Public ReadOnly Property Provider As IQueryProvider
+  overload: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider*
+  nameWithType.vb: EntityQuery(Of T).Provider
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Provider
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Queryable
   commentId: N:TimeCockpit.Data.QueryLanguage.Queryable
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Queryable
   nameWithType: TimeCockpit.Data.QueryLanguage.Queryable
   fullName: TimeCockpit.Data.QueryLanguage.Queryable
@@ -342,49 +304,8 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Linq.IOrderedQueryable{{T}}
-  commentId: T:System.Linq.IOrderedQueryable{`0}
-  parent: System.Linq
-  definition: System.Linq.IOrderedQueryable`1
-  name: IOrderedQueryable<T>
-  nameWithType: IOrderedQueryable<T>
-  fullName: System.Linq.IOrderedQueryable<T>
-  nameWithType.vb: IOrderedQueryable(Of T)
-  fullName.vb: System.Linq.IOrderedQueryable(Of T)
-  name.vb: IOrderedQueryable(Of T)
-  spec.csharp:
-  - uid: System.Linq.IOrderedQueryable`1
-    name: IOrderedQueryable
-    nameWithType: IOrderedQueryable
-    fullName: System.Linq.IOrderedQueryable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Linq.IOrderedQueryable`1
-    name: IOrderedQueryable
-    nameWithType: IOrderedQueryable
-    fullName: System.Linq.IOrderedQueryable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Linq.IQueryable{{T}}
-  commentId: T:System.Linq.IQueryable{`0}
-  parent: System.Linq
+  commentId: '!:System.Linq.IQueryable{`0}'
   definition: System.Linq.IQueryable`1
   name: IQueryable<T>
   nameWithType: IQueryable<T>
@@ -462,20 +383,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Linq.IOrderedQueryable
-  commentId: T:System.Linq.IOrderedQueryable
-  parent: System.Linq
-  isExternal: true
-  name: IOrderedQueryable
-  nameWithType: IOrderedQueryable
-  fullName: System.Linq.IOrderedQueryable
-- uid: System.Linq.IQueryable
-  commentId: T:System.Linq.IQueryable
-  parent: System.Linq
-  isExternal: true
-  name: IQueryable
-  nameWithType: IQueryable
-  fullName: System.Linq.IQueryable
 - uid: System.Collections.IEnumerable
   commentId: T:System.Collections.IEnumerable
   parent: System.Collections
@@ -483,6 +390,56 @@ references:
   name: IEnumerable
   nameWithType: IEnumerable
   fullName: System.Collections.IEnumerable
+- uid: System.Linq.IQueryable
+  isExternal: true
+  name: IQueryable
+  nameWithType: IQueryable
+  fullName: System.Linq.IQueryable
+- uid: System.Linq.IOrderedQueryable{{T}}
+  commentId: '!:System.Linq.IOrderedQueryable{`0}'
+  definition: System.Linq.IOrderedQueryable`1
+  name: IOrderedQueryable<T>
+  nameWithType: IOrderedQueryable<T>
+  fullName: System.Linq.IOrderedQueryable<T>
+  nameWithType.vb: IOrderedQueryable(Of T)
+  fullName.vb: System.Linq.IOrderedQueryable(Of T)
+  name.vb: IOrderedQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    nameWithType: IOrderedQueryable
+    fullName: System.Linq.IOrderedQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    nameWithType: IOrderedQueryable
+    fullName: System.Linq.IOrderedQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.IOrderedQueryable
+  commentId: '!:System.Linq.IOrderedQueryable'
+  isExternal: true
+  name: IOrderedQueryable
+  nameWithType: IOrderedQueryable
+  fullName: System.Linq.IOrderedQueryable
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -764,64 +721,18 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Linq.IOrderedQueryable`1
-  commentId: T:System.Linq.IOrderedQueryable`1
-  isExternal: true
-  name: IOrderedQueryable<T>
-  nameWithType: IOrderedQueryable<T>
-  fullName: System.Linq.IOrderedQueryable<T>
-  nameWithType.vb: IOrderedQueryable(Of T)
-  fullName.vb: System.Linq.IOrderedQueryable(Of T)
-  name.vb: IOrderedQueryable(Of T)
-  spec.csharp:
-  - uid: System.Linq.IOrderedQueryable`1
-    name: IOrderedQueryable
-    nameWithType: IOrderedQueryable
-    fullName: System.Linq.IOrderedQueryable
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Linq.IOrderedQueryable`1
-    name: IOrderedQueryable
-    nameWithType: IOrderedQueryable
-    fullName: System.Linq.IOrderedQueryable
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Linq
-  commentId: N:System.Linq
-  isExternal: false
-  name: System.Linq
-  nameWithType: System.Linq
-  fullName: System.Linq
 - uid: System.Linq.IQueryable`1
-  commentId: T:System.Linq.IQueryable`1
   isExternal: true
-  name: IQueryable<T>
-  nameWithType: IQueryable<T>
-  fullName: System.Linq.IQueryable<T>
-  nameWithType.vb: IQueryable(Of T)
-  fullName.vb: System.Linq.IQueryable(Of T)
-  name.vb: IQueryable(Of T)
+  name: IQueryable<>
+  nameWithType: IQueryable<>
+  fullName: System.Linq.IQueryable<>
+  nameWithType.vb: IQueryable(Of )
+  fullName.vb: System.Linq.IQueryable(Of )
+  name.vb: IQueryable(Of )
   spec.csharp:
   - uid: System.Linq.IQueryable`1
     name: IQueryable
@@ -831,9 +742,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -846,9 +757,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
@@ -893,56 +804,58 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: System.Collections
   commentId: N:System.Collections
-  isExternal: false
+  isExternal: true
   name: System.Collections
   nameWithType: System.Collections
   fullName: System.Collections
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-  commentId: T:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-  isExternal: false
-  name: EntityQuery<T>
-  nameWithType: EntityQuery<T>
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>
-  nameWithType.vb: EntityQuery(Of T)
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T)
-  name.vb: EntityQuery(Of T)
+- uid: System.Linq.IOrderedQueryable`1
+  commentId: '!:System.Linq.IOrderedQueryable`1'
+  isExternal: true
+  name: IOrderedQueryable<>
+  nameWithType: IOrderedQueryable<>
+  fullName: System.Linq.IOrderedQueryable<>
+  nameWithType.vb: IOrderedQueryable(Of )
+  fullName.vb: System.Linq.IOrderedQueryable(Of )
+  name.vb: IOrderedQueryable(Of )
   spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-    name: EntityQuery
-    nameWithType: EntityQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    nameWithType: IOrderedQueryable
+    fullName: System.Linq.IOrderedQueryable
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1
-    name: EntityQuery
-    nameWithType: EntityQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery
+  - uid: System.Linq.IOrderedQueryable`1
+    name: IOrderedQueryable
+    nameWithType: IOrderedQueryable
+    fullName: System.Linq.IOrderedQueryable
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.#ctor
-  isExternal: false
+  isExternal: true
   name: EntityQuery
   nameWithType: EntityQuery<T>.EntityQuery
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.EntityQuery
@@ -951,85 +864,18 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider
   commentId: T:TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider
   parent: TimeCockpit.Data.QueryLanguage.Queryable
-  isExternal: false
+  isExternal: true
   name: EntityQueryProvider
   nameWithType: EntityQueryProvider
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQueryProvider
 - uid: System.Linq.Expressions.Expression
-  commentId: T:System.Linq.Expressions.Expression
-  parent: System.Linq.Expressions
   isExternal: true
   name: Expression
   nameWithType: Expression
   fullName: System.Linq.Expressions.Expression
-- uid: System.Linq.Expressions
-  commentId: N:System.Linq.Expressions
-  isExternal: false
-  name: System.Linq.Expressions
-  nameWithType: System.Linq.Expressions
-  fullName: System.Linq.Expressions
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
-  isExternal: false
-  name: ElementType
-  nameWithType: EntityQuery<T>.ElementType
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.ElementType
-  nameWithType.vb: EntityQuery(Of T).ElementType
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).ElementType
-- uid: System.Linq.IQueryable.ElementType
-  commentId: P:System.Linq.IQueryable.ElementType
-  parent: System.Linq.IQueryable
-  isExternal: true
-  name: ElementType
-  nameWithType: IQueryable.ElementType
-  fullName: System.Linq.IQueryable.ElementType
-- uid: System.Type
-  commentId: T:System.Type
-  parent: System
-  isExternal: true
-  name: Type
-  nameWithType: Type
-  fullName: System.Type
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
-  isExternal: false
-  name: Expression
-  nameWithType: EntityQuery<T>.Expression
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Expression
-  nameWithType.vb: EntityQuery(Of T).Expression
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Expression
-- uid: System.Linq.IQueryable.Expression
-  commentId: P:System.Linq.IQueryable.Expression
-  parent: System.Linq.IQueryable
-  isExternal: true
-  name: Expression
-  nameWithType: IQueryable.Expression
-  fullName: System.Linq.IQueryable.Expression
-- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
-  isExternal: false
-  name: Provider
-  nameWithType: EntityQuery<T>.Provider
-  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Provider
-  nameWithType.vb: EntityQuery(Of T).Provider
-  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Provider
-- uid: System.Linq.IQueryable.Provider
-  commentId: P:System.Linq.IQueryable.Provider
-  parent: System.Linq.IQueryable
-  isExternal: true
-  name: Provider
-  nameWithType: IQueryable.Provider
-  fullName: System.Linq.IQueryable.Provider
-- uid: System.Linq.IQueryProvider
-  commentId: T:System.Linq.IQueryProvider
-  parent: System.Linq
-  isExternal: true
-  name: IQueryProvider
-  nameWithType: IQueryProvider
-  fullName: System.Linq.IQueryProvider
 - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.GetEnumerator*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.GetEnumerator
-  isExternal: false
+  isExternal: true
   name: GetEnumerator
   nameWithType: EntityQuery<T>.GetEnumerator
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.GetEnumerator
@@ -1075,7 +921,7 @@ references:
   fullName: System.Collections.IEnumerator
 - uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator
-  isExternal: false
+  isExternal: true
   name: IEnumerable<T>.GetEnumerator
   nameWithType: EntityQuery<T>.IEnumerable<T>.GetEnumerator
   fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.System.Collections.Generic.IEnumerable<T>.GetEnumerator
@@ -1226,3 +1072,39 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.ElementType
+  isExternal: true
+  name: ElementType
+  nameWithType: EntityQuery<T>.ElementType
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.ElementType
+  nameWithType.vb: EntityQuery(Of T).ElementType
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).ElementType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Expression
+  isExternal: true
+  name: Expression
+  nameWithType: EntityQuery<T>.Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Expression
+  nameWithType.vb: EntityQuery(Of T).Expression
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Expression
+- uid: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery`1.Provider
+  isExternal: true
+  name: Provider
+  nameWithType: EntityQuery<T>.Provider
+  fullName: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery<T>.Provider
+  nameWithType.vb: EntityQuery(Of T).Provider
+  fullName.vb: TimeCockpit.Data.QueryLanguage.Queryable.EntityQuery(Of T).Provider
+- uid: System.Linq.IQueryProvider
+  isExternal: true
+  name: IQueryProvider
+  nameWithType: IQueryProvider
+  fullName: System.Linq.IQueryProvider

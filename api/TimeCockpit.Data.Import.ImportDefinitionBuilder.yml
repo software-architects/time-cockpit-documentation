@@ -5,6 +5,7 @@ items:
   id: ImportDefinitionBuilder
   parent: TimeCockpit.Data.Import
   children:
+  - TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor
   - TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings(System.String[],TimeCockpit.Data.DataModel.ModelEntityBase,TimeCockpit.Data.Localization.NameLocalizer)
   - TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition(TimeCockpit.Data.Import.PreviewWorkbook,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Localization.NameLocalizer)
   - TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity(TimeCockpit.Data.DataModel.ModelEntityBase[],TimeCockpit.Data.Localization.NameLocalizer,TimeCockpit.Data.Import.ImportBookDefinition@,TimeCockpit.Data.Import.PreviewWorkbook@)
@@ -21,16 +22,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: ImportDefinitionBuilder
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 19
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass building \n"
-  example: []
   syntax:
     content: public class ImportDefinitionBuilder
     content.vb: Public Class ImportDefinitionBuilder
@@ -62,31 +58,22 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition(TimeCockpit.Data.Import.PreviewWorkbook, TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Localization.NameLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: BuildDefinition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 29
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nAutomatically builds a import book definition from a preview workbook and a model\nby looking at (invariant friendly) names of the preview columns and the model entity names.\n"
-  example: []
   syntax:
     content: public static ImportBookDefinition BuildDefinition(PreviewWorkbook workbook, Model model, NameLocalizer localizer)
     parameters:
     - id: workbook
       type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: the workbook containing the preview data.
     - id: model
       type: TimeCockpit.Data.DataModel.Model
-      description: the model to find associations.
     - id: localizer
       type: TimeCockpit.Data.Localization.NameLocalizer
-      description: The localizer.
     return:
       type: TimeCockpit.Data.Import.ImportBookDefinition
-      description: 'Returns a new ImportBookDefinition with associations that '
     content.vb: Public Shared Function BuildDefinition(workbook As PreviewWorkbook, model As Model, localizer As NameLocalizer) As ImportBookDefinition
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition*
   modifiers.csharp:
@@ -107,37 +94,26 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingEntity(System.String, System.String[], TimeCockpit.Data.DataModel.Model, TimeCockpit.Data.Localization.NameLocalizer, out TimeCockpit.Data.DataModel.ModelEntityBase)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: TryFindMatchingEntity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 80
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\ntries to find a matching entity in the model.\n"
-  example: []
   syntax:
     content: public static bool TryFindMatchingEntity(string worksheetName, string[] columnNames, Model model, NameLocalizer localizer, out ModelEntityBase matchingEntity)
     parameters:
     - id: worksheetName
       type: System.String
-      description: the worksheet name we are trying to match.
     - id: columnNames
       type: System.String[]
-      description: the names of the columns of that worksheet.
     - id: model
       type: TimeCockpit.Data.DataModel.Model
-      description: the model to find an entity within.
     - id: localizer
       type: TimeCockpit.Data.Localization.NameLocalizer
-      description: the localizer to use.
     - id: matchingEntity
       type: TimeCockpit.Data.DataModel.ModelEntityBase
-      description: the resulting matching entity, null if none is found.
     return:
       type: System.Boolean
-      description: true if a matching entity is found, false otherwise.
     content.vb: Public Shared Function TryFindMatchingEntity(worksheetName As String, columnNames As String(), model As Model, localizer As NameLocalizer, ByRef matchingEntity As ModelEntityBase) As Boolean
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingEntity*
   nameWithType.vb: ImportDefinitionBuilder.TryFindMatchingEntity(String, String(), Model, NameLocalizer, ByRef ModelEntityBase)
@@ -161,28 +137,20 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.FindPotentialPropertyMatches(System.String[], TimeCockpit.Data.DataModel.Model)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: FindPotentialPropertyMatches
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 119
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nTries to find potential matches in the model by matching properties only.\n"
-  example: []
   syntax:
     content: public static ModelEntityBase[] FindPotentialPropertyMatches(string[] columnNames, Model model)
     parameters:
     - id: columnNames
       type: System.String[]
-      description: the column names to look for.
     - id: model
       type: TimeCockpit.Data.DataModel.Model
-      description: the model to find an entity within.
     return:
       type: TimeCockpit.Data.DataModel.ModelEntityBase[]
-      description: Returns an array of possible matching entities.
     content.vb: Public Shared Function FindPotentialPropertyMatches(columnNames As String(), model As Model) As ModelEntityBase()
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.FindPotentialPropertyMatches*
   nameWithType.vb: ImportDefinitionBuilder.FindPotentialPropertyMatches(String(), Model)
@@ -206,31 +174,22 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings(System.String[], TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.Localization.NameLocalizer)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: BuildColumnMappings
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 131
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nBuilds the mapping between the source columns and the target entity.\n"
-  example: []
   syntax:
     content: public static ImportColumnDefinition[] BuildColumnMappings(string[] sourceColumnNames, ModelEntityBase targetModelEntity, NameLocalizer localizer)
     parameters:
     - id: sourceColumnNames
       type: System.String[]
-      description: the names of the source columns to map.
     - id: targetModelEntity
       type: TimeCockpit.Data.DataModel.ModelEntityBase
-      description: the target model entity to be imported.
     - id: localizer
       type: TimeCockpit.Data.Localization.NameLocalizer
-      description: The localizer.
     return:
       type: TimeCockpit.Data.Import.ImportColumnDefinition[]
-      description: returns an array of import column definitions containing the mappings.
     content.vb: Public Shared Function BuildColumnMappings(sourceColumnNames As String(), targetModelEntity As ModelEntityBase, localizer As NameLocalizer) As ImportColumnDefinition()
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings*
   nameWithType.vb: ImportDefinitionBuilder.BuildColumnMappings(String(), ModelEntityBase, NameLocalizer)
@@ -254,34 +213,24 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation(System.String, TimeCockpit.Data.DataModel.ModelEntityBase, TimeCockpit.Data.Localization.NameLocalizer, out TimeCockpit.Data.Import.ImportColumnDefinition)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: TryFindMatchingPropertyOrRelation
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 180
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nTries to match the source column name to a property or relation in the target model entity.\n"
-  example: []
   syntax:
     content: public static bool TryFindMatchingPropertyOrRelation(string sourceName, ModelEntityBase targetModelEntity, NameLocalizer localizer, out ImportColumnDefinition matchingColumn)
     parameters:
     - id: sourceName
       type: System.String
-      description: the name of the source column to match.
     - id: targetModelEntity
       type: TimeCockpit.Data.DataModel.ModelEntityBase
-      description: the target model entity to match.
     - id: localizer
       type: TimeCockpit.Data.Localization.NameLocalizer
-      description: The localizer to check for a name.
     - id: matchingColumn
       type: TimeCockpit.Data.Import.ImportColumnDefinition
-      description: out parameter returning the matching column mapping, null if there is none.
     return:
       type: System.Boolean
-      description: Returns true if a match was found, false otherwise.
     content.vb: Public Shared Function TryFindMatchingPropertyOrRelation(sourceName As String, targetModelEntity As ModelEntityBase, localizer As NameLocalizer, ByRef matchingColumn As ImportColumnDefinition) As Boolean
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation*
   nameWithType.vb: ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation(String, ModelEntityBase, NameLocalizer, ByRef ImportColumnDefinition)
@@ -305,31 +254,22 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity(TimeCockpit.Data.DataModel.ModelEntityBase[], TimeCockpit.Data.Localization.NameLocalizer, out TimeCockpit.Data.Import.ImportBookDefinition, out TimeCockpit.Data.Import.PreviewWorkbook)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: BuildDefinitionAndTemplateForEntity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 217
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGenerates a import definition and a preview workbook for a given model entity.\n"
-  example: []
   syntax:
     content: public static void BuildDefinitionAndTemplateForEntity(ModelEntityBase[] targetEntities, NameLocalizer localizer, out ImportBookDefinition definition, out PreviewWorkbook previewWorkbook)
     parameters:
     - id: targetEntities
       type: TimeCockpit.Data.DataModel.ModelEntityBase[]
-      description: 'the entity to generate the definition and preview workbook for. '
     - id: localizer
       type: TimeCockpit.Data.Localization.NameLocalizer
-      description: The localizer to check for a name.
     - id: definition
       type: TimeCockpit.Data.Import.ImportBookDefinition
-      description: the resulting definition.
     - id: previewWorkbook
       type: TimeCockpit.Data.Import.PreviewWorkbook
-      description: the resulting preview workbook
     content.vb: Public Shared Sub BuildDefinitionAndTemplateForEntity(targetEntities As ModelEntityBase(), localizer As NameLocalizer, ByRef definition As ImportBookDefinition, ByRef previewWorkbook As PreviewWorkbook)
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity*
   nameWithType.vb: ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity(ModelEntityBase(), NameLocalizer, ByRef ImportBookDefinition, ByRef PreviewWorkbook)
@@ -353,25 +293,18 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.OrderByRelations(TimeCockpit.Data.DataModel.ModelEntityBase[])
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: OrderByRelations
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 311
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nOrders the entities such that the first element in resulting array in such a way, that no relation points backwards\ntowards an previous entity.\n"
-  example: []
   syntax:
     content: public static ModelEntityBase[] OrderByRelations(ModelEntityBase[] sourceEntities)
     parameters:
     - id: sourceEntities
       type: TimeCockpit.Data.DataModel.ModelEntityBase[]
-      description: the entities to put in order.
     return:
       type: TimeCockpit.Data.DataModel.ModelEntityBase[]
-      description: Returns the ordered entities.
     content.vb: Public Shared Function OrderByRelations(sourceEntities As ModelEntityBase()) As ModelEntityBase()
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.OrderByRelations*
   nameWithType.vb: ImportDefinitionBuilder.OrderByRelations(ModelEntityBase())
@@ -395,25 +328,18 @@ items:
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.SanitizeWorksheetName(System.String)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    id: SanitizeWorksheetName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportDefinitionBuilder.cs
-    startLine: 321
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nSanitizes the worksheet name to be Excel compatible (used for all import engines).\n"
-  example: []
   syntax:
     content: public static string SanitizeWorksheetName(string sourceName)
     parameters:
     - id: sourceName
       type: System.String
-      description: The source name to sanitize.
     return:
       type: System.String
-      description: Returns a new string, valid for use with excel.
     content.vb: Public Shared Function SanitizeWorksheetName(sourceName As String) As String
   overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.SanitizeWorksheetName*
   modifiers.csharp:
@@ -422,10 +348,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor
+  commentId: M:TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Import.ImportDefinitionBuilder
+  langs:
+  - csharp
+  - vb
+  name: ImportDefinitionBuilder()
+  nameWithType: ImportDefinitionBuilder.ImportDefinitionBuilder()
+  fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.ImportDefinitionBuilder()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public ImportDefinitionBuilder()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -717,59 +668,59 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition
-  isExternal: false
+  isExternal: true
   name: BuildDefinition
   nameWithType: ImportDefinitionBuilder.BuildDefinition
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinition
 - uid: TimeCockpit.Data.Import.PreviewWorkbook
   commentId: T:TimeCockpit.Data.Import.PreviewWorkbook
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewWorkbook
   nameWithType: PreviewWorkbook
   fullName: TimeCockpit.Data.Import.PreviewWorkbook
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
 - uid: TimeCockpit.Data.Localization.NameLocalizer
   commentId: T:TimeCockpit.Data.Localization.NameLocalizer
   parent: TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: NameLocalizer
   nameWithType: NameLocalizer
   fullName: TimeCockpit.Data.Localization.NameLocalizer
 - uid: TimeCockpit.Data.Import.ImportBookDefinition
   commentId: T:TimeCockpit.Data.Import.ImportBookDefinition
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportBookDefinition
   nameWithType: ImportBookDefinition
   fullName: TimeCockpit.Data.Import.ImportBookDefinition
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.Localization
   commentId: N:TimeCockpit.Data.Localization
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Localization
   nameWithType: TimeCockpit.Data.Localization
   fullName: TimeCockpit.Data.Localization
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingEntity*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingEntity
-  isExternal: false
+  isExternal: true
   name: TryFindMatchingEntity
   nameWithType: ImportDefinitionBuilder.TryFindMatchingEntity
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingEntity
@@ -781,6 +732,7 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.String[]
+  isExternal: true
   name: String[]
   nameWithType: String[]
   fullName: System.String[]
@@ -808,7 +760,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase
   commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: ModelEntityBase
   nameWithType: ModelEntityBase
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase
@@ -821,11 +773,12 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.FindPotentialPropertyMatches*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.FindPotentialPropertyMatches
-  isExternal: false
+  isExternal: true
   name: FindPotentialPropertyMatches
   nameWithType: ImportDefinitionBuilder.FindPotentialPropertyMatches
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.FindPotentialPropertyMatches
 - uid: TimeCockpit.Data.DataModel.ModelEntityBase[]
+  isExternal: true
   name: ModelEntityBase[]
   nameWithType: ModelEntityBase[]
   fullName: TimeCockpit.Data.DataModel.ModelEntityBase[]
@@ -837,6 +790,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -845,16 +799,18 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings
-  isExternal: false
+  isExternal: true
   name: BuildColumnMappings
   nameWithType: ImportDefinitionBuilder.BuildColumnMappings
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildColumnMappings
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition[]
+  isExternal: true
   name: ImportColumnDefinition[]
   nameWithType: ImportColumnDefinition[]
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition[]
@@ -866,6 +822,7 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -874,37 +831,44 @@ references:
     name: ImportColumnDefinition
     nameWithType: ImportColumnDefinition
     fullName: TimeCockpit.Data.Import.ImportColumnDefinition
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation
-  isExternal: false
+  isExternal: true
   name: TryFindMatchingPropertyOrRelation
   nameWithType: ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.TryFindMatchingPropertyOrRelation
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition
   commentId: T:TimeCockpit.Data.Import.ImportColumnDefinition
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: ImportColumnDefinition
   nameWithType: ImportColumnDefinition
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity
-  isExternal: false
+  isExternal: true
   name: BuildDefinitionAndTemplateForEntity
   nameWithType: ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.BuildDefinitionAndTemplateForEntity
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.OrderByRelations*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.OrderByRelations
-  isExternal: false
+  isExternal: true
   name: OrderByRelations
   nameWithType: ImportDefinitionBuilder.OrderByRelations
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.OrderByRelations
 - uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.SanitizeWorksheetName*
   commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.SanitizeWorksheetName
-  isExternal: false
+  isExternal: true
   name: SanitizeWorksheetName
   nameWithType: ImportDefinitionBuilder.SanitizeWorksheetName
   fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.SanitizeWorksheetName
+- uid: TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor*
+  commentId: Overload:TimeCockpit.Data.Import.ImportDefinitionBuilder.#ctor
+  isExternal: true
+  name: ImportDefinitionBuilder
+  nameWithType: ImportDefinitionBuilder.ImportDefinitionBuilder
+  fullName: TimeCockpit.Data.Import.ImportDefinitionBuilder.ImportDefinitionBuilder

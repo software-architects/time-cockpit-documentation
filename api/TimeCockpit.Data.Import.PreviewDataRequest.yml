@@ -21,16 +21,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: PreviewDataRequest
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 18
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass holding data to be loaded for preview in the importer.\n"
-  example: []
   syntax:
     content: public class PreviewDataRequest
     content.vb: Public Class PreviewDataRequest
@@ -62,34 +57,24 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest(System.Byte[], System.Int32, System.String, System.Collections.Generic.Dictionary<System.String, System.Int32>, System.Int32)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 28
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the PreviewDataRequest class.\n"
-  example: []
   syntax:
     content: public PreviewDataRequest(byte[] sourceData, int sampleSize, string sourceProvider, Dictionary<string, int> headerRowPositions, int defaultHeaderRowNumber)
     parameters:
     - id: sourceData
       type: System.Byte[]
-      description: the source data to preview.
     - id: sampleSize
       type: System.Int32
-      description: the sample size of each column.
     - id: sourceProvider
       type: System.String
-      description: the provider to use for importing.
     - id: headerRowPositions
       type: System.Collections.Generic.Dictionary{System.String,System.Int32}
-      description: a dictionary holding offsets (optional).
     - id: defaultHeaderRowNumber
       type: System.Int32
-      description: The default row number, in case no row number is passed for the worksheet with <code data-dev-comment-type="paramref" class="paramref">headerRowOffsets</code>.
     content.vb: Public Sub New(sourceData As Byte(), sampleSize As Integer, sourceProvider As String, headerRowPositions As Dictionary(Of String, Integer), defaultHeaderRowNumber As Integer)
   overload: TimeCockpit.Data.Import.PreviewDataRequest.#ctor*
   nameWithType.vb: PreviewDataRequest.PreviewDataRequest(Byte(), Int32, String, Dictionary(Of String, Int32), Int32)
@@ -99,6 +84,70 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest(System.Byte(), System.Int32, System.String, System.Collections.Generic.Dictionary(Of System.String, System.Int32), System.Int32)
   name.vb: PreviewDataRequest(Byte(), Int32, String, Dictionary(Of String, Int32), Int32)
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, PreviewDataRequest)
+  nameWithType: PreviewDataRequest.Write(JsonWriter, PreviewDataRequest)
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewDataRequest)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static void Write(JsonWriter writer, PreviewDataRequest previewDataRequest)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+    - id: previewDataRequest
+      type: TimeCockpit.Data.Import.PreviewDataRequest
+    content.vb: Public Shared Sub Write(writer As JsonWriter, previewDataRequest As PreviewDataRequest)
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  id: Read(Newtonsoft.Json.Linq.JObject)
+  parent: TimeCockpit.Data.Import.PreviewDataRequest
+  langs:
+  - csharp
+  - vb
+  name: Read(JObject)
+  nameWithType: PreviewDataRequest.Read(JObject)
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static PreviewDataRequest Read(JObject requestJson)
+    parameters:
+    - id: requestJson
+      type: Newtonsoft.Json.Linq.JObject
+    return:
+      type: TimeCockpit.Data.Import.PreviewDataRequest
+    content.vb: Public Shared Function Read(requestJson As JObject) As PreviewDataRequest
+  overload: TimeCockpit.Data.Import.PreviewDataRequest.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
   commentId: P:TimeCockpit.Data.Import.PreviewDataRequest.SourceData
   id: SourceData
@@ -111,16 +160,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: SourceData
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 40
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the source data.\n"
-  example: []
   syntax:
     content: public byte[] SourceData { get; }
     parameters: []
@@ -146,16 +190,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: SampleSize
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 45
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the sample size\n"
-  example: []
   syntax:
     content: public int SampleSize { get; }
     parameters: []
@@ -181,16 +220,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: SourceProvider
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 50
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the source provider for the preview data request.\n"
-  example: []
   syntax:
     content: public string SourceProvider { get; }
     parameters: []
@@ -216,16 +250,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: HeaderRowPositions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 55
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the header row positions.\n"
-  example: []
   syntax:
     content: public Dictionary<string, int> HeaderRowPositions { get; }
     parameters: []
@@ -251,16 +280,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: DefaultHeaderRowNumber
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 60
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the fallback header row number.\n"
-  example: []
   syntax:
     content: public int DefaultHeaderRowNumber { get; }
     parameters: []
@@ -274,88 +298,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
-  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
-  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewDataRequest)
-  parent: TimeCockpit.Data.Import.PreviewDataRequest
-  langs:
-  - csharp
-  - vb
-  name: Write(JsonWriter, PreviewDataRequest)
-  nameWithType: PreviewDataRequest.Write(JsonWriter, PreviewDataRequest)
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewDataRequest)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: Write
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 67
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nwrites a preview data request class to a json writer.\n"
-  example: []
-  syntax:
-    content: public static void Write(JsonWriter writer, PreviewDataRequest previewDataRequest)
-    parameters:
-    - id: writer
-      type: Newtonsoft.Json.JsonWriter
-      description: the writer to write to.
-    - id: previewDataRequest
-      type: TimeCockpit.Data.Import.PreviewDataRequest
-      description: the previewDataRequest to write.
-    content.vb: Public Shared Sub Write(writer As JsonWriter, previewDataRequest As PreviewDataRequest)
-  overload: TimeCockpit.Data.Import.PreviewDataRequest.Write*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
-  commentId: M:TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
-  id: Read(Newtonsoft.Json.Linq.JObject)
-  parent: TimeCockpit.Data.Import.PreviewDataRequest
-  langs:
-  - csharp
-  - vb
-  name: Read(JObject)
-  nameWithType: PreviewDataRequest.Read(JObject)
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read(Newtonsoft.Json.Linq.JObject)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    id: Read
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewDataRequest.cs
-    startLine: 105
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nReads the preview data request from a JSON object.\n"
-  example: []
-  syntax:
-    content: public static PreviewDataRequest Read(JObject requestJson)
-    parameters:
-    - id: requestJson
-      type: Newtonsoft.Json.Linq.JObject
-      description: The request as <xref href="Newtonsoft.Json.Linq.JObject" data-throw-if-not-resolved="false"></xref>.
-    return:
-      type: TimeCockpit.Data.Import.PreviewDataRequest
-      description: Returns the preview data request.
-    content.vb: Public Shared Function Read(requestJson As JObject) As PreviewDataRequest
-  overload: TimeCockpit.Data.Import.PreviewDataRequest.Read*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -647,17 +593,18 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.PreviewDataRequest.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.#ctor
-  isExternal: false
+  isExternal: true
   name: PreviewDataRequest
   nameWithType: PreviewDataRequest.PreviewDataRequest
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.PreviewDataRequest
 - uid: System.Byte[]
+  isExternal: true
   name: Byte[]
   nameWithType: Byte[]
   fullName: System.Byte[]
@@ -809,49 +756,17 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceData*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceData
-  isExternal: false
-  name: SourceData
-  nameWithType: PreviewDataRequest.SourceData
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
-  isExternal: false
-  name: SampleSize
-  nameWithType: PreviewDataRequest.SampleSize
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
-  isExternal: false
-  name: SourceProvider
-  nameWithType: PreviewDataRequest.SourceProvider
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
-  isExternal: false
-  name: HeaderRowPositions
-  nameWithType: PreviewDataRequest.HeaderRowPositions
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
-  isExternal: false
-  name: DefaultHeaderRowNumber
-  nameWithType: PreviewDataRequest.DefaultHeaderRowNumber
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
 - uid: TimeCockpit.Data.Import.PreviewDataRequest.Write*
   commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.Write
-  isExternal: false
+  isExternal: true
   name: Write
   nameWithType: PreviewDataRequest.Write
   fullName: TimeCockpit.Data.Import.PreviewDataRequest.Write
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
@@ -859,32 +774,48 @@ references:
 - uid: TimeCockpit.Data.Import.PreviewDataRequest
   commentId: T:TimeCockpit.Data.Import.PreviewDataRequest
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewDataRequest
   nameWithType: PreviewDataRequest
   fullName: TimeCockpit.Data.Import.PreviewDataRequest
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.Read
+  isExternal: true
+  name: Read
+  nameWithType: PreviewDataRequest.Read
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read
 - uid: Newtonsoft.Json.Linq.JObject
-  commentId: T:Newtonsoft.Json.Linq.JObject
-  parent: Newtonsoft.Json.Linq
   isExternal: true
   name: JObject
   nameWithType: JObject
   fullName: Newtonsoft.Json.Linq.JObject
-- uid: TimeCockpit.Data.Import.PreviewDataRequest.Read*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.Read
-  isExternal: false
-  name: Read
-  nameWithType: PreviewDataRequest.Read
-  fullName: TimeCockpit.Data.Import.PreviewDataRequest.Read
-- uid: Newtonsoft.Json.Linq
-  commentId: N:Newtonsoft.Json.Linq
-  isExternal: false
-  name: Newtonsoft.Json.Linq
-  nameWithType: Newtonsoft.Json.Linq
-  fullName: Newtonsoft.Json.Linq
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceData*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+  isExternal: true
+  name: SourceData
+  nameWithType: PreviewDataRequest.SourceData
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceData
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+  isExternal: true
+  name: SampleSize
+  nameWithType: PreviewDataRequest.SampleSize
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SampleSize
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+  isExternal: true
+  name: SourceProvider
+  nameWithType: PreviewDataRequest.SourceProvider
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.SourceProvider
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+  isExternal: true
+  name: HeaderRowPositions
+  nameWithType: PreviewDataRequest.HeaderRowPositions
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.HeaderRowPositions
+- uid: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber
+  isExternal: true
+  name: DefaultHeaderRowNumber
+  nameWithType: PreviewDataRequest.DefaultHeaderRowNumber
+  fullName: TimeCockpit.Data.Import.PreviewDataRequest.DefaultHeaderRowNumber

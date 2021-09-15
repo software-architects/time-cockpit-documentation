@@ -17,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectSettings
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    id: SelectSettings
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    startLine: 12
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nRepresents the settings for a Select-operation\n"
-  example: []
   syntax:
     content: public sealed class SelectSettings
     content.vb: Public NotInheritable Class SelectSettings
@@ -63,16 +59,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectSettings.SelectSettings()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nInitializes a new instance of the SelectSettings class\n"
-  example: []
   syntax:
     content: public SelectSettings()
     content.vb: Public Sub New
@@ -93,19 +85,15 @@ items:
   fullName: TimeCockpit.Data.Database.SelectSettings.MaxRowCount
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    id: MaxRowCount
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    startLine: 35
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets the maximum number of rows to fetch\n"
   remarks: "\nThe default value for this property is <xref uid=\"langword_csharp_null\" name=\"null\" href=\"\"></xref> (i.e. fetch\nall available rows.\n"
-  example: []
   syntax:
-    content: public long ? MaxRowCount { get; set; }
+    content: public long? MaxRowCount { get; set; }
     parameters: []
     return:
       type: System.Nullable{System.Int64}
@@ -129,16 +117,12 @@ items:
   fullName: TimeCockpit.Data.Database.SelectSettings.Environment
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    id: Environment
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    startLine: 40
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets the instance of <xref href=\"TimeCockpit.Data.Database.SelectSettings.Environment\" data-throw-if-not-resolved=\"false\"></xref> that provides access to certain global values like the current user.\n"
-  example: []
   syntax:
     content: public Environment Environment { get; set; }
     parameters: []
@@ -164,17 +148,13 @@ items:
   fullName: TimeCockpit.Data.Database.SelectSettings.BlobHandling
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    id: BlobHandling
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/SelectSettings.cs
-    startLine: 52
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nGets or sets a value that specifies how binary properties stored in blob store are handled.\n"
   remarks: "\n<p>\n  If the property is set to <xref href=\"TimeCockpit.Data.Database.BlobHandling.DoNotReadBlobs\" data-throw-if-not-resolved=\"false\"></xref> blobs stored in blob\n  storage are not read from blob storage. Instead the value of the blob property in \n<xref href=\"TimeCockpit.Data.EntityObject\" data-throw-if-not-resolved=\"false\"></xref> is the GUID and not the binary value of the blob.\n</p>\n"
-  example: []
   syntax:
     content: public BlobHandling BlobHandling { get; set; }
     parameters: []
@@ -189,11 +169,9 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: TimeCockpit.Data.Database.DbClient.Select(System.String,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Database.SelectSettings,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
-  commentId: M:TimeCockpit.Data.Database.DbClient.Select(System.String,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Database.SelectSettings,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -483,21 +461,24 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.Database.DbClient.Select(System.String,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Database.SelectSettings,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  commentId: M:TimeCockpit.Data.Database.DbClient.Select(System.String,TimeCockpit.Data.DataModel.Model,TimeCockpit.Data.Database.SelectSettings,System.Collections.Generic.IEnumerable{TimeCockpit.Data.QueryLanguage.QueryParameter},TimeCockpit.Data.Database.SelectCache)
+  isExternal: true
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Database.SelectSettings.#ctor*
   commentId: Overload:TimeCockpit.Data.Database.SelectSettings.#ctor
-  isExternal: false
+  isExternal: true
   name: SelectSettings
   nameWithType: SelectSettings.SelectSettings
   fullName: TimeCockpit.Data.Database.SelectSettings.SelectSettings
 - uid: TimeCockpit.Data.Database.SelectSettings.MaxRowCount*
   commentId: Overload:TimeCockpit.Data.Database.SelectSettings.MaxRowCount
-  isExternal: false
+  isExternal: true
   name: MaxRowCount
   nameWithType: SelectSettings.MaxRowCount
   fullName: TimeCockpit.Data.Database.SelectSettings.MaxRowCount
@@ -584,46 +565,35 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: TimeCockpit.Data.Database.SelectSettings.Environment
-  commentId: P:TimeCockpit.Data.Database.SelectSettings.Environment
 - uid: TimeCockpit.Data.Database.SelectSettings.Environment*
   commentId: Overload:TimeCockpit.Data.Database.SelectSettings.Environment
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: SelectSettings.Environment
   fullName: TimeCockpit.Data.Database.SelectSettings.Environment
 - uid: TimeCockpit.Data.Environment
   commentId: T:TimeCockpit.Data.Environment
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: Environment
   nameWithType: Environment
   fullName: TimeCockpit.Data.Environment
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
-- uid: TimeCockpit.Data.Database.BlobHandling.DoNotReadBlobs
-  commentId: F:TimeCockpit.Data.Database.BlobHandling.DoNotReadBlobs
-- uid: TimeCockpit.Data.EntityObject
-  commentId: T:TimeCockpit.Data.EntityObject
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: EntityObject
-  nameWithType: EntityObject
-  fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data.Database.SelectSettings.BlobHandling*
   commentId: Overload:TimeCockpit.Data.Database.SelectSettings.BlobHandling
-  isExternal: false
+  isExternal: true
   name: BlobHandling
   nameWithType: SelectSettings.BlobHandling
   fullName: TimeCockpit.Data.Database.SelectSettings.BlobHandling
 - uid: TimeCockpit.Data.Database.BlobHandling
   commentId: T:TimeCockpit.Data.Database.BlobHandling
   parent: TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: BlobHandling
   nameWithType: BlobHandling
   fullName: TimeCockpit.Data.Database.BlobHandling

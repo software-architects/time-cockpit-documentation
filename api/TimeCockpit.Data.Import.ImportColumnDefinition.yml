@@ -6,6 +6,8 @@ items:
   parent: TimeCockpit.Data.Import
   children:
   - TimeCockpit.Data.Import.ImportColumnDefinition.#ctor
+  - TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
+  - TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
   - TimeCockpit.Data.Import.ImportColumnDefinition.IsKey
   - TimeCockpit.Data.Import.ImportColumnDefinition.NonPrefixedRelationMatchPath
   - TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
@@ -15,6 +17,7 @@ items:
   - TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
   - TimeCockpit.Data.Import.ImportColumnDefinition.RelationMatchPath
   - TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
+  - TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
   - TimeCockpit.Data.Import.ImportColumnDefinition.TargetPropertyName
   - TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
   langs:
@@ -25,16 +28,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: ImportColumnDefinition
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 19
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\ndefinition of a column for import.\n"
-  example: []
   syntax:
     content: 'public class ImportColumnDefinition : INotifyPropertyChanged'
     content.vb: >-
@@ -70,16 +68,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.ImportColumnDefinition()
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 59
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the ImportColumnDefinition class.\n"
-  example: []
   syntax:
     content: public ImportColumnDefinition()
     content.vb: Public Sub New
@@ -88,39 +81,61 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
-  commentId: E:TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
-  id: PropertyChanged
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
+  commentId: M:TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
+  id: WriteXml
   parent: TimeCockpit.Data.Import.ImportColumnDefinition
   langs:
   - csharp
   - vb
-  name: PropertyChanged
-  nameWithType: ImportColumnDefinition.PropertyChanged
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
-  type: Event
+  name: WriteXml()
+  nameWithType: ImportColumnDefinition.WriteXml()
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml()
+  type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: PropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 66
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nEvent for INotifyPropertyChanged.\n"
-  example: []
   syntax:
-    content: public event PropertyChangedEventHandler PropertyChanged
+    content: public XElement WriteXml()
     return:
-      type: System.ComponentModel.PropertyChangedEventHandler
-    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
-  implements:
-  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+      type: System.Xml.Linq.XElement
+    content.vb: Public Function WriteXml As XElement
+  overload: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
+  commentId: M:TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: TimeCockpit.Data.Import.ImportColumnDefinition
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(String)
+  nameWithType: ImportColumnDefinition.OnPropertyChanged(String)
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: protected void OnPropertyChanged(string propertyName)
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
+  overload: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
   commentId: P:TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
   id: SourceColumnName
@@ -133,16 +148,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: SourceColumnName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 71
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets the source column name.\n"
-  example: []
   syntax:
     content: public string SourceColumnName { get; set; }
     parameters: []
@@ -150,6 +160,36 @@ items:
       type: System.String
     content.vb: Public Property SourceColumnName As String
   overload: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
+  commentId: P:TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
+  id: SourceColumnType
+  parent: TimeCockpit.Data.Import.ImportColumnDefinition
+  langs:
+  - csharp
+  - vb
+  name: SourceColumnType
+  nameWithType: ImportColumnDefinition.SourceColumnType
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
+  type: Property
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public ImportColumnType SourceColumnType { get; set; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.Import.ImportColumnType
+    content.vb: Public Property SourceColumnType As ImportColumnType
+  overload: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType*
   modifiers.csharp:
   - public
   - get
@@ -168,16 +208,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.TargetPropertyName
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: TargetPropertyName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 91
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets the name of the target property.\n"
-  example: []
   syntax:
     content: public string TargetPropertyName { get; set; }
     parameters: []
@@ -203,16 +238,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.RelationMatchPath
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: RelationMatchPath
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 111
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets the match path that is used when selecting relations.\n"
-  example: []
   syntax:
     content: public string RelationMatchPath { get; set; }
     parameters: []
@@ -238,16 +268,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.NonPrefixedRelationMatchPath
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: NonPrefixedRelationMatchPath
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 131
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the non-prefixed (without &apos;.&apos;) relation match path.\n"
-  example: []
   syntax:
     content: public string NonPrefixedRelationMatchPath { get; }
     parameters: []
@@ -273,17 +298,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.Optional
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: Optional
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 153
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets a value indicating whether an error should be reported for this column.\n"
-  remarks: "\nThis is mostly for columns importing relations. If this flag is set for a column, rows for which\nno matching related object could be found, do not yield an error message.\n"
-  example: []
   syntax:
     content: public bool Optional { get; set; }
     parameters: []
@@ -309,17 +328,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.IsKey
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: IsKey
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 176
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets a value indicating whether this column is the key for the \n"
-  remarks: "\nThis property should be true for the column that uniquely identifies an entity.\n"
-  example: []
   syntax:
     content: public bool IsKey { get; set; }
     parameters: []
@@ -345,16 +358,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PreprocessFormula
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: PreprocessFormula
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 196
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets the pre-process formula.\n"
-  example: []
   syntax:
     content: public string PreprocessFormula { get; set; }
     parameters: []
@@ -380,16 +388,11 @@ items:
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PostprocessFormula
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: PostprocessFormula
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 216
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets or sets the post process formula.\n"
-  example: []
   syntax:
     content: public string PostprocessFormula { get; set; }
     parameters: []
@@ -403,77 +406,96 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
-  commentId: M:TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
-  id: WriteXml
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
+  commentId: P:TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
+  id: HandleOnInsertExpression
   parent: TimeCockpit.Data.Import.ImportColumnDefinition
   langs:
   - csharp
   - vb
-  name: WriteXml()
-  nameWithType: ImportColumnDefinition.WriteXml()
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml()
-  type: Method
+  name: HandleOnInsertExpression
+  nameWithType: ImportColumnDefinition.HandleOnInsertExpression
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
+  type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: WriteXml
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 237
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nwrites the column definition to XAML.\n"
-  example: []
   syntax:
-    content: public XElement WriteXml()
+    content: public string HandleOnInsertExpression { get; set; }
+    parameters: []
     return:
-      type: System.Xml.Linq.XElement
-      description: Returns the node representing the column definition.
-    content.vb: Public Function WriteXml As XElement
-  overload: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml*
+      type: System.String
+    content.vb: Public Property HandleOnInsertExpression As String
+  overload: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
+  commentId: P:TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
+  id: HandleOnUpdateExpression
+  parent: TimeCockpit.Data.Import.ImportColumnDefinition
+  langs:
+  - csharp
+  - vb
+  name: HandleOnUpdateExpression
+  nameWithType: ImportColumnDefinition.HandleOnUpdateExpression
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
+  type: Property
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public string HandleOnUpdateExpression { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HandleOnUpdateExpression As String
+  overload: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
+  commentId: E:TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
+  id: PropertyChanged
+  parent: TimeCockpit.Data.Import.ImportColumnDefinition
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: ImportColumnDefinition.PropertyChanged
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PropertyChanged
+  type: Event
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
-  commentId: M:TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
-  id: OnPropertyChanged(System.String)
-  parent: TimeCockpit.Data.Import.ImportColumnDefinition
-  langs:
-  - csharp
-  - vb
-  name: OnPropertyChanged(String)
-  nameWithType: ImportColumnDefinition.OnPropertyChanged(String)
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged(System.String)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    id: OnPropertyChanged
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/ImportColumnDefinition.cs
-    startLine: 272
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\ncalled when a property of this class instance changes.\n"
-  example: []
-  syntax:
-    content: protected void OnPropertyChanged(string propertyName)
-    parameters:
-    - id: propertyName
-      type: System.String
-      description: name of the property that changed.
-    content.vb: Protected Sub OnPropertyChanged(propertyName As String)
-  overload: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -485,8 +507,6 @@ references:
   nameWithType: Object
   fullName: System.Object
 - uid: System.ComponentModel.INotifyPropertyChanged
-  commentId: T:System.ComponentModel.INotifyPropertyChanged
-  parent: System.ComponentModel
   isExternal: true
   name: INotifyPropertyChanged
   nameWithType: INotifyPropertyChanged
@@ -772,42 +792,33 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.ComponentModel
-  commentId: N:System.ComponentModel
-  isExternal: false
-  name: System.ComponentModel
-  nameWithType: System.ComponentModel
-  fullName: System.ComponentModel
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.#ctor
-  isExternal: false
+  isExternal: true
   name: ImportColumnDefinition
   nameWithType: ImportColumnDefinition.ImportColumnDefinition
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.ImportColumnDefinition
-- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-  parent: System.ComponentModel.INotifyPropertyChanged
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
   isExternal: true
-  name: PropertyChanged
-  nameWithType: INotifyPropertyChanged.PropertyChanged
-  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-- uid: System.ComponentModel.PropertyChangedEventHandler
-  commentId: T:System.ComponentModel.PropertyChangedEventHandler
-  parent: System.ComponentModel
+  name: WriteXml
+  nameWithType: ImportColumnDefinition.WriteXml
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
+- uid: System.Xml.Linq.XElement
   isExternal: true
-  name: PropertyChangedEventHandler
-  nameWithType: PropertyChangedEventHandler
-  fullName: System.ComponentModel.PropertyChangedEventHandler
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName*
-  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
-  isExternal: false
-  name: SourceColumnName
-  nameWithType: ImportColumnDefinition.SourceColumnName
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
+  name: XElement
+  nameWithType: XElement
+  fullName: System.Xml.Linq.XElement
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged
+  isExternal: true
+  name: OnPropertyChanged
+  nameWithType: ImportColumnDefinition.OnPropertyChanged
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -815,27 +826,46 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
+  isExternal: true
+  name: SourceColumnName
+  nameWithType: ImportColumnDefinition.SourceColumnName
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnName
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
+  isExternal: true
+  name: SourceColumnType
+  nameWithType: ImportColumnDefinition.SourceColumnType
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.SourceColumnType
+- uid: TimeCockpit.Data.Import.ImportColumnType
+  commentId: T:TimeCockpit.Data.Import.ImportColumnType
+  parent: TimeCockpit.Data.Import
+  isExternal: true
+  name: ImportColumnType
+  nameWithType: ImportColumnType
+  fullName: TimeCockpit.Data.Import.ImportColumnType
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.TargetPropertyName*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.TargetPropertyName
-  isExternal: false
+  isExternal: true
   name: TargetPropertyName
   nameWithType: ImportColumnDefinition.TargetPropertyName
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.TargetPropertyName
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.RelationMatchPath*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.RelationMatchPath
-  isExternal: false
+  isExternal: true
   name: RelationMatchPath
   nameWithType: ImportColumnDefinition.RelationMatchPath
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.RelationMatchPath
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.NonPrefixedRelationMatchPath*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.NonPrefixedRelationMatchPath
-  isExternal: false
+  isExternal: true
   name: NonPrefixedRelationMatchPath
   nameWithType: ImportColumnDefinition.NonPrefixedRelationMatchPath
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.NonPrefixedRelationMatchPath
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.Optional*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.Optional
-  isExternal: false
+  isExternal: true
   name: Optional
   nameWithType: ImportColumnDefinition.Optional
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.Optional
@@ -848,44 +878,36 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.IsKey*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.IsKey
-  isExternal: false
+  isExternal: true
   name: IsKey
   nameWithType: ImportColumnDefinition.IsKey
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.IsKey
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.PreprocessFormula*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.PreprocessFormula
-  isExternal: false
+  isExternal: true
   name: PreprocessFormula
   nameWithType: ImportColumnDefinition.PreprocessFormula
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PreprocessFormula
 - uid: TimeCockpit.Data.Import.ImportColumnDefinition.PostprocessFormula*
   commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.PostprocessFormula
-  isExternal: false
+  isExternal: true
   name: PostprocessFormula
   nameWithType: ImportColumnDefinition.PostprocessFormula
   fullName: TimeCockpit.Data.Import.ImportColumnDefinition.PostprocessFormula
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml*
-  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
-  isExternal: false
-  name: WriteXml
-  nameWithType: ImportColumnDefinition.WriteXml
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.WriteXml
-- uid: System.Xml.Linq.XElement
-  commentId: T:System.Xml.Linq.XElement
-  parent: System.Xml.Linq
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
   isExternal: true
-  name: XElement
-  nameWithType: XElement
-  fullName: System.Xml.Linq.XElement
-- uid: System.Xml.Linq
-  commentId: N:System.Xml.Linq
-  isExternal: false
-  name: System.Xml.Linq
-  nameWithType: System.Xml.Linq
-  fullName: System.Xml.Linq
-- uid: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged*
-  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged
-  isExternal: false
-  name: OnPropertyChanged
-  nameWithType: ImportColumnDefinition.OnPropertyChanged
-  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.OnPropertyChanged
+  name: HandleOnInsertExpression
+  nameWithType: ImportColumnDefinition.HandleOnInsertExpression
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnInsertExpression
+- uid: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression*
+  commentId: Overload:TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
+  isExternal: true
+  name: HandleOnUpdateExpression
+  nameWithType: ImportColumnDefinition.HandleOnUpdateExpression
+  fullName: TimeCockpit.Data.Import.ImportColumnDefinition.HandleOnUpdateExpression
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  isExternal: true
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler

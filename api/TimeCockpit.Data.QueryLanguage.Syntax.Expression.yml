@@ -4,7 +4,8 @@ items:
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Expression
   id: Expression
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  children: []
+  children:
+  - TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor
   langs:
   - csharp
   - vb
@@ -13,16 +14,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Expression.cs
-    id: Expression
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/Expression.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAbstract AST node type representing an expression.\n"
-  example: []
   syntax:
     content: 'public abstract class Expression : Node'
     content.vb: >-
@@ -58,10 +55,35 @@ items:
   - Public
   - MustInherit
   - Class
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Expression
+  langs:
+  - csharp
+  - vb
+  name: Expression()
+  nameWithType: Expression.Expression()
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression.Expression()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  syntax:
+    content: protected Expression()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -75,14 +97,14 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -91,6 +113,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -98,6 +121,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -106,6 +130,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -113,6 +138,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -397,7 +423,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.Expression.#ctor
+  isExternal: true
+  name: Expression
+  nameWithType: Expression.Expression
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Expression.Expression

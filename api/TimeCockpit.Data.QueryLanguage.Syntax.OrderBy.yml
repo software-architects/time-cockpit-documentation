@@ -16,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    id: OrderBy
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAST Node representing an oder by.\ne.g. in <example>From X In Timesheet OrderBy X.BeginTime ASC, X.Description DESC Select X</example>, \nthe node represents to the &quot;OrderBy X.BeginTime ASC, X.Description DESC&quot; part.\n"
-  example: []
   syntax:
     content: 'public class OrderBy : Node'
     content.vb: >-
@@ -60,16 +56,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.OrderBy(System.Collections.Generic.IEnumerable<TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    startLine: 25
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.OrderBy\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public OrderBy(IEnumerable<OrderByExpression> expressions)
     parameters:
@@ -85,41 +77,6 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.OrderBy(System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression))
   name.vb: OrderBy(IEnumerable(Of OrderByExpression))
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
-  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
-  id: Expressions
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-  langs:
-  - csharp
-  - vb
-  name: Expressions
-  nameWithType: OrderBy.Expressions
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    id: Expressions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    startLine: 38
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nGets the expressions by which the OrderBy is ordered.\n"
-  example: []
-  syntax:
-    content: public ReadOnlyCollection<OrderByExpression> Expressions { get; }
-    parameters: []
-    return:
-      type: System.Collections.ObjectModel.ReadOnlyCollection{TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression}
-    content.vb: Public ReadOnly Property Expressions As ReadOnlyCollection(Of OrderByExpression)
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -132,16 +89,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/OrderBy.cs
-    startLine: 48
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)\" data-throw-if-not-resolved=\"false\"></xref> function.\n"
-  example: []
   syntax:
     content: public override Node Accept(Visitor visitor)
     parameters:
@@ -160,10 +113,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
+  id: Expressions
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
+  langs:
+  - csharp
+  - vb
+  name: Expressions
+  nameWithType: OrderBy.Expressions
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the expressions by which the OrderBy is ordered.\n"
+  syntax:
+    content: public ReadOnlyCollection<OrderByExpression> Expressions { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression}
+    content.vb: Public ReadOnly Property Expressions As ReadOnlyCollection(Of OrderByExpression)
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -177,7 +161,7 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
@@ -462,20 +446,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: OrderBy
-  nameWithType: OrderBy
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.#ctor
-  isExternal: false
+  isExternal: true
   name: OrderBy
   nameWithType: OrderBy.OrderBy
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.OrderBy
@@ -502,6 +479,7 @@ references:
     name: OrderByExpression
     nameWithType: OrderByExpression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -518,6 +496,7 @@ references:
     name: OrderByExpression
     nameWithType: OrderByExpression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -562,13 +541,67 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
+  isExternal: true
+  name: Accept(Visitor)
+  nameWithType: Node.Accept(Visitor)
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+  spec.csharp:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
+    name: Accept
+    nameWithType: Node.Accept
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    name: Visitor
+    nameWithType: Visitor
+    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept
+  isExternal: true
+  name: Accept
+  nameWithType: OrderBy.Accept
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+  parent: TimeCockpit.Data.QueryLanguage.Syntax
+  isExternal: true
+  name: Visitor
+  nameWithType: Visitor
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
-  isExternal: false
+  isExternal: true
   name: Expressions
   nameWithType: OrderBy.Expressions
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Expressions
@@ -595,6 +628,7 @@ references:
     name: OrderByExpression
     nameWithType: OrderByExpression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -611,6 +645,7 @@ references:
     name: OrderByExpression
     nameWithType: OrderByExpression
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -655,131 +690,7 @@ references:
     fullName: )
 - uid: System.Collections.ObjectModel
   commentId: N:System.Collections.ObjectModel
-  isExternal: false
+  isExternal: true
   name: System.Collections.ObjectModel
   nameWithType: System.Collections.ObjectModel
   fullName: System.Collections.ObjectModel
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitOrderBy(OrderBy)
-  nameWithType: Visitor.VisitOrderBy(OrderBy)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)
-    name: VisitOrderBy
-    nameWithType: Visitor.VisitOrderBy
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-    name: OrderBy
-    nameWithType: OrderBy
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy(TimeCockpit.Data.QueryLanguage.Syntax.OrderBy)
-    name: VisitOrderBy
-    nameWithType: Visitor.VisitOrderBy
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitOrderBy
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-    name: OrderBy
-    nameWithType: OrderBy
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
-  name: Accept(Visitor)
-  nameWithType: Node.Accept(Visitor)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
-    name: Accept
-    nameWithType: Node.Accept
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-    name: Visitor
-    nameWithType: Visitor
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept
-  isExternal: false
-  name: Accept
-  nameWithType: OrderBy.Accept
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.OrderBy.Accept
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: Visitor
-  nameWithType: Visitor
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor

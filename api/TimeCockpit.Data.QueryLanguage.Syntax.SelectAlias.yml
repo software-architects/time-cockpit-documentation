@@ -16,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    id: SelectAlias
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    startLine: 19
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nAST Node defining a select clause for selecting a simple alias.\ne.g.\nIn \n<pre><code>From X In Timesheet Select X</code></pre>, the node refers to &quot;Select X&quot;.\n"
-  example: []
   syntax:
     content: 'public class SelectAlias : Select'
     content.vb: >-
@@ -65,16 +61,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.SelectAlias(System.String, System.Int32)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nInitializes a new instance of the <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
   syntax:
     content: public SelectAlias(string aliasName = null, int topCount = -1)
     parameters:
@@ -90,41 +82,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
-  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
-  id: AliasName
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
-  langs:
-  - csharp
-  - vb
-  name: AliasName
-  nameWithType: SelectAlias.AliasName
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    id: AliasName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    startLine: 35
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.QueryLanguage.Syntax
-  summary: "\nGets the name of the alias that is selected.\n"
-  example: []
-  syntax:
-    content: public string AliasName { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property AliasName As String
-  overload: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   id: Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -137,16 +94,12 @@ items:
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    id: Accept
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/QueryLanguage/Syntax/SelectAlias.cs
-    startLine: 42
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.QueryLanguage.Syntax
   summary: "\nDispatches to the correct <xref href=\"TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)\" data-throw-if-not-resolved=\"false\"></xref> call.\n"
-  example: []
   syntax:
     content: public override Node Accept(Visitor visitor)
     parameters:
@@ -165,10 +118,41 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
+  commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
+  id: AliasName
+  parent: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
+  langs:
+  - csharp
+  - vb
+  name: AliasName
+  nameWithType: SelectAlias.AliasName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.QueryLanguage.Syntax
+  summary: "\nGets the name of the alias that is selected.\n"
+  syntax:
+    content: public string AliasName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property AliasName As String
+  overload: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax
   commentId: N:TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.QueryLanguage.Syntax
   nameWithType: TimeCockpit.Data.QueryLanguage.Syntax
   fullName: TimeCockpit.Data.QueryLanguage.Syntax
@@ -182,28 +166,28 @@ references:
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Node
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Node
   nameWithType: Node
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Select
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Select
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Select
   nameWithType: Select
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Select
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Select.IsTopLimited
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Select.IsTopLimited
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Select
-  isExternal: false
+  isExternal: true
   name: IsTopLimited
   nameWithType: Select.IsTopLimited
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Select.IsTopLimited
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Select.TopCount
   commentId: P:TimeCockpit.Data.QueryLanguage.Syntax.Select.TopCount
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Select
-  isExternal: false
+  isExternal: true
   name: TopCount
   nameWithType: Select.TopCount
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Select.TopCount
@@ -488,20 +472,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
-  commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
-  parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
-  name: SelectAlias
-  nameWithType: SelectAlias
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.#ctor*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.#ctor
-  isExternal: false
+  isExternal: true
   name: SelectAlias
   nameWithType: SelectAlias.SelectAlias
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.SelectAlias
@@ -519,53 +496,10 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName*
-  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
-  isExternal: false
-  name: AliasName
-  nameWithType: SelectAlias.AliasName
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
-- uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  parent: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
-  isExternal: false
-  name: VisitQuery(Query)
-  nameWithType: Visitor.VisitQuery(Query)
-  fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-  spec.csharp:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery(TimeCockpit.Data.QueryLanguage.Syntax.Query)
-    name: VisitQuery
-    nameWithType: Visitor.VisitQuery
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor.VisitQuery
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: TimeCockpit.Data.QueryLanguage.Syntax.Query
-    name: Query
-    nameWithType: Query
-    fullName: TimeCockpit.Data.QueryLanguage.Syntax.Query
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   commentId: M:TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
   parent: TimeCockpit.Data.QueryLanguage.Syntax.Node
-  isExternal: false
+  isExternal: true
   name: Accept(Visitor)
   nameWithType: Node.Accept(Visitor)
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept(TimeCockpit.Data.QueryLanguage.Syntax.Visitor)
@@ -574,6 +508,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -581,6 +516,7 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -589,6 +525,7 @@ references:
     name: Accept
     nameWithType: Node.Accept
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Node.Accept
+    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -596,19 +533,26 @@ references:
     name: Visitor
     nameWithType: Visitor
     fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept*
   commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept
-  isExternal: false
+  isExternal: true
   name: Accept
   nameWithType: SelectAlias.Accept
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.Accept
 - uid: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   commentId: T:TimeCockpit.Data.QueryLanguage.Syntax.Visitor
   parent: TimeCockpit.Data.QueryLanguage.Syntax
-  isExternal: false
+  isExternal: true
   name: Visitor
   nameWithType: Visitor
   fullName: TimeCockpit.Data.QueryLanguage.Syntax.Visitor
+- uid: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName*
+  commentId: Overload:TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName
+  isExternal: true
+  name: AliasName
+  nameWithType: SelectAlias.AliasName
+  fullName: TimeCockpit.Data.QueryLanguage.Syntax.SelectAlias.AliasName

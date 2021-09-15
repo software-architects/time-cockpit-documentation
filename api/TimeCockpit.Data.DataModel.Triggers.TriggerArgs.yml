@@ -7,6 +7,7 @@ items:
   children:
   - TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject[],TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime,System.String,System.Boolean)
   - TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
+  - TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Empty
   - TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
   langs:
   - csharp
@@ -16,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    id: TriggerArgs
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    startLine: 15
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Triggers
   summary: "\nHolds the inserted and deleted collections\n"
-  example: []
   syntax:
     content: public class TriggerArgs
     content.vb: Public Class TriggerArgs
@@ -45,75 +42,36 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
-  commentId: P:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
-  id: Inserted
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Empty
+  commentId: F:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Empty
+  id: Empty
   parent: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
   langs:
   - csharp
   - vb
-  name: Inserted
-  nameWithType: TriggerArgs.Inserted
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
-  type: Property
+  name: Empty
+  nameWithType: TriggerArgs.Empty
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Empty
+  type: Field
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    id: Inserted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    startLine: 29
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Triggers
-  summary: "\nGets the inserted entity objects.\n"
-  example: []
+  summary: "\nEmpty/default TriggerArgs.\n"
   syntax:
-    content: public EntityObject[] Inserted { get; }
-    parameters: []
+    content: public static readonly TriggerArgs Empty
     return:
-      type: TimeCockpit.Data.EntityObject[]
-    content.vb: Public ReadOnly Property Inserted As EntityObject()
-  overload: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted*
+      type: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+    content.vb: Public Shared ReadOnly Empty As TriggerArgs
   modifiers.csharp:
   - public
-  - get
+  - static
+  - readonly
   modifiers.vb:
   - Public
-  - ReadOnly
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
-  commentId: P:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
-  id: Deleted
-  parent: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
-  langs:
-  - csharp
-  - vb
-  name: Deleted
-  nameWithType: TriggerArgs.Deleted
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
-  type: Property
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    id: Deleted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    startLine: 34
-  assemblies:
-  - TimeCockpit.Data
-  namespace: TimeCockpit.Data.DataModel.Triggers
-  summary: "\nGets the deleted entity objects.\n"
-  example: []
-  syntax:
-    content: public EntityObject[] Deleted { get; }
-    parameters: []
-    return:
-      type: TimeCockpit.Data.EntityObject[]
-    content.vb: Public ReadOnly Property Deleted As EntityObject()
-  overload: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
+  - Shared
   - ReadOnly
 - uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject[],TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime,System.String,System.Boolean)
   commentId: M:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create(TimeCockpit.Data.DataContext,TimeCockpit.Data.EntityObject[],TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime,System.String,System.Boolean)
@@ -127,16 +85,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject[], TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime, System.String, System.Boolean)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    id: Create
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Triggers/TriggerArgs.cs
-    startLine: 45
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Triggers
   summary: "\nCreates the trigger args from a specified list of entity objects.\n"
-  example: []
   syntax:
     content: public static TriggerArgs Create(DataContext context, EntityObject[] entityObjects, TriggerExecutionTime execTime, string includeClause = null, bool autoIncludeRelations = true)
     parameters:
@@ -169,10 +123,72 @@ items:
   - Shared
   fullName.vb: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create(TimeCockpit.Data.DataContext, TimeCockpit.Data.EntityObject(), TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime, System.String, System.Boolean)
   name.vb: Create(DataContext, EntityObject(), TriggerExecutionTime, String, Boolean)
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+  commentId: P:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+  id: Inserted
+  parent: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+  langs:
+  - csharp
+  - vb
+  name: Inserted
+  nameWithType: TriggerArgs.Inserted
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Triggers
+  summary: "\nGets the inserted entity objects.\n"
+  syntax:
+    content: public EntityObject[] Inserted { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject[]
+    content.vb: Public ReadOnly Property Inserted As EntityObject()
+  overload: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
+  commentId: P:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
+  id: Deleted
+  parent: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+  langs:
+  - csharp
+  - vb
+  name: Deleted
+  nameWithType: TriggerArgs.Deleted
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
+  type: Property
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel.Triggers
+  summary: "\nGets the deleted entity objects.\n"
+  syntax:
+    content: public EntityObject[] Deleted { get; }
+    parameters: []
+    return:
+      type: TimeCockpit.Data.EntityObject[]
+    content.vb: Public ReadOnly Property Deleted As EntityObject()
+  overload: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 references:
 - uid: TimeCockpit.Data.DataModel.Triggers
   commentId: N:TimeCockpit.Data.DataModel.Triggers
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Triggers
   nameWithType: TimeCockpit.Data.DataModel.Triggers
   fullName: TimeCockpit.Data.DataModel.Triggers
@@ -464,17 +480,32 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted*
-  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
-  isExternal: false
-  name: Inserted
-  nameWithType: TriggerArgs.Inserted
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+  commentId: T:TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+  parent: TimeCockpit.Data.DataModel.Triggers
+  isExternal: true
+  name: TriggerArgs
+  nameWithType: TriggerArgs
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create*
+  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create
+  isExternal: true
+  name: Create
+  nameWithType: TriggerArgs.Create
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create
+- uid: TimeCockpit.Data.DataContext
+  commentId: T:TimeCockpit.Data.DataContext
+  parent: TimeCockpit.Data
+  isExternal: true
+  name: DataContext
+  nameWithType: DataContext
+  fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data.EntityObject[]
+  isExternal: true
   name: EntityObject[]
   nameWithType: EntityObject[]
   fullName: TimeCockpit.Data.EntityObject[]
@@ -486,6 +517,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
@@ -494,39 +526,14 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted*
-  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
-  isExternal: false
-  name: Deleted
-  nameWithType: TriggerArgs.Deleted
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
-  commentId: T:TimeCockpit.Data.DataModel.Triggers.TriggerArgs
-  parent: TimeCockpit.Data.DataModel.Triggers
-  isExternal: false
-  name: TriggerArgs
-  nameWithType: TriggerArgs
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs
-- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create*
-  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create
-  isExternal: false
-  name: Create
-  nameWithType: TriggerArgs.Create
-  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Create
-- uid: TimeCockpit.Data.DataContext
-  commentId: T:TimeCockpit.Data.DataContext
-  parent: TimeCockpit.Data
-  isExternal: false
-  name: DataContext
-  nameWithType: DataContext
-  fullName: TimeCockpit.Data.DataContext
 - uid: TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime
   commentId: T:TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime
   parent: TimeCockpit.Data.DataModel.Triggers
-  isExternal: false
+  isExternal: true
   name: TriggerExecutionTime
   nameWithType: TriggerExecutionTime
   fullName: TimeCockpit.Data.DataModel.Triggers.TriggerExecutionTime
@@ -546,7 +553,19 @@ references:
   fullName: System.Boolean
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted*
+  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+  isExternal: true
+  name: Inserted
+  nameWithType: TriggerArgs.Inserted
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Inserted
+- uid: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted*
+  commentId: Overload:TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted
+  isExternal: true
+  name: Deleted
+  nameWithType: TriggerArgs.Deleted
+  fullName: TimeCockpit.Data.DataModel.Triggers.TriggerArgs.Deleted

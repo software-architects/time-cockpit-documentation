@@ -20,16 +20,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewWorksheet
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: PreviewWorksheet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 18
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nclass holding a grid of strings representing the preview data for the import.\n"
-  example: []
   syntax:
     content: public class PreviewWorksheet
     content.vb: Public Class PreviewWorksheet
@@ -60,25 +55,18 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.PreviewWorksheet(System.String, System.Collections.Generic.IEnumerable<TimeCockpit.Data.Import.PreviewColumn>)
   type: Constructor
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: .ctor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 25
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nInitializes a new instance of the PreviewWorksheet class.\n"
-  example: []
   syntax:
     content: public PreviewWorksheet(string name, IEnumerable<PreviewColumn> columns)
     parameters:
     - id: name
       type: System.String
-      description: name of the worksheet.
     - id: columns
       type: System.Collections.Generic.IEnumerable{TimeCockpit.Data.Import.PreviewColumn}
-      description: the columns of the worksheet.
     content.vb: Public Sub New(name As String, columns As IEnumerable(Of PreviewColumn))
   overload: TimeCockpit.Data.Import.PreviewWorksheet.#ctor*
   nameWithType.vb: PreviewWorksheet.PreviewWorksheet(String, IEnumerable(Of PreviewColumn))
@@ -88,6 +76,100 @@ items:
   - Public
   fullName.vb: TimeCockpit.Data.Import.PreviewWorksheet.PreviewWorksheet(System.String, System.Collections.Generic.IEnumerable(Of TimeCockpit.Data.Import.PreviewColumn))
   name.vb: PreviewWorksheet(String, IEnumerable(Of PreviewColumn))
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
+  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
+  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
+  parent: TimeCockpit.Data.Import.PreviewWorksheet
+  langs:
+  - csharp
+  - vb
+  name: Write(JsonWriter, PreviewWorksheet)
+  nameWithType: PreviewWorksheet.Write(JsonWriter, PreviewWorksheet)
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewWorksheet)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static void Write(JsonWriter writer, PreviewWorksheet worksheet)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+    - id: worksheet
+      type: TimeCockpit.Data.Import.PreviewWorksheet
+    content.vb: Public Shared Sub Write(writer As JsonWriter, worksheet As PreviewWorksheet)
+  overload: TimeCockpit.Data.Import.PreviewWorksheet.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
+  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
+  id: Read(Newtonsoft.Json.Linq.JObject)
+  parent: TimeCockpit.Data.Import.PreviewWorksheet
+  langs:
+  - csharp
+  - vb
+  name: Read(JObject)
+  nameWithType: PreviewWorksheet.Read(JObject)
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public static PreviewWorksheet Read(JObject json)
+    parameters:
+    - id: json
+      type: Newtonsoft.Json.Linq.JObject
+    return:
+      type: TimeCockpit.Data.Import.PreviewWorksheet
+    content.vb: Public Shared Function Read(json As JObject) As PreviewWorksheet
+  overload: TimeCockpit.Data.Import.PreviewWorksheet.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.ToString
+  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.ToString
+  id: ToString
+  parent: TimeCockpit.Data.Import.PreviewWorksheet
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PreviewWorksheet.ToString()
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.ToString()
+  type: Method
+  source:
+    path: TimeCockpit.Data.Import
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data.Import
+  namespace: TimeCockpit.Data.Import
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: TimeCockpit.Data.Import.PreviewWorksheet.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 - uid: TimeCockpit.Data.Import.PreviewWorksheet.Name
   commentId: P:TimeCockpit.Data.Import.PreviewWorksheet.Name
   id: Name
@@ -100,16 +182,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.Name
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: Name
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 34
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the name of the worksheet.\n"
-  example: []
   syntax:
     content: public string Name { get; }
     parameters: []
@@ -135,16 +212,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.Columns
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: Columns
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 43
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the columns of the preview worksheet.\n"
-  example: []
   syntax:
     content: public IEnumerable<PreviewColumn> Columns { get; }
     parameters: []
@@ -170,16 +242,11 @@ items:
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: ColumnsSorted
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 51
+    path: TimeCockpit.Data.Import
+    isExternal: true
   assemblies:
   - TimeCockpit.Data.Import
   namespace: TimeCockpit.Data.Import
-  summary: "\nGets the clumns sorted by name.\n"
-  example: []
   syntax:
     content: public IEnumerable<PreviewColumn> ColumnsSorted { get; }
     parameters: []
@@ -193,124 +260,10 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
-  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
-  id: Write(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.Import.PreviewWorksheet)
-  parent: TimeCockpit.Data.Import.PreviewWorksheet
-  langs:
-  - csharp
-  - vb
-  name: Write(JsonWriter, PreviewWorksheet)
-  nameWithType: PreviewWorksheet.Write(JsonWriter, PreviewWorksheet)
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Write(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.Import.PreviewWorksheet)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: Write
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 64
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nWrites the worksheet to a json writer.\n"
-  example: []
-  syntax:
-    content: public static void Write(JsonWriter writer, PreviewWorksheet worksheet)
-    parameters:
-    - id: writer
-      type: Newtonsoft.Json.JsonWriter
-      description: the writer to write to.
-    - id: worksheet
-      type: TimeCockpit.Data.Import.PreviewWorksheet
-      description: the worksheet to write.
-    content.vb: Public Shared Sub Write(writer As JsonWriter, worksheet As PreviewWorksheet)
-  overload: TimeCockpit.Data.Import.PreviewWorksheet.Write*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
-  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
-  id: Read(Newtonsoft.Json.Linq.JObject)
-  parent: TimeCockpit.Data.Import.PreviewWorksheet
-  langs:
-  - csharp
-  - vb
-  name: Read(JObject)
-  nameWithType: PreviewWorksheet.Read(JObject)
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Read(Newtonsoft.Json.Linq.JObject)
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: Read
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 88
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\nReads a preview worksheet from the reader.\n"
-  example: []
-  syntax:
-    content: public static PreviewWorksheet Read(JObject json)
-    parameters:
-    - id: json
-      type: Newtonsoft.Json.Linq.JObject
-      description: the <xref href="Newtonsoft.Json.Linq.JObject" data-throw-if-not-resolved="false"></xref> to read from.
-    return:
-      type: TimeCockpit.Data.Import.PreviewWorksheet
-      description: Returns a new preview worksheet read from the reader.
-    content.vb: Public Shared Function Read(json As JObject) As PreviewWorksheet
-  overload: TimeCockpit.Data.Import.PreviewWorksheet.Read*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.ToString
-  commentId: M:TimeCockpit.Data.Import.PreviewWorksheet.ToString
-  id: ToString
-  parent: TimeCockpit.Data.Import.PreviewWorksheet
-  langs:
-  - csharp
-  - vb
-  name: ToString()
-  nameWithType: PreviewWorksheet.ToString()
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.ToString()
-  type: Method
-  source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    id: ToString
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data.Import/PreviewWorksheet.cs
-    startLine: 100
-  assemblies:
-  - TimeCockpit.Data.Import
-  namespace: TimeCockpit.Data.Import
-  summary: "\ncustom ToString()\n"
-  example: []
-  syntax:
-    content: public override string ToString()
-    return:
-      type: System.String
-      description: returns the name of the preview worksheet.
-    content.vb: Public Overrides Function ToString As String
-  overridden: System.Object.ToString
-  overload: TimeCockpit.Data.Import.PreviewWorksheet.ToString*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
 references:
 - uid: TimeCockpit.Data.Import
   commentId: N:TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Import
   nameWithType: TimeCockpit.Data.Import
   fullName: TimeCockpit.Data.Import
@@ -571,13 +524,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Import.PreviewWorksheet.#ctor*
   commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.#ctor
-  isExternal: false
+  isExternal: true
   name: PreviewWorksheet
   nameWithType: PreviewWorksheet.PreviewWorksheet
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.PreviewWorksheet
@@ -611,6 +564,7 @@ references:
     name: PreviewColumn
     nameWithType: PreviewColumn
     fullName: TimeCockpit.Data.Import.PreviewColumn
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -627,6 +581,7 @@ references:
     name: PreviewColumn
     nameWithType: PreviewColumn
     fullName: TimeCockpit.Data.Import.PreviewColumn
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -671,37 +626,17 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.Name*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Name
-  isExternal: false
-  name: Name
-  nameWithType: PreviewWorksheet.Name
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Name
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.Columns*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Columns
-  isExternal: false
-  name: Columns
-  nameWithType: PreviewWorksheet.Columns
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Columns
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted
-  isExternal: false
-  name: ColumnsSorted
-  nameWithType: PreviewWorksheet.ColumnsSorted
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted
 - uid: TimeCockpit.Data.Import.PreviewWorksheet.Write*
   commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Write
-  isExternal: false
+  isExternal: true
   name: Write
   nameWithType: PreviewWorksheet.Write
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.Write
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
@@ -709,35 +644,21 @@ references:
 - uid: TimeCockpit.Data.Import.PreviewWorksheet
   commentId: T:TimeCockpit.Data.Import.PreviewWorksheet
   parent: TimeCockpit.Data.Import
-  isExternal: false
+  isExternal: true
   name: PreviewWorksheet
   nameWithType: PreviewWorksheet
   fullName: TimeCockpit.Data.Import.PreviewWorksheet
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.Read*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Read
+  isExternal: true
+  name: Read
+  nameWithType: PreviewWorksheet.Read
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Read
 - uid: Newtonsoft.Json.Linq.JObject
-  commentId: T:Newtonsoft.Json.Linq.JObject
-  parent: Newtonsoft.Json.Linq
   isExternal: true
   name: JObject
   nameWithType: JObject
   fullName: Newtonsoft.Json.Linq.JObject
-- uid: TimeCockpit.Data.Import.PreviewWorksheet.Read*
-  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Read
-  isExternal: false
-  name: Read
-  nameWithType: PreviewWorksheet.Read
-  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Read
-- uid: Newtonsoft.Json.Linq
-  commentId: N:Newtonsoft.Json.Linq
-  isExternal: false
-  name: Newtonsoft.Json.Linq
-  nameWithType: Newtonsoft.Json.Linq
-  fullName: Newtonsoft.Json.Linq
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -771,7 +692,25 @@ references:
     fullName: )
 - uid: TimeCockpit.Data.Import.PreviewWorksheet.ToString*
   commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.ToString
-  isExternal: false
+  isExternal: true
   name: ToString
   nameWithType: PreviewWorksheet.ToString
   fullName: TimeCockpit.Data.Import.PreviewWorksheet.ToString
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.Name*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Name
+  isExternal: true
+  name: Name
+  nameWithType: PreviewWorksheet.Name
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Name
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.Columns*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.Columns
+  isExternal: true
+  name: Columns
+  nameWithType: PreviewWorksheet.Columns
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.Columns
+- uid: TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted*
+  commentId: Overload:TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted
+  isExternal: true
+  name: ColumnsSorted
+  nameWithType: PreviewWorksheet.ColumnsSorted
+  fullName: TimeCockpit.Data.Import.PreviewWorksheet.ColumnsSorted

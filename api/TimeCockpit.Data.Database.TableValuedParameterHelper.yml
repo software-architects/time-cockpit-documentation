@@ -5,6 +5,7 @@ items:
   id: TableValuedParameterHelper
   parent: TimeCockpit.Data.Database
   children:
+  - TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor
   - TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object[])
   - TimeCockpit.Data.Database.TableValuedParameterHelper.GetTypeName(System.String,System.Data.DataTable)
   langs:
@@ -15,16 +16,12 @@ items:
   fullName: TimeCockpit.Data.Database.TableValuedParameterHelper
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    id: TableValuedParameterHelper
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nContains helper methods for working with table valued parameters.\n"
-  example: []
   syntax:
     content: public class TableValuedParameterHelper
     content.vb: Public Class TableValuedParameterHelper
@@ -56,17 +53,13 @@ items:
   fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.GetTypeName(System.String, System.Data.DataTable)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    id: GetTypeName
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nCreates the qualified type name for a table.\n"
   remarks: "\nThe type name is stored in the table name (done correctly if table was created using <xref href=\"TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object%5b%5d)\" data-throw-if-not-resolved=\"false\"></xref>).\n"
-  example: []
   syntax:
     content: public static string GetTypeName(string schema, DataTable table)
     parameters:
@@ -99,16 +92,12 @@ items:
   fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object[])
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    id: BuildDataTable
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Database/TableValuedParameterHelper.cs
-    startLine: 66
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Database
   summary: "\nBuilds a <xref href=\"System.Data.DataTable\" data-throw-if-not-resolved=\"false\"></xref> for the given values.\n"
-  example: []
   syntax:
     content: public static DataTable BuildDataTable(object[] values)
     parameters:
@@ -129,10 +118,35 @@ items:
   - Shared
   fullName.vb: TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object())
   name.vb: BuildDataTable(Object())
+- uid: TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor
+  commentId: M:TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Database.TableValuedParameterHelper
+  langs:
+  - csharp
+  - vb
+  name: TableValuedParameterHelper()
+  nameWithType: TableValuedParameterHelper.TableValuedParameterHelper()
+  fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.TableValuedParameterHelper()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Database
+  syntax:
+    content: public TableValuedParameterHelper()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: TimeCockpit.Data.Database
   commentId: N:TimeCockpit.Data.Database
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Database
   nameWithType: TimeCockpit.Data.Database
   fullName: TimeCockpit.Data.Database
@@ -424,15 +438,13 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object[])
-  commentId: M:TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable(System.Object[])
 - uid: TimeCockpit.Data.Database.TableValuedParameterHelper.GetTypeName*
   commentId: Overload:TimeCockpit.Data.Database.TableValuedParameterHelper.GetTypeName
-  isExternal: false
+  isExternal: true
   name: GetTypeName
   nameWithType: TableValuedParameterHelper.GetTypeName
   fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.GetTypeName
@@ -444,25 +456,18 @@ references:
   nameWithType: String
   fullName: System.String
 - uid: System.Data.DataTable
-  commentId: T:System.Data.DataTable
-  parent: System.Data
   isExternal: true
   name: DataTable
   nameWithType: DataTable
   fullName: System.Data.DataTable
-- uid: System.Data
-  commentId: N:System.Data
-  isExternal: false
-  name: System.Data
-  nameWithType: System.Data
-  fullName: System.Data
 - uid: TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable*
   commentId: Overload:TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable
-  isExternal: false
+  isExternal: true
   name: BuildDataTable
   nameWithType: TableValuedParameterHelper.BuildDataTable
   fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.BuildDataTable
 - uid: System.Object[]
+  isExternal: true
   name: Object[]
   nameWithType: Object[]
   fullName: System.Object[]
@@ -487,3 +492,9 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor*
+  commentId: Overload:TimeCockpit.Data.Database.TableValuedParameterHelper.#ctor
+  isExternal: true
+  name: TableValuedParameterHelper
+  nameWithType: TableValuedParameterHelper.TableValuedParameterHelper
+  fullName: TimeCockpit.Data.Database.TableValuedParameterHelper.TableValuedParameterHelper

@@ -18,25 +18,30 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk
   type: Interface
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: IChunk
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nMeta information of a signal storage chunk.\n"
-  example: []
   syntax:
-    content: 'public interface IChunk : IDuration'
+    content: >-
+      [ModelEntityInterface]
+
+      public interface IChunk : IDuration
     content.vb: >-
+      <ModelEntityInterface>
+
       Public Interface IChunk
           Inherits IDuration
   inheritedMembers:
   - TimeCockpit.Data.DataModel.IDuration.BeginTime
   - TimeCockpit.Data.DataModel.IDuration.EndTime
   - TimeCockpit.Data.DataModel.IDuration.DurationInHours
+  attributes:
+  - type: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute
+    ctor: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - interface
@@ -55,16 +60,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Entity
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: Entity
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nGets or sets the model entity identifier\n"
-  example: []
   syntax:
     content: EntityObject Entity { get; set; }
     parameters: []
@@ -87,16 +88,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Device
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: Device
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 27
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nGets or sets the source device identifier\n"
-  example: []
   syntax:
     content: EntityObject Device { get; set; }
     parameters: []
@@ -119,16 +116,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Content
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: Content
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 32
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nGets or sets the collection of signals\n"
-  example: []
   syntax:
     content: IEnumerable<EntityObject> Content { get; set; }
     parameters: []
@@ -151,16 +144,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalBeginTime
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: LogicalBeginTime
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 37
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nGets or sets the logical begin time of the chunk\n"
-  example: []
   syntax:
     content: DateTime LogicalBeginTime { get; set; }
     parameters: []
@@ -183,16 +172,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalEndTime
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    id: LogicalEndTime
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/Signals/IChunk.cs
-    startLine: 42
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel.Signals
   summary: "\nGets or sets the logical end time of the chunk\n"
-  example: []
   syntax:
     content: DateTime LogicalEndTime { get; set; }
     parameters: []
@@ -206,72 +191,72 @@ items:
 references:
 - uid: TimeCockpit.Data.DataModel.Signals
   commentId: N:TimeCockpit.Data.DataModel.Signals
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel.Signals
   nameWithType: TimeCockpit.Data.DataModel.Signals
   fullName: TimeCockpit.Data.DataModel.Signals
 - uid: TimeCockpit.Data.DataModel.IDuration.BeginTime
   commentId: P:TimeCockpit.Data.DataModel.IDuration.BeginTime
   parent: TimeCockpit.Data.DataModel.IDuration
-  isExternal: false
+  isExternal: true
   name: BeginTime
   nameWithType: IDuration.BeginTime
   fullName: TimeCockpit.Data.DataModel.IDuration.BeginTime
 - uid: TimeCockpit.Data.DataModel.IDuration.EndTime
   commentId: P:TimeCockpit.Data.DataModel.IDuration.EndTime
   parent: TimeCockpit.Data.DataModel.IDuration
-  isExternal: false
+  isExternal: true
   name: EndTime
   nameWithType: IDuration.EndTime
   fullName: TimeCockpit.Data.DataModel.IDuration.EndTime
 - uid: TimeCockpit.Data.DataModel.IDuration.DurationInHours
   commentId: P:TimeCockpit.Data.DataModel.IDuration.DurationInHours
   parent: TimeCockpit.Data.DataModel.IDuration
-  isExternal: false
+  isExternal: true
   name: DurationInHours
   nameWithType: IDuration.DurationInHours
   fullName: TimeCockpit.Data.DataModel.IDuration.DurationInHours
 - uid: TimeCockpit.Data.DataModel.IDuration
   commentId: T:TimeCockpit.Data.DataModel.IDuration
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: IDuration
   nameWithType: IDuration
   fullName: TimeCockpit.Data.DataModel.IDuration
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.DataModel.Signals.IChunk.Entity*
   commentId: Overload:TimeCockpit.Data.DataModel.Signals.IChunk.Entity
-  isExternal: false
+  isExternal: true
   name: Entity
   nameWithType: IChunk.Entity
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Entity
 - uid: TimeCockpit.Data.EntityObject
   commentId: T:TimeCockpit.Data.EntityObject
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: EntityObject
   nameWithType: EntityObject
   fullName: TimeCockpit.Data.EntityObject
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
 - uid: TimeCockpit.Data.DataModel.Signals.IChunk.Device*
   commentId: Overload:TimeCockpit.Data.DataModel.Signals.IChunk.Device
-  isExternal: false
+  isExternal: true
   name: Device
   nameWithType: IChunk.Device
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Device
 - uid: TimeCockpit.Data.DataModel.Signals.IChunk.Content*
   commentId: Overload:TimeCockpit.Data.DataModel.Signals.IChunk.Content
-  isExternal: false
+  isExternal: true
   name: Content
   nameWithType: IChunk.Content
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.Content
@@ -298,6 +283,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -314,6 +300,7 @@ references:
     name: EntityObject
     nameWithType: EntityObject
     fullName: TimeCockpit.Data.EntityObject
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -358,13 +345,13 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalBeginTime*
   commentId: Overload:TimeCockpit.Data.DataModel.Signals.IChunk.LogicalBeginTime
-  isExternal: false
+  isExternal: true
   name: LogicalBeginTime
   nameWithType: IChunk.LogicalBeginTime
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalBeginTime
@@ -377,13 +364,13 @@ references:
   fullName: System.DateTime
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalEndTime*
   commentId: Overload:TimeCockpit.Data.DataModel.Signals.IChunk.LogicalEndTime
-  isExternal: false
+  isExternal: true
   name: LogicalEndTime
   nameWithType: IChunk.LogicalEndTime
   fullName: TimeCockpit.Data.DataModel.Signals.IChunk.LogicalEndTime

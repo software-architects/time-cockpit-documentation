@@ -13,27 +13,30 @@ items:
   fullName: TimeCockpit.Data.DataModel.ILegalHoliday
   type: Interface
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ILegalHoliday.cs
-    id: ILegalHoliday
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ILegalHoliday.cs
-    startLine: 17
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nInterface for entities supporting legal holidays\n"
   remarks: "\nThis interface is kept for compatibility reasons.\nWe need to assure that there are no more replicas where LegalHoliday still implements this interface.\n"
-  example: []
   syntax:
     content: >-
+      [ModelEntityInterface]
+
       [Obsolete]
 
       public interface ILegalHoliday
     content.vb: >-
+      <ModelEntityInterface>
+
       <Obsolete>
 
       Public Interface ILegalHoliday
   attributes:
+  - type: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute
+    ctor: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute.#ctor
+    arguments: []
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor
     arguments: []
@@ -46,7 +49,7 @@ items:
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel

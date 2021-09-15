@@ -16,26 +16,29 @@ items:
   fullName: TimeCockpit.Data.DataModel.ITimesheet
   type: Interface
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    id: ITimesheet
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nDefines the properties that a Timesheet model entity has to provide\n"
-  example: []
   syntax:
     content: >-
+      [ModelEntityInterface]
+
       [Obsolete("use TimeCockpit.Data.DataModel.IDuration instead")]
 
       public interface ITimesheet
     content.vb: >-
+      <ModelEntityInterface>
+
       <Obsolete("use TimeCockpit.Data.DataModel.IDuration instead")>
 
       Public Interface ITimesheet
   attributes:
+  - type: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute
+    ctor: TimeCockpit.Data.DataModel.ModelEntityInterfaceAttribute.#ctor
+    arguments: []
   - type: System.ObsoleteAttribute
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
@@ -59,16 +62,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ITimesheet.StartDate
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    id: StartDate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets or sets the start date+time of the timesheet record\n"
-  example: []
   syntax:
     content: DateTime StartDate { get; set; }
     parameters: []
@@ -91,16 +90,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ITimesheet.EndDate
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    id: EndDate
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    startLine: 25
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets or sets the end date+time of the timesheet record\n"
-  example: []
   syntax:
     content: DateTime EndDate { get; set; }
     parameters: []
@@ -123,16 +118,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.ITimesheet.DurationInHours
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    id: DurationInHours
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/ITimesheet.cs
-    startLine: 30
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nGets the duration of the timesheet record in hours\n"
-  example: []
   syntax:
     content: decimal DurationInHours { get; }
     parameters: []
@@ -147,13 +138,13 @@ items:
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
 - uid: TimeCockpit.Data.DataModel.ITimesheet.StartDate*
   commentId: Overload:TimeCockpit.Data.DataModel.ITimesheet.StartDate
-  isExternal: false
+  isExternal: true
   name: StartDate
   nameWithType: ITimesheet.StartDate
   fullName: TimeCockpit.Data.DataModel.ITimesheet.StartDate
@@ -166,19 +157,19 @@ references:
   fullName: System.DateTime
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataModel.ITimesheet.EndDate*
   commentId: Overload:TimeCockpit.Data.DataModel.ITimesheet.EndDate
-  isExternal: false
+  isExternal: true
   name: EndDate
   nameWithType: ITimesheet.EndDate
   fullName: TimeCockpit.Data.DataModel.ITimesheet.EndDate
 - uid: TimeCockpit.Data.DataModel.ITimesheet.DurationInHours*
   commentId: Overload:TimeCockpit.Data.DataModel.ITimesheet.DurationInHours
-  isExternal: false
+  isExternal: true
   name: DurationInHours
   nameWithType: ITimesheet.DurationInHours
   fullName: TimeCockpit.Data.DataModel.ITimesheet.DurationInHours

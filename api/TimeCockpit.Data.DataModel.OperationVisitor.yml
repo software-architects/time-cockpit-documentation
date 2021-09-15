@@ -5,6 +5,7 @@ items:
   id: OperationVisitor
   parent: TimeCockpit.Data.DataModel
   children:
+  - TimeCockpit.Data.DataModel.OperationVisitor.#ctor
   - TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.CreateOperation)
   - TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.DeleteOperation)
   - TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.UpdateOperation)
@@ -16,16 +17,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.OperationVisitor
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    id: OperationVisitor
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nAbstract base class for visitors accepted by an operation.\n"
-  example: []
   syntax:
     content: public abstract class OperationVisitor
     content.vb: Public MustInherit Class OperationVisitor
@@ -59,16 +56,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.CreateOperation)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    startLine: 22
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nvisit handler for create operations.\n"
-  example: []
   syntax:
     content: public abstract void Visit(CreateOperation createOperation)
     parameters:
@@ -95,16 +88,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.UpdateOperation)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nvisit handler for update operations.\n"
-  example: []
   syntax:
     content: public abstract void Visit(UpdateOperation updateOperation)
     parameters:
@@ -131,16 +120,12 @@ items:
   fullName: TimeCockpit.Data.DataModel.OperationVisitor.Visit(TimeCockpit.Data.DataModel.DeleteOperation)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    id: Visit
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataModel/OperationVisitor.cs
-    startLine: 34
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.DataModel
   summary: "\nvisit handler for delete operations.\n"
-  example: []
   syntax:
     content: public abstract void Visit(DeleteOperation deleteOperation)
     parameters:
@@ -155,10 +140,35 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
+- uid: TimeCockpit.Data.DataModel.OperationVisitor.#ctor
+  commentId: M:TimeCockpit.Data.DataModel.OperationVisitor.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.DataModel.OperationVisitor
+  langs:
+  - csharp
+  - vb
+  name: OperationVisitor()
+  nameWithType: OperationVisitor.OperationVisitor()
+  fullName: TimeCockpit.Data.DataModel.OperationVisitor.OperationVisitor()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.DataModel
+  syntax:
+    content: protected OperationVisitor()
+    content.vb: Protected Sub New
+  overload: TimeCockpit.Data.DataModel.OperationVisitor.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
 references:
 - uid: TimeCockpit.Data.DataModel
   commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.DataModel
   nameWithType: TimeCockpit.Data.DataModel
   fullName: TimeCockpit.Data.DataModel
@@ -450,34 +460,40 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataModel.OperationVisitor.Visit*
   commentId: Overload:TimeCockpit.Data.DataModel.OperationVisitor.Visit
-  isExternal: false
+  isExternal: true
   name: Visit
   nameWithType: OperationVisitor.Visit
   fullName: TimeCockpit.Data.DataModel.OperationVisitor.Visit
 - uid: TimeCockpit.Data.DataModel.CreateOperation
   commentId: T:TimeCockpit.Data.DataModel.CreateOperation
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: CreateOperation
   nameWithType: CreateOperation
   fullName: TimeCockpit.Data.DataModel.CreateOperation
 - uid: TimeCockpit.Data.DataModel.UpdateOperation
   commentId: T:TimeCockpit.Data.DataModel.UpdateOperation
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: UpdateOperation
   nameWithType: UpdateOperation
   fullName: TimeCockpit.Data.DataModel.UpdateOperation
 - uid: TimeCockpit.Data.DataModel.DeleteOperation
   commentId: T:TimeCockpit.Data.DataModel.DeleteOperation
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: DeleteOperation
   nameWithType: DeleteOperation
   fullName: TimeCockpit.Data.DataModel.DeleteOperation
+- uid: TimeCockpit.Data.DataModel.OperationVisitor.#ctor*
+  commentId: Overload:TimeCockpit.Data.DataModel.OperationVisitor.#ctor
+  isExternal: true
+  name: OperationVisitor
+  nameWithType: OperationVisitor.OperationVisitor
+  fullName: TimeCockpit.Data.DataModel.OperationVisitor.OperationVisitor

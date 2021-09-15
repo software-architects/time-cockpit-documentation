@@ -5,12 +5,12 @@ items:
   id: DataContextScriptExtensions
   parent: TimeCockpit.Data
   children:
-  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String)
-  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
+  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
   - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptFromResource(TimeCockpit.Data.DataContext,System.Reflection.Assembly,System.String,System.IO.Stream)
-  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,System.String)
-  - TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,System.String,System.String,System.Object[],System.IO.Stream)
-  - TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
+  - TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  - TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object[],System.IO.Stream)
+  - TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
   langs:
   - csharp
   - vb
@@ -19,16 +19,12 @@ items:
   fullName: TimeCockpit.Data.DataContextScriptExtensions
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: DataContextScriptExtensions
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 31
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nclass providing extension methods for backwards compatibility.\n"
-  example: []
   syntax:
     content: public static class DataContextScriptExtensions
     content.vb: Public Module DataContextScriptExtensions
@@ -49,42 +45,38 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String)
-  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String)
-  id: ExecuteScript(TimeCockpit.Data.DataContext,System.String)
+- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  id: ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
   isExtensionMethod: true
   parent: TimeCockpit.Data.DataContextScriptExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteScript(DataContext, String)
-  nameWithType: DataContextScriptExtensions.ExecuteScript(DataContext, String)
-  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext, System.String)
+  name: ExecuteScript(DataContext, ExecutionInfo)
+  nameWithType: DataContextScriptExtensions.ExecuteScript(DataContext, ExecutionInfo)
+  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: ExecuteScript
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 38
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCreates a new script context and executes a script.\n"
-  example: []
   syntax:
-    content: public static void ExecuteScript(this DataContext dataContext, string script)
+    content: public static void ExecuteScript(this DataContext dataContext, ExecutionInfo script)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: DataContext to execute script agains.
     - id: script
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: the script source to execute.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Sub ExecuteScript(dataContext As DataContext, script As String)
+      Public Shared Sub ExecuteScript(dataContext As DataContext, script As ExecutionInfo)
   overload: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript*
   modifiers.csharp:
   - public
@@ -92,37 +84,33 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
-  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
-  id: ExecuteScript(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
+- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
+  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
+  id: ExecuteScript(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
   isExtensionMethod: true
   parent: TimeCockpit.Data.DataContextScriptExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteScript(DataContext, String, Stream)
-  nameWithType: DataContextScriptExtensions.ExecuteScript(DataContext, String, Stream)
-  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext, System.String, System.IO.Stream)
+  name: ExecuteScript(DataContext, ExecutionInfo, Stream)
+  nameWithType: DataContextScriptExtensions.ExecuteScript(DataContext, ExecutionInfo, Stream)
+  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo, System.IO.Stream)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: ExecuteScript
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 50
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCreates a new script context and executes a script.\n"
-  example: []
   syntax:
-    content: public static void ExecuteScript(this DataContext dataContext, string script, Stream outputStream)
+    content: public static void ExecuteScript(this DataContext dataContext, ExecutionInfo script, Stream outputStream)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: DataContext to execute script agains.
     - id: script
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: the script source to execute.
     - id: outputStream
       type: System.IO.Stream
@@ -130,7 +118,7 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Sub ExecuteScript(dataContext As DataContext, script As String, outputStream As Stream)
+      Public Shared Sub ExecuteScript(dataContext As DataContext, script As ExecutionInfo, outputStream As Stream)
   overload: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript*
   modifiers.csharp:
   - public
@@ -138,37 +126,33 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,System.String)
-  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,System.String)
-  id: ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,System.String)
+- uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
+  id: ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo)
   isExtensionMethod: true
   parent: TimeCockpit.Data.DataContextScriptExtensions
   langs:
   - csharp
   - vb
-  name: ExecuteScriptReturnOutput(DataContext, String)
-  nameWithType: DataContextScriptExtensions.ExecuteScriptReturnOutput(DataContext, String)
-  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext, System.String)
+  name: ExecuteScriptReturnOutput(DataContext, ExecutionInfo)
+  nameWithType: DataContextScriptExtensions.ExecuteScriptReturnOutput(DataContext, ExecutionInfo)
+  fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: ExecuteScriptReturnOutput
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 62
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nCreates a new script context and executes a script.\n"
-  example: []
   syntax:
-    content: public static string ExecuteScriptReturnOutput(this DataContext dataContext, string script)
+    content: public static string ExecuteScriptReturnOutput(this DataContext dataContext, ExecutionInfo script)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: DataContext to execute script agains.
     - id: script
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: the script source to execute.
     return:
       type: System.String
@@ -176,7 +160,7 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function ExecuteScriptReturnOutput(dataContext As DataContext, script As String) As String
+      Public Shared Function ExecuteScriptReturnOutput(dataContext As DataContext, script As ExecutionInfo) As String
   overload: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput*
   modifiers.csharp:
   - public
@@ -197,16 +181,12 @@ items:
   fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptFromResource(TimeCockpit.Data.DataContext, System.Reflection.Assembly, System.String, System.IO.Stream)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: ExecuteScriptFromResource
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 81
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nExecutes the script from resource.\n"
-  example: []
   syntax:
     content: public static void ExecuteScriptFromResource(this DataContext dataContext, Assembly assembly, string resourceName, Stream outputStream = null)
     parameters:
@@ -233,37 +213,33 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
-  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
-  id: GetScriptResult(TimeCockpit.Data.DataContext,System.String,System.IO.Stream)
+- uid: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
+  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
+  id: GetScriptResult(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.IO.Stream)
   isExtensionMethod: true
   parent: TimeCockpit.Data.DataContextScriptExtensions
   langs:
   - csharp
   - vb
-  name: GetScriptResult(DataContext, String, Stream)
-  nameWithType: DataContextScriptExtensions.GetScriptResult(DataContext, String, Stream)
-  fullName: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext, System.String, System.IO.Stream)
+  name: GetScriptResult(DataContext, ExecutionInfo, Stream)
+  nameWithType: DataContextScriptExtensions.GetScriptResult(DataContext, ExecutionInfo, Stream)
+  fullName: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo, System.IO.Stream)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: GetScriptResult
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 94
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the script resource.\n"
-  example: []
   syntax:
-    content: public static ScriptResult GetScriptResult(this DataContext dataContext, string script, Stream outputStream = null)
+    content: public static ScriptResult GetScriptResult(this DataContext dataContext, ExecutionInfo script, Stream outputStream = null)
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: The data context.
     - id: script
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: The script.
     - id: outputStream
       type: System.IO.Stream
@@ -274,7 +250,7 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetScriptResult(dataContext As DataContext, script As String, outputStream As Stream = Nothing) As ScriptResult
+      Public Shared Function GetScriptResult(dataContext As DataContext, script As ExecutionInfo, outputStream As Stream = Nothing) As ScriptResult
   overload: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult*
   modifiers.csharp:
   - public
@@ -282,37 +258,35 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,System.String,System.String,System.Object[],System.IO.Stream)
-  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,System.String,System.String,System.Object[],System.IO.Stream)
-  id: GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,System.String,System.String,System.Object[],System.IO.Stream)
+- uid: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object[],System.IO.Stream)
+  commentId: M:TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object[],System.IO.Stream)
+  id: GetFunctionScriptResult``1(TimeCockpit.Data.DataContext,TimeCockpit.Data.Scripting.ExecutionInfo,System.String,System.Object[],System.IO.Stream)
   isExtensionMethod: true
   parent: TimeCockpit.Data.DataContextScriptExtensions
   langs:
   - csharp
   - vb
-  name: GetFunctionScriptResult<T>(DataContext, String, String, Object[], Stream)
-  nameWithType: DataContextScriptExtensions.GetFunctionScriptResult<T>(DataContext, String, String, Object[], Stream)
-  fullName: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult<T>(TimeCockpit.Data.DataContext, System.String, System.String, System.Object[], System.IO.Stream)
+  name: GetFunctionScriptResult<T>(DataContext, ExecutionInfo, String, Object[], Stream)
+  nameWithType: DataContextScriptExtensions.GetFunctionScriptResult<T>(DataContext, ExecutionInfo, String, Object[], Stream)
+  fullName: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult<T>(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo, System.String, System.Object[], System.IO.Stream)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    id: GetFunctionScriptResult
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/DataContextScriptExtensions.cs
-    startLine: 110
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data
   summary: "\nGets the script resource.\n"
-  example: []
   syntax:
-    content: 'public static T GetFunctionScriptResult<T>(this DataContext dataContext, string script, string functionName, object[] parameters, Stream outputStream = null)where T : class'
+    content: >-
+      public static T GetFunctionScriptResult<T>(this DataContext dataContext, ExecutionInfo script, string functionName, object[] parameters, Stream outputStream = null)
+          where T : class
     parameters:
     - id: dataContext
       type: TimeCockpit.Data.DataContext
       description: The data context.
     - id: script
-      type: System.String
+      type: TimeCockpit.Data.Scripting.ExecutionInfo
       description: The script.
     - id: functionName
       type: System.String
@@ -332,21 +306,21 @@ items:
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function GetFunctionScriptResult(Of T As Class)(dataContext As DataContext, script As String, functionName As String, parameters As Object(), outputStream As Stream = Nothing) As T
+      Public Shared Function GetFunctionScriptResult(Of T As Class)(dataContext As DataContext, script As ExecutionInfo, functionName As String, parameters As Object(), outputStream As Stream = Nothing) As T
   overload: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult*
-  nameWithType.vb: DataContextScriptExtensions.GetFunctionScriptResult(Of T)(DataContext, String, String, Object(), Stream)
+  nameWithType.vb: DataContextScriptExtensions.GetFunctionScriptResult(Of T)(DataContext, ExecutionInfo, String, Object(), Stream)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult(Of T)(TimeCockpit.Data.DataContext, System.String, System.String, System.Object(), System.IO.Stream)
-  name.vb: GetFunctionScriptResult(Of T)(DataContext, String, String, Object(), Stream)
+  fullName.vb: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult(Of T)(TimeCockpit.Data.DataContext, TimeCockpit.Data.Scripting.ExecutionInfo, System.String, System.Object(), System.IO.Stream)
+  name.vb: GetFunctionScriptResult(Of T)(DataContext, ExecutionInfo, String, Object(), Stream)
 references:
 - uid: TimeCockpit.Data
   commentId: N:TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data
   nameWithType: TimeCockpit.Data
   fullName: TimeCockpit.Data
@@ -638,30 +612,36 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript*
   commentId: Overload:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript
-  isExternal: false
+  isExternal: true
   name: ExecuteScript
   nameWithType: DataContextScriptExtensions.ExecuteScript
   fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScript
 - uid: TimeCockpit.Data.DataContext
   commentId: T:TimeCockpit.Data.DataContext
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: DataContext
   nameWithType: DataContext
   fullName: TimeCockpit.Data.DataContext
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: TimeCockpit.Data.Scripting.ExecutionInfo
+  commentId: T:TimeCockpit.Data.Scripting.ExecutionInfo
+  parent: TimeCockpit.Data.Scripting
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: ExecutionInfo
+  nameWithType: ExecutionInfo
+  fullName: TimeCockpit.Data.Scripting.ExecutionInfo
+- uid: TimeCockpit.Data.Scripting
+  commentId: N:TimeCockpit.Data.Scripting
+  isExternal: true
+  name: TimeCockpit.Data.Scripting
+  nameWithType: TimeCockpit.Data.Scripting
+  fullName: TimeCockpit.Data.Scripting
 - uid: System.IO.Stream
   commentId: T:System.IO.Stream
   parent: System.IO
@@ -671,19 +651,26 @@ references:
   fullName: System.IO.Stream
 - uid: System.IO
   commentId: N:System.IO
-  isExternal: false
+  isExternal: true
   name: System.IO
   nameWithType: System.IO
   fullName: System.IO
 - uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput*
   commentId: Overload:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput
-  isExternal: false
+  isExternal: true
   name: ExecuteScriptReturnOutput
   nameWithType: DataContextScriptExtensions.ExecuteScriptReturnOutput
   fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptReturnOutput
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptFromResource*
   commentId: Overload:TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptFromResource
-  isExternal: false
+  isExternal: true
   name: ExecuteScriptFromResource
   nameWithType: DataContextScriptExtensions.ExecuteScriptFromResource
   fullName: TimeCockpit.Data.DataContextScriptExtensions.ExecuteScriptFromResource
@@ -696,30 +683,31 @@ references:
   fullName: System.Reflection.Assembly
 - uid: System.Reflection
   commentId: N:System.Reflection
-  isExternal: false
+  isExternal: true
   name: System.Reflection
   nameWithType: System.Reflection
   fullName: System.Reflection
 - uid: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult*
   commentId: Overload:TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult
-  isExternal: false
+  isExternal: true
   name: GetScriptResult
   nameWithType: DataContextScriptExtensions.GetScriptResult
   fullName: TimeCockpit.Data.DataContextScriptExtensions.GetScriptResult
 - uid: TimeCockpit.Data.ScriptResult
   commentId: T:TimeCockpit.Data.ScriptResult
   parent: TimeCockpit.Data
-  isExternal: false
+  isExternal: true
   name: ScriptResult
   nameWithType: ScriptResult
   fullName: TimeCockpit.Data.ScriptResult
 - uid: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult*
   commentId: Overload:TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult
-  isExternal: false
+  isExternal: true
   name: GetFunctionScriptResult
   nameWithType: DataContextScriptExtensions.GetFunctionScriptResult
   fullName: TimeCockpit.Data.DataContextScriptExtensions.GetFunctionScriptResult
 - uid: System.Object[]
+  isExternal: true
   name: Object[]
   nameWithType: Object[]
   fullName: System.Object[]
@@ -751,7 +739,6 @@ references:
   nameWithType: T
   fullName: T
 - uid: T
-  isExternal: false
   name: T
   nameWithType: T
   fullName: T

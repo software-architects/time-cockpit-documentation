@@ -5,6 +5,7 @@ items:
   id: ModelEntityBaseJsonConverter
   parent: TimeCockpit.Data.JsonConverters
   children:
+  - TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor
   - TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create(System.Type)
   - TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ReadAnonymousTypeArray(Newtonsoft.Json.JsonReader,TimeCockpit.Data.DataModel.Model)
   - TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.WriteAnonymousTypeArray(Newtonsoft.Json.JsonWriter,TimeCockpit.Data.DataModel.Model,System.Collections.Generic.IEnumerable{TimeCockpit.Data.DataModel.ModelEntityBase})
@@ -16,17 +17,13 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    id: ModelEntityBaseJsonConverter
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    startLine: 20
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nCustom converter for <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref>s into Json.\n"
   remarks: "\nThis converter creates a new instance of <xref href=\"TimeCockpit.Data.DataModel.ModelEntity\" data-throw-if-not-resolved=\"false\"></xref> whenever\nthe Json.Net serializer encounters a <xref href=\"TimeCockpit.Data.DataModel.ModelEntityBase\" data-throw-if-not-resolved=\"false\"></xref> to deserialize.\n"
-  example: []
   syntax:
     content: 'public class ModelEntityBaseJsonConverter : CustomCreationConverter<ModelEntityBase>'
     content.vb: >-
@@ -34,22 +31,6 @@ items:
           Inherits CustomCreationConverter(Of ModelEntityBase)
   inheritance:
   - System.Object
-  - Newtonsoft.Json.JsonConverter
-  - Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  inheritedMembers:
-  - Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  - Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  - Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanConvert(System.Type)
-  - Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanWrite
-  - Newtonsoft.Json.JsonConverter.GetSchema
-  - Newtonsoft.Json.JsonConverter.CanRead
-  - System.Object.ToString
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
   - class
@@ -68,16 +49,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.WriteAnonymousTypeArray(Newtonsoft.Json.JsonWriter, TimeCockpit.Data.DataModel.Model, System.Collections.Generic.IEnumerable<TimeCockpit.Data.DataModel.ModelEntityBase>)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    id: WriteAnonymousTypeArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    startLine: 28
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nWrites a collection of model entity base types to the writer.\n"
-  example: []
   syntax:
     content: public static void WriteAnonymousTypeArray(JsonWriter writer, Model model, IEnumerable<ModelEntityBase> anonymousTypes)
     parameters:
@@ -113,16 +90,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ReadAnonymousTypeArray(Newtonsoft.Json.JsonReader, TimeCockpit.Data.DataModel.Model)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    id: ReadAnonymousTypeArray
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    startLine: 54
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nReads an array of model entity base instances\n"
-  example: []
   syntax:
     content: public static IEnumerable<ModelEntityBase> ReadAnonymousTypeArray(JsonReader reader, Model model)
     parameters:
@@ -155,16 +128,12 @@ items:
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create(System.Type)
   type: Method
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    id: Create
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/JsonConverters/ModelEntityBaseJsonConverter.cs
-    startLine: 102
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.JsonConverters
   summary: "\nCreates the specified object type.\n"
-  example: []
   syntax:
     content: public override ModelEntityBase Create(Type objectType)
     parameters:
@@ -175,7 +144,6 @@ items:
       type: TimeCockpit.Data.DataModel.ModelEntityBase
       description: an instance of <xref href="TimeCockpit.Data.DataModel.ModelEntity" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Overrides Function Create(objectType As Type) As ModelEntityBase
-  overridden: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.Create(System.Type)
   overload: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create*
   modifiers.csharp:
   - public
@@ -183,24 +151,35 @@ items:
   modifiers.vb:
   - Public
   - Overrides
+- uid: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor
+  commentId: M:TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter
+  langs:
+  - csharp
+  - vb
+  name: ModelEntityBaseJsonConverter()
+  nameWithType: ModelEntityBaseJsonConverter.ModelEntityBaseJsonConverter()
+  fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ModelEntityBaseJsonConverter()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.JsonConverters
+  syntax:
+    content: public ModelEntityBaseJsonConverter()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: TimeCockpit.Data.DataModel.ModelEntityBase
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntityBase
-  nameWithType: ModelEntityBase
-  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-- uid: TimeCockpit.Data.DataModel.ModelEntity
-  commentId: T:TimeCockpit.Data.DataModel.ModelEntity
-  parent: TimeCockpit.Data.DataModel
-  isExternal: false
-  name: ModelEntity
-  nameWithType: ModelEntity
-  fullName: TimeCockpit.Data.DataModel.ModelEntity
 - uid: TimeCockpit.Data.JsonConverters
   commentId: N:TimeCockpit.Data.JsonConverters
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.JsonConverters
   nameWithType: TimeCockpit.Data.JsonConverters
   fullName: TimeCockpit.Data.JsonConverters
@@ -211,876 +190,19 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Newtonsoft.Json.JsonConverter
-  commentId: T:Newtonsoft.Json.JsonConverter
-  parent: Newtonsoft.Json
-  isExternal: true
-  name: JsonConverter
-  nameWithType: JsonConverter
-  fullName: Newtonsoft.Json.JsonConverter
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  commentId: T:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  parent: Newtonsoft.Json.Converters
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1
-  name: CustomCreationConverter<ModelEntityBase>
-  nameWithType: CustomCreationConverter<ModelEntityBase>
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase)
-  name.vb: CustomCreationConverter(Of ModelEntityBase)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1
-    name: CustomCreationConverter
-    nameWithType: CustomCreationConverter
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1
-    name: CustomCreationConverter
-    nameWithType: CustomCreationConverter
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: TimeCockpit.Data.DataModel.ModelEntityBase
-    name: ModelEntityBase
-    nameWithType: ModelEntityBase
-    fullName: TimeCockpit.Data.DataModel.ModelEntityBase
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  parent: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  nameWithType: CustomCreationConverter<ModelEntityBase>.WriteJson(JsonWriter, Object, JsonSerializer)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase).WriteJson(JsonWriter, Object, JsonSerializer)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: WriteJson
-    nameWithType: CustomCreationConverter<ModelEntityBase>.WriteJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.WriteJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonWriter
-    name: JsonWriter
-    nameWithType: JsonWriter
-    fullName: Newtonsoft.Json.JsonWriter
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: WriteJson
-    nameWithType: CustomCreationConverter(Of ModelEntityBase).WriteJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).WriteJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonWriter
-    name: JsonWriter
-    nameWithType: JsonWriter
-    fullName: Newtonsoft.Json.JsonWriter
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  parent: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  nameWithType: CustomCreationConverter<ModelEntityBase>.ReadJson(JsonReader, Type, Object, JsonSerializer)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase).ReadJson(JsonReader, Type, Object, JsonSerializer)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: ReadJson
-    nameWithType: CustomCreationConverter<ModelEntityBase>.ReadJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.ReadJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonReader
-    name: JsonReader
-    nameWithType: JsonReader
-    fullName: Newtonsoft.Json.JsonReader
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: ReadJson
-    nameWithType: CustomCreationConverter(Of ModelEntityBase).ReadJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).ReadJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonReader
-    name: JsonReader
-    nameWithType: JsonReader
-    fullName: Newtonsoft.Json.JsonReader
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanConvert(System.Type)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanConvert(System.Type)
-  parent: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-  name: CanConvert(Type)
-  nameWithType: CustomCreationConverter<ModelEntityBase>.CanConvert(Type)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.CanConvert(System.Type)
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase).CanConvert(Type)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).CanConvert(System.Type)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-    name: CanConvert
-    nameWithType: CustomCreationConverter<ModelEntityBase>.CanConvert
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.CanConvert
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-    name: CanConvert
-    nameWithType: CustomCreationConverter(Of ModelEntityBase).CanConvert
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).CanConvert
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanWrite
-  commentId: P:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.CanWrite
-  parent: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanWrite
-  name: CanWrite
-  nameWithType: CustomCreationConverter<ModelEntityBase>.CanWrite
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.CanWrite
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase).CanWrite
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).CanWrite
-- uid: Newtonsoft.Json.JsonConverter.GetSchema
-  commentId: M:Newtonsoft.Json.JsonConverter.GetSchema
-  parent: Newtonsoft.Json.JsonConverter
-  isExternal: true
-  name: GetSchema()
-  nameWithType: JsonConverter.GetSchema()
-  fullName: Newtonsoft.Json.JsonConverter.GetSchema()
-  spec.csharp:
-  - uid: Newtonsoft.Json.JsonConverter.GetSchema
-    name: GetSchema
-    nameWithType: JsonConverter.GetSchema
-    fullName: Newtonsoft.Json.JsonConverter.GetSchema
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.JsonConverter.GetSchema
-    name: GetSchema
-    nameWithType: JsonConverter.GetSchema
-    fullName: Newtonsoft.Json.JsonConverter.GetSchema
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.JsonConverter.CanRead
-  commentId: P:Newtonsoft.Json.JsonConverter.CanRead
-  parent: Newtonsoft.Json.JsonConverter
-  isExternal: true
-  name: CanRead
-  nameWithType: JsonConverter.CanRead
-  fullName: Newtonsoft.Json.JsonConverter.CanRead
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TimeCockpit.Data.DataModel
-  commentId: N:TimeCockpit.Data.DataModel
-  isExternal: false
-  name: TimeCockpit.Data.DataModel
-  nameWithType: TimeCockpit.Data.DataModel
-  fullName: TimeCockpit.Data.DataModel
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: Newtonsoft.Json
-  commentId: N:Newtonsoft.Json
-  isExternal: false
-  name: Newtonsoft.Json
-  nameWithType: Newtonsoft.Json
-  fullName: Newtonsoft.Json
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1
-  commentId: T:Newtonsoft.Json.Converters.CustomCreationConverter`1
-  isExternal: true
-  name: CustomCreationConverter<T>
-  nameWithType: CustomCreationConverter<T>
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>
-  nameWithType.vb: CustomCreationConverter(Of T)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T)
-  name.vb: CustomCreationConverter(Of T)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1
-    name: CustomCreationConverter
-    nameWithType: CustomCreationConverter
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1
-    name: CustomCreationConverter
-    nameWithType: CustomCreationConverter
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters
-  commentId: N:Newtonsoft.Json.Converters
-  isExternal: false
-  name: Newtonsoft.Json.Converters
-  nameWithType: Newtonsoft.Json.Converters
-  fullName: Newtonsoft.Json.Converters
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-  isExternal: true
-  name: WriteJson(JsonWriter, Object, JsonSerializer)
-  nameWithType: CustomCreationConverter<T>.WriteJson(JsonWriter, Object, JsonSerializer)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
-  nameWithType.vb: CustomCreationConverter(Of T).WriteJson(JsonWriter, Object, JsonSerializer)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).WriteJson(Newtonsoft.Json.JsonWriter, System.Object, Newtonsoft.Json.JsonSerializer)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: WriteJson
-    nameWithType: CustomCreationConverter<T>.WriteJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.WriteJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonWriter
-    name: JsonWriter
-    nameWithType: JsonWriter
-    fullName: Newtonsoft.Json.JsonWriter
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: WriteJson
-    nameWithType: CustomCreationConverter(Of T).WriteJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).WriteJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonWriter
-    name: JsonWriter
-    nameWithType: JsonWriter
-    fullName: Newtonsoft.Json.JsonWriter
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-  isExternal: true
-  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
-  nameWithType: CustomCreationConverter<T>.ReadJson(JsonReader, Type, Object, JsonSerializer)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
-  nameWithType.vb: CustomCreationConverter(Of T).ReadJson(JsonReader, Type, Object, JsonSerializer)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).ReadJson(Newtonsoft.Json.JsonReader, System.Type, System.Object, Newtonsoft.Json.JsonSerializer)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: ReadJson
-    nameWithType: CustomCreationConverter<T>.ReadJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.ReadJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonReader
-    name: JsonReader
-    nameWithType: JsonReader
-    fullName: Newtonsoft.Json.JsonReader
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
-    name: ReadJson
-    nameWithType: CustomCreationConverter(Of T).ReadJson
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).ReadJson
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Newtonsoft.Json.JsonReader
-    name: JsonReader
-    nameWithType: JsonReader
-    fullName: Newtonsoft.Json.JsonReader
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: Newtonsoft.Json.JsonSerializer
-    name: JsonSerializer
-    nameWithType: JsonSerializer
-    fullName: Newtonsoft.Json.JsonSerializer
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-  isExternal: true
-  name: CanConvert(Type)
-  nameWithType: CustomCreationConverter<T>.CanConvert(Type)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.CanConvert(System.Type)
-  nameWithType.vb: CustomCreationConverter(Of T).CanConvert(Type)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).CanConvert(System.Type)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-    name: CanConvert
-    nameWithType: CustomCreationConverter<T>.CanConvert
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.CanConvert
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanConvert(System.Type)
-    name: CanConvert
-    nameWithType: CustomCreationConverter(Of T).CanConvert
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).CanConvert
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.CanWrite
-  commentId: P:Newtonsoft.Json.Converters.CustomCreationConverter`1.CanWrite
-  isExternal: true
-  name: CanWrite
-  nameWithType: CustomCreationConverter<T>.CanWrite
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.CanWrite
-  nameWithType.vb: CustomCreationConverter(Of T).CanWrite
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).CanWrite
 - uid: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.WriteAnonymousTypeArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.WriteAnonymousTypeArray
-  isExternal: false
+  isExternal: true
   name: WriteAnonymousTypeArray
   nameWithType: ModelEntityBaseJsonConverter.WriteAnonymousTypeArray
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.WriteAnonymousTypeArray
 - uid: Newtonsoft.Json.JsonWriter
-  commentId: T:Newtonsoft.Json.JsonWriter
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonWriter
   nameWithType: JsonWriter
@@ -1088,7 +210,7 @@ references:
 - uid: TimeCockpit.Data.DataModel.Model
   commentId: T:TimeCockpit.Data.DataModel.Model
   parent: TimeCockpit.Data.DataModel
-  isExternal: false
+  isExternal: true
   name: Model
   nameWithType: Model
   fullName: TimeCockpit.Data.DataModel.Model
@@ -1115,6 +237,7 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1131,9 +254,16 @@ references:
     name: ModelEntityBase
     nameWithType: ModelEntityBase
     fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
+- uid: TimeCockpit.Data.DataModel
+  commentId: N:TimeCockpit.Data.DataModel
+  isExternal: true
+  name: TimeCockpit.Data.DataModel
+  nameWithType: TimeCockpit.Data.DataModel
+  fullName: TimeCockpit.Data.DataModel
 - uid: System.Collections.Generic.IEnumerable`1
   commentId: T:System.Collections.Generic.IEnumerable`1
   isExternal: true
@@ -1175,69 +305,24 @@ references:
     fullName: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
-  isExternal: false
+  isExternal: true
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
 - uid: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ReadAnonymousTypeArray*
   commentId: Overload:TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ReadAnonymousTypeArray
-  isExternal: false
+  isExternal: true
   name: ReadAnonymousTypeArray
   nameWithType: ModelEntityBaseJsonConverter.ReadAnonymousTypeArray
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ReadAnonymousTypeArray
 - uid: Newtonsoft.Json.JsonReader
-  commentId: T:Newtonsoft.Json.JsonReader
-  parent: Newtonsoft.Json
   isExternal: true
   name: JsonReader
   nameWithType: JsonReader
   fullName: Newtonsoft.Json.JsonReader
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.Create(System.Type)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}.Create(System.Type)
-  parent: Newtonsoft.Json.Converters.CustomCreationConverter{TimeCockpit.Data.DataModel.ModelEntityBase}
-  definition: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-  name: Create(Type)
-  nameWithType: CustomCreationConverter<ModelEntityBase>.Create(Type)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.Create(System.Type)
-  nameWithType.vb: CustomCreationConverter(Of ModelEntityBase).Create(Type)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).Create(System.Type)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-    name: Create
-    nameWithType: CustomCreationConverter<ModelEntityBase>.Create
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<TimeCockpit.Data.DataModel.ModelEntityBase>.Create
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-    name: Create
-    nameWithType: CustomCreationConverter(Of ModelEntityBase).Create
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of TimeCockpit.Data.DataModel.ModelEntityBase).Create
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create*
   commentId: Overload:TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create
-  isExternal: false
+  isExternal: true
   name: Create
   nameWithType: ModelEntityBaseJsonConverter.Create
   fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.Create
@@ -1248,45 +333,16 @@ references:
   name: Type
   nameWithType: Type
   fullName: System.Type
-- uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-  commentId: M:Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
+- uid: TimeCockpit.Data.DataModel.ModelEntityBase
+  commentId: T:TimeCockpit.Data.DataModel.ModelEntityBase
+  parent: TimeCockpit.Data.DataModel
   isExternal: true
-  name: Create(Type)
-  nameWithType: CustomCreationConverter<T>.Create(Type)
-  fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.Create(System.Type)
-  nameWithType.vb: CustomCreationConverter(Of T).Create(Type)
-  fullName.vb: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).Create(System.Type)
-  spec.csharp:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-    name: Create
-    nameWithType: CustomCreationConverter<T>.Create
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter<T>.Create
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Newtonsoft.Json.Converters.CustomCreationConverter`1.Create(System.Type)
-    name: Create
-    nameWithType: CustomCreationConverter(Of T).Create
-    fullName: Newtonsoft.Json.Converters.CustomCreationConverter(Of T).Create
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Type
-    name: Type
-    nameWithType: Type
-    fullName: System.Type
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: ModelEntityBase
+  nameWithType: ModelEntityBase
+  fullName: TimeCockpit.Data.DataModel.ModelEntityBase
+- uid: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor*
+  commentId: Overload:TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.#ctor
+  isExternal: true
+  name: ModelEntityBaseJsonConverter
+  nameWithType: ModelEntityBaseJsonConverter.ModelEntityBaseJsonConverter
+  fullName: TimeCockpit.Data.JsonConverters.ModelEntityBaseJsonConverter.ModelEntityBaseJsonConverter

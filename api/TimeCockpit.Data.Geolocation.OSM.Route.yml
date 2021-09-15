@@ -5,6 +5,7 @@ items:
   id: Route
   parent: TimeCockpit.Data.Geolocation.OSM
   children:
+  - TimeCockpit.Data.Geolocation.OSM.Route.#ctor
   - TimeCockpit.Data.Geolocation.OSM.Route.Distance
   - TimeCockpit.Data.Geolocation.OSM.Route.IsSuccess
   - TimeCockpit.Data.Geolocation.OSM.Route.NoMatch
@@ -17,16 +18,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.Route
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    id: Route
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    startLine: 16
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nSimple route representation.\n"
-  example: []
   syntax:
     content: public class Route
     content.vb: Public Class Route
@@ -58,16 +55,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.NoMatch
   type: Field
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    id: NoMatch
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    startLine: 21
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nConstant no-match route.\n"
-  example: []
   syntax:
     content: public static readonly Route NoMatch
     return:
@@ -81,6 +74,31 @@ items:
   - Public
   - Shared
   - ReadOnly
+- uid: TimeCockpit.Data.Geolocation.OSM.Route.#ctor
+  commentId: M:TimeCockpit.Data.Geolocation.OSM.Route.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Geolocation.OSM.Route
+  langs:
+  - csharp
+  - vb
+  name: Route()
+  nameWithType: Route.Route()
+  fullName: TimeCockpit.Data.Geolocation.OSM.Route.Route()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Geolocation.OSM
+  syntax:
+    content: public Route()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Geolocation.OSM.Route.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Geolocation.OSM.Route.Distance
   commentId: P:TimeCockpit.Data.Geolocation.OSM.Route.Distance
   id: Distance
@@ -93,16 +111,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.Distance
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    id: Distance
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    startLine: 26
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nGets or sets the route distance in meters.\n"
-  example: []
   syntax:
     content: public decimal Distance { get; set; }
     parameters: []
@@ -128,16 +142,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.Time
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    id: Time
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    startLine: 31
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nGets or sets the route travel time in seconds.\n"
-  example: []
   syntax:
     content: public decimal Time { get; set; }
     parameters: []
@@ -163,16 +173,12 @@ items:
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.IsSuccess
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    id: IsSuccess
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Geolocation/OSM/Route.cs
-    startLine: 36
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Geolocation.OSM
   summary: "\nGets or sets a value indicating whether the route could be successfully determined.\n"
-  example: []
   syntax:
     content: public bool IsSuccess { get; set; }
     parameters: []
@@ -189,7 +195,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Geolocation.OSM
   commentId: N:TimeCockpit.Data.Geolocation.OSM
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Geolocation.OSM
   nameWithType: TimeCockpit.Data.Geolocation.OSM
   fullName: TimeCockpit.Data.Geolocation.OSM
@@ -481,20 +487,26 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
 - uid: TimeCockpit.Data.Geolocation.OSM.Route
   commentId: T:TimeCockpit.Data.Geolocation.OSM.Route
   parent: TimeCockpit.Data.Geolocation.OSM
-  isExternal: false
+  isExternal: true
   name: Route
   nameWithType: Route
   fullName: TimeCockpit.Data.Geolocation.OSM.Route
+- uid: TimeCockpit.Data.Geolocation.OSM.Route.#ctor*
+  commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Route.#ctor
+  isExternal: true
+  name: Route
+  nameWithType: Route.Route
+  fullName: TimeCockpit.Data.Geolocation.OSM.Route.Route
 - uid: TimeCockpit.Data.Geolocation.OSM.Route.Distance*
   commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Route.Distance
-  isExternal: false
+  isExternal: true
   name: Distance
   nameWithType: Route.Distance
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.Distance
@@ -507,13 +519,13 @@ references:
   fullName: System.Decimal
 - uid: TimeCockpit.Data.Geolocation.OSM.Route.Time*
   commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Route.Time
-  isExternal: false
+  isExternal: true
   name: Time
   nameWithType: Route.Time
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.Time
 - uid: TimeCockpit.Data.Geolocation.OSM.Route.IsSuccess*
   commentId: Overload:TimeCockpit.Data.Geolocation.OSM.Route.IsSuccess
-  isExternal: false
+  isExternal: true
   name: IsSuccess
   nameWithType: Route.IsSuccess
   fullName: TimeCockpit.Data.Geolocation.OSM.Route.IsSuccess

@@ -5,6 +5,7 @@ items:
   id: InstallationGroup
   parent: TimeCockpit.Data.Install
   children:
+  - TimeCockpit.Data.Install.InstallationGroup.#ctor
   - TimeCockpit.Data.Install.InstallationGroup.Components
   langs:
   - csharp
@@ -14,16 +15,12 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationGroup
   type: Class
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationGroup.cs
-    id: InstallationGroup
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationGroup.cs
-    startLine: 13
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nRepresents a list of installer components\n"
-  example: []
   syntax:
     content: 'public class InstallationGroup : InstallationComponent'
     content.vb: >-
@@ -50,6 +47,31 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: TimeCockpit.Data.Install.InstallationGroup.#ctor
+  commentId: M:TimeCockpit.Data.Install.InstallationGroup.#ctor
+  id: '#ctor'
+  parent: TimeCockpit.Data.Install.InstallationGroup
+  langs:
+  - csharp
+  - vb
+  name: InstallationGroup()
+  nameWithType: InstallationGroup.InstallationGroup()
+  fullName: TimeCockpit.Data.Install.InstallationGroup.InstallationGroup()
+  type: Constructor
+  source:
+    path: TimeCockpit.Data
+    isExternal: true
+  assemblies:
+  - TimeCockpit.Data
+  namespace: TimeCockpit.Data.Install
+  syntax:
+    content: public InstallationGroup()
+    content.vb: Public Sub New
+  overload: TimeCockpit.Data.Install.InstallationGroup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: TimeCockpit.Data.Install.InstallationGroup.Components
   commentId: P:TimeCockpit.Data.Install.InstallationGroup.Components
   id: Components
@@ -62,16 +84,12 @@ items:
   fullName: TimeCockpit.Data.Install.InstallationGroup.Components
   type: Property
   source:
-    remote:
-      path: E:/Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationGroup.cs
-    id: Components
-    path: ../../Projects/TimeCockpit.Development/Production/V 1.53/Hotfix/Source/TimeCockpit.Data/WPF/TimeCockpit.Data/Install/InstallationGroup.cs
-    startLine: 24
+    path: TimeCockpit.Data
+    isExternal: true
   assemblies:
   - TimeCockpit.Data
   namespace: TimeCockpit.Data.Install
   summary: "\nGets the list of installer components that are part of this batch collection\n"
-  example: []
   syntax:
     content: public InstallationComponentCollection Components { get; }
     parameters: []
@@ -88,7 +106,7 @@ items:
 references:
 - uid: TimeCockpit.Data.Install
   commentId: N:TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: TimeCockpit.Data.Install
   nameWithType: TimeCockpit.Data.Install
   fullName: TimeCockpit.Data.Install
@@ -102,35 +120,35 @@ references:
 - uid: TimeCockpit.Data.Install.InstallationComponent
   commentId: T:TimeCockpit.Data.Install.InstallationComponent
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponent
   nameWithType: InstallationComponent
   fullName: TimeCockpit.Data.Install.InstallationComponent
 - uid: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ComponentUuid
   nameWithType: InstallationComponent.ComponentUuid
   fullName: TimeCockpit.Data.Install.InstallationComponent.ComponentUuid
 - uid: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: InvariantFriendlyName
   nameWithType: InstallationComponent.InvariantFriendlyName
   fullName: TimeCockpit.Data.Install.InstallationComponent.InvariantFriendlyName
 - uid: TimeCockpit.Data.Install.InstallationComponent.Mandatory
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.Mandatory
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: Mandatory
   nameWithType: InstallationComponent.Mandatory
   fullName: TimeCockpit.Data.Install.InstallationComponent.Mandatory
 - uid: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   commentId: P:TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
   parent: TimeCockpit.Data.Install.InstallationComponent
-  isExternal: false
+  isExternal: true
   name: ProviderInvariantName
   nameWithType: InstallationComponent.ProviderInvariantName
   fullName: TimeCockpit.Data.Install.InstallationComponent.ProviderInvariantName
@@ -415,20 +433,26 @@ references:
     fullName: )
 - uid: System
   commentId: N:System
-  isExternal: false
+  isExternal: true
   name: System
   nameWithType: System
   fullName: System
+- uid: TimeCockpit.Data.Install.InstallationGroup.#ctor*
+  commentId: Overload:TimeCockpit.Data.Install.InstallationGroup.#ctor
+  isExternal: true
+  name: InstallationGroup
+  nameWithType: InstallationGroup.InstallationGroup
+  fullName: TimeCockpit.Data.Install.InstallationGroup.InstallationGroup
 - uid: TimeCockpit.Data.Install.InstallationGroup.Components*
   commentId: Overload:TimeCockpit.Data.Install.InstallationGroup.Components
-  isExternal: false
+  isExternal: true
   name: Components
   nameWithType: InstallationGroup.Components
   fullName: TimeCockpit.Data.Install.InstallationGroup.Components
 - uid: TimeCockpit.Data.Install.InstallationComponentCollection
   commentId: T:TimeCockpit.Data.Install.InstallationComponentCollection
   parent: TimeCockpit.Data.Install
-  isExternal: false
+  isExternal: true
   name: InstallationComponentCollection
   nameWithType: InstallationComponentCollection
   fullName: TimeCockpit.Data.Install.InstallationComponentCollection
