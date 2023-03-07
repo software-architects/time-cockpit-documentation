@@ -8,8 +8,8 @@ The time sheet calendar is the main tool to create timesheet entries in time coc
 
 The time sheet calendar consists of the following parts:
 
-- Main menu
-- Toolbar (contains commands that are available for the time sheet calendar or selected time sheet entries)
+- [Main menu](#main-menu)
+- [Toolbar](#toolbar)
 - Date selection
 - [User selection](#user-selection)
 - [Time sheet calendar](#time-sheet-calendar-1)
@@ -17,6 +17,18 @@ The time sheet calendar consists of the following parts:
 - [Formatting profiles](formatting-profiles.md)
 - [Timesheet Templates](timesheet-templates.md)
 - [Account Information](account-information.md)
+
+## Main menu
+
+The main menu consists of so called modules (Timesheet, Management, User). 
+
+* The Timesheet module opens the timesheet calendar
+* The Management module provides lists to manage your base data (customer, projects, tasks, etc.)
+* the User module provides lists to mangage all user/employee related data.
+
+## Toolbar
+
+The toolbar provides commands that are available for the time sheet calendar or selected time sheet entries.
 
 ## User Selection
 
@@ -53,6 +65,14 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 ![Work week view](images/wc-work-week-view.png "Work week view")
 
 ![Week view](images/wc-week-view.png "Week view")
+
+Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
+
+![Side-by-Side View](images/wc-side-by-side.png "Side-by-Side View")
+
+Enabling this option shows timesheet entries and Outlook appointments side-by-side.
+
+![Side-by-Side View Enabled](images/wc-side-by-side-enabled.png "Side-by-Side View Enabled")
 
 ### Zoom
 
