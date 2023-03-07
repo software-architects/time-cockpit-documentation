@@ -2,7 +2,7 @@
 
 The time sheet calendar is the main tool to create timesheet entries in time cockpit. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
 
-## Outline of the Time Sheet Calendar
+## Elements of the Time Sheet Calendar
 
 ![Timesheet calendar](images/wc-calendar-overview.png "Timesheet calendar")
 
@@ -38,38 +38,37 @@ The time sheet calendar shows different types of information:
 
 You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
 
-![Timesheet calendar](images/timesheet-calendar.png "Timesheet calendar")
+![Timesheet calendar](images/wc-timesheet-calendar.png "Timesheet calendar")
 
 ### Day, Work Week, Week and Month View
 
-You can switch between the following views in the time sheet calendar:
+You can switch between the following views in the time sheet calendar using the toolbar.
 
-- day view
-- work week view
-- week view
-- month view
+![View Selection](images/wc-select-view.png "View Selection")
 
-Use the day view if you want to create your time sheet entries based on your collected signals and your Microsoft Office Outlook appointments. In the week and work week views you get an overview of your working time but you can also create and change time sheet entries in these views. The month view is only designed to give you an overview of the whole month.
+Use the day view e.g. if you want to create your time sheet entries based on your Microsoft Office Outlook appointments. In the week and work week views you get an overview of your working time but you can also create and change time sheet entries in these views. The latter two views are also convenient if you want to copy/move a time sheet entry to another day in the same week
 
-![Day view](images/day-view.png "Day view")
+![Day view](images/wc-day-view.png "Day view")
 
-![Work week view](images/work-week-view.png "Work week view")
+![Work week view](images/wc-work-week-view.png "Work week view")
 
-![Week view](images/week-view.png "Week view")
-
-![Month view](images/month-view.png "Month view")
+![Week view](images/wc-week-view.png "Week view")
 
 ### Zoom
 
-In the day, work week, and week view you can change the scaling of the time axis by zooming in and out. The function is especially helpful if you have lots of signals in a short time span. You can change the zoom level by one of the following ways:
+In the day, work week, and week view you can change the scaling of the time axis by zooming in and out. You can change the zoom level by one of the following ways:
 
 - Press the **CTRL** key, keep it pressed and use the mouse wheel to change the zoom level.
-- Use the ribbon commands **Zoom** in and **Zoom out**.
-- Press **CTRL + (+)** to increase the zoom level and **CTRL + (-)** to decrease the zoom level.
+- Use the zoom commands in the top right corner of the timesheet calendar **Zoom** in and **Zoom out**.
 
 ### Navigation
 
-You can navigate between days in the calendar by one of the following ways:
+You can navigate between days and weeks in the calendar the following ways:
 
-- Click on a day in the calendar for navigation in the left bar.
-- Press **CTRL + right arrow** for the next day, **CTRL + left arrow** for the previous day, **CTRL + down arrow** for the next week and **CTRL + up arrow** for the previous week.
+* If you are in the day view, press **CTRL + right arrow** for the next day, **CTRL + left arrow** for the previous day
+
+* If you are in the week view, press **CTRL + right arrow** for the next week, **CTRL + left arrow** for the previous week
+
+To select a specific date, use the date picker at the top of the timesheet calendar.
+
+![Date Picker](images/wc-date-picker.png "Date Picker")
