@@ -1,39 +1,42 @@
 # Time Sheet Calendar
 
-The time sheet calendar is the central data input tool in time cockpit. You can create time sheet entries manually or based on your tracked signals.
+The time sheet calendar is the main tool to create timesheet entries in time cockpit. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
 
 ## Outline of the Time Sheet Calendar
 
-![Timesheet calendar](images/timesheet-overview.png "Timesheet calendar")
+![Timesheet calendar](images/wc-calendar-overview.png "Timesheet calendar")
 
 The time sheet calendar consists of the following parts:
 
 - Main menu
-- Ribbon (contains commands that are available for the time sheet calendar or selected time sheet entries)
-- Calendar for navigation
+- Toolbar (contains commands that are available for the time sheet calendar or selected time sheet entries)
+- Date selection
 - [User selection](#user-selection)
-- [Device selection](#device-selection)
 - [Time sheet calendar](#time-sheet-calendar-1)
 - [Working time](working-time.md)
 - [Formatting profiles](formatting-profiles.md)
-- [Signal details](signal-details.md)
+- [Timesheet Templates](timesheet-templates.md)
+- [Account Information](account-information.md)
 
 ## User Selection
 
-Time cockpit synchronizes data automatically across all users of an account. In the user selection area you can select for which user the time sheet calendar should be displayed. Please note the following restrictions:
+In the user selection area you can select the user for which the time sheet entries should be displayed. Please note the following restrictions:
 
 - Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model-customization/permission.md).
-- Automatically tracked [signals](~/doc/signal-tracker/overview.md) are only synchronized across the devices from one user. **You are never able to view signals from another user.** No matter which user is selected in the user selection, you will always see your own signals. It is not possible to grant users the permission to view signals from another user.
+
+> [!NOTE] By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
 
 Since version 1.7 of time cockpit you are able to hide users in the user selection list. Switch to **Users** in the main menu and open the **User Details** list. Open the user you want to hide and check the **Hidden** check box.
 
-## Device Selection
-
-Time cockpit automatically synchronizes data across your devices. You can view all your [signals](~/doc/signal-tracker/overview.md) on each device. Signal data is only synchronized across devices from one user. You are never able to view signals from other users. It is not possible to change this behavior.
-
 ## Time Sheet Calendar
 
-The time sheet calendar visualizes signals, Microsoft Office Outlook appointments and time sheet entries. You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
+The time sheet calendar shows different types of information:
+
+* Timesheet Entries
+* Absence Times (vacation, compensatory time off, sick leave). See also [Absence Time Management](~/doc/employee-time-tracking/absence-time-management.md).
+* Outlook Appointments and Sent Mails from your Office 365 account. See also [Office 365](office365.md).
+
+You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
 
 ![Timesheet calendar](images/timesheet-calendar.png "Timesheet calendar")
 
