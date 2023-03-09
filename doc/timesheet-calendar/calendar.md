@@ -1,6 +1,6 @@
 # Time Sheet Calendar
 
-The time sheet calendar is the main tool to create timesheet entries in time cockpit. In this section we describe the mail parts of the time sheet calendar. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
+The time sheet calendar is the main tool to create timesheet entries in time cockpit. In this section we describe the main parts of the time sheet calendar. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
 
 ## Elements of the Time Sheet Calendar
 
@@ -22,13 +22,17 @@ The time sheet calendar consists of the following parts:
 
 The main menu consists of so called modules (Timesheet, Management, User). 
 
+![Main Menu](images/wc-menu.png "Main Menu")
+
 * The Timesheet module opens the timesheet calendar
 * The Management module provides lists to manage your base data (customer, projects, tasks, etc.)
-* the User module provides lists to mangage all user/employee related data.
+* The User module provides lists to mangage all user/employee related data.
 
 ## Toolbar
 
 The toolbar provides commands that are available for the time sheet calendar or selected time sheet entries.
+
+![Toolbar](images/wc-toolbar.png "Toolbar")
 
 ## User Selection
 
@@ -37,6 +41,8 @@ In the user selection area you can select the user for which the time sheet entr
 - Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model-customization/permission.md).
 
 > [!NOTE] By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
+
+![User Selection](images/wc-user-selection.png "User Selection")
 
 Since version 1.7 of time cockpit you are able to hide users in the user selection list. Switch to **Users** in the main menu and open the **User Details** list. Open the user you want to hide and check the **Hidden** check box.
 
