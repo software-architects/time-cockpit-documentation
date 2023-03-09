@@ -1,11 +1,19 @@
 # Web Client
 
-Log in to the web client of time cockpit at <https://web.timecockpit.com>. Use the same username and password as for the full client.
+Time cockpit has undergone significant development since its release in 2010. It began with a Windows Presentation Foundation (WPF) fat client, which provided a rich and responsive user interface. Additionally, we introduced a Silverlight client, which offered cross-platform compatibility.
+
+Due to several reasons such as the deprecation of the Silverlight framework, the Silverlight client was deprecated a few years ago. For the past couple of years, the web client has been time cockpit's primary client.
+
+The web client is built using modern web technologies such as HTML5, CSS3, and JavaScript, and runs on any modern web browser. The web client provides a responsive and adaptive user interface making it accessible from a range of devices, including desktops, laptops, tablets.
+
+If you're just starting out with time cockpit, the web client is the recommended client to use, providing a modern and robust solution for time tracking.
 
 ## Limitations
 
-- It is not possible to track computer signals with the web client. But if you have installed the full client to track signals, you can view the tracked signals in the web client, too.
-- It is not possible to modify the data model. But all changes made with the full client are available in the web client, too.
+- It is not possible to track computer signals with the web client. But if you have installed the full client to track signals, you can view the tracked signals in the web client, too. At the moment we are working on a lightweight version of the signal tracker that works without the WPF full client.
+- It is not possible to modify the data model. But all changes made with the full client are available in the web client.
+
+If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](support@timecockpit.com) or refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
 
 ## Release Plan
 
