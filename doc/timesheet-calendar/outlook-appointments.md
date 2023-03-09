@@ -22,6 +22,8 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 
 > [!NOTE] To transform your Outlook appointment to a time sheet entry just double-click it and enter missing data.
 
+![Double-Click Appointment](images/wc-transform-appointments.png "Double-Click Appointment")
+
 <!-- > [!NOTE]
 If you are not using Microsoft Office Outlook to manage your appointments, time cockpit cannot display your appointments at the moment.
 
