@@ -1,6 +1,6 @@
 # Time Sheet Calendar
 
-The time sheet calendar is the main tool to create timesheet entries in time cockpit. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
+The time sheet calendar is the main tool to create timesheet entries in time cockpit. In this section we describe the mail parts of the time sheet calendar. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
 
 ## Elements of the Time Sheet Calendar
 
