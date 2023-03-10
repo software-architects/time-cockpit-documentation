@@ -6,9 +6,9 @@ time cockpit allows you to create your own custom lists. To make those custom li
 
 ## Modules
 
-The highest level of a menu in time cockpit is a module. Modules are situated in the left hand corner of time cockpit. Out of the box, time cockpit comes with 5 pre-defined modules. The Time Sheet module holds the time sheet calendar. The Management module lets users manage their master data. The Users module subsumes all user-related information and the Signal Tracker lets users configure their trackers. If you have the administrator role in time cockpit you will also see the Customization module.
+The highest level of a menu in time cockpit is a module. Modules are situated at the top of time cockpit. Out of the box, time cockpit comes with 3 pre-defined modules. The Time Sheet module holds the time sheet calendar. The Management module lets users manage their master data. The Users module subsumes all user-related information 
 
-![Modules pane](images/modules-pane.png "Modules pane")
+![Modules pane](images/wc-menu.png "Modules pane")
 
 Modules can be created in the Customization module. In the following we only show to create the most common type of modules, a Navigation Module. In a Navigation Module you can define links to lists to navigate through for example your master data. In the following we will define a dedicated module for Invoicing.
 
