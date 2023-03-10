@@ -1,6 +1,7 @@
 # Customization Capabilities
 
-> [!NOTE] This section gives an introduction into advance customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](support@timecockpit.com).
+> [!NOTE]
+This section gives an introduction into advance customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](support@timecockpit.com).
 
 ## Development Process
 

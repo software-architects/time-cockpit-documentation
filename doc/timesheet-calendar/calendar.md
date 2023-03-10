@@ -40,7 +40,8 @@ In the user selection area you can select the user for which the time sheet entr
 
 - Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model-customization/permission.md).
 
-> [!NOTE] By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
+> [!NOTE]
+By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
 
 ![User Selection](images/wc-user-selection.png "User Selection")
 

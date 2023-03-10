@@ -14,13 +14,15 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 
 ![Log In Office 365](images/wc-office365-login.png "Log In Office 365")
 
-> [!NOTE] The login might open in the background. So check your windows with Alt + Tab if you are not immediatly seeing the Office 365 prompt
+> [!NOTE]
+The login might open in the background. So check your windows with Alt + Tab if you are not immediatly seeing the Office 365 prompt
 
 * Click **Refresh** in the time cockpit toolbar to fetch Outook appointments and mails from Office 365.
 
 ![Office 365 Data](images/wc-office365-enabled.png "Office 365 Data")
 
-> [!NOTE] To transform your Outlook appointment to a time sheet entry just double-click it and enter missing data.
+> [!NOTE]
+To transform your Outlook appointment to a time sheet entry just double-click it and enter missing data.
 
 ![Double-Click Appointment](images/wc-transform-appointments.png "Double-Click Appointment")
 

@@ -1,5 +1,7 @@
 # Getting Started With Time Cockpit
 
+With time cockpit we want to a deliver innovative, customizable time tracking solution that enables organizations to optimize their workflows, increase their productivity, and achieve their business goals. We are committed to simplifying time tracking and empowering our customers to make the most of their time, by providing a flexible, intuitive tool that can be tailored to meet their specific needs.
+
 ## What Can Time Cockpit Do For You?
 
 ### Graphical Calendar
