@@ -8,15 +8,15 @@ The time sheet calendar is the main tool to create timesheet entries in time coc
 
 The time sheet calendar consists of the following parts:
 
-- [Main menu](#main-menu)
-- [Toolbar](#toolbar)
-- Date selection
-- [User selection](#user-selection)
-- [Time sheet calendar](#time-sheet-calendar-1)
-- [Working time](working-time.md)
-- [Formatting profiles](formatting-profiles.md)
-- [Timesheet Templates](timesheet-templates.md)
-- [Account Information](account-information.md)
+- [Time Sheet Calendar](#time-sheet-calendar)
+  - [Elements of the Time Sheet Calendar](#elements-of-the-time-sheet-calendar)
+  - [Main menu](#main-menu)
+  - [Toolbar](#toolbar)
+  - [User Selection](#user-selection)
+  - [Time Sheet Calendar](#time-sheet-calendar-1)
+    - [Day, Work Week, Week and Month View](#day-work-week-week-and-month-view)
+    - [Zoom](#zoom)
+    - [Navigation](#navigation)
 
 ## Main menu
 
@@ -24,9 +24,9 @@ The main menu consists of so called modules (Timesheet, Management, User).
 
 ![Main Menu](images/wc-menu.png "Main Menu")
 
-* The Timesheet module opens the timesheet calendar
-* The Management module provides lists to manage your base data (customer, projects, tasks, etc.)
-* The User module provides lists to mangage all user/employee related data.
+* The Timesheet module opens the timesheet calendar.
+* The Management module provides lists to manage your base data (customer, projects, tasks, etc.).
+* The User module provides lists to manage all user/employee related data.
 
 ## Toolbar
 

@@ -18,7 +18,7 @@ Effective project management requires accurate time tracking, which helps manage
 
 ### Attendance Time Tracking
 
-Time cockpit is focused on project-based time tracking, but it also provides features for attendance time tracking such as managing different working time models, calculating overtime, absence time management, working time violations and more. With that, it providing valuable data for downstream HR and payroll purposes. For further information refer to [Attendance Time Tracking](~/doc/employee-time-tracking/working-time.md).
+Time cockpit is focused on project-based time tracking, but it also provides features for attendance time tracking such as managing different working time models, calculating overtime, absence time management, working time violations and more. With that, it provides valuable data for downstream HR and payroll purposes. For further information refer to [Attendance Time Tracking](~/doc/employee-time-tracking/working-time.md).
 
 <!-- ### Activity Tracking
 

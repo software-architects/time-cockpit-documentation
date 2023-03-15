@@ -29,7 +29,7 @@ With a powerful permission framework you can configure your own permission model
 
 ## Web API
 
-Additionally, time cockpit features a powerful web api which lets you query and manage all yor data. The web api can be used for data analysis etc. data integration. See [Web API](~/doc/web-api/overview.md)
+Additionally, time cockpit features a powerful web api which lets you query and manage all your data. The web api can be used for data analysis etc. data integration. See [Web API](~/doc/web-api/overview.md)
 
 ## Sandbox (Test Environment)
 

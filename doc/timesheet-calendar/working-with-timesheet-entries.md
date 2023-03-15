@@ -25,7 +25,7 @@ If the standard properties do not work for your business let us know at support@
 
 You can change time sheet entries the following ways:
 
-- Double-click the time sheet entry that you want to change and change the start and endtime
+- Double-click the time sheet entry that you want to change and change the start and end time
 - Select a time sheet entry by clicking on it and click **Edit** booking in the toolbar.
 - Select a time sheet entry and click the right mouse button and select **Edit** from the context menu.
 

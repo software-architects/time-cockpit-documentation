@@ -15,9 +15,9 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 ![Log In Office 365](images/wc-office365-login.png "Log In Office 365")
 
 > [!NOTE]
-The login might open in the background. So check your windows with Alt + Tab if you are not immediatly seeing the Office 365 prompt
+The login might open in the background. So check your windows with Alt + Tab if you are not immediately seeing the Office 365 prompt
 
-* Click **Refresh** in the time cockpit toolbar to fetch Outook appointments and mails from Office 365.
+* Click **Refresh** in the time cockpit toolbar to fetch Outlook appointments and mails from Office 365.
 
 ![Office 365 Data](images/wc-office365-enabled.png "Office 365 Data")
 

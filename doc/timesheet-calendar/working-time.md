@@ -1,6 +1,6 @@
 # Working Time	
 
-The working time display shows the planned hours of work and actual actual hours of work for the
+The working time display shows the planned hours of work and actual hours of work for the
 
 - current day,
 - current week and
