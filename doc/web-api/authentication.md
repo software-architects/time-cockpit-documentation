@@ -7,7 +7,7 @@ Three forms of authentication are currently supported:
 - [PAT authentication](https://en.wikipedia.org/wiki/Personal_access_token).
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the forseeable future. We strongly recommend to autenticate using PATs.
+We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
 
 ### Acquire PAT
 

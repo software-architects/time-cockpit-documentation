@@ -5,7 +5,7 @@ In this article we provide some utility classes that should help you get started
 
 - **TimeCockpitClient class:** This class encapsulates both the OData endpoint for CRUD operations and the query endpoint for more sophisticated querying of data.
 - **TcProject class:** This class should give you an idea how you can manually map the result of a TCQL query via the query endpoint to a POCO. Note that the POCO is not only used for the query endpoint, but also as payload for the OData endpoint.
-- **Settings class:** This class is a strongly-typed representation of your configuration. It holds settings for all your configured configuration profiders like appsettings.json, environment variables or e.g. KeyVault.
+- **Settings class:** This class is a strongly-typed representation of your configuration. It holds settings for all your configured configuration providers like appsettings.json, environment variables or e.g. [KeyVault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview).
 
 ## TimeCockpitClient Class
 

@@ -5,8 +5,8 @@ The time cockpit API provides various endpoints:
 
 - [OData Endpoint](odata.md): Supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete)
 - [Query Endpoint](query.md): Supports querying time cockpit data using the [time cockpit query language](~/doc/tcql/overview.md) (TCQL).
-- [ExecuteList Endpoint](executelist.md): Execute time cockpit [lists](~/doc/data-model-customization/lists.md). Lists are used to display data in a tabular form in the UI, but their data can also be fetched using the Web API.
-- Action Endpoint: Execute time cockpit [actions](~/doc/data-model-customization/lists.md). An action is custom business logic that is hosted in your time cockpit tenant.
+- [ExecuteList Endpoint](executelist.md): Execute time cockpit [lists](~/doc/data-model-customization/list.md). Lists are used to display data in a tabular form in the UI, but their data can also be fetched using the Web API.
+- [ExecuteAction Endpoint](executeaction.md): Execute time cockpit [actions](~/doc/scripting/actions.md). An action is custom business logic that is hosted in your time cockpit tenant.
 - [Reporting Endpoint](reporting.md): Execute a time cockpit [SSRS report](~/doc/reporting/overview.md).
 
 ## Base Address
@@ -22,6 +22,6 @@ Three forms of authentication are currently supported:
 - [PAT authentication](https://en.wikipedia.org/wiki/Personal_access_token).
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the forseeable future. We strongly recommend to autenticate using PATs.
+We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
 
 To learn how to authenticate against our Web API refer to [authentication](authentication.md).

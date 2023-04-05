@@ -2,7 +2,7 @@
 
 Time cockpit provides powerful reporting capabilities. For one, every time cockpit list can be represented as a printable SSRS report in either Word, Excel or PDF. The SSRS report definition is generated on the fly. Additionally, you can create your own SSRS report definitions and upload them to time cockpit. For further information take a look at [reporting](~/doc/reporting/overview.md).
 
-Sometimes it is necessary to generate time cockpit reports progrogrammatically. For those scenarios we offer the reporting endpoint in our Web API.
+Sometimes it is necessary to generate time cockpit reports programmatically. For those scenarios we offer the reporting endpoint in our Web API.
 
 ## Use Cases
 

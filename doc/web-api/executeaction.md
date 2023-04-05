@@ -3,7 +3,7 @@
 In addition to querying and CRUD operations, the time cockpit Web API also allows you to execute your custom business logic. In time cockpit you custom business logic is called an [Action](~/doc/scripting/actions.md). Similar to [script lists](~/doc/data-model-customization/list.md) in time cockpit, actions are pieces of **IronPython** code that run in your instance of time cockpit. In contract to script lists, actions usually modify time cockpit in one way or the other.
 
 > [!NOTE]
-Since an action is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noise neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+Since an action is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Use Cases
 

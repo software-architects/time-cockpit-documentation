@@ -1,6 +1,6 @@
 # Query Endpoint
 
-Besides offering an [OData](odata.md) enpoint for CRUD operations, time cockpit also offers an endpoint that is solely for querying data. The query endpoint allows you to post queries to the Web API using time cockpit's proprietary TCQL language. For more information on the language refer to [TCQL](~/doc/tcql/overview.md).
+Besides offering an [OData](odata.md) endpoint for CRUD operations, time cockpit also offers an endpoint that is solely for querying data. The query endpoint allows you to post queries to the Web API using time cockpit's proprietary TCQL language. For more information on the language refer to [TCQL](~/doc/tcql/overview.md).
 
 ## Service Endpoint
 
@@ -12,7 +12,7 @@ To use the query endpoint, you first need to authentication against the service.
 
 ## When to Use
 
-While convenient, there are scenarios where the OData endpoint does not suffice. E.g. complex joins, or using custom time cockpit domain logic in a query. In this cases, we recommend the query endpoint. 
+While convenient, there are scenarios where the OData endpoint does not suffice. E.g. complex joins, or using custom time cockpit domain logic in a query. In these cases, we recommend the query endpoint. 
 
 > [!NOTE]
 If you are using the query endpoint you must map the json result to an object yourself.
