@@ -62,7 +62,6 @@ public class Startup : FunctionsStartup
 
 	#endregion
 }
-
 ```
 
 > [!NOTE]
