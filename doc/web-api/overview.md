@@ -4,10 +4,10 @@ Time cockpit offers a web-based API. HTTP, REST and JSON can be used to access a
 The time cockpit API provides various endpoints:
 
 - [OData Endpoint](odata.md): Supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete)
-- Query Endpoint: Supports querying time cockpit data using the [time cockpit query language](~/doc/tcql/overview.md) (TCQL).
-- List Endpoint: Execute time cockpit [lists](~/doc/data-model-customization/lists.md). Lists are used to display data in a tabular form in the UI, but their data can also be fetched using the Web API.
+- [Query Endpoint](query.md): Supports querying time cockpit data using the [time cockpit query language](~/doc/tcql/overview.md) (TCQL).
+- [ExecuteList Endpoint](executelist.md): Execute time cockpit [lists](~/doc/data-model-customization/lists.md). Lists are used to display data in a tabular form in the UI, but their data can also be fetched using the Web API.
 - Action Endpoint: Execute time cockpit [actions](~/doc/data-model-customization/lists.md). An action is custom business logic that is hosted in your time cockpit tenant.
-- Reporting Endpoint: Execute a time cockpit [SSRS report](~/doc/reporting/overview.md).
+- [Reporting Endpoint](reporting.md): Execute a time cockpit [SSRS report](~/doc/reporting/overview.md).
 
 ## Base Address
 

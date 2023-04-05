@@ -4,6 +4,11 @@ Time cockpit provides powerful reporting capabilities. For one, every time cockp
 
 Sometimes it is necessary to generate time cockpit reports progrogrammatically. For those scenarios we offer the reporting endpoint in our Web API.
 
+## Use Cases
+
+- Fetch the built-in time report to send to the appropriate employees
+- Fetch a custom progress report to send to the corresponding customer
+
 ## Service Endpoint
 
 The address of our query endpoint is <https://api.timecockpit.com/report/show>. You can use the `format` url parameter to get different formats of the report:
