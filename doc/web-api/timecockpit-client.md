@@ -1,5 +1,5 @@
 
-# TimeCockpitClient
+# Sample Implementation TimeCockpitClient
 
 In this article we provide some utility classes that should help you get started with the time cockpit Web API. 
 
