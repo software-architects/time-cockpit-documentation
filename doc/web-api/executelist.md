@@ -8,6 +8,9 @@ With script lists, the data source of a list is an **Iron Python** script. For f
 
 Both TCQL lists and script lists can be referenced in the time cockpit UI, but they can also be queried using the time cockpit Web API.
 
+> [!NOTE]
+Since a script list is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noise neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+
 ## Use Cases
 
 - Query working time violations to send them to the appropriate employees
