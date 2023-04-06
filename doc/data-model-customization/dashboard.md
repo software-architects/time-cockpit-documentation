@@ -1,5 +1,7 @@
 # Dashboards
 
+![Simple Dashboard](images/dashboard/wc-dashboard.png "Simple Dashboard")
+
 Dashboards allow you to arrange different type of data on a board. The following three types of widgets are allowed:
 
 - Chart

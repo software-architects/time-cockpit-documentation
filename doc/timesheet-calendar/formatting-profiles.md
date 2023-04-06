@@ -1,16 +1,16 @@
 # Formatting Profiles	
 
-Time cockpit's graphical calendar is designed to provide you with an instant overview about how you spent your time. With formatting profiles you can define conditional formatting rules that control how time sheet entries are displayed in the graphical calendar. You can influence the text that time cockpit displays in the header and footer of time sheet entries in the calendar. Additionally, you can define the background color of time sheet entries. Here are some examples for situation in which conditional formatting might be useful:
+Time cockpit's graphical calendar is designed to provide you with an instant overview about how you spent your time. With formatting profiles you can define conditional formatting rules that control how time sheet entries are displayed in the graphical calendar. You can configure the text that time cockpit displays in the header and footer of time sheet entries in the calendar. Additionally, you can define the background color of time sheet entries. Here are some examples for situation in which conditional formatting might be useful:
 
 - Display billable and non-billable time sheet entries in two different colors to get a quick visual feedback about the ratio of billable time.
 - Display incomplete time sheet entries (e.g. entries without project assignment) in red. You will easily discover them at the end of the month when you have to complete your time sheet.
-- Display all time sheets with the world "travel" in the description in a specific color. When you create your travel expense reports, you will easily find time sheet entries related to travels.
+- Display all time sheets with the word "travel" in the description in a specific color. When you create your travel expense reports, you will easily find time sheet entries related to travels.
 
 While conditional formatting for individual time sheet entries provides instant feedback about the status of each single entry, you might also need an overview about the structure of your work for an entire day, week, or month. Time cockpit provides this in the navigation pane of the calendar. Based on the conditional formatting rule used for background colors, you will get a bar chart showing you the allocation of your work. The KPI (key performance indicator) used in the bar chart is customizable. You can use any numeric field in time sheet records (e.g. duration in hours, revenue) when defining the formula for the KPI. Here are some examples for situation in which you might want to use the bar charts:
 
-- You need to know on which projects you spent most of your time in a certain week. Time cockpit can display a bar chart with the total working hours per project.
-- You need to know the number of billable hours vs. non-billable hours. Time cockpit can show you a bar chart with two data bars: billable hours and non-billable hours.
-- You need to get an overview on how much money you have earned with each customer in a certain month. Time cockpit can display a bar chart with the revenue per customer.
+- You need to know on which projects you spent most of your time in a certain week? Time cockpit can display a bar chart with the total working hours per project.
+- You need to know the number of billable hours vs. non-billable hours? Time cockpit can show you a bar chart with two data bars: billable hours and non-billable hours.
+- You need to get an overview on how much money you have earned with each customer in a certain month? Time cockpit can display a bar chart with the revenue per customer.
 
 ## Formatting Profiles in the Time Sheet Calendar
 
@@ -18,11 +18,14 @@ Formatting profiles influence three areas in the time sheet calendar:
 
 - In the navigation pane (left) you see the bar charts mentioned above, you configure the formatting profiles, and select the currently active profile.
 - In the main area of the calendar the active formatting profile specifies how time cockpit generates caption and footer texts as well as background color of time sheet entries.
-- Template bookings in the ribbon are also colored based on the currently active formatting profile.
+- Template bookings in the navigation pane are also colored based on the currently active formatting profile.
 
-![Billable formatting profile](images/formatting-profile-billable.png "Billable formatting profile")
+![Billable formatting profile](images/wc-formatting-profile-billable.png "Billable formatting profile")
 
 ## Formatting Profile Settings
+
+> [!NOTE]
+At the moment it is not possible to configure formatting profiles in the web client. We are currently porting this feature from the WPF full client to the web client. If you are specifically interested in this feature let us know [support@timecockpit.com](support@timecockpit.com)
 
 You configure the settings for formatting profiles in the navigation pane in the left area of the time sheet calendar. Left-click on the blue gear to change these settings.
 

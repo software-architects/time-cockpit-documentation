@@ -1,72 +1,101 @@
 # Time Sheet Calendar
 
-The time sheet calendar is the central data input tool in time cockpit. You can create time sheet entries manually or based on your tracked signals.
+The time sheet calendar is the main tool to create timesheet entries in time cockpit. In this section we describe the main parts of the time sheet calendar. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.
 
-## Outline of the Time Sheet Calendar
+## Elements of the Time Sheet Calendar
 
-![Timesheet calendar](images/timesheet-overview.png "Timesheet calendar")
+![Timesheet calendar](images/wc-calendar-overview.png "Timesheet calendar")
 
 The time sheet calendar consists of the following parts:
 
-- Main menu
-- Ribbon (contains commands that are available for the time sheet calendar or selected time sheet entries)
-- Calendar for navigation
-- [User selection](#user-selection)
-- [Device selection](#device-selection)
-- [Time sheet calendar](#time-sheet-calendar-1)
-- [Working time](working-time.md)
-- [Formatting profiles](formatting-profiles.md)
-- [Signal details](signal-details.md)
+- [Time Sheet Calendar](#time-sheet-calendar)
+  - [Elements of the Time Sheet Calendar](#elements-of-the-time-sheet-calendar)
+  - [Main menu](#main-menu)
+  - [Toolbar](#toolbar)
+  - [User Selection](#user-selection)
+  - [Time Sheet Calendar](#time-sheet-calendar-1)
+    - [Day, Work Week, Week and Month View](#day-work-week-week-and-month-view)
+    - [Zoom](#zoom)
+    - [Navigation](#navigation)
+
+## Main menu
+
+The main menu consists of so called modules (Timesheet, Management, User). 
+
+![Main Menu](images/wc-menu.png "Main Menu")
+
+* The Timesheet module opens the timesheet calendar.
+* The Management module provides lists to manage your base data (customer, projects, tasks, etc.).
+* The User module provides lists to manage all user/employee related data.
+
+## Toolbar
+
+The toolbar provides commands that are available for the time sheet calendar or selected time sheet entries.
+
+![Toolbar](images/wc-toolbar.png "Toolbar")
 
 ## User Selection
 
-Time cockpit synchronizes data automatically across all users of an account. In the user selection area you can select for which user the time sheet calendar should be displayed. Please note the following restrictions:
+In the user selection area you can select the user for which the time sheet entries should be displayed. Please note the following restrictions:
 
 - Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](~/doc/data-model-customization/permission.md).
-- Automatically tracked [signals](~/doc/signal-tracker/overview.md) are only synchronized across the devices from one user. **You are never able to view signals from another user.** No matter which user is selected in the user selection, you will always see your own signals. It is not possible to grant users the permission to view signals from another user.
+
+> [!NOTE]
+By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
+
+![User Selection](images/wc-user-selection.png "User Selection")
 
 Since version 1.7 of time cockpit you are able to hide users in the user selection list. Switch to **Users** in the main menu and open the **User Details** list. Open the user you want to hide and check the **Hidden** check box.
 
-## Device Selection
-
-Time cockpit automatically synchronizes data across your devices. You can view all your [signals](~/doc/signal-tracker/overview.md) on each device. Signal data is only synchronized across devices from one user. You are never able to view signals from other users. It is not possible to change this behavior.
-
 ## Time Sheet Calendar
 
-The time sheet calendar visualizes signals, Microsoft Office Outlook appointments and time sheet entries. You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
+The time sheet calendar shows different types of information:
 
-![Timesheet calendar](images/timesheet-calendar.png "Timesheet calendar")
+* Timesheet Entries
+* Absence Times (vacation, compensatory time off, sick leave). See also [Absence Time Management](~/doc/employee-time-tracking/absence-time-management.md).
+* Outlook Appointments and Sent Mails from your Office 365 account. See also [Office 365](office365.md).
+
+You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
+
+![Timesheet calendar](images/wc-timesheet-calendar.png "Timesheet calendar")
 
 ### Day, Work Week, Week and Month View
 
-You can switch between the following views in the time sheet calendar:
+You can switch between the following views in the time sheet calendar using the toolbar.
 
-- day view
-- work week view
-- week view
-- month view
+![View Selection](images/wc-select-view.png "View Selection")
 
-Use the day view if you want to create your time sheet entries based on your collected signals and your Microsoft Office Outlook appointments. In the week and work week views you get an overview of your working time but you can also create and change time sheet entries in these views. The month view is only designed to give you an overview of the whole month.
+Use the day view e.g. if you want to create your time sheet entries based on your Microsoft Office Outlook appointments. In the week and work week views you get an overview of your working time but you can also create and change time sheet entries in these views. The latter two views are also convenient if you want to copy/move a time sheet entry to another day in the same week
 
-![Day view](images/day-view.png "Day view")
+![Day view](images/wc-day-view.png "Day view")
 
-![Work week view](images/work-week-view.png "Work week view")
+![Work week view](images/wc-work-week-view.png "Work week view")
 
-![Week view](images/week-view.png "Week view")
+![Week view](images/wc-week-view.png "Week view")
 
-![Month view](images/month-view.png "Month view")
+Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
+
+![Side-by-Side View](images/wc-side-by-side.png "Side-by-Side View")
+
+Enabling this option shows timesheet entries and Outlook appointments side-by-side.
+
+![Side-by-Side View Enabled](images/wc-side-by-side-enabled.png "Side-by-Side View Enabled")
 
 ### Zoom
 
-In the day, work week, and week view you can change the scaling of the time axis by zooming in and out. The function is especially helpful if you have lots of signals in a short time span. You can change the zoom level by one of the following ways:
+In the day, work week, and week view you can change the scaling of the time axis by zooming in and out. You can change the zoom level by one of the following ways:
 
 - Press the **CTRL** key, keep it pressed and use the mouse wheel to change the zoom level.
-- Use the ribbon commands **Zoom** in and **Zoom out**.
-- Press **CTRL + (+)** to increase the zoom level and **CTRL + (-)** to decrease the zoom level.
+- Use the zoom commands in the top right corner of the timesheet calendar **Zoom** in and **Zoom out**.
 
 ### Navigation
 
-You can navigate between days in the calendar by one of the following ways:
+You can navigate between days and weeks in the calendar the following ways:
 
-- Click on a day in the calendar for navigation in the left bar.
-- Press **CTRL + right arrow** for the next day, **CTRL + left arrow** for the previous day, **CTRL + down arrow** for the next week and **CTRL + up arrow** for the previous week.
+* If you are in the day view, press **CTRL + right arrow** for the next day, **CTRL + left arrow** for the previous day
+
+* If you are in the week view, press **CTRL + right arrow** for the next week, **CTRL + left arrow** for the previous week
+
+To select a specific date, use the date picker at the top of the timesheet calendar.
+
+![Date Picker](images/wc-date-picker.png "Date Picker")
