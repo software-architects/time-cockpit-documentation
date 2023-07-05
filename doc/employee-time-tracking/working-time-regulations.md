@@ -23,7 +23,7 @@ Please note that time cockpit is not liable for the correctness of these rules.
 
 Per default, time cockpit does not check any working time limits. You need to enable the checks once in the global settings. Further, you need to enable the checks that are actually performed. That is, you can disable certain checks if they do not apply to your company.
 
-![Working time limits](images/working-time-limits.png "Working time limits")
+![Working time limits](images/working-time-limits-web.png "Working time limits")
 
 Per default, time cockpit does not take travel times into account for determining an exceedance of a working time limit. A time sheet entry counts as a travel if at least a means to transport is selected.
 
@@ -34,7 +34,7 @@ In the module **User** in the section **Working Time** you can view the violatio
 > [!NOTE]
 Please note that by default time cockpit will select the current month as period. However, time cockpit will expand the period you selected to always include full weeks at the beginning and end of the period. If it would not do that, it would potentially miss violations of a weekly working time limit. Exceedance of the working time per day, are only calculated for the exact period you chose in the filter.
 
-![Working time violations](images/working-time-violations.png "Working time violations")
+![Working time violations](images/working-time-violations-web.png "Working time violations")
 
 ## Configurable Working Time Limits
 
