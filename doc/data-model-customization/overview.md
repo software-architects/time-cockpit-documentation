@@ -1,7 +1,7 @@
 # Customization Capabilities
 
 > [!NOTE]
-This section gives an introduction into advanced customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](support@timecockpit.com).
+This section gives an introduction into advanced customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you want to customize time cockpit yourself, you need to download and install the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe). With the OnCockpit Admin you can customize nearly every aspect of time cockpit, like its data structures, user interface etc. Please be aware that if you are altering your production environment this might impact your team colleages. That is why we offer sandbox environments to test your customizations before you put them in production. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](support@timecockpit.com).
 
 ## Development Process
 
