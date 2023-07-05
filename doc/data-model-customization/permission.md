@@ -63,9 +63,9 @@ Time cockpit allows users to assign permissions to different elements of the dat
 
 A new role ```Projectadmin``` and a new set ```MyProjects``` is created as a prerequisite for the requirements. The ```Projectadmin``` role should be assigned to a user.
 
-![Create Project Admin Role](images/create-project-admin-role.png "Create Project Admin Role")
+![Create Project Admin Role](images/create-project-admin-role-web.png "Create Project Admin Role")
 
-![Assign Project Admin](images/assign-project-admin.png "Assign Project Admin")
+![Assign Project Admin](images/assign-project-admin-web.png "Assign Project Admin")
 
 To implement the ```MyProjects``` set, a multiple assignment between a user (```APP_UserDetail```) and a project (```APP_Project```) must be created (see [M: N relationships for the implementation of multiple assignments](~/doc/data-model-customization/entity.md)). The definition of the ```MyProjects``` set is as follows:
 
@@ -88,13 +88,15 @@ Permissions on entities are row-level permissions, because e.g. a project record
 
 A write permission for an entity can be added customization module under ```Edit entity -> Permissions```. In principle, permissions for entities and for properties / relationships are created using the same mechanism. Whether a permission is defined for an entity is defined in the ```New permission``` form. When adding a new permission, you can also select either the entity itself or properties and relationships. If you select the entity name in the combo box, a permission is created for the entity (in this example Project). If you select a property or relationship, a permission that only applies to the property / relationship in question is created. Since an entity permission is required for requirement (1), the entity name (```APP_Project```) is selected.
 
-![Entity vs Property Permission](images/entity-vs-property-permission.png "Entity vs Property Permission")
+![Entity vs Property Permission](images/entity-vs-property-permission-web.png "Entity vs Property Permission")
 
 Like a validation rule, a permission has a ```Name```, an ```Error message```, and a ```Condition``` that determines whether or not a user has permission. In addition, a permission has a ```Type``` property that specifies whether the permission is a read or write permission.
 
+![Permission Condition](images/permission-condition.png "Permission Condition")
+
 To ensure that only users assigned to the ```Projectadmin``` role are allowed to create projects, ```WriteProject``` is defined with the condition ```'PA' In Set ('CurrentUserRoles', 'Code')```. This permission ensures that only users in the ```Projectadmin``` role can create projects. **Users who do not have the ```Projectadmin``` role thus have only read access on project records.**
 
-![Read-only Project Form](images/read-only-project-form.png "Read-only Project Form")
+![Read-only Project Form](images/read-only-project-form-web.png "Read-only Project Form")
 
 > [!NOTE]
 If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
@@ -103,19 +105,19 @@ If you wanted to remove the write permissions for an element for all users, an e
 
 To meet the requirement that users can only read the projects assigned to them, it is necessary to define a read permission for the entity project. To do this, a permission is defined based on the ```MyProjects``` set.
 
-![Read Project Permission](images/read-project-permission.png "Read Project Permission")
+![Read Project Permission](images/read-project-permission-web.png "Read Project Permission")
 
-The read permission ```Current.Code In Set ('MyProjects', 'Code') Or 'PA' Set ('CurrentUserRoles', 'Code')``` checks whether a project record is assigned to a user or whether a user is ```Projectadmin```. If so, the record is displayed in the project list of a user. As can be seen in the following figure, only those projects that are assigned to the logged-on user are displayed in the selection combo box of the projects when creating a time sheet entry. This means that when the read permission ```ReadProject``` is enabled, only projects are displayed in the user interface which are assigned to the logged-on user.
+The read permission ```Current.Code In Set ('MyProjects') Or 'PA' Set ('CurrentUserRoles')``` checks whether a project record is assigned to a user or whether a user is ```Projectadmin```. If so, the record is displayed in the project list of a user. As can be seen in the following figure, only those projects that are assigned to the logged-on user are displayed in the selection combo box of the projects when creating a time sheet entry. This means that when the read permission ```ReadProject``` is enabled, only projects are displayed in the user interface which are assigned to the logged-on user.
 
-![Read Only Assigned Projects](images/read-only-assinged-projects.png "Read Only Assigned Projects")
+![Read Only Assigned Projects](images/read-only-assinged-projects-web.png "Read Only Assigned Projects")
 
-## Permissions on Properties and Relations
+<!-- ## Permissions on Properties and Relations
 
 A write permission for a property and relation is added or edited in the customization module under ```Edit entity -> Permissions```. Basically, permissions for properties / relations and for entities are created using the same mechanism. Whether a permission is defined for a property / relations is defined in the ```New permission``` form. As can be seen in the following figure, you can also select properties and relations and the _entity name_ in the permissions combo box. If you select the name of a property / relation in the combo box a permission is created for the property / relations.
 
-![Read Permission On Budget](images/read-permission-on-budget.png "Read Permission On Budget")
+![Read Permission On Budget](images/read-permission-on-budget.png "Read Permission On Budget") -->
 
-## Requirement 3
+<!-- ## Requirement 3
 
 For requirement 3, it is necessary to define an permission for the ```Budget``` property on the entity ```APP_Project```. The budget property should only be read by users who are assigned to the ```Projectadmin``` role. This requirement is implemented by the permission expression ```'PA' In Set ('CurrentUserRoles', 'Code')```. This condition states that the budget of a project is readable only if the logged-on user has the ```Projectadmin``` role. This applies to both custom lists and forms.
 
@@ -124,4 +126,4 @@ The following figure shows two project lists. The left project list has been ope
 ![Project List Comparison](images/project-list-comparison.png "Project List Comparison")
 
 > [!NOTE]
-At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document.
+At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document. -->
