@@ -1,9 +1,8 @@
 # OData
 
-> [!WARNING]
-This is preliminary information and subject to change. The services are offered as a developer preview and are not yet fully supported.
+The [Open Data Protocol (OData)](http://www.odata.org/) is a web service protocol for data exchange. It supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete). 
 
-The [Open Data Protocol (OData)](http://www.odata.org/) is a web service protocol for data exchange. It supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete). Time cockpit provides an OData endpoint exposing model and data while including individual data model configurations. OData can be consumed via client applications (e.g. [Excel](http://www.timecockpit.com/blog/2014/04/29/Your-Data-in-a-Geographical-Context), [LINQPad](https://www.linqpad.net/)) and various programming languages (e.g. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), [TypeScript](http://jaystack.com/blog/typescript-meets-odata-with-the-help-of-jaydata-and-jaysvcutil), [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)).
+Time cockpit provides an OData endpoint exposing model and data while including individual data model configurations. OData can be consumed via client applications (e.g. [PowerBI]([https://](https://powerbi.microsoft.com/)), [Excel](http://www.timecockpit.com/blog/2014/04/29/Your-Data-in-a-Geographical-Context), [LINQPad](https://www.linqpad.net/)) and various programming languages (e.g. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), [TypeScript](http://jaystack.com/blog/typescript-meets-odata-with-the-help-of-jaydata-and-jaysvcutil), [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)).
 
 ## Service Endpoint
 
@@ -11,7 +10,7 @@ The address of our OData endpoint is <https://api.timecockpit.com/odata>.
 
 ## Authentication
 
-The OData service uses the authentication mechanisms described in [Web API](overview.md).
+To use the OData endpoint, you first need to authentication against the service. To learn how to authenticate, refer to [authentication](authentication.md).
 
 ## Current Limitations
 
@@ -19,6 +18,59 @@ The OData service uses the authentication mechanisms described in [Web API](over
 - The numeric operator `Modulo (%)` is not supported.
 - The entity set function `Count` is not supported.
 - Only the filter functions `length`, `concat`, `day`, `month`, and `year` are supported. Other functions (e.g. `substringof`, `startswith`) are not supported.
+
+## C# CRUD Example
+
+```cs
+var timeCockpitBaseUri = "https://api.timecockpit.com";
+var timeCockpitDataApiPAT = "YOUR_PAT";
+
+using (var httpClient = new HttpClient())
+{
+	httpClient.BaseAddress = new Uri(timeCockpitBaseUri);
+	httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue($"Bearer", timeCockpitDataApiPAT);
+
+	// ## CREATE
+
+	var guid = new Guid("af0725c0-cf12-43da-8688-3dcced935909");
+	var newTask = new
+	{
+		APP_TaskUuid = guid,
+		APP_Code = "IMPL",
+		USR_Title = "Implementation",
+		APP_ProjectUuid = "79b82123-596e-4abe-bdf2-38a8c279f589"
+	};
+
+	var newTaskContent = new StringContent(JsonConvert.SerializeObject(newTask), Encoding.UTF8, "application/json");
+
+	var result = await httpClient.PostAsync($"https://api.timecockpit.com/odata/APP_Task", newTaskContent);
+
+	// ## READ
+
+	result = await httpClient.GetAsync($"https://api.timecockpit.com/odata/APP_Task()?$filter=APP_TaskUuid eq guid'{guid}'");
+	var json = JObject.Parse(result.Content.ReadAsStringAsync().Result);
+
+	// ## READ ALL
+
+	result = await httpClient.GetAsync("https://api.timecockpit.com/odata/APP_Task()");
+	json = JObject.Parse(result.Content.ReadAsStringAsync().Result);
+
+	// ## UPDATE
+
+	var taskData = new
+	{
+		APP_Description = "Development"
+	};
+
+	var updatedJson = new StringContent(JsonConvert.SerializeObject(taskData), Encoding.UTF8, "application/json");
+
+	result = await httpClient.PostAsync($"https://api.timecockpit.com/odata/APP_Task(guid'{guid}')", updatedJson);
+
+	// ## DELETE
+
+	result = await httpClient.DeleteAsync($"https://api.timecockpit.com/odata/APP_Task(guid'{guid}')");
+}
+```
 
 ## Example Query: Get All Countries
 

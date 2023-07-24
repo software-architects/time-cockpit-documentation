@@ -1,16 +1,16 @@
 # Formatting Profiles	
 
-Time cockpit's graphical calendar is designed to provide you with an instant overview about how you spent your time. With formatting profiles you can define conditional formatting rules that control how time sheet entries are displayed in the graphical calendar. You can influence the text that time cockpit displays in the header and footer of time sheet entries in the calendar. Additionally, you can define the background color of time sheet entries. Here are some examples for situation in which conditional formatting might be useful:
+Time cockpit's graphical calendar is designed to provide you with an instant overview about how you spent your time. With formatting profiles you can define conditional formatting rules that control how time sheet entries are displayed in the graphical calendar. You can configure the text that time cockpit displays in the header and footer of time sheet entries in the calendar. Additionally, you can define the background color of time sheet entries. Here are some examples for situation in which conditional formatting might be useful:
 
 - Display billable and non-billable time sheet entries in two different colors to get a quick visual feedback about the ratio of billable time.
 - Display incomplete time sheet entries (e.g. entries without project assignment) in red. You will easily discover them at the end of the month when you have to complete your time sheet.
-- Display all time sheets with the world "travel" in the description in a specific color. When you create your travel expense reports, you will easily find time sheet entries related to travels.
+- Display all time sheets with the word "travel" in the description in a specific color. When you create your travel expense reports, you will easily find time sheet entries related to travels.
 
 While conditional formatting for individual time sheet entries provides instant feedback about the status of each single entry, you might also need an overview about the structure of your work for an entire day, week, or month. Time cockpit provides this in the navigation pane of the calendar. Based on the conditional formatting rule used for background colors, you will get a bar chart showing you the allocation of your work. The KPI (key performance indicator) used in the bar chart is customizable. You can use any numeric field in time sheet records (e.g. duration in hours, revenue) when defining the formula for the KPI. Here are some examples for situation in which you might want to use the bar charts:
 
-- You need to know on which projects you spent most of your time in a certain week. Time cockpit can display a bar chart with the total working hours per project.
-- You need to know the number of billable hours vs. non-billable hours. Time cockpit can show you a bar chart with two data bars: billable hours and non-billable hours.
-- You need to get an overview on how much money you have earned with each customer in a certain month. Time cockpit can display a bar chart with the revenue per customer.
+- You need to know on which projects you spent most of your time in a certain week? Time cockpit can display a bar chart with the total working hours per project.
+- You need to know the number of billable hours vs. non-billable hours? Time cockpit can show you a bar chart with two data bars: billable hours and non-billable hours.
+- You need to get an overview on how much money you have earned with each customer in a certain month? Time cockpit can display a bar chart with the revenue per customer.
 
 ## Formatting Profiles in the Time Sheet Calendar
 
@@ -18,38 +18,25 @@ Formatting profiles influence three areas in the time sheet calendar:
 
 - In the navigation pane (left) you see the bar charts mentioned above, you configure the formatting profiles, and select the currently active profile.
 - In the main area of the calendar the active formatting profile specifies how time cockpit generates caption and footer texts as well as background color of time sheet entries.
-- Template bookings in the ribbon are also colored based on the currently active formatting profile.
+- Template bookings in the navigation pane are also colored based on the currently active formatting profile.
 
-![Billable formatting profile](images/formatting-profile-billable.png "Billable formatting profile")
+![Billable formatting profile](images/wc-formatting-profile-billable.png "Billable formatting profile")
 
 ## Formatting Profile Settings
 
-You configure the settings for formatting profiles in the navigation pane in the left area of the time sheet calendar. Left-click on the blue gear to change these settings.
-
-![Formatting profile settings](images/formatting-profile-settings.png "Formatting profile settings")
-
-- The first area in the menu allows you to select the visible formatting profiles. Time cockpit will display bar charts for all profiles that you select in this area.
-- The second area specifies the time range used for the values in the bar chart. You can calculate the values for the month, week, or day which is currently selected in your time sheet calendar.
-- The third area allows you to change the sort order of the bars in the chart. You can order them by value (descending) or by text (ascending).
-- The fourth area allows you to add new, edit existing, or delete existing formatting profiles. These three menu items are also available in the context menu of each formatting profile.
-
-> [!NOTE]
-Note that time cockpit displays the formatting profiles in the order that you select them. You can change the display order by dragging the profile's title.
-
-> [!NOTE]
-Time cockpit will save the configuration of your formatting profiles on your PC. If you work on multiple PCs and/or with time cockpit's browser client, time cockpit will not synchronize your settings across your clients.
-
-Although you can display multiple formatting profiles in the navigation pane, only one of them can be active. Click anywhere in the bar chart to select the corresponding formatting profile to activate it. The active profile defines the conditional formatting in your time sheet calendar. Its bar chart is displayed in color. All other formatting profiles are inactive and displayed in gray.
-
 ## Edit Formatting Profiles
 
-In the navigation pane of the time sheet calendar you can maintain your formatting profiles. To add, edit, or delete a formatting profile, right-click a profile or select the settings menu for formatting profiles (blue gear).
+You configure the settings for formatting profiles in the navigation pane in the left area of the time sheet calendar. Select a formatting profile you want to edit and click the ✏️ **icon**.
+
+![Edit formatting profile](images/edit-formatting-profile.png "Edit formatting profile")
 
 The configuration dialog for formatting profiles consists of three areas:
 
 - General settings
 - Key figure (used for bar charts)
 - Color settings
+
+![Edit formatting profile dialogue"](images/edit-formatting-profile-dialog.png "Edit formatting profile dialogue")
 
 ## General Settings
 In the general settings for formatting profiles you can specify the following settings:
@@ -78,14 +65,14 @@ Examples:
 
 - `:Iif(Current.Billable=True, 'Billable', 'Not Billable')`
 - `:Current.Project.Description`
-- `:Iif(Current.Billable=True, :Translate('FormattingProfile.Billable.Billable'), :Translate('FormattingProfile.Billable.NotBillable'))` Sample demonstrating the use of the :Translate function
+- `:Iif(Current.Billable=True, :Translate('FormattingProfile.Billable.Billable'), :Translate('FormattingProfile.Billable.NotBillable'))`
 
 > [!NOTE]
 Do not return a color code or the name of a color. The color is assigned later in the configuration (see below). In this step we only need the caption for the bar chart row. Note that you can use the :Translate function if you need to support different languages.
 
-### Visible For All Users
+### Display Formatting Profile for
 
-If you check this checkbox, all users will be able to use, modify, and delete your formatting profile. If it is unchecked, the formatting profile is only available for you.
+Select a specific user (e.g. yourself) if you want the formatting profile to be only displayed for that user. If you select no user, the formatting profile is available to all users in the account.
 
 ## Key Figure Section
 
@@ -123,6 +110,6 @@ You can only check this checkbox if you have chosen to show the key figure in pe
 
 ## Color Settings
 
-The colors section allows you to assign colors to the distinct values of the grouping expression. You do not need to specify a color for each value. Time cockpit will automatically pick a color for each value whenever it needs one for the calendar. The automatically assigned colors may change each time you start time cockpit. If you always want to get the same color for a specific value, you have to assign it manually. The easiest way to start with assigning colors is to click on the **Get values for background color expression** link. Time cockpit will pick a color for each possible value of the grouping expression. You can then modify the colors as you like. If you click the link to generate colors a second time, time cockpit will not override existing values but it will only add missing values.
+The colors section allows you to assign colors to the distinct values of the grouping expression. You do not need to specify a color for each value. Time cockpit will automatically pick a color for each value whenever it needs one for the calendar. The automatically assigned colors may change each time you start time cockpit. If you always want to get the same color for a specific value, you have to assign it manually. 
 
-![Formatting profile colors](images/formatting-profile-colors.png "Formatting profile colors")
+![Formatting profile colors](images/formatting-profile-colors-web.png "Formatting profile colors")
