@@ -1,6 +1,6 @@
 # Installation Instructions	
 
-Download the latest installer for time cockpit from the [time cockpit website](https://www.timecockpit.com). Login with your user and password and go to the "My Account" page. There you will find the latest version of time cockpit. The installation wizard helps you to check, if all prerequisites are installed. If there are missing prerequisites, the installer helps you to install the missing components.
+Download the latest installer for time cockpit from https://update.timecockpit.com/general/Setup.exe. The installation wizard helps you to check, if all prerequisites are installed. If there are missing prerequisites, the installer helps you to install the missing components.
 
 When you start time cockpit the first time the configuration wizard will guide you through the first steps to configure time cockpit.
 
