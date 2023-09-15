@@ -1,8 +1,8 @@
-# Time Cockpit Profile Feature Documentation
+# Profiles
 
 ## Overview
 
-The time cockpit Profile feature allows users to customize the display settings of lists within time cockpit to better adapt to the way they work. With this feature, users can create, manage, and apply profiles to lists, including settings like displayed columns, column order, grouping, collapse status of grouping, and sort order. Profiles are stored per user in the database, making them accessible on any device or browser.
+The time cockpit Profiles feature allows users to customize the display settings of lists within time cockpit to better adapt to the way they work. With this feature, users can create, manage, and apply profiles to lists, including settings like displayed columns, column order, grouping, collapse status of grouping, and sort order. Profiles are stored per user in the database, making them accessible on any device or browser.
 
 ## Key Features
 
@@ -10,12 +10,10 @@ The time cockpit Profile feature allows users to customize the display settings 
 
 The Profile feature introduces an additional button labeled "Profile" to every list in time cockpit.
 
-<iframe src="https://player.vimeo.com/video/864699078?h=fef962b1f8" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-### Profile Customization
-
 - Users can customize list settings, including displayed columns, column order, grouping, collapse status of grouping, and sort order.
 - Profiles can be named for easy identification and management.
+
+<iframe src="https://player.vimeo.com/video/864699078?h=fef962b1f8" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ### Profile Actions
 
@@ -29,6 +27,8 @@ The Profile feature introduces an additional button labeled "Profile" to every l
 - Users have the option to set a profile as the default view for a list.
 - When a profile is set as the default, the list opens with the profile's settings.
 - If no default profile is selected, the list opens in the standard view provided by time cockpit, and users can manually select a profile.
+
+![Set Profile to Default](images/wc-profile-default.png "Set Profile to Default")
 
 ## Use Cases
 
