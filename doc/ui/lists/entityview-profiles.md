@@ -6,7 +6,7 @@ The time cockpit Profiles feature allows users to customize the display settings
 
 ## Key Features
 
-### Adding the "Profile" Button
+### Adding the "Profiles" Button
 
 The Profile feature introduces an additional button labeled "Profile" to every list in time cockpit.
 
