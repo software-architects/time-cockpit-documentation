@@ -10,7 +10,12 @@ The time cockpit Profile feature allows users to customize the display settings 
 
 The Profile feature introduces an additional button labeled "Profile" to every list in time cockpit.
 
-![Profile Management](images/wc-profile-button.png "Profile Management")
+<iframe src="https://player.vimeo.com/video/864699078?h=fef962b1f8" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+### Profile Customization
+
+- Users can customize list settings, including displayed columns, column order, grouping, collapse status of grouping, and sort order.
+- Profiles can be named for easy identification and management.
 
 ### Profile Actions
 
@@ -18,13 +23,6 @@ The Profile feature introduces an additional button labeled "Profile" to every l
 - **Save Ppofile:** Existing profiles can be updated to reflect changes in list settings.
 - **Save as new profile:** Users can create a new profile with customized list settings.
 - **Delete profile:** Users can delete profiles they no longer need.
-
-### Profile Customization
-
-- Users can customize list settings, including displayed columns, column order, grouping, collapse status of grouping, and sort order.
-- Profiles can be named for easy identification and management.
-
-<iframe src="https://player.vimeo.com/video/864699078?h=fef962b1f8" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ### Setting a Profile as Default
 
