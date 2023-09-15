@@ -18,7 +18,7 @@ The Profile feature introduces an additional button labeled "Profile" to every l
 ### Profile Actions
 
 - **Reset view:** Allows users to reset the view of a list to its default settings.
-- **Save Ppofile:** Existing profiles can be updated to reflect changes in list settings.
+- **Save Profile:** Existing profiles can be updated to reflect changes in list settings.
 - **Save as new profile:** Users can create a new profile with customized list settings.
 - **Delete profile:** Users can delete profiles they no longer need.
 
