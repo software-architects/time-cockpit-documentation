@@ -2,7 +2,7 @@
 
 The **Time Report** feature in Time Cockpit provides a detailed summary of working time-related information for a specific user during a defined working period. This comprehensive report can be used for tracking and analyzing working hours, breaks, and other essential details.
 
-The report is located at ```USERS --> WORKING TIME --> Time Report```
+The report is located at **USERS --> WORKING TIME --> Time Report**
 
 ![Time Report Menu](images/time-report-menu.png "Time Report Menu")
 
