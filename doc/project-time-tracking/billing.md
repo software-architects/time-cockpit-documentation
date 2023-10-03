@@ -1,12 +1,6 @@
 # Invoicing
 
-Time cockpit not only serves as a time tracking tool but also enables streamlined billing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. In time cockpit you can
-
-* create invoices with invoice positions
-* automatically create invoice positions from time sheet entries (service time, travel time)
-* create your own arcticles for invoice positions
-* add your own invoice positions to an existing invoice
-* generate an invoice document
+Time cockpit not only serves as a time tracking tool, but also enables streamlined billing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 
 
 ## Building Blocks of an Invoice
 
@@ -51,6 +45,30 @@ An article consists of the following fields:
 > [!NOTE]
 Time cockpit ships articles for service time and travel time. See a list of your articles in your [articles list](https://web.timecockpit.com/app/lists/entity/APP_Article).
 
+## How to Create an Invoice
+
+Certainly, here's a more technical and concise version:
+
+The time cockpit's default data model contains the list [Unbilled Time Sheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list shares similarities with the default [Time Sheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) list, but adds dedicated filters to distinguish between billable and unbilled hours. Also, this feature provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
+
+1. Open the **Unbilled Time Sheets** list.
+2. Select the timesheets you want to include in your invoice.
+3. From the **Actions** menu, choose **Create Invoice**.
+4. Enter your invoice details.
+
+When you execute the **Create Invoice** action, it assigns the selected timesheets to invoice items. 
+
+>[!NOTE]
+Once timesheet entries are associated with an invoice item/invoice, they become **read-only** to prevent inadvertent modifications after billing.
+
+In regard to service time, it is important to note that hourly rates for customers or projects can change over time. To accommodate this, the **Create Invoice** action copies the applicable hourly rate into the `APP_Price` field and the number of billed time sheet entries in the `APP_Quantity` field. This fields are used to calculate the overall net revenue of an invoice.
+
+TODO: Video
+
+> [!NOTE]
+Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
+
+
 ## Automatic Creation of Invoice Items
 
 When you create an invoice in time cockpit, it analyzes the selected time sheet entries for a project to generate invoice items. If the entries are related to travel, time cockpit uses the "travel time" article as the basis for the invoice item. A time sheet entry is interpreted as travel, if `Distance Relevant for Mileage Allowance` on a time sheet entry is filled in. In the process of generating an invoice, all driven kilometers of the selected time entries are summed up. Description, unit, price, and VAT for the invoice item are set based on the standard article "Travel Costs" (Code: travelCosts).
@@ -72,25 +90,6 @@ The calculation of the total invoice amount (**Net Revenue** in the invoice) is 
 
 > [!NOTE]
 Prices of generated invoice items can be changed. If so, the updated total of all invoice items is reflected in the invoice the invoice item belongs to.
-
-## How to Create an Invoice
-
-For billing the default data model of time cockpit contains the list **Management – Billing – Unbilled Time Sheets**. The list is similar to the default list for timesheet entries, but contains an additional filter for billable and not billed hours. In the default data model you can call the `Create Invoice` action, which allows to allocate time sheet entries to an invoice. For generating an invoice please proceed as follows:
-
-1. Open the list **Unbilled Time Sheets**
-1. Mark all time sheets you want to assign to your invoice
-1. From the **Actions** menu choose **Create Invoice**
-1. Enter your invoice data
-
-When you execute **Create Invoice** all selected time sheets get assigned to the new invoice/invoice items. That means that you are able to generate e.g. a time sheet journal for an invoice in the default list for Zeitbuchungen by filtering for an invoice number. After assigning time sheet entries to an invoice, they are automatically marked read-only. Thus, time sheets entries cannot be modified by mistake after billing.
-
-Hourly rates for customers or projects can change over time. For this reason the action **Create Invoice** copies the concrete valid hourly rate into field `APP_HourlyRateBilled`. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
-
-TODO: Video
-
-> [!NOTE]
-Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
-
 
 ## Custom Invoice Items and Articles
 
@@ -120,7 +119,48 @@ If the automated invoice item generation logic doesn't meet your requirements, y
 8.  You can edit the quantity (e.g., increase it to 25).
 9.  Save and close the custom invoice item with the custom article.
 
-## Invoice Report
+## Generate an Invoice Report
+
+Time cockpit can create a comprehensive PDF document for a specific invoice, encompassing essential details for a valid invoice. This includes customer address, invoice number, invoice date, and the service period. 
+
+![Invoice Report](images/invoice-report.png "Invoice Report")
+
+Furthermore, the document itemizes all the assigned invoice items. Each invoice item is presented with its quantity, unit, price, total amount, and the associated VAT rate. This allows for a thorough overview of the invoice's contents and makes it easy to verify and understand the billed items.
+
+If time sheet entries are associated with the invoice (created using the `Create Invoice` action), the display of the time sheet entry details on the invoice document can be enabled. You can do so by checking the `Incl. Timesheets on Invoice Report` flag on the given invoice. 
+
+>[!NOTE]
+If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
+
+### Invoices without VAT
+
+For invoices with no VAT (all invoice items with 0% VAT), the determination of whether it's an intra-EU transaction or not depends on the customer's country. 
+
+If the customer is **within** the EU, the following statement will be printed below the total amount:
+
+**English**
+> According to the reverse charge system, the amounts listed above are exclusive of sales tax. The sales tax must be calculated and paid by the recipient of the service.
+
+**German**
+> Die oben angeführten Beträge verstehen sich gemäß dem Reverse-Charge-System exklusive Umsatzsteuer. Die Umsatzsteuer muss vom Empfänger der Leistung berechnet und abgeführt werden.
+
+For customers **outside** the EU, a slightly different statement will be printed below the total amount:
+
+**English**
+> The above amounts do not include sales tax. The sales tax must be calculated and paid by the recipient of the service.
+
+**German**
+> Die oben angeführten Beträge verstehen sich ohne Umsatzsteuer. Die Umsatzsteuer muss vom Empfänger der Leistung berechnet und abgeführt werden.
+
+When automatically invoice items are generated automatically using the `Create Invoice` action, the decision to use VAT or not is based on either the customer address or the overwritten address of the invoices.
+
+### Corporate Information of the Invoice Issuer
+
+In the footer of the invoice document, the corporate information of the entity issuing the invoice is displayed. You can manage this information at [**Management --> Billing --> Companies**](https://web.timecockpit.com/app/lists/entity/APP_Company).
+
+>[!NOTE]
+At the moment only one company/invoice issuer is supported.
+
 
 ## Adding Timesheet Entries to an Existing Invoice
 
