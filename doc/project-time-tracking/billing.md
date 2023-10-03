@@ -49,7 +49,7 @@ Time cockpit ships articles for service time and travel time. See a list of your
 
 Certainly, here's a more technical and concise version:
 
-The time cockpit's default data model contains the list [Unbilled Time Sheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list shares similarities with the default [Time Sheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) list, but adds dedicated filters to distinguish between billable and unbilled hours. Also, this feature provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
+The time cockpit's default data model contains the list [Management --> Billing --> Unbilled Time Sheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list shares similarities with the default [Management --> Customer and Project Hierarchy --> Time Sheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) list, but adds dedicated filters to distinguish between billable and unbilled hours. Also, this feature provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
 
 1. Open the **Unbilled Time Sheets** list.
 2. Select the timesheets you want to include in your invoice.
@@ -61,7 +61,7 @@ When you execute the **Create Invoice** action, it assigns the selected timeshee
 >[!NOTE]
 Once timesheet entries are associated with an invoice item/invoice, they become **read-only** to prevent inadvertent modifications after billing.
 
-In regard to service time, it is important to note that hourly rates for customers or projects can change over time. To accommodate this, the **Create Invoice** action copies the applicable hourly rate into the `APP_Price` field and the number of billed time sheet entries in the `APP_Quantity` field. This fields are used to calculate the overall net revenue of an invoice.
+Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
 
 TODO: Video
 
@@ -161,7 +161,17 @@ In the footer of the invoice document, the corporate information of the entity i
 >[!NOTE]
 At the moment only one company/invoice issuer is supported.
 
-
 ## Adding Timesheet Entries to an Existing Invoice
+
+Occasionally, a time sheet entry may not have been included in an invoice. In such instances, you can utilize the "Assign to Existing Outgoing Invoice" action. Here are the steps:
+
+1. Navigate to the [**Management --> Billing --> Unbilled Time Sheets**](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList) list.
+2. Select the time sheet entry that you wish to append to an existing invoice.
+3. Execute the 'Assign to Existing Outgoing Invoice' action.
+
+![Assign to Existing Invoice](images/assign-to-existing-invoice.png "Assign to Existing Invoice")
+
+>[!NOTE]
+Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.
 
 ## Credit Note
