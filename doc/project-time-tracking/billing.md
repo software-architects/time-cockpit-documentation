@@ -4,7 +4,7 @@ Time cockpit not only serves as a time tracking tool, but also enables streamlin
 
 ## Building Blocks of an Invoice
 
-In time cockpit, an invoice does not exist on its own, but is composed of different building blocks. 
+In time cockpit, an invoice does not exist on its own, but is composed of different building blocks. For a comprehensive description about an invoice refer to [Invoice Data Fields](~/doc/project-time-tracking/invoice-data-fields.md).
 
 ### Invoice Item
 
@@ -23,6 +23,9 @@ An invoice item consists of the following data:
 - **Total (incl. VAT):** The total cost including VAT.
 
 ![Invoice Item](images/invoice-item.png "Invoice Item")
+
+> [!NOTE]
+Invoice items within an invoice may have varying VAT rates, which are appropriately reflected in the invoice document. Additionally, credit notes can be generated using negative values.
 
 ### Article
 
