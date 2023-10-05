@@ -176,5 +176,3 @@ Occasionally, a time sheet entry may not have been included in an invoice. In su
 
 >[!NOTE]
 Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.
-
-## Credit Note
