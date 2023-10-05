@@ -66,7 +66,7 @@ Once timesheet entries are associated with an invoice item/invoice, they become 
 
 Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
 
-TODO: Video
+<div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871357620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="invoicing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 > [!NOTE]
 Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
