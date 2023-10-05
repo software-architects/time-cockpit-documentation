@@ -1,6 +1,6 @@
 # Invoicing
 
-Time cockpit not only serves as a time tracking tool, but also enables streamlined billing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 
+Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 
 
 ## Building Blocks of an Invoice
 
@@ -50,8 +50,6 @@ Time cockpit ships articles for service time and travel time. See a list of your
 
 ## How to Create an Invoice
 
-Certainly, here's a more technical and concise version:
-
 The time cockpit's default data model contains the list [Management --> Billing --> Unbilled Time Sheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list shares similarities with the default [Management --> Customer and Project Hierarchy --> Time Sheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) list, but adds dedicated filters to distinguish between billable and unbilled hours. Also, this feature provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
 
 1. Open the **Unbilled Time Sheets** list.
@@ -61,12 +59,12 @@ The time cockpit's default data model contains the list [Management --> Billing 
 
 When you execute the **Create Invoice** action, it assigns the selected timesheets to invoice items. 
 
+<div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871357620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="invoicing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 >[!NOTE]
 Once timesheet entries are associated with an invoice item/invoice, they become **read-only** to prevent inadvertent modifications after billing.
 
 Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
-
-<div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871357620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="invoicing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 > [!NOTE]
 Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.

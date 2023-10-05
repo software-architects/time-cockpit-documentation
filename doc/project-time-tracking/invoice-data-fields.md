@@ -24,7 +24,7 @@ This information is derived from the invoicing rules specific to the project cor
 The billing address is required for generating the invoice document. Per default, the billing address is derived from the billing address of the customer. However, you can override the billing address for each invoice. To manage the billing address of your customers navigate to your [customer list](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
 >[!NOTE]
-The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice Data Fields](~/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
+The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice](~/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
 
 ## General Section
 
