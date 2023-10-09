@@ -116,7 +116,7 @@ If the automated invoice item generation logic doesn't meet your requirements, y
 4.  In the invoice details, add a new item.
 5.  Select your new article (e.g., "Time Tracking Terminal") from the list of available articles.
 6.  Hit "Excute Action."
-7.  The information from the article template is copied to the actual invoice.
+7.  The information from the article template is copied to the actual invoice item.
 8.  You can edit the quantity (e.g., increase it to 25).
 9.  Save and close the custom invoice item with the custom article.
 
@@ -153,7 +153,7 @@ For customers **outside** the EU, a slightly different statement will be printed
 **German**
 > Die oben angeführten Beträge verstehen sich ohne Umsatzsteuer. Die Umsatzsteuer muss vom Empfänger der Leistung berechnet und abgeführt werden.
 
-When automatically invoice items are generated automatically using the `Create Invoice` action, the decision to use VAT or not is based on either the customer address or the overwritten address of the invoices.
+When invoice items are generated automatically using the `Create Invoice` action, the decision to use VAT or not is based on either the customer address or the overwritten address of the invoices.
 
 ### Corporate Information of the Invoice Issuer
 
