@@ -120,6 +120,22 @@ If the automated invoice item generation logic doesn't meet your requirements, y
 8.  You can edit the quantity (e.g., increase it to 25).
 9.  Save and close the custom invoice item with the custom article.
 
+## Creating Manual Invoices
+
+In time cockpit, you have the flexibility to create manual invoices when needed. This functionality allows you to generate invoices that may not fit the standard automatic invoice generation process. Manual invoices can be necessary in situations where you want to include custom billing items, services, or products that are not covered by the regular time tracking entries.
+
+### Steps to Create a Manual Invoice
+
+1. Navigate to [**Management --> Billing --> Outgoing Invoices**](https://web.timecockpit.com/app/lists/entity/APP_Company) list.
+2. Click the "Add" button.
+4. Fill in the relevant details for the manual invoice, including customer information, invoice number, and invoice date.
+5. Add custom invoice items as needed. You can specify the description, quantity, unit price, and tax rates for each item.
+6. Review the invoice and make any necessary adjustments.
+7. Save the manual invoice.
+
+>[!NOTE]
+With manual invoices, invoice items are **not** automatically generated from the time sheet entries within a specific period, giving you full control to define custom billing items and their details as needed.
+
 ## Generate an Invoice Report
 
 Time cockpit can create a comprehensive PDF document for a specific invoice, encompassing essential details for a valid invoice. This includes customer address, invoice number, invoice date, and the service period. 
@@ -128,7 +144,7 @@ Time cockpit can create a comprehensive PDF document for a specific invoice, enc
 
 Furthermore, the document itemizes all the assigned invoice items. Each invoice item is presented with its quantity, unit, price, total amount, and the associated VAT rate. This allows for a thorough overview of the invoice's contents and makes it easy to verify and understand the billed items.
 
-If time sheet entries are associated with the invoice (created using the `Create Invoice` action), the display of the time sheet entry details on the invoice document can be enabled. You can do so by checking the `Incl. Timesheets on Invoice Report` flag on the given invoice. 
+If time sheet entries are associated with the invoice (created using the `Create Invoice` action), the display of the time sheet entry details on the invoice document can be enabled. You can do so by checking the `Incl. Timesheets on Invoice Document` flag on the given invoice. 
 
 >[!NOTE]
 If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
@@ -153,7 +169,7 @@ For customers **outside** the EU, a slightly different statement will be printed
 **German**
 > Die oben angeführten Beträge verstehen sich ohne Umsatzsteuer. Die Umsatzsteuer muss vom Empfänger der Leistung berechnet und abgeführt werden.
 
-When invoice items are generated automatically using the `Create Invoice` action, the decision to use VAT or not is based on either the customer address or the overwritten address of the invoices.
+When invoice items are generated automatically using the `Create Invoice` action, the decision to use VAT is based on whether the customer's and the invoicing party's home country is the same.
 
 ### Corporate Information of the Invoice Issuer
 
