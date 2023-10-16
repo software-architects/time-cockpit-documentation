@@ -175,6 +175,9 @@ When invoice items are generated automatically using the `Create Invoice` action
 
 In the footer of the invoice document, the corporate information of the entity issuing the invoice is displayed. You can manage this information at [**Management --> Billing --> Companies**](https://web.timecockpit.com/app/lists/entity/APP_Company).
 
+![Company Form](images/company-form.png "Company Form")
+
+
 >[!NOTE]
 At the moment only one company/invoice issuer is supported.
 

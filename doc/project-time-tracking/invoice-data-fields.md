@@ -64,4 +64,4 @@ If you set the `Payment Received On` date on the invoice and it falls within the
 
 In this section, you can configure and generate a PDF version of the invoice. To begin report generation for your invoice, simply use the `Download Invoice Document as PDF` option.
 
-Additionally, you can use the `Incl. Timesheets on Invoice Report` flag to specify whether the invoice report should include time sheet entry details for each invoice item. This flag provides control over the level of detail in your invoice report.
+Additionally, you can use the `Incl. Timesheets on Invoice Report` flag to specify whether the invoice report should include time sheet entry details for each invoice. This flag provides control over the level of detail in your invoice report.
