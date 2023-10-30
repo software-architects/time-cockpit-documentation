@@ -23,7 +23,7 @@ To activate test users, please reach out to our support team. Unfortunately, use
 
 Your test system is free for the time being. We only need to discuss any potential compromises if it starts significantly impacting our systems. You can enjoy the benefits of a test system without any immediate cost.
 
-### Accessing the Sandbox
+### Accessing the Sandbox WITHOUT Microsoft Entra (AAD)
 Users can easily log in to the test system by visiting [web.timecockpit.com](https://web.timecockpit.com). Use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 
 ![Sandbox Login](images/sandbox-login.png "Sandbox Login")
@@ -31,6 +31,21 @@ Users can easily log in to the test system by visiting [web.timecockpit.com](htt
 If you're using the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe) for customizations and development, you can connect to the sandbox by adding a "New Configuration" in the start dialog of OnCockpit Admin. Ensure that you use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 
 ![Configuration Selector](images/oncockpitadmin-configuration-selector.png "Configuration Selector")
+
+### Accessing the Sandbox WITH Microsoft Entra (AAD)
+
+If you are using Microsoft Entra (AAD) for federated authentication you cannot use the pattern `test/originalemailaddress`. You can directly switch to the sandbox from your time cockpit. 
+
+1. Log in to your time cockpit via Microsoft Entra (AAD)
+2. Click on your user name in the right corner of time cockpit.
+3. Click on "Switch to sandbox". Time cockpit will reload and forward you to the sandbox.
+
+![Switch to Sandbox (AAD)](images/ws-switch-to-sandbox.png "Switch to Sandbox (AAD)")
+
+>[!NOTE]
+You know that you are in the sandbox if time cockpit shows you the sandbox badge next to your user name.
+
+![Sandbox Badge](images/sandbox-badge.png "Sandbox Badge")
 
 ## Entities, Properties, Relations etc
 
