@@ -12,14 +12,25 @@ Predefined working time limits are shipped for Austria and Germany.
 > [!WARNING]
 Please note that time cockpit is not liable for the correctness of these rules.
 
-- Limits for Austria
-    - 10 hours maximum per day
-    - 50 hours maximum per week
-    - 30 minutes break after 6 hours (2x15 or 3x10 minutes)
-- Limits for Germany
-    - 10 hours maximum per day
-    - 48 hours maximum per week
-    - 30 minutes break after 6 hours (2x15 minutes), 45 minutes break after 9 hours (3x15 minutes)
+- Limits for Austria (as of 05.12.2023)
+  - Max Working Time Per Day Excluding Travel Time [h]: 12h
+  - Max. Daily Working Time Including Active Travel Time: 12h
+  - Max. Daily Working Time Including Active And Passive Travel Time: -
+  - Max working time per week including active travel time [h]: 60h
+  - Max working time per week including active and passive travel time [h]: -
+  - Breaks: 30m after 6h, split options: 2x15m/3x10m
+  - Further info: 
+    - [Working Time (WKO)](https://www.wko.at/arbeitszeit/uebersicht)
+    - [Working Time Calculator](https://ratgeber.wko.at/cgi-bin/expertred/enb.cgi?SHOWMODE=1&WIZARD=ARBEITSZEIT12&TRAEGER=DEFAULT&BEREICH=FRAU&FORTSCHRITT=5&LAYOUT=HELP)
+- Limits for Germany (as of 05.12.2023)
+  - Max. Daily Working Time: 10h
+  - Max. Weekly Working Time: 48h
+  - Breaks: 30m after 6h, split options 2x15m. 45m after 9h, split options 3x15m
+  - Further info: 
+    - [ArbZG Germany](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
+
+> [!WARNING]
+Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
 
 Per default, time cockpit does not check any working time limits. You need to enable the checks once in the global settings. Further, you need to enable the checks that are actually performed. That is, you can disable certain checks if they do not apply to your company.
 
