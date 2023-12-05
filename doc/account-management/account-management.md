@@ -50,13 +50,16 @@ To ensure seamless billing and account management, time cockpit requires specifi
      - **VAT ID:** Provide your VAT identification number.
      - **Additional Address Info:** Include any supplementary information regarding your address.
 
+>[!NOTE]
+If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](support@timecockpit.com)
+
 ### Stripe
 
 Billing management within time cockpit is facilitated by **Stripe**, a secure and trusted payment gateway provider widely used for online transactions.
 
 Stripe is a global technology company that builds economic infrastructure for the internet. It provides a secure platform for businesses to manage online payments, billing, and subscription services. The platform is known for its robust security measures, user-friendly interfaces, and broad support for various payment methods.
 
-Stripe supports a wide range of payment methods, including credit and debit cards (Visa, Mastercard, American Express), bank transfers, and more. This diverse array of payment options offers users flexibility and convenience in managing their billing preferences.
+Stripe supports a wide range of payment methods, including credit and debit cards (Visa, Mastercard, American Express), bank transfers, and more. This diverse array of payment options offers users flexibility and convenience in managing their billing preferences. 
 
 ## Invoice Download
 
