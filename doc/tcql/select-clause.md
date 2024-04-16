@@ -1,6 +1,6 @@
 # Select Clause (TCQL)
 
-The `select`-clause defines defines the structure of the query result. It has the following syntax:
+The `select`-clause defines the structure of the query result. It has the following syntax:
 
 ```
 <selectClause> ::=
