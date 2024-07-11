@@ -17,6 +17,23 @@ While convenient, there are scenarios where the OData endpoint does not suffice.
 > [!NOTE]
 If you are using the query endpoint you must map the json result to an object yourself.
 
+## REST Sample
+
+```
+POST https://api.timecockpit.com/select
+Authorization: Bearer <PAT or Token>
+Content-Type: application/json;charset=UTF-8
+Accept: application/json
+
+{
+    "query": "From T In Project Where T.Code = @Code Select T",
+    "parameters": 
+    {
+        "Code": "'testproject'"
+    }
+}
+```
+
 ## C# Sample
 
 The following sample shows some simple C# code to fetch a time cockpit project with a certain project code. Note that you can use plain TCQL with all its features just like if you were writing a query in the full client.
