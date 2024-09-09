@@ -10,8 +10,7 @@ Examples for needed initial synchronization:
 * Device was deprecated
 
 ## How to Force an Initial Sync
-1. Stop the signaltracker if it’s running
-   Rightklick on the time cockpit logo in your system tray (on the bottom right next to the clock) and select "Shutdown".
+1. Stop the signaltracker if it’s running: right click on the time cockpit logo in your system tray (on the bottom right next to the clock) and select "Shutdown".
 
 1. Reset your time cockpit configuration. 
    Therefore you have to delete the configuration. To do this, please delete all files in the following directory: “C:\Users\[YourUserName]\AppData\Local\software architects\Time Cockpit”.
