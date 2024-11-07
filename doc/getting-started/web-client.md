@@ -33,7 +33,6 @@ If you have questions regarding signal trackers or time cockpit's customization 
 - Select "Restart" of the Browser
 
 
-
 ## Release Plan
 
 We offer three different time cockpit environments:
