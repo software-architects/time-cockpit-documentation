@@ -30,7 +30,7 @@ If you have questions regarding signal trackers or time cockpit's customization 
 ### How to Enable Desktop PWA Tab Strips in Microsoft Edge
 - Open Edge and navigate to: edge://flags/
 - Search for the Setting "Desktop PWA tab strips" and set the flag state to "Enabled".
-- - Select "Restart" of the Browser
+- Select "Restart" of the Browser
 
 
 
