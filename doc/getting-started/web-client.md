@@ -15,6 +15,25 @@ If you're just starting out with time cockpit, the web client is the recommended
 
 If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](support@timecockpit.com) or refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
 
+
+## Use time cockpit as Progressive Web App (PWA)
+
+- To use time cockpit as a Progressive Web App open [time cockpit](https://web.timecockpit.com) in your Browser.
+- Select "Install Time Cockpit" on the right side in the url input field
+
+
+###How to Enable Desktop PWA Tab Strips in Google Chrome
+- Open Chrome and navigate to: chrome://flags/
+- Search for the Setting "Desktop PWA tab strips" and set the flag state to "Enabled".
+- Select "Restart" of the Browser
+
+###How to Enable Desktop PWA Tab Strips in Microsoft Edge
+- Open Edge and navigate to: edge://flags/
+- Search for the Setting "Desktop PWA tab strips" and set the flag state to "Enabled".
+- - Select "Restart" of the Browser
+
+
+
 ## Release Plan
 
 We offer three different time cockpit environments:
