@@ -74,7 +74,7 @@ Select P
 
 // Find all projects whose name starts with "ti"
 From P In Project 
-Where :Substring(P.ProjectName, 0, 2) = "ti" 
+Where :Substring(P.ProjectName, 1, 2) = "ti" 
 Select P
 ```
 

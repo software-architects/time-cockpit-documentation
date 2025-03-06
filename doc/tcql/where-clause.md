@@ -27,7 +27,7 @@ The following example shows a where-clause using a TCQL function:
 
 ```
 // Return all timesheets of projects whose name starts with "Software"
-From P In Project Where :Substring(P.ProjectName, 0, 8) = "Software" Select P
+From P In Project Where :Substring(P.ProjectName, 1, 8) = "Software" Select P
 ```
 
 The following example shows a where-clause using a more complex condition with inline Iif.
