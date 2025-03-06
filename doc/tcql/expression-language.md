@@ -157,7 +157,7 @@ Function | Description
 `:Round(numeric-expression, number-of-fractional-digits)` | 
 `:RoundDateTime(date-time-expression, minutes-decimal)` | rounds the passed date time value to the minutes passed
 `:Soundex(string-expresssion)` | the Soundex code of the string argument, currently ime cockpit only supports Soundex on the Server DataContext (SQL Server), see [MSDN Library, Soundex T-SQL](http://msdn.microsoft.com/de-de/library/ms187384.aspx)
-`:Substring(string-expression, start-index, length)` | 
+`:Substring(string-expression, start-index, length)` | start-index starts with 1
 `:Today()` | 
 `:Translate(string-expression genericKey, string-expression fallback)` | returns the localized string of the generic key passed in, or the fallback if the generic is not found
 `:Year(date-time-expression)` | 
