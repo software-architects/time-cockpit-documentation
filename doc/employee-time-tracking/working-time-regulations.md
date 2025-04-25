@@ -33,6 +33,7 @@ Please note that time cockpit is not liable for the correctness of these rules.
     - [ArbZG Germany](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
 
 > [!IMPORTANT]
+The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
 
 **Enhanced Working Time Validation (May 2025 Update)**
 
