@@ -21,6 +21,7 @@ To simplify the initial configuration, the standard roles in **time cockpit** ha
 #### **Customization Admin**
 - **Permissions:** 
   - Manage the data model in **time cockpit**
+  - Impersonation
   - Use the TCQL editor
 - **Target Audience:** Users customizing the data model and creating complex queries
 
