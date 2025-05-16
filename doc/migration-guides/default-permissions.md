@@ -1,18 +1,48 @@
-default permissions sind im weselntlichen, dass es drei use cases gibt.
+## Migration Guide for Default Permissions
 
-einerseits, wenn man sihc als neukunde einen account anlegt. indiesem fall bekommt man einen time cockpit account wo ausnahmslos alle features aktiveirt sind. und somit auch die default permissions. 
+### Introduction and Overview
 
-dann gibt es bestandskunden die keine permissions haben. für diese kunden ist es wichtig, dass sie entshceiden, ob sie nun berechtiugngen einsetzen wollen oder nicht. zu diesem zwecks ist es nötig sich mit dem arktikel [Default Permission](~/doc/employee-time-tracking/default-permissions.md) vertraut zu machen. es ist wchtig zu verstehen, welche rolle welche auswirkung hat und zu entscheinden welcher user welche rolle bekommt. nachdem die rollen wie gewoht bei einem benutzer zugeordnet wurden bitte ein mail an support@timecockpit.com und wir aktivieren dieses feature.
+Default Permissions were introduced to make permissions in Time Cockpit clearer, more structured, and easier to manage. One of the main goals is to provide new customers with a smoother and faster onboarding experience. By enabling all relevant features and permissions by default, new users can start working with the system right away without the need for extensive configuration. This eliminates friction during the first steps and helps teams to be productive from day one.
 
-bei bestandskunden mit vielen anpassungen im bereich permissions empfeheln wir, dass man alle opermissions durchgehen und etnshceident, wo default permissions vielleicht hiflriehc sein könnten. wir empfehlen allderings in diesem fall das default permission feature nicht zu aktivieren.
+For existing customers, Default Permissions bring clarity and structure to their permission setup. They provide a clear framework to decide which users should have access to specific parts of the system. To avoid impacting existing customers, we have implemented a **feature flag mechanism** that ensures compatibility with the data models of existing customers who have custom permissions. This mechanism guarantees that there are no conflicts or unexpected behaviors when Default Permissions are introduced. More details can be found in the article [Feature Flags](~/doc/feature-flags/overview.md).
 
-ACHTUNG: Auf jeden Fall ist es bei Bestandskunden wichtig folgendes im Blick zu haben. vor dem Rollout des default permission war es immer für alle benutzer möglich Datensätze in `GlobalSettings`, `ImportDefinition` und `TemplateQuery` anzulgen, zu bearbeiten oder zu löschen. Dies ist nun nur noch Mitarbeitern mit der Rolle `BasedataAdmin` möglich. Bitte denken Sie daran diese Rolle an die entsprechenden Benutzer zu vergeben.
+Depending on the type of customer, there are three main scenarios that are explained in detail in this guide.
 
-es gibt auch noch eine änderung bei der admin rolle. in unseren bestrebungen die rollen fein granularer zu machen haben wir auch die admin rolle geändert. die admin rolle ist jetzt nur noch der "customization" admin (siehe auch [Default Permission](~/doc/employee-time-tracking/default-permissions.md)). der darf datenmodell anpasusngen machen, permissions deaktivieren udn aktivieren, aber nicht mehr automatisch im system alles machen. auch impersonated kann sich der admin noch. somit kann sich ein customization admin z.b. auch zum AccountAdmin machen um sich Benutzer hinzuzufügen oder zu locken. 
+### Overview of the Three Scenarios
 
-wir märzen dadurch eine historische unschönheit aus. Warum soll man, nur weil man Datenmodellanpassungen machen kann auch alle anderen Aspekte des Systems managen können. und im umkehrschluss: warum soll man - weil man alle Zeitbuchungen bearbeiten können will - auch Datenmodellanpassungen machen können
+#### 1️⃣ **New Customers**
 
-wichtig: beim einspielen des desfault permission features werden dem klassischen admin ALLE rollen gegeben die man ahben kann, also AccountAdmin, BillingAdmin, HumanResourcesAdmin etc. Somit wird sichergestellt, dass der klassische Admin dieselben Berechtiugngen hat wie vor den Default Permissions. 
+When a new customer registers with Time Cockpit, all features, including Default Permissions, are enabled by default. This gives all users direct access to all functions without additional configuration.
 
-Vor den DefaultPermissions gab es ein Flag `IsTenantAdmin` dieses Flag wurde nun durch die Rolle `AccountAdmin` ersetzt. Ein `AccountAdmin` darf Benutzerverwalten bzw. Rechnungsdaten verwalten.
+#### 2️⃣ **Existing Customers without Permissions**
 
+Existing customers who have not previously configured specific permissions must decide whether to use the new permissions. To make this decision, it is recommended to carefully read the article [Default Permissions](~/doc/employee-time-tracking/default-permissions.md). It is important to understand the impact of the different roles and to assign them to the respective users accordingly. After assigning the roles, an email to `support@timecockpit.com` is required to activate the feature.
+
+#### 3️⃣ **Existing Customers with Many Custom Permissions**
+
+Customers with many custom adjustments in the permissions area should carefully review where Default Permissions might be helpful. In these cases, however, we recommend not activating the Default Permission feature directly but rather reviewing the existing permissions carefully.
+
+### Important Changes Due to Default Permissions
+
+Before the rollout of Default Permissions, all users could create, edit, or delete records in **`GlobalSettings`**, **`ImportDefinition`**, and **`TemplateQuery`**. This is now only possible for employees with the **`BasedataAdmin`** role. Therefore, it is important to assign this role to the appropriate users.
+
+### Changes to the Admin Role
+
+As part of the introduction of Default Permissions, the classic admin role was renamed to a specialized role called **Customization Admin**. This role can still adjust the data model, enable and disable permissions, but no longer manage all aspects of the system. A Customization Admin can still impersonate, allowing them to make themselves `AccountAdmin` to add or lock users.
+
+This change fixes a historical inconsistency: Previously, an administrator who could make data model adjustments could also manage all other aspects of the system. This is now more clearly separated.
+
+### Ensuring Previous Rights for Existing Customers
+
+To ensure that existing customers have the same rights as before after the introduction of Default Permissions, all classic administrators are automatically assigned all relevant roles (`AccountAdmin`, `BillingAdmin`, `HumanResourcesAdmin`, etc.).
+
+### Replacement of the `IsTenantAdmin` Flag
+
+The previous flag `IsTenantAdmin` has been replaced with the role `AccountAdmin`. This new role has the same rights as before, specifically the management of users and billing data.
+
+### Best Practices and Recommendations
+
+1. Review which roles are required for which users.
+2. Assign the appropriate roles in Time Cockpit.
+3. Contact `support@timecockpit.com` to activate the feature.
+4. Thoroughly test the new permissions before using them in production.
