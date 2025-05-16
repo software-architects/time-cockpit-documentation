@@ -6,6 +6,8 @@ Default Permissions were introduced to make permissions in Time Cockpit clearer,
 
 For existing customers, Default Permissions bring clarity and structure to their permission setup. They provide a clear framework to decide which users should have access to specific parts of the system. To avoid impacting existing customers, we have implemented a **feature flag mechanism** that ensures compatibility with the data models of existing customers who have custom permissions. This mechanism guarantees that there are no conflicts or unexpected behaviors when Default Permissions are introduced. More details can be found in the article [Feature Flags](~/doc/feature-flags/overview.md).
 
+> **Note:**: Starting with 13.5.2025 we are gradually rolling out the new datamodel to all our clients. 
+
 > **Note:** The feature flag for Default Permissions cannot be enabled by a Customization Admin. Activation is only possible through a request sent to `support@timecockpit.com`. This ensures that changes are properly coordinated and do not interfere with existing configurations.
 
 Depending on the type of customer, there are three main scenarios that are explained in detail in this guide.
