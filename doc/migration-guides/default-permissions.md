@@ -8,7 +8,7 @@ For existing customers, Default Permissions bring clarity and structure to their
 
 > [!NOTE] Starting with 13.5.2025 we are gradually rolling out the new datamodel to all our clients. 
 
-> [!NOTE] The feature flag for Default Permissions cannot be enabled by a Customization Admin. Activation is only possible through a request sent to `support@timecockpit.com`. This ensures that changes are properly coordinated and do not interfere with existing configurations.
+> [!NOTE] Activation is possible through a request sent to `support@timecockpit.com`. This ensures that changes are properly coordinated and do not interfere with existing configurations.
 
 Depending on the type of customer, there are three main scenarios that are explained in detail in this guide.
 
