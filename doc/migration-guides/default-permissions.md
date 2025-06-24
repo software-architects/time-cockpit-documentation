@@ -22,7 +22,7 @@ When a new customer registers with Time Cockpit, all features, including Default
 
 Existing customers who have not previously configured specific permissions must decide whether to use the new permissions. To make this decision, it is recommended to carefully read the article [Default Permissions](~/doc/employee-time-tracking/default-permissions.md). It is important to understand the impact of the different roles and to assign them to the respective users accordingly. After assigning the roles, an email to `support@timecockpit.com` is required to activate the feature.
 
-#### 3️⃣ **Existing Customers with Many Custom Permissions**
+#### 3️⃣ **Existing Customers with Custom Permissions**
 
 Customers with many custom adjustments in the permissions area should carefully review where Default Permissions might be helpful. In these cases, however, we recommend not activating the Default Permission feature directly but rather reviewing the existing permissions carefully.
 
