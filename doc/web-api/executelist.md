@@ -1,6 +1,6 @@
 # ExecuteList Endpoint
 
-Besides the [OData endpoint](odata.md) for CRUD operations, the [query endpoint](query.md) for advanced querying and the [reporting endpoint](reporting) for generating printable reports, time cockpit offers also a list endpoint for advanced data analysis.
+Besides the [OData endpoint](odata.md) for CRUD operations, the [query endpoint](query.md) for advanced querying and the [reporting endpoint](reporting.md) for generating printable reports, time cockpit offers also a list endpoint for advanced data analysis.
 
 As described in [Customizing Lists](~/doc/data-model-customization/list.md), you can define either TCQL lists or so-called script lists. With TCQL lists, the data source of a list is a plain TCQL query. TCQL queries have one major drawback. You cannot arbitrarily join tables, but only along the relations defined in the time cockpit data model. 
 
