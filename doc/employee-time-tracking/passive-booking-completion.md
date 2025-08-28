@@ -8,6 +8,9 @@ By default, the preconfigured TCQL expression sets the booking cutoff date to th
 
 ![Configure Booking Completion Date](images/booking-completion-date-config.png "Configure Booking Completion Date")
 
+> [!NOTE] At the moment, the **Booking Completion** feature is technically coupled with the **Default Permissions** functionality (see our [migration guide](~/doc/migration-guides/default-permissions.md) for details).
+If you would like to have it enabled in your environment, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com) – we're happy to activate it for you.
+
 ## How It Works
 
 ### Default Configuration

@@ -19,6 +19,8 @@ Please note that time cockpit is not liable for the correctness of these rules.
   - Max working time per week including active travel time [h]: 60h
   - Max working time per week including active and passive travel time [h]: -
   - Breaks: 30m after 6h, split options: 2x15m/3x10m
+  - Earliest begin/Latest End
+  - Resting Periods (Nightly, Weekend, Public Holiday)
   - Further info: 
     - [Working Time (WKO)](https://www.wko.at/arbeitszeit/uebersicht)
     - [Working Time Calculator](https://ratgeber.wko.at/cgi-bin/expertred/enb.cgi?SHOWMODE=1&WIZARD=ARBEITSZEIT12&TRAEGER=DEFAULT&BEREICH=FRAU&FORTSCHRITT=5&LAYOUT=HELP)
@@ -26,8 +28,45 @@ Please note that time cockpit is not liable for the correctness of these rules.
   - Max. Daily Working Time: 10h
   - Max. Weekly Working Time: 48h
   - Breaks: 30m after 6h, split options 2x15m. 45m after 9h, split options 3x15m
+  - Resting Periods (Nightly, Weekend, Public Holiday)
   - Further info: 
     - [ArbZG Germany](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
+
+> [!IMPORTANT]
+The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
+
+**Enhanced Working Time Validation (May 2025 Update)**
+
+Starting with the May 2025 release, Time Cockpit introduces several important improvements related to working time regulations and rest period validation — especially when using the web client:
+
+- Time Cockpit can now **automatically check resting period violations**, including:
+  - **Night rest periods**
+  - **Weekend rest periods**
+  - **Public holiday rest periods**
+- You can also configure an **earliest start time** and **latest end time**.  
+  If a user works outside of the defined time frame, a violation will be triggered.
+
+---
+
+**Flexible Working Time Limits**
+
+Until now, working time limits could only be defined globally (e.g., the same limit for all employees).  
+With the May 2025 update, you can now define **individual working time limits per user**, directly within the **Weekly Hours of Work** configuration.
+
+This enables:
+
+- User-specific limits for groups like apprentices or part-time workers  
+  (e.g., in Austria, apprentices have special legal limits).
+- Seamless transitions — if an apprentice turns 18, you can simply create a new Weekly Hours of Work entry with a different or no limit.
+- **Historic accuracy** — Time Cockpit automatically determines the correct limit based on the selected time period, enabling precise retroactive validation.
+
+---
+
+**Improved Configuration Options**
+
+Previously, settings like which validations apply (e.g., night rest, max hours) could only be set globally.  
+With this update, you can now **define those checks individually** per working time limit, offering much more control and flexibility.
+
 
 > [!WARNING]
 Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
