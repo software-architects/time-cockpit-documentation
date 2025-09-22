@@ -51,7 +51,7 @@ To ensure seamless billing and account management, time cockpit requires specifi
      - **Additional Address Info:** Include any supplementary information regarding your address.
 
 >[!NOTE]
-If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](support@timecockpit.com)
+If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com)
 
 ### Stripe
 
