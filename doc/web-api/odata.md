@@ -64,7 +64,7 @@ using (var httpClient = new HttpClient())
 
 	var updatedJson = new StringContent(JsonConvert.SerializeObject(taskData), Encoding.UTF8, "application/json");
 
-	result = await httpClient.PostAsync($"https://api.timecockpit.com/odata/APP_Task(guid'{guid}')", updatedJson);
+	result = await httpClient.PatchAsync($"https://api.timecockpit.com/odata/APP_Task(guid'{guid}')", updatedJson);
 
 	// ## DELETE
 
