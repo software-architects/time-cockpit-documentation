@@ -1,3 +1,7 @@
+---
+title: Customization - Data Model & UI Customization
+description: Customize time cockpit's data model, user interface, permissions, and business logic. Learn about entities, properties, forms, and Infrastructure-as-Code approach.
+---
 # Customization Capabilities
 
 > [!NOTE]

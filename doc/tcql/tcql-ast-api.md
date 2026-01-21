@@ -1,3 +1,7 @@
+---
+title: TCQL AST API - Programmatic Query Creation
+description: Create TCQL queries programmatically in time cockpit using the Abstract Syntax Tree API. Build queries with code instead of strings.
+---
 # Programmatically Create TCQL Queries With TCQL AST API
 
 With Version 1.10 time cockpit introduced an API for constructing Abstract Syntax Trees (AST) for [TCQL](xref:tcql) queries. The AST API can be used to create all queries that could be written using the TCQL grammar. All of the classes representing the Nodes in a TCQL AST can be found in the <xref:TimeCockpit.Data.QueryLanguage.Syntax> namespace. The main entry point for producing TCQL AST nodes is the <xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression> class holding static functions taking parameters for the nodes. The samples used in this document are designed against the time cockpit standard data model.

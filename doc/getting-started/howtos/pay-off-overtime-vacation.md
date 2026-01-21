@@ -1,3 +1,7 @@
+---
+title: Pay Off Overtime & Vacation - How To Guide
+description: Learn how to pay off overtime and vacation in time cockpit. Use overtime corrections and vacation entitlements to manage employee payouts.
+---
 # Pay Off Overtime/Vacation
 
 ## How to Pay Of Overtime

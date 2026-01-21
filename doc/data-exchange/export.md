@@ -1,3 +1,7 @@
+---
+title: Data Export - Excel, Word & PDF Export
+description: Export time cockpit data to Excel, Word, and PDF formats. Use quick export, templates, or custom SSRS reports for data export.
+---
 # Data Export
 
 ## Reports

@@ -1,3 +1,7 @@
+---
+title: Query Endpoint - TCQL Query API
+description: Execute TCQL queries via time cockpit's query endpoint. Learn when to use it over OData, see REST and C# examples for complex queries and joins.
+---
 # Query Endpoint
 
 Besides offering an [OData](odata.md) endpoint for CRUD operations, time cockpit also offers an endpoint that is solely for querying data. The query endpoint allows you to post queries to the Web API using time cockpit's proprietary TCQL language. For more information on the language refer to [TCQL](~/doc/tcql/overview.md).

@@ -1,3 +1,7 @@
+---
+title: Feature Flags - Compatibility & Customization
+description: Learn how time cockpit uses feature flags and namespacing to ensure compatibility between standard functionality and customer customizations.
+---
 ## Ensuring Compatibility in Time Cockpit
 
 Time Cockpit is highly customizable, allowing customers to tailor the application to their own structures and processes. These customizations can range from simple user interface or data model adjustments (e.g., adding additional tables) to more advanced topics like permission configurations.

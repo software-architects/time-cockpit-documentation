@@ -1,3 +1,7 @@
+---
+title: User Notes Signal Tracker - Quick Notes
+description: Capture lightweight notes about your work in time cockpit. Use keyboard shortcuts or automatic prompts after breaks.
+---
 # Signal Tracker for Notes	
 
 The signal tracker for user notes allows you to capture small notes about your work. Notes are more lightweight than time sheet entries so you interrupt your workflow less when capturing a note.

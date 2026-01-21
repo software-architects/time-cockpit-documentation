@@ -1,3 +1,7 @@
+---
+title: ExecuteAction API - Run Custom Business Logic
+description: Execute time cockpit actions via Web API. Run custom IronPython business logic, webhooks, and automate routine tasks programmatically.
+---
 # ExecuteAction Endpoint
 
 In addition to querying and CRUD operations, the time cockpit Web API also allows you to execute your custom business logic. In time cockpit you custom business logic is called an [Action](~/doc/scripting/actions.md). Similar to [script lists](~/doc/data-model-customization/list.md) in time cockpit, actions are pieces of **IronPython** code that run in your instance of time cockpit. In contract to script lists, actions usually modify time cockpit in one way or the other.

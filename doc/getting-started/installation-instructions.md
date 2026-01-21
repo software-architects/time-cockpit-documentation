@@ -1,3 +1,7 @@
+---
+title: Installation Guide - Setup & Requirements
+description: Learn how to install time cockpit on Windows. Get system requirements, installation wizard instructions, and IT administrator deployment guidelines.
+---
 # Installation Instructions	
 
 Download the latest installer for time cockpit from https://update.timecockpit.com/general/Setup.exe. The installation wizard helps you to check, if all prerequisites are installed. If there are missing prerequisites, the installer helps you to install the missing components.

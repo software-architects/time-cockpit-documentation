@@ -1,3 +1,7 @@
+---
+title: TCQL Functions - Working Time & Holidays
+description: Use TCQL functions in time cockpit to calculate planned working hours, remaining vacation weeks, overtime, and actual hours of work.
+---
 # Functions for Working Time and Holidays (TCQL)
 
 Since Version 1.7 time cockpit has been able to calculate planned working hours and data about remaining paid time off for vacations. This chapter describes the functions that time cockpit contains to do this kind of calculations in TCQL statements or scripts.

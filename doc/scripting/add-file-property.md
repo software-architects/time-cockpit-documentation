@@ -1,3 +1,7 @@
+---
+title: Add File Property - File Attachments
+description: Add file attachment properties to entities in time cockpit. Learn how to store file content, metadata, and display files in lists and forms.
+---
 # How To: Add a File Property
 
 time cockpit supports file attachments to database rows. To store the file's content and metadata you have to extend your model (see also [How To: Modify the Data Model](modify-data-model.md)). In this chapter we will cover details about how to add a file property to your model and how to use it from within lists and forms.

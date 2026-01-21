@@ -1,3 +1,7 @@
+---
+title: Use XML in Scripts - Form Definitions
+description: Use XML and .NET XML classes in IronPython scripts for time cockpit. Build form definitions and UI elements programmatically.
+---
 # How To: Use XML in Scripts
 
 [IronPython](http://ironpython.net/) supports using .NET Framework classes from within scripts. Therefore it is possible to use all the XML-related classes of .NET in IronPython scripts. This is especially important for time cockpit because certain user interface elements (e.g. forms) can be defined using XML.

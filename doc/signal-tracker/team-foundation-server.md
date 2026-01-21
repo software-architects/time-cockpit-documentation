@@ -1,3 +1,7 @@
+---
+title: TFS Signal Tracker - Change Sets & Work Items
+description: Track Microsoft Team Foundation Server change sets and work item changes in time cockpit. Monitor developer activity and code commits.
+---
 # Signal Tracker for Team Foundation Server	
 
 The signal tracker for Microsoft Team Foundation Server is able to track change sets and work item changes. Developers who are using Microsoft TFS and want to book time sheet entries per work item (user story, task, bug) can easily track when the have been working on which item.

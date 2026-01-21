@@ -1,3 +1,7 @@
+---
+title: Export Data to Excel - Reporting Scripts
+description: Export data from time cockpit to Microsoft Excel using built-in functions or Office automation. Create pivot tables and formatted reports.
+---
 # How To: Export Data To Microsoft Excel
 
 For reporting purposes it is often necessary to automatically export data into Microsoft Office Excel. You could for instance create a timesheet export script that automatically creates an excel pivot table report per user and sends this report via email.

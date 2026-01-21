@@ -1,3 +1,7 @@
+---
+title: System Architecture - Offline-Capable SaaS
+description: Learn about time cockpit's system architecture. Understand offline capabilities, data synchronization, client and server data stores, and SQL Azure integration.
+---
 # System Architecture
 
 time cockpit is an offline-capable SaaS (software as a server) solution. You can work with time cockpit no matter if you have internet access. As long as you are connected time cockpit synchronizes your data automatically with the server every 15 minutes by default. In this way you have your latest data available on all your devices. Besides you will not lose data if your computer gets broken or lost.

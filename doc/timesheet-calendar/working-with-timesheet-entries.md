@@ -1,3 +1,7 @@
+---
+title: Working with Time Sheet Entries
+description: Learn how to create, edit, copy, move, and delete time sheet entries in time cockpit's calendar. Includes drag-and-drop, keyboard shortcuts, and formatting.
+---
 # Working With Time Sheet Entries
 
 ## Create

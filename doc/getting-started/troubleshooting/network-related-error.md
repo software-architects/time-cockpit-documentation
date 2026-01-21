@@ -1,3 +1,7 @@
+---
+title: Network Related Error - Connection Issues
+description: Troubleshoot network-related errors in time cockpit. Fix SQL Server connection issues, timeouts, and firewall configuration problems.
+---
 # Network Related or Instance Specific Error
 
 ## Possible Exceptions in Error Dialog

@@ -1,3 +1,7 @@
+---
+title: Web API Legacy - Token & Basic Auth
+description: Legacy time cockpit Web API documentation with token and basic authentication. Note: PAT authentication is now recommended.
+---
 # Web API
 
 Time cockpit offers a web-based API. HTTP, REST and JSON can be used to access and modify information without depending on our .NET SDK. This service is publicly hosted and customers do not have to perform any additional installation or configuration steps.

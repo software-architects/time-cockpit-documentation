@@ -1,3 +1,7 @@
+---
+title: Standard Permissions - Role-Based Access Control
+description: Learn about time cockpit's predefined standard permissions and roles. Understand Account Admin, Project Controller, Team Lead, and Time Tracking User roles.
+---
 # Standard Permissions in time cockpit
 
 ## Overview

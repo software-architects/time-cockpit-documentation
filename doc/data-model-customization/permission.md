@@ -1,3 +1,7 @@
+---
+title: Permissions - Role-Based Access Control
+description: Configure permissions in time cockpit using roles. Learn how to create entity permissions, property permissions, and row-level security for your data model.
+---
 # Permissions
 
 Time cockpit has a fully configurable and extensible permission management system. In the standard configuration of time cockpit, the permission management system is based on assigning roles to users. 

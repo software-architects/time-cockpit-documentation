@@ -1,3 +1,7 @@
+---
+title: Invoicing - Create & Manage Invoices
+description: Learn how to create invoices from time sheet entries in time cockpit. Generate invoice items automatically, use articles, create manual invoices, and generate PDF reports.
+---
 # Invoicing
 
 Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 

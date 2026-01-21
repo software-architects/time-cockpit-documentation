@@ -1,3 +1,7 @@
+---
+title: Office 365 Integration - Outlook Appointments
+description: Integrate time cockpit with Office 365 to display Outlook appointments and sent emails in your calendar. Transform appointments into time sheet entries.
+---
 # Working With Outlook Appointments
 
 Time cockpit can be integrated with your Office 365 account. Once the connection is configured, time cockpit can display your Outlook appointments and sent emails directly in your time sheet calendar. This functionality is particularly useful booking your time as it gives you a good idea of how you have spent your working day. Sent emails are also a good indication of your activities throughout the day. 

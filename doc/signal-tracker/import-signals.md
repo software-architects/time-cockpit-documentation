@@ -1,3 +1,7 @@
+---
+title: Import Signals from Text Files - CSV Import
+description: Import custom signals from CSV files into time cockpit. Contact support for assistance with signal import functionality.
+---
 # Import Signals from Text Files	
 
 The signal importer is able to import signals from CSV files.

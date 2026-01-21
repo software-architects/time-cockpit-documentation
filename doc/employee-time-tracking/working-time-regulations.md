@@ -1,3 +1,7 @@
+---
+title: Working Time Regulations - Austria & Germany
+description: Configure working time limits and regulations in time cockpit for Austria and Germany. Monitor violations, breaks, resting periods, and daily/weekly limits.
+---
 # Working Time Regulations	
 
 Since version 1.39, time cockpit provides a set of predefined rules for Austria and Germany that can be used to determine violations of working time limits in a given period.

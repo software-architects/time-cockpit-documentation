@@ -1,3 +1,7 @@
+---
+title: CryptographicException - Configuration Wizard Fix
+description: Fix CryptographicException errors in time cockpit. Resolve missing Next button in configuration wizard by removing invalid data protection keys.
+---
 # CryptographicException error
 
 This error may have to effects in time cockpit:

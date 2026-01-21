@@ -1,3 +1,7 @@
+---
+title: TCQL Select Clause - Query Results
+description: Define query result structure in time cockpit's TCQL. Learn about select clauses, anonymous types, and version info for data synchronization.
+---
 # Select Clause (TCQL)
 
 The `select`-clause defines the structure of the query result. It has the following syntax:

@@ -1,3 +1,7 @@
+---
+title: Working Time Display - Planned vs Actual Hours
+description: View planned and actual working hours in time cockpit's calendar. See daily, weekly, and monthly comparisons with detailed calculation information.
+---
 # Working Time	
 
 The working time display shows the planned hours of work and actual hours of work for the

@@ -1,3 +1,7 @@
+---
+title: Data Import - Excel & CSV Import Guide
+description: Import data from Excel and CSV files into time cockpit. Learn about import definitions, worksheet mappings, column mappings, and match criteria.
+---
 # Data Import
 
 In Version 1.10 of time cockpit we have introduced an importer module that is capable of importing data from excel and CSV files.

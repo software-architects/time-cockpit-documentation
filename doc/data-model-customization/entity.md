@@ -1,3 +1,7 @@
+---
+title: Customize Entities - Data Model Customization
+description: Learn how to customize entities in time cockpit's data model. Add properties, relations, validation rules, permissions, and system properties.
+---
 # Customize Entities
 
 This chapter gives an overview of what can be customized in time cockpit and how.

@@ -1,3 +1,7 @@
+---
+title: Customer, Project & Task Hierarchy
+description: Understand time cockpit's hierarchical data model for customers, projects, and tasks. Learn about hourly rates, budgets, billable projects, and global tasks.
+---
 # Customer / Project / Task Hierarchy
 
 This chapter describes the default data model that is shipped with time cockpit.

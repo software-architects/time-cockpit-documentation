@@ -1,3 +1,7 @@
+---
+title: Time Sheet - Tabular View & Export
+description: Access time sheet entries in tabular form in time cockpit. Export time sheets, view hourly rates, and manage billable entries for invoicing.
+---
 # Time Sheet
 
 In time cockpit you can create, edit and delete time sheet entries in the graphical time sheet calendar. You can also access time sheet entries in tabular form which is especially helpful in following situations:

@@ -1,3 +1,7 @@
+---
+title: Time Reports - Working Time Summary
+description: Generate detailed time reports in time cockpit showing working hours, breaks, home office days, overtime, and summaries for specific periods.
+---
 # Time Reports
 
 The **Time Report** feature in Time Cockpit provides a detailed summary of working time-related information for a specific user during a defined working period. This comprehensive report can be used for tracking and analyzing working hours, breaks, and other essential details.

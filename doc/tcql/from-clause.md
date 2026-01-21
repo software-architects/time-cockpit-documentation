@@ -1,3 +1,7 @@
+---
+title: TCQL From Clause - Query Sources
+description: Learn how to define query sources in time cockpit's TCQL using the from clause. Includes entity selection, relation includes, and examples.
+---
 # From Clause (TCQL)
 
 The `from`-clause defines the source entity for the TCQL query. It has the following syntax:

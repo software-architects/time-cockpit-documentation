@@ -1,3 +1,7 @@
+---
+title: Web API Authentication - PAT, Token & Basic
+description: Learn how to authenticate with time cockpit's Web API using PAT (Personal Access Tokens), token authentication, or basic authentication. Includes code examples.
+---
 # Authentication
 
 Three forms of authentication are currently supported:

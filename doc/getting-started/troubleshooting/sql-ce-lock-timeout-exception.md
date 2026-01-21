@@ -1,3 +1,7 @@
+---
+title: SqlCeLockTimeoutException - Database Lock Fix
+description: Resolve SqlCeLockTimeoutException in time cockpit. Fix database locks by restarting the full client and signal tracker.
+---
 # SqlCeLockTimeoutException
 
 ## Error Cause

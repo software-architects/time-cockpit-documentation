@@ -1,4 +1,8 @@
-# Formatting Profiles	
+---
+title: Formatting Profiles - Calendar Customization
+description: Customize time cockpit calendar display with formatting profiles. Define conditional formatting, colors, text, and bar charts for time sheet entries.
+---
+# Formatting Profiles
 
 Time cockpit's graphical calendar is designed to provide you with an instant overview about how you spent your time. With formatting profiles you can define conditional formatting rules that control how time sheet entries are displayed in the graphical calendar. You can configure the text that time cockpit displays in the header and footer of time sheet entries in the calendar. Additionally, you can define the background color of time sheet entries. Here are some examples for situation in which conditional formatting might be useful:
 

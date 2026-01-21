@@ -1,3 +1,7 @@
+---
+title: OData API - Data Access & Integration
+description: Learn how to use time cockpit's OData endpoint to query, insert, update, and delete data. Includes examples for C#, TypeScript, and other client technologies.
+---
 # OData
 
 The [Open Data Protocol (OData)](http://www.odata.org/) is a web service protocol for data exchange. It supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete). 

@@ -1,3 +1,7 @@
+---
+title: Triggers - Automated Record Processing
+description: Create triggers in time cockpit to automatically execute code when records are inserted, updated, or deleted. Advanced automation concept.
+---
 # Triggers
 
 In time cockpit you can define so called Triggers. Similar to database trigges, triggers in time cockpit are little pieces of code that are executed automatically whenever a record of a given entity is either inserted, updated or deleted. Common scenarios of triggers in time cockpit are:

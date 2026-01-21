@@ -1,3 +1,7 @@
+---
+title: User Activity Signal Tracker - Keyboard & Mouse
+description: Track keyboard and mouse activity in time cockpit to identify working time. Monitor user interactions and detect breaks automatically.
+---
 # Signal Tracker for User Activity
 
 The signal tracker for user activity tracks when you are working at your computer by attending your keyboard and mouse activity. We do not track what you are typing but only that your are currently using the keyboard. This signal tracker may help you to identify times when you left you computer like lunch time or meetings.

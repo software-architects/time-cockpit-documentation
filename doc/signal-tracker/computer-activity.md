@@ -1,3 +1,7 @@
+---
+title: Computer Activity Signal Tracker
+description: Track when your computer is turned on and off with time cockpit's computer activity signal tracker. Monitor system uptime and power states.
+---
 # Signal Tracker for Computer Activity
 
 The signal tracker for computer activity tracks when your computer is turned on and off. This information is particularly helpful if you spend most of your working time at your PC. The points in time when you turn on and off your computer mostly mark the start and end of your working day.

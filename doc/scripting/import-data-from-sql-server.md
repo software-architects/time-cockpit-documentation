@@ -1,3 +1,7 @@
+---
+title: Import Data from SQL Server - ADO.NET
+description: Import data from external SQL Server databases into time cockpit using IronPython and ADO.NET. Access remote databases and sync data.
+---
 # How To: Import Data From SQL Server
 
 [IronPython](http://ironpython.net/) supports using .NET Framework classes from within scripts. Therefore it is also possible to IronPython to access databases with ADO.NET. That is, time cockpit can import any data from external data sources using this approach. Once data is imported via this approach, it automatically synced as any other data in time cockpit

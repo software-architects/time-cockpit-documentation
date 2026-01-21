@@ -1,3 +1,7 @@
+---
+title: Sent Emails Signal Tracker - Outlook
+description: Track emails sent with Microsoft Office Outlook in time cockpit. Identify when work packages are completed and sent to customers.
+---
 # Signal Tracker for Sent Emails	
 
 The signal tracker for sent emails tracks all emails sent with Microsoft Office Outlook. This signal tracker may help you to identify when you have finished some work package and sent the results to you customer or colleagues.

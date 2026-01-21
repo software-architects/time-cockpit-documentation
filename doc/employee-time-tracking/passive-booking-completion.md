@@ -1,3 +1,7 @@
+---
+title: Passive Booking Completion - Lock Periods
+description: Configure booking completion dates in time cockpit to lock time tracking entries and absences. Prevent edits after cutoff dates using TCQL expressions.
+---
 # Passive Booking Completion in Time Cockpit
 
 ## Overview

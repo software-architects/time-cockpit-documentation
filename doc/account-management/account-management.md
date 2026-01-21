@@ -1,3 +1,7 @@
+---
+title: Account Management - Users & Billing
+description: Manage your time cockpit account, add users, update billing information, and download invoices. Learn about tenant admin rights and Stripe payment integration.
+---
 # Account Management
 
 Time cockpit offers an intuitive interface for managing account details, including user management, billing information, and accessing invoices. The account management module provides comprehensive control over adding users, updating billing information, and downloading invoices.

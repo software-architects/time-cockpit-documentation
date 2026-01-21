@@ -1,3 +1,7 @@
+---
+title: Signal Details - Activity Analysis & Insights
+description: Analyze detailed signal data in time cockpit's signal details pane. View applications, changed files, window titles, keywords, and network connections.
+---
 # Signal Details
 
 The signal details pane displays details about collected signal data (see also [Signal Tracker](~/doc/signal-tracker/overview.md)).

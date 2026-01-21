@@ -1,3 +1,7 @@
+---
+title: Time Sheet Calendar - Create & Manage Entries
+description: Master time cockpit's graphical calendar interface. Learn day, week, and month views, navigation, zoom controls, and user selection for time tracking.
+---
 # Time Sheet Calendar
 
 The time sheet calendar is the main tool to create timesheet entries in time cockpit. In this section we describe the main parts of the time sheet calendar. Please refer to [Working with Timesheet Entries](working-with-timesheet-entries.md) to learn how to create and edit your timesheet entries.

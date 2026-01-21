@@ -1,3 +1,7 @@
+---
+title: Changed Files Signal Tracker
+description: Track file writes on your computer with time cockpit's changed files signal tracker. Monitor file activity to identify projects and customers.
+---
 # Signal Tracker for Changed Files	
 
 The signal tracker for changed files tracks files writes on your computer. The name of the files and folders may often help you to identify the customer and project you are working on.

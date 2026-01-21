@@ -1,3 +1,7 @@
+---
+title: Customizing Forms - XAML Form Layout
+description: Create and customize forms in time cockpit using XAML. Learn about tabs, sections, section columns, and BoundCells for form design.
+---
 # Customizing Forms
 
 Time cockpit allows you to create new forms and to customize them. Therefor, time cockpit provides a `XAML` based language to define the layout of forms. A form is used to edit one single row of a list, e.g. a customer or a time sheet entry. Additionally, a form can contain lists with related data.

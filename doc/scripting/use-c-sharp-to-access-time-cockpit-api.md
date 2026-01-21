@@ -1,3 +1,7 @@
+---
+title: Use C# to Access API - .NET Integration
+description: Access time cockpit's API from C# and other .NET languages. Learn about project references, data context, and server data store connections.
+---
 # How To: Use C# to Access time cockpit API
 
 You can not only access time cockpit's API using [IronPython](http://ironpython.net/), you can also use your favorite .NET programming language (e.g. C#).

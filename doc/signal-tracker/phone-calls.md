@@ -1,3 +1,7 @@
+---
+title: Phone Calls Signal Tracker - Import Call History
+description: Import phone call history from mobile phones into time cockpit. Support for Android, iPhone, and legacy devices via XML export.
+---
 # Signal Tracker for Phone Calls	
 
 The signal tracker for phone calls allows you to import the call history of your mobile phone. This information is especially helpful for users who often call customers or partners and want to bill or analyze their calls. From the name of your contact you can usually derive the customer or project you are working on.

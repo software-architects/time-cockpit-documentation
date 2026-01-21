@@ -1,3 +1,7 @@
+---
+title: Reporting - SSRS Reports & Custom Reports
+description: Create printable reports in time cockpit using Microsoft Reporting Services (SSRS). Learn about RDL files, report filters, and data sources for custom reports.
+---
 # Reporting
 
 In versions greater than 1.22, time cockpit supports to view your data in the form of printable reports. For reporting purposes, time cockpit uses [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx).

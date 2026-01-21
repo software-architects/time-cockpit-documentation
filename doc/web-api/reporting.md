@@ -1,3 +1,7 @@
+---
+title: Reporting API - Generate Reports Programmatically
+description: Generate time cockpit SSRS reports via Web API in PDF, Word, or Excel format. Fetch time reports and custom reports programmatically.
+---
 # Reporting Endpoint
 
 Time cockpit provides powerful reporting capabilities. For one, every time cockpit list can be represented as a printable SSRS report in either Word, Excel or PDF. The SSRS report definition is generated on the fly. Additionally, you can create your own SSRS report definitions and upload them to time cockpit. For further information take a look at [reporting](~/doc/reporting/overview.md).

@@ -1,3 +1,7 @@
+---
+title: Force Initial Sync - Reset Local Database
+description: Force an initial synchronization in time cockpit to reset your local database. Resolve sync errors and restore from server database.
+---
 # Force Initial Sync of time cockpit
 
 In some cases it’s necessary to force an initial synchronization for time cockpits full client. That means your local database (client database) will be deleted and replaced with the actual version of time cockpits server database. 

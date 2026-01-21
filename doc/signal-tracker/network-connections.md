@@ -1,3 +1,7 @@
+---
+title: Network Connections Signal Tracker
+description: Track LAN and Wi-Fi network connections in time cockpit. Identify work locations by monitoring connected and available networks.
+---
 # Signal Tracker for Network Connections	
 
 The signal tracker for network connections tracks all networks the computer was connected with and all available Wi-Fi networks. If you are working in different locations with your laptop, the names of connected and available networks may help you to identify the customer you were working for.

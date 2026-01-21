@@ -1,3 +1,7 @@
+---
+title: Use .NET Classes in Scripts - Framework Access
+description: Use .NET Framework classes in IronPython scripts for time cockpit. Access .NET libraries, generics, and advanced features from Python.
+---
 # How To: Use .NET Framework Classes in Scripts
 
 [IronPython](http://ironpython.net/) supports using .NET Framework classes from within scripts. This is extremely useful if you want to implement interfaces that import/export data from/to time cockpit.

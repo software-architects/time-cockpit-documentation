@@ -1,3 +1,7 @@
+---
+title: Azure AD Authentication - SSO Integration
+description: Configure Azure Active Directory (AAD) authentication for time cockpit. Enable SSO, MFA, and centralized user management with AAD integration.
+---
 # Using Azure Active Directory (AAD) for Federated Authentication in Time Cockpit
 
 Time cockpit allows you to enhance security and streamline authentication by integrating with Azure Active Directory (AAD). This guide explains how to configure AAD authentication for your time cockpit account and highlights its benefits.
