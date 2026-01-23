@@ -5,7 +5,7 @@ description: Manage vacation, sick leave, and compensatory time in time cockpit.
 
 # Absence Approval Workflow (Vacation, Compensatory Time Off, Sick Leave)
 
-time cockpit supports an absence approval workflow that can be enabled in Global Settings per absence type. This helps organizations manage leave requests consistently and review pending approvals in the absence calendar.
+Time cockpit supports an absence approval workflow that can be enabled in [Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) per absence type. This helps organizations manage leave requests consistently and review pending approvals in the [absence calendar](https://web.timecockpit.com/app/absence-time-calendar).
 
 > [!NOTE]
 > Absence approvals are controlled in two places:
@@ -16,9 +16,9 @@ time cockpit supports an absence approval workflow that can be enabled in Global
 
 The approval workflow can be enabled separately for all three absence types in time cockpit:
 
-- Vacation/Special Vacation
-- Compensatory Time Off (Time Off in Lieu)
-- Sick Leave
+- [Vacation/Special Vacation](https://web.timecockpit.com/app/forms/entity/APP_Vacation)
+- [Compensatory Time Off](https://web.timecockpit.com/app/forms/entity/APP_CompensatoryTime)
+- [Sick Leave](https://web.timecockpit.com/app/forms/entity/APP_SickLeave)
 
 Once you enable approvals for a category, users must have their absences of that category approved by either their supervisor (the department lead of their assigned department; the Department-Lead role is required) or a user with the HR-Admin role.
 

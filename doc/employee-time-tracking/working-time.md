@@ -34,6 +34,10 @@ You can manage vacations in the menu item **Vacation Entitlement**.
 
 ## Vacation Management
 
+> [!NOTE]
+For details about absence approvals (Vacation, Compensatory Time Off, Sick Leave), see [Absence Approval Workflow](~/doc/employee-time-tracking/absence-time-management.md).
+
+
 The menu item **Vacations** allows you the manage vacations of your employees. Remaining leave calculation is based on weeks. Employees are entitled to get a certain number of weeks of vacation. In many cases it is not possible to calculate vacations in days instead of weeks because of part time employees that have different hours of work on each day or because of changing weekly hours of work. The rules of the calculation of remaining leave are as follows:
 
 Every use of vacation is automatically converted into weeks. Therefor the planned hours for each day are considered (see Weekly Hours of Work). Non-all-day vacations are converted into weeks, too.
