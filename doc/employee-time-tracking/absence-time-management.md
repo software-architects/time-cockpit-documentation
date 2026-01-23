@@ -2,6 +2,7 @@
 title: Absence Time Management - Vacation & Leave
 description: Manage vacation, sick leave, and compensatory time in time cockpit. Track absence time, calculate remaining leave, and manage entitlements.
 ---
+
 # Doku Freigabeprozess für Abwesenheiten
 
 Der Freigabeprozess für Abwesenheiten kann in den Globalen Einstellungen separat für alle drei Arten der Abwesenheiten in time cockpit aktiviert werden:
