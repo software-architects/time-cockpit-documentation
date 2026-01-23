@@ -1,3 +1,7 @@
+---
+title: Standard Print View - Printable Reports
+description: Generate printable reports from time cockpit lists. Customize report layout, fonts, colors, and export options in print view.
+---
 # Standard Print View
 
 When you open a list from the menu, your data will be presented in the list view by default. There you can change various things on the fly. E.g. you can change the lists sorting, or its grouping to fit you current needs.

@@ -1,3 +1,7 @@
+---
+title: Work From Home - Home Office Tracking
+description: Track work from home vs office in time cockpit. Flag time sheet entries, set whole days, and generate reports for home office allowances.
+---
 # Work From Home vs. Office
 
 Since the corona pandemic remote work has become increasingly common. Time cockpit allows you to flag time sheet entries as work from home or office. This information can be important for various reasons. Various companies use this information to optimize their office space usage and reduce costs. Additionally, some countries (like Austria) offer special allowances for days spent working from home. Thus, it is important to accurately track work from home days to ensure that employees are paid the correct allowances.

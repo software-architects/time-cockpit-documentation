@@ -1,3 +1,7 @@
+---
+title: Migration Guide - Default Permissions
+description: Migrate to time cockpit's new default permissions system. Learn about feature flags, activation scenarios, and compatibility for existing customers.
+---
 ## Migration Guide for Default Permissions
 
 ### Introduction and Overview

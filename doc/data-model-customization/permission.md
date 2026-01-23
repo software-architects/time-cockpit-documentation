@@ -1,3 +1,7 @@
+---
+title: Permissions - Role-Based Access Control
+description: Configure permissions in time cockpit using roles. Learn how to create entity permissions, property permissions, and row-level security for your data model.
+---
 # Permissions
 
 Time cockpit has a fully configurable and extensible permission management system. In the standard configuration of time cockpit, the permission management system is based on assigning roles to users. 
@@ -31,7 +35,7 @@ Like validation rules, calculated properties, or default values for properties, 
 * Environment.CurrentUser: The user who is currently logged on to the system. ```Environment.CurrentUser``` is the record from the entity APP_UserDetail that corresponds to the currently logged on user.
 * Environment.GlobalSettings: Gives access to the system wide settings that are not dependent on a given user.
 
-The following code snippet shows a simple permission for a user. An action in time cockpit should only be executed by a user in the ```Admin``` role. To implement this permissiom, a ```SetCurrentUserRoles```, which is included in the standard data model, is used (see [Sets](~/doc/scripting/sets.md)). ```CurrentUserRoles``` always returns the roles of a logged-in user. To illustrate the definition of the set:
+The following code snippet shows a simple permission for a user. An action in time cockpit should only be executed by a user in the ```Admin``` role. To implement this permissiom, a ```SetCurrentUserRoles```, which is included in the standard data model, is used. ```CurrentUserRoles``` always returns the roles of a logged-in user. To illustrate the definition of the set:
 
 ```
 From R In APP_UserDetailRole 

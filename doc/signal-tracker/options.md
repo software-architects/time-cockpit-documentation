@@ -1,3 +1,7 @@
+---
+title: Signal Tracker Options - Configuration
+description: Configure signal tracker startup and processing options in time cockpit. Set break lengths, phone call minimums, and auto-start settings.
+---
 # Signal Tracker Options
 
 In the application menu of time cockpit in the upper left corner you will find the options dialog that helps you to configure how signals should be processed and displayed.

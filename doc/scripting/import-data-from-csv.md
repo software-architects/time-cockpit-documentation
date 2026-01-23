@@ -1,3 +1,7 @@
+---
+title: Import Data from CSV - Script Examples
+description: Import data from CSV files into time cockpit using IronPython scripts. Learn how to use .NET CSV libraries and handle CSV data.
+---
 # How To: Import Data From CSV
 
 CSV (Comma Seperated Files) are a common format for data exchange. In this chapter we want to show how you can use time cockpit's [scripting](overview.md) function to write an import script that ready timesheet data from a CSV file.

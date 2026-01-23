@@ -1,3 +1,7 @@
+---
+title: Actions - Custom Business Logic & Workflows
+description: Create custom actions in time cockpit using IronPython. Learn about action structure, conditions, parameters, and execution context for workflows.
+---
 # Actions
 
 In time cockpit's model you can define Actions. Actions can be used for workflows, creating invoices, etc. In general you can use actions whenever you want to build a certain behavior that is not built in time cockpit out of the box.

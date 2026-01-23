@@ -1,3 +1,7 @@
+---
+title: Reset Password - Password Recovery
+description: Reset your time cockpit password via the web client. Follow the password reset process using your registered email address.
+---
 # Reset Password
 
 To reset your password just navigate to the login-page of our time cockpit web client [web.timecockpit.com](https://web.timecockpit.com/) and click at the link 'Reset password'.

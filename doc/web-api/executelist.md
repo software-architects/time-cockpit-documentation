@@ -1,3 +1,7 @@
+---
+title: ExecuteList API - Query Lists Programmatically
+description: Execute time cockpit lists via Web API. Query TCQL lists and script lists for data analysis, working time violations, and project controlling.
+---
 # ExecuteList Endpoint
 
 Besides the [OData endpoint](odata.md) for CRUD operations, the [query endpoint](query.md) for advanced querying and the [reporting endpoint](reporting.md) for generating printable reports, time cockpit offers also a list endpoint for advanced data analysis.

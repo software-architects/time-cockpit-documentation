@@ -1,3 +1,7 @@
+---
+title: Web API - REST API for Integration
+description: Access time cockpit data via REST API with OData, query endpoints, and action execution. Integrate with PowerBI, Excel, and custom applications.
+---
 # Web API
 Time cockpit offers a web-based API. HTTP, REST and JSON can be used to access and modify information, execute business logic or generating a report without depending on our .NET SDK. This service is publicly hosted and customers do not have to perform any additional installation or configuration steps.
 

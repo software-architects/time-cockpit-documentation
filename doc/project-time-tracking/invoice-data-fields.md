@@ -1,3 +1,7 @@
+---
+title: Invoice Data Fields - Invoice Configuration
+description: Learn about invoice data fields in time cockpit including invoice date, number, billing address, service period, and invoice items configuration.
+---
 # Invoice Data Fields
 
 This section provides a detailed overview of the most important data fields related to invoices in time cockpit. Learn how to effectively utilize these fields to create and manage invoices.

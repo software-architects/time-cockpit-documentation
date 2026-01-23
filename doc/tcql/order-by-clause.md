@@ -1,3 +1,7 @@
+---
+title: TCQL Order By Clause - Sorting Queries
+description: Sort query results in time cockpit's TCQL using the order by clause. Learn ascending and descending sort order with examples.
+---
 # Order By Clause (TCQL)
 
 The order by-clause is used to sort the result. It has the following syntax:

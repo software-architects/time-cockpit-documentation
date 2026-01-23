@@ -1,3 +1,7 @@
+---
+title: Dashboards - Custom Data Visualization
+description: Create custom dashboards in time cockpit with charts, key figures, and lists. Arrange widgets in a 12-column grid layout for data visualization.
+---
 # Dashboards
 
 ![Simple Dashboard](images/dashboard/wc-dashboard.png "Simple Dashboard")

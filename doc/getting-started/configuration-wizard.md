@@ -1,3 +1,7 @@
+---
+title: Configuration Wizard - Initial Setup
+description: Learn how to configure time cockpit using the configuration wizard. Set up language, credentials, sync settings, and signal trackers.
+---
 # Configuration Wizard
 
 > [!NOTE]

@@ -1,3 +1,7 @@
+---
+title: Navigation - Custom Modules & Menus
+description: Create custom navigation modules, sections, and links in time cockpit. Structure your customization with hierarchical menus and organize lists.
+---
 # Navigation	
 
 This chapter describes how you can define your own modules, sections and links in time cockpit to better structure your customization.

@@ -1,3 +1,7 @@
+---
+title: Customizing Lists - Create Custom Data Views
+description: Create custom lists in time cockpit to view data your way. Learn about TCQL lists, script lists, BoundCells, and specialized cell types.
+---
 # Customizing Lists
 
 Users of time cockpit can create their own customized lists to view their data as they need it. To be able to distinguish lists defined by users from lists defined by the time cockpit team, we use prefixes. Lists with an `APP` prefix are shipped with time cockpit and cannot be changed by the user. If users create their own lists, the will be prefixed with `USR` automatically. This prefix ensures that the list is never changed by time cockpit's upgrade process.

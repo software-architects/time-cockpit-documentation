@@ -1,3 +1,7 @@
+---
+title: Web Client - Modern Browser-Based Time Tracking
+description: Discover time cockpit's web client built with HTML5, CSS3, and JavaScript. Access your time tracking from any device with a modern browser or as a PWA.
+---
 # Web Client
 
 Time cockpit has undergone significant development since its release in 2010. It began with a Windows Presentation Foundation (WPF) fat client, which provided a rich and responsive user interface. Additionally, we introduced a Silverlight client, which offered cross-platform compatibility.

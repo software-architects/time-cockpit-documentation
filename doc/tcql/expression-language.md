@@ -1,3 +1,7 @@
+---
+title: TCQL Expression Language - Query Expressions
+description: Learn time cockpit's TCQL expression language for queries, calculated properties, and validation rules. Includes operators, functions, and examples.
+---
 # Expression Language (TCQL)
 
 time cockpit contains an expression language that you can use in TCQL queries as well as in various other places inside the product (e.g. calculated properties in time cockpit's metadata repository are defined using the TCQL expression language.

@@ -1,3 +1,7 @@
+---
+title: List Profiles - Customize List Views
+description: Create and manage list profiles in time cockpit to customize column display, order, grouping, and sort settings per user.
+---
 # Profiles
 
 ## Overview

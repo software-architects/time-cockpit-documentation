@@ -1,3 +1,7 @@
+---
+title: Signal Tracking Suspended - Fix Guide
+description: Resolve signal tracking suspension in time cockpit caused by system time changes. Correct system clock and restart signal trackers.
+---
 # Signal tracking has been suspended
 
 ## Possible raised exception

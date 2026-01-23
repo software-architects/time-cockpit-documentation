@@ -1,3 +1,7 @@
+---
+title: Active Windows Signal Tracker
+description: Track active applications and window titles in time cockpit. Monitor which programs you're using to identify projects and customers.
+---
 # Signal Tracker for Active Windows
 
 The signal tracker for active windows records the program with which you are currently working. Additionally it tracks the title of the active window. The name of the program and the title of the window often imply the customer and project you are working on.

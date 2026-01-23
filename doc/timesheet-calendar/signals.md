@@ -1,3 +1,7 @@
+---
+title: Signals - Duration & Point Signals Guide
+description: Understand how signals work in time cockpit's calendar. Learn about duration signals, point signals, combined activities, and how to use them for accurate time tracking.
+---
 # Signals
 
 In the right pane of the time sheet calendar you see the processed signals captured by the [Signal Tracker](~/doc/signal-tracker/overview.md). Signal data helps users to remember what they have spent their time on and create time sheet entries accurately. time cockpit distinguishes between **duration signals** and **point signals**. Duration signals are e.g. applications, window titles or user activity. Examples for point signals are sent mails, incoming and outgoing phone calls or a user note.

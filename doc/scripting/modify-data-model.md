@@ -1,3 +1,7 @@
+---
+title: Modify Data Model - Script Examples
+description: Modify time cockpit's data model using IronPython scripts. Add properties, entities, relations, and calculated properties programmatically.
+---
 # How To: Modify the Data Model
 
 time cockpit is based on a model that defines the data structures, user interface, logic and workflows in the system. You can modify the model using time cockpit's user interface of [IronPython](http://ironpython.net/) scripts. The basics about how to access the model have been described in chapter [Basics for time cockpit scripts](overview.md#basics-for-time-cockpit-scripts). In this chapter we will cover details about how to modify models from scripts.

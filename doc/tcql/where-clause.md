@@ -1,3 +1,7 @@
+---
+title: TCQL Where Clause - Filtering Queries
+description: Learn how to use the where clause in time cockpit's TCQL query language to filter data. Includes examples and expression language usage.
+---
 # Where Clause (TCQL)
 
 The `where`-clause can be used to add conditions that the data from the source has to fulfill in order to be included in the query's result. It has the following syntax:

@@ -1,3 +1,7 @@
+---
+title: Built-In Reports - Standard Reports
+description: Access time cockpit's built-in reports including sales trend, revenue per customer, and time reports. Pre-configured SSRS reports.
+---
 # Built-In Reports
 
 Time cockpit ships with the following reports:

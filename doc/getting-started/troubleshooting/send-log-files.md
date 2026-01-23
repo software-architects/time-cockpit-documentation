@@ -1,3 +1,7 @@
+---
+title: Send Log Files - Diagnostic Information
+description: Gather and send log files from time cockpit for troubleshooting. Learn about log file locations, formats, and log levels.
+---
 # Send Log Files to Software Architects
 
 Several sources of diagnostics and troubleshooting information are provided when using time cockpit's software and services. The following sections show how to gather diagnostic information for troubleshooting typical usage scenarios.

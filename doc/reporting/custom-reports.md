@@ -1,3 +1,7 @@
+---
+title: Custom Reports - SSRS Report Integration
+description: Create and integrate custom SSRS reports in time cockpit. Download report definitions, customize with Report Builder, and upload reports.
+---
 # Custom Reports
 
 In addition to generated printable reports, custom reports can be added to a time cockpit list. The custom reports appears next to the standard **Print View** button. In the following chapter describes the workflow to integrate custom reports with your existing time cockpit lists.

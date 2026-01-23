@@ -1,3 +1,7 @@
+---
+title: Automating Scripts - Scheduled Execution
+description: Automate IronPython script execution in time cockpit using ExecuteScript. Schedule scripts, use transactions, and integrate with external systems.
+---
 # Automating Scripts
 
 To allow the non-interactive, scheduled execution of IronPython scripts time cockpit offers the ExecuteScript program. This topic describes the features, parameters and usage examples for automating script execution.
