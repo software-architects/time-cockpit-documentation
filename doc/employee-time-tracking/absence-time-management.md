@@ -3,57 +3,106 @@ title: Absence Time Management - Vacation & Leave
 description: Manage vacation, sick leave, and compensatory time in time cockpit. Track absence time, calculate remaining leave, and manage entitlements.
 ---
 
-# Doku Freigabeprozess für Abwesenheiten
+# Absence Approval Workflow (Vacation, Compensatory Time Off, Sick Leave)
 
-Der Freigabeprozess für Abwesenheiten kann in den Globalen Einstellungen separat für alle drei Arten der Abwesenheiten in time cockpit aktiviert werden:
+time cockpit supports an absence approval workflow that can be enabled in Global Settings per absence type. This helps organizations manage leave requests consistently and review pending approvals in the absence calendar.
 
-- Urlaub/Sonderurlaub
-- Zeitausgleich
-- Krankenurlaub
+> [!NOTE]
+> Absence approvals are controlled in two places:
+> - Global Settings (per absence type)
+> - User master data (per user via "Absence approval required")
 
-Ab Aktivierung einer der Kategorien müssen Benutzer ihre eingetragenen Abwesenheiten der jeweiligen Kategorie von ihrem Vorgesetzten (Abteilungsleiter ihrer zugeordneten Abteilung - zusätzlich ist die Rolle Department-Lead erforderlich) oder einem Benutzer mit der Rolle HR-Admin freigegeben werden.
+## Absence types covered by approvals
 
-Die Freigabe der Abwesenheiten ist nur für jene Benutzer nötig die das auch in den Benutzerstammdaten eingestellt haben. Dies ist mit der Checkbox "Abwesenheitsgenehmigung erforderlich" möglich. Bei jenen Benutzern mit nicht erforderlicher Abwesenheitsgenehmigung werden alle neu eingetragenen Abwesenheiten automatisch als genehmigt markiert, sofern der Genehmigungsprozess in den globalen Einstellungen für die jeweilige Abwesenheitsart aktiviert ist.
+The approval workflow can be enabled separately for all three absence types in time cockpit:
 
-Ab dem Zeitpunkt der Aktivierung in den globalen Einstellungen und den Benutzerstammdaten werden je nach Berechtigungen nicht genehmigten Abwesenheiten (auch alle in der Vergangenheit vor Aktivierung dieser Funktion) im Abwesenheitskalender als nicht genehmigte Abwesenheit angezeigt. Bereits erledigte Abwesenheiten vor Aktivierung der Funktion müssen somit nachträglich als genehmigt markiert werden.
+- Vacation/Special Vacation
+- Compensatory Time Off (Time Off in Lieu)
+- Sick Leave
 
-**Sichtbare Daten im Abwesenheitskalender je nach zugeordneten Benutzerrollen**
+Once you enable approvals for a category, users must have their absences of that category approved by either their supervisor (the department lead of their assigned department; the Department-Lead role is required) or a user with the HR-Admin role.
 
-**Time Tracking User**:
+## When is an absence approval required?
 
-Sieht im Abwesenheitskalender alle Abwesenheiten der Benutzer seiner zugewiesenen Abteilung. Bei den Abwesenheiten der Kollegen kann man dabei bewusst nicht erkennen um welche Art der Abwesenheit (Urlaub, Krankenurlaub, Zeitausgleich) es sich dabei handelt. In der Liste oberhalb des Kalenders werden nur eigene noch nicht genehmigte Abwesenheiten angezeigt.
+Approvals are only required for users who have this enabled in their user master data via the checkbox "Absence approval required".
 
-**Department Lead:**
+For users where absence approval is not required, newly created absences are automatically marked as approved (as long as the approval workflow is enabled in Global Settings for the corresponding absence type).
 
-Sieht im Abwesenheitskalender alle Abwesenheiten der Benutzer seiner eigenen zugewiesenen Abteilung sowie die Abwesenheiten der Benutzer jener Abteilungen, wo der Benutzer als Abteilungsleiter hinterlegt ist. Jeder Benutzer kann selbst nur in einer Abteilung zugeteilt sein (in den Benutzerstammdaten). Man kann jedoch in mehreren Abteilungen als Abteilungsleiter zugeteilt sein (Stammdaten der Abteilungen).
+> [!TIP]
+> If approvals are enabled globally but a user does not require approval, their new absences will be approved automatically.
 
-In der Liste der Abwesenheiten werden die eigenen noch nicht genehmigten Abwesenheiten angezeigt und die noch nicht genehmigten Abwesenheiten der Benutzer aus der Abteilung des Department Leads.
+## Important: Existing absences after enabling approvals
 
-**Human Resources Admin:**
+From the moment you enable the workflow in Global Settings and in user master data, unapproved absences (including absences in the past created before enabling this feature) are shown as unapproved in the absence calendar depending on permissions. Completed absences from before the activation must therefore be approved retroactively.
 
-Sieht im Abwesenheitskalender alle Abwesenheiten der Benutzer seiner zugewiesenen Abteilung. In der Liste der nicht genehmigten Abwesenheiten werden nur eigene noch nicht genehmigte Abwesenheiten angezeigt. Als Human Resources Admin kann man in Vertretung der Abteilungsleiter die Abwesenheiten aller Benutzer freigeben. Dafür gibt es die Möglichkeit der Verwendung der weiteren Filter:
+> [!IMPORTANT]
+> After enabling the workflow, older absences may appear as unapproved and might need retroactive approval.
 
-- Checkbox "Alle Benutzer anzeigen"
+## Absence calendar visibility by user role
 
-Bei Aktivierung der Checkbox werden die Abwesenheiten aller Benutzer im Abwesenheitskalender geladen. Sowie alle nicht genehmigten Abwesenheiten in der Liste. Um diese Daten einschränken zu können gibt es die beiden weiteren Filterfelder Abteilung und Benutzer
+The following table provides a quick overview of what each role can see and do in the absence calendar.
 
-- Auswahlfeld "Abteilung"
-- Auswahlfeld "Benutzer"
+| Role | Absences shown in calendar | Absence type visible for colleagues | Pending approvals list | Can approve / reject | Additional filters |
+|---|---|---:|---:|---:|---|
+| Time Tracking User | Assigned department | No | Own only | No | — |
+| Department Lead | Own department + departments where user is department lead | Yes | Own + users in department lead's department | Yes | — |
+| Human Resources Admin | Assigned department (default) | Yes | Own only (default) | Yes (on behalf of department leads) | Show all users, Department, User |
 
-Department Leads und Human Resources Admins können Abwesenheiten mit ausstehender Genehmigung in der Liste oberhalb des Abwesenheitskalenders entweder genehmigen oder ablehnen. Das ist mit den beiden Aktionen in den Spalten rechts außen möglich. Vor Freigabe/Ablehnung der Abwesenheit kann durch Markierung der Zeile die betroffene Abwesenheit im Kalender darunter betrachtet werden. Der Kalender wird dabei automatisch auf den Startzeitraum der Abwesenheit gesetzt. Somit können auch die bereits eingetragenen Abwesenheiten der anderen Benutzer der betroffenen Abteilung verglichen werden und in der Entscheidung für die Freigabe/Ablehnung berücksichtigt werden.
+### Time Tracking User
 
-Ansicht als Human Resources Admin:
+Sees all absences of users in their assigned department in the absence calendar. For colleagues' absences, the absence type (Vacation, Sick Leave, Compensatory Time Off) is intentionally not visible. In the list above the calendar, only the user's own unapproved absences are shown.
+
+> [!NOTE]
+> This privacy setting prevents users from identifying whether a colleague is on vacation, sick leave, or compensatory time off.
+
+### Department Lead
+
+Sees all absences of users in their own assigned department and also absences of users in any departments where the user is assigned as department lead. Each user can be assigned to only one department (in user master data). However, a user can be assigned as department lead in multiple departments (department master data).
+
+In the absence list, the department lead sees their own unapproved absences as well as unapproved absences of users in the department of the department lead.
+
+### Human Resources Admin
+
+Sees all absences of users in their assigned department in the absence calendar. In the list of unapproved absences, only the user's own unapproved absences are shown.
+
+As a Human Resources Admin, you can approve absences for all users on behalf of department leads. To do this, you can use the additional filters:
+
+- Checkbox "Show all users"
+
+When you enable this checkbox, the absence calendar loads absences for all users and the list shows all unapproved absences. To narrow down the data, you can use the two filter fields Department and User:
+
+- Dropdown "Department"
+- Dropdown "User"
+
+> [!TIP]
+> Use "Show all users" only when needed, then narrow down with Department and User to keep the calendar and approval list manageable.
+
+## Approving and rejecting absences
+
+Department Leads and Human Resources Admins can approve or reject absences with pending approval in the list above the absence calendar. This is done using the two actions in the rightmost columns.
+
+Before approving or rejecting, you can select a row to preview the absence in the calendar below. The calendar automatically jumps to the start date of the absence. This makes it easier to compare it with existing absences of other users in the same department and consider overlaps during the approval decision.
+
+> [!TIP]
+> Select an absence in the list to highlight it in the calendar and jump directly to the relevant date range.
+
+View as Human Resources Admin:
 
 ![Absence Time Calendar](images/absence-time-calendar.png "Absence Time Calendar")
 
-**Automatische Benachrichtigungen bei aktiviertem Freigabeprozess**
+## Automatic notifications in the approval workflow
 
-Wird eine neue Abwesenheit von einem Benutzer angelegt so werden die Abteilungsleiter des Benutzers automatisch über eine neue ausstehende Genehmigung via Benachrichtigung in time cockpit (Glocke im Menü rechts oben) informiert. Die Benachrichtigungen für Abteilungsleiter können bei Bedarf auch in den Stammdaten der Abteilung je Abteilungsleiter deaktiviert werden.
+When a user creates a new absence, the department leads of that user are automatically informed about the pending approval via a notification in time cockpit (bell icon in the top-right menu). If needed, notifications for department leads can be disabled per department lead in the department master data.
 
-![Disable Receive Notifcation](images/department-lead-receive-notification.png "Disable Receive Notifcation")
+![Disable Receive Notification](images/department-lead-receive-notification.png "Disable Receive Notification")
 
-Wurde eine Abwesenheit genehmigt oder abgelehnt so werden die dafür erstellten Benachrichtigungen an die Abteilungsleiter automatisch gelöscht.
+If an absence is approved or rejected, the notifications created for the department leads are automatically deleted.
 
-Nach erfolgter Genehmigung/Ablehnung erhält der anfragende Benutzer ebenso eine Benachrichtigung, wann von wem die Abwesenheit bearbeitet wurde. Im Falle einer Ablehnung kann die bearbeitende Person auch einen Ablehnungsgrund anführen. Dieser ist auch in der Benachrichtigung an den anfragenden Benutzer enthalten. Weiters wird bei Ablehnung einer Abwesenheit diese auch gelöscht. Die Benachrichtigungen für genehmigte Abwesenheiten werden nicht automatisch gelöscht. Somit können diese als schriftliche Bestätigung aufbewahrt werden.
+After approval or rejection, the requesting user also receives a notification including when and by whom the absence was processed. In case of rejection, the processing person can provide a rejection reason, which is included in the notification to the requesting user.
+
+Additionally, when an absence is rejected, it is deleted. Notifications for approved absences are not automatically deleted and can be kept as written confirmation.
+
+> [!WARNING]
+> Rejected absences are deleted. Approved-absence notifications are kept and can serve as written confirmation.
 
 ![Absence Time Notification](images/absence-time-notification.png "Absence Time Notification")
