@@ -84,6 +84,8 @@ To use Share Timesheet / Timesheet Suggestions, all of the following must be tru
 3. Set it to **enabled/true**.
 4. Refresh the web app.
 
+![Enable Timesheet Suggestions in Global Settings](images/enable-timesheet-suggestions.png "Enable Timesheet Suggestions in Global Settings")
+
 > [!TIP]
 > If you don’t see the setting in the Global Settings form, it may not be included in your current Global Settings UI customization.
 > In that case you’ll need to add the `APP_TimesheetSuggestionsEnabled` property to your Global Settings form customization.
@@ -98,14 +100,23 @@ To use Share Timesheet / Timesheet Suggestions, all of the following must be tru
    - Click **Share** in the toolbar (share icon).
    - Use the context menu item **Share**.
    - Keyboard shortcut: `Ctrl + M`.
+
+   ![Share button in toolbar (share multiple entries)](images/share-multiple-timesheet-entries-with-menu-button.png "Share button in toolbar")
+
 4. In the Share dialog:
    - Choose one or more **Receivers**.
    - Enter a **Message to receivers**.
 5. Confirm **Share**.
 
+![Share timesheet entries with other users](images/share-with-other-users.png "Share timesheet entries with other users")
+
 After sharing, time cockpit shows a confirmation notification like:
 
 - “Timesheet entry \"…\" has been shared.”
+
+If notifications are enabled in your tenant, receivers may also get a notification about the new suggestion.
+
+![Timesheet suggestion notification](images/share-timesheet-suggestion-notification.png "Timesheet suggestion notification")
 
 ### Review suggestions (receiver)
 
@@ -119,6 +130,8 @@ After sharing, time cockpit shows a confirmation notification like:
 2. Choose **Edit and accept suggestion**.
 3. Review and adjust the pre-filled values as needed.
 4. Save the timesheet entry.
+
+![Edit and accept suggestion](images/share-timesheet-edit-or-accept.png "Edit and accept suggestion")
 
 The suggestion is then marked as accepted and will no longer be shown as an open suggestion.
 
