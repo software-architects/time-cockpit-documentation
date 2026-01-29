@@ -66,11 +66,9 @@ Depending on your notification setup, new suggestions may also show up in your n
 
 To use Share Timesheet / Timesheet Suggestions, all of the following must be true:
 
-1. **Feature package is installed**
-   - The application checks that a Timesheet Suggestions batch is installed (internally via a feature GUID).
-2. **Enabled in Global Settings**
-   - Global Settings flag: `APP_TimesheetSuggestionsEnabled` must be `true`.
-3. **Access to Timesheet Calendar**
+1. **Enabled in Global Settings**
+   - Global Settings flag: `Enable Timesheet Suggestions` must be `true`.
+2. **Access to Timesheet Calendar**
    - Users must have permission to view/create timesheets in the Timesheet Calendar.
 
 > [!NOTE]
@@ -80,7 +78,7 @@ To use Share Timesheet / Timesheet Suggestions, all of the following must be tru
 
 1. Open **Global Settings**:
    - Typical URL: https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings
-2. Locate the setting **Timesheet Suggestions enabled** (technical name `APP_TimesheetSuggestionsEnabled`).
+2. Locate the setting **Enable Timesheet Suggestions** (technical name `APP_TimesheetSuggestionsEnabled`).
 3. Set it to **enabled/true**.
 4. Refresh the web app.
 
@@ -127,7 +125,7 @@ If notifications are enabled in your tenant, receivers may also get a notificati
 ### Accept (create a real timesheet entry)
 
 1. Click the suggestion item.
-2. Choose **Edit and accept suggestion**.
+2. Choose **Edit and accept suggestion** (or just double-click the suggestion).
 3. Review and adjust the pre-filled values as needed.
 4. Save the timesheet entry.
 
@@ -149,15 +147,3 @@ The suggestion is marked as dismissed and will no longer be shown as an open sug
 - Suggestions are loaded for the **currently selected user** and the **currently visible date range** in the calendar.
 - The receiver list includes users that are enabled and not hidden, excluding the current user.
 - Message length is limited to **100 characters**.
-
-## Technical reference (for admins & developers)
-
-- Global Settings flag: `APP_TimesheetSuggestionsEnabled`
-- Entity used to store suggestions: `APP_TimesheetSuggestion`
-- Backend routes (Timesheet Calendar area):
-  - `GET /timesheetcalendar/timesheetsuggestions/users` (potential receivers)
-  - `POST /timesheetcalendar/timesheetsuggestions` (create suggestions)
-  - `GET /timesheetcalendar/timesheetsuggestions/{beginTime}/{endTime}` (list suggestions)
-  - `GET /timesheetcalendar/timesheetsuggestion/{userDetailUuid}/{timesheetSuggestionUuid}` (load suggestion template)
-  - `PATCH /timesheetcalendar/timesheetsuggestions/accept` (mark accepted)
-  - `PATCH /timesheetcalendar/timesheetsuggestions/dismiss` (mark dismissed)
