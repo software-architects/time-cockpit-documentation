@@ -13,6 +13,7 @@ Welcome to the user documentation for time cockpit! This section covers everythi
 ## 🌟 Core Features
 
 Explore what makes time cockpit the ideal solution for your business:
+- **[Features Overview](features-overview.md)** - 🗺️ **NEW!** Complete feature guide organized by capability
 - **[Project Time Tracking](https://www.timecockpit.com/features/project-time-tracking/)** - Track budgets, hours, and profitability
 - **[Employee Time Tracking](https://www.timecockpit.com/features/employee-time-tracking/)** - Manage working hours and compliance
 - **[Project Invoicing](https://www.timecockpit.com/features/project-invoicing/)** - Convert time entries into invoices
@@ -28,6 +29,7 @@ Explore what makes time cockpit the ideal solution for your business:
 New to time cockpit? Start here to set up your account and learn the basics.
 - [Overview](~/doc/getting-started/overview.md)
 - [Web Client](~/doc/getting-started/web-client.md)
+- [Mobile & Responsive Access](~/doc/getting-started/mobile-guide.md) - 📱 **NEW!** Using time cockpit on phones and tablets
 - [Account Management](~/doc/account-management/account-management.md)
 
 ### Daily Time Tracking
@@ -35,6 +37,7 @@ Learn how to track your working hours efficiently with time cockpit's intuitive 
 - [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md)
 - [Working With Time Sheet Entries](~/doc/timesheet-calendar/working-with-timesheet-entries.md)
 - [Outlook Appointments](~/doc/timesheet-calendar/outlook-appointments.md)
+- [Office 365 Integration](~/doc/timesheet-calendar/office365.md) - Sync calendar and emails
 - [Time Sheet Templates](~/doc/timesheet-calendar/timesheet-templates.md)
 - [Working Time](~/doc/timesheet-calendar/working-time.md)
 
@@ -42,8 +45,10 @@ Learn how to track your working hours efficiently with time cockpit's intuitive 
 Track time on customer projects and generate invoices. Learn more about [how time cockpit helps boost profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) through effective project time tracking.
 - [Customers, Projects & Tasks](~/doc/project-time-tracking/customer-project-task.md)
 - [Project Time Sheets](~/doc/project-time-tracking/timesheet.md)
+- [Budget Tracking & Profitability](~/doc/project-time-tracking/budget-tracking.md) - 💰 **NEW!** Monitor budgets and ensure profitability
 - [Invoicing](~/doc/project-time-tracking/billing.md)
 - [Invoice Data Fields](~/doc/project-time-tracking/invoice-data-fields.md)
+- [Hourly Rate Management](~/doc/project-time-tracking/hourly-rates.md) - 💵 **NEW!** Configure billing rates and pricing
 
 → [Explore Project Time Tracking Features](https://www.timecockpit.com/features/project-time-tracking/)
 
@@ -51,6 +56,7 @@ Track time on customer projects and generate invoices. Learn more about [how tim
 Manage working time, vacation, sick leave, and compliance. Time cockpit helps you meet [legal requirements for employee time tracking](https://www.timecockpit.com/features/employee-time-tracking/).
 - [Working Time / Leave Management](~/doc/employee-time-tracking/working-time.md)
 - [Absence Time Management](~/doc/employee-time-tracking/absence-time-management.md)
+- [Approval Workflows](~/doc/employee-time-tracking/approval-workflows.md) - ✅ **NEW!** Vacation and timesheet approvals
 - [Working Time Regulations](~/doc/employee-time-tracking/working-time-regulations.md)
 - [Time Report](~/doc/employee-time-tracking/time-report.md)
 - [Default Permissions](~/doc/employee-time-tracking/default-permissions.md)
