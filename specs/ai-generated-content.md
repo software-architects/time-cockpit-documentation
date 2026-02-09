@@ -20,6 +20,72 @@
 - **Current Documentation**: `C:\Repos\time-cockpit-documentation`
 - **Web API Docs**: https://docs.timecockpit.com/doc/web-api/overview.html
 
+## 2.1 Documentation Standards & Requirements
+
+### Link Notation Standards
+**CRITICAL**: Use `~/doc/` notation for cross-folder documentation links.
+
+**Correct**:
+```markdown
+[TCQL Overview](~/doc/tcql/overview.md)
+[Actions Guide](~/doc/scripting/actions.md)
+[Web API OData](~/doc/web-api/odata.md)
+```
+
+**Incorrect** (DO NOT USE):
+```markdown
+[TCQL Overview](../tcql/overview.md)  ❌
+[Actions Guide](../../scripting/actions.md)  ❌
+```
+
+**Rationale**: The documentation uses DocFX which processes `~/doc/` as root-relative paths. Relative `../` paths may break when files are moved or documentation is built.
+
+### TCQL Function Verification
+**CRITICAL**: Only reference TCQL functions that are documented in [doc/tcql/functions-for-working-time-and-holidays.md](~/doc/tcql/functions-for-working-time-and-holidays.md).
+
+**Verified Functions** (as of model-prod.2026-02-09):
+- `:RemainingVacationWeeks(userUuid, effectiveDate)`
+- `:PlannedHoursOfWork(userUuid, beginTime, endTime, includeLumpSumOvertime)`
+- `:ActualHoursOfWork(userUuid, beginTime, endTime, includeWeights)`
+- `:Overtime(userUuid, effectiveDate, includeWeights, includeLumpSumOvertime)`
+- `:AverageHoursOfWorkPerDay(userUuid, effectiveDate)`
+
+**Do NOT reference** (these do not exist):
+- `:GetWorkTime()` ❌
+- `:GetBreakTime()` ❌
+- `:GetWorkingTimeViolation()` ❌
+- `:GetWeeklyHoursOfWork()` ❌
+
+**Validation Process**:
+1. Before documenting any TCQL function, verify it exists in the official documentation
+2. Check function signature (parameters, return type)
+3. Test example queries if possible
+4. If unsure, leave it out rather than hallucinate
+
+### Code Example Standards
+- **Always include context**: What entity, what scenario
+- **Verify against actual model**: Use model-prod.2026-02-09 as source of truth
+- **Provide both TCQL and Web API examples** where applicable
+- **Include expected output/result** when helpful
+- **Add "See Also" links** to related documentation
+- **Test code samples** in development environment before documenting
+
+### Entity Documentation Requirements
+- **Verify all entity names** exist in the model (APP_* prefix)
+- **Verify all property names** match the model exactly
+- **Document actual calculated formulas** from the model
+- **Include actual permission expressions** from the model
+- **Reference only existing relations**
+
+### Quality Checklist
+Before committing documentation:
+- [ ] All links use `~/doc/` notation for cross-folder references
+- [ ] All TCQL functions are verified against official docs
+- [ ] All entity/property names match the model file
+- [ ] Code examples are tested or copied from working code
+- [ ] No hallucinated features or capabilities
+- [ ] See Also sections link to existing files
+
 ## 3. Target Audience & Personas
 
 - **Power Users**: Customize entities, create lists, understand standard model
@@ -45,12 +111,13 @@ Answer these questions with model-based examples:
 - Document `APP_WeeklyHoursOfWork` entity
 - Explain EffectiveDate pattern
 - Show TCQL query to set 40h/week for all users
-- Reference `:GetWeeklyHoursOfWork()` function
+- Note: No direct TCQL function to retrieve weekly hours (calculated via entity queries)
 
 **Q: How can I track working time violations?**
 - Document `APP_WorkingTimeLimit` entity
-- Explain `:GetWorkTime()`, `:GetBreakTime()` functions
-- Show example: detecting overtime and missing breaks
+- Use `:Overtime()` function for overtime calculation
+- Use `:PlannedHoursOfWork()` and `:ActualHoursOfWork()` for comparisons
+- Show example: detecting overtime using documented TCQL functions
 - Link to "Working Time Violations" list
 
 **Q: How can I integrate with JIRA/external systems?**
@@ -257,9 +324,9 @@ Authorization: Bearer {token}
 ```
 
 ### Related Documentation
-- [Timesheet Calendar](../timesheet-calendar/calendar.md)
-- [Billing](../project-time-tracking/billing.md)
-- [Web API - OData](../web-api/odata.md)
+- [Timesheet Calendar](~/doc/timesheet-calendar/calendar.md)
+- [Billing](~/doc/project-time-tracking/billing.md)
+- [Web API - OData](~/doc/web-api/odata.md)
 ```
 
 **Apply to these entities**:
@@ -463,6 +530,23 @@ See Section 2.2 above
 - [ ] Document signal tracking deeply? (Decision: Overview + 2-3 examples, not exhaustive)
 - [ ] Separate page per entity or group by domain? (Decision: Start with single page, split if > 50KB)
 - [ ] Include deprecated features? (Decision: Mark as deprecated but document briefly)
+
+## 8.1 Resolved Issues
+
+**Issue: Link Notation Inconsistency**
+- **Problem**: Mixed use of `~/doc/` and `../` relative paths across documentation
+- **Resolution**: Standardize on `~/doc/` notation for all cross-folder links
+- **Date**: 2026-02-09
+- **Files Updated**: `doc/web-api/overview.md`, `specs/ai-generated-content.md`
+
+**Issue: Hallucinated TCQL Functions**
+- **Problem**: developer-faq.md referenced non-existent functions (`:GetWorkTime()`, `:GetBreakTime()`, `:GetWorkingTimeViolation()`, `:GetWeeklyHoursOfWork()`)
+- **Resolution**: Replaced with documented functions from `doc/tcql/functions-for-working-time-and-holidays.md`
+- **Verified Functions**: `:Overtime()`, `:PlannedHoursOfWork()`, `:ActualHoursOfWork()`, `:RemainingVacationWeeks()`, `:AverageHoursOfWorkPerDay()`
+- **Date**: 2026-02-09
+- **Files Updated**: `doc/developer-faq.md`
+
+**Lesson Learned**: Always verify TCQL functions against official documentation before documenting examples. Do not hallucinate or assume functions exist based on naming patterns.
 
 ## 9. Success Criteria Checklist
 
