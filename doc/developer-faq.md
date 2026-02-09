@@ -7,6 +7,9 @@ description: Frequently asked questions for developers working with time cockpit
 
 This page answers common questions for developers working with time cockpit, including data model customization, Web API integration, and workflow automation.
 
+> [!NOTE]
+> Code samples in this FAQ have been verified against the time cockpit data model (model-prod.2026-02-09). Entity names, properties, and relationships are accurate as of this date. Always test code samples in a development environment before deploying to production.
+
 ## Project Management & Budgeting
 
 ### How can I track my budget for a project?
@@ -597,7 +600,6 @@ $timesheets.value | Export-Csv -Path "timesheets.csv" -NoTypeInformation
 
 ## Need More Help?
 
-- **Documentation**: [Full Documentation Index](overview.md)
-- **Support**: [support@timecockpit.com](mailto:support@timecockpit.com)
+- **User FAQs**: Looking for end-user questions? See [User FAQ](user-faq.md) and role-specific FAQs ([Project Manager](project-manager-faq.md), [HR Admin](hr-administrator-faq.md), [Department Lead](department-lead-faq.md), [Billing Admin](billing-admin-faq.md), [Employee](employee-faq.md))
 - **Community**: [Time Cockpit Community (if available)]
 - **API Reference**: [Web API Documentation](web-api/overview.md)

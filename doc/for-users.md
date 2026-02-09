@@ -44,6 +44,23 @@ Generate reports to analyze your time tracking data.
 - [Standard Print View](../reporting/standard-print-view.md)
 - [Built-In Reports](../reporting/built-in-reports.md)
 
+## ❓ Frequently Asked Questions (FAQs)
+
+Find quick answers to common questions organized by role and topic.
+
+### General FAQs
+- **[User FAQ](user-faq.md)** - Common questions for all time cockpit users covering time tracking, projects, vacation, billing, and account management
+- **[Employee FAQ](employee-faq.md)** - Basic questions for employees on daily time tracking, vacation requests, and mobile access
+
+### Role-Specific FAQs
+- **[Project Manager FAQ](project-manager-faq.md)** - Budget tracking, team time management, billable hours, and project profitability
+- **[Department Lead FAQ](department-lead-faq.md)** - Team time tracking oversight, absence approval, capacity monitoring, and department reporting
+- **[HR Administrator FAQ](hr-administrator-faq.md)** - Employee management, vacation policies, absence approvals, working time regulations, and compliance
+- **[Billing Administrator FAQ](billing-admin-faq.md)** - Invoice creation, hourly rates, billing reports, revenue tracking, and customer billing
+
+> [!TIP]
+> For developer-specific questions about the API, data model, or customizations, see the [Developer FAQ](developer-faq.md).
+
 ## 🔍 Common Tasks
 
 ### How do I...
