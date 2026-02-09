@@ -8,6 +8,9 @@ keywords: [billing administrator, invoice creation, hourly rates, billing FAQ, r
 
 This FAQ addresses common questions from billing administrators responsible for creating invoices, setting rates, tracking revenue, and managing customer billing in time cockpit.
 
+> [!TIP]
+> **Optimizing Invoicing?** Learn about time cockpit's [Project Invoicing features](https://www.timecockpit.com/features/project-invoicing/) and discover how to [maximize project revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue/) through effective time tracking and billing.
+
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For project budget tracking, see the [Project Manager FAQ](project-manager-faq.md).
 

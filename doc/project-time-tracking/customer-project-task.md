@@ -6,6 +6,9 @@ description: Understand time cockpit's hierarchical data model for customers, pr
 
 This chapter describes the default data model that is shipped with time cockpit.
 
+> [!TIP]
+> Learn how time cockpit's project time tracking helps you [boost profitability and make better project decisions](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/). Visit our [Project Time Tracking feature page](https://www.timecockpit.com/features/project-time-tracking/) for an overview.
+
 > [!NOTE]
 Please note, that you are able to extend entities of the default data model but you cannot delete them. This is necessary to provide upgrades of the default data model. Your changes always stay untouched in case of upgrades. <br/><br/>You cannot change standard lists and forms. If you want to create your own lists and forms please copy the relevant list and form definitions in the module **Customization**, perform your customization in the copy and link it to menu. Please note that changes of standard lists and forms will not be adopted in your copies.
 

@@ -6,6 +6,9 @@ description: Track working time, calculate overtime, manage vacation entitlement
 
 Tracking working time is the core function of time cockpit. Many organizations would also like to use that data for calculating overtime, vacations and much more. In time cockpit you can set planned hours of work, vacation entitlement and consumption, and overtime for every employee. On this base time cockpit calculates the deviation between planned and actual hours of work and the remaining leave for any date.
 
+> [!TIP]
+> Learn about [employee time tracking requirements and best practices](https://www.timecockpit.com/features/employee-time-tracking/). Understand when [time tracking is mandatory](https://www.timecockpit.com/blog/time-tracking-mandatory-startups-smb-dach/) for your organization.
+
 > [!NOTE]
 The comparison of actual and planned hours of work, the calculation of overtime and remaining leave are optional functions of time cockpit and do not have to be used. For these functions it is necessary that all working hours are tracked (that means it is not enough to track for example only billable hours).
 

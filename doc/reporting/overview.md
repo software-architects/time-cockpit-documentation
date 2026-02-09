@@ -6,6 +6,9 @@ description: Create printable reports in time cockpit using Microsoft Reporting 
 
 In versions greater than 1.22, time cockpit supports to view your data in the form of printable reports. For reporting purposes, time cockpit uses [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx).
 
+> [!TIP]
+> Explore time cockpit's [reporting and analytics features](https://www.timecockpit.com/features/reporting/) to gain business insights. Learn which [project time tracking KPIs](https://www.timecockpit.com/blog/project-timetracking-kpis/) matter most for your business.
+
 ## Business Case: Why Data-Driven Reporting Matters
 
 > [!AI-GENERATED]

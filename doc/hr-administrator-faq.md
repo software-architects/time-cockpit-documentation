@@ -8,6 +8,9 @@ keywords: [HR time tracking, vacation policy management, absence approval, emplo
 
 This FAQ addresses common questions from HR administrators managing employees, vacation policies, absence approvals, working time regulations, and compliance in time cockpit.
 
+> [!TIP]
+> **Managing Employee Time Tracking?** Explore time cockpit's [Employee Time Tracking features](https://www.timecockpit.com/features/employee-time-tracking/) and learn about [legal time tracking requirements](https://www.timecockpit.com/blog/time-tracking-mandatory-startups-smb-dach/) in the DACH region.
+
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For developer/API questions, see the [Developer FAQ](developer-faq.md).
 

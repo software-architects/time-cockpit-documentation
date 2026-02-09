@@ -4,7 +4,10 @@ description: Learn how to create invoices from time sheet entries in time cockpi
 ---
 # Invoicing
 
-Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 
+Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit.
+
+> [!TIP]
+> Want to learn more about time cockpit's invoicing capabilities? Visit our [Project Invoicing feature page](https://www.timecockpit.com/features/project-invoicing/) for an overview and see how it helps you [optimize project revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue/). 
 
 ## Business Case: Why Integrate Time Tracking with Invoicing?
 

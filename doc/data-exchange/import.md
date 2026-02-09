@@ -6,6 +6,9 @@ description: Import data from Excel and CSV files into time cockpit. Learn about
 
 In Version 1.10 of time cockpit we have introduced an importer module that is capable of importing data from excel and CSV files.
 
+> [!TIP]
+> Migrating from Excel? Read our comprehensive [Excel to time cockpit migration guide](https://www.timecockpit.com/blog/project-time-tracking-excel-migration-guide/) and learn about time cockpit's [integration capabilities](https://www.timecockpit.com/features/integration/).
+
 Often it is necessary to import data from external sources into time cockpit. Use cases include importing a list of projects or customers, time sheet entries from previous time tracking solutions or from an external contractor not tracking time sheet entries with time cockpit.
 
 In order for time cockpit's importer to be useful, it has to have an understanding of how columns in an Excel or CSV sheet relate to properties and relations of an entity. This information is held in an import definition object, a structure containing mappings from column names to properties for multiple entities. An import definition is therefore a 2 level structure with worksheet and column mappings. A worksheet mapping maps a specific worksheet in excel to a single specific entity in time cockpit and contains one or more column mappings. A column mapping maps a single column to a specific property within the entity mapped by the parenting worksheet mapping.

@@ -8,6 +8,9 @@ keywords: [project manager time tracking, project budget tracking, team time man
 
 This FAQ addresses common questions from project managers using time cockpit to track project budgets, monitor team time, ensure billing accuracy, and maintain project profitability.
 
+> [!TIP]
+> **New to Project Time Tracking?** Learn how time cockpit helps you [boost project profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) and track [essential project KPIs](https://www.timecockpit.com/blog/project-timetracking-kpis/). Explore our [Project Time Tracking features](https://www.timecockpit.com/features/project-time-tracking/).
+
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For developer/API questions, see the [Developer FAQ](developer-faq.md).
 

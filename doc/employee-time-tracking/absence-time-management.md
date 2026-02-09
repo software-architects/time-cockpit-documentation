@@ -7,6 +7,9 @@ description: Manage vacation, sick leave, and compensatory time in time cockpit.
 
 Time cockpit supports an absence approval workflow that can be enabled in [Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) per absence type. This helps organizations manage leave requests consistently and review pending approvals in the [absence calendar](https://web.timecockpit.com/app/absence-time-calendar).
 
+> [!TIP]
+> Discover how time cockpit's [employee time tracking features](https://www.timecockpit.com/features/employee-time-tracking/) help you manage absences, overtime, and working time regulations efficiently.
+
 > [!NOTE]
 > Absence approvals are controlled in two places:
 > - Global Settings (per absence type)
