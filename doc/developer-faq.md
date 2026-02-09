@@ -103,12 +103,6 @@ Authorization: Bearer {your_token}
 }
 ```
 
-**TCQL Function:**
-Use `:GetWeeklyHoursOfWork(UserDetail, Date)` to retrieve hours for calculation:
-```tcql
-:GetWeeklyHoursOfWork(Current.APP_UserDetail, :Today())
-```
-
 **See Also:**
 - [Working Time Management](employee-time-tracking/working-time.md)
 - [APP_WeeklyHoursOfWork Entity](data-model/standard-entities.md#app_weeklyhoursofwork)
@@ -142,26 +136,19 @@ Context.SaveObject(limit)
 Navigate to: [Management → Time Tracking → Working Time Violations](https://web.timecockpit.com/app/lists/APP_DefaultWorkingTimeViolationList)
 
 **TCQL Functions for Working Time:**
+
+Use the built-in overtime calculation function:
 ```tcql
--- Get total work time for a day (excluding breaks)
-:GetWorkTime(UserDetail, Date)
-
--- Get break time for a day
-:GetBreakTime(UserDetail, Date)
-
--- Check if day violates limits
-:GetWorkingTimeViolation(UserDetail, Date)
+-- Calculate overtime for a user as of a specific date
+:Overtime(UserDetailUuid, EffectiveDate, IncludeWeights, IncludeLumpSumOvertime)
 ```
 
-**Example Query - Find users with overtime this week:**
+**Example Query - Calculate overtime for all users:**
 ```tcql
 From U In APP_UserDetail
-Where :GetWorkTime(U, :Today()) > :GetWeeklyHoursOfWork(U, :Today())
 Select New With {
   .User = U,
-  .WorkTime = :GetWorkTime(U, :Today()),
-  .PlannedTime = :GetWeeklyHoursOfWork(U, :Today()),
-  .Overtime = :GetWorkTime(U, :Today()) - :GetWeeklyHoursOfWork(U, :Today())
+  .Overtime = :Overtime(U.APP_UserDetailUuid, :Today(), True, True)
 }
 ```
 
@@ -364,13 +351,31 @@ Use built-in TCQL functions and entities designed for time calculations.
 From U In APP_UserDetail
 Select New With {
   .User = U,
-  .PlannedHours = :GetWeeklyHoursOfWork(U, :Today()),
-  .ActualHours = :GetWorkTime(U, :Today()),
-  .Overtime = :GetWorkTime(U, :Today()) - :GetWeeklyHoursOfWork(U, :Today())
+  .Overtime = :Overtime(U.APP_UserDetailUuid, :Today(), True, True)
+}
+```
+
+**Compare Planned vs. Actual Hours:**
+```tcql
+From U In APP_UserDetail
+Select New With {
+  .User = U,
+  .PlannedHours = :PlannedHoursOfWork(U.APP_UserDetailUuid, #2026-01-01#, #2026-12-31#, True),
+  .ActualHours = :ActualHoursOfWork(U.APP_UserDetailUuid, #2026-01-01#, #2026-12-31#, True),
+  .Deviation = :ActualHoursOfWork(U.APP_UserDetailUuid, #2026-01-01#, #2026-12-31#, True) - :PlannedHoursOfWork(U.APP_UserDetailUuid, #2026-01-01#, #2026-12-31#, True)
 }
 ```
 
 **Calculate Vacation Balance:**
+```tcql
+From U In APP_UserDetail
+Select New With {
+  .User = U,
+  .RemainingVacationWeeks = :RemainingVacationWeeks(U.APP_UserDetailUuid, :Today())
+}
+```
+
+**Detailed Vacation Calculation (manually querying entitlement and taken):**
 ```tcql
 From U In APP_UserDetail
 Select New With {
