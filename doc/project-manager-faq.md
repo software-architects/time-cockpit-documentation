@@ -656,12 +656,16 @@ When working with retainer clients or managing multiple project streams, batch i
    - **Date Range:** Billing period
 3. Select **all timesheet entries** across all projects
 4. Click **Create Invoice** action
-5. Result: One invoice with line items from multiple projects
+5. Enter invoice parameters (number, date, description, service period)
+6. Click **OK**
 
-**Invoice Structure:**
-- Line items are typically grouped by project
-- Subtotals appear per project
+**Result:**
+- One invoice created automatically
+- Line items grouped by task/hourly rate across projects
 - Customer sees consolidated billing
+
+> [!WARNING]
+> The standard Create Invoice action requires all timesheet entries to be from the **same project**. To invoice multiple projects together, you need a custom action or create separate invoices per project.
 
 **Separate Invoices Approach:**
 If customer requires separate invoices per project:

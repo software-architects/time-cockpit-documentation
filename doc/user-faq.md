@@ -589,24 +589,25 @@ Time cockpit's invoicing workflow converts billable timesheet entries into custo
    - Optionally filter by Customer, Project, or date range
 3. **Select timesheet entries** to include in the invoice
 4. Click **Create Invoice** action in the toolbar
-5. **Review invoice details:**
-   - Customer information
-   - Project
-   - Line items (timesheet entries)
-   - Total hours
-   - Total amount (hours × hourly rates)
-6. **Set invoice metadata:**
-   - Invoice number
-   - Invoice date
-   - Due date
-   - Payment terms
-7. Click **Save**
+5. **Parameter form appears** prompting for invoice details:
+   - **Invoice Number:** Enter number (default shows "will be created automatically")
+   - **Invoice Date:** Default is today, adjust if needed
+   - **Description:** Optional invoice header text
+   - **Service Period Start/End:** Optional dates (defaults to timesheet date range)
+6. Click **OK** to create invoice
 
 **What Happens:**
+- Action creates invoice with entered parameters
+- Invoice details (line items) are automatically generated:
+  - Grouped by task and hourly rate
+  - Each group becomes one line item
 - Selected timesheet entries are marked as **Billed = True**
 - Entries are linked to the invoice (APP_Invoice field populated)
 - **Hourly Rate Billed** is set (locked for historical accuracy)
 - Invoice is ready for export or printing
+
+> [!NOTE]
+> The action automatically determines customer, project, and line items from the selected timesheet entries. You only provide invoice metadata in the parameter form.
 
 **See Also:**
 - [Invoicing](project-time-tracking/billing.md)
@@ -720,12 +721,14 @@ Many projects span multiple billing periods or milestones, requiring partial inv
    - **Date Range** = This month only
 3. Select the filtered entries
 4. Run **Create Invoice** action
+5. Enter invoice parameters and click **OK**
 
 **Approach 2: Manual Selection**
 1. Navigate to **Timesheet** → **Time Sheets**
 2. Filter to your project's unbilled entries
 3. **Manually select** specific entries to invoice (Ctrl+Click)
-4. Run **Create Invoice** action on selection
+4. Run **Create Invoice** action
+5. Enter invoice parameters and click **OK**
 
 **Approach 3: Milestone-Based Billing**
 1. Organize tasks by milestone or deliverable

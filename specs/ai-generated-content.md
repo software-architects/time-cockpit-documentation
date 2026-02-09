@@ -85,6 +85,54 @@ Before committing documentation:
 - [ ] Code examples are tested or copied from working code
 - [ ] No hallucinated features or capabilities
 - [ ] See Also sections link to existing files
+- [ ] Feature page links added where contextually appropriate (user docs)
+- [ ] Marketing website URLs verified against actual content
+
+### External Link Standards (Documentation → Marketing Website)
+
+**Purpose**: Create "link juice" and user journey from documentation to marketing content.
+
+**When to Add External Links**:
+- User-facing documentation (not developer API docs)
+- At document start (TIP boxes) for main feature page
+- Inline for relevant blog posts and supplementary content
+- FAQ pages for role-specific features and best practices
+
+**URL Patterns**:
+- Feature pages: `https://www.timecockpit.com/features/{slug}/`
+- Blog posts: `https://www.timecockpit.com/blog/{slug}/`
+- Always use absolute URLs, not relative paths
+
+**Verified Feature Page Slugs**:
+- `/features/project-time-tracking/`
+- `/features/employee-time-tracking/`
+- `/features/project-invoicing/`
+- `/features/time-tracking-calendar/`
+- `/features/activity-tracking/`
+- `/features/reporting/`
+- `/features/integration/`
+- `/features/customization/`
+- `/features/enterprise/`
+- `/features/security/`
+- `/features/saas/`
+
+**Example Blog Post Slugs** (verify before using):
+- `/blog/benefits-of-project-time-tracking/`
+- `/blog/project-timetracking-kpis/`
+- `/blog/project-time-tracking-revenue/`
+- `/blog/project-time-tracking-excel-migration-guide/`
+- `/blog/time-tracking-mandatory-startups-smb-dach/`
+
+**Placement Examples**:
+
+```markdown
+> [!TIP]
+> Discover time cockpit's [employee time tracking features](https://www.timecockpit.com/features/employee-time-tracking/) 
+> and learn about [legal requirements](https://www.timecockpit.com/blog/time-tracking-mandatory-startups-smb-dach/).
+
+→ [Full Guide](~/doc/timesheet-calendar/working-with-timesheet-entries.md) | 
+[Learn about Features](https://www.timecockpit.com/features/time-tracking-calendar/)
+```
 
 ## 3. Target Audience & Personas
 
@@ -547,6 +595,335 @@ See Section 2.2 above
 - **Files Updated**: `doc/developer-faq.md`
 
 **Lesson Learned**: Always verify TCQL functions against official documentation before documenting examples. Do not hallucinate or assume functions exist based on naming patterns.
+
+**Issue: Link Building to Marketing Website**
+- **Problem**: Documentation was isolated from main marketing website (www.timecockpit.com), missing opportunities for cross-linking
+- **Resolution**: Added strategic internal links from documentation to feature pages and blog posts
+- **Date**: 2026-02-09
+- **Strategy**: 
+  - Focus on business/user documentation (not developer docs)
+  - Link to feature pages: `/features/project-time-tracking/`, `/features/employee-time-tracking/`, etc.
+  - Link to relevant blog posts: `/blog/benefits-of-project-time-tracking/`, `/blog/project-timetracking-kpis/`, etc.
+  - Use contextual linking (natural flow) rather than forced links
+  - Verify all URLs exist and use correct slugs
+- **Files Updated**: 
+  - `doc/for-users.md` - Added feature overview section + contextual links
+  - `doc/project-time-tracking/billing.md` - Invoicing features + blog
+  - `doc/project-time-tracking/customer-project-task.md` - Project features + blog
+  - `doc/employee-time-tracking/working-time.md` - Employee tracking + compliance blog
+  - `doc/employee-time-tracking/absence-time-management.md` - Employee features
+  - `doc/timesheet-calendar/calendar.md` - Calendar features
+  - `doc/signal-tracker/overview.md` - Activity tracking features
+  - `doc/reporting/overview.md` - Reporting features + KPIs blog
+  - `doc/data-exchange/import.md` - Integration + Excel migration blog
+  - `doc/project-manager-faq.md` - Project features + blogs
+  - `doc/billing-admin-faq.md` - Invoicing + revenue blog
+  - `doc/hr-administrator-faq.md` - Employee tracking + compliance blog
+
+**Link Building Guidelines**:
+1. **Use absolute URLs** for cross-domain links: `https://www.timecockpit.com/features/...`
+2. **Verify slugs** from actual content files in `TimeCockpit.WebsiteV2/src/content/`
+3. **Contextual placement**: Add links where they naturally enhance user understanding
+4. **TIP boxes**: Use for prominent feature page links at document start
+5. **Inline links**: Use for blog posts and supplementary content
+6. **Arrow notation**: Use `→` for "Learn more" style links
+7. **Target user journey**: Link users from "how-to" docs to "why" and "what" content on website
+
+**Lesson Learned**: Documentation should serve as a bridge between product usage and product marketing, helping users discover features and understand business value.
+
+**Issue: Incorrect Action Parameter Descriptions**
+- **Problem**: Documentation described actions with parameters incorrectly, suggesting UI dialogs that show summary data (customer info, line items, totals) when actually parameter forms only show the fields defined in the parameter entity
+- **Resolution**: Documented the actual action parameter pattern based on model structure
+- **Date**: 2026-02-09
+- **Key Understanding**:
+  - **Action Parameter Structure**: Actions with parameters reference a parameter entity via `"Parameter": { "ModelEntityName": "APP_EntityName" }`
+  - **Parameter Entity** defines the fields shown in the parameter form (properties and relations only)
+  - **ExecuteWithoutPrompt**: When `false`, shows parameter form; when `true`, executes immediately without user input
+  - **Example APP_CreateInvoiceAction**: Shows parameter form with APP_CreateInvoiceParameter fields (InvoiceDate, InvoiceNumber, InvoiceDescription, ServiceStartDate, ServiceEndDate). The action code then creates the invoice and invoice details programmatically based on selected timesheet entries
+  - **Not shown in parameter form**: Customer info, line items, totals - these are computed by the action code itself
+- **Files Updated**: `specs/ai-generated-content.md`, `doc/billing-admin-faq.md`, and any other FAQ files with action descriptions
+
+**Documenting Action Parameters - Pattern**:
+
+When documenting an action that has parameters:
+
+1. **Check if action has a parameter**:
+   ```json
+   "Parameter": {
+       "$type": "TimeCockpit.Data.DataModel.Actions.TypedParameter, TimeCockpit.Data",
+       "ModelEntityName": "APP_CreateInvoiceParameter"
+   }
+   ```
+
+2. **Look up the parameter entity** in the model (e.g., `APP_CreateInvoiceParameter`)
+
+3. **Document the actual parameter fields**:
+   - List each **Property** with its type, nullability, and default value
+   - List each **Relation** with its target entity and nullability
+   - Note any default value expressions
+
+4. **Do NOT describe**:
+   - Computed data that appears after action execution
+   - Summary information the action calculates
+   - Data from selected InputSet entities (those are inputs, not parameters)
+
+5. **Example - APP_CreateInvoiceAction Parameter Form**:
+
+   **Parameter Form Shows**:
+   - **Invoice Date** (DateTime, required, default: today)
+   - **Invoice Number** (Text, required, default: auto-generated)
+   - **Description** (Text, optional, max 200 chars)
+   - **Service Period Start** (Date, optional)
+   - **Service Period End** (Date, optional)
+   - **Deviating Revenue** (Numeric, optional)
+
+   **Parameter Form Does NOT Show**:
+   - Customer information (determined from selected timesheets' project)
+   - Line items (created by action from grouped timesheet entries)
+   - Total amounts (calculated by action)
+   - Selected timesheet entries (those are the InputSet)
+
+**Lesson Learned**: Always verify action behavior against the model definition. Parameter forms only show fields defined in the parameter entity, not computed or summary data.
+
+**Issue: Business User Documentation Needs Workflow-Based Approach**
+- **Problem**: Technical documentation doesn't provide clear step-by-step workflows for business users to accomplish common tasks
+- **Resolution**: Document features as workflows referencing specific lists, with dedicated pages for each important list
+- **Date**: 2026-02-09
+- **Approach**: Top-down workflow documentation
+
+### Workflow-Based Documentation Pattern for Business Users
+
+**Philosophy**: Business users think in terms of "What do I want to accomplish?" not "What entity/list should I use?"
+
+**Structure**:
+1. **Feature Workflow Page** (e.g., "Creating Invoices", "Reviewing Project Budgets")
+   - Goal/outcome stated clearly
+   - Step-by-step process
+   - References to specific lists used
+   - Links to list detail pages
+   
+2. **List Detail Pages** (e.g., "Unbilled Timesheets List", "Budgetary Control of Projects")
+   - Purpose of the list
+   - How to access it
+   - Available filters and their purpose
+   - Column descriptions
+   - For script lists: Logic explanation (especially budget calculations)
+   - Common use cases
+
+**Example Workflows to Document**:
+- How to create an invoice
+- How to view actual vs. target hours
+- How to view working time saldo (balance)
+- How to display vacation saldo
+- How to view working time violations
+- How to review budgets of projects and tasks
+- How to approve absence requests
+- How to track unbilled hours
+
+### Extracting Information from NamedListConfiguration
+
+**NamedListConfiguration** appears in navigation, hyperlinks, and actions. It specifies which list to open.
+
+**Pattern 1: ModelEntityName specified**
+```xml
+<NamedListConfiguration ModelEntityName="APP_Timesheet">
+```
+**Process**:
+1. Look up entity in model: `APP_Timesheet`
+2. Find `DefaultListName` property: e.g., `"APP_DefaultTimesheetList"`
+3. Go to that list definition in EntityViews
+4. Document the list
+
+**Pattern 2: List/ListName property specified**
+```xml
+<NamedListConfiguration List="APP_BudgetaryControlOfProjectsList">
+```
+**Process**:
+1. Go directly to EntityViews
+2. Find `APP_BudgetaryControlOfProjectsList`
+3. Document the list
+
+### Documenting Lists - Template
+
+```markdown
+## [List Name] (e.g., "Unbilled Timesheets List")
+
+### Purpose
+[What business problem does this solve? What information does it show?]
+
+### Access Path
+**Navigation**: [Path in UI, e.g., "Timesheet → Unbilled Time Sheets"]
+**Direct**: [List name for technical reference]
+
+### Filters
+
+| Filter | Type | Default | Purpose |
+|--------|------|---------|---------|
+| Project | Relation | None | Filter to specific project |
+| Customer | Relation | None | Filter to specific customer |
+| Begin Time | Date | Last month | Start of date range |
+| Billed | Boolean | False | Show only unbilled entries |
+
+### Columns
+
+| Column | Description | Calculation/Source |
+|--------|-------------|-------------------|
+| User | Employee who logged time | APP_UserDetail relation |
+| Date | Date of work | APP_BeginTime |
+| Duration | Hours worked | Calculated from BeginTime - EndTime |
+| Revenue | Billable amount | Hours × Hourly Rate |
+
+### For Script Lists: Logic Explanation
+
+[For lists with ScriptSource, explain the calculation logic]
+
+**Example: Budgetary Control of Projects**
+
+**Key Metrics Calculated**:
+- **Hours**: Sum of all timesheet durations for project
+- **HoursBillable**: Sum of hours where Billable=True AND HourlyRate > 0
+- **Revenue**: Sum of (Duration × HourlyRate) from timesheets
+- **RevenueNotBilled**: Revenue where Billed=False
+- **Budget**: Project.Budget or (BudgetInHours × HourlyRate)
+- **EffectiveHourlyRate**: Total Revenue ÷ Total Hours
+- **BilledRevenueFromInvoices**: Sum of invoice.Revenue for project
+- **UnbilledHoursFromInvoices**: BudgetInHours - Invoiced Hours
+
+**Data Sources**:
+1. Timesheet query grouped by project
+2. Invoice query for billed amounts
+3. InvoiceDetail query for invoiced hours (where unit="hour")
+
+**Permission Logic**:
+Only accessible to users with roles: BillingAdmin, ProjectController, or ProjectManager
+
+### Common Use Cases
+
+**Use Case 1**: [Common scenario]
+1. [Step]
+2. [Step]
+3. [Result]
+
+**Use Case 2**: [Another scenario]
+1. [Step]
+2. [Step]
+3. [Result]
+
+### Related Lists
+- [Link to related list 1]
+- [Link to related list 2]
+
+### See Also
+- [Link to workflow documentation]
+- [Link to entity reference]
+```
+
+### Workflow Documentation - Template
+
+```markdown
+## [Workflow Name] (e.g., "Creating an Invoice")
+
+### Goal
+[What does the user want to accomplish?]
+
+### Prerequisites
+- [What data/setup must exist first?]
+- [What permissions are required?]
+
+### Step-by-Step Process
+
+**Step 1: Identify Unbilled Work**
+1. Navigate to: **[List Name]**
+   - *See: [Link to list detail page]*
+2. Apply filters:
+   - [Filter 1]
+   - [Filter 2]
+3. Review the results
+
+**Step 2: Select Entries**
+1. [Selection method]
+2. [Validation to perform]
+
+**Step 3: Execute Action**
+1. Click **[Action Name]**
+2. **Parameter form appears**:
+   - [Parameter 1]: [Description]
+   - [Parameter 2]: [Description]
+3. Click **OK**
+
+**Step 4: Verify Result**
+1. Navigate to: **[Result List]**
+   - *See: [Link to list detail page]*
+2. Verify [expected outcome]
+
+### What Happens Behind the Scenes
+[Brief non-technical explanation of what the system does]
+
+### Common Issues & Solutions
+
+**Issue**: [Common problem]
+**Cause**: [Why it happens]
+**Solution**: [How to fix]
+
+### Related Workflows
+- [Link to related workflow 1]
+- [Link to related workflow 2]
+
+### See Also
+- [Link to list detail pages used]
+- [Link to action documentation]
+```
+
+### Lists to Document (High Priority)
+
+**Invoicing & Billing**:
+- APP_DefaultTimesheetList (with Billed=False filter) → "Unbilled Timesheets List"
+- APP_DefaultInvoiceList → "Outgoing Invoices List"
+- APP_BudgetaryControlOfProjectsList → "Project Budget Control List"
+- APP_BudgetaryControlOfTasksList → "Task Budget Control List"
+
+**Time & Attendance**:
+- APP_DefaultAbsenceTimeCalendarList → "Absence Calendar List"
+- APP_DefaultAbsenceTimeCalendarWeeklyHoursOfWorkList → "Weekly Hours of Work List"
+- APP_DefaultVacationList → "Vacation Requests List"
+- APP_DefaultSickLeaveList → "Sick Leave List"
+
+**Project Management**:
+- APP_DefaultProjectList → "Projects List"
+- APP_DefaultTaskList → "Tasks List"
+- APP_DefaultCustomerList → "Customers List"
+
+**Working Time**:
+- Lists that show working time saldo
+- Lists that show actual vs. target hours
+- Lists that show working time violations
+- Lists that show vacation balance
+
+### Extracting List Information from Model
+
+**Step 1: Find list in EntityViews**
+```json
+"APP_BudgetaryControlOfProjectsList": {
+  "ConfigurationMarkup": "<List ...>",
+  "InvariantFriendlyName": "BudgetaryControlOfProjectsList",
+  "TargetEntity": { "$ref": "Model.Entities.APP_Project" },
+  "TypeName": "TimeCockpit.Data.DataModel.View.List"
+}
+```
+
+**Step 2: Extract from ConfigurationMarkup**:
+- **Filter section**: `<List.Filter>` → Shows available filters
+- **Columns**: `<BoundCell>`, `<NumericCell>`, etc. → Shows columns and calculations
+- **ScriptSource**: `<List.ScriptSource>` → Python logic for calculated lists
+- **Permissions**: Check Permissions property for access control
+
+**Step 3: For Script Lists, analyze ScriptSource**:
+- Look for `getResultModelEntity()` → Shows result structure (columns)
+- Look for `getItems()` → Shows calculation logic
+- Look for queries → Shows data sources
+- Document the calculation formulas in plain language
+
+**Lesson Learned**: Business users need workflow-oriented documentation that answers "How do I..." questions, not entity-oriented documentation. Always link workflows to the specific lists and reference detailed list documentation for filters and logic.
 
 ## 9. Success Criteria Checklist
 

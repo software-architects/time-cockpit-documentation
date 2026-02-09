@@ -48,43 +48,41 @@ The invoicing workflow converts billable timesheet entries into customer invoice
 
 **4. Run Create Invoice Action**
 1. Click **Create Invoice** in the toolbar
-2. **Invoice dialog appears** with:
-   - Pre-filled customer information
-   - Line items (selected timesheet entries)
-   - Total hours
-   - Total amount (hours × rates)
+2. **Parameter form appears** prompting for invoice details:
+   - **Invoice Number:** Enter number (default shows "will be created automatically")
+   - **Invoice Date:** Default is today, adjust if needed
+   - **Description:** Optional invoice header text (max 200 characters)
+   - **Service Period Start:** Optional start date (defaults to earliest selected timesheet date)
+   - **Service Period End:** Optional end date (defaults to latest selected timesheet date)
+3. Review parameter values and click **OK**
 
-**5. Configure Invoice Details**
-- **Invoice Number:** Enter number (may be auto-generated if configured)
-- **Invoice Date:** Default is today, adjust if needed
-- **Due Date:** Net-30, net-15, or per customer terms
-- **Payment Terms:** Description of terms
-- **Project:** Primary project (if multiple, shows main one)
-- **Invoice Description:** Optional header text
+**5. Action Creates Invoice Automatically**
 
-**6. Review Line Items**
-- Each timesheet entry becomes an invoice line item
-- Shows: Date, Description, Hours, Rate, Amount
-- Verify accuracy before finalizing
-
-**7. Save Invoice**
-- Click **Save**
-- Invoice is created and:
-  - **Billed** flag set to True on all timesheet entries
-  - **Hourly Rate Billed** locked for historical accuracy
-  - **Invoice** relation established (entries link to invoice)
+The action processes selected timesheet entries and creates:
+- **Invoice record** with entered parameters
+- **Invoice details** (line items) grouped by task and hourly rate
+  - Each group becomes one line: Task name, hours, rate, total
+  - If journey distance exists, adds travel costs line item
+- **Updates timesheet entries**:
+  - Sets **Billed** flag to True
+  - Sets **Hourly Rate Billed** to lock the rate
+  - Links to created invoice
 
 **Post-Creation:**
 
 **Invoice is now in system:**
--Navigate to **Management** → **Invoices** to view
+- Navigate to **Management** → **Invoices** to view
 - Export to PDF or Excel for sending to customer
 - Entry into accounting system
+
+> [!NOTE]
+> The action automatically determines customer, project, and line items from the selected timesheet entries. You only provide invoice metadata (number, date, description, service period) in the parameter form.
 
 **See Also:**
 - [Invoicing](project-time-tracking/billing.md)
 - [Invoice Data Fields](project-time-tracking/invoice-data-fields.md)
 - [Project Time Sheets](project-time-tracking/timesheet.md)
+- [Actions Documentation](~/doc/scripting/actions.md)
 
 ---
 
