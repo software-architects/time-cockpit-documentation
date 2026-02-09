@@ -55,7 +55,7 @@ If using time cockpit authentication:
 **Step 4: Set Working Time Model**
 1. **Weekly Hours of Work:** Standard hours per week (e.g., 40)
 2. **Weekly Working Time Model:** Define work schedule
-   - Navigate to **User** → **Weekly Hours of Work**
+   - Navigate to [User → Weekly Hours of Work](https://web.timecockpit.com/app/lists/APP_DefaultWeeklyHoursOfWorkList)
    - Create or select model (Mon-Fri 8h/day, part-time, etc.)
    - Assign to employee
 
@@ -626,7 +626,7 @@ Sick leave management differs from vacation due to its unplanned nature and pote
 **Recording Sick Leave:**
 
 **Employee Self-Service (Preferred):**
-1. Employee navigates to **User** → **Sick Leave**
+1. Employee navigates to [User → Sick Leave](https://web.timecockpit.com/app/lists/APP_DefaultSickLeaveList)
 2. Clicks **New**
 3. Fills in:
    - **User Detail:** Their name (pre-filled)

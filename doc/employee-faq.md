@@ -438,7 +438,7 @@ Communication/Admin: 1.5h
 **Step-by-Step Vacation Request:**
 
 **1. Check Your Balance**
-- Navigate to **User** → **User Details**
+- Navigate to [User → User Details](https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList)
 - Find your record (may bepre-filtered to you)
 - Look for vacation balance fields:
   - **Yearly Entitlement:** Total days per year
@@ -447,7 +447,7 @@ Communication/Admin: 1.5h
 - Ensure you have enough days
 
 **2. Create Vacation Request**
-- Navigate to **User** → **Vacation**
+- Navigate to [User → Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)
 - Click **New**
 - Fill in the form:
   - **User Detail:** Your name (should be pre-filled)
@@ -463,7 +463,7 @@ Communication/Admin: 1.5h
 - Wait for approval
 
 **4. Check Approval Status**
-- Return to **User** → **Vacation**
+- Return to [User → Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)
 - Find your request
 - Check **Is Approved** column:
   - Empty/Unchecked = Still pending
@@ -622,7 +622,7 @@ Sick leave procedure differs from vacation (unplanned vs. planned):
 
 **2. Log Sick Leave in Time Cockpit (When Able)**
 - May be same day or when you're feeling better
-- Navigate to **User** → **Sick Leave**
+- Navigate to [User → Sick Leave](https://web.timecockpit.com/app/lists/APP_DefaultSickLeaveList)
 - Click **New**
 - Fill in:
   - **User Detail:** Your name

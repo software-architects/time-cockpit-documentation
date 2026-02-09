@@ -255,7 +255,7 @@ Forecast = (Actual Hours / Days Elapsed) × Total Project Days
 Budget enforcement requires a combination of visibility, communication, and optional technical controls:
 
 **Approach 1: Visibility & Monitoring (Recommended)**
-1. **Set task-level budgets** in **Management** → **Tasks**
+1. **Set task-level budgets** in [Management → Tasks](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
 2. **Communicate budgets** to team members
 3. **Monitor regularly:**
    - Weekly budget review meetings
@@ -549,7 +549,7 @@ Prevent revenue leakage by systematically tracking and invoicing all billable wo
 5. Correct any errors before invoicing
 
 **2. Identify Unbilled Entries**
-1. In **Timesheet** → **Time Sheets**, filter:
+1. In [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList), filter:
    - **Project:** Your project
    - **Billable:** True
    - **Billed:** False

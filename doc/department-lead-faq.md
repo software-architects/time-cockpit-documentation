@@ -22,7 +22,7 @@ As a department lead, you can approve vacation, sick leave, and compensatory tim
 
 **Viewing Pending Requests from Your Team:**
 
-1. Navigate to **User** → **Vacation**
+1. Navigate to [User → Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)
 2. **Filter to your department:**
    - The system automatically shows requests from your department members (if permissions configured)
    - Or manually filter: **Department** = Your Department
@@ -85,7 +85,7 @@ Staying aware of team absences helps with planning, coverage, and workload distr
 
 **Method 1: Vacation Calendar View**
 
-1. Navigate to **Timesheet** → **Time Sheet Calendar**
+1. Navigate to [Timesheet → Time Sheet Calendar](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetCalendar)
 2. Switch to **Week** or **Month** view
 3. Use **User Selection** to view each team member:
    - Approved vacation/sick leave appears as colored blocks
@@ -94,7 +94,7 @@ Staying aware of team absences helps with planning, coverage, and workload distr
 
 **Method 2: Absence List (Current/Upcoming)**
 
-1. Navigate to **User** → **Vacation**
+1. Navigate to [User → Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)
 2. **Filter:**
    - **Department:** Your department (may be automatic)
    - **Is Approved:** True
@@ -118,7 +118,7 @@ Staying aware of team absences helps with planning, coverage, and workload distr
 
 **Method 4: Export to Excel for Planning**
 
-1. Navigate to **User** → **Vacation** (filtered as above)
+1. Navigate to [User → Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList) (filtered as above)
 2. Export to Excel
 3. Create your own visualizations:
    - Pivot table by week
@@ -309,7 +309,7 @@ Ensuring accurate time tracking is essential for project management, billing, an
 **Daily/Weekly Monitoring:**
 
 **1. Time Entry Completeness Check**
-1. Navigate to **Employee Time Tracking** → **Time Report**
+1. Navigate to [User → Time Report](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList)
 2. Filter to **Your Department**
 3. Set **Date Range:** This week or last week
 4. Review **Expected vs. Actual Hours:**
@@ -322,7 +322,7 @@ Ensuring accurate time tracking is essential for project management, billing, an
    - **Zero hours days:** Employee forgot to track? Or on vacation?
 
 **2. Visual Calendar Review**
-1. Navigate to **Timesheet** → **Time Sheet Calendar**
+1. Navigate to [Timesheet → Time Sheet Calendar](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetCalendar)
 2. Use **User Selection** to review each team member
 3. Switch to **Week View** for overview
 4. **Check for:**
@@ -406,7 +406,7 @@ Tracking overtime helps manage workload, prevent burnout, and control costs:
 
 **Weekly Overtime Review:**
 
-1. Navigate to **Employee Time Tracking** → **Time Report**
+1. Navigate to [User → Time Report](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList)
 2. Filter to **Your Department**
 3. Set **Date Range:** This week
 4. Review the **Difference** column:
@@ -542,7 +542,7 @@ Understanding your team's project distribution helps with resource planning and 
 
 **Project Time Summary:**
 
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. **Filter:**
    - **User Detail:** Your team members (or **Department:** Your Department)
    - **Date Range:** This week, this month, or custom
@@ -660,7 +660,7 @@ Establish a regular reporting rhythm to stay on top of team status:
 
 **1. Time Report (Completeness & Overtime)**
 - **Purpose:** Ensure full week tracked, identify overtime
-- **Report:** Employee Time Tracking → Time Report
+- **Report:** [User → Time Report](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList)
 - **Review:**
   - Expected vs. Actual hours
   - Who's missing time? Who's over-hours?

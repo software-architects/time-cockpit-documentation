@@ -26,7 +26,7 @@ The invoicing workflow converts billable timesheet entries into customer invoice
 **Step-by-Step Invoice Creation:**
 
 **1. Identify Unbilled Hours**
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. Apply filters:
    - **Billable:** True (only billable entries)
    - **Billed:** False (not yet invoiced)
@@ -71,7 +71,7 @@ The action processes selected timesheet entries and creates:
 **Post-Creation:**
 
 **Invoice is now in system:**
-- Navigate to **Management** → **Invoices** to view
+- Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList) to view
 - Export to PDF or Excel for sending to customer
 - Entry into accounting system
 
@@ -96,7 +96,7 @@ Invoice modification depends on whether it's been sent/paid and company policy:
 **Editing Invoice Details:**
 
 **Fields You CAN Edit (Typically):**
-1. Navigate to **Management** → **Invoices**
+1. Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList)
 2. Open the invoice record
 3. Editable fields (usually):
    - ✓ **Invoice Description:** Header/footer text
@@ -121,7 +121,7 @@ Invoice modification depends on whether it's been sent/paid and company policy:
 **Deleting an Invoice:**
 
 **Before Sending to Customer:**
-1. Navigate to **Management** → **Invoices**
+1. Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList)
 2. Select the invoice
 3. Click **Delete** (if available)
 4. **Result:**
@@ -182,7 +182,7 @@ Invoice modification depends on whether it's been sent/paid and company policy:
 **Credit Notes:**
 
 **Creating a Credit Note:**
-1. Navigate to **Management** → **Invoices**
+1. Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList)
 2. Click **New** (create manual invoice)
 3. enter **negative amounts** for line items
 4. Reference original invoice number
@@ -193,7 +193,7 @@ Invoice modification depends on whether it's been sent/paid and company policy:
 **Unlinking Timesheet Entries (Advanced):**
 
 If you must "unbill" entries:
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. Filter to the invoice: **Invoice** = [Invoice Number]
 3. Open each entry
 4. Set **Billed** = False
@@ -262,7 +262,7 @@ Retainer and fixed-price billing differs from time-and-materials and requires sp
 **3. Manual Invoice Creation**
 
 Some retainers don't use actual timesheet entries:
-1. Navigate to **Management** → **Invoices**
+1. Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList)
 2. Click **New**
 3. Manually enter:
    - **Customer**
@@ -273,7 +273,7 @@ Some retainers don't use actual timesheet entries:
 4. Save
 
 Then separately mark timesheet entries as "billed" for tracking:
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. Filter to retainer project, this month
 3. Multi-select all entries
 4. Set **Billed** = True
@@ -300,7 +300,7 @@ Then separately mark timesheet entries as "billed" for tracking:
 **Invoice Process:**
 1. **Milestone reached**
 2. Create **manual invoice** (not from timesheet entries)
-3. Navigate to **Management** → **Invoices** → **New**
+3. Navigate to [Management → Invoices](https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList) → **New**
 4. Enter:
    - **Customer**
    - **Project**
@@ -389,7 +389,7 @@ Time cockpit checks rates in this order:
 
 **Setting Project-Level Rates:**
 
-1. Navigate to **Management** → **Projects**
+1. Navigate to [Management → Projects](https://web.timecockpit.com/app/lists/APP_DefaultProjectList)
 2. Open the project
 3. Set **Default Hourly Rate:** $150 (example)
 4. Save
@@ -398,7 +398,7 @@ Time cockpit checks rates in this order:
 
 **Setting Task-Level Rates (More Granular):**
 
-1. Navigate to **Management** → **Tasks**
+1. Navigate to [Management → Tasks](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
 2. Open the task
 3. Set **Hourly Rate:** $200 (example)
 4. Save
@@ -412,7 +412,7 @@ Time cockpit checks rates in this order:
 
 **Setting Employee/User Rates:**
 
-1. Navigate to **User** → **User Details**
+1. Navigate to [User → User Details](https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList)
 2. Open employee record
 3. Set **Default Hourly Rate:** $125 (example)
 4. Save
@@ -424,7 +424,7 @@ Time cockpit checks rates in this order:
 **Scenario:** Project rate increases from $150 to $175/hour
 
 **Update Project:**
-1. Navigate to **Management** → **Projects**
+1. Navigate to [Management → Projects](https://web.timecockpit.com/app/lists/APP_DefaultProjectList)
 2. Open project
 3. Change **Default Hourly Rate:** $175
 4. Save
@@ -435,7 +435,7 @@ Time cockpit checks rates in this order:
 - **Invoiced entries:** Locked at invoiced rate (cannot change)
 
 **If you need to retroactively adjust past unbilled entries:**
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. Filter to project + date range + **Billed** = False
 3. Edit entries individually or use bulk update:
    - Multi-select entries
@@ -541,7 +541,7 @@ Each entry has **Billable** checkbox:
 
 **Task Level Default:**
 Set default billability on tasks:
-1. Navigate to **Management** → **Tasks**
+1. Navigate to [Management → Tasks](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
 2. Open task
 3. Set **Default Billable:** True or False
 4. Save
@@ -574,7 +574,7 @@ industry benchmarks:
 **Reporting Billable Ratio:**
 
 **Individual Level:**
-1. Navigate to **Timesheet** → **Time Sheets**
+1. Navigate to [Timesheet → Time Sheets](https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList)
 2. Filter: **User Detail** = Employee, **Date Range** = Month
 3. **Group by Billable**
 4. View subtotals:

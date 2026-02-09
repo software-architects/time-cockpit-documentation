@@ -925,6 +925,57 @@ Only accessible to users with roles: BillingAdmin, ProjectController, or Project
 
 **Lesson Learned**: Business users need workflow-oriented documentation that answers "How do I..." questions, not entity-oriented documentation. Always link workflows to the specific lists and reference detailed list documentation for filters and logic.
 
+**Issue: Navigation Structure and Deeplink Mapping**
+- **Problem**: Documentation referenced navigation paths inconsistently (e.g., "Data Exchange → Import", "Employee Time Tracking → Time Report") that didn't match the actual navigation structure
+- **Resolution**: Analyzed navigation-configuration.json and created comprehensive navigation-to-list mapping
+- **Date**: 2026-02-09
+- **Key Findings**:
+  - **Actual Navigation Hierarchy**: UIModule → NavigationSection → NavigationCommand
+  - **5 Main Modules**: Timesheet, BaseData (labeled "Management" in UI), UserManagement (labeled "User" in UI), SignalTrackerModule, Administration
+  - **Correct Navigation Paths**:
+    - ❌ "Data Exchange → Import" → ✅ "Management → Import Definitions"
+    - ❌ "Employee Time Tracking → Time Report" → ✅ "User → Time Report" 
+    - ❌ "Reporting → Built-In Reports" → ✅ "Management → Global Settings" (or custom navigation)
+  - **Role-Based Visibility**: Many sections and commands have IsVisible/IsEnabled conditions checking roles via TCQL
+  - **List Name Resolution**: NavigationCommands specify either ModelEntityName (→lookup DefaultListName) or direct ListName/List property
+  
+**Navigation Structure Documentation**:
+- **Created**: `doc/navigation-access-permissions.md` - Comprehensive navigation reference with:
+  - Complete navigation hierarchy (all modules, sections, commands)
+  - Role-based access matrix showing which roles see which menu items
+  - Navigation path → List name → Deeplink URL mapping table
+  - Common workflow scenarios for each major role
+  - Permission inheritance rules (module → section → command)
+
+**Role-Based Navigation Access**:
+
+Roles and their navigation access:
+- **BillingAdmin**: Management → Accounting (Invoices, Unbilled Timesheets, Budgetary Control, Articles, Units, Companies)
+- **ProjectManager**: Management → Accounting (read-only for assigned projects), can edit assigned Projects and Tasks
+- **ProjectController**: Management → Accounting (read-only for ALL projects)
+- **HumanResourcesAdmin**: User → User Details, Weekly Hours, Departments, Legal Holidays, Vacation, Working Time settings
+- **DepartmentLead**: User → Absences and overtime for department employees only
+- **AccountAdmin**: User → Role Management (Add/Assign Roles)
+- **BaseDataAdmin**: Management → Settings (Global Settings, Import Definitions, etc.), Management → Journey (Countries, Transport)
+- **NotificationManager**: Special permission for notification management
+- **User**: Base time tracking access (their own data)
+
+**Deeplink URL Pattern**:
+`https://web.timecockpit.com/app/lists/{ListName}`
+
+**Files Updated with Correct Navigation**:
+- `doc/navigation-access-permissions.md` (created)
+- `doc/billing-admin-faq.md` (deeplinks corrected)
+- Additional FAQ files to be updated
+
+**Lesson Learned**: 
+1. Always verify navigation paths against actual navigation-configuration.json
+2. Use "Management" not "Data Exchange" or "Reporting" for master data features
+3. Use "User" not "Employee Time Tracking" for HR/time features
+4. When documenting navigation, provide both the user-facing path and the technical list name
+5. Role-based visibility affects what users see in navigation - document both the navigation item AND the role requirement
+6. Feature flags (especially APP_DefaultPermissions) control whether role-based restrictions apply
+
 ## 9. Success Criteria Checklist
 
 - [ ] FAQ page with 15+ answered questions
