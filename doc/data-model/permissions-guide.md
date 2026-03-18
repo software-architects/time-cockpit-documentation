@@ -48,16 +48,16 @@ Every permission specifies which operations it controls:
 
 ```mermaid
 flowchart LR
-    Request[User Request] --> CheckRoles{Has Required<br/>Role?}
-    CheckRoles -->|No| Deny[Access Denied]
-    CheckRoles -->|Yes| CheckEntity{Entity<br/>Permission?}
-    CheckEntity -->|No Default| Deny
-    CheckEntity -->|Has Permission| EvalCondition{Evaluate<br/>Condition}
-    EvalCondition -->|False| Deny
-    EvalCondition -->|True| CheckRow{Row-Level<br/>Security?}
+    Request[User Request] --> CheckEntity{Any Entity<br/>Permission<br/>defined?}
+    CheckEntity -->|No Permission| Deny[Access Denied]
+    CheckEntity -->|Has Permissions| EvalCondition{Evaluate Each<br/>Condition<br/>incl. optional role check}
+    EvalCondition -->|All False| Deny
+    EvalCondition -->|Any True\nOR semantics| CheckRow{Row-Level<br/>Security?}
     CheckRow -->|Fails| DenyRow[Row Access Denied]
     CheckRow -->|Passes| Allow[Access Granted]
 ```
+
+> **Multiple permissions are OR-ed**: if more than one permission is defined for an entity and access type, access is granted as soon as *any one* condition evaluates to `True`.
 
 ### 3. Named Sets
 
@@ -407,10 +407,10 @@ Always test:
 ### 4. Document Custom Permissions
 
 ```tcql
--- Permission: ProjectManagerReadAccess
--- Purpose: Project managers see timesheets on projects they manage
--- Roles: ProjectManager, BillingAdmin
--- Condition: User is Manager1 or Manager2 of the project
+/* Permission: ProjectManagerReadAccess
+   Purpose: Project managers see timesheets on projects they manage
+   Roles: ProjectManager, BillingAdmin
+   Condition: User is Manager1 or Manager2 of the project */
 :Iif(
   'BillingAdmin' In Set('CurrentUserRoles'),
   True,

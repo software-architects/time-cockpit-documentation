@@ -99,25 +99,15 @@ erDiagram
     }
 ```
 
-### Key Relationships Explained
+### Key Relationships
 
-**Project Assignment**:
-- Timesheets can be assigned to a **Project directly** OR to a **Task** (which belongs to a Project)
-- When assigned to a task, project context is derived: `Task.Project`
-
-**Billing Flow**:
-1. Log timesheets on projects/tasks
-2. Mark timesheets as billable
-3. Create invoice for project
-4. Assign timesheets to invoice (sets `APP_Billed = True`)
-5. Invoice details can reference articles or tasks
-
-**Customer Hierarchy**:
-```
-Customer → Project → Task → Timesheet
-                  ↓
-              Invoice → InvoiceDetail
-```
+- `APP_Customer` is the root; each `APP_Project` belongs to exactly one customer.
+- `APP_Task` belongs to exactly one `APP_Project`; a project can have many tasks.
+- `APP_Timesheet` has a mandatory FK to `APP_UserDetail`, a mandatory FK to `APP_Project`, and an optional FK to `APP_Task`.
+- `APP_Timesheet` has an optional FK to `APP_Invoice`, linking it to at most one invoice.
+- `APP_Invoice` belongs to exactly one `APP_Project`; a project can have many invoices.
+- `APP_InvoiceDetail` belongs to exactly one `APP_Invoice` and has mandatory FKs to `APP_Article` and `APP_Unit`, plus an optional FK to `APP_Task`.
+- `APP_Project` holds two optional FKs to `APP_UserDetail` (Manager1, Manager2).
 
 ## Domain 2: Time & Attendance
 
@@ -223,35 +213,15 @@ erDiagram
     }
 ```
 
-### Key Relationships Explained
+### Key Relationships
 
-**Approval Chain**:
-```
-Employee → Creates Vacation/SickLeave
-            ↓
-Department Lead → Receives Notification
-            ↓
-Review & Approve → Sets ApprovedTimestampUtc + Approver
-            ↓
-Employee → Gets Notification of Approval
-```
-
-**Working Time Calculation**:
-- `APP_WeeklyHoursOfWork`: Defines expected hours per day
-- `APP_WorkingTimeLimit`: Defines legal/policy limits
-- `APP_Timesheet`: Actual worked hours
-- Functions: `:GetWorkTime()`, `:GetWeeklyHoursOfWork()` calculate compliance
-
-**Absence Types** (all follow same pattern):
-- `APP_Vacation`: Planned time off
-- `APP_SickLeave`: Illness
-- `APP_CompensatoryTime`: Time off in lieu of overtime
-
-**Effective Date Pattern**:
-Many entities use `EffectiveDate` to support multiple configurations over time:
-- Change work schedule from 40h to 32h starting next month
-- Add new working time limits when law changes
-- Track vacation entitlement per year
+- `APP_UserDetail` is the central entity in this domain; all absence, schedule, and limit records hold a mandatory FK to it.
+- `APP_Vacation`, `APP_SickLeave`, and `APP_CompensatoryTime` each have a mandatory FK to `APP_UserDetail` (the employee) and an optional FK back to `APP_UserDetail` (the approver).
+- `APP_WeeklyHoursOfWork`, `APP_VacationEntitlement`, `APP_WorkingTimeLimit`, and `APP_OvertimeCorrection` each have a mandatory FK to `APP_UserDetail`; one user can have many records of each type.
+- `APP_UserDetail` has an optional FK to `APP_Department`; a department can have many users.
+- `APP_DepartmentLead` is a join entity between `APP_Department` and `APP_UserDetail`; a department can have many leads, and a user can lead many departments.
+- `APP_UserDetail` has an optional FK to `APP_LegalHolidayCalendar`; a calendar can be shared across many users.
+- `APP_LegalHoliday` has a mandatory FK to `APP_LegalHolidayCalendar`; a calendar contains many holidays.
 
 ## Domain 3: Security & User Management
 
@@ -307,50 +277,12 @@ erDiagram
     }
 ```
 
-### Key Security Concepts
+### Key Relationships
 
-**Role-Based Access Control (RBAC)**:
-- Users have `APP_UserDetail` (profile)
-- Roles assigned via `APP_UserDetailRole` (with validity period)
-- Standard roles: `BillingAdmin`, `HumanResourcesAdmin`, `ProjectManager`, `DepartmentLead`, `User`
-
-**Permission Evaluation**:
-```tcql
--- Check if current user has role
-'BillingAdmin' In Set('CurrentUserRoles')
-
--- Named Set definition (APP_CurrentUserRoles)
-From R In APP_UserDetailRole 
-Where R.UserDetail.UserDetailUuid = Environment.CurrentUser.UserDetailUuid
-And (R.ValidFrom = Null Or R.ValidFrom <= :Today())
-And (R.ValidTo = Null Or R.ValidTo >= :Today())
-Select New With { R.UserRole.Code }
-```
-
-**Row-Level Security Example**:
-```tcql
--- Timesheet read permission allows:
--- 1. Own timesheets
--- 2. Department leads see their department
--- 3. Project managers see their projects  
--- 4. Admins see all
-
-:Iif(
-  'BillingAdmin' In Set('CurrentUserRoles') Or
-  'HumanResourcesAdmin' In Set('CurrentUserRoles'),
-  True,
-  :Iif(
-    Current.UserDetail.UserDetailUuid = Environment.CurrentUser.UserDetailUuid Or
-    ('DepartmentLead' In Set('CurrentUserRoles') And 
-     Current.UserDetail.Department In Set('APP_MyDepartmentsAsLead')) Or
-    ('ProjectManager' In Set('CurrentUserRoles') And 
-     (Current.Project.Manager1 = Environment.CurrentUser.UserDetailUuid Or
-      Current.Project.Manager2 = Environment.CurrentUser.UserDetailUuid)),
-    True,
-    False
-  )
-) = True
-```
+- `SYS_UserAccount` has at most one `APP_UserDetail` profile (one-to-zero-or-one).
+- `APP_UserDetail` belongs to exactly one `APP_Company` and one `APP_CultureInfo`.
+- `APP_UserDetailRole` is a join entity between `APP_UserDetail` and `APP_UserRole`; a user can have many roles, and a role can be assigned to many users.
+- `APP_UserRole` has an optional FK to `SYS_Permission`.
 
 ## Domain 4: Master Data & Configuration
 
@@ -416,20 +348,14 @@ erDiagram
 
 ## Cross-Domain Relationships
 
-Some key entities span multiple domains:
+**APP_UserDetail** holds FKs from or to entities in every domain:
+- Referenced by `APP_Timesheet` (Domain 1)
+- References `APP_Department` and `APP_LegalHolidayCalendar`, and is referenced by all absence/schedule entities (Domain 2)
+- Referenced by `SYS_UserAccount` and `APP_UserDetailRole`, and references `APP_Company` and `APP_CultureInfo` (Domain 3)
 
-**APP_UserDetail** is central to:
-- Time tracking (logs timesheets)
-- Absence management (takes vacation/sick leave)
-- Security (has roles)
-- Project management (manages projects)
-- Approval workflows (approves absences)
-
-**APP_Project** connects:
-- Customer management (belongs to customer)
-- Time tracking (timesheets reference it)
-- Billing (invoices for it)
-- Security (project managers have special access)
+**APP_Project** is referenced across domains:
+- References `APP_Customer` (Domain 1)
+- Referenced by `APP_Timesheet` and `APP_Invoice` (Domain 1)
 
 ## Understanding Cardinality
 

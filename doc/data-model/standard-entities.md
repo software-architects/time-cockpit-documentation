@@ -13,7 +13,6 @@ This page provides detailed documentation for the most important entities in tim
 - **Permissions**: Who can read/write data
 - **Validation Rules**: Data integrity constraints
 - **TCQL Examples**: Common queries
-- **Web API Examples**: REST/OData access patterns
 
 ## Core Time Tracking Entities
 
@@ -155,77 +154,6 @@ Where
     And T.APP_DateActual = :Today()
 Order By T.APP_BeginTime
 Select T
-```
-
-#### Web API Examples
-
-**Create a timesheet (POST):**
-```http
-POST https://api.timecockpit.com/odata/APP_Timesheet
-Content-Type: application/json
-Authorization: Bearer YOUR_TOKEN
-
-{
-  "APP_BeginTime": "2025-05-15T09:00:00Z",
-  "APP_EndTime": "2025-05-15T12:30:00Z",
-  "APP_Description": "Worked on user authentication feature",
-  "APP_ProjectUuid": "12345678-1234-1234-1234-123456789abc",
-  "APP_TaskUuid": "87654321-4321-4321-4321-cba987654321",
-  "APP_UserDetailUuid": "current-user-uuid",
-  "APP_Billable": true,
-  "APP_Location": "Home Office"
-}
-```
-
-**Get timesheets with $expand (GET):**
-```http
-GET https://api.timecockpit.com/odata/APP_Timesheet
-  ?$filter=APP_BeginTime ge 2025-05-01T00:00:00Z and APP_BeginTime lt 2025-06-01T00:00:00Z
-  &$expand=APP_UserDetail,APP_Project,APP_Task
-  &$orderby=APP_BeginTime desc
-  &$top=50
-```
-
-**Update timesheet (PATCH):**
-```http
-PATCH https://api.timecockpit.com/odata/APP_Timesheet(guid'12345678-1234-1234-1234-123456789abc')
-Content-Type: application/json
-
-{
-  "APP_EndTime": "2025-05-15T13:00:00Z",
-  "APP_Description": "Extended work on authentication + added tests"
-}
-```
-
-**Start/stop a running timesheet:**
-```javascript
-// Start timer
-const response = await fetch('https://api.timecockpit.com/odata/APP_Timesheet', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_TOKEN'
-  },
-  body: JSON.stringify({
-    APP_BeginTime: new Date().toISOString(),
-    APP_EndTime: new Date('9999-12-31T23:59:59Z').toISOString(), // Far future = running
-    APP_ProjectUuid: projectId,
-    APP_UserDetailUuid: currentUserUuid,
-    APP_IsRunning: true,
-    APP_Description: "Working on..."
-  })
-});
-
-// Stop timer - update EndTime to now
-const timesheetId = (await response.json()).APP_TimesheetUuid;
-await fetch(`https://api.timecockpit.com/odata/APP_Timesheet(guid'${timesheetId}')`, {
-  method: 'PATCH',
-  headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer YOUR_TOKEN' },
-  body: JSON.stringify({
-    APP_EndTime: new Date().toISOString(),
-    APP_IsRunning: false
-  })
-});
 ```
 
 ---
