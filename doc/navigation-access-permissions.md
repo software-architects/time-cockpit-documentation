@@ -41,10 +41,10 @@ For documentation purposes, use these correct navigation paths and deeplinks:
 
 | Navigation Path | List Name | Deeplink URL |
 |----------------|-----------|--------------|
-| Timesheet → Time Sheets | APP_DefaultTimesheetList | https://web.timecockpit.com/app/lists/APP_DefaultTimesheetList |
-| Management → Customers | APP_DefaultCustomerList | https://web.timecockpit.com/app/lists/APP_DefaultCustomerList |
-| Management → Projects | APP_DefaultProjectList | https://web.timecockpit.com/app/lists/APP_DefaultProjectList |
-| Management → Tasks | APP_DefaultTaskList | https://web.timecockpit.com/app/lists/APP_DefaultTaskList |
+| Timesheet → Time Sheets | APP_DefaultTimesheetList | https://web.timecockpit.com/app/lists/entity/APP_Timesheet |
+| Management → Customers | APP_DefaultCustomerList | https://web.timecockpit.com/app/lists/entity/APP_Customer |
+| Management → Projects | APP_DefaultProjectList | https://web.timecockpit.com/app/lists/entity/APP_Project |
+| Management → Tasks | APP_DefaultTaskList | https://web.timecockpit.com/app/lists/entity/APP_Task |
 | Management → Invoices | APP_DefaultInvoiceList | https://web.timecockpit.com/app/lists/APP_DefaultInvoiceList |
 | Management → Unbilled Timesheets | APP_UnbilledTimesheetsList | https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList |
 | Management → Budgetary Control of Projects | APP_BudgetaryControlOfProjectsList | https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList |
@@ -60,15 +60,15 @@ For documentation purposes, use these correct navigation paths and deeplinks:
 | Management → Template Queries | APP_DefaultTemplateQueryList | https://web.timecockpit.com/app/lists/APP_DefaultTemplateQueryList |
 | Management → Timesheet Templates | APP_DefaultTimesheetTemplateList | https://web.timecockpit.com/app/lists/APP_DefaultTimesheetTemplateList |
 | User → User Details | APP_DefaultUserDetailList | https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList |
-| User → Weekly Hours of Work | APP_DefaultWeeklyHoursOfWorkList | https://web.timecockpit.com/app/lists/APP_DefaultWeeklyHoursOfWorkList |
+| User → Weekly Hours of Work | APP_DefaultWeeklyHoursOfWorkList | https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork |
 | User → Departments | APP_DefaultDepartmentList | https://web.timecockpit.com/app/lists/APP_DefaultDepartmentList |
-| User → Legal Holiday Calendars | APP_DefaultLegalHolidayCalendarList | https://web.timecockpit.com/app/lists/APP_DefaultLegalHolidayCalendarList |
-| User → Legal Holidays | APP_DefaultLegalHolidayList | https://web.timecockpit.com/app/lists/APP_DefaultLegalHolidayList |
-| User → Vacation | APP_DefaultVacationList | https://web.timecockpit.com/app/lists/APP_DefaultVacationList |
-| User → Vacation Entitlement | APP_DefaultVacationEntitlementList | https://web.timecockpit.com/app/lists/APP_DefaultVacationEntitlementList |
+| User → Legal Holiday Calendars | APP_DefaultLegalHolidayCalendarList | https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar |
+| User → Legal Holidays | APP_DefaultLegalHolidayList | https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday |
+| User → Vacation | APP_DefaultVacationList | https://web.timecockpit.com/app/lists/entity/APP_Vacation |
+| User → Vacation Entitlement | APP_DefaultVacationEntitlementList | https://web.timecockpit.com/app/lists/entity/APP_VacationEntitlement |
 | User → Vacation per Effective Date | APP_VacationPerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList |
-| User → Sick Leave | APP_DefaultSickLeaveList | https://web.timecockpit.com/app/lists/APP_DefaultSickLeaveList |
-| User → Compensatory Time | APP_DefaultCompensatoryTimeList | https://web.timecockpit.com/app/lists/APP_DefaultCompensatoryTimeList |
+| User → Sick Leave | APP_DefaultSickLeaveList | https://web.timecockpit.com/app/lists/entity/APP_SickLeave |
+| User → Compensatory Time | APP_DefaultCompensatoryTimeList | https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime |
 | User → Working Time Weights | APP_DefaultWorkingTimeWeightList | https://web.timecockpit.com/app/lists/APP_DefaultWorkingTimeWeightList |
 | User → Overtime Corrections | APP_DefaultOvertimeCorrectionList | https://web.timecockpit.com/app/lists/APP_DefaultOvertimeCorrectionList |
 | User → Overtime per Effective Date | APP_OvertimePerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_OvertimePerEffectiveDateList |
@@ -101,8 +101,8 @@ For documentation purposes, use these correct navigation paths and deeplinks:
 
 **Typical Tasks:**
 1. Manage [User Details](https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList)
-2. Configure [Weekly Hours of Work](https://web.timecockpit.com/app/lists/APP_DefaultWeeklyHoursOfWorkList)
-3. Review [Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList) requests
+2. Configure [Weekly Hours of Work](https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork)
+3. Review [Vacation](https://web.timecockpit.com/app/lists/entity/APP_Vacation) requests
 4. Set up [Working Time Limits](https://web.timecockpit.com/app/lists/APP_DefaultWorkingTimeLimitList)
 
 ### ProjectManager Workflow
@@ -111,7 +111,7 @@ For documentation purposes, use these correct navigation paths and deeplinks:
 - ✓ Management → Projects and Tasks (edit for assigned projects)
 
 **Typical Tasks:**
-1. Update [Projects](https://web.timecockpit.com/app/lists/APP_DefaultProjectList) and [Tasks](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
+1. Update [Projects](https://web.timecockpit.com/app/lists/entity/APP_Project) and [Tasks](https://web.timecockpit.com/app/lists/entity/APP_Task)
 2. Monitor [Budgetary Control](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)
 3. Review team timesheets for assigned projects
 
@@ -121,7 +121,7 @@ For documentation purposes, use these correct navigation paths and deeplinks:
 - ✓ User → Time Report, Overtime (department employees only)
 
 **Typical Tasks:**
-1. Approve [Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList) requests
+1. Approve [Vacation](https://web.timecockpit.com/app/lists/entity/APP_Vacation) requests
 2. Review [Time Reports](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList)
 3. Monitor team absences
 
