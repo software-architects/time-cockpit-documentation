@@ -16,6 +16,28 @@ These pages are meant to complement the role-based FAQs and workflow guides. The
 
 Start here:
 
-- [Unbilled Timesheets](lists/unbilled-timesheets.md)
+- Billing and project lists:
+  [Unbilled Timesheets](lists/unbilled-timesheets.md),
+  [Budgetary Control of Projects](lists/budgetary-control-of-projects.md),
+  [Budgetary Control of Tasks](lists/budgetary-control-of-tasks.md),
+  [Invoice Report](lists/invoice-report.md)
+- Attendance and leave lists:
+  [Vacation](lists/vacation.md),
+  [Vacation Entitlement](lists/vacation-entitlement.md),
+  [Vacation per Effective Date](lists/vacation-per-effective-date.md),
+  [Sick Leave](lists/sick-leave.md),
+  [Compensatory Time](lists/compensatory-time.md),
+  [Weekly Hours of Work](lists/weekly-hours-of-work.md),
+  [Working Time Limits](lists/working-time-limits.md),
+  [Working Time Weights](lists/working-time-weights.md),
+  [Working Time Violations](lists/working-time-violations.md),
+  [Absence Calendar](lists/absence-calendar.md)
+- Reporting and analysis lists:
+  [Overtime per Effective Date](lists/overtime-per-effective-date.md),
+  [Target-Actual Hours Comparison](lists/target-actual-hours-comparison.md),
+  [Time Report](lists/time-report.md),
+  [Home Office Overview](lists/home-office-overview.md)
+- Actions:
+  [Create Invoice](actions/create-invoice.md)
 
 More list and action reference pages will be added over time.
