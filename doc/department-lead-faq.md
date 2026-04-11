@@ -9,14 +9,14 @@ keywords: [department lead, absence approval, team time tracking, overtime, vaca
 This FAQ answers common questions from department leads who approve absences and review team-related time tracking data in time cockpit.
 
 > [!NOTE]
+> Reviewed in April 2026.
+
+> [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For HR-specific setup and master data topics, see the [HR Administrator FAQ](hr-administrator-faq.md).
 
 ## Absence Approval
 
 ### How do I approve vacation for my team members?
-
-> [!NOTE]
-> Reviewed in April 2026.
 
 If the absence approval workflow is enabled, department leads can approve or reject pending absences for employees in the departments they lead.
 
@@ -42,9 +42,6 @@ Useful context from the standard documentation:
 
 ### How do I see who's out of office this week/month?
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 For a team-wide absence overview, use the absence calendar. Department leads can see absences for their own department and for departments where they are assigned as lead.
 
 For a single employee, you can also use the [Time Sheet Calendar](timesheet-calendar/calendar.md):
@@ -61,9 +58,6 @@ For a single employee, you can also use the [Time Sheet Calendar](timesheet-cale
 ---
 
 ### What do I do if multiple team members request the same vacation dates?
-
-> [!NOTE]
-> Reviewed in April 2026.
 
 Use the absence calendar to compare the request with existing absences in the relevant department.
 
@@ -83,9 +77,6 @@ The standard documentation explains how to review overlaps in the calendar, but 
 ## Team Time Tracking Oversight
 
 ### How do I check if my team is tracking time accurately?
-
-> [!NOTE]
-> Reviewed in April 2026.
 
 Department leads can combine **Time Report**, **Time Sheet Calendar**, and the **Time Sheets** list for this check.
 
@@ -123,9 +114,6 @@ Use [Time Sheet](project-time-tracking/timesheet.md) when you need a tabular vie
 
 ### How do I monitor my department's overtime and workload?
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 Use [Time Report](employee-time-tracking/time-report.md) as the primary source. It includes planned hours, actual working hours, overtime in the selected period, and the overtime balance at the start of the period.
 
 If the list is available in your navigation, **Overtime per Effective Date** gives you a compact overtime snapshot for one date. It has these filters:
@@ -157,9 +145,6 @@ For detailed investigation:
 
 ### Can I see what projects my team is working on?
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 Yes. Under the default permissions, department leads can read timesheets for employees in their department.
 
 The simplest way is to open the [Time Sheet](project-time-tracking/timesheet.md) list and review the project-related columns for the relevant period. Depending on your view configuration, you can also use filtering, sorting, grouping, or export to focus on one employee, one project, or one date range.
@@ -176,9 +161,6 @@ For a single employee and day or week, the [Time Sheet Calendar](timesheet-calen
 ## Department Reporting
 
 ### What reports should I review regularly as a department lead?
-
-> [!NOTE]
-> Reviewed in April 2026.
 
 The most useful standard views for department leads are:
 
@@ -200,9 +182,6 @@ How often you review these views depends on your internal process. In the produc
 ## Department Administration
 
 ### How do I onboard a new team member to my department?
-
-> [!NOTE]
-> Reviewed in April 2026.
 
 Keep this split between setup and daily usage:
 

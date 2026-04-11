@@ -38,6 +38,9 @@ Start here:
   [Time Report](lists/time-report.md),
   [Home Office Overview](lists/home-office-overview.md)
 - Actions:
-  [Create Invoice](actions/create-invoice.md)
+  [Create Invoice](actions/create-invoice.md),
+  [Assign to Existing Outgoing Invoice](actions/assign-to-existing-outgoing-invoice.md),
+  [Approve Absence](actions/approve-absence.md),
+  [Reject Absence](actions/reject-absence.md)
 
 More list and action reference pages will be added over time.

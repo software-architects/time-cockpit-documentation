@@ -6,12 +6,10 @@ keywords: [navigation, permissions, roles, menu structure, access control, defau
 
 # Navigation Access Permissions & Menu Structure
 
-Reviewed in April 2026.
-
-This page describes the standard navigation structure in time cockpit when `APP_DefaultPermissions` is enabled. It shows which roles typically work with which menu areas and maps common menu items to their verified deeplinks.
-
 > [!NOTE]
 > Reviewed in April 2026.
+
+This page describes the standard navigation structure in time cockpit when `APP_DefaultPermissions` is enabled. It shows which roles typically work with which menu areas and maps common menu items to their verified deeplinks.
 
 > [!NOTE]
 > This documentation applies when the **APP_DefaultPermissions** feature flag is enabled. For accounts created after December 10, 2025, default permissions are enabled automatically. Existing accounts can request activation via [support@timecockpit.com](mailto:support@timecockpit.com).
