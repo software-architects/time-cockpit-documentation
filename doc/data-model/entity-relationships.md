@@ -296,7 +296,6 @@ erDiagram
     APP_UserDetailRole }o--|| APP_UserRole : "APP_UserRole"
     APP_UserRole }o--o| SYS_Permission : "SYS_Permission"
     APP_UserDetail }o--|| APP_CultureInfo : "APP_CultureInfo"
-    APP_Company ||--o{ APP_UserDetail : "APP_Company"
     
     SYS_UserAccount {
         guid SYS_UserAccountUuid PK
@@ -314,7 +313,6 @@ erDiagram
         boolean APP_IsHidden
         guid SYS_UserAccount FK
         guid APP_CultureInfo FK
-        guid APP_Company FK
     }
     
     APP_UserDetailRole {
@@ -337,13 +335,6 @@ erDiagram
         string APP_CultureInfoName "e.g., en-US"
         string APP_DisplayName
     }
-
-    APP_Company {
-        guid APP_CompanyUuid PK
-        string APP_CompanyName
-        string APP_Code
-    }
-
     SYS_Permission {
         guid SYS_PermissionUuid PK
         string SYS_TargetEntity
@@ -354,7 +345,7 @@ erDiagram
 ### Key Relationships
 
 - `SYS_UserAccount` has at most one `APP_UserDetail` profile (one-to-zero-or-one).
-- `APP_UserDetail` belongs to exactly one `APP_Company` and one `APP_CultureInfo`.
+- `APP_UserDetail` belongs to exactly one `APP_CultureInfo`.
 - `APP_UserDetailRole` is a join entity between `APP_UserDetail` and `APP_UserRole`; a user can have many roles, and a role can be assigned to many users.
 - `APP_UserRole` has an optional FK to `SYS_Permission`.
 
@@ -444,7 +435,7 @@ erDiagram
 **APP_UserDetail** holds FKs from or to entities in every domain:
 - Referenced by `APP_Timesheet` (Domain 1)
 - References `APP_Department` and `APP_LegalHolidayCalendar`, and is referenced by all absence/schedule entities (Domain 2)
-- Referenced by `SYS_UserAccount` and `APP_UserDetailRole`, and references `APP_Company` and `APP_CultureInfo` (Domain 3)
+- Referenced by `SYS_UserAccount` and `APP_UserDetailRole`, and references `APP_CultureInfo` (Domain 3)
 
 **APP_Project** is referenced across domains:
 - References `APP_Customer` (Domain 1)
