@@ -19,7 +19,7 @@ graph TD
     Permissions --> EntityPerm[Entity-Level Permissions]
     Permissions --> PropertyPerm[Property-Level Permissions]
     
-    EntityPerm --> AccessTypes[Read/Insert/Update/Delete/Execute]
+    EntityPerm --> AccessTypes[Read/Write/Execute/Allowed]
     EntityPerm --> Conditions[Permission Conditions]
     
     Conditions --> NamedSets[Named Sets]
@@ -34,15 +34,19 @@ graph TD
 
 ### 1. Access Types
 
-Every permission specifies which operations it controls:
+Every permission specifies which operations it controls. The underlying enum contains both the combined `Write` flag and the individual CRUD bit flags:
 
 | Access Type | Value | Description |
 |-------------|-------|-------------|
 | **Read** | 1 | View entity data |
-| **Insert** | 2 | Create new records |
-| **Update** | 4 | Modify existing records |
-| **Delete** | 8 | Remove records |
-| **Execute** | 16 | Run actions on entities |
+| **Insert** | 2 | Create new records; included in `Write` |
+| **Update** | 4 | Modify existing records; included in `Write` |
+| **Delete** | 8 | Remove records; included in `Write` |
+| **Write** | 15 | Combined data-write permission; includes `Read`, `Insert`, `Update`, and `Delete` |
+| **Execute** | 16 | Run actions; used for action execution permissions |
+| **Allowed** | 32 | Generic function permission used by the framework |
+
+In everyday documentation and tenant configuration, the most common permission types are `APP_ReadPermission`, `APP_WritePermission`, and action-specific `APP_ExecutePermission`.
 
 ### 2. Permission Evaluation Flow
 
