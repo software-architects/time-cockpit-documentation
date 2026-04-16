@@ -4,7 +4,9 @@ description: Learn how to create invoices from time sheet entries in time cockpi
 ---
 # Invoicing
 
-Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit. 
+Time cockpit not only serves as a time tracking tool, but also enables streamlined invoicing for your tracked time. This article explains how you can create invoices for the recorded hours with time cockpit.
+
+This page describes the standard invoicing workflow in time cockpit, the building blocks of invoices, and the available options for automatic or manual invoice creation.
 
 ## Building Blocks of an Invoice
 
@@ -29,7 +31,7 @@ An invoice item consists of the following data:
 ![Invoice Item](images/invoice-item.png "Invoice Item")
 
 > [!NOTE]
-Invoice items within an invoice may have varying VAT rates, which are appropriately reflected in the invoice document. Additionally, credit notes can be generated using negative values.
+> Invoice items within an invoice may have varying VAT rates, which are appropriately reflected in the invoice document. Additionally, credit notes can be generated using negative values.
 
 ### Article
 
@@ -50,13 +52,13 @@ An article consists of the following fields:
 ![Article](images/article.png "Article")
 
 > [!NOTE]
-Time cockpit ships articles for service time and travel time. See a list of your articles in your [articles list](https://web.timecockpit.com/app/lists/entity/APP_Article).
+> Time cockpit ships articles for service time and travel time. See a list of your articles in your [articles list](https://web.timecockpit.com/app/lists/entity/APP_Article).
 
 ## How to Create an Invoice
 
-The time cockpit's default data model contains the list [Management --> Billing --> Unbilled Time Sheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list shares similarities with the default [Management --> Customer and Project Hierarchy --> Time Sheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) list, but adds dedicated filters to distinguish between billable and unbilled hours. Also, this feature provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
+The time cockpit default data model contains the list [Management -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list is based on the standard [Timesheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) workflow, but adds dedicated filters to distinguish between billable and unbilled hours. It also provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
 
-1. Open the **Unbilled Time Sheets** list.
+1. Open the **Unbilled Timesheets** list.
 2. Select the timesheets you want to include in your invoice.
 3. From the **Actions** menu, choose **Create Invoice**.
 4. Enter your invoice details.
@@ -65,8 +67,8 @@ When you execute the **Create Invoice** action, it assigns the selected timeshee
 
 <div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871357620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="invoicing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
->[!NOTE]
-Once timesheet entries are associated with an invoice item/invoice, they become **read-only** to prevent inadvertent modifications after billing.
+> [!NOTE]
+> Once timesheet entries are associated with an invoice item or invoice, they become **read-only** to prevent inadvertent modifications after billing.
 
 Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
 
@@ -91,10 +93,10 @@ The following example shows an invoice with three invoice items.
 ![Example Invoice Items](images/invoice-items-example.png "Example Invoice Items")
 
 > [!NOTE]
-The calculation of the total invoice amount (**Net Revenue** in the invoice) is therefore based on the sum of all invoice items. 
+> The calculation of the total invoice amount (**Net Revenue** in the invoice) is therefore based on the sum of all invoice items.
 
 > [!NOTE]
-Prices of generated invoice items can be changed. If so, the updated total of all invoice items is reflected in the invoice the invoice item belongs to.
+> Prices of generated invoice items can be changed. If so, the updated total of all invoice items is reflected in the invoice the invoice item belongs to.
 
 ## Custom Invoice Items and Articles
 

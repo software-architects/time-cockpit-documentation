@@ -1,58 +1,55 @@
----
+﻿---
 title: Standard Permissions - Role-Based Access Control
-description: Learn about time cockpit's predefined standard permissions and roles. Understand Account Admin, Project Controller, Team Lead, and Time Tracking User roles.
+description: Understand the default permission model in time cockpit, the standard roles, and the technical permission rules behind them.
 ---
 # Standard Permissions in time cockpit
 
 ## Overview
 
-**time cockpit** provides predefined standard permissions to streamline user access management. These roles cover common use cases and can be customized to meet specific needs. Below is an overview of the new standard permissions.
+Time cockpit includes a default permission model with predefined roles for common responsibilities such as account administration, base data maintenance, billing, HR, project management, and time tracking.
+
+This page gives an overview of the standard roles and keeps the technical permission rules for reference.
+
+> [!NOTE]
+> Reviewed in April 2026.
 
 ## Previous Standard Permissions
 
-Prior to the enhanced permission model, **time cockpit** offered a minimal implementation of standard permissions with only three basic roles:
+Before the current default permission model, time cockpit used a simpler role setup with only a few basic roles:
 
-- **Tenant Admin**: Managed account settings, downloaded license invoices, and added/deactivated users
-- **Admin**: Managed roles and role-user assignments, customized the data model, executed TCQL queries, and managed global settings
-- **Time Tracking User**: Had unrestricted read/write access to all remaining functionality
+- **Tenant Admin**: Managed account settings, downloaded license invoices, and added or deactivated users
+- **Admin**: Managed roles and role assignments, customized the data model, executed TCQL queries, and managed global settings
+- **Time Tracking User**: Had broad access to the remaining standard functionality
 
-This simplified model required organizations to configure detailed permissions themselves. The new standard permissions provide a more granular and comprehensive role-based access control system.
+## Activation of Default Permissions
 
-## Activation of New Standard Permissions
+- **New customers**: Default permissions are activated automatically.
+- **Existing customers** (accounts created before December 10, 2025): Default permissions are not activated automatically, so existing custom permissions are not changed unintentionally. To activate them, contact [support@timecockpit.com](mailto:support@timecockpit.com).
 
-- **New customers**: The new standard permissions are automatically activated
-- **Existing customers** (accounts created before December 10, 2025): The new standard permissions are **not** automatically activated to preserve existing custom permission configurations. To activate them, contact support@timecockpit.com. Note that existing custom permissions must be reviewed and reconciled with the new standard permissions.
+For the corresponding navigation reference, see [Navigation Access Permissions & Menu Structure](../navigation-access-permissions.md).
 
-## New Standard Permissions
+## Standard Roles
 
-To simplify the initial configuration, the standard roles in **time cockpit** have been revised. These roles encompass various responsibilities and facilitate effective management.
-
-### Roles and Permissions
-
-| **Internal Name** | **Display Name** | **Permissions** | **Target Audience** |
-|-------------------|------------------|-----------------|---------------------|
-| `AccountAdmin` | **Account Admin** | Manage account settings, user roles, add new users, and activate/deactivate existing users. | Administrators responsible for general account management |
-| `CustomizationAdmin` | **Customization Admin** | Manage the data model in **time cockpit**, use impersonation, and access the TCQL editor. | Users customizing the data model and creating complex queries |
-| `BaseDataAdmin` | **Base Data Admin** | Manage base data entities and global settings (global settings, formatting profiles, import definitions, template queries) as well as master data such as customers, projects, countries, departments, vehicles, companies, articles, units, invoice numbers, and holiday calendars. Note: Some entities are shared with Billing Admin (articles, units, countries, customers, companies, invoice numbers) and HR Admin (departments, holiday calendars). | Administrators managing key organizational data |
-| `BillingAdmin` | **Billing Admin** | Manage all billing-related entities including creating and deleting invoices, accessing timesheets of all users, and managing companies, articles, units, invoice numbers, customers, and countries. Note: Some entities are shared with Base Data Admin. | Users overseeing billing and financial data |
-| `HumanResourcesAdmin` | **Human Resources Admin** | Manage all entities required for attendance time tracking including user data and planned working times, absence times (vacation, time-off, sick leave), vacation entitlements, overtime corrections, maximum working times, working time weightings, departments, and holiday calendars. Note: Departments and holiday calendars are shared with Base Data Admin. | Administrators responsible for HR and attendance management |
-| `DepartmentLead` | **Department Lead** | Approve or reject absence requests for employees in their department(s) and view time tracking data including timesheets, absence times (vacation, sick leave, compensatory time), overtime corrections, vacation entitlements, weekly hours of work, and user details for their department employees. Note: Approval/rejection is implemented via actions that bypass standard write permissions. | Department managers responsible for approving absences and monitoring their team's time tracking |
-| `ProjectController` | **Project Controller** | View all time tracking data across the organization including all timesheets, invoices, invoice details, and user details. | Controllers and auditors who need comprehensive oversight of project-related time tracking and billing data |
-| `ProjectManager` | **Project Manager** | Manage projects they are assigned to as project manager or deputy, including updating project information and managing tasks. View data for assigned projects such as timesheets, invoices, and invoice details. | Users who manage specific projects and need visibility and control over those projects |
-| `NotificationManager` | **Notification Manager** | Send and manage application notifications. | Users handling communication tasks within the application |
-| `User` | **Time Tracking User** | Access and use all time tracking features for their own user, including managing time tracking and absence times within the open booking period, and managing activities. | End users tracking their own working hours |
-
----
+| **Internal Name** | **Display Name** | **Permissions** | **Typical Use** |
+|-------------------|------------------|-----------------|-----------------|
+| `AccountAdmin` | **Account Admin** | Manage account settings, user roles, add new users, and activate or deactivate users. | General account administration |
+| `CustomizationAdmin` | **Customization Admin** | Manage the data model, use impersonation, and access the TCQL editor. | Data model and customization work |
+| `BaseDataAdmin` | **Base Data Admin** | Manage master data and shared configuration such as customers, projects, countries, departments, vehicles, companies, articles, units, invoice numbers, holiday calendars, import definitions, template queries, and global settings. | Shared organizational data |
+| `BillingAdmin` | **Billing Admin** | Manage billing-related entities including invoices, invoice details, companies, articles, units, invoice numbers, and access to all timesheets needed for billing. | Billing and invoicing |
+| `HumanResourcesAdmin` | **Human Resources Admin** | Manage user details, planned working times, absences, vacation entitlements, overtime corrections, working time limits, working time weights, departments, and holiday calendars. | HR and attendance management |
+| `DepartmentLead` | **Department Lead** | Approve or reject absence requests for department employees and review their time tracking data. | Department-level approvals and oversight |
+| `ProjectController` | **Project Controller** | Read time tracking and billing data across the organization. | Controlling and auditing |
+| `ProjectManager` | **Project Manager** | Manage assigned projects and tasks and review project-related timesheets, invoices, and invoice details. | Project execution |
+| `NotificationManager` | **Notification Manager** | Send and manage application notifications. | Notification workflows |
+| `User` | **Time Tracking User** | Use time tracking and absence features for the current user within the open booking period. | End-user self-service |
 
 ## Customization Options
 
-The standard permissions are designed to cover common use cases. However, if special requirements arise, permissions can be customized to meet the specific needs of your organization.
-
----
+The default permissions cover common standard scenarios. If your tenant has special requirements, you can extend or adjust the permission model through customization.
 
 ## Technical Permission Details
 
-The following table provides detailed technical information about how permissions are implemented in the data model. Each permission is defined using TCQL (Time Cockpit Query Language) expressions that determine access rights based on user roles and context.
+The following table keeps the technical permission rules from the data model. Each rule is defined with TCQL expressions that determine access rights based on roles and context.
 
 | **Entity Name** | **Permission Name** | **Description** | **Condition/Logic (TCQL)** |
 |-----------------|---------------------|-----------------|----------------------------|
