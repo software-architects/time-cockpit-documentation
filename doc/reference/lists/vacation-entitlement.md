@@ -33,9 +33,11 @@ This list is typically relevant for:
 | User | `UserDetailName`, `UserDetailUuid` | User of the entitlement record | Display value of the user detail |
 | Vacation Entitlement Date | `APP_VacationEntitlementDate` | Date on which the entitlement becomes effective | Taken from the entitlement record |
 | Number of Weeks | `APP_NumberOfWeeks` | Number of vacation weeks granted or deducted | Taken from the entitlement record |
+| Extraordinary Entitlement | `APP_IsExtraordinary` | Marks the entitlement as extraordinary so it is not prorated (see [Prorated Vacation](../../employee-time-tracking/prorated-vacation.md)) | Taken from the entitlement record |
 | Description | `APP_Description` | Free-text description of the entitlement | Taken from the entitlement record |
 
 ## Related Pages
 
 - [Vacation](vacation.md)
 - [Vacation per Effective Date](vacation-per-effective-date.md)
+- [Prorated Vacation](../../employee-time-tracking/prorated-vacation.md)

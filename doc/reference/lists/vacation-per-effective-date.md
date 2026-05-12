@@ -25,6 +25,7 @@ This list is typically relevant for:
 | Filter | Technical Reference | Meaning |
 |---|---|---|
 | Effective Date | `@EffectiveDate` | Date for which the remaining balance is calculated |
+| Prorate | `@Prorate` | When set to Yes, reduces the balance by the not-yet-earned portion of recent entitlements (see [Prorated Vacation](../../employee-time-tracking/prorated-vacation.md)) |
 | Include Hidden Users | `@IncludeHiddenUsers` | Includes hidden users |
 
 ## Columns
@@ -46,4 +47,5 @@ This list is typically relevant for:
 
 - [Vacation](vacation.md)
 - [Vacation Entitlement](vacation-entitlement.md)
+- [Prorated Vacation](../../employee-time-tracking/prorated-vacation.md)
 - [Absence Time Management](../../employee-time-tracking/absence-time-management.md)
