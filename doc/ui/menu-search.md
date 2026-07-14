@@ -25,7 +25,7 @@ The search dialog can be opened from anywhere in the web client.
 
 For example, searching for `Invoices` finds **Outgoing Invoices** and displays its location under **Management > Billing**.
 
-![Search results for Invoices in the time cockpit navigation menu](images/menu-search-invoices.png "Menu search showing Outgoing Invoices")
+[![Search results for Invoices in the time cockpit navigation menu](images/menu-search-invoices.png "Menu search showing Outgoing Invoices")](images/menu-search-invoices.png)
 
 Press **Esc** to close the search without opening a result.
 

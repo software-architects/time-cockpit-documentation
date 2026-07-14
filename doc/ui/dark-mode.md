@@ -13,11 +13,11 @@ Dark mode changes the time cockpit web client to a dark color theme. It can redu
 2. In the **Settings** section, select **Dark mode**.
 3. The web client applies the dark theme immediately.
 
-![Dark mode setting in the time cockpit user menu](images/dark-mode-menu.png "Select Dark mode in the user menu")
+[![Dark mode setting in the time cockpit user menu](images/dark-mode-menu.png "Select Dark mode in the user menu")](images/dark-mode-menu.png)
 
 The following example shows the timesheet calendar with dark mode enabled:
 
-![Timesheet calendar using dark mode](images/dark-mode-timesheet-calendar.png "Timesheet calendar in dark mode")
+[![Timesheet calendar using dark mode](images/dark-mode-timesheet-calendar.png "Timesheet calendar in dark mode")](images/dark-mode-timesheet-calendar.png)
 
 ## Switch back to light mode
 
