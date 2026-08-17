@@ -28,9 +28,8 @@ $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $docRoot = Join-Path $repoRoot "doc"
 
-# Keep this script ASCII-only so Windows PowerShell 5.1 parses it regardless of BOM.
-$enDash = [string][char]0x2013
-$emDash = [string][char]0x2014
+# Generated text sticks to ASCII separators: .txt/.md responses without an explicit
+# charset are often decoded as Windows-1252, which garbles non-ASCII punctuation.
 
 function Remove-Quotes([string]$value) {
     $value = $value.Trim()
@@ -48,7 +47,8 @@ function Read-Toc([string]$tocPath) {
     $stack.Push($root)
     $current = $null
 
-    foreach ($line in (Get-Content -LiteralPath $tocPath)) {
+    # -Encoding UTF8 everywhere: without it, Windows PowerShell decodes BOM-less files as ANSI.
+    foreach ($line in (Get-Content -LiteralPath $tocPath -Encoding UTF8)) {
         if ($line -match '^(\s*)-\s+name:\s*(.+?)\s*$') {
             $indent = $Matches[1].Length
             $node = [pscustomobject]@{
@@ -76,7 +76,7 @@ function Read-Toc([string]$tocPath) {
 
 function Read-Frontmatter([string]$filePath) {
     $result = @{ Title = $null; Description = $null }
-    $lines = @(Get-Content -LiteralPath $filePath)
+    $lines = @(Get-Content -LiteralPath $filePath -Encoding UTF8)
     $first = 0
     while ($first -lt $lines.Count -and $lines[$first].Trim() -eq '') { $first++ }
     if ($first -ge $lines.Count -or $lines[$first].Trim() -ne '---') { return $result }
@@ -118,7 +118,7 @@ function Format-Link($leaf, [hashtable]$frontmatterCache) {
         $frontmatterCache[$leaf.Href] = Read-Frontmatter $file
     }
     $fm = $frontmatterCache[$leaf.Href]
-    $name = if ($leaf.GroupPath.Count -gt 0) { ($leaf.GroupPath + $leaf.Name) -join " $enDash " } else { $leaf.Name }
+    $name = if ($leaf.GroupPath.Count -gt 0) { ($leaf.GroupPath + $leaf.Name) -join ' - ' } else { $leaf.Name }
     $link = "- [$name]($(Get-PageUrl $leaf.Href))"
     if ($fm.Description) { $link += ": $($fm.Description)" }
     return $link
@@ -173,7 +173,7 @@ foreach ($topSection in $toc.Items) {
     # Landing page and direct child pages of the top-level section (e.g. Developer FAQ).
     $directLeaves = [System.Collections.Generic.List[object]]::new()
     if ($topSection.Href) {
-        $directLeaves.Add([pscustomobject]@{ Name = "$($topSection.Name) $enDash Overview"; Href = $topSection.Href; GroupPath = @() })
+        $directLeaves.Add([pscustomobject]@{ Name = "$($topSection.Name) - Overview"; Href = $topSection.Href; GroupPath = @() })
     }
     foreach ($child in $topSection.Items) {
         if ($child.Href -and $child.Items.Count -eq 0) {
@@ -266,7 +266,7 @@ function Convert-PageBody([string]$href, [string[]]$lines) {
 }
 
 $full = [System.Text.StringBuilder]::new()
-[void]$full.AppendLine("# time cockpit $emDash full documentation")
+[void]$full.AppendLine("# time cockpit - full documentation")
 [void]$full.AppendLine()
 [void]$full.AppendLine("> Concatenated plain-text version of the time cockpit product documentation ($BaseUrl). Each page starts with its title and canonical URL. Release notes older than $ReleaseNotesMonths months are omitted; they are available at $BaseUrl/doc/release-notes/YYYY-MM.md. See $BaseUrl/llms.txt for a structured index.")
 
@@ -281,7 +281,7 @@ foreach ($page in $fullPages) {
     [void]$full.AppendLine()
     [void]$full.AppendLine("Source: $(Get-PageUrl $page.Href)")
     [void]$full.AppendLine()
-    [void]$full.AppendLine((Convert-PageBody $page.Href (Get-Content -LiteralPath $file)))
+    [void]$full.AppendLine((Convert-PageBody $page.Href (Get-Content -LiteralPath $file -Encoding UTF8)))
 }
 
 # --- Write output (UTF-8 without BOM) --------------------------------------------------
