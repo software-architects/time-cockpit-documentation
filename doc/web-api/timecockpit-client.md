@@ -1,4 +1,3 @@
-
 ---
 title: TimeCockpitClient - Web API Sample Code
 description: Sample implementation of TimeCockpitClient class for time cockpit Web API. Includes OData, query endpoint, and POCO mapping examples.
