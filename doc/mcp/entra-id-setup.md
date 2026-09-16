@@ -12,7 +12,7 @@ The time cockpit MCP server authenticates every user against Microsoft Entra ID.
 ## How Authentication Works
 
 - time cockpit registers **one** client application ("time cockpit MCP client", public client, multi-tenant) and one resource application (the MCP API with scope `mcp.access`, Application ID URI `https://mcp.timecockpit.com`).
-- The **client ID is the same for all customers**: `41a831af-fb94-4c39-8dfe-e9c9b8a1b18a`.
+- The **client ID is the same for all customers** and for all [environments](overview.md#environments) (prod, preview, dev): `41a831af-fb94-4c39-8dfe-e9c9b8a1b18a`. The preview and dev servers expose their own scopes (`https://mcp-preview.timecockpit.com/mcp.access`, `https://mcp-dev.timecockpit.com/mcp.access`), which clients pick up automatically from the server metadata.
 - Clients use OAuth 2.1 Authorization Code with PKCE. There is no client secret and no Dynamic Client Registration (Entra ID does not support DCR).
 - The server advertises its authorization server via `/.well-known/oauth-protected-resource`. Clients find Entra ID from there but still need the client ID from you.
 

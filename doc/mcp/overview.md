@@ -12,13 +12,27 @@ A local stdio host (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admini
 
 | Property | Value |
 |----------|-------|
-| Server URL (production) | `https://mcp.timecockpit.com` |
-| Server URL (preview) | `https://mcp-preview.timecockpit.com` |
+| Server URL | `https://mcp.timecockpit.com` (production; see [Environments](#environments) for preview and dev) |
 | Transport | Streamable HTTP (`http`) — not SSE, not stdio |
 | Authentication | OAuth 2.1 Authorization Code + PKCE (S256) against Microsoft Entra ID, per user |
 | OAuth client | Pre-registered public client (no Dynamic Client Registration, no client secret). See [Entra ID Setup](entra-id-setup.md). |
-| OAuth scope | `https://mcp.timecockpit.com/mcp.access` (preview: `https://mcp-preview.timecockpit.com/mcp.access`). Advertised by the server through its protected-resource metadata; usually does not need to be configured. |
+| OAuth scope | `https://mcp.timecockpit.com/mcp.access` (per environment, see below). Advertised by the server through its protected-resource metadata; usually does not need to be configured. |
 | Metadata | `/.well-known/oauth-protected-resource` and `/.well-known/oauth-authorization-server` on the server. Clients discover Entra ID from these documents — but not the client ID. |
+
+## Environments
+
+The MCP server follows the same three-stage [release plan](~/doc/getting-started/web-client.md#release-plan) as the time cockpit web client. Each environment has its own server URL and its own OAuth scope; the client ID is the same for all three.
+
+| Environment | Server URL | OAuth scope | Use for |
+|-------------|------------|-------------|---------|
+| Prod | `https://mcp.timecockpit.com` | `https://mcp.timecockpit.com/mcp.access` | Daily work. Updated from the latest preview release on the 10th of each month; hotfixes only in between. |
+| Preview | `https://mcp-preview.timecockpit.com` | `https://mcp-preview.timecockpit.com/mcp.access` | Testing the upcoming release. Stable between the 1st and 9th of each month. |
+| Dev | `https://mcp-dev.timecockpit.com` | `https://mcp-dev.timecockpit.com/mcp.access` | Experimental, continuously updated. Never use with a production tenant — ask for a time cockpit sandbox. |
+
+All client pages in this section use the production URL. To connect to another environment, replace the server URL in the client configuration — the rest of the setup (client ID, callback port, connection settings) stays the same. Each client stores its OAuth tokens per server URL, so you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`).
+
+> [!NOTE]
+> The environment is independent of the [sandbox setting](#connection-settings-header-or-url-segment): `sandboxEnvironment=test` selects the test sandbox of your tenant on whichever server you are connected to, while the environment selects the server release.
 
 ## Connection Settings: Header or URL Segment
 
@@ -49,6 +63,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 | [Visual Studio Code (Copilot agent mode)](vscode.md) | `.vscode/mcp.json` or user `mcp.json` | yes since VS Code 1.123 (`oauth.clientId`) | yes | not yet tested |
 | [GitHub Copilot CLI](copilot-cli.md) | `%USERPROFILE%\.copilot\mcp-config.json` | unclear (client ID reportedly ignored) | yes | not verified |
 | [Microsoft 365 Copilot](microsoft-365-copilot.md) | Copilot Studio, M365 Admin Center, or declarative agent | yes, but Copilot Studio requires a client secret | no — use URL segments | not yet verified |
+| [MCPJam Inspector](mcpjam.md) | MCPJam project server configuration | yes (`Preregistration (Client Credentials)`) | yes | tested |
 | Cursor | `.cursor/mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |
 | ChatGPT (custom app) | Workspace admin registers a custom MCP app | yes (predefined client) | no | not yet verified |
 | Microsoft Copilot (consumer) | — | — | — | no custom MCP support |
@@ -62,7 +77,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## Getting Started
 
 1. Read [Entra ID Setup](entra-id-setup.md) to make sure your organization has consented to the MCP client application.
-2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
+2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), [Microsoft 365 Copilot](microsoft-365-copilot.md), or [MCPJam Inspector](mcpjam.md) for a pre-integration test.
 3. [Verify the connection](verify-connection.md) with the server's diagnostic tools.
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).
