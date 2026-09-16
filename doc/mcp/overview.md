@@ -15,13 +15,13 @@ A local stdio host (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admini
 | Server URL | `https://mcp.timecockpit.com` (production; see [Environments](#environments) for preview and dev) |
 | Transport | Streamable HTTP (`http`) — not SSE, not stdio |
 | Authentication | OAuth 2.1 Authorization Code + PKCE (S256) against Microsoft Entra ID, per user |
-| OAuth client | Pre-registered public client (no Dynamic Client Registration, no client secret). See [Entra ID Setup](entra-id-setup.md). |
+| OAuth client | An app registration **in your own Entra tenant** — you create it and hand its client ID to your users. No Dynamic Client Registration; public client for native tools, confidential client (secret) only for Copilot Studio. See [Entra ID Setup](entra-id-setup.md). |
 | OAuth scope | `https://mcp.timecockpit.com/mcp.access` (per environment, see below). Advertised by the server through its protected-resource metadata; usually does not need to be configured. |
 | Metadata | `/.well-known/oauth-protected-resource` and `/.well-known/oauth-authorization-server` on the server. Clients discover Entra ID from these documents — but not the client ID. |
 
 ## Environments
 
-The MCP server follows the same three-stage [release plan](~/doc/getting-started/web-client.md#release-plan) as the time cockpit web client. Each environment has its own server URL and its own OAuth scope; the client ID is the same for all three.
+The MCP server follows the same three-stage [release plan](~/doc/getting-started/web-client.md#release-plan) as the time cockpit web client. Each environment has its own server URL and its own OAuth scope. Your app registration can be granted the `mcp.access` permission of several environments, so one client ID can serve all three — see [Entra ID Setup](entra-id-setup.md).
 
 | Environment | Server URL | OAuth scope | Use for |
 |-------------|------------|-------------|---------|
@@ -63,7 +63,6 @@ Every client has its own configuration. A server registered in Claude Code is in
 | [Visual Studio Code (Copilot agent mode)](vscode.md) | `.vscode/mcp.json` or user `mcp.json` | yes since VS Code 1.123 (`oauth.clientId`) | yes | not yet tested |
 | [GitHub Copilot CLI](copilot-cli.md) | `%USERPROFILE%\.copilot\mcp-config.json` | unclear (client ID reportedly ignored) | yes | not verified |
 | [Microsoft 365 Copilot](microsoft-365-copilot.md) | Copilot Studio, M365 Admin Center, or declarative agent | yes, but Copilot Studio requires a client secret | no — use URL segments | not yet verified |
-| [MCPJam Inspector](mcpjam.md) | MCPJam project server configuration | yes (`Preregistration (Client Credentials)`) | yes | tested |
 | Cursor | `.cursor/mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |
 | ChatGPT (custom app) | Workspace admin registers a custom MCP app | yes (predefined client) | no | not yet verified |
 | Microsoft Copilot (consumer) | — | — | — | no custom MCP support |
@@ -71,13 +70,13 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## What You Need
 
 - A Microsoft Entra ID work account with access to time cockpit. You sign in to the MCP server with the same account you use for time cockpit.
-- The **OAuth client ID** of the time cockpit MCP client application. This is the one value every client needs and no client can discover on its own. See [Entra ID Setup](entra-id-setup.md).
+- The **OAuth client ID** of the app registration your Entra administrator created for the MCP server. This is the one value every client needs and no client can discover on its own. See [Entra ID Setup](entra-id-setup.md).
 - Optionally the **tenant ID** (GUID) of your time cockpit tenant — only if your Entra tenant is mapped to several time cockpit tenants.
 
 ## Getting Started
 
-1. Read [Entra ID Setup](entra-id-setup.md) to make sure your organization has consented to the MCP client application.
-2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), [Microsoft 365 Copilot](microsoft-365-copilot.md), or [MCPJam Inspector](mcpjam.md) for a pre-integration test.
+1. Have your Entra administrator create the app registration described in [Entra ID Setup](entra-id-setup.md) and give you its client ID.
+2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
 3. [Verify the connection](verify-connection.md) with the server's diagnostic tools.
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).

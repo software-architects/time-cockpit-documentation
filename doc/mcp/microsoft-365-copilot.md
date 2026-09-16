@@ -21,12 +21,12 @@ Because none of these routes supports custom headers, pass tenant and modes as [
 
 1. Copilot Studio → agent → **Tools** → **Add a tool** → **New tool** → **Model Context Protocol**.
 2. *Server name*, *Server description*, *Server URL* `https://mcp.timecockpit.com` (with URL segments for tenant/modes, since there is no header field).
-3. Authentication **OAuth 2.0 → Manual**: *Client ID*, *Client secret*, *Authorization URL* `https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize`, *Token URL template* and *Refresh URL* `https://login.microsoftonline.com/organizations/oauth2/v2.0/token`, *Scopes* `https://mcp.timecockpit.com/mcp.access offline_access`. The MCP wizard has no separate Entra option.
-4. **Create** → the displayed **Redirect URL** (`https://global.consent.azure-apim.net/redirect/<id>`) must be registered as a redirect URI of type **Web** on the Entra application. The last path segment is generated per tool — send the exact displayed value to time cockpit support.
+3. Authentication **OAuth 2.0 → Manual**: *Client ID* and *Client secret* of your confidential app registration (see below), *Authorization URL* `https://login.microsoftonline.com/<your-entra-tenant>/oauth2/v2.0/authorize`, *Token URL template* and *Refresh URL* `https://login.microsoftonline.com/<your-entra-tenant>/oauth2/v2.0/token`, *Scopes* `https://mcp.timecockpit.com/mcp.access offline_access`. The MCP wizard has no separate Entra option.
+4. **Create** → the displayed **Redirect URL** (`https://global.consent.azure-apim.net/redirect/<id>`) must be registered as a redirect URI of platform type **Web** on your app registration. The last path segment is generated per tool — copy the exact displayed value.
 5. **Create a new connection** → Entra sign-in → **Add to agent**. Test the agent, then **Channels → Teams and Microsoft 365 Copilot → Make agent available in Microsoft 365 Copilot** and, if required, **Submit for admin approval**.
 
-> [!WARNING]
-> Review required: Copilot Studio requires a **client secret** in manual mode. The public client used by Claude Code and Codex is not sufficient. Contact time cockpit support for the confidential client to use with Copilot Studio.
+> [!NOTE]
+> Copilot Studio requires a **client secret** in manual mode, so it needs a **confidential client**. Create a separate app registration for Copilot Studio (platform *Web*, client secret, `mcp.access` permission) rather than adding a secret to the public-client registration used by Claude Code and Codex — see [Entra ID Setup](entra-id-setup.md).
 
 Under the hood the MCP tool is a Power Platform custom connector, so your tenant's Data Loss Prevention policies apply. If a static header is unavoidable, the alternative is **Custom connector → Import OpenAPI** (with `x-ms-agentic-protocol: mcp-streamable-1.0`) and the policy **Set HTTP header** — considerably more effort than a URL segment.
 
@@ -40,7 +40,7 @@ Microsoft 365 Admin Center → **Copilot → Connectors → Gallery → Create a
 
 ## Recommendation
 
-- For pilot customers: Route A (Copilot Studio), because makers can configure it without development; tenant and modes as URL segments.
+- For a first pilot: Route A (Copilot Studio), because makers can configure it without development; tenant and modes as URL segments; a dedicated confidential app registration for Copilot Studio.
 - Route C only for pure research scenarios (read-only), once it leaves preview.
 
 ## Related Pages

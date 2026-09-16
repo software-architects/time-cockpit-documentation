@@ -21,10 +21,10 @@ Alternatively install the Codex desktop app, which includes the CLI. `codex logi
 
 ## Option A (Recommended): Everything via the CLI
 
-No file has to be edited. `codex mcp add` writes the server to the global `config.toml`, accepts the pre-registered client ID directly and — as soon as it finds OAuth metadata on the server — **starts the sign-in flow immediately**. One command, one browser sign-in, done:
+No file has to be edited. `codex mcp add` writes the server to the global `config.toml`, accepts your client ID directly and — as soon as it finds OAuth metadata on the server — **starts the sign-in flow immediately**. One command, one browser sign-in, done:
 
 ```powershell
-codex mcp add timecockpit --url https://mcp.timecockpit.com --oauth-client-id 41a831af-fb94-4c39-8dfe-e9c9b8a1b18a
+codex mcp add timecockpit --url https://mcp.timecockpit.com --oauth-client-id <client-id>
 codex mcp list
 ```
 
@@ -43,7 +43,7 @@ Tenant, sandbox and modes are passed as [URL segments](overview.md#connection-se
 
 ```powershell
 codex mcp remove timecockpit
-codex mcp add timecockpit --url https://mcp.timecockpit.com/tcTenantId/<tenant-id>/access/readonly/scope/owndata --oauth-client-id 41a831af-fb94-4c39-8dfe-e9c9b8a1b18a
+codex mcp add timecockpit --url https://mcp.timecockpit.com/tcTenantId/<tenant-id>/access/readonly/scope/owndata --oauth-client-id <client-id>
 ```
 
 Lifecycle commands:
@@ -73,7 +73,7 @@ http_headers = { "X-tc-tenant-id" = "<tenant-id>" }   # optional, see connection
 enabled = true
 
 [mcp_servers.timecockpit.oauth]
-client_id = "41a831af-fb94-4c39-8dfe-e9c9b8a1b18a"
+client_id = "<client-id>"
 callback_port = 64485
 ```
 
@@ -87,7 +87,7 @@ Then run `codex mcp login timecockpit`. Keys at a glance:
 | `bearer_token_env_var` | Alternative to OAuth: static token from an environment variable |
 | `enabled`, `required`, `startup_timeout_sec`, `tool_timeout_sec` | Activation, required server for `codex exec`, timeouts (defaults 10 s / 60 s) |
 | `scopes`, `oauth_resource` | Optional: explicit scopes or RFC 8707 resource — with Entra only when needed (see troubleshooting) |
-| `oauth.client_id` | Pre-registered client ID ("always takes precedence and skips client registration") |
+| `oauth.client_id` | Client ID of your app registration ("always takes precedence and skips client registration") |
 | `oauth.callback_port` | Fixed loopback port; takes precedence over the global `mcp_oauth_callback_port` |
 | `oauth.callback_url` | Written by `codex mcp add`; the registered callback URL (see below) |
 | `mcp_oauth_callback_port`, `mcp_oauth_callback_url` (top level) | Global fixed port or alternative redirect URI for all servers |
@@ -109,7 +109,7 @@ codex mcp login timecockpit --scopes https://mcp.timecockpit.com/mcp.access    #
 Starting local callback server on http://127.0.0.1:64485 ...
 Opening browser to authenticate with timecockpit...
 If the browser does not open, visit:
-https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=41a831af-...&redirect_uri=http%3A%2F%2F127.0.0.1%3A64485%2Fcallback%2FXuuuHAzzHOni&response_type=code&code_challenge_method=S256...
+https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=<client-id>&redirect_uri=http%3A%2F%2F127.0.0.1%3A64485%2Fcallback%2FXuuuHAzzHOni&response_type=code&code_challenge_method=S256...
 ✔ Successfully logged in to MCP server timecockpit
 ```
 
@@ -145,7 +145,7 @@ timecockpit   https://mcp.timecockpit.com  -                     enabled  OAuth
 timecockpit
   url: https://mcp.timecockpit.com
   http_headers: { X-tc-tenant-id = <tenant-id> }
-  oauth.client_id: 41a831af-fb94-4c39-8dfe-e9c9b8a1b18a
+  oauth.client_id: <client-id>
   oauth.callback_port: 64485
   enabled: true
 ```
@@ -154,14 +154,14 @@ Then follow [Verify the Connection](verify-connection.md).
 
 ## Callback URL Specifics
 
-Codex always binds the callback listener to `127.0.0.1` (not `localhost`). If the authorization server metadata does not report `authorization_response_iss_parameter_supported` — which is the case with Entra ID — Codex appends a 12-character ID derived from the server URL to the path: `http://127.0.0.1:<port>/callback/<id>`. The exact value is printed by `codex mcp add … --oauth-client-id` ("OAuth callback URL") and stored in `oauth.callback_url`. Exactly this value must be registered on the Entra client application; `127.0.0.1` URIs can only be added in the Entra portal via the app manifest (`replyUrlsWithType`). This is maintained centrally by time cockpit — see [Entra ID Setup](entra-id-setup.md).
+Codex always binds the callback listener to `127.0.0.1` (not `localhost`). If the authorization server metadata does not report `authorization_response_iss_parameter_supported` — which is the case with Entra ID — Codex appends a 12-character ID derived from the server URL to the path: `http://127.0.0.1:<port>/callback/<id>`. The exact value is printed by `codex mcp add … --oauth-client-id` ("OAuth callback URL") and stored in `oauth.callback_url`. Exactly this value must be registered on your app registration; `127.0.0.1` URIs can only be added in the Entra portal via the app manifest (`replyUrlsWithType`, type `InstalledClient`) — see [Entra ID Setup](entra-id-setup.md). With Option A the port is ephemeral, so register the URI without a port; with Option B and a fixed `callback_port`, register it with the port.
 
 ## Troubleshooting
 
 | Message / symptom | Cause / solution |
 |-------------------|------------------|
 | `Dynamic client registration not supported` | `oauth.client_id` is missing. Use `--oauth-client-id`. |
-| Entra: redirect URI does not match | The callback URL (see above) is not registered, or is registered as *Web* instead of *Mobile and desktop*. Contact support. |
+| Entra: redirect URI does not match | The callback URL (see above) is not registered on your app registration, or is registered as *Web* instead of *Mobile and desktop* / `InstalledClient`. |
 | `AADSTS9010010` / `invalid_target` | Entra rejects the `resource` parameter because it does not match the scope. Do not set `oauth_resource`; if needed set `scopes = ["https://mcp.timecockpit.com/mcp.access"]` explicitly. |
 | `Port 127.0.0.1:64485 is already in use` | Another process holds the port (e.g. a simultaneous Claude Code sign-in). Wait, or choose a different port for Codex. |
 | Desktop app shows *OAuth authorization required* despite CLI sign-in | Restart the thread or the app. |

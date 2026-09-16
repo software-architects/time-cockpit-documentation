@@ -37,7 +37,7 @@ The resulting entry in `%USERPROFILE%\.copilot\mcp-config.json`:
         "X-tc-tenant-id": "<tenant-id>"
       },
       "oauth": {
-        "clientId": "41a831af-fb94-4c39-8dfe-e9c9b8a1b18a",
+        "clientId": "<client-id>",
         "callbackPort": 64485
       },
       "tools": ["*"]

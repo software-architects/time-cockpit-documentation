@@ -30,7 +30,7 @@ Alternatives: `winget install Anthropic.ClaudeCode` or `npm install -g @anthropi
 With `--scope user` the server is available in all your projects (`%USERPROFILE%\.claude.json`). The JSON form sets headers and OAuth in one step. Enter the command on a single line:
 
 ```powershell
-claude mcp add-json timecockpit --scope user '{"type":"http","url":"https://mcp.timecockpit.com","headers":{"X-tc-tenant-id":"<tenant-id>"},"oauth":{"clientId":"41a831af-fb94-4c39-8dfe-e9c9b8a1b18a","callbackPort":64485}}'
+claude mcp add-json timecockpit --scope user '{"type":"http","url":"https://mcp.timecockpit.com","headers":{"X-tc-tenant-id":"<tenant-id>"},"oauth":{"clientId":"<client-id>","callbackPort":64485}}'
 ```
 
 ```text
@@ -44,7 +44,7 @@ Alternatively with individual options. **Name and URL must come before the optio
 
 ```powershell
 claude mcp add timecockpit https://mcp.timecockpit.com --scope user --transport http `
-  --client-id 41a831af-fb94-4c39-8dfe-e9c9b8a1b18a --callback-port 64485 `
+  --client-id <client-id> --callback-port 64485 `
   --header "X-tc-tenant-id: <tenant-id>"
 ```
 
@@ -61,7 +61,7 @@ claude mcp login timecockpit
 Discovering authorization server for https://mcp.timecockpit.com ...
 Opening your browser to sign in with Microsoft Entra ID...
 If the browser does not open, visit:
-https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=41a831af-...&redirect_uri=http%3A%2F%2Flocalhost%3A64485%2Fcallback&response_type=code&code_challenge_method=S256...
+https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=<client-id>&redirect_uri=http%3A%2F%2Flocalhost%3A64485%2Fcallback&response_type=code&code_challenge_method=S256...
 
 ✔ Authentication successful. Tokens saved for timecockpit.
 ```
@@ -139,7 +139,7 @@ The server can be declared in `.mcp.json` in the repository root and shared with
         "X-tc-tenant-id": "<tenant-id>"
       },
       "oauth": {
-        "clientId": "41a831af-fb94-4c39-8dfe-e9c9b8a1b18a",
+        "clientId": "<client-id>",
         "callbackPort": 64485
       }
     }
@@ -157,7 +157,7 @@ The server can be declared in `.mcp.json` in the repository root and shared with
 | `The term 'claude' is not recognized …` | Not installed, or the terminal was not reopened after installation. |
 | `error: missing required argument 'name'` | Name and URL were placed after the options. Change the order or use `add-json`. |
 | `does not support dynamic client registration` | No client ID configured (`oauth.clientId`). |
-| `AADSTS50011: redirect URI … does not match` | `http://localhost:64485/callback` is not registered on the client application. See [Entra ID Setup](entra-id-setup.md). |
+| `AADSTS50011: redirect URI … does not match` | `http://localhost:64485/callback` is not registered on your app registration. See [Entra ID Setup](entra-id-setup.md). |
 | `AADSTS9010010` | The MCP server URL is not registered as Application ID URI of the resource application. Contact support. |
 | `/mcp` shows *needs authentication* | Run `claude mcp login timecockpit` or choose **Authenticate** in `/mcp`. |
 | Wrong data / wrong tenant | Call the `entra_whoami` tool — it shows identity, resolved tenant, sandbox, access and scope. |

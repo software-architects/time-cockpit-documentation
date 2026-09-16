@@ -16,8 +16,8 @@ The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) 
 1. Open **Customize → Connectors** and choose **Add custom connector**.
 2. Name: `Time Cockpit`. MCP server URL: `https://mcp.timecockpit.com` — with URL segments if needed, e.g. `https://mcp.timecockpit.com/tcTenantId/<tenant-id>` or `…/access/readonly/scope/owndata`. Claude probes the URL and pre-fills detected settings.
 3. Authentication: **Sign in now**.
-4. OAuth client: **Use your own OAuth client**, client ID `41a831af-fb94-4c39-8dfe-e9c9b8a1b18a`, **leave the client secret empty** (public client). Older dialogs: **Advanced settings → OAuth Client ID**.
-5. **Add**, then **Connect**. Sign in with Entra ID; you are redirected to `https://claude.ai/api/mcp/auth_callback`.
+4. OAuth client: **Use your own OAuth client**, client ID `<client-id>` of your app registration, **leave the client secret empty** (public client). Older dialogs: **Advanced settings → OAuth Client ID**.
+5. **Add**, then **Connect**. Sign in with Entra ID; you are redirected to `https://claude.ai/api/mcp/auth_callback` — this URI must be registered as platform **Web** on your app registration (see [Entra ID Setup](entra-id-setup.md)).
 6. In a chat, enable the connector for the conversation via **+ → Connectors**.
 
 **Team / Enterprise:** An owner adds the connector under **Organization settings → Connectors → Add → Custom → Web**; members then choose **Connect**.
@@ -31,7 +31,7 @@ The connector dialog has a **Request headers** section (beta, not enabled everyw
 
 ## Alternative for Claude Desktop: Local Bridge with mcp-remote
 
-Claude Desktop additionally starts local stdio servers from `%APPDATA%\Claude\claude_desktop_config.json`; these are also available in Cowork sessions. With `mcp-remote` as a bridge you can use headers, the pre-registered client, and a fixed callback port as with Codex. This requires Node.js and is intended for power users.
+Claude Desktop additionally starts local stdio servers from `%APPDATA%\Claude\claude_desktop_config.json`; these are also available in Cowork sessions. With `mcp-remote` as a bridge you can use headers, your client ID, and a fixed callback port as with Codex. This requires Node.js and is intended for power users.
 
 > [!WARNING]
 > Review required: The mcp-remote bridge has not been tested against the time cockpit MCP server.
@@ -44,7 +44,7 @@ Claude Desktop additionally starts local stdio servers from `%APPDATA%\Claude\cl
       "args": [
         "-y", "mcp-remote", "https://mcp.timecockpit.com",
         "--header", "X-tc-tenant-id:<tenant-id>",
-        "--static-oauth-client-info", "{\"client_id\":\"41a831af-fb94-4c39-8dfe-e9c9b8a1b18a\"}",
+        "--static-oauth-client-info", "{\"client_id\":\"<client-id>\"}",
         "64485"
       ]
     }

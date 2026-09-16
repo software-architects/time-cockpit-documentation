@@ -29,7 +29,7 @@ Ready-to-use prompts by role are collected in [Use Cases and Prompts](use-cases-
 ## What You Need
 
 - A Microsoft Entra ID work account that has access to time cockpit.
-- The client ID of the time cockpit MCP client application — your administrator or time cockpit support provides it. See [Entra ID Setup](~/doc/mcp/entra-id-setup.md).
+- The client ID of the app registration your IT administrator created for the MCP server in your organization's Entra ID. See [Entra ID Setup](~/doc/mcp/entra-id-setup.md).
 - An AI assistant from the table above, configured by following its setup page.
 
 ## Safe Defaults
