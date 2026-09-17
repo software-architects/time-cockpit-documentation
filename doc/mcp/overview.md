@@ -80,8 +80,16 @@ Every client has its own configuration. A server registered in Claude Code is in
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).
 
+## What the Server Enforces
+
+- **Your permissions always apply.** Every call is authorized against the tenant's permission model with the roles of the signed-in user. Whatever you cannot see in the web client stays invisible to the assistant, and cannot be reached by guessing a technical name. System and internal entities are hidden from every tool.
+- **Access and scope** narrow a connection further: `readonly` hides all writing tools, `owndata` hides everything that cannot be restricted to your own data. **Confirmation** is an operator setting: by default every generic action and record change has to be repeated with `confirmed=true` after the assistant has told you what will change. See [Access, Scope, and Confirmation](access-and-confirmation.md).
+- **Results are bounded.** Reads are capped in rows and size and say so with `truncated: true`. See [Limits and Truncation](limits.md).
+- **Every tool call is audited.** The server records one operational audit event per attempted call with tenant, acting user, host, tool, whether it changes data, outcome and duration. Denied, failed and cancelled attempts are recorded as well. The event contains no arguments, query text, record contents or results.
+
 ## Related Pages
 
+- [Access, Scope, and Confirmation](access-and-confirmation.md) and [Limits and Truncation](limits.md)
 - [Web API](~/doc/web-api/overview.md) — REST/OData access without an AI assistant
 - [Azure Active Directory (AAD) Integration](~/doc/enterprise/aad.md)
 - [AI Assistants for Users](~/doc/ai-assistants/overview.md)

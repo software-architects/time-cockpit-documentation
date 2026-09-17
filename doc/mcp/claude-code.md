@@ -103,20 +103,20 @@ Status: ✔ connected
 URL: https://mcp.timecockpit.com
 Config location: C:\Users\<you>\.claude.json (user)
 Capabilities: tools
-Tools: 12 tools
+Tools: 19 tools
 Authentication: ✔ Authenticated (OAuth)
 ```
 
 A first query then looks like this:
 
 ```text
-> Which time cockpit tools do you have available, and what did I book today?
+> Who am I connected as, and what did I book today?
 
-● timecockpit - list_tools
-● timecockpit - query_timesheets (from: 2026-09-15, to: 2026-09-15)
+● timecockpit - get_current_user
+● timecockpit - get_timesheets (from: 2026-09-15, to: 2026-09-15)
   └ 3 timesheet entries returned
 
-● I have access to 12 time cockpit tools (projects, customers, tasks, timesheets, ...).
+● You are connected as Jane Doe (jane.doe@example.com).
   Today you booked 3 entries totalling 6h 30m:
   • 09:00–11:30  Project Alpha – Sprint planning
   • 12:30–15:00  Project Alpha – Implementation
