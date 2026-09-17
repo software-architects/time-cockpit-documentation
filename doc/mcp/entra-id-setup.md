@@ -16,7 +16,38 @@ Because the app registration is yours, you decide how many you want. One registr
 - Entra ID does not support Dynamic Client Registration, which is why every client needs your client ID configured explicitly.
 
 > [!WARNING]
-> Review required: The list of redirect URIs and the exact Entra permission name below follow the tested configuration. Verify against your tenant before publishing internally.
+> Review required: The list of redirect URIs below follows the tested configuration. Verify against your tenant before publishing internally.
+
+## Make the time cockpit MCP API Available in Your Tenant
+
+The MCP server is a **multi-tenant** Entra application owned by time cockpit. Before your client application can request its `mcp.access` permission, the MCP API needs a **service principal** (enterprise application) in your tenant. As long as it is missing, the API does not appear under *APIs my organization uses*, and granting consent to your client fails with `AADSTS650052`.
+
+| Environment | Application (client) ID of the MCP API | Application ID URI |
+|-------------|----------------------------------------|--------------------|
+| Prod | `74f0cf06-01e9-4a1b-ba28-98a7877eebae` | `https://mcp.timecockpit.com` |
+| Preview | `c93ae778-d445-4490-a7a9-4529f0e0017c` | `https://mcp-preview.timecockpit.com` |
+| Dev | `e4ca9b5e-0701-498c-b6cf-ad4ea1ea42ba` | `https://mcp-dev.timecockpit.com` |
+
+An Entra administrator creates the service principal in one of these ways. No involvement of time cockpit support is required.
+
+- **Create it directly** with the Azure CLI or Microsoft Graph PowerShell. This needs no redirect URI and works for every environment:
+
+  ```bash
+  az ad sp create --id 74f0cf06-01e9-4a1b-ba28-98a7877eebae
+  ```
+
+  ```powershell
+  New-MgServicePrincipal -AppId 74f0cf06-01e9-4a1b-ba28-98a7877eebae
+  ```
+
+- **Grant admin consent to your own client application** (step 3 below, or the URL `https://login.microsoftonline.com/<your-tenant-id>/adminconsent?client_id=<your-client-id>`). Entra provisions the service principals of all APIs the client requires as part of that consent.
+
+- **Admin consent URL for the MCP API itself**: `https://login.microsoftonline.com/<your-tenant-id>/adminconsent?client_id=74f0cf06-01e9-4a1b-ba28-98a7877eebae`. This consents to the API tenant-wide and creates the service principal.
+
+  > [!WARNING]
+  > Review required: This URL only works if the MCP API registration has a redirect URI. Otherwise Entra answers with `AADSTS500113`. Not verified yet; prefer the first two options.
+
+The service principal appears under **Identity → Applications → Enterprise applications**. Repeat for preview or dev if your users should connect to those environments.
 
 ## Create the App Registration
 
@@ -33,7 +64,7 @@ An Entra administrator (or a user with the *Application Developer* role) perform
 3. **API permission**: **API permissions → Add a permission → APIs my organization uses**, search for the time cockpit MCP API, select **Delegated permissions → `mcp.access`**, then **Grant admin consent** for your tenant. Repeat for the preview or dev API if your users should be able to connect to those environments.
 
    > [!NOTE]
-   > The time cockpit MCP API appears under *APIs my organization uses* only after it has been consented to in your tenant once. If it is not listed, ask time cockpit support to trigger the consent for your tenant.
+   > The time cockpit MCP API appears under *APIs my organization uses* only once its service principal exists in your tenant. If it is not listed, create it as described in [Make the time cockpit MCP API Available in Your Tenant](#make-the-time-cockpit-mcp-api-available-in-your-tenant).
 
 4. For **Copilot Studio** only: **Certificates & secrets → New client secret**. Note the secret value; it is entered in the Copilot Studio MCP wizard together with the client ID.
 
@@ -79,7 +110,8 @@ If your organization filters outbound traffic or uses Conditional Access with na
 | `AADSTS7000218` / *client assertion or secret required* | The app registration is treated as a confidential client. Set **Allow public client flows** to *Yes*, or register the redirect URI under *Mobile and desktop applications* instead of *Web*. |
 | `AADSTS65001` / *user or administrator has not consented* | Grant admin consent for `mcp.access` under **API permissions**. |
 | `AADSTS9010010` / `invalid_target` | The client sends a `resource` parameter that does not match the Application ID URI of the MCP API. See the client-specific troubleshooting sections. |
-| `AADSTS500011` / *resource principal not found* | The time cockpit MCP API is not present in your tenant yet. Ask time cockpit support to trigger the consent. |
+| `AADSTS500011` / *resource principal not found* | The time cockpit MCP API has no service principal in your tenant yet. Create it as described in [Make the time cockpit MCP API Available in Your Tenant](#make-the-time-cockpit-mcp-api-available-in-your-tenant). |
+| `AADSTS650052` / *needs access to a service that your organization has not subscribed to or enabled* | Same cause, seen when granting admin consent to your client application. Create the service principal of the MCP API first, then grant consent again. |
 
 ## Related Pages
 
