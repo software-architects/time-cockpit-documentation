@@ -6,7 +6,7 @@ description: Overview of the time cockpit MCP server, its endpoints, authenticat
 
 The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, lists, actions) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit.
 
-A local stdio host (`OnCockpit.Admin.exe --mcp`, Windows only) exists for administrative scripting. This section covers the remote server only.
+A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for administrators and customizers who need IronPython scripting against the live data context; see [OnCockpit Admin: Local MCP Server](oncockpit-admin-local.md). The rest of this section covers the remote server.
 
 ## Server Facts
 
