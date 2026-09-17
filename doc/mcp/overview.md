@@ -12,7 +12,7 @@ A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admi
 
 | Property | Value |
 |----------|-------|
-| Server URL | `https://mcp.timecockpit.com` (production; see [Environments](#environments) for preview and dev) |
+| Server URL | `https://mcp.timecockpit.com` (production; see [Environments](#environments) for preview) |
 | Transport | Streamable HTTP (`http`) — not SSE, not stdio |
 | Authentication | OAuth 2.1 Authorization Code + PKCE (S256) against Microsoft Entra ID, per user |
 | OAuth client | An app registration **in your own Entra tenant** — you create it and hand its client ID to your users. No Dynamic Client Registration; public client for native tools, confidential client (secret) only for Copilot Studio. See [Entra ID Setup](entra-id-setup.md). |
@@ -21,13 +21,12 @@ A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admi
 
 ## Environments
 
-The MCP server follows the same three-stage [release plan](~/doc/getting-started/web-client.md#release-plan) as the time cockpit web client. Each environment has its own server URL and its own OAuth scope. Your app registration can be granted the `mcp.access` permission of several environments, so one client ID can serve all three — see [Entra ID Setup](entra-id-setup.md).
+The MCP server follows the [release plan](~/doc/getting-started/web-client.md#release-plan) of the time cockpit web client with a production and a preview stage. Each environment has its own server URL and its own OAuth scope. Your app registration can be granted the `mcp.access` permission of several environments, so one client ID can serve both — see [Entra ID Setup](entra-id-setup.md).
 
 | Environment | Server URL | OAuth scope | Use for |
 |-------------|------------|-------------|---------|
 | Prod | `https://mcp.timecockpit.com` | `https://mcp.timecockpit.com/mcp.access` | Daily work. Updated from the latest preview release on the 10th of each month; hotfixes only in between. |
 | Preview | `https://mcp-preview.timecockpit.com` | `https://mcp-preview.timecockpit.com/mcp.access` | Testing the upcoming release. Stable between the 1st and 9th of each month. |
-| Dev | `https://mcp-dev.timecockpit.com` | `https://mcp-dev.timecockpit.com/mcp.access` | Experimental, continuously updated. Never use with a production tenant — ask for a time cockpit sandbox. |
 
 All client pages in this section use the production URL. To connect to another environment, replace the server URL in the client configuration — the rest of the setup (client ID, callback port, connection settings) stays the same. Each client stores its OAuth tokens per server URL, so you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`).
 
