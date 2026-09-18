@@ -12,7 +12,7 @@ Because the app registration is yours, you decide how many you want. One registr
 
 - time cockpit operates the MCP server as an Entra **resource application** with the scope `mcp.access` (Application ID URI `https://mcp.timecockpit.com`; preview has its own, see [Environments](overview.md#environments)).
 - Your Entra tenant contains one or more **client applications** that request this scope on behalf of the signed-in user. The MCP server accepts tokens from any client application in your tenant that has been granted the `mcp.access` permission.
-- Clients use OAuth 2.1 Authorization Code with PKCE. Native clients (Claude Code, Codex, VS Code, Copilot CLI) are **public clients** and need no secret. Copilot Studio requires a **confidential client** with a client secret — use a separate app registration for it.
+- Clients use OAuth 2.1 Authorization Code with PKCE. Native clients (Claude Code, Codex, VS Code, Copilot CLI) are **public clients** and need no secret. Copilot Studio and ChatGPT require a **confidential client** with a client secret — use a separate app registration for them.
 - Entra ID does not support Dynamic Client Registration, which is why every client needs your client ID configured explicitly.
 
 > [!WARNING]
@@ -57,7 +57,7 @@ An Entra administrator (or a user with the *Application Developer* role) perform
 2. **Platform and redirect URIs** — depending on which clients this registration is for:
 
    - For native clients add the platform **Mobile and desktop applications** and the redirect URIs from the table below. Under **Authentication → Advanced settings** set **Allow public client flows** to *Yes*.
-   - For hosted clients (Claude app, Copilot Studio, M365) add the platform **Web** with the respective redirect URIs.
+   - For hosted clients (Claude app, ChatGPT, Copilot Studio, M365) add the platform **Web** with the respective redirect URIs.
    - `127.0.0.1` redirect URIs (Codex) cannot be entered in the portal form; add them via **Manifest → `replyUrlsWithType`** with `"type": "InstalledClient"`.
 
 3. **Token version**: open **Manifest** and set the requested access token version to **2**. In the current manifest format (Microsoft Graph app) this is `"api": { "requestedAccessTokenVersion": 2 }`; in the legacy AAD Graph manifest the property is called `accessTokenAcceptedVersion`. The MCP server only accepts Entra v2.0 tokens and rejects v1.0 tokens with `401`. New app registrations default to `null`, which yields v1.0 tokens, so this step is required.
@@ -67,7 +67,7 @@ An Entra administrator (or a user with the *Application Developer* role) perform
    > [!NOTE]
    > The time cockpit MCP API appears under *APIs my organization uses* only once its service principal exists in your tenant. If it is not listed, create it as described in [Make the time cockpit MCP API Available in Your Tenant](#make-the-time-cockpit-mcp-api-available-in-your-tenant).
 
-5. For **Copilot Studio** only: **Certificates & secrets → New client secret**. Note the secret value; it is entered in the Copilot Studio MCP wizard together with the client ID.
+5. For **Copilot Studio** and **ChatGPT** only: **Certificates & secrets → New client secret**. Note the secret value; it is entered in the Copilot Studio MCP wizard or in the ChatGPT **New App** dialog together with the client ID.
 
 6. Copy the **Application (client) ID** from the overview page. This is the `<client-id>` used on all client pages of this documentation.
 
@@ -225,6 +225,7 @@ The output `applicationClientId` is the `<client-id>` for your users. Redirect U
 | VS Code | `http://localhost` (MSAL loopback, variable port) and `https://vscode.dev/redirect` | Mobile and desktop |
 | GitHub Copilot CLI | loopback, port configurable (`callbackPort`) — behavior not verified | Mobile and desktop |
 | claude.ai / Claude Desktop / Cowork | `https://claude.ai/api/mcp/auth_callback` | Web (public client) |
+| ChatGPT (workspace custom app) | `https://chatgpt.com/connector/oauth/<callback-id>` — shown as **Callback URL** in the **New App** dialog, unique per app | Web (confidential client with secret, `client_secret_post`) |
 | Copilot Studio | `https://global.consent.azure-apim.net/redirect/<connector-id>` — shown after **Create**, different per tool | Web (confidential client with secret) |
 | M365 declarative agent / federated connector | `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` | Web |
 | Cursor | `http://localhost:8787/callback` | Mobile and desktop |

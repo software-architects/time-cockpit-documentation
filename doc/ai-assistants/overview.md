@@ -22,6 +22,7 @@ Ready-to-use prompts by role are collected in [Use Cases and Prompts](use-cases-
 | Claude Code (terminal) | tested | [Claude Code](~/doc/mcp/claude-code.md) |
 | Claude app, claude.ai, Cowork | not yet verified | [Claude App](~/doc/mcp/claude-app.md) |
 | OpenAI Codex (CLI, desktop app, IDE) | tested | [Codex](~/doc/mcp/codex.md) |
+| ChatGPT (web, Business/Enterprise workspace) | tested, set up by your administrator | [ChatGPT](~/doc/mcp/chatgpt.md) |
 | Visual Studio Code with GitHub Copilot | not yet tested | [VS Code](~/doc/mcp/vscode.md) |
 | GitHub Copilot CLI | not supported at the moment | [Copilot CLI](~/doc/mcp/copilot-cli.md) |
 | Microsoft 365 Copilot | requires your administrator | [Microsoft 365 Copilot](~/doc/mcp/microsoft-365-copilot.md) |

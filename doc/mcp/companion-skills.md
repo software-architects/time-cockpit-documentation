@@ -131,7 +131,7 @@ Without a pin (`#v0.1.7`) the package follows the default branch and receives up
 ## Other Installation Routes
 
 - **Claude Code plugin marketplace:** The repository is also a Claude Code marketplace (`.claude-plugin/marketplace.json`). Install with `/plugin marketplace add software-architects/timecockpit-agents` and `/plugin install`. This route also installs the agents.
-- **ChatGPT Work:** A workspace administrator imports the repository as a marketplace (source `https://github.com/software-architects/timecockpit-agents`, release tag). The MCP server must be registered there once as a custom MCP app with a predefined OAuth client (see the package README).
+- **ChatGPT (Business/Enterprise):** A workspace administrator imports the repository as a marketplace (source `https://github.com/software-architects/timecockpit-agents`, release tag). The MCP server must be registered once as a custom MCP app in the workspace — see [ChatGPT](chatgpt.md).
 - **Manual:** Copy the `skills/` and `agents/` folders into `.claude/`, `.agents/` or `.github/` of your project.
 
 ## Related Pages

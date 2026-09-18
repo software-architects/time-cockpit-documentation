@@ -63,7 +63,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 | [GitHub Copilot CLI](copilot-cli.md) | `%USERPROFILE%\.copilot\mcp-config.json` | unclear (client ID reportedly ignored) | yes | not verified |
 | [Microsoft 365 Copilot](microsoft-365-copilot.md) | Copilot Studio, M365 Admin Center, or declarative agent | yes, but Copilot Studio requires a client secret | no — use URL segments | not yet verified |
 | Cursor | `.cursor/mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |
-| ChatGPT (custom app) | Workspace admin registers a custom MCP app | yes (predefined client) | no | not yet verified |
+| [ChatGPT (web, Business/Enterprise workspace)](chatgpt.md) | Custom app in the admin console (`chatgpt.com/admin/apps`), published to the workspace | yes (User-Defined OAuth Client, with client secret) | no — use URL segments | tested |
 | Microsoft Copilot (consumer) | — | — | — | no custom MCP support |
 
 ## What You Need
@@ -75,7 +75,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## Getting Started
 
 1. Have your Entra administrator create the app registration described in [Entra ID Setup](entra-id-setup.md) and give you its client ID.
-2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
+2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [ChatGPT](chatgpt.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
 3. [Verify the connection](verify-connection.md) with the server's diagnostic tools.
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).
