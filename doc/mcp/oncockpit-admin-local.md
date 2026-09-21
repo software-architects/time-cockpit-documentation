@@ -4,6 +4,9 @@ description: Run the local time cockpit MCP server built into OnCockpit Admin ov
 ---
 # OnCockpit Admin: Local MCP Server (stdio)
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 Besides the [remote MCP server](overview.md), time cockpit ships a **local MCP server** inside [OnCockpit Admin](~/doc/data-model-customization/overview.md), the Windows tool for customizing time cockpit. Started with `--mcp`, OnCockpit Admin talks MCP over standard input/output (stdio) instead of showing its user interface. The AI client launches the process itself; no OAuth, no server URL.
 
 The local server is aimed at **administrators and customizers**, not at end users booking time. Its distinguishing feature is **IronPython script execution** against the live data context: an assistant can run the same scripts you would otherwise run in the OnCockpit Admin script editor or via the command line. This enables workflows the remote server deliberately does not offer, such as changing the data model or loading test data.

@@ -4,6 +4,9 @@ description: Overview of the time cockpit MCP server, its endpoints, authenticat
 ---
 # Time Cockpit MCP Server
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, lists, actions) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit.
 
 A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for administrators and customizers who need IronPython scripting against the live data context; see [OnCockpit Admin: Local MCP Server](oncockpit-admin-local.md). The rest of this section covers the remote server.
@@ -21,12 +24,12 @@ A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admi
 
 ## Environments
 
-The MCP server follows the [release plan](~/doc/getting-started/web-client.md#release-plan) of the time cockpit web client with a production and a preview stage. Each environment has its own server URL and its own OAuth scope. Your app registration can be granted the `mcp.access` permission of several environments, so one client ID can serve both — see [Entra ID Setup](entra-id-setup.md).
+The MCP server is available in a production and a preview environment. It is deployed independently of the web client whenever an update is needed and does not follow a fixed release schedule. Each environment has its own server URL and its own OAuth scope. Your app registration can be granted the `mcp.access` permission of several environments, so one client ID can serve both — see [Entra ID Setup](entra-id-setup.md).
 
 | Environment | Server URL | OAuth scope | Use for |
 |-------------|------------|-------------|---------|
-| Prod | `https://mcp.timecockpit.com` | `https://mcp.timecockpit.com/mcp.access` | Daily work. Updated from the latest preview release on the 10th of each month; hotfixes only in between. |
-| Preview | `https://mcp-preview.timecockpit.com` | `https://mcp-preview.timecockpit.com/mcp.access` | Testing the upcoming release. Stable between the 1st and 9th of each month. |
+| Prod | `https://mcp.timecockpit.com` | `https://mcp.timecockpit.com/mcp.access` | Daily work. |
+| Preview | `https://mcp-preview.timecockpit.com` | `https://mcp-preview.timecockpit.com/mcp.access` | Testing upcoming changes before they reach production. |
 
 All client pages in this section use the production URL. To connect to another environment, replace the server URL in the client configuration — the rest of the setup (client ID, callback port, connection settings) stays the same. Each client stores its OAuth tokens per server URL, so you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`).
 
@@ -57,9 +60,9 @@ Every client has its own configuration. A server registered in Claude Code is in
 | Client | Configuration | Own client ID | Headers | Status |
 |--------|---------------|---------------|---------|--------|
 | [Claude Code (CLI)](claude-code.md) | `%USERPROFILE%\.claude.json` or `.mcp.json` in the project | yes (`oauth.clientId`) | yes | tested |
-| [Claude app / claude.ai / Cowork](claude-app.md) | Custom connector in the app settings | yes (own OAuth client) | standard headers only (beta) — use URL segments | not yet verified |
+| [Claude app / claude.ai / Cowork](claude-app.md) | Custom connector in the app settings | yes (own OAuth client) | standard headers only (beta) — use URL segments | tested |
 | [OpenAI Codex (CLI, app, IDE)](codex.md) | `codex mcp add … --oauth-client-id` (writes `%USERPROFILE%\.codex\config.toml`) | yes | via TOML only — use URL segments | tested |
-| [Visual Studio Code (Copilot agent mode)](vscode.md) | `.vscode/mcp.json` or user `mcp.json` | yes since VS Code 1.123 (`oauth.clientId`) | yes | not yet tested |
+| [Visual Studio Code (Copilot agent mode)](vscode.md) | `.vscode/mcp.json` or user `mcp.json` | yes since VS Code 1.123 (`oauth.clientId`) | yes | tested |
 | [GitHub Copilot CLI](copilot-cli.md) | `%USERPROFILE%\.copilot\mcp-config.json` | unclear (client ID reportedly ignored) | yes | not verified |
 | [Microsoft 365 Copilot](microsoft-365-copilot.md) | Copilot Studio, M365 Admin Center, or declarative agent | yes, but Copilot Studio requires a client secret | no — use URL segments | not yet verified |
 | Cursor | `.cursor/mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |

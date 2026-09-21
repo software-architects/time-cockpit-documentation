@@ -4,6 +4,9 @@ description: Register a client application for the time cockpit MCP server in yo
 ---
 # Microsoft Entra ID Setup for the MCP Server
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 The time cockpit MCP server authenticates every user against Microsoft Entra ID. The AI client (Claude Code, Codex, VS Code, …) needs an **OAuth client application in your own Entra tenant** to run the sign-in. You create this app registration yourself; its **client ID** is the value your users enter in their client configuration.
 
 Because the app registration is yours, you decide how many you want. One registration for all clients works. Separate registrations per client (for example one for Claude Code and Codex, one for the Claude app, one for Copilot Studio) let you keep the redirect URIs of each client apart and restrict or revoke a single client without touching the others.

@@ -4,6 +4,9 @@ description: Check a time cockpit MCP connection with the ping, get_environment,
 ---
 # Verify the Connection
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 After configuring a client, call the server's diagnostic tools in this order. Depending on the client, tool names may be prefixed with `timecockpit__`.
 
 1. `ping` — the server is reachable and the request is authenticated.

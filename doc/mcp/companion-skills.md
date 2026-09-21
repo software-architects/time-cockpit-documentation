@@ -4,6 +4,9 @@ description: Install the timecockpit-agents companion skills with Microsoft APM 
 ---
 # Companion Skills: Installing timecockpit-agents with APM
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 The public package **software-architects/timecockpit-agents** on GitHub ([github.com/software-architects/timecockpit-agents](https://github.com/software-architects/timecockpit-agents)) belongs to the MCP server. It contains the companion skills that teach an AI agent how to work with time cockpit correctly — from connecting to TCQL to booking patterns — plus three agent definitions and the MCP server declaration. Clients select skills automatically based on their description; you can also address them explicitly ("use the skill timecockpit-tcql").
 
 | Skill | Purpose |

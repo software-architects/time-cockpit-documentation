@@ -4,10 +4,10 @@ description: Configure the time cockpit MCP server in Visual Studio Code for Git
 ---
 # Visual Studio Code (GitHub Copilot Agent Mode)
 
-VS Code configures MCP servers in `mcp.json` — either in the workspace (`.vscode/mcp.json`, shareable) or in the user profile (command **MCP: Open User Configuration**). Since **VS Code 1.123 (June 2026)** your own OAuth client ID can be specified per server (`oauth.clientId`).
-
 > [!WARNING]
-> Review required: This client has not yet been tested end-to-end against the time cockpit MCP server. The configuration follows the VS Code MCP reference; verify before relying on it.
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
+VS Code configures MCP servers in `mcp.json` — either in the workspace (`.vscode/mcp.json`, shareable) or in the user profile (command **MCP: Open User Configuration**). Since **VS Code 1.123 (June 2026)** your own OAuth client ID can be specified per server (`oauth.clientId`). The configuration below has been verified against the time cockpit MCP server.
 
 ## mcp.json
 

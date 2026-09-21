@@ -4,6 +4,9 @@ description: Register the time cockpit MCP server in Claude Code, sign in with M
 ---
 # Claude Code (CLI)
 
+> [!WARNING]
+> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+
 Claude Code is Anthropic's terminal agent. MCP servers are stored in configuration files and managed with `claude mcp …`. The steps below were verified on Windows 11 with PowerShell.
 
 > [!NOTE]
