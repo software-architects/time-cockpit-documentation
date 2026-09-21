@@ -59,9 +59,9 @@ You
 Which projects did I work on this week according to time cockpit?
 
 GitHub Copilot
-▸ Ran query_timesheets (MCP Server: timecockpit)
+▸ Ran get_timesheets (MCP Server: timecockpit)
   { "from": "2026-09-14", "to": "2026-09-20" }
-▸ Ran list_projects (MCP Server: timecockpit)
+▸ Ran execute_tcql_query (MCP Server: timecockpit)
 
 This week you booked time on three projects:
   • Project Alpha – 14h 30m

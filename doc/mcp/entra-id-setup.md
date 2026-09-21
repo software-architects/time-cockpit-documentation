@@ -238,7 +238,7 @@ The output `applicationClientId` is the `<client-id>` for your users. Redirect U
 | Value | Where it comes from | Needed by |
 |-------|--------------------|-----------|
 | Client ID (`<client-id>`) | Application (client) ID of your app registration | every client |
-| Client secret | your app registration (confidential client) | Copilot Studio only |
+| Client secret | your app registration (confidential client) | ChatGPT and Copilot Studio only |
 | Tenant ID of the time cockpit tenant | time cockpit support | only if your Entra tenant is mapped to several time cockpit tenants — see [connection settings](overview.md#connection-settings-header-or-url-segment) |
 
 ## Network Prerequisites

@@ -42,7 +42,7 @@ Name          Url                          Bearer Token Env Var  Status   Auth
 timecockpit   https://mcp.timecockpit.com  -                     enabled  OAuth
 ```
 
-Tenant, sandbox and modes are passed as [URL segments](overview.md#connection-settings-header-or-url-segment) rather than headers, so no TOML editing is required. To change the URL of an existing entry, remove it and add it again:
+Tenant, sandbox and modes are passed as [URL segments](overview.md#connection-settings-header-or-url-segment) rather than headers, so no TOML editing is required. To change the URL of an existing entry, remove it and add it again. Note that the callback ID in the redirect URI is derived from the **complete** server URL, so a changed URL (additional segments, or the preview environment) results in a new "OAuth callback URL" that has to be registered on your app registration before the sign-in succeeds — see [Callback URL Specifics](#callback-url-specifics). You also have to sign in again, because tokens are stored per server URL:
 
 ```powershell
 codex mcp remove timecockpit
@@ -125,7 +125,7 @@ MCP servers
 
 • timecockpit  https://mcp.timecockpit.com
   Auth: OAuth (logged in)
-  Tools: list_projects, list_customers, list_tasks, query_timesheets, create_timesheet, … (12)
+  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (18)
 
 Use /mcp verbose for details. To (re)authenticate run: codex mcp login timecockpit
 ```
@@ -157,7 +157,7 @@ Then follow [Verify the Connection](verify-connection.md).
 
 ## Callback URL Specifics
 
-Codex always binds the callback listener to `127.0.0.1` (not `localhost`). If the authorization server metadata does not report `authorization_response_iss_parameter_supported` — which is the case with Entra ID — Codex appends a 12-character ID derived from the server URL to the path: `http://127.0.0.1:<port>/callback/<id>`. The exact value is printed by `codex mcp add … --oauth-client-id` ("OAuth callback URL") and stored in `oauth.callback_url`. Exactly this value must be registered on your app registration; `127.0.0.1` URIs can only be added in the Entra portal via the app manifest (`replyUrlsWithType`, type `InstalledClient`) — see [Entra ID Setup](entra-id-setup.md). With Option A the port is ephemeral, so register the URI without a port; with Option B and a fixed `callback_port`, register it with the port.
+Codex always binds the callback listener to `127.0.0.1` (not `localhost`). If the authorization server metadata does not report `authorization_response_iss_parameter_supported` — which is the case with Entra ID — Codex appends a 12-character ID derived from the **complete** server URL (host and all path segments) to the path: `http://127.0.0.1:<port>/callback/<id>`. Consequently `https://mcp.timecockpit.com`, `https://mcp.timecockpit.com/access/readonly` and `https://mcp-preview.timecockpit.com` each have a different callback ID and each need their own redirect URI on the app registration. The exact value is printed by `codex mcp add … --oauth-client-id` ("OAuth callback URL") and stored in `oauth.callback_url`. Exactly this value must be registered on your app registration; `127.0.0.1` URIs can only be added in the Entra portal via the app manifest (`replyUrlsWithType`, type `InstalledClient`) — see [Entra ID Setup](entra-id-setup.md). With Option A the port is ephemeral, so register the URI without a port; with Option B and a fixed `callback_port`, register it with the port.
 
 ## Troubleshooting
 

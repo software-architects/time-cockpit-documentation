@@ -18,7 +18,7 @@ A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for admi
 | Server URL | `https://mcp.timecockpit.com` (production; see [Environments](#environments) for preview) |
 | Transport | Streamable HTTP (`http`) — not SSE, not stdio |
 | Authentication | OAuth 2.1 Authorization Code + PKCE (S256) against Microsoft Entra ID, per user |
-| OAuth client | An app registration **in your own Entra tenant** — you create it and hand its client ID to your users. No Dynamic Client Registration; public client for native tools, confidential client (secret) only for Copilot Studio. See [Entra ID Setup](entra-id-setup.md). |
+| OAuth client | An app registration **in your own Entra tenant** — you create it and hand its client ID to your users. No Dynamic Client Registration; public client for native tools, confidential client (secret) for hosted clients such as ChatGPT and Copilot Studio. See [Entra ID Setup](entra-id-setup.md). |
 | OAuth scope | `https://mcp.timecockpit.com/mcp.access` (per environment, see below). Advertised by the server through its protected-resource metadata; usually does not need to be configured. |
 | Metadata | `/.well-known/oauth-protected-resource` and `/.well-known/oauth-authorization-server` on the server. Clients discover Entra ID from these documents — but not the client ID. |
 
@@ -31,7 +31,13 @@ The MCP server is available in a production and a preview environment. It is dep
 | Prod | `https://mcp.timecockpit.com` | `https://mcp.timecockpit.com/mcp.access` | Daily work. |
 | Preview | `https://mcp-preview.timecockpit.com` | `https://mcp-preview.timecockpit.com/mcp.access` | Testing upcoming changes before they reach production. |
 
-All client pages in this section use the production URL. To connect to another environment, replace the server URL in the client configuration — the rest of the setup (client ID, callback port, connection settings) stays the same. Each client stores its OAuth tokens per server URL, so you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`).
+All client pages in this section use the production URL. To connect to another environment, replace the server URL in the client configuration. Client ID, callback port and connection settings stay the same, but a changed server URL has three consequences:
+
+- **You have to sign in again.** Every client stores its OAuth tokens per server URL. A new URL — whether a different environment or additional [URL segments](#connection-settings-header-or-url-segment) — starts with no token, so the client asks for a fresh Entra sign-in even though you were already signed in to the other URL. This is expected, not an error.
+- **The app registration needs the permission of that environment.** Each environment has its own scope (`https://mcp-preview.timecockpit.com/mcp.access` for preview). If your app registration has only been granted `mcp.access` of the production API, the preview sign-in fails with a consent error. See [Entra ID Setup](entra-id-setup.md).
+- **Codex may need another redirect URI.** Codex derives the callback ID in its redirect URI (`http://127.0.0.1:<port>/callback/<id>`) from the complete server URL, including path segments. Switching to preview or adding URL segments therefore produces a **new callback ID** that has to be registered on your app registration as well. `codex mcp add` prints the new value; see [Callback URL Specifics](codex.md#callback-url-specifics). Claude Code, the Claude app, VS Code and ChatGPT use fixed redirect URIs that do not depend on the server URL.
+
+Because tokens are stored per URL, you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`) and switch between them without signing in again each time.
 
 > [!NOTE]
 > The environment is independent of the [sandbox setting](#connection-settings-header-or-url-segment): `sandboxEnvironment=test` selects the test sandbox of your tenant on whichever server you are connected to, while the environment selects the server release.
@@ -82,6 +88,13 @@ Every client has its own configuration. A server registered in Claude Code is in
 3. [Verify the connection](verify-connection.md) with the server's diagnostic tools.
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).
+
+## What the Server Cannot Enforce: Your Data Goes to the AI Provider
+
+> [!IMPORTANT]
+> Everything an assistant reads through the MCP server — customers, projects, tasks, time entries, names, rates, notes — is sent to the AI provider (Anthropic, OpenAI, Microsoft, …) and processed under that provider's terms. Permissions, `readonly` and `owndata` limit **what** a user can see, not **where** the data goes once the assistant has it.
+>
+> Before rolling out AI assistants with time cockpit, clarify their use with your IT, data protection officer or compliance team. Check the provider's settings for your organization's plan: data retention, chat memory, sharing of conversations, and whether your data may be used for model training. Hosted clients such as ChatGPT and claude.ai may additionally share chat context and memories with the connected app. time cockpit has no influence on these settings.
 
 ## What the Server Enforces
 
