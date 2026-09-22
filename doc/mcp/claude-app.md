@@ -4,10 +4,10 @@ description: Add the time cockpit MCP server as a custom connector in claude.ai,
 ---
 # Claude App, claude.ai and Cowork
 
-> [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) do **not** use the Claude Code configuration files. Remote MCP servers are added as a **custom connector**. Custom connectors are available on all plans (Free: one connector). On Team and Enterprise plans an owner creates the connector and members connect to it.
 
-The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) do **not** use the Claude Code configuration files. Remote MCP servers are added as a **custom connector**. The setup below has been verified against the time cockpit MCP server. Custom connectors are available on all plans (Free: one connector). On Team and Enterprise plans an owner creates the connector and members connect to it.
+> [!WARNING]
+> Review required: This client has not yet been verified end-to-end against the time cockpit MCP server. The steps follow Anthropic's connector documentation; dialog labels may differ between versions.
 
 ## Add a Custom Connector
 
@@ -20,7 +20,10 @@ The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) 
 5. **Add**, then **Connect**. Sign in with Entra ID; you are redirected to `https://claude.ai/api/mcp/auth_callback` — this URI must be registered as platform **Web** on your app registration (see [Entra ID Setup](entra-id-setup.md)).
 6. In a chat, enable the connector for the conversation via **+ → Connectors**.
 
-**Team / Enterprise:** An owner adds the connector under **Organization settings → Connectors → Add → Custom → Web**; members then choose **Connect**.
+**Team / Enterprise:** Only an **Owner** or **Primary Owner** can add custom connectors — the **Admin** role cannot (it covers member management only) — and only in the organization settings, not under *Customize → Connectors*. Owner: profile menu → **Settings → Organization settings → Connectors → Add custom connector**, enter the MCP server URL and, under **Advanced settings**, the client ID. Members then find the connector under **Customize → Connectors → Your custom connectors** and choose **Connect**.
+
+> [!NOTE]
+> If *Customize → Connectors* shows existing custom connectors but no **Add custom connector** button, your account is a member (or admin) of a Team or Enterprise organization. Ask an organization owner to add the time cockpit connector, or to promote you to Owner.
 
 > [!NOTE]
 > Authentication settings (OAuth client, request headers) cannot be changed after a connector has been created. To change them, remove the connector and add it again; members have to reconnect.
