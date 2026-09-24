@@ -21,7 +21,7 @@ The local server is aimed at **administrators and customizers**, not at end user
 | Runs | In the cloud, per user via Entra ID | On your Windows PC, as a child process of the AI client |
 | Sign-in | OAuth 2.1 with Microsoft Entra ID | The OnCockpit Admin **configuration** (`-c <name>`) you already use |
 | Clients | Every MCP client with HTTP transport, including Claude app, Copilot, ChatGPT | Clients that can start stdio servers: Claude Code, VS Code, Codex, Claude Desktop, Cursor, Copilot CLI |
-| Data access | Typed tools, TCQL queries, lists, actions, record CRUD | TCQL queries, lists, plus **arbitrary IronPython scripts** |
+| Data access | Typed tools, TCQL queries, lists, object CRUD | TCQL queries, lists, plus **arbitrary IronPython scripts** |
 | Data model changes | Not possible | Possible via script (`DataModel.py` migrations) |
 | Typical use | Booking time, reporting, everyday questions | Customization, migrations, test data, automated tests, complex one-off analyses |
 
@@ -49,7 +49,7 @@ Both servers can be registered side by side under different names.
 | `-c <configuration>` | Optional. Name of the OnCockpit Admin configuration (tenant, sandbox and user are part of the configuration). Without it, the configuration selector dialog opens when the client starts the server, and you pick the configuration there. Pass the name to start without any dialog, for example in shared team configurations. |
 | `--mcp-access Default\|ReadOnly` | Optional, default `Default`. `ReadOnly` hides every tool that changes data, including the script tools. |
 | `--mcp-scope Default\|OwnData` | Optional, default `Default`. `OwnData` hides every tool whose result cannot be restricted to the signed-in user. |
-| `--mcp-confirmation Required\|Disabled` | Optional, default `Required`. Whether generic actions and record changes need the `confirmed=true` handshake. Only an operator setting; there is no per-request override. |
+| `--mcp-confirmation Required\|Disabled` | Optional, default `Required`. Whether the generic object tools (`create_object`, `update_object`, `delete_object`) need the `confirmed=true` handshake. Only an operator setting; there is no per-request override. |
 
 Access and scope have the same meaning as the remote server's connection settings; tenant, sandbox and profile are not separate options because they come from the configuration. See [Access, Scope, and Confirmation](access-and-confirmation.md).
 
@@ -152,17 +152,15 @@ The local server offers the same shared tools as the remote server, with the sam
 | `get_lists` | no | | List the named lists available to the user. |
 | `describe_list` | no | | Parameters and result columns of a named list. |
 | `execute_list` | no | yes | Run a named list, optionally with an additional TCQL condition. Prefer an existing list over a hand-written query when one fits. |
-| `get_actions` | no | | List the actions the user may execute for an entity, or the standalone actions. |
-| `execute_action` | **yes** | yes | Execute a model action. Needs `confirmed=true`. |
 | `execute_tcql_query` | no | yes | Run a bounded read-only TCQL query with optional named parameters (`@Name`). |
-| `create_entity`, `update_entity`, `delete_entity` | **yes** | yes | Create, update or delete a record of a visible entity. Need `confirmed=true`. |
+| `create_object`, `update_object`, `delete_object` | **yes** | yes | Create, update or delete an object of a visible entity. Need `confirmed=true`. |
 | `get_resource` | no | | **Local only.** Read one of the resources below for clients that do not support MCP resources natively. |
 | `execute_script_literal` | **yes** | yes | **Local only.** Run inline IronPython 2.7 source against the live data context. Output written with `print` is returned as the result. The script sees the data context as the global `Context` object. |
 | `execute_script_file` | **yes** | yes | **Local only.** Run an existing `.py` file from the local disk. Use this for larger scripts such as `DataModel.py` migrations that read further files relative to their own location. An operator can restrict the allowed folders. |
 
-Everything marked as changing data is hidden with `--mcp-access ReadOnly`. `entra_whoami` exists only on the remote server. The script tools are not confirmation-gated; the confirmation handshake applies to the generic action and record tools. Reads are row-capped and report `truncated`; see [Limits and Truncation](limits.md).
+Everything marked as changing data is hidden with `--mcp-access ReadOnly`. `entra_whoami` exists only on the remote server. The script tools are not confirmation-gated; the confirmation handshake applies to the generic object tools and `create_timesheet_suggestion`. Model actions are not exposed as tools; run them in the time cockpit UI. Reads are row-capped and report `truncated`; see [Limits and Truncation](limits.md).
 
-The server instructions tell the assistant to prefer a TCQL query or a list whenever the task can be expressed that way, and to reach for scripts only for what queries cannot do. Once a script or an action has started it cannot be interrupted from the client.
+The server instructions tell the assistant to prefer a TCQL query or a list whenever the task can be expressed that way, and to reach for scripts only for what queries cannot do. Once a script has started it cannot be interrupted from the client.
 
 > [!NOTE]
 > Older OnCockpit Admin builds on the dev feed expose a smaller, differently named tool set (`tcql_query` instead of `execute_tcql_query`, no `get_entities`, no `--mcp-*` options). Update OnCockpit Admin if the tools listed here are missing.
@@ -176,7 +174,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://ServerInstructions.md` | How the assistant should work with time cockpit: tool precedence, TCQL reference. Read first. |
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
-| `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. |
+| `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
 | `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |

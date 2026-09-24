@@ -125,7 +125,7 @@ MCP servers
 
 • timecockpit  https://mcp.timecockpit.com
   Auth: OAuth (logged in)
-  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (18)
+  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (16)
 
 Use /mcp verbose for details. To (re)authenticate run: codex mcp login timecockpit
 ```

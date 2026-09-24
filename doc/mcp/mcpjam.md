@@ -127,7 +127,7 @@ Omitting `userDetailId` keeps the query scoped to the signed-in user. An empty `
 | Write tools are missing | Check whether the connection uses `access=readonly`; this intentionally hides writing tools. |
 | The sandbox was not selected | Check that `X-sandbox-environment: test` is present and that no conflicting URL segment is configured. |
 
-Do not use `create_entity`, `update_entity`, `delete_entity`, `create_timesheet` or `execute_action` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
+Do not use `create_object`, `update_object`, `delete_object` or `create_timesheet` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
 
 ## Related pages
 

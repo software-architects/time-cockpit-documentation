@@ -69,10 +69,9 @@ Two limits worth knowing. A default written as an expression (anything starting 
 
 ## Operations that cannot be cancelled
 
-Most operations stop when the client cancels. Three cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
+Most operations stop when the client cancels. Two cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
 
-- **Model actions.** Once an action has started executing, it runs to completion. Cancellation is only honoured before it starts.
-- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). The same rule: cancellation is checked before the script starts, never during it.
+- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). Once a script has started, it runs to completion: cancellation is checked before the script starts, never during it.
 - **The write phase of `create_timesheet_suggestion`.** Cancellation is honoured up to the first record written; after that the writes finish.
 
 Practically: if an agent appears to hang on one of these, the work is probably still running. Do not assume it was rolled back, and check the affected records before retrying.

@@ -106,7 +106,7 @@ Status: ✔ connected
 URL: https://mcp.timecockpit.com
 Config location: C:\Users\<you>\.claude.json (user)
 Capabilities: tools
-Tools: 19 tools
+Tools: 16 tools
 Authentication: ✔ Authenticated (OAuth)
 ```
 

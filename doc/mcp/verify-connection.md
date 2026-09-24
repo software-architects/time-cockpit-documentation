@@ -22,7 +22,8 @@ Missing tools are usually a matter of configuration:
 
 - `access=readonly` hides all writing tools.
 - `scope=owndata` hides everything that cannot be restricted to the current user.
-- Lists and actions depend on an optional server capability.
+- The named-list tools (`get_lists`, `describe_list`, `execute_list`) depend on optional server capabilities and may be absent in a deployment.
+- Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 See [connection settings](overview.md#connection-settings-header-or-url-segment) for how these values are passed.
 

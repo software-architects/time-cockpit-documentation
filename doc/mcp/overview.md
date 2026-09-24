@@ -1,13 +1,16 @@
 ---
 title: MCP Server - Connect AI Assistants to Time Cockpit
-description: Overview of the time cockpit MCP server, its endpoints, authentication with Microsoft Entra ID, per-connection settings, and the supported AI clients.
+description: Overview of the time cockpit MCP server, its endpoints, authentication with Microsoft Entra ID, per-connection settings, and the supported AI clients. Currently available to selected customers only.
 ---
 # Time Cockpit MCP Server
 
 > [!WARNING]
 > Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
 
-The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, lists, actions) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit.
+> [!NOTE]
+> Availability: The time cockpit MCP server is currently available to selected customers only. If you would like to use it with your time cockpit tenant, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com).
+
+The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, named lists) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit. Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for administrators and customizers who need IronPython scripting against the live data context; see [OnCockpit Admin: Local MCP Server](oncockpit-admin-local.md). The rest of this section covers the remote server.
 
@@ -99,7 +102,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## What the Server Enforces
 
 - **Your permissions always apply.** Every call is authorized against the tenant's permission model with the roles of the signed-in user. Whatever you cannot see in the web client stays invisible to the assistant, and cannot be reached by guessing a technical name. System and internal entities are hidden from every tool.
-- **Access and scope** narrow a connection further: `readonly` hides all writing tools, `owndata` hides everything that cannot be restricted to your own data. **Confirmation** is an operator setting: by default every generic action and record change has to be repeated with `confirmed=true` after the assistant has told you what will change. See [Access, Scope, and Confirmation](access-and-confirmation.md).
+- **Access and scope** narrow a connection further: `readonly` hides all writing tools, `owndata` hides everything that cannot be restricted to your own data. **Confirmation** is an operator setting: by default every generic object change (`create_object`, `update_object`, `delete_object`) has to be repeated with `confirmed=true` after the assistant has told you what will change. See [Access, Scope, and Confirmation](access-and-confirmation.md).
 - **Results are bounded.** Reads are capped in rows and size and say so with `truncated: true`. See [Limits and Truncation](limits.md).
 - **Every tool call is audited.** The server records one operational audit event per attempted call with tenant, acting user, host, tool, whether it changes data, outcome and duration. Denied, failed and cancelled attempts are recorded as well. The event contains no arguments, query text, record contents or results.
 

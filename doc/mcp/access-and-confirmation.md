@@ -12,9 +12,9 @@ Three mechanisms decide what an AI agent may do with your time cockpit data. Two
 
 ## 1. Your time cockpit permissions always apply
 
-This is the floor that none of the settings below can lift. Every call is authorized again against the tenant's permission model, using the union of the roles assigned to the signed-in user. A list, action, entity, property, or record that the user cannot reach in the web client is not reachable through an agent either — and it cannot be reached by guessing a technical name, because a tool or artifact hidden from discovery is also rejected when it is called directly.
+This is the floor that none of the settings below can lift. Every call is authorized again against the tenant's permission model, using the union of the roles assigned to the signed-in user. A list, entity, property, or object that the user cannot reach in the web client is not reachable through an agent either — and it cannot be reached by guessing a technical name, because a tool or artifact hidden from discovery is also rejected when it is called directly.
 
-On top of that, system entities and a fixed set of internal entities (telemetry, notification, feature-flag, and similar shipped internals) are hidden from every agent surface: discovery, description, queries, records, actions, and resources alike.
+On top of that, system entities and a fixed set of internal entities (telemetry, notification, feature-flag, and similar shipped internals) are hidden from every agent surface: discovery, description, queries, objects, and resources alike.
 
 ## 2. Access and scope: settings you choose
 
@@ -40,7 +40,7 @@ How to supply them is described in [Connection Settings](overview.md#connection-
 
 ## 3. Confirmation: a setting you do not choose
 
-Every generic action and every generic create, update, and delete requires an explicit confirmation before it is carried out. This is the default policy, and it is what stops an agent from changing a record as a side effect of answering a question.
+Every generic create, update, and delete of an object (`create_object`, `update_object`, `delete_object`) requires an explicit confirmation before it is carried out. This is the default policy, and it is what stops an agent from changing an object as a side effect of answering a question.
 
 In practice it is a two-step handshake:
 
@@ -54,7 +54,7 @@ An answer of `confirmation_required` is therefore the normal path, not an error.
 
 An operator may set the policy to `Disabled` — intended for controlled environments such as a disposable sandbox — in which case mutations run without the extra round trip. On a production tenant, expect confirmation to be required.
 
-Deleting a record is destructive and confirmation-gated like every other change; there is no separate undo.
+Deleting an object is destructive and confirmation-gated like every other change; there is no separate undo.
 
 ## Related pages
 
