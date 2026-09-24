@@ -5,7 +5,7 @@ description: Overview of the time cockpit MCP server, its endpoints, authenticat
 # Time Cockpit MCP Server
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 > [!NOTE]
 > Availability: The time cockpit MCP server is currently available to selected customers only. If you would like to use it with your time cockpit tenant, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com).

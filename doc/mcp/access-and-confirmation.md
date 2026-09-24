@@ -6,7 +6,7 @@ keywords: [MCP readonly, MCP owndata, MCP confirmation, confirmed=true, AI agent
 # MCP Access, Scope, and Confirmation
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Three mechanisms decide what an AI agent may do with your time cockpit data. Two of them you choose when you connect; the third is set by whoever operates the server.
 
