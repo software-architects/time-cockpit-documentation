@@ -16,9 +16,22 @@ $ErrorActionPreference = "Stop"
 Write-Host "==> generate-llms.ps1 (llms.txt, llms-full.txt, Markdown sources -> _site)"
 & (Join-Path $PSScriptRoot "GenerateLlmsTxt\generate-llms.ps1")
 
+Write-Host "==> fix-hreflang.ps1 (link German and English pages)"
+try {
+    & (Join-Path $PSScriptRoot "FixHreflang\fix-hreflang.ps1")
+}
+catch {
+    Write-Warning "fix-hreflang.ps1 failed, pages keep the template defaults: $($_.Exception.Message)"
+}
+
 Write-Host "==> fix-sitemap.ps1 (drop noindex pages, lastmod from git)"
 try {
     & (Join-Path $PSScriptRoot "FixSitemap\fix-sitemap.ps1")
+    $siteRoot = Join-Path (Split-Path -Parent $PSScriptRoot) "_site"
+    $deSitemap = Join-Path $siteRoot "de\sitemap.xml"
+    if (Test-Path -LiteralPath $deSitemap) {
+        & (Join-Path $PSScriptRoot "FixSitemap\fix-sitemap.ps1") -SitemapPath $deSitemap -BaseUrl "https://docs.timecockpit.com/de/" -SourcePrefix "de/"
+    }
 }
 catch {
     Write-Warning "fix-sitemap.ps1 failed, sitemap.xml is left as DocFX wrote it: $($_.Exception.Message)"

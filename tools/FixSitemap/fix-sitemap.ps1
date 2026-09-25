@@ -12,8 +12,11 @@
 [CmdletBinding()]
 param(
     [string]$SitemapPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path "_site\sitemap.xml"),
-    [string]$BaseUrl = "https://docs.timecockpit.com"
+    [string]$BaseUrl = "https://docs.timecockpit.com",
+    # Repo folder that holds the sources of this sitemap's pages ("de/" for the German site).
+    [string]$SourcePrefix = ""
 )
+$BaseUrl = $BaseUrl.TrimEnd('/')
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
@@ -30,7 +33,7 @@ if (Get-Command git -ErrorAction SilentlyContinue) {
     Push-Location $repoRoot
     try {
         $current = $null
-        foreach ($line in (& git log --format='%x01%cI' --name-only -- doc api toc.yml 2>$null)) {
+        foreach ($line in (& git log --format='%x01%cI' --name-only -- doc api toc.yml de 2>$null)) {
             if ($line.StartsWith([char]1)) { $current = $line.Substring(1); continue }
             if ($line -eq '') { continue }
             $key = $line.Replace('\', '/')
@@ -85,6 +88,7 @@ foreach ($url in @($xml.SelectNodes("//s:url", $ns))) {
     elseif ($path -match '^doc/.*\.html$') { $source = ($path -replace '\.html$', '.md') }
     elseif ($path -match '^api/.*\.html$') { $source = ($path -replace '\.html$', '.yml') }
 
+    if ($source) { $source = $SourcePrefix + $source }
     if ($source -and $lastCommit.ContainsKey($source)) {
         $url.SelectSingleNode("s:lastmod", $ns).InnerText = $lastCommit[$source]
         $updated++

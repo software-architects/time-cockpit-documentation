@@ -1,0 +1,85 @@
+{
+  // German documentation: a separate docfx build into _site/de (see AGENTS.md, "German documentation").
+  // Only the product documentation is translated; the API reference stays English.
+  "build": {
+    "content": [
+      {
+        "files": [
+          "doc/**.md",
+          "doc/**/toc.yml",
+          "toc.yml"
+        ],
+        "exclude": [
+          "obj/**",
+          "tctemplate-de/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/images/**"
+        ],
+        "exclude": [
+          "obj/**",
+          "tctemplate-de/**"
+        ]
+      }
+    ],
+    "dest": "../_site/de",
+    "globalMetadata": {
+      "_lang": "de",
+      "_isDe": true,
+      "_siteBase": "https://docs.timecockpit.com/de/",
+      "_altRoot": "/",
+      "_altLang": "en",
+      "_ogLocale": "de_AT",
+      "_appFaviconPath": "images/favicon.ico",
+      "_appLogoPath": "images/time-cockpit-logo.svg",
+      "_appName": "time cockpit",
+      "_appTitle": "time cockpit",
+      "_appFooter": "Copyright © 2026 software architects gmbh &middot; <a href=\"https://www.timecockpit.com/de/impressum/uebersicht/\" target=\"_blank\" rel=\"noopener\">Impressum</a> &middot; <a href=\"https://www.timecockpit.com/de/impressum/datenschutzbestimmungen/\" target=\"_blank\" rel=\"noopener\">Datenschutzerklärung</a> &middot; <a href=\"#\" onclick=\"window.renewCookieConsent(); return false;\">Cookie-Einstellungen</a>",
+      "_labelAllPages": "Alle Seiten",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "template": [
+      "default",
+      "modern",
+      "../tctemplate",
+      "tctemplate-de"
+    ],
+    "postProcessors": [],
+    "sitemap": {
+      "baseUrl": "https://docs.timecockpit.com/de/",
+      "priority": 0.1,
+      "changefreq": "monthly",
+      "fileOptions": {
+        "doc/**.md": {
+          "priority": 0.7,
+          "changefreq": "monthly"
+        },
+        "doc/erste-schritte/**.md": {
+          "priority": 0.9,
+          "changefreq": "monthly"
+        },
+        "doc/fuer-anwender.md": {
+          "priority": 0.9,
+          "changefreq": "monthly"
+        },
+        "doc/fuer-entwickler.md": {
+          "priority": 0.9,
+          "changefreq": "monthly"
+        },
+        "doc/*-faq.md": {
+          "priority": 0.9,
+          "changefreq": "monthly"
+        },
+        "doc/release-notes/**.md": {
+          "priority": 0.3,
+          "changefreq": "yearly"
+        }
+      }
+    }
+  }
+}

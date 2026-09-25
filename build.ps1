@@ -26,8 +26,12 @@ try {
     & dotnet tool restore
     if ($LASTEXITCODE -ne 0) { throw "dotnet tool restore failed with exit code $LASTEXITCODE" }
 
-    Write-Host "==> generate-site-index.ps1 (doc/site-index.md from toc.yml)"
+    Write-Host "==> generate-site-index.ps1 (doc/all-pages.md from toc.yml)"
     & (Join-Path $repoRoot "tools\GenerateSiteIndex\generate-site-index.ps1")
+
+    Write-Host "==> relink-de.ps1 / build-de-toc.ps1 (German pages: links and navigation)"
+    & (Join-Path $repoRoot "tools\Translate\relink-de.ps1")
+    & (Join-Path $repoRoot "tools\Translate\build-de-toc.ps1")
 
     if ($SkipMetadata) {
         Write-Host "==> dotnet docfx build docfx.json"
@@ -38,6 +42,10 @@ try {
         & dotnet docfx docfx.json
     }
     if ($LASTEXITCODE -ne 0) { throw "docfx failed with exit code $LASTEXITCODE" }
+
+    Write-Host "==> dotnet docfx build de/docfx.json (German site -> _site/de)"
+    & dotnet docfx build de/docfx.json
+    if ($LASTEXITCODE -ne 0) { throw "docfx (de) failed with exit code $LASTEXITCODE" }
 
     & (Join-Path $repoRoot "tools\post-build.ps1")
 

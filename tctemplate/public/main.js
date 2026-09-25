@@ -172,7 +172,8 @@ export default {
     // in the template so titles and descriptions are taken from the parsed DOM and
     // serialized safely. The breadcrumb is rendered asynchronously by the template,
     // so its block is added once the breadcrumb has items.
-    const SITE = 'https://docs.timecockpit.com/';
+    const PAGE_LANG = (document.documentElement.lang || 'en').toLowerCase().slice(0, 2);
+    const SITE = PAGE_LANG === 'de' ? 'https://docs.timecockpit.com/de/' : 'https://docs.timecockpit.com/';
     const ORG = { '@id': 'https://www.timecockpit.com/#organization' };
     // Writes or updates one JSON-LD block; unchanged content is left alone.
     const addJsonLd = (id, data) => {
@@ -198,7 +199,7 @@ export default {
       const url = canonical();
       const graph = [
         { '@type': 'Organization', '@id': ORG['@id'], name: 'software architects gmbh', url: 'https://www.timecockpit.com/' },
-        { '@type': 'WebSite', '@id': SITE + '#website', url: SITE, name: 'time cockpit documentation', inLanguage: 'en', publisher: ORG },
+        { '@type': 'WebSite', '@id': SITE + '#website', url: SITE, name: PAGE_LANG === 'de' ? 'time cockpit Dokumentation' : 'time cockpit documentation', inLanguage: PAGE_LANG, publisher: ORG },
         {
           '@type': isApi ? 'WebPage' : (isFaq ? 'FAQPage' : 'TechArticle'),
           '@id': url + '#page',
@@ -206,7 +207,7 @@ export default {
           headline: title,
           name: title,
           ...(description ? { description } : {}),
-          inLanguage: 'en',
+          inLanguage: PAGE_LANG,
           isPartOf: { '@id': SITE + '#website' },
           publisher: ORG,
           ...(isFaq ? { mainEntity: faqEntities() } : {})

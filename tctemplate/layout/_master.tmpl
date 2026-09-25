@@ -19,14 +19,18 @@
       {{#description}}<meta name="description" content="{{description}}">{{/description}}
       {{^description}}{{#name.0.value}}<meta name="description" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} in the {{namespace.uid}} namespace{{/namespace.uid}}{{#assemblies.0}}, assembly {{assemblies.0}}.dll{{/assemblies.0}}. time cockpit .NET API reference for customizing and scripting the data model.">{{/name.0.value}}{{/description}}
       {{#_noindex}}<meta name="robots" content="noindex, follow">{{/_noindex}}
-      <link rel="canonical" href="https://docs.timecockpit.com/{{{_path}}}">
-      <link rel="alternate" hreflang="en" href="https://docs.timecockpit.com/{{{_path}}}">
-      <link rel="alternate" hreflang="x-default" href="https://docs.timecockpit.com/{{{_path}}}">
+      {{!time cockpit: _siteBase, _lang, _xDefault, _ogLocale come from globalMetadata (docfx.json = EN, de/docfx.json = DE).
+          The hreflang link to the other language and og:locale:alternate are added after the build by
+          tools/FixHreflang/fix-hreflang.ps1 for pages that have a translation (front matter en_page on DE pages).}}
+      <link rel="canonical" href="{{_siteBase}}{{{_path}}}">
+      <link rel="alternate" hreflang="{{_lang}}" href="{{_siteBase}}{{{_path}}}">
+      {{#_xDefault}}<link rel="alternate" hreflang="x-default" href="{{_siteBase}}{{{_path}}}">{{/_xDefault}}
+      {{#en_page}}<meta name="docfx:en-page" content="{{en_page}}">{{/en_page}}
       {{!time cockpit: social previews. JSON-LD (WebSite, TechArticle, BreadcrumbList, FAQPage) is built in public/main.js.}}
       <meta property="og:type" content="article">
       <meta property="og:site_name" content="time cockpit documentation">
-      <meta property="og:locale" content="en_US">
-      <meta property="og:url" content="https://docs.timecockpit.com/{{{_path}}}">
+      <meta property="og:locale" content="{{_ogLocale}}{{^_ogLocale}}en_US{{/_ogLocale}}">
+      <meta property="og:url" content="{{_siteBase}}{{{_path}}}">
       <meta property="og:title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}">
       {{#description}}<meta property="og:description" content="{{description}}">{{/description}}
       <meta property="og:image" content="https://docs.timecockpit.com/images/{{#og_image}}{{og_image}}{{/og_image}}{{^og_image}}og-default.png{{/og_image}}">
@@ -108,6 +112,13 @@
               {{/_enableSearch}}
             </div>
           </div>
+          {{!time cockpit: language switch (EN | DE). The link to the other language defaults to that
+              language's start page; tools/FixHreflang/fix-hreflang.ps1 points it at the translated
+              counterpart after the build when one exists. _isEn/_isDe/_altRoot come from globalMetadata.}}
+          <div class="tc-lang" role="navigation" aria-label="Language">
+            {{#_isEn}}<span class="tc-lang-link active" lang="en" aria-current="true">EN</span>{{/_isEn}}{{^_isEn}}<a class="tc-lang-link" data-lang="en" lang="en" hreflang="en" href="{{_altRoot}}">EN</a>{{/_isEn}}
+            {{#_isDe}}<span class="tc-lang-link active" lang="de" aria-current="true">DE</span>{{/_isDe}}{{^_isDe}}<a class="tc-lang-link" data-lang="de" lang="de" hreflang="de" href="{{_altRoot}}">DE</a>{{/_isDe}}
+          </div>
         </div>
       </nav>
       {{/_disableNavbar}}
@@ -180,7 +191,7 @@
         <div class="flex-fill">
           {{{_appFooter}}}{{^_appFooter}}<span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>{{/_appFooter}}
           {{!time cockpit: server-rendered link to the index of all pages, for crawlers without JavaScript.}}
-          &middot; <a href="{{_rel}}doc/all-pages.html">All pages</a>
+          &middot; <a href="{{_rel}}doc/all-pages.html">{{_labelAllPages}}{{^_labelAllPages}}All pages{{/_labelAllPages}}</a>
         </div>
       </div>
     </footer>
@@ -248,28 +259,58 @@
           dispatchConsentChanged();
         }
 
+        // Banner texts in the page language (<html lang>); the DE site is a separate docfx build.
+        var isDe = (document.documentElement.lang || 'en').toLowerCase().indexOf('de') === 0;
+        var L = isDe ? {
+          necessary: 'Notwendig',
+          necessaryDesc: '<p>Diese Cookies sind für den Betrieb der Website notwendig und können nicht deaktiviert werden. Sie speichern Ihre Cookie-Einstellungen und Ihre Wahl des hellen oder dunklen Designs.</p>',
+          analytics: 'Analyse',
+          analyticsDesc: '<p>Wir verwenden Google Analytics, um anonymisierte Informationen darüber zu sammeln, wie Besucher diese Dokumentation nutzen. Dabei werden Daten an Google übermittelt. Das hilft uns, die Inhalte zu verbessern. (Unser cookiefreier Seitenzähler von Simple Analytics speichert keine personenbezogenen Daten und ist immer aktiv.)</p>',
+          media: 'Externe Medien (YouTube, Vimeo)',
+          mediaDesc: '<p>Eingebettete Videos sind standardmäßig blockiert. Wenn Sie zustimmen, können Videos ohne weitere manuelle Bestätigung abgespielt werden. YouTube und Vimeo können Cookies für Tracking und Personalisierung setzen, sobald Sie mit einem Video interagieren.</p>',
+          banner: '<p>Wir verwenden Cookies auf dieser Website, um unseren Traffic zu analysieren und eingebettete Videos anzuzeigen. <a href="https://www.timecockpit.com/de/impressum/datenschutzbestimmungen/" target="_blank" rel="noopener">Datenschutzerklärung.</a></p>',
+          acceptAll: 'Alle akzeptieren', acceptAllLabel: 'Alle Cookies akzeptieren',
+          reject: 'Nicht notwendige ablehnen', rejectLabel: 'Nicht notwendige ablehnen',
+          prefs: 'Einstellungen', prefsLabel: 'Einstellungen umschalten',
+          prefsTitle: 'Ihre Cookie-Einstellungen anpassen',
+          prefsDesc: '<p>Wir respektieren Ihr Recht auf Privatsphäre. Sie können auswählen, ob Sie bestimmte Arten von Cookies zulassen möchten. Ihre Cookie-Einstellungen gelten für diese gesamte Dokumentation.</p>'
+        } : {
+          necessary: 'Necessary',
+          necessaryDesc: '<p>These cookies are necessary for the site to function and cannot be switched off. They store your cookie preferences and your light/dark theme choice.</p>',
+          analytics: 'Analytics',
+          analyticsDesc: '<p>We use Google Analytics to collect anonymized information about how visitors use this documentation. Data is shared with Google. This helps us improve the content. (Our cookieless page counter by Simple Analytics does not store personal data and is always active.)</p>',
+          media: 'External Media (YouTube, Vimeo)',
+          mediaDesc: '<p>Embedded videos are blocked by default. When you accept, videos can be played without further manual consent. YouTube and Vimeo may set cookies for tracking and personalization once you interact with a video.</p>',
+          banner: '<p>We use cookies on this site to analyze our traffic and to show embedded videos. <a href="https://www.timecockpit.com/legal-notice/privacy-policy/" target="_blank" rel="noopener">Privacy Statement.</a></p>',
+          acceptAll: 'Accept all', acceptAllLabel: 'Accept all cookies',
+          reject: 'Reject non-essential', rejectLabel: 'Reject non-essential',
+          prefs: 'Preferences', prefsLabel: 'Toggle preferences',
+          prefsTitle: 'Customize your cookie preferences',
+          prefsDesc: '<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences apply across this documentation site.</p>'
+        };
+
         silktideCookieBannerManager.updateCookieBannerConfig({
           background: { showBackground: false },
           cookieIcon: { position: 'bottomLeft' },
           cookieTypes: [
             {
               id: 'necessary',
-              name: 'Necessary',
-              description: '<p>These cookies are necessary for the site to function and cannot be switched off. They store your cookie preferences and your light/dark theme choice.</p>',
+              name: L.necessary,
+              description: L.necessaryDesc,
               required: true
             },
             {
               id: 'analytics',
-              name: 'Analytics',
-              description: '<p>We use Google Analytics to collect anonymized information about how visitors use this documentation. Data is shared with Google. This helps us improve the content. (Our cookieless page counter by Simple Analytics does not store personal data and is always active.)</p>',
+              name: L.analytics,
+              description: L.analyticsDesc,
               defaultValue: false,
               onAccept: function () { setConsent('analytics', true); },
               onReject: function () { setConsent('analytics', false); }
             },
             {
               id: 'externalmedia',
-              name: 'External Media (YouTube, Vimeo)',
-              description: '<p>Embedded videos are blocked by default. When you accept, videos can be played without further manual consent. YouTube and Vimeo may set cookies for tracking and personalization once you interact with a video.</p>',
+              name: L.media,
+              description: L.mediaDesc,
               defaultValue: false,
               onAccept: function () { setConsent('externalmedia', true); },
               onReject: function () { setConsent('externalmedia', false); }
@@ -277,17 +318,17 @@
           ],
           text: {
             banner: {
-              description: '<p>We use cookies on this site to analyze our traffic and to show embedded videos. <a href="https://www.timecockpit.com/legal-notice/privacy-policy/" target="_blank" rel="noopener">Privacy Statement.</a></p>',
-              acceptAllButtonText: 'Accept all',
-              acceptAllButtonAccessibleLabel: 'Accept all cookies',
-              rejectNonEssentialButtonText: 'Reject non-essential',
-              rejectNonEssentialButtonAccessibleLabel: 'Reject non-essential',
-              preferencesButtonText: 'Preferences',
-              preferencesButtonAccessibleLabel: 'Toggle preferences'
+              description: L.banner,
+              acceptAllButtonText: L.acceptAll,
+              acceptAllButtonAccessibleLabel: L.acceptAllLabel,
+              rejectNonEssentialButtonText: L.reject,
+              rejectNonEssentialButtonAccessibleLabel: L.rejectLabel,
+              preferencesButtonText: L.prefs,
+              preferencesButtonAccessibleLabel: L.prefsLabel
             },
             preferences: {
-              title: 'Customize your cookie preferences',
-              description: '<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences apply across this documentation site.</p>',
+              title: L.prefsTitle,
+              description: L.prefsDesc,
               creditLinkText: ' ',
               creditLinkAccessibleLabel: ' '
             }

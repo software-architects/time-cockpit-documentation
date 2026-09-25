@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RequestUrlMappings>
+	<!-- DE (before the EN keys: the mapper matches with EndsWith, so "de/doc" must win over "doc") -->
+	<Mapping RequestPath="de/index.html" RewritePath="/de/doc/erste-schritte/ueberblick.html" />
+	<Mapping RequestPath="de/doc" RewritePath="/de/doc/erste-schritte/ueberblick.html" />
+	<Mapping RequestPath="de/doc/" RewritePath="/de/doc/erste-schritte/ueberblick.html" />
 	<!-- DOC -->
 	<Mapping RequestPath="index.html" RewritePath="/doc/getting-started/overview.html" />
 	<Mapping RequestPath="doc" RewritePath="/doc/getting-started/overview.html" />
