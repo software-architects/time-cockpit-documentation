@@ -1,6 +1,6 @@
 ---
 title: AI Assistants - Use Cases and Prompts by Role
-description: Ready-to-use prompts for project managers, controllers, HR administrators, time tracking users and department leads working with time cockpit via AI.
+description: "Ready-to-use prompts for project managers, controllers, HR administrators, time tracking users and department leads working with time cockpit via AI."
 ---
 # Use Cases and Prompts by Role
 

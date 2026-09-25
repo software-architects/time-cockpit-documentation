@@ -1,6 +1,6 @@
 ---
 title: MCP Server - OnCockpit Admin Local MCP Server
-description: Run the local time cockpit MCP server in OnCockpit Admin over stdio, register it in Claude Code, VS Code or Codex and script data model roundtrips and tests.
+description: "Run the local time cockpit MCP server in OnCockpit Admin over stdio, register it in Claude Code, VS Code or Codex and script data model roundtrips and tests."
 ---
 # OnCockpit Admin: Local MCP Server (stdio)
 

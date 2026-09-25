@@ -1,6 +1,6 @@
 ---
 title: Signal Trackers - Activity Tracking
-description: time cockpit's signal trackers record PC activity such as active windows, user activity, emails and phone calls to simplify time tracking.
+description: "time cockpit's signal trackers record PC activity such as active windows, user activity, emails and phone calls to simplify time tracking."
 ---
 # Signal Trackers
 

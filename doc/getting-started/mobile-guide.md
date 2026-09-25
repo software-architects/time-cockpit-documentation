@@ -1,6 +1,6 @@
 ---
 title: Mobile & Responsive Time Tracking Guide
-description: Use time cockpit on phones and tablets: responsive web access, mobile workflows, tips for on-the-go time tracking and PWA installation.
+description: "Use time cockpit on phones and tablets: responsive web access, mobile workflows, tips for on-the-go time tracking and PWA installation."
 keywords: [mobile time tracking, responsive time tracking, track time on phone, mobile app alternative, tablet time tracking, PWA time cockpit, mobile browser access, on-the-go time tracking, smartphone timesheet, mobile web app]
 ---
 

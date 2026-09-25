@@ -1,6 +1,6 @@
 ---
 title: MCP Limits, Truncation, and Long-Running Operations
-description: Row and size limits of the time cockpit MCP server: how to read a truncated result, why list descriptions come from a sample and what cannot be cancelled.
+description: "Row and size limits of the time cockpit MCP server: how to read a truncated result, why list descriptions come from a sample and what cannot be cancelled."
 keywords: [MCP truncated, MCP row limit, MCP response limit, describe_list sample, cancel MCP operation, time cockpit]
 ---
 # MCP Limits, Truncation, and Long-Running Operations

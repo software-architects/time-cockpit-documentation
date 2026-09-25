@@ -1,6 +1,6 @@
 ---
 title: Approval Workflows - Absence & Timesheet Approvals
-description: Approval workflows in time cockpit: absence approvals for vacation, sick leave and compensatory time, timesheet approvals, role permissions and notifications.
+description: "Approval workflows in time cockpit: absence approvals for vacation, sick leave and compensatory time, timesheet approvals, role permissions and notifications."
 keywords: [approval workflow, absence approval, vacation approval, timesheet approval, workflow automation, approval process, leave request approval, approval permissions, workflow notifications, approval management]
 ---
 

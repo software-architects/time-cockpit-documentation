@@ -1,6 +1,6 @@
 ---
 title: MCP Server - OpenAI Codex Setup
-description: Register the time cockpit MCP server in OpenAI Codex (CLI, desktop app, IDE) with codex mcp add or config.toml, sign in with Entra ID and fix errors.
+description: "Register the time cockpit MCP server in OpenAI Codex (CLI, desktop app, IDE) with codex mcp add or config.toml, sign in with Entra ID and fix errors."
 ---
 # OpenAI Codex (CLI, Desktop App, IDE Extension)
 

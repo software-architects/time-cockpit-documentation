@@ -1,6 +1,6 @@
 ---
 title: Scripting - IronPython Automation Guide
-description: Automate time cockpit with IronPython scripts: modify data models, create interfaces, customize the UI and run batch processes in the built-in script editor.
+description: "Automate time cockpit with IronPython scripts: modify data models, create interfaces, customize the UI and run batch processes in the built-in script editor."
 ---
 # Scripting
 

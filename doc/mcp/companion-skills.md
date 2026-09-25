@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Companion Skills and APM
-description: Install the timecockpit-agents companion skills with Microsoft APM so AI assistants can connect to time cockpit, query with TCQL, book time and run lists.
+description: "Install the timecockpit-agents companion skills with Microsoft APM so AI assistants can connect to time cockpit, query with TCQL, book time and run lists."
 ---
 # Companion Skills: Installing timecockpit-agents with APM
 

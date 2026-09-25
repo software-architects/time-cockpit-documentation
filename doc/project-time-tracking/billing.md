@@ -1,6 +1,6 @@
 ---
 title: Invoicing - Create & Manage Invoices
-description: Create invoices from time sheet entries in time cockpit: generate invoice items automatically, use articles, create manual invoices and PDF reports.
+description: "Create invoices from time sheet entries in time cockpit: generate invoice items automatically, use articles, create manual invoices and PDF reports."
 ---
 # Invoicing
 

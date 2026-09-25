@@ -1,6 +1,6 @@
 ---
 title: Signals - Duration & Point Signals Guide
-description: How signals work in time cockpit's calendar: duration signals, point signals, combined activities and how to use them for accurate time tracking.
+description: "How signals work in time cockpit's calendar: duration signals, point signals, combined activities and how to use them for accurate time tracking."
 ---
 # Signals
 

@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Visual Studio Code Setup
-description: Configure the time cockpit MCP server in Visual Studio Code for Copilot agent mode via mcp.json: OAuth client ID, header inputs, sign-in and troubleshooting.
+description: "Configure the time cockpit MCP server in Visual Studio Code for Copilot agent mode via mcp.json: OAuth client ID, header inputs, sign-in and troubleshooting."
 ---
 # Visual Studio Code (GitHub Copilot Agent Mode)
 

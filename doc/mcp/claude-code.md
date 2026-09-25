@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Claude Code Setup
-description: Register the time cockpit MCP server in Claude Code, sign in with Microsoft Entra ID, verify the connection and share the setup via .mcp.json.
+description: "Register the time cockpit MCP server in Claude Code, sign in with Microsoft Entra ID, verify the connection and share the setup via .mcp.json."
 ---
 # Claude Code (CLI)
 

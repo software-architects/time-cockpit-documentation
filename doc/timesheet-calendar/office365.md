@@ -1,6 +1,6 @@
 ---
 title: Office 365 Integration - Calendar & Email Sync
-description: Integrate time cockpit with Office 365 to sync Outlook appointments and sent emails into your time sheet calendar for complete time tracking.
+description: "Integrate time cockpit with Office 365 to sync Outlook appointments and sent emails into your time sheet calendar for complete time tracking."
 keywords: [Office 365 integration, Outlook integration, calendar sync, email sync, Office 365 calendar, Outlook appointments, appointment sync, email tracking, Microsoft 365, calendar integration]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: MCP Access, Scope, and Confirmation
-description: How the time cockpit MCP server limits what an AI agent may do: read-only mode, own-data scope, permission enforcement and the confirmation handshake.
+description: "How the time cockpit MCP server limits what an AI agent may do: read-only mode, own-data scope, permission enforcement and the confirmation handshake."
 keywords: [MCP readonly, MCP owndata, MCP confirmation, confirmed=true, AI agent permissions, time cockpit]
 ---
 # MCP Access, Scope, and Confirmation

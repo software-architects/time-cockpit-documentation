@@ -1,6 +1,6 @@
 ---
 title: Features Overview - Time Cockpit Capabilities
-description: Overview of time cockpit features by capability: time tracking, project management, invoicing, employee management, reporting and integrations.
+description: "Overview of time cockpit features by capability: time tracking, project management, invoicing, employee management, reporting and integrations."
 keywords: [time cockpit features, feature overview, capabilities, time tracking features, project management, invoicing, employee time tracking, reporting features, feature guide]
 ---
 

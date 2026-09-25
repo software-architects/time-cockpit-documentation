@@ -2,7 +2,7 @@
 uid: tcql
 name: TCQL
 title: TCQL - Query Language Guide
-description: time cockpit's query language TCQL, similar to LINQ: query data, use aggregation functions and sub-queries, integrate with IronPython and .NET.
+description: "time cockpit's query language TCQL, similar to LINQ: query data, use aggregation functions and sub-queries, integrate with IronPython and .NET."
 ---
 
 # Time Cockpit Query Language (TCQL)

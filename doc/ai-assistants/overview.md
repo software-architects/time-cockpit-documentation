@@ -1,6 +1,6 @@
 ---
 title: AI Assistants - Work with Time Cockpit from Claude, Codex, and Copilot
-description: Use AI assistants with time cockpit via the MCP server: what you can do, which assistants are supported, what you need and how to start safely.
+description: "Use AI assistants with time cockpit via the MCP server: what you can do, which assistants are supported, what you need and how to start safely."
 ---
 # AI Assistants for Time Cockpit
 

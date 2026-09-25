@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Connect AI Assistants to Time Cockpit
-description: Overview of the time cockpit MCP server: endpoints, authentication with Microsoft Entra ID, per-connection settings and supported AI clients. Public preview.
+description: "Overview of the time cockpit MCP server: endpoints, authentication with Microsoft Entra ID, per-connection settings and supported AI clients. Public preview."
 ---
 # Time Cockpit MCP Server
 
