@@ -32,6 +32,9 @@ try {
     }
     if ($LASTEXITCODE -ne 0) { throw "docfx failed with exit code $LASTEXITCODE" }
 
+    Write-Host "==> fix-sitemap.ps1 (lastmod from git)"
+    & (Join-Path $repoRoot "tools\FixSitemap\fix-sitemap.ps1")
+
     Write-Host "==> generate-llms.ps1 (llms.txt, llms-full.txt, Markdown sources -> _site)"
     & (Join-Path $repoRoot "tools\GenerateLlmsTxt\generate-llms.ps1")
 
