@@ -11,12 +11,14 @@
       <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
     {{/redirect_url}}
     {{^redirect_url}}
-      {{!time cockpit: API pages add the namespace to the title (same class names exist in several namespaces) and get a generated description.}}
-      <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}</title>
+      {{!time cockpit: API pages (ManagedReference models, recognizable by name.0.value; the pipeline's old docfx does not set yamlmime)
+          add the namespace to the title, drop the site suffix to stay under 70 characters, and get a generated description.}}
+      <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}}{{^name.0.value}} {{#_appTitle}}| {{_appTitle}}{{/_appTitle}}{{/name.0.value}}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
+      <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}}{{^name.0.value}} {{#_appTitle}}| {{_appTitle}}{{/_appTitle}}{{/name.0.value}}">
       {{#description}}<meta name="description" content="{{description}}">{{/description}}
-      {{^description}}{{#yamlmime}}<meta name="description" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} in the {{namespace.uid}} namespace{{/namespace.uid}}{{#assemblies.0}}, assembly {{assemblies.0}}.dll{{/assemblies.0}}. time cockpit .NET API reference for customizing and scripting the data model.">{{/yamlmime}}{{/description}}
+      {{^description}}{{#name.0.value}}<meta name="description" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} in the {{namespace.uid}} namespace{{/namespace.uid}}{{#assemblies.0}}, assembly {{assemblies.0}}.dll{{/assemblies.0}}. time cockpit .NET API reference for customizing and scripting the data model.">{{/name.0.value}}{{/description}}
+      {{#name.0.value}}<meta name="docfx:api" content="true">{{/name.0.value}}
       {{#_noindex}}<meta name="robots" content="noindex, follow">{{/_noindex}}
       <link rel="canonical" href="https://docs.timecockpit.com/{{{_path}}}">
       <link rel="alternate" hreflang="en" href="https://docs.timecockpit.com/{{{_path}}}">
@@ -179,7 +181,7 @@
         <div class="flex-fill">
           {{{_appFooter}}}{{^_appFooter}}<span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>{{/_appFooter}}
           {{!time cockpit: server-rendered link to the index of all pages, for crawlers without JavaScript.}}
-          &middot; <a href="{{_rel}}doc/site-index.html">Site index</a>
+          &middot; <a href="{{_rel}}doc/all-pages.html">All pages</a>
         </div>
       </div>
     </footer>

@@ -1,7 +1,11 @@
-# Generates doc/site-index.md, a plain HTML-rendered index of every page in doc/toc.yml
+# Generates doc/all-pages.md, a plain HTML-rendered index of every page in doc/toc.yml
 # plus the API namespaces from api/toc.yml. The modern template renders navigation
 # (TOC, navbar, breadcrumb) with JavaScript, so crawlers that do not execute scripts
 # see every page as orphaned; this page gives them server-rendered links to everything.
+#
+# The file name must not end with "index.md": App_Code/TimeCockpit/UrlRedirect maps any
+# request path that ENDS WITH "index.html" to the overview page (it was site-index.md
+# once and got redirected away).
 #
 # Runs before "docfx build" (build.ps1 does this). The output is committed, so the
 # pipeline does not need to run it, but re-run it whenever doc/toc.yml changes.
@@ -49,7 +53,7 @@ function Read-Toc([string]$tocPath) {
 # plain text: folders, toc.yml references and pages that do not exist would otherwise
 # become broken links on the index page.
 function Resolve-Href([string]$href, [string]$baseDir, [string]$linkPrefix) {
-    if (-not $href -or $href -eq 'site-index.md') { return $null }
+    if (-not $href -or $href -eq 'all-pages.md') { return $null }
     if ($href -match '^https?://') { return $href }
     $file = $href -replace '#.*$', ''
     if ($file -notmatch '\.(md|yml)$') {
@@ -79,10 +83,10 @@ function Write-Items($node, [int]$level, [System.Text.StringBuilder]$sb, [string
 
 $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine('---')
-[void]$sb.AppendLine('title: Documentation Index - All Pages')
+[void]$sb.AppendLine('title: All Pages - Documentation Index')
 [void]$sb.AppendLine('description: "Complete index of the time cockpit documentation: every guide, FAQ, reference page and release note, plus the API reference namespaces."')
 [void]$sb.AppendLine('---')
-[void]$sb.AppendLine('# Documentation Index')
+[void]$sb.AppendLine('# All Pages')
 [void]$sb.AppendLine()
 [void]$sb.AppendLine('Every page of the time cockpit documentation on one page, in the order of the navigation. Generated from `doc/toc.yml`; do not edit by hand.')
 [void]$sb.AppendLine()
@@ -115,8 +119,8 @@ if (Test-Path -LiteralPath $apiToc) {
     [void]$sb.AppendLine()
 }
 
-$outPath = Join-Path $docRoot "site-index.md"
+$outPath = Join-Path $docRoot "all-pages.md"
 $content = $sb.ToString()
 [System.IO.File]::WriteAllText($outPath, $content, (New-Object System.Text.UTF8Encoding $false))
 $linkCount = ([regex]::Matches($content, '\]\(')).Count
-Write-Host "doc/site-index.md: $linkCount links"
+Write-Host "doc/all-pages.md: $linkCount links"

@@ -1,8 +1,8 @@
 ---
-title: Documentation Index - All Pages
+title: All Pages - Documentation Index
 description: "Complete index of the time cockpit documentation: every guide, FAQ, reference page and release note, plus the API reference namespaces."
 ---
-# Documentation Index
+# All Pages
 
 Every page of the time cockpit documentation on one page, in the order of the navigation. Generated from `doc/toc.yml`; do not edit by hand.
 
