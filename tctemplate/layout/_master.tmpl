@@ -49,15 +49,9 @@
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
       </script>
 
-      {{#_googleAnalyticsTagId}}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{_googleAnalyticsTagId}}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', '{{_googleAnalyticsTagId}}');
-      </script>
-      {{/_googleAnalyticsTagId}}
+      {{!time cockpit: Google Analytics is NOT loaded here. See the consent block at the end of <body>.}}
+      {{!Simple Analytics: cookieless, no personal data, skips localhost, so no consent is required.}}
+      <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     {{/redirect_url}}
   </head>
 
@@ -158,6 +152,116 @@
         </div>
       </div>
     </footer>
+
+    {{!time cockpit: Silktide Consent Manager (vendored copy from www.timecockpit.com) and everything
+        gated behind consent. Runs at the end of <body> because the banner needs the body element.
+        GA4 is only inserted after "Analytics" consent; videos (main.js) only after "External Media".}}
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="{{_rel}}public/silktide-consent-manager.css">
+    <script src="{{_rel}}public/silktide-consent-manager.js"></script>
+    <script>
+      (function () {
+        var GA_ID = 'G-40TTBWH0PH';
+
+        // Consent Mode defaults; gtag.js itself is inserted by loadTracking() after consent.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        gtag('js', new Date());
+        gtag('config', GA_ID, { send_page_view: false });
+
+        window.cookieConsent = { analytics: false, externalmedia: false };
+        window.renewCookieConsent = function () {
+          var icon = document.getElementById('silktide-cookie-icon');
+          if (icon) icon.click();
+        };
+        // Consent given and not a local preview (docfx serve binds localhost).
+        window.hasAnalyticsConsent = function () {
+          return !!window.cookieConsent.analytics && ['localhost', '127.0.0.1'].indexOf(location.hostname) === -1;
+        };
+
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return false;
+          trackingLoaded = true;
+          var g = document.createElement('script');
+          g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(g);
+          return true;
+        }
+
+        window.addEventListener('cookieConsentChanged', function () {
+          document.documentElement.classList.toggle('externalmedia-granted', !!window.cookieConsent.externalmedia);
+          var allow = window.hasAnalyticsConsent() ? 'granted' : 'denied';
+          gtag('consent', 'update', { ad_storage: allow, analytics_storage: allow, ad_user_data: allow, ad_personalization: allow });
+          if (allow === 'granted' && loadTracking()) {
+            gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
+          }
+        });
+
+        // Silktide fires one callback per cookie type; coalesce into one event per user action.
+        var dispatchPending = false;
+        function dispatchConsentChanged() {
+          if (dispatchPending) return;
+          dispatchPending = true;
+          setTimeout(function () {
+            dispatchPending = false;
+            window.dispatchEvent(new CustomEvent('cookieConsentChanged'));
+          }, 0);
+        }
+        function setConsent(type, granted) {
+          window.cookieConsent[type] = granted;
+          dispatchConsentChanged();
+        }
+
+        silktideCookieBannerManager.updateCookieBannerConfig({
+          background: { showBackground: false },
+          cookieIcon: { position: 'bottomLeft' },
+          cookieTypes: [
+            {
+              id: 'necessary',
+              name: 'Necessary',
+              description: '<p>These cookies are necessary for the site to function and cannot be switched off. They store your cookie preferences and your light/dark theme choice.</p>',
+              required: true
+            },
+            {
+              id: 'analytics',
+              name: 'Analytics',
+              description: '<p>We use Google Analytics to collect anonymized information about how visitors use this documentation. Data is shared with Google. This helps us improve the content. (Our cookieless page counter by Simple Analytics does not store personal data and is always active.)</p>',
+              defaultValue: false,
+              onAccept: function () { setConsent('analytics', true); },
+              onReject: function () { setConsent('analytics', false); }
+            },
+            {
+              id: 'externalmedia',
+              name: 'External Media (YouTube, Vimeo)',
+              description: '<p>Embedded videos are blocked by default. When you accept, videos can be played without further manual consent. YouTube and Vimeo may set cookies for tracking and personalization once you interact with a video.</p>',
+              defaultValue: false,
+              onAccept: function () { setConsent('externalmedia', true); },
+              onReject: function () { setConsent('externalmedia', false); }
+            }
+          ],
+          text: {
+            banner: {
+              description: '<p>We use cookies on this site to analyze our traffic and to show embedded videos. <a href="https://www.timecockpit.com/legal-notice/privacy-policy/" target="_blank" rel="noopener">Privacy Statement.</a></p>',
+              acceptAllButtonText: 'Accept all',
+              acceptAllButtonAccessibleLabel: 'Accept all cookies',
+              rejectNonEssentialButtonText: 'Reject non-essential',
+              rejectNonEssentialButtonAccessibleLabel: 'Reject non-essential',
+              preferencesButtonText: 'Preferences',
+              preferencesButtonAccessibleLabel: 'Toggle preferences'
+            },
+            preferences: {
+              title: 'Customize your cookie preferences',
+              description: '<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences apply across this documentation site.</p>',
+              creditLinkText: ' ',
+              creditLinkAccessibleLabel: ' '
+            }
+          }
+        });
+      })();
+    </script>
   </body>
   {{/redirect_url}}
 </html>

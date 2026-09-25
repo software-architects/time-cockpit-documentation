@@ -138,6 +138,88 @@ article h4 {
   --bs-alert-border: 0;
 }
 
+/* --- Consent-gated videos (see main.js): nothing is loaded from YouTube/Vimeo ------
+       until the visitor accepts "External Media" in the cookie banner. ----------------- */
+.tc-video {
+  --bs-aspect-ratio: 56.25%;
+  background-color: var(--tc-navy);
+  border-radius: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.tc-video::before {
+  content: "";
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+}
+
+.tc-video > iframe,
+.tc-video > .tc-video-gate {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.tc-video-gate {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.tc-video-gate:hover,
+.tc-video-gate:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tc-video-gate img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.tc-video-play {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: var(--tc-blue);
+  display: inline-flex;
+  font-size: 2rem;
+  height: 72px;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.15s ease;
+  width: 72px;
+}
+
+.tc-video-gate:hover .tc-video-play {
+  transform: scale(1.08);
+}
+
+.tc-video-hint {
+  background-color: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  font-size: 0.875rem;
+  left: 0;
+  padding: 0.6rem 1rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
 /* --- Mermaid diagrams: zoom toolbar + drag-to-pan (see main.js) ------------------- */
 .mermaid-figure {
   margin: 1.5rem 0;
