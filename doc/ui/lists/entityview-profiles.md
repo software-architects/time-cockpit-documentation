@@ -17,7 +17,7 @@ The Profile feature introduces an additional button labeled "Profile" to every l
 - Users can customize list settings, including displayed columns, column order, grouping, collapse status of grouping, and sort order.
 - Profiles can be named for easy identification and management.
 
-<div class="tc-video" data-vimeo="864699078" data-title="create-entityview-profiles" style="--bs-aspect-ratio: 88.13%"></div>
+<div class="tc-video" data-vimeo="864699078" data-title="create-entityview-profiles" data-poster="../../../images/video-posters/864699078.jpg" style="--bs-aspect-ratio: 88.13%"></div>
 
 ### Profile Actions
 

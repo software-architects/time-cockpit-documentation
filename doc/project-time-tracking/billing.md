@@ -102,7 +102,7 @@ The following example shows an invoice with three invoice items.
 
 If the automated invoice item generation logic doesn't meet your requirements, you have the flexibility to create custom invoice items and articles. For instance, if your business offers both time-tracking consulting services and sells hardware time-tracking terminals, and you need to include both on a single invoice, you can define a custom article like "Time Tracking Terminal." It might be structured as follows.
 
-<div class="tc-video" data-vimeo="870320759" data-title="custom-invoice-item" style="--bs-aspect-ratio: 56.27%"></div>
+<div class="tc-video" data-vimeo="870320759" data-title="custom-invoice-item" data-poster="../../images/video-posters/870320759.jpg" style="--bs-aspect-ratio: 56.27%"></div>
 
 ### Creating a Custom Article
 

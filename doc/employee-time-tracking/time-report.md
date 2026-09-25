@@ -62,7 +62,7 @@ Currently, this feature is designed to generate up to 20 employees per month per
 
 Users can conveniently generate time reports in PDF or Excel format for a specified time period. This feature is particularly useful for users who need to generate time reports for multiple individuals, especially at the end of the month.
 
-<div class="tc-video" data-vimeo="869442493" data-title="print-time-reports" style="--bs-aspect-ratio: 56.25%"></div>
+<div class="tc-video" data-vimeo="869442493" data-title="print-time-reports" data-poster="../../images/video-posters/869442493.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Accessing the Feature
 1. Navigate to the user list within time cockpit.
