@@ -1,6 +1,6 @@
 ---
 title: Mitarbeiter-FAQ - Zeiterfassung und häufige Fragen
-description: Häufig gestellte Fragen von Mitarbeitern zur täglichen Zeiterfassung, zu Urlaubsanträgen, mobilem Zugriff und typischen Aufgaben rund um Zeiteinträge in time cockpit.
+description: Häufig gestellte Fragen von Mitarbeitern zur täglichen Zeiterfassung, zu Urlaubsanträgen, mobilem Zugriff und typischen Aufgaben rund um Zeitbuchungen in time cockpit.
 keywords: [zeiterfassung mitarbeiter, zeiteinträge hilfe, urlaubsantrag mitarbeiter, mobile zeiterfassung, mitarbeiter faq, abwesenheitsantrag]
 faq: true
 en_page: doc/employee-faq.md
@@ -42,7 +42,7 @@ Eine einfache Checkliste für den ersten Tag:
 
 **Siehe auch:**
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 
 ---
 
@@ -59,7 +59,7 @@ Im Standardkalender legen Sie einen Eintrag an, indem Sie
 - `STRG + I` drücken.
 
 **Siehe auch:**
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 
 ---
@@ -71,7 +71,7 @@ Im Standardkalender legen Sie einen Eintrag an, indem Sie
 Nutzen Sie Ihren Kalender, Notizen oder andere Arbeitsaufzeichnungen, um den Tag so genau wie möglich zu rekonstruieren.
 
 **Siehe auch:**
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 
 ---
@@ -83,7 +83,7 @@ Legen Sie getrennte Einträge für die verschiedenen Arbeitsblöcke des Tages an
 Bewährt hat sich ein Eintrag pro sinnvoller Tätigkeit oder pro Projektblock, ohne überlappende Einträge.
 
 **Siehe auch:**
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 
 ---
@@ -188,7 +188,7 @@ Prüfen Sie zuerst die eingerichtete Anmeldemethode, Ihren Browser und Ihre Netz
 
 ### Dokumentation
 - [Erste Schritte](~/doc/erste-schritte/ueberblick.md)
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 - [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
 

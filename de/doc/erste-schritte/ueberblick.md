@@ -12,13 +12,13 @@ Mit time cockpit liefern wir eine innovative, anpassbare Zeiterfassungslösung, 
 
 ### Grafischer Kalender
 
-Wir wollen Mitarbeitern das Leben leichter machen: mit einem grafischen Kalender zum Anlegen und Bearbeiten von Zeiteinträgen. Wechseln Sie je nach gewünschtem Detailgrad zwischen Tages-, Wochen- und Arbeitswochenansicht. Die grafische Darstellung macht Buchungsfehler wie fehlende oder unerwünscht überlappende Zeiteinträge sofort sichtbar. Weitere Informationen finden Sie unter [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html).
+Wir wollen Mitarbeitern das Leben leichter machen: mit einem grafischen Kalender zum Anlegen und Bearbeiten von Zeitbuchungen. Wechseln Sie je nach gewünschtem Detailgrad zwischen Tages-, Wochen- und Arbeitswochenansicht. Die grafische Darstellung macht Buchungsfehler wie fehlende oder unerwünscht überlappende Zeitbuchungen sofort sichtbar. Weitere Informationen finden Sie unter [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html).
 
 ![Grafischer Kalender](/doc/getting-started/images/wc-calendar-overview.png "Grafischer Kalender")
 
 ### Projektbezogene Zeiterfassung
 
-Wirksames Projektmanagement braucht eine genaue Zeiterfassung. Sie hilft Projektleitern zu verstehen, wie viel Zeit und Aufwand ein Projekt benötigt, Ressourcen zuzuteilen und realistische Zeitpläne zu erstellen. time cockpit vereinfacht die projektbezogene Zeiterfassung und liefert Einblicke in Projektfortschritt und Ressourcenauslastung. Weitere Informationen finden Sie unter [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html) und [Projektbezogene Zeiterfassung](/doc/project-time-tracking/customer-project-task.html).
+Wirksames Projektmanagement braucht eine genaue Zeiterfassung. Sie hilft Projektleitern zu verstehen, wie viel Zeit und Aufwand ein Projekt benötigt, Ressourcen zuzuteilen und realistische Zeitpläne zu erstellen. time cockpit vereinfacht die projektbezogene Zeiterfassung und liefert Einblicke in Projektfortschritt und Ressourcenauslastung. Weitere Informationen finden Sie unter [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html) und [Projektbezogene Zeiterfassung](/doc/project-time-tracking/customer-project-task.html).
 
 ![Budgetkontrolle von Aufgaben](/doc/getting-started/images/wc-budgetary-control-of-tasks.png "Budgetkontrolle von Aufgaben")
 

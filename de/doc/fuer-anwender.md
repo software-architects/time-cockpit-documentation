@@ -22,9 +22,9 @@ Nutzen Sie diese Seiten, wenn Sie neu bei time cockpit sind oder die wichtigsten
 Diese Seiten beschreiben die üblichen täglichen Abläufe:
 
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
-- [Arbeiten mit Zeiteinträgen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
 - [Outlook-Termine](/doc/timesheet-calendar/outlook-appointments.html)
-- [Zeiteintragsvorlagen](/doc/timesheet-calendar/timesheet-templates.html)
+- [Musterbuchungen](/doc/timesheet-calendar/timesheet-templates.html)
 - [Arbeitszeit](/doc/employee-time-tracking/working-time.html)
 
 ## Projektarbeit
@@ -32,7 +32,7 @@ Diese Seiten beschreiben die üblichen täglichen Abläufe:
 Nutzen Sie diese Seiten für projektbezogene Zeiterfassung und Verrechnung:
 
 - [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
-- [Zeiteinträge](/doc/project-time-tracking/timesheet.html)
+- [Zeitbuchungen](/doc/project-time-tracking/timesheet.html)
 - [Budgetkontrolle und Rentabilität](/doc/project-time-tracking/budget-tracking.html)
 - [Rechnungslegung](/doc/project-time-tracking/billing.html)
 - [Rechnungsdatenfelder](/doc/project-time-tracking/invoice-data-fields.html)
@@ -70,7 +70,7 @@ Nutzen Sie diese Seiten für Abwesenheiten, Arbeitszeit und Genehmigungen:
 
 Wenn Sie mit einer konkreten Aufgabe starten möchten, sind diese Seiten meist der richtige erste Anlaufpunkt:
 
-- Zeiteinträge erfassen: [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- Zeitbuchungen erfassen: [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 - Urlaub beantragen oder Krankenstand eintragen: [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
 - Mit Projekten und Aufgaben arbeiten: [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
 - Rechnungen erstellen: [Rechnungslegung](/doc/project-time-tracking/billing.html)
