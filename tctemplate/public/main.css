@@ -1,0 +1,270 @@
+/* time cockpit customizations on top of the docfx "modern" template.
+   Keep this file small: prefer Bootstrap CSS variables over selector overrides. */
+
+/* --- Brand font (self-hosted, same files as www.timecockpit.com) --------------- */
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mulish-v12-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/mulish-v12-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/mulish-v12-latin-700.woff2") format("woff2");
+}
+
+/* --- Brand tokens ----------------------------------------------------------------- */
+:root {
+  --tc-navy: #191928;
+  --tc-blue: #25a0da;
+  --tc-green: #4e832f;
+  --tc-green-hover: #416e27;
+  --bs-body-font-family: "Mulish", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-link-color-rgb: 29, 125, 170;
+  --bs-link-hover-color-rgb: 24, 102, 138;
+}
+
+[data-bs-theme="dark"] {
+  --bs-link-color-rgb: 95, 179, 220;
+  --bs-link-hover-color-rgb: 133, 199, 232;
+}
+
+/* --- Header / navbar (navy like the hero on timecockpit.com, both themes) --------- */
+header.bg-body {
+  background-color: var(--tc-navy) !important;
+  border-bottom: 0 !important;
+}
+
+.navbar {
+  --bs-navbar-color: rgba(255, 255, 255, 0.78);
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-active-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
+}
+
+.navbar .nav-link.active {
+  color: var(--tc-blue);
+}
+
+.navbar-brand {
+  font-size: 0; /* the SVG is a wordmark; keep _appName for alt text only */
+}
+
+#logo {
+  height: 30px;
+  width: auto;
+}
+
+.navbar .btn,
+.navbar .btn:hover {
+  color: #fff;
+}
+
+.navbar form.search .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.navbar form.search .form-control::placeholder,
+.navbar form.search .bi-search {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar form.search .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: var(--tc-blue);
+  box-shadow: none;
+}
+
+/* --- Table of contents: more room between expand arrow and label ----------------- */
+.toc li {
+  padding-left: 1.3rem;
+}
+
+.toc .expand-stub:before {
+  margin-left: -1.3rem;
+}
+
+/* --- Buttons ---------------------------------------------------------------------- */
+.btn-primary {
+  --bs-btn-bg: var(--tc-green);
+  --bs-btn-border-color: var(--tc-green);
+  --bs-btn-hover-bg: var(--tc-green-hover);
+  --bs-btn-hover-border-color: var(--tc-green-hover);
+  --bs-btn-active-bg: var(--tc-green-hover);
+  --bs-btn-active-border-color: var(--tc-green-hover);
+  --bs-btn-border-radius: 25px;
+}
+
+/* --- Article typography ----------------------------------------------------------- */
+article h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+article h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+article h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* --- Alerts (NOTE / TIP / WARNING / IMPORTANT) ------------------------------------ */
+.alert {
+  --bs-alert-border-radius: 0.5rem;
+  --bs-alert-border: 0;
+}
+
+/* --- Consent-gated videos (see main.js): nothing is loaded from YouTube/Vimeo ------
+       until the visitor accepts "External Media" in the cookie banner. ----------------- */
+.tc-video {
+  --bs-aspect-ratio: 56.25%;
+  background-color: var(--tc-navy);
+  border-radius: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.tc-video::before {
+  content: "";
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+}
+
+.tc-video > iframe,
+.tc-video > .tc-video-gate {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.tc-video-gate {
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.tc-video-gate:hover,
+.tc-video-gate:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tc-video-gate img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.tc-video-play {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: var(--tc-blue);
+  display: inline-flex;
+  font-size: 2rem;
+  height: 72px;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.15s ease;
+  width: 72px;
+}
+
+.tc-video-gate:hover .tc-video-play {
+  transform: scale(1.08);
+}
+
+.tc-video-hint {
+  background-color: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  font-size: 0.875rem;
+  left: 0;
+  padding: 0.6rem 1rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+/* --- Mermaid diagrams: zoom toolbar + drag-to-pan (see main.js) ------------------- */
+.mermaid-figure {
+  margin: 1.5rem 0;
+}
+
+.mermaid-toolbar {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.mermaid-zoom-level {
+  color: var(--bs-secondary-color);
+  font-size: 0.8125rem;
+  min-width: 3.5rem;
+  text-align: center;
+}
+
+.mermaid-viewport {
+  cursor: grab;
+  max-height: 75vh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: none;
+  user-select: none;
+}
+
+.mermaid-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.mermaid-viewport pre.mermaid {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; /* the viewport is the scroll container, needed for drag-to-pan */
+  padding: 0;
+  text-align: center;
+}
+
+.mermaid-viewport pre.mermaid svg {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}

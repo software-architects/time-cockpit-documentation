@@ -6,7 +6,7 @@ description: Create and use time sheet templates in time cockpit to streamline t
 
 Time sheet templates in time cockpit are a powerful feature designed to streamline your time tracking process, making it more efficient and consistent. These templates are preconfigured time entries that you can quickly apply to your time sheets. By using time sheet templates, you eliminate the need to manually input the same information repeatedly. Simply select the appropriate template and apply it to your time sheet.
 
-<div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871507268?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="timesheet-templates"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="tc-video" data-vimeo="871507268" data-title="timesheet-templates" style="--bs-aspect-ratio: 51.82%"></div>
 
 ### Create a Time Sheet Template
 

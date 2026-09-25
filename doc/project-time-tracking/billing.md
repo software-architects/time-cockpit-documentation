@@ -65,7 +65,7 @@ The time cockpit default data model contains the list [Management -> Billing -> 
 
 When you execute the **Create Invoice** action, it assigns the selected timesheets to invoice items. 
 
-<div style="padding:51.82% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/871357620?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="invoicing"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="tc-video" data-vimeo="871357620" data-title="invoicing" style="--bs-aspect-ratio: 51.82%"></div>
 
 > [!NOTE]
 > Once timesheet entries are associated with an invoice item or invoice, they become **read-only** to prevent inadvertent modifications after billing.
@@ -102,7 +102,7 @@ The following example shows an invoice with three invoice items.
 
 If the automated invoice item generation logic doesn't meet your requirements, you have the flexibility to create custom invoice items and articles. For instance, if your business offers both time-tracking consulting services and sells hardware time-tracking terminals, and you need to include both on a single invoice, you can define a custom article like "Time Tracking Terminal." It might be structured as follows.
 
-<div style="padding:56.27% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/870320759?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="custom-invoice-item"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="tc-video" data-vimeo="870320759" data-title="custom-invoice-item" data-poster="../../images/video-posters/870320759.jpg" style="--bs-aspect-ratio: 56.27%"></div>
 
 ### Creating a Custom Article
 

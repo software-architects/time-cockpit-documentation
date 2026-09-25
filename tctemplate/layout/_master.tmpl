@@ -1,221 +1,280 @@
-{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
-{{!include(/^styles/.*/)}}
-{{!include(/^fonts/.*/)}}
+{{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
+{{!time cockpit: copy of the docfx 2.78.2 "modern" layout/_master.tmpl plus the canonical/hreflang/alternate tags below. Re-diff against the installed template when upgrading docfx.}}
+{{!include(/^public/.*/)}}
 {{!include(favicon.ico)}}
-{{!include(search-stopwords.json)}}
+{{!include(logo.svg)}}
 <!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html lang="en">
-  {{>partials/head}}
-  <body data-spy="scroll" data-target="#affix">
-    <div id="wrapper">
-      <header>
-        {{^_disableNavbar}}
-        {{>partials/navbar}}
-        {{/_disableNavbar}}
-        {{^_disableBreadcrumb}}
-        {{>partials/breadcrumb}}
-        {{/_disableBreadcrumb}}
-      </header>
-      {{#_enableSearch}}
-      <div class="container body-content">
-        {{>partials/searchResults}}
-      </div>
-      {{/_enableSearch}}
-      <div role="main" class="container body-content hide-when-search">
-      {{^_disableToc}}
-        {{>partials/toc}}
-        <div class="article row grid-right">
-      {{/_disableToc}}
-      {{#_disableToc}}
-        <div class="article row grid">
-        {{/_disableToc}}
-          {{#_disableAffix}}
-          <div class="col-md-12">
-          {{/_disableAffix}}
-          {{^_disableAffix}}
-          <div class="col-md-10">
-          {{/_disableAffix}}
-            <article class="content wrap" id="_content" data-uid="{{uid}}">
-                {{!body}}
-            </article>
+<html {{#_lang}}lang="{{_lang}}"{{/_lang}}>
+  <head>
+    <meta charset="utf-8">
+    {{#redirect_url}}
+      <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
+    {{/redirect_url}}
+    {{^redirect_url}}
+      <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
+      {{#_description}}<meta name="description" content="{{_description}}">{{/_description}}
+      {{#description}}<meta name="description" content="{{description}}">{{/description}}
+      <link rel="canonical" href="https://docs.timecockpit.com/{{{_path}}}">
+      <link rel="alternate" hreflang="en" href="https://docs.timecockpit.com/{{{_path}}}">
+      <link rel="alternate" hreflang="x-default" href="https://docs.timecockpit.com/{{{_path}}}">
+      <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
+      <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
+      <link rel="stylesheet" href="{{_rel}}public/main.css">
+      <meta name="docfx:navrel" content="{{_navRel}}">
+      <meta name="docfx:tocrel" content="{{_tocRel}}">
+      {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
+      {{#_enableSearch}}<meta name="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
+      {{#_disableNewTab}}<meta name="docfx:disablenewtab" content="true">{{/_disableNewTab}}
+      {{#_disableTocFilter}}<meta name="docfx:disabletocfilter" content="true">{{/_disableTocFilter}}
+      {{#docurl}}<meta name="docfx:docurl" content="{{docurl}}">{{/docurl}}
+      <meta name="loc:inThisArticle" content="{{__global.inThisArticle}}">
+      <meta name="loc:searchResultsCount" content="{{__global.searchResultsCount}}">
+      <meta name="loc:searchNoResults" content="{{__global.searchNoResults}}">
+      <meta name="loc:tocFilter" content="{{__global.tocFilter}}">
+      <meta name="loc:nextArticle" content="{{__global.nextArticle}}">
+      <meta name="loc:prevArticle" content="{{__global.prevArticle}}">
+      <meta name="loc:themeLight" content="{{__global.themeLight}}">
+      <meta name="loc:themeDark" content="{{__global.themeDark}}">
+      <meta name="loc:themeAuto" content="{{__global.themeAuto}}">
+      <meta name="loc:changeTheme" content="{{__global.changeTheme}}">
+      <meta name="loc:copy" content="{{__global.copy}}">
+      <meta name="loc:downloadPdf" content="{{__global.downloadPdf}}">
+
+      <script type="module" src="./{{_rel}}public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      {{!time cockpit: analytics. Google Analytics is NOT loaded here, see the consent block at the
+          end of <body>. Simple Analytics is cookieless and stores no personal data, so it needs no
+          consent, but like GA it must stay silent on local previews and the docs-dev staging site.}}
+      <script>
+        window.isProductionHost = function () {
+          var h = location.hostname;
+          return h !== 'localhost' && h !== '127.0.0.1' && h.indexOf('docs-dev') === -1;
+        };
+        if (window.isProductionHost()) {
+          var sa = document.createElement('script');
+          sa.async = true;
+          sa.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+          document.head.appendChild(sa);
+        }
+      </script>
+    {{/redirect_url}}
+  </head>
+
+  {{^redirect_url}}
+  <body class="tex2jax_ignore" data-layout="{{_layout}}{{layout}}" data-yaml-mime="{{yamlmime}}">
+    <header class="bg-body border-bottom">
+      {{^_disableNavbar}}
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="{{_appLogoUrl}}{{^_appLogoUrl}}{{_rel}}index.html{{/_appLogoUrl}}">
+            <img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" alt="{{_appName}}" >
+            {{_appName}}
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              {{#_enableSearch}}
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="{{__global.search}}" autocomplete="off" aria-label="Search">
+              </form>
+              {{/_enableSearch}}
+            </div>
           </div>
-          {{^_disableAffix}}
-          {{>partials/affix}}
-          {{/_disableAffix}}
+        </div>
+      </nav>
+      {{/_disableNavbar}}
+    </header>
+
+    <main class="container-xxl">
+      {{^_disableToc}}
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      {{^_disableFooter}}
-      {{>partials/footer}}
-      {{/_disableFooter}}
-    </div>
-    {{>partials/scripts}}
-    <script type="module">
-      (async () => {
-        const minZoom = 0.5;
-        const maxZoom = 3;
-        const zoomStep = 0.25;
-        const mermaidBlocks = document.querySelectorAll("pre code.lang-mermaid, pre code.language-mermaid");
-        if (!mermaidBlocks.length) {
-          return;
+      {{/_disableToc}}
+
+      <div class="content">
+        <div class="actionbar">
+          {{^_disableToc}}
+          <button class="btn btn-lg border-0 d-md-none"
+              type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas"
+              aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+          {{/_disableToc}}
+
+          {{^_disableBreadcrumb}}
+          <nav id="breadcrumb"></nav>
+          {{/_disableBreadcrumb}}
+        </div>
+
+        <article data-uid="{{uid}}">
+          {{!body}}
+        </article>
+
+        {{^_disableContribution}}
+        <div class="contribution d-print-none">
+          {{#sourceurl}}
+          <a href="{{sourceurl}}" class="edit-link">{{__global.improveThisDoc}}</a>
+          {{/sourceurl}}
+          {{^sourceurl}}{{#docurl}}
+          <a href="{{docurl}}" class="edit-link">{{__global.improveThisDoc}}</a>
+          {{/docurl}}{{/sourceurl}}
+        </div>
+        {{/_disableContribution}}
+
+        {{^_disableNextArticle}}
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        {{/_disableNextArticle}}
+
+      </div>
+
+      {{^_disableAffix}}
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+      {{/_disableAffix}}
+    </main>
+
+    {{#_enableSearch}}
+    <div class="container-xxl search-results" id="search-results"></div>
+    {{/_enableSearch}}
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          {{{_appFooter}}}{{^_appFooter}}<span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>{{/_appFooter}}
+        </div>
+      </div>
+    </footer>
+
+    {{!time cockpit: Silktide Consent Manager (vendored copy from www.timecockpit.com) and everything
+        gated behind consent. Runs at the end of <body> because the banner needs the body element.
+        GA4 is only inserted after "Analytics" consent; videos (main.js) only after "External Media".}}
+    <link rel="stylesheet" id="silktide-consent-manager-css" href="{{_rel}}public/silktide-consent-manager.css">
+    <script src="{{_rel}}public/silktide-consent-manager.js"></script>
+    <script>
+      (function () {
+        var GA_ID = 'G-2K2QFK27YB'; // docs.timecockpit.com property, not the website's
+
+        // Consent Mode defaults; gtag.js itself is inserted by loadTracking() after consent.
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+        gtag('js', new Date());
+        gtag('config', GA_ID, { send_page_view: false });
+
+        window.cookieConsent = { analytics: false, externalmedia: false };
+        window.renewCookieConsent = function () {
+          var icon = document.getElementById('silktide-cookie-icon');
+          if (icon) icon.click();
+        };
+        // Consent given and a production host (window.isProductionHost is defined in <head>):
+        // local previews and the docs-dev staging site must never report to GA.
+        window.hasAnalyticsConsent = function () {
+          return !!window.cookieConsent.analytics && window.isProductionHost();
+        };
+
+        var trackingLoaded = false;
+        function loadTracking() {
+          if (trackingLoaded) return false;
+          trackingLoaded = true;
+          var g = document.createElement('script');
+          g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(g);
+          return true;
         }
 
-        const clampZoom = (zoom) => Math.min(maxZoom, Math.max(minZoom, zoom));
-
-        const updateZoom = (figure, zoom) => {
-          const normalizedZoom = clampZoom(zoom);
-          const svg = figure.querySelector(".mermaid svg");
-          const zoomLabel = figure.querySelector(".mermaid-zoom-level");
-
-          figure.dataset.zoom = normalizedZoom.toFixed(2);
-
-          if (svg) {
-            svg.style.width = `${normalizedZoom * 100}%`;
-            svg.style.maxWidth = "none";
-            svg.style.height = "auto";
+        window.addEventListener('cookieConsentChanged', function () {
+          document.documentElement.classList.toggle('externalmedia-granted', !!window.cookieConsent.externalmedia);
+          var allow = window.hasAnalyticsConsent() ? 'granted' : 'denied';
+          gtag('consent', 'update', { ad_storage: allow, analytics_storage: allow, ad_user_data: allow, ad_personalization: allow });
+          if (allow === 'granted' && loadTracking()) {
+            gtag('event', 'page_view', { page_title: document.title, page_location: location.href });
           }
+        });
 
-          if (zoomLabel) {
-            zoomLabel.textContent = `${Math.round(normalizedZoom * 100)}%`;
-          }
-        };
+        // Silktide fires one callback per cookie type; coalesce into one event per user action.
+        var dispatchPending = false;
+        function dispatchConsentChanged() {
+          if (dispatchPending) return;
+          dispatchPending = true;
+          setTimeout(function () {
+            dispatchPending = false;
+            window.dispatchEvent(new CustomEvent('cookieConsentChanged'));
+          }, 0);
+        }
+        function setConsent(type, granted) {
+          window.cookieConsent[type] = granted;
+          dispatchConsentChanged();
+        }
 
-        const attachZoomControls = (figure) => {
-          const toolbar = figure.querySelector(".mermaid-toolbar");
-          if (!toolbar) {
-            return;
-          }
-
-          updateZoom(figure, 1);
-
-          toolbar.addEventListener("click", (event) => {
-            const button = event.target.closest("[data-mermaid-zoom]");
-            if (!button) {
-              return;
-            }
-
-            const currentZoom = Number.parseFloat(figure.dataset.zoom || "1");
-            const action = button.dataset.mermaidZoom;
-
-            if (action === "in") {
-              updateZoom(figure, currentZoom + zoomStep);
-            } else if (action === "out") {
-              updateZoom(figure, currentZoom - zoomStep);
-            } else if (action === "reset") {
-              updateZoom(figure, 1);
-            }
-          });
-        };
-
-        const attachPanControls = (figure) => {
-          const viewport = figure.querySelector(".mermaid-viewport");
-          if (!viewport) {
-            return;
-          }
-
-          let activePointerId = null;
-          let startX = 0;
-          let startY = 0;
-          let startScrollLeft = 0;
-          let startScrollTop = 0;
-
-          const endPan = () => {
-            activePointerId = null;
-            viewport.classList.remove("is-dragging");
-          };
-
-          viewport.addEventListener("pointerdown", (event) => {
-            if (event.button !== 0) {
-              return;
-            }
-
-            activePointerId = event.pointerId;
-            startX = event.clientX;
-            startY = event.clientY;
-            startScrollLeft = viewport.scrollLeft;
-            startScrollTop = viewport.scrollTop;
-
-            viewport.classList.add("is-dragging");
-            viewport.setPointerCapture(event.pointerId);
-            event.preventDefault();
-          });
-
-          viewport.addEventListener("pointermove", (event) => {
-            if (activePointerId !== event.pointerId) {
-              return;
-            }
-
-            const deltaX = event.clientX - startX;
-            const deltaY = event.clientY - startY;
-
-            viewport.scrollLeft = startScrollLeft - deltaX;
-            viewport.scrollTop = startScrollTop - deltaY;
-            event.preventDefault();
-          });
-
-          viewport.addEventListener("pointerup", (event) => {
-            if (activePointerId === event.pointerId) {
-              viewport.releasePointerCapture(event.pointerId);
-              endPan();
-            }
-          });
-
-          viewport.addEventListener("pointercancel", endPan);
-          viewport.addEventListener("dragstart", (event) => event.preventDefault());
-          viewport.addEventListener("lostpointercapture", endPan);
-        };
-
-        try {
-          const { default: mermaid } = await import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs");
-
-          mermaid.initialize({
-            startOnLoad: false,
-            securityLevel: "loose",
-            theme: "default",
-            er: {
-              useMaxWidth: true,
+        silktideCookieBannerManager.updateCookieBannerConfig({
+          background: { showBackground: false },
+          cookieIcon: { position: 'bottomLeft' },
+          cookieTypes: [
+            {
+              id: 'necessary',
+              name: 'Necessary',
+              description: '<p>These cookies are necessary for the site to function and cannot be switched off. They store your cookie preferences and your light/dark theme choice.</p>',
+              required: true
             },
-          });
-
-          mermaidBlocks.forEach((codeBlock, index) => {
-            const figure = document.createElement("figure");
-            figure.className = "mermaid-figure";
-            figure.dataset.zoom = "1";
-
-            const toolbar = document.createElement("div");
-            toolbar.className = "mermaid-toolbar";
-            toolbar.innerHTML = `
-              <button type="button" class="mermaid-zoom-button" data-mermaid-zoom="out" aria-label="Zoom out">-</button>
-              <span class="mermaid-zoom-level" aria-live="polite">100%</span>
-              <button type="button" class="mermaid-zoom-button" data-mermaid-zoom="in" aria-label="Zoom in">+</button>
-              <button type="button" class="mermaid-zoom-button" data-mermaid-zoom="reset" aria-label="Reset zoom">Reset</button>
-            `;
-
-            const viewport = document.createElement("div");
-            viewport.className = "mermaid-viewport";
-
-            const container = document.createElement("div");
-            container.className = "mermaid";
-            container.id = `mermaid-diagram-${index}`;
-            container.textContent = codeBlock.textContent;
-
-            viewport.appendChild(container);
-            figure.append(toolbar, viewport);
-            codeBlock.parentElement.replaceWith(figure);
-          });
-
-          await mermaid.run({
-            nodes: Array.from(document.querySelectorAll(".mermaid")),
-          });
-
-          document.querySelectorAll(".mermaid-figure").forEach((figure) => {
-            attachZoomControls(figure);
-            attachPanControls(figure);
-          });
-        } catch (error) {
-          console.error("Failed to render Mermaid diagrams.", error);
-        }
+            {
+              id: 'analytics',
+              name: 'Analytics',
+              description: '<p>We use Google Analytics to collect anonymized information about how visitors use this documentation. Data is shared with Google. This helps us improve the content. (Our cookieless page counter by Simple Analytics does not store personal data and is always active.)</p>',
+              defaultValue: false,
+              onAccept: function () { setConsent('analytics', true); },
+              onReject: function () { setConsent('analytics', false); }
+            },
+            {
+              id: 'externalmedia',
+              name: 'External Media (YouTube, Vimeo)',
+              description: '<p>Embedded videos are blocked by default. When you accept, videos can be played without further manual consent. YouTube and Vimeo may set cookies for tracking and personalization once you interact with a video.</p>',
+              defaultValue: false,
+              onAccept: function () { setConsent('externalmedia', true); },
+              onReject: function () { setConsent('externalmedia', false); }
+            }
+          ],
+          text: {
+            banner: {
+              description: '<p>We use cookies on this site to analyze our traffic and to show embedded videos. <a href="https://www.timecockpit.com/legal-notice/privacy-policy/" target="_blank" rel="noopener">Privacy Statement.</a></p>',
+              acceptAllButtonText: 'Accept all',
+              acceptAllButtonAccessibleLabel: 'Accept all cookies',
+              rejectNonEssentialButtonText: 'Reject non-essential',
+              rejectNonEssentialButtonAccessibleLabel: 'Reject non-essential',
+              preferencesButtonText: 'Preferences',
+              preferencesButtonAccessibleLabel: 'Toggle preferences'
+            },
+            preferences: {
+              title: 'Customize your cookie preferences',
+              description: '<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences apply across this documentation site.</p>',
+              creditLinkText: ' ',
+              creditLinkAccessibleLabel: ' '
+            }
+          }
+        });
       })();
     </script>
   </body>
+  {{/redirect_url}}
 </html>
