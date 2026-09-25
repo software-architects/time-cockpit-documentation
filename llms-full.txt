@@ -7960,6 +7960,9 @@ Source: https://docs.timecockpit.com/doc/ai-assistants/overview.md
 
 time cockpit provides an MCP server that lets AI assistants such as Claude, OpenAI Codex, GitHub Copilot, and Microsoft 365 Copilot read and — when you allow it — change your time cockpit data. You sign in with your normal Microsoft work account, and the assistant only sees what you are allowed to see in time cockpit.
 
+> [!NOTE]
+> The time cockpit MCP server is currently available to selected customers only. See [MCP Server](https://docs.timecockpit.com/doc/mcp/overview.md) for details.
+
 ## What You Can Do
 
 - Ask questions about your projects, tasks, timesheets, budgets, and absences in plain language.
@@ -15989,9 +15992,12 @@ Source: https://docs.timecockpit.com/doc/mcp/overview.md
 # Time Cockpit MCP Server
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
-The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, lists, actions) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit.
+> [!NOTE]
+> Availability: The time cockpit MCP server is currently available to selected customers only. If you would like to use it with your time cockpit tenant, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com).
+
+The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, named lists) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit. Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 A local stdio server (`OnCockpit.Admin.exe --mcp`, Windows only) exists for administrators and customizers who need IronPython scripting against the live data context; see [OnCockpit Admin: Local MCP Server](https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md). The rest of this section covers the remote server.
 
@@ -16083,7 +16089,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## What the Server Enforces
 
 - **Your permissions always apply.** Every call is authorized against the tenant's permission model with the roles of the signed-in user. Whatever you cannot see in the web client stays invisible to the assistant, and cannot be reached by guessing a technical name. System and internal entities are hidden from every tool.
-- **Access and scope** narrow a connection further: `readonly` hides all writing tools, `owndata` hides everything that cannot be restricted to your own data. **Confirmation** is an operator setting: by default every generic action and record change has to be repeated with `confirmed=true` after the assistant has told you what will change. See [Access, Scope, and Confirmation](https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md).
+- **Access and scope** narrow a connection further: `readonly` hides all writing tools, `owndata` hides everything that cannot be restricted to your own data. **Confirmation** is an operator setting: by default every generic object change (`create_object`, `update_object`, `delete_object`) has to be repeated with `confirmed=true` after the assistant has told you what will change. See [Access, Scope, and Confirmation](https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md).
 - **Results are bounded.** Reads are capped in rows and size and say so with `truncated: true`. See [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md).
 - **Every tool call is audited.** The server records one operational audit event per attempted call with tenant, acting user, host, tool, whether it changes data, outcome and duration. Denied, failed and cancelled attempts are recorded as well. The event contains no arguments, query text, record contents or results.
 
@@ -16103,7 +16109,7 @@ Source: https://docs.timecockpit.com/doc/mcp/entra-id-setup.md
 # Microsoft Entra ID Setup for the MCP Server
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 The time cockpit MCP server authenticates every user against Microsoft Entra ID. The AI client (Claude Code, Codex, VS Code, …) needs an **OAuth client application in your own Entra tenant** to run the sign-in. You create this app registration yourself; its **client ID** is the value your users enter in their client configuration.
 
@@ -16375,7 +16381,7 @@ Source: https://docs.timecockpit.com/doc/mcp/claude-code.md
 # Claude Code (CLI)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Claude Code is Anthropic's terminal agent. MCP servers are stored in configuration files and managed with `claude mcp …`. The steps below were verified on Windows 11 with PowerShell.
 
@@ -16476,7 +16482,7 @@ Status: ✔ connected
 URL: https://mcp.timecockpit.com
 Config location: C:\Users\<you>\.claude.json (user)
 Capabilities: tools
-Tools: 19 tools
+Tools: 16 tools
 Authentication: ✔ Authenticated (OAuth)
 ```
 
@@ -16550,6 +16556,9 @@ Source: https://docs.timecockpit.com/doc/mcp/claude-app.md
 
 # Claude App, claude.ai and Cowork
 
+> [!WARNING]
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
+
 The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) do **not** use the Claude Code configuration files. Remote MCP servers are added as a **custom connector**. Custom connectors are available on all plans (Free: one connector). On Team and Enterprise plans an owner creates the connector and members connect to it.
 
 > [!WARNING]
@@ -16618,7 +16627,7 @@ Source: https://docs.timecockpit.com/doc/mcp/codex.md
 # OpenAI Codex (CLI, Desktop App, IDE Extension)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Codex reads MCP servers from `%USERPROFILE%\.codex\config.toml` (global; `CODEX_HOME`) or from `.codex\config.toml` in the project. **CLI, desktop app and IDE extension share this file** — a server registered once is visible everywhere. The configuration below is in production use and works.
 
@@ -16738,7 +16747,7 @@ MCP servers
 
 • timecockpit  https://mcp.timecockpit.com
   Auth: OAuth (logged in)
-  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (18)
+  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (16)
 
 Use /mcp verbose for details. To (re)authenticate run: codex mcp login timecockpit
 ```
@@ -16798,7 +16807,7 @@ Source: https://docs.timecockpit.com/doc/mcp/chatgpt.md
 # ChatGPT (Web, Business and Enterprise Workspaces)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 In ChatGPT, remote MCP servers are registered as **custom apps** by a workspace owner or administrator in the ChatGPT admin console (`chatgpt.com/admin`). The app is created once for the whole workspace and published to its members. Every member then connects to the app individually and signs in with their own Microsoft Entra ID work account. The configuration below has been set up and used with a ChatGPT Business workspace; dialog labels may differ slightly between ChatGPT versions and plans.
 
@@ -16933,7 +16942,7 @@ Source: https://docs.timecockpit.com/doc/mcp/vscode.md
 # Visual Studio Code (GitHub Copilot Agent Mode)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 VS Code configures MCP servers in `mcp.json` — either in the workspace (`.vscode/mcp.json`, shareable) or in the user profile (command **MCP: Open User Configuration**). Since **VS Code 1.123 (June 2026)** your own OAuth client ID can be specified per server (`oauth.clientId`). The configuration below has been verified against the time cockpit MCP server.
 
@@ -17022,6 +17031,62 @@ For internal portals, VS Code supports install links: `vscode:mcp/install?<url-e
 
 ---
 
+# MCP Server - Microsoft 365 Copilot Setup
+
+Source: https://docs.timecockpit.com/doc/mcp/microsoft-365-copilot.md
+
+# Microsoft 365 Copilot
+
+> [!WARNING]
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
+
+End users cannot enter an MCP URL in the Copilot chat. MCP servers reach Microsoft 365 Copilot through **agents or connectors** — three routes, all of which involve a maker or an administrator. The consumer Copilot (copilot.microsoft.com) does not support custom MCP servers.
+
+> [!WARNING]
+> Review required: None of the three routes has been verified end-to-end against the time cockpit MCP server yet. The steps follow the Microsoft documentation; dialog labels may differ.
+
+| Route | Who | Auth options | Headers | Status |
+|-------|-----|--------------|---------|--------|
+| A) Copilot Studio — MCP tool in an agent, agent published to M365 Copilot | Maker (Copilot Studio license), admin approves publication | OAuth 2.0 (DCR / Dynamic / **Manual** with client ID **and secret**), API key, None | only via custom connector policy "Set HTTP header" — prefer URL segments | GA |
+| B) Declarative agent with MCP plugin (M365 Agents Toolkit) | Developer, admin publishes | Entra SSO, OAuth 2.0 auth code, DCR, None (no API key) | no | GA |
+| C) Custom federated connector (M365 Admin Center → Copilot → Connectors) | Global / AI Administrator | Entra SSO, OAuth 2.0, None | no | Preview, read-only tools only |
+
+Because none of these routes supports custom headers, pass tenant and modes as [URL segments](https://docs.timecockpit.com/doc/mcp/overview.md#connection-settings-header-or-url-segment).
+
+## Route A: Copilot Studio
+
+1. Copilot Studio → agent → **Tools** → **Add a tool** → **New tool** → **Model Context Protocol**.
+2. *Server name*, *Server description*, *Server URL* `https://mcp.timecockpit.com` (with URL segments for tenant/modes, since there is no header field).
+3. Authentication **OAuth 2.0 → Manual**: *Client ID* and *Client secret* of your confidential app registration (see below), *Authorization URL* `https://login.microsoftonline.com/<your-entra-tenant>/oauth2/v2.0/authorize`, *Token URL template* and *Refresh URL* `https://login.microsoftonline.com/<your-entra-tenant>/oauth2/v2.0/token`, *Scopes* `https://mcp.timecockpit.com/mcp.access offline_access`. The MCP wizard has no separate Entra option.
+4. **Create** → the displayed **Redirect URL** (`https://global.consent.azure-apim.net/redirect/<id>`) must be registered as a redirect URI of platform type **Web** on your app registration. The last path segment is generated per tool — copy the exact displayed value.
+5. **Create a new connection** → Entra sign-in → **Add to agent**. Test the agent, then **Channels → Teams and Microsoft 365 Copilot → Make agent available in Microsoft 365 Copilot** and, if required, **Submit for admin approval**.
+
+> [!NOTE]
+> Copilot Studio requires a **client secret** in manual mode, so it needs a **confidential client**. Create a separate app registration for Copilot Studio (platform *Web*, client secret, `mcp.access` permission) rather than adding a secret to the public-client registration used by Claude Code and Codex — see [Entra ID Setup](https://docs.timecockpit.com/doc/mcp/entra-id-setup.md).
+
+Under the hood the MCP tool is a Power Platform custom connector, so your tenant's Data Loss Prevention policies apply. If a static header is unavoidable, the alternative is **Custom connector → Import OpenAPI** (with `x-ms-agentic-protocol: mcp-streamable-1.0`) and the policy **Set HTTP header** — considerably more effort than a URL segment.
+
+## Route B: Declarative Agent with MCP Plugin
+
+With the Microsoft 365 Agents Toolkit (≥ 6.12) you create a declarative agent whose plugin manifest (v2.4) contains a runtime `"type": "RemoteMCPServer"` with `spec.url`. Authentication: **Entra SSO** (the toolkit asks for the Entra client ID), OAuth static/dynamic, or None; include `offline_access` in the scopes for refresh tokens. Redirect URL for OAuth: `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect`. Distribution via sideload, then publication by the admin (Integrated apps). Headers are not supported in the manifest — use URL segments.
+
+## Route C: Custom Federated Connector (Preview)
+
+Microsoft 365 Admin Center → **Copilot → Connectors → Gallery → Create a new connector → Custom connector → Connect to MCP server**: *Display name*, *Base URL*, authentication **Microsoft Entra SSO** (client ID of the Entra application) or OAuth 2.0 (client registered in the Teams Developer Portal, redirect `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect`). Requires **Global Administrator** or **AI Administrator**. Only read-only tools (search, fetch, query-like) are supported — writing time cockpit tools are not available on this route. Surfaces: Copilot Chat, Copilot in Excel, Researcher, Cowork.
+
+## Recommendation
+
+- For a first pilot: Route A (Copilot Studio), because makers can configure it without development; tenant and modes as URL segments; a dedicated confidential app registration for Copilot Studio.
+- Route C only for pure research scenarios (read-only), once it leaves preview.
+
+## Related Pages
+
+- [MCP Server Overview](https://docs.timecockpit.com/doc/mcp/overview.md)
+- [Entra ID Setup](https://docs.timecockpit.com/doc/mcp/entra-id-setup.md)
+- [Microsoft Learn: Add an existing MCP server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-add-existing-server-to-agent)
+
+---
+
 # MCP Server - Test with MCPJam Inspector
 
 Source: https://docs.timecockpit.com/doc/mcp/mcpjam.md
@@ -17029,7 +17094,7 @@ Source: https://docs.timecockpit.com/doc/mcp/mcpjam.md
 # Test the MCP Server with MCPJam Inspector
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 [MCPJam Inspector](https://github.com/MCPJam/inspector) is useful for checking the time cockpit MCP connection before configuring an AI assistant. The steps below use the remote production MCP server and route requests to a time cockpit test sandbox.
 
@@ -17151,7 +17216,7 @@ Omitting `userDetailId` keeps the query scoped to the signed-in user. An empty `
 | Write tools are missing | Check whether the connection uses `access=readonly`; this intentionally hides writing tools. |
 | The sandbox was not selected | Check that `X-sandbox-environment: test` is present and that no conflicting URL segment is configured. |
 
-Do not use `create_entity`, `update_entity`, `delete_entity`, `create_timesheet` or `execute_action` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
+Do not use `create_object`, `update_object`, `delete_object` or `create_timesheet` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
 
 ## Related pages
 
@@ -17169,7 +17234,7 @@ Source: https://docs.timecockpit.com/doc/mcp/verify-connection.md
 # Verify the Connection
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 After configuring a client, call the server's diagnostic tools in this order. Depending on the client, tool names may be prefixed with `timecockpit__`.
 
@@ -17186,7 +17251,8 @@ Missing tools are usually a matter of configuration:
 
 - `access=readonly` hides all writing tools.
 - `scope=owndata` hides everything that cannot be restricted to the current user.
-- Lists and actions depend on an optional server capability.
+- The named-list tools (`get_lists`, `describe_list`, `execute_list`) depend on optional server capabilities and may be absent in a deployment.
+- Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 See [connection settings](https://docs.timecockpit.com/doc/mcp/overview.md#connection-settings-header-or-url-segment) for how these values are passed.
 
@@ -17220,15 +17286,15 @@ Source: https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md
 # MCP Access, Scope, and Confirmation
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Three mechanisms decide what an AI agent may do with your time cockpit data. Two of them you choose when you connect; the third is set by whoever operates the server.
 
 ## 1. Your time cockpit permissions always apply
 
-This is the floor that none of the settings below can lift. Every call is authorized again against the tenant's permission model, using the union of the roles assigned to the signed-in user. A list, action, entity, property, or record that the user cannot reach in the web client is not reachable through an agent either — and it cannot be reached by guessing a technical name, because a tool or artifact hidden from discovery is also rejected when it is called directly.
+This is the floor that none of the settings below can lift. Every call is authorized again against the tenant's permission model, using the union of the roles assigned to the signed-in user. A list, entity, property, or object that the user cannot reach in the web client is not reachable through an agent either — and it cannot be reached by guessing a technical name, because a tool or artifact hidden from discovery is also rejected when it is called directly.
 
-On top of that, system entities and a fixed set of internal entities (telemetry, notification, feature-flag, and similar shipped internals) are hidden from every agent surface: discovery, description, queries, records, actions, and resources alike.
+On top of that, system entities and a fixed set of internal entities (telemetry, notification, feature-flag, and similar shipped internals) are hidden from every agent surface: discovery, description, queries, objects, and resources alike.
 
 ## 2. Access and scope: settings you choose
 
@@ -17254,7 +17320,7 @@ How to supply them is described in [Connection Settings](https://docs.timecockpi
 
 ## 3. Confirmation: a setting you do not choose
 
-Every generic action and every generic create, update, and delete requires an explicit confirmation before it is carried out. This is the default policy, and it is what stops an agent from changing a record as a side effect of answering a question.
+Every generic create, update, and delete of an object (`create_object`, `update_object`, `delete_object`) requires an explicit confirmation before it is carried out. This is the default policy, and it is what stops an agent from changing an object as a side effect of answering a question.
 
 In practice it is a two-step handshake:
 
@@ -17268,7 +17334,7 @@ An answer of `confirmation_required` is therefore the normal path, not an error.
 
 An operator may set the policy to `Disabled` — intended for controlled environments such as a disposable sandbox — in which case mutations run without the extra round trip. On a production tenant, expect confirmation to be required.
 
-Deleting a record is destructive and confirmation-gated like every other change; there is no separate undo.
+Deleting an object is destructive and confirmation-gated like every other change; there is no separate undo.
 
 ## Related pages
 
@@ -17286,7 +17352,7 @@ Source: https://docs.timecockpit.com/doc/mcp/limits.md
 # MCP Limits, Truncation, and Long-Running Operations
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Every read through the time cockpit MCP server is bounded. That is deliberate: an AI agent that pulls an unbounded result set is slow, expensive, and usually less useful than one that asks a narrower question. This page explains what the bounds are, how to tell that one was hit, and which operations cannot be stopped once they have started.
 
@@ -17349,10 +17415,9 @@ Two limits worth knowing. A default written as an expression (anything starting 
 
 ## Operations that cannot be cancelled
 
-Most operations stop when the client cancels. Three cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
+Most operations stop when the client cancels. Two cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
 
-- **Model actions.** Once an action has started executing, it runs to completion. Cancellation is only honoured before it starts.
-- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). The same rule: cancellation is checked before the script starts, never during it.
+- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). Once a script has started, it runs to completion: cancellation is checked before the script starts, never during it.
 - **The write phase of `create_timesheet_suggestion`.** Cancellation is honoured up to the first record written; after that the writes finish.
 
 Practically: if an agent appears to hang on one of these, the work is probably still running. Do not assume it was rolled back, and check the affected records before retrying.
@@ -17372,7 +17437,7 @@ Source: https://docs.timecockpit.com/doc/mcp/companion-skills.md
 # Companion Skills: Installing timecockpit-agents with APM
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 The public package **software-architects/timecockpit-agents** on GitHub ([github.com/software-architects/timecockpit-agents](https://github.com/software-architects/timecockpit-agents)) belongs to the MCP server. It contains the companion skills that teach an AI agent how to work with time cockpit correctly — from connecting to TCQL to booking patterns — plus three agent definitions and the MCP server declaration. Clients select skills automatically based on their description; you can also address them explicitly ("use the skill timecockpit-tcql").
 
@@ -17383,8 +17448,8 @@ The public package **software-architects/timecockpit-agents** on GitHub ([github
 | `timecockpit-reporting` | Totals, budgets, utilization (report recipes) |
 | `timecockpit-tcql` | Ad-hoc queries in TCQL (reference and cookbook) |
 | `timecockpit-model-discovery` | Explore the customer-specific data model (`get_entities`, `describe_entity`) |
-| `timecockpit-record-management` | Create, update, delete records — with confirmation handshake |
-| `timecockpit-lists-and-actions` | Execute named lists and model actions |
+| `timecockpit-record-management` | Create, update, delete objects (`create_object`, `update_object`, `delete_object`) — with confirmation handshake |
+| `timecockpit-lists-and-actions` | Discover and execute named lists; model actions are not available over MCP and are run in the time cockpit UI |
 | Agents (`agents/*.agent.md`) | time cockpit Time Assistant, Reporting Analyst, Tenant Admin — **not** deployed by `apm install`; use the Claude Code plugin / ChatGPT plugin or copy manually |
 
 Skills are installed per project (repository) and end up in the client folders (`.claude/skills/`, `.agents/skills/`), so all clients see the same instructions. The recommended tool is **Microsoft APM** (Agent Package Manager), which fetches the skills from GitHub, deploys them to the right folders, versions them (`apm.lock.yaml`) and updates them. Alternatively copy `skills/` and `agents/` manually.
@@ -17520,7 +17585,7 @@ Source: https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md
 # OnCockpit Admin: Local MCP Server (stdio)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Besides the [remote MCP server](https://docs.timecockpit.com/doc/mcp/overview.md), time cockpit ships a **local MCP server** inside [OnCockpit Admin](https://docs.timecockpit.com/doc/data-model-customization/overview.md), the Windows tool for customizing time cockpit. Started with `--mcp`, OnCockpit Admin talks MCP over standard input/output (stdio) instead of showing its user interface. The AI client launches the process itself; no OAuth, no server URL.
 
@@ -17536,7 +17601,7 @@ The local server is aimed at **administrators and customizers**, not at end user
 | Runs | In the cloud, per user via Entra ID | On your Windows PC, as a child process of the AI client |
 | Sign-in | OAuth 2.1 with Microsoft Entra ID | The OnCockpit Admin **configuration** (`-c <name>`) you already use |
 | Clients | Every MCP client with HTTP transport, including Claude app, Copilot, ChatGPT | Clients that can start stdio servers: Claude Code, VS Code, Codex, Claude Desktop, Cursor, Copilot CLI |
-| Data access | Typed tools, TCQL queries, lists, actions, record CRUD | TCQL queries, lists, plus **arbitrary IronPython scripts** |
+| Data access | Typed tools, TCQL queries, lists, object CRUD | TCQL queries, lists, plus **arbitrary IronPython scripts** |
 | Data model changes | Not possible | Possible via script (`DataModel.py` migrations) |
 | Typical use | Booking time, reporting, everyday questions | Customization, migrations, test data, automated tests, complex one-off analyses |
 
@@ -17564,7 +17629,7 @@ Both servers can be registered side by side under different names.
 | `-c <configuration>` | Optional. Name of the OnCockpit Admin configuration (tenant, sandbox and user are part of the configuration). Without it, the configuration selector dialog opens when the client starts the server, and you pick the configuration there. Pass the name to start without any dialog, for example in shared team configurations. |
 | `--mcp-access Default\|ReadOnly` | Optional, default `Default`. `ReadOnly` hides every tool that changes data, including the script tools. |
 | `--mcp-scope Default\|OwnData` | Optional, default `Default`. `OwnData` hides every tool whose result cannot be restricted to the signed-in user. |
-| `--mcp-confirmation Required\|Disabled` | Optional, default `Required`. Whether generic actions and record changes need the `confirmed=true` handshake. Only an operator setting; there is no per-request override. |
+| `--mcp-confirmation Required\|Disabled` | Optional, default `Required`. Whether the generic object tools (`create_object`, `update_object`, `delete_object`) need the `confirmed=true` handshake. Only an operator setting; there is no per-request override. |
 
 Access and scope have the same meaning as the remote server's connection settings; tenant, sandbox and profile are not separate options because they come from the configuration. See [Access, Scope, and Confirmation](https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md).
 
@@ -17667,17 +17732,15 @@ The local server offers the same shared tools as the remote server, with the sam
 | `get_lists` | no | | List the named lists available to the user. |
 | `describe_list` | no | | Parameters and result columns of a named list. |
 | `execute_list` | no | yes | Run a named list, optionally with an additional TCQL condition. Prefer an existing list over a hand-written query when one fits. |
-| `get_actions` | no | | List the actions the user may execute for an entity, or the standalone actions. |
-| `execute_action` | **yes** | yes | Execute a model action. Needs `confirmed=true`. |
 | `execute_tcql_query` | no | yes | Run a bounded read-only TCQL query with optional named parameters (`@Name`). |
-| `create_entity`, `update_entity`, `delete_entity` | **yes** | yes | Create, update or delete a record of a visible entity. Need `confirmed=true`. |
+| `create_object`, `update_object`, `delete_object` | **yes** | yes | Create, update or delete an object of a visible entity. Need `confirmed=true`. |
 | `get_resource` | no | | **Local only.** Read one of the resources below for clients that do not support MCP resources natively. |
 | `execute_script_literal` | **yes** | yes | **Local only.** Run inline IronPython 2.7 source against the live data context. Output written with `print` is returned as the result. The script sees the data context as the global `Context` object. |
 | `execute_script_file` | **yes** | yes | **Local only.** Run an existing `.py` file from the local disk. Use this for larger scripts such as `DataModel.py` migrations that read further files relative to their own location. An operator can restrict the allowed folders. |
 
-Everything marked as changing data is hidden with `--mcp-access ReadOnly`. `entra_whoami` exists only on the remote server. The script tools are not confirmation-gated; the confirmation handshake applies to the generic action and record tools. Reads are row-capped and report `truncated`; see [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md).
+Everything marked as changing data is hidden with `--mcp-access ReadOnly`. `entra_whoami` exists only on the remote server. The script tools are not confirmation-gated; the confirmation handshake applies to the generic object tools and `create_timesheet_suggestion`. Model actions are not exposed as tools; run them in the time cockpit UI. Reads are row-capped and report `truncated`; see [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md).
 
-The server instructions tell the assistant to prefer a TCQL query or a list whenever the task can be expressed that way, and to reach for scripts only for what queries cannot do. Once a script or an action has started it cannot be interrupted from the client.
+The server instructions tell the assistant to prefer a TCQL query or a list whenever the task can be expressed that way, and to reach for scripts only for what queries cannot do. Once a script has started it cannot be interrupted from the client.
 
 > [!NOTE]
 > Older OnCockpit Admin builds on the dev feed expose a smaller, differently named tool set (`tcql_query` instead of `execute_tcql_query`, no `get_entities`, no `--mcp-*` options). Update OnCockpit Admin if the tools listed here are missing.
@@ -17691,7 +17754,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://ServerInstructions.md` | How the assistant should work with time cockpit: tool precedence, TCQL reference. Read first. |
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
-| `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. |
+| `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
 | `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |

@@ -4,6 +4,9 @@ description: Add the time cockpit MCP server as a custom connector in claude.ai,
 ---
 # Claude App, claude.ai and Cowork
 
+> [!WARNING]
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
+
 The hosted Claude interfaces (claude.ai, Claude Desktop, Claude Mobile, Cowork) do **not** use the Claude Code configuration files. Remote MCP servers are added as a **custom connector**. Custom connectors are available on all plans (Free: one connector). On Team and Enterprise plans an owner creates the connector and members connect to it.
 
 > [!WARNING]

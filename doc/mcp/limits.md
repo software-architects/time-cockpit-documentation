@@ -6,7 +6,7 @@ keywords: [MCP truncated, MCP row limit, MCP response limit, describe_list sampl
 # MCP Limits, Truncation, and Long-Running Operations
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Every read through the time cockpit MCP server is bounded. That is deliberate: an AI agent that pulls an unbounded result set is slow, expensive, and usually less useful than one that asks a narrower question. This page explains what the bounds are, how to tell that one was hit, and which operations cannot be stopped once they have started.
 
@@ -69,10 +69,9 @@ Two limits worth knowing. A default written as an expression (anything starting 
 
 ## Operations that cannot be cancelled
 
-Most operations stop when the client cancels. Three cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
+Most operations stop when the client cancels. Two cannot, and the tools say so rather than reporting a cancelled outcome while work continues in the background:
 
-- **Model actions.** Once an action has started executing, it runs to completion. Cancellation is only honoured before it starts.
-- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). The same rule: cancellation is checked before the script starts, never during it.
+- **IronPython scripts** on the local host (`execute_script_literal`, `execute_script_file`). Once a script has started, it runs to completion: cancellation is checked before the script starts, never during it.
 - **The write phase of `create_timesheet_suggestion`.** Cancellation is honoured up to the first record written; after that the writes finish.
 
 Practically: if an agent appears to hang on one of these, the work is probably still running. Do not assume it was rolled back, and check the affected records before retrying.

@@ -5,7 +5,7 @@ description: Three routes to bring the time cockpit MCP server into Microsoft 36
 # Microsoft 365 Copilot
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 End users cannot enter an MCP URL in the Copilot chat. MCP servers reach Microsoft 365 Copilot through **agents or connectors** — three routes, all of which involve a maker or an administrator. The consumer Copilot (copilot.microsoft.com) does not support custom MCP servers.
 

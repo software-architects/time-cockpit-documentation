@@ -5,7 +5,7 @@ description: Register the time cockpit MCP server as a custom app in a ChatGPT B
 # ChatGPT (Web, Business and Enterprise Workspaces)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 In ChatGPT, remote MCP servers are registered as **custom apps** by a workspace owner or administrator in the ChatGPT admin console (`chatgpt.com/admin`). The app is created once for the whole workspace and published to its members. Every member then connects to the app individually and signs in with their own Microsoft Entra ID work account. The configuration below has been set up and used with a ChatGPT Business workspace; dialog labels may differ slightly between ChatGPT versions and plans.
 

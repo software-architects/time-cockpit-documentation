@@ -5,7 +5,7 @@ description: Connect the time cockpit MCP server to MCPJam Inspector before inte
 # Test the MCP Server with MCPJam Inspector
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 [MCPJam Inspector](https://github.com/MCPJam/inspector) is useful for checking the time cockpit MCP connection before configuring an AI assistant. The steps below use the remote production MCP server and route requests to a time cockpit test sandbox.
 
@@ -127,7 +127,7 @@ Omitting `userDetailId` keeps the query scoped to the signed-in user. An empty `
 | Write tools are missing | Check whether the connection uses `access=readonly`; this intentionally hides writing tools. |
 | The sandbox was not selected | Check that `X-sandbox-environment: test` is present and that no conflicting URL segment is configured. |
 
-Do not use `create_entity`, `update_entity`, `delete_entity`, `create_timesheet` or `execute_action` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
+Do not use `create_object`, `update_object`, `delete_object` or `create_timesheet` as a connectivity test. These tools can change time cockpit data and require their own confirmation workflow.
 
 ## Related pages
 

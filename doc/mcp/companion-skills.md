@@ -1,11 +1,11 @@
 ---
 title: MCP Server - Companion Skills and APM
-description: Install the timecockpit-agents companion skills with Microsoft APM so AI assistants know how to connect to time cockpit, query with TCQL, book time, and run lists and actions.
+description: Install the timecockpit-agents companion skills with Microsoft APM so AI assistants know how to connect to time cockpit, query with TCQL, book time, and run named lists.
 ---
 # Companion Skills: Installing timecockpit-agents with APM
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 The public package **software-architects/timecockpit-agents** on GitHub ([github.com/software-architects/timecockpit-agents](https://github.com/software-architects/timecockpit-agents)) belongs to the MCP server. It contains the companion skills that teach an AI agent how to work with time cockpit correctly — from connecting to TCQL to booking patterns — plus three agent definitions and the MCP server declaration. Clients select skills automatically based on their description; you can also address them explicitly ("use the skill timecockpit-tcql").
 
@@ -16,8 +16,8 @@ The public package **software-architects/timecockpit-agents** on GitHub ([github
 | `timecockpit-reporting` | Totals, budgets, utilization (report recipes) |
 | `timecockpit-tcql` | Ad-hoc queries in TCQL (reference and cookbook) |
 | `timecockpit-model-discovery` | Explore the customer-specific data model (`get_entities`, `describe_entity`) |
-| `timecockpit-record-management` | Create, update, delete records — with confirmation handshake |
-| `timecockpit-lists-and-actions` | Execute named lists and model actions |
+| `timecockpit-record-management` | Create, update, delete objects (`create_object`, `update_object`, `delete_object`) — with confirmation handshake |
+| `timecockpit-lists-and-actions` | Discover and execute named lists; model actions are not available over MCP and are run in the time cockpit UI |
 | Agents (`agents/*.agent.md`) | time cockpit Time Assistant, Reporting Analyst, Tenant Admin — **not** deployed by `apm install`; use the Claude Code plugin / ChatGPT plugin or copy manually |
 
 Skills are installed per project (repository) and end up in the client folders (`.claude/skills/`, `.agents/skills/`), so all clients see the same instructions. The recommended tool is **Microsoft APM** (Agent Package Manager), which fetches the skills from GitHub, deploys them to the right folders, versions them (`apm.lock.yaml`) and updates them. Alternatively copy `skills/` and `agents/` manually.

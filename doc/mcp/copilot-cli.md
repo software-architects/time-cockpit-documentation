@@ -5,7 +5,7 @@ description: Current status of the time cockpit MCP server with the GitHub Copil
 # GitHub Copilot CLI
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 The terminal agent `copilot` stores MCP servers in `%USERPROFILE%\.copilot\mcp-config.json`; per project additionally in `.mcp.json` or `.github\mcp.json` (the file closest to the working directory wins). `apm install` can write the `timecockpit` entry to `.github/mcp.json` — see [Companion Skills](companion-skills.md).
 

@@ -5,7 +5,7 @@ description: Register the time cockpit MCP server in OpenAI Codex (CLI, desktop 
 # OpenAI Codex (CLI, Desktop App, IDE Extension)
 
 > [!WARNING]
-> Preliminary documentation: The time cockpit MCP server and this documentation are under active development. Tool names, dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users.
+> Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 Codex reads MCP servers from `%USERPROFILE%\.codex\config.toml` (global; `CODEX_HOME`) or from `.codex\config.toml` in the project. **CLI, desktop app and IDE extension share this file** — a server registered once is visible everywhere. The configuration below is in production use and works.
 
@@ -125,7 +125,7 @@ MCP servers
 
 • timecockpit  https://mcp.timecockpit.com
   Auth: OAuth (logged in)
-  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (18)
+  Tools: ping, get_current_user, get_entities, describe_entity, execute_tcql_query, get_timesheets, create_timesheet, … (16)
 
 Use /mcp verbose for details. To (re)authenticate run: codex mcp login timecockpit
 ```
