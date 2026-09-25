@@ -72,6 +72,28 @@ function Convert-Anchor([string]$enPath, [string]$dePath, [string]$anchor) {
     return $null
 }
 
+# uids declared by documentation pages (front matter "uid: x") -> English page path
+$docUids = @{}
+foreach ($f in Get-ChildItem -LiteralPath (Join-Path $script:RepoRoot 'doc') -Recurse -Filter *.md) {
+    $uid = Get-FrontMatterValue $f.FullName 'uid'
+    if ($uid) { $docUids[$uid] = $f.FullName.Substring($script:RepoRoot.Length).TrimStart('\').Replace('\', '/') }
+}
+
+function Resolve-Xref([string]$ref) {
+    $anchor = ''
+    $uid = $ref
+    $hash = $uid.IndexOf('#')
+    if ($hash -ge 0) { $anchor = $uid.Substring($hash); $uid = $uid.Substring(0, $hash) }
+    $q = $uid.IndexOf('?')
+    if ($q -ge 0) { $uid = $uid.Substring(0, $q) }
+    if ($docUids.ContainsKey($uid)) {
+        $enPath = $docUids[$uid]
+        if ($map.ContainsKey($enPath)) { return "~/$($map[$enPath])$anchor" }
+        return "/$($enPath -replace '\.md$', '.html')$anchor"
+    }
+    return "/api/$uid.html$anchor"
+}
+
 $rewritten = 0
 $filesChanged = 0
 foreach ($en in $map.Keys) {
@@ -132,19 +154,19 @@ foreach ($en in $map.Keys) {
         return "](/$html$(if ($anchor) { "#$anchor" })$title)"
     })
 
-    # Cross references into the API reference (<xref:Uid> or [text](xref:Uid)): the API is
-    # only built in English, so they become absolute links to /api/<Uid>.html.
-    $text = [regex]::Replace($text, '<xref:([A-Za-z0-9_.`]+)>', {
+    # Cross references (<xref:Uid> or [text](xref:Uid)). A uid of a documentation page
+    # (front matter "uid:", e.g. tcql) resolves like a page link; everything else is the
+    # API reference, which is only built in English: /api/<Uid>.html (anchor kept, query dropped).
+    $text = [regex]::Replace($text, '<xref:([^>\s]+)>', {
         param($m)
-        $uid = $m.Groups[1].Value
+        $uid = ($m.Groups[1].Value -split '[?#]')[0]
         $script:rewritten++
-        return "[$uid](/api/$uid.html)"
+        return "[$uid]($(Resolve-Xref $m.Groups[1].Value))"
     })
-    $text = [regex]::Replace($text, '\]\(xref:([A-Za-z0-9_.`]+)\)', {
+    $text = [regex]::Replace($text, '\]\(xref:([^)\s]+)\)', {
         param($m)
-        $uid = $m.Groups[1].Value
         $script:rewritten++
-        return "](/api/$uid.html)"
+        return "]($(Resolve-Xref $m.Groups[1].Value))"
     })
 
     # HTML images and video posters
