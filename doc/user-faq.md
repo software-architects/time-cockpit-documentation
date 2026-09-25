@@ -2,6 +2,7 @@
 title: Time Cockpit User FAQ - Common Questions & Answers
 description: Common time cockpit user questions on time tracking, projects, vacation, billing, and account settings with concise how-to answers.
 keywords: [time tracking faq, timesheet questions, time cockpit help, vacation request, timesheets, absence management, invoice help, user questions]
+faq: true
 ---
 
 # Time Cockpit User FAQ

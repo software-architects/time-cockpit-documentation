@@ -2,6 +2,7 @@
 title: Employee FAQ - Basic Time Tracking & Common Questions
 description: Frequently asked questions for employees using time cockpit for daily time tracking, vacation requests, mobile access, and common timesheet tasks.
 keywords: [employee time tracking, timesheet help, vacation request employee, mobile time tracking, employee faq, absence request]
+faq: true
 ---
 
 # Employee FAQ

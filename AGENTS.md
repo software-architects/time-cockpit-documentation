@@ -36,7 +36,8 @@ CI is the classic (non-YAML) Azure DevOps build pipeline `TimeCockpit.Documentat
 
 ## Content conventions
 
-- Every page starts with front-matter containing `title` and `description`. The description feeds `llms.txt`, so make it a real one-sentence summary.
+- Every page starts with front-matter containing `title` and `description`. The description feeds `llms.txt` and the meta description, so make it a real one-sentence summary of at most 155 characters; quote it when it contains a colon. Optional keys: `faq: true` (page is an FAQ, every `###` question becomes schema.org FAQ markup), `og_image: name.png` (social preview image under `images/`, 1200x630, default `og-default.png`), `_noindex: true` (keeps the page out of search engines).
+- Exactly one H1 per page (the `#` heading right after the front matter); sections start at `##`.
 - Cross-folder links use `~/doc/...` (for example `[TCQL Overview](~/doc/tcql/overview.md)`). Never use `../` relative paths.
 - File, folder and image names are kebab-case. Article images live in an `images/` folder next to the article (for example `doc/mcp/images/`).
 - A new page must be added to `doc/toc.yml`, otherwise it is unreachable from navigation.

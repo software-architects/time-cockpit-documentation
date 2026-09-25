@@ -168,7 +168,82 @@ export default {
     };
     window.addEventListener('cookieConsentChanged', renderVideos);
 
-    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); };
+    // Structured data (schema.org JSON-LD) for search engines. Built here rather than
+    // in the template so titles and descriptions are taken from the parsed DOM and
+    // serialized safely. The breadcrumb is rendered asynchronously by the template,
+    // so its block is added once the breadcrumb has items.
+    const SITE = 'https://docs.timecockpit.com/';
+    const ORG = { '@id': 'https://www.timecockpit.com/#organization' };
+    const addJsonLd = (id, data) => {
+      if (document.getElementById(id)) return;
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.id = id;
+      s.textContent = JSON.stringify({ '@context': 'https://schema.org', ...data });
+      document.head.appendChild(s);
+    };
+    const canonical = () => document.querySelector('link[rel=canonical]')?.href || location.href;
+    const metaContent = (name) => document.querySelector(`meta[name="${name}"]`)?.content || '';
+
+    const pageJsonLd = () => {
+      const isApi = document.body.dataset.yamlMime === 'ManagedReference';
+      const isFaq = metaContent('docfx:faq') === 'true';
+      const title = (document.querySelector('article h1')?.textContent || document.title).trim();
+      const description = metaContent('description');
+      const url = canonical();
+      const graph = [
+        { '@type': 'Organization', '@id': ORG['@id'], name: 'software architects gmbh', url: 'https://www.timecockpit.com/' },
+        { '@type': 'WebSite', '@id': SITE + '#website', url: SITE, name: 'time cockpit documentation', inLanguage: 'en', publisher: ORG },
+        {
+          '@type': isApi ? 'WebPage' : (isFaq ? 'FAQPage' : 'TechArticle'),
+          '@id': url + '#page',
+          url,
+          headline: title,
+          name: title,
+          ...(description ? { description } : {}),
+          inLanguage: 'en',
+          isPartOf: { '@id': SITE + '#website' },
+          publisher: ORG,
+          ...(isFaq ? { mainEntity: faqEntities() } : {})
+        }
+      ];
+      addJsonLd('tc-jsonld-page', { '@graph': graph });
+    };
+
+    // FAQ pages (front matter faq: true): every h3 is a question, the content up to
+    // the next heading is its answer.
+    const faqEntities = () => {
+      const out = [];
+      document.querySelectorAll('article h3').forEach((h) => {
+        const parts = [];
+        for (let el = h.nextElementSibling; el && !/^H[1-6]$/.test(el.tagName); el = el.nextElementSibling) {
+          parts.push(el.textContent.replace(/\s+/g, ' ').trim());
+        }
+        const answer = parts.join(' ').trim();
+        if (answer) {
+          out.push({ '@type': 'Question', name: h.textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: answer.slice(0, 2000) } });
+        }
+      });
+      return out;
+    };
+
+    const breadcrumbJsonLd = () => {
+      const crumbs = [...document.querySelectorAll('#breadcrumb .breadcrumb-item')];
+      if (!crumbs.length) return;
+      const items = crumbs.map((el, i) => {
+        const a = el.querySelector('a');
+        const href = a ? a.href.split(/[?#]/)[0] : null;
+        return { '@type': 'ListItem', position: i + 1, name: el.textContent.trim(), ...(href ? { item: href } : {}) };
+      }).filter((it) => it.name);
+      const title = (document.querySelector('article h1')?.textContent || '').trim();
+      if (title && items[items.length - 1]?.name !== title) {
+        items.push({ '@type': 'ListItem', position: items.length + 1, name: title, item: canonical() });
+      }
+      if (items.length >= 2) addJsonLd('tc-jsonld-breadcrumb', { '@type': 'BreadcrumbList', itemListElement: items });
+    };
+
+    pageJsonLd();
+    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); };
     update();
     new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   }

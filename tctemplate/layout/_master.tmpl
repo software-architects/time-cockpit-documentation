@@ -19,6 +19,21 @@
       <link rel="canonical" href="https://docs.timecockpit.com/{{{_path}}}">
       <link rel="alternate" hreflang="en" href="https://docs.timecockpit.com/{{{_path}}}">
       <link rel="alternate" hreflang="x-default" href="https://docs.timecockpit.com/{{{_path}}}">
+      {{!time cockpit: social previews. JSON-LD (WebSite, TechArticle, BreadcrumbList, FAQPage) is built in public/main.js.}}
+      <meta property="og:type" content="article">
+      <meta property="og:site_name" content="time cockpit documentation">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:url" content="https://docs.timecockpit.com/{{{_path}}}">
+      <meta property="og:title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}">
+      {{#description}}<meta property="og:description" content="{{description}}">{{/description}}
+      <meta property="og:image" content="https://docs.timecockpit.com/images/{{#og_image}}{{og_image}}{{/og_image}}{{^og_image}}og-default.png{{/og_image}}">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}">
+      {{#description}}<meta name="twitter:description" content="{{description}}">{{/description}}
+      <meta name="twitter:image" content="https://docs.timecockpit.com/images/{{#og_image}}{{og_image}}{{/og_image}}{{^og_image}}og-default.png{{/og_image}}">
+      {{#faq}}<meta name="docfx:faq" content="true">{{/faq}}
       <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
       <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
       <link rel="stylesheet" href="{{_rel}}public/main.css">

@@ -1,6 +1,7 @@
 ﻿---
 title: Developer FAQ - Common Questions
 description: Frequently asked questions for developers working with time cockpit's data model, queries, Web API, reporting, and automation.
+faq: true
 ---
 
 # Developer FAQ
