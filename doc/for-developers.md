@@ -19,9 +19,9 @@ Welcome to the developer documentation for time cockpit! This section covers eve
 ### Popular Use Cases
 
 - [Budgetary Control Implementation](use-cases/budgetary-control.md)
-- [Project Budget Tracking](developer-faq.md#how-do-i-track-project-budgets)
-- [JIRA Integration](developer-faq.md#how-can-i-integrate-with-jira)
-- [Custom Workflow Automation](developer-faq.md#how-do-i-create-an-approval-workflow)
+- [Project Budget Tracking](developer-faq.md#how-can-i-analyze-project-budget-or-profitability-data)
+- [JIRA Integration](developer-faq.md#how-do-i-access-time-cockpit-from-external-applications)
+- [Custom Workflow Automation](developer-faq.md#how-do-i-implement-approval-or-notification-workflows)
 
 ## 📊 Data Model
 
@@ -223,7 +223,7 @@ More use cases coming soon!
 **1. External Project Management (JIRA, Azure DevOps)**
 - Sync projects/tasks into time cockpit
 - Push time entries back to external system
-→ [JIRA Integration Example](developer-faq.md#how-can-i-integrate-with-jira)
+→ [JIRA Integration Example](developer-faq.md#how-do-i-access-time-cockpit-from-external-applications)
 
 **2. Accounting Systems (DATEV, SAP)**
 - Export invoices and billable hours

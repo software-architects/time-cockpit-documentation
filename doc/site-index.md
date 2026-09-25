@@ -1,0 +1,304 @@
+---
+title: Documentation Index - All Pages
+description: "Complete index of the time cockpit documentation: every guide, FAQ, reference page and release note, plus the API reference namespaces."
+---
+# Documentation Index
+
+Every page of the time cockpit documentation on one page, in the order of the navigation. Generated from `doc/toc.yml`; do not edit by hand.
+
+## [For Users](for-users.md)
+
+- Getting Started
+  - [Overview](getting-started/overview.md)
+  - [Web Client](getting-started/web-client.md)
+  - [Mobile & Responsive Access](getting-started/mobile-guide.md)
+- [Features](features-overview.md)
+  - Project Management
+    - [Customer / Project / Task](project-time-tracking/customer-project-task.md)
+    - [Budget Tracking & Profitability](project-time-tracking/budget-tracking.md)
+    - [Budgetary Control (Technical)](use-cases/budgetary-control.md)
+  - Invoicing & Billing
+    - [Invoice Creation](project-time-tracking/billing.md)
+    - [Invoice Data Fields](project-time-tracking/invoice-data-fields.md)
+    - [Hourly Rate Management](project-time-tracking/hourly-rates.md)
+  - Employee Management
+    - [Working Time / Leave](employee-time-tracking/working-time.md)
+    - [Absence Management](employee-time-tracking/absence-time-management.md)
+    - [Prorated Vacation](employee-time-tracking/prorated-vacation.md)
+    - [Approval Workflows](employee-time-tracking/approval-workflows.md)
+    - [Working Time Regulations](employee-time-tracking/working-time-regulations.md)
+  - Time Tracking
+    - [Time Sheet Calendar](timesheet-calendar/calendar.md)
+    - [Working With Entries](timesheet-calendar/working-with-timesheet-entries.md)
+    - [Timesheet Templates](timesheet-calendar/timesheet-templates.md)
+  - Reporting
+    - [Overview](reporting/overview.md)
+    - [Built-In Reports](reporting/built-in-reports.md)
+- FAQs (User Guides)
+  - [General User FAQ](user-faq.md)
+  - [Employee FAQ](employee-faq.md)
+  - [Project Manager FAQ](project-manager-faq.md)
+  - [Department Lead FAQ](department-lead-faq.md)
+  - [HR Administrator FAQ](hr-administrator-faq.md)
+  - [Billing Administrator FAQ](billing-admin-faq.md)
+- Reference
+  - [Overview](reference/overview.md)
+  - Lists
+    - Billing and Projects
+      - [Unbilled Timesheets](reference/lists/unbilled-timesheets.md)
+      - [Budgetary Control of Projects](reference/lists/budgetary-control-of-projects.md)
+      - [Budgetary Control of Tasks](reference/lists/budgetary-control-of-tasks.md)
+      - [Invoice Report](reference/lists/invoice-report.md)
+    - Attendance and Leave
+      - [Vacation](reference/lists/vacation.md)
+      - [Vacation Entitlement](reference/lists/vacation-entitlement.md)
+      - [Vacation per Effective Date](reference/lists/vacation-per-effective-date.md)
+      - [Sick Leave](reference/lists/sick-leave.md)
+      - [Compensatory Time](reference/lists/compensatory-time.md)
+      - [Weekly Hours of Work](reference/lists/weekly-hours-of-work.md)
+      - [Working Time Limits](reference/lists/working-time-limits.md)
+      - [Working Time Weights](reference/lists/working-time-weights.md)
+      - [Working Time Violations](reference/lists/working-time-violations.md)
+      - [Absence Calendar](reference/lists/absence-calendar.md)
+    - Reporting and Analysis
+      - [Overtime per Effective Date](reference/lists/overtime-per-effective-date.md)
+      - [Target-Actual Hours Comparison](reference/lists/target-actual-hours-comparison.md)
+      - [Time Report](reference/lists/time-report.md)
+      - [Home Office Overview](reference/lists/home-office-overview.md)
+  - Actions
+    - [Create Invoice](reference/actions/create-invoice.md)
+    - [Assign to Existing Outgoing Invoice](reference/actions/assign-to-existing-outgoing-invoice.md)
+    - [Approve Absence](reference/actions/approve-absence.md)
+    - [Reject Absence](reference/actions/reject-absence.md)
+- Account Management
+  - [Account Management](account-management/account-management.md)
+- Tracking Time
+  - [Time Sheet Calendar](timesheet-calendar/calendar.md)
+  - [Working With Time Sheet Entries](timesheet-calendar/working-with-timesheet-entries.md)
+  - [Outlook Appointments](timesheet-calendar/outlook-appointments.md)
+  - [Working Time](timesheet-calendar/working-time.md)
+  - [Formatting Profiles](timesheet-calendar/formatting-profiles.md)
+  - [Time Sheet Templates](timesheet-calendar/timesheet-templates.md)
+  - [Time Sheet Suggestions (Share Time Sheet)](timesheet-calendar/timesheet-suggestions-share-timesheet.md)
+  - [Default Permissions](employee-time-tracking/default-permissions.md)
+- Project-Based Time Tracking
+  - [Customer / Project / Task](project-time-tracking/customer-project-task.md)
+  - [Time Sheet](project-time-tracking/timesheet.md)
+  - Invoicing
+    - [Invoicing](project-time-tracking/billing.md)
+    - [Invoice Data Fields](project-time-tracking/invoice-data-fields.md)
+- Attendance Time Tracking
+  - [Working Time / Leave Management](employee-time-tracking/working-time.md)
+  - [Absence Time Management](employee-time-tracking/absence-time-management.md)
+  - [Working Time Regulations](employee-time-tracking/working-time-regulations.md)
+  - [Working From Home](employee-time-tracking/work-from-home.md)
+  - [Time Report](employee-time-tracking/time-report.md)
+  - [Passive Booking Completion](employee-time-tracking/passive-booking-completion.md)
+  - How To
+    - [Pay Off Overtime/Vacation](getting-started/howtos/pay-off-overtime-vacation.md)
+  - AI Assistants
+    - [Overview](ai-assistants/overview.md)
+    - [Use Cases & Prompts](ai-assistants/use-cases-and-prompts.md)
+    - [Dashboards & Visualizations](ai-assistants/dashboards.md)
+- Working with Time Cockpit
+  - [Dark Mode](ui/dark-mode.md)
+  - [Search the Navigation Menu](ui/menu-search.md)
+  - [Lists](ui/lists/entityview-profiles.md)
+- Data Exchange
+  - [Data Import](data-exchange/import.md)
+  - [Data Export](data-exchange/export.md)
+- Reporting
+  - [Overview](reporting/overview.md)
+  - [Standard Print View](reporting/standard-print-view.md)
+  - [Built-In Reports](reporting/built-in-reports.md)
+- Full Client (Desktop)
+  - [Installation Instructions](getting-started/installation-instructions.md)
+  - [Configuration Wizard](getting-started/configuration-wizard.md)
+  - [System Architecture](getting-started/system-architecture.md)
+  - Troubleshooting
+    - [Send Log Files](getting-started/troubleshooting/send-log-files.md)
+    - [Force Initial Sync](getting-started/troubleshooting/force-initial-sync.md)
+    - [SqlCeLockTimeoutException](getting-started/troubleshooting/sql-ce-lock-timeout-exception.md)
+    - [Signal Tracking Suspended](getting-started/troubleshooting/signal-tracking-suspended.md)
+    - [Network related error](getting-started/troubleshooting/network-related-error.md)
+    - [CryptographicException](getting-started/troubleshooting/next-button-missing-configuration-wizard.md)
+  - How To
+    - [Reset Password](getting-started/howtos/reset-password.md)
+  - Signal Trackers
+    - [Overview](signal-tracker/overview.md)
+    - [Signals](timesheet-calendar/signals.md)
+    - [Signal Details](timesheet-calendar/signal-details.md)
+    - [Options](signal-tracker/options.md)
+    - [Computer Activity](signal-tracker/computer-activity.md)
+    - [User Activity](signal-tracker/user-activity.md)
+    - [Active Windows](signal-tracker/active-windows.md)
+    - [Sent Emails](signal-tracker/sent-emails.md)
+    - [Changed Files](signal-tracker/changed-files.md)
+    - [Network Connections](signal-tracker/network-connections.md)
+    - [Notes](signal-tracker/notes.md)
+    - [Phone Calls](signal-tracker/phone-calls.md)
+    - [Team Foundation Server](signal-tracker/team-foundation-server.md)
+    - [Import Signals From Text Files](signal-tracker/import-signals.md)
+- Enterprise
+  - [Azure Active Directory (AAD) Integration](enterprise/aad.md)
+
+## [For Developers](for-developers.md)
+
+- [Developer FAQ](developer-faq.md)
+- Data Model
+  - [Entity Relationships](data-model/entity-relationships.md)
+  - [Standard Entities Reference](data-model/standard-entities.md)
+  - [Permissions & Security Guide](data-model/permissions-guide.md)
+- Data Model Customization
+  - [Overview](data-model-customization/overview.md)
+  - [Entities](data-model-customization/entity.md)
+  - [Lists](data-model-customization/list.md)
+  - [Forms](data-model-customization/form.md)
+  - [Permissions](data-model-customization/permission.md)
+  - [Navigation](data-model-customization/navigation.md)
+  - [Dashboards](data-model-customization/dashboard.md)
+  - [Feature Flags](data-model-customization/feature-flags.md)
+  - [Migration Guide Default Permissions](migration-guides/default-permissions.md)
+- Time Cockpit Query Language (TCQL)
+  - [Overview](tcql/overview.md)
+  - [From Clause](tcql/from-clause.md)
+  - [Where Clause](tcql/where-clause.md)
+  - [Order By Clause](tcql/order-by-clause.md)
+  - [Select Clause](tcql/select-clause.md)
+  - [Expression Language](tcql/expression-language.md)
+  - [Functions for Working Time and Holidays](tcql/functions-for-working-time-and-holidays.md)
+  - [TCQL AST API](tcql/tcql-ast-api.md)
+- Scripting & Automation
+  - [Overview](scripting/overview.md)
+  - [Automating Scripts](scripting/automating-scripts.md)
+  - [Actions](scripting/actions.md)
+  - [Triggers](scripting/triggers.md)
+  - How To
+    - [Add a File Property](scripting/add-file-property.md)
+    - [Add Holidays Using a Script](scripting/add-holidays.md)
+    - [Export Data to Microsoft Excel](scripting/export-data-to-excel.md)
+    - [Import Data From CSV](scripting/import-data-from-csv.md)
+    - [Import Data From SQL Server](scripting/import-data-from-sql-server.md)
+    - [Modify the Data Model](scripting/modify-data-model.md)
+    - [Send Mails When a Project is Over Budget](scripting/send-mail-when-over-budget.md)
+    - [Use .NET Framework Classes in Scripts](scripting/use-dot-net-classes-in-scripts.md)
+    - [Use C# to Access Time Cockpit API](scripting/use-c-sharp-to-access-time-cockpit-api.md)
+    - [Use XML in Scripts](scripting/use-xml-in-scripts.md)
+- Web API
+  - [Overview](web-api/overview.md)
+  - [Authentication](web-api/authentication.md)
+  - [OData Endpoint](web-api/odata.md)
+  - [Query Endpoint](web-api/query.md)
+  - [ExecuteList Endpoint](web-api/executelist.md)
+  - [ExecuteAction Endpoint](web-api/executeaction.md)
+  - [Reporting Endpoint](web-api/reporting.md)
+  - [Sample Implementation TimeCockpitClient](web-api/timecockpit-client.md)
+- MCP Server (AI Assistants)
+  - [Overview](mcp/overview.md)
+  - [Entra ID Setup](mcp/entra-id-setup.md)
+  - [Claude Code](mcp/claude-code.md)
+  - [Claude App, claude.ai & Cowork](mcp/claude-app.md)
+  - [OpenAI Codex](mcp/codex.md)
+  - [ChatGPT (Web, Business & Enterprise)](mcp/chatgpt.md)
+  - [Visual Studio Code](mcp/vscode.md)
+  - [Cursor (not tested)](mcp/cursor.md)
+  - [Microsoft 365 Copilot](mcp/microsoft-365-copilot.md)
+  - [MCPJam Inspector](mcp/mcpjam.md)
+  - [Verify the Connection](mcp/verify-connection.md)
+  - [Access, Scope, and Confirmation](mcp/access-and-confirmation.md)
+  - [Limits and Truncation](mcp/limits.md)
+  - [Companion Skills & APM](mcp/companion-skills.md)
+  - [OnCockpit Admin (Local MCP Server)](mcp/oncockpit-admin-local.md)
+- Reporting (Custom Reports)
+  - [Overview](reporting/overview.md)
+  - [Custom Reports](reporting/custom-reports.md)
+- Use Cases & Examples
+  - [Budgetary Control Implementation](use-cases/budgetary-control.md)
+
+## Release Notes
+
+- 2026
+  - [October](release-notes/2026-10.md)
+  - [September](release-notes/2026-09.md)
+  - [June](release-notes/2026-06.md)
+  - [April](release-notes/2026-04.md)
+  - [February](release-notes/2026-02.md)
+- 2025
+  - [February](release-notes/2025-02.md)
+  - [March](release-notes/2025-03.md)
+  - [April](release-notes/2025-04.md)
+  - [May](release-notes/2025-05.md)
+  - [June](release-notes/2025-06.md)
+  - [October](release-notes/2025-10.md)
+  - [November](release-notes/2025-11.md)
+- 2024
+  - [January](release-notes/2024-01.md)
+  - [February](release-notes/2024-02.md)
+  - [March](release-notes/2024-03.md)
+  - [May](release-notes/2024-05.md)
+  - [September](release-notes/2024-09.md)
+  - [November](release-notes/2024-11.md)
+  - [December](release-notes/2024-12.md)
+- 2023
+  - [January](release-notes/2023-01.md)
+  - [February](release-notes/2023-02.md)
+  - [March](release-notes/2023-03.md)
+  - [May](release-notes/2023-05.md)
+  - [June](release-notes/2023-06.md)
+  - [July](release-notes/2023-07.md)
+  - [September](release-notes/2023-09.md)
+  - [October](release-notes/2023-10.md)
+  - [November](release-notes/2023-11.md)
+  - [December](release-notes/2023-12.md)
+- 2022
+  - [January](release-notes/2022-01.md)
+  - [July](release-notes/2022-07.md)
+  - [October](release-notes/2022-10.md)
+  - [November](release-notes/2022-11.md)
+- 2021
+  - [April](release-notes/2021-04.md)
+  - [June](release-notes/2021-06.md)
+  - [July](release-notes/2021-07.md)
+  - [September](release-notes/2021-09.md)
+- 2020
+  - [September](release-notes/2020-09.md)
+  - [July](release-notes/2020-07.md)
+  - [June](release-notes/2020-06.md)
+  - [May](release-notes/2020-05.md)
+  - [March](release-notes/2020-03.md)
+  - [February](release-notes/2020-02.md)
+  - [January](release-notes/2020-01.md)
+- 2019
+  - [December](release-notes/2019-12.md)
+  - [October](release-notes/2019-10.md)
+  - [July](release-notes/2019-07.md)
+  - [June](release-notes/2019-06.md)
+  - [May](release-notes/2019-05.md)
+  - [April](release-notes/2019-04.md)
+  - [March](release-notes/2019-03.md)
+  - [February](release-notes/2019-02.md)
+  - [January](release-notes/2019-01.md)
+- 2018
+  - [December](release-notes/2018-12.md)
+  - [November](release-notes/2018-11.md)
+  - [August](release-notes/2018-08.md)
+  - [July](release-notes/2018-07.md)
+  - [June](release-notes/2018-06.md)
+  - [February](release-notes/2018-02.md)
+  - [January](release-notes/2018-01.md)
+- 2017
+  - [December](release-notes/2017-12.md)
+  - [November](release-notes/2017-11.md)
+  - [October](release-notes/2017-10.md)
+  - [September](release-notes/2017-09.md)
+  - [August](release-notes/2017-08.md)
+  - [July](release-notes/2017-07.md)
+  - [June](release-notes/2017-06.md)
+  - [May](release-notes/2017-05.md)
+  - [April](release-notes/2017-04.md)
+
+## API Reference
+
+.NET namespaces of the time cockpit data model; each namespace page lists its classes.
+
+

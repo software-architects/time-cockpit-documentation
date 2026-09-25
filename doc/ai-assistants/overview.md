@@ -1,5 +1,5 @@
 ---
-title: AI Assistants - Work with Time Cockpit from Claude, Codex, and Copilot
+title: AI Assistants - Claude, Codex and Copilot with Time Cockpit
 description: "Use AI assistants with time cockpit via the MCP server: what you can do, which assistants are supported, what you need and how to start safely."
 ---
 # AI Assistants for Time Cockpit

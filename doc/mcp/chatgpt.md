@@ -1,5 +1,5 @@
 ---
-title: MCP Server - ChatGPT Setup (Web, Business and Enterprise Workspaces)
+title: MCP Server - ChatGPT Setup (Business and Enterprise)
 description: "Register the time cockpit MCP server as a custom app in a ChatGPT Business or Enterprise workspace, sign in with Microsoft Entra ID and import the skills."
 ---
 # ChatGPT (Web, Business and Enterprise Workspaces)

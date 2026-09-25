@@ -17,7 +17,7 @@ If you're just starting out with time cockpit, the web client is the recommended
 - It is not possible to track computer signals with the web client. But if you have installed the full client to track signals, you can view the tracked signals in the web client, too. At the moment we are working on a lightweight version of the signal tracker that works without the WPF full client.
 - It is not possible to modify the data model. But all changes made with the full client are available in the web client.
 
-If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](support@timecockpit.com) or refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
+If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com) or refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
 
 
 ## Use time cockpit as Progressive Web App (PWA)

@@ -1,6 +1,6 @@
 ---
 title: HR Administrator FAQ - Employee & Absence Management
-description: HR administrator FAQ for time cockpit: maintain employee data, manage absences, review working time, and prepare exports for follow-up processing.
+description: "HR administrator FAQ for time cockpit: maintain employee data, manage absences, review working time, and prepare exports for follow-up processing."
 keywords: [hr administrator, employee data, absence approval, sick leave, vacation entitlement, working time, payroll export, hr faq]
 faq: true
 ---

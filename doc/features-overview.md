@@ -326,7 +326,7 @@ Features recently added or significantly improved.
 ### Documentation
 - **[For Users](for-users.md)** - User-focused documentation hub
 - **[For Developers](for-developers.md)** - Developer & API documentation
-- **[Release Notes](release-notes/)** - What's new in each version
+- **[Release Notes](release-notes/2026-10.md)** - What's new in each version
 
 ### Getting Help
 - **Email

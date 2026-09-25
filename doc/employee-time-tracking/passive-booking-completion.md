@@ -12,7 +12,8 @@ By default, the preconfigured TCQL expression sets the booking cutoff date to th
 
 ![Configure Booking Completion Date](images/booking-completion-date-config.png "Configure Booking Completion Date")
 
-> [!NOTE] At the moment, the **Booking Completion** feature is technically coupled with the **Default Permissions** functionality (see our [migration guide](~/doc/migration-guides/default-permissions.md) for details).
+> [!NOTE]
+> At the moment, the **Booking Completion** feature is technically coupled with the **Default Permissions** functionality (see our [migration guide](~/doc/migration-guides/default-permissions.md) for details).
 If you would like to have it enabled in your environment, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com) – we're happy to activate it for you.
 
 ## How It Works
@@ -27,7 +28,8 @@ If you would like to have it enabled in your environment, feel free to reach out
 ### Example Scenario
 If today is **April 16th**, the booking period for **March** will already be closed, preventing any edits to time entries or absences for that period.
 
-> [!NOTE] Users are not allowed to change time sheet entries AND absence times after prior to the booking completion date.
+> [!NOTE]
+> Users are not allowed to change time sheet entries AND absence times after prior to the booking completion date.
 
 ### Applicability Across Roles
 
@@ -50,7 +52,8 @@ Opening a closed booking period is subject to the following restrictions:
   1. The overtime corrections must first be **deleted**.
   2. After adjustments are made to the time tracking entries, the corrections must be **recreated with the correct values**.
 
-> [!NOTE] These restrictions ensure that the attendance time stays always consistent.
+> [!NOTE]
+> These restrictions ensure that the attendance time stays always consistent.
 
 ## Configuration Example
 
@@ -58,6 +61,7 @@ Below is an example of the global settings screen for configuring the passive bo
 
 ![Change Booking Completion Date](images/change-booking-completion-date.png "Change Booking Completion Date")
 
-> [!NOTE] Please be aware that if you have customized your time cockpit UserDetail form, the booking completion fields might not be visible. In that case, please contact support@timecockpit.com.
+> [!NOTE]
+> Please be aware that if you have customized your time cockpit UserDetail form, the booking completion fields might not be visible. In that case, please contact support@timecockpit.com.
 
 For further assistance or questions about configuring passive booking completion, please contact your system administrator.

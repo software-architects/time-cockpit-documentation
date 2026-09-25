@@ -482,7 +482,7 @@ Time cockpit continues to improve mobile experience:
 - Voice entry for descriptions
 - Geolocation for travel time (privacy considerations)
 
-Check [Release Notes](../release-notes/) for latest mobile improvements.
+Check [Release Notes](../release-notes/2026-10.md) for latest mobile improvements.
 
 ## Related Topics
 

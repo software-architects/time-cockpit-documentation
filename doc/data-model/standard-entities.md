@@ -295,22 +295,20 @@ Select New With
 
 ## Additional Entities
 
-The following entities are documented but with less detail. See individual entity pages for complete information:
+The following entities are documented but with less detail. See [Entity Relationship Diagrams](entity-relationships.md) for how they relate:
 
-- [APP_Customer](entities/customer.md) - Customer master data
-- [APP_UserDetail](entities/user-detail.md) - User profiles and settings
-- [APP_Invoice](entities/invoice.md) - Outgoing invoices
-- [APP_InvoiceDetail](entities/invoice-detail.md) - Invoice line items
-- [APP_Vacation](entities/vacation.md) - Vacation requests and approvals
-- [APP_SickLeave](entities/sick-leave.md) - Sick leave tracking
-- [APP_Department](entities/department.md) - Organizational units
-- [APP_WorkingTimeLimit](entities/working-time-limit.md) - Legal working time regulations
+- **APP_Customer** - Customer master data
+- **APP_UserDetail** - User profiles and settings
+- **APP_Invoice** - Outgoing invoices
+- **APP_InvoiceDetail** - Invoice line items
+- **APP_Vacation** - Vacation requests and approvals
+- **APP_SickLeave** - Sick leave tracking
+- **APP_Department** - Organizational units
+- **APP_WorkingTimeLimit** - Legal working time regulations
 
 ## See Also
 
 - [Entity Relationship Diagrams](entity-relationships.md)
-- [Permissions Guide](../security/permissions-guide.md)
+- [Permissions Guide](permissions-guide.md)
 - [TCQL Language Reference](../tcql/overview.md)
 - [OData API Documentation](../web-api/odata.md)
-- [Calculated Properties](calculated-properties.md)
-- [Validation Rules](validation-rules.md)

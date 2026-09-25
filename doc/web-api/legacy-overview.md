@@ -1,6 +1,6 @@
 ---
 title: Web API Legacy - Token & Basic Auth
-description: Legacy time cockpit Web API documentation with token and basic authentication. Note: PAT authentication is now recommended.
+description: "Legacy time cockpit Web API documentation with token and basic authentication. Note: PAT authentication is now recommended."
 ---
 # Web API
 

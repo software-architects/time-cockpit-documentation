@@ -351,7 +351,7 @@ Not directly - these are **runtime-calculated lists**, not stored data.
 
 - [APP_Project Entity Reference](../data-model/standard-entities.md#app_project)
 - [APP_Timesheet Entity Reference](../data-model/standard-entities.md#app_timesheet)
-- [APP_Invoice Entity Reference](../data-model/standard-entities.md#app_invoice)
+- [APP_Invoice Entity Reference](../data-model/standard-entities.md)
 - [Custom Lists Guide](../data-model-customization/list.md)
 - [TCQL Overview](../tcql/overview.md)
 - [Scripting Overview](../scripting/overview.md)

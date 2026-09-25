@@ -542,7 +542,7 @@ Ensure users only see data from their company:
 ## See Also
 
 - [Standard Entities Reference](standard-entities.md) - Entity-specific permissions
-- [Named Sets Documentation](../data-model-customization/named-sets.md)
+- [Named Sets Documentation](#named-sets-reference)
 - [TCQL Expression Language](../tcql/expression-language.md)
 - [Default Permissions Migration Guide](../migration-guides/default-permissions.md)
 - [Data Model Customization - Permissions](../data-model-customization/permission.md)

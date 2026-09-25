@@ -1,5 +1,5 @@
 ---
-title: Billing Administrator FAQ - Invoicing & Revenue Management
+title: Billing Admin FAQ - Invoicing and Revenue Management
 description: Frequently asked questions for billing administrators managing invoices, hourly rates, billing reports, and customer billing in time cockpit.
 keywords: [billing administrator, invoice creation, hourly rates, billing faq, revenue tracking, customer invoicing, invoice management, billing reports, unbilled timesheets]
 faq: true

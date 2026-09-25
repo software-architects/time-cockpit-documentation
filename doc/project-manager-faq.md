@@ -1,6 +1,6 @@
 ---
 title: Project Manager FAQ - Budgets, Project Time, and Billing Review
-description: Project manager FAQ for time cockpit: maintain projects and tasks, review project time, monitor budgets, and prepare billing handoff.
+description: "Project manager FAQ for time cockpit: maintain projects and tasks, review project time, monitor budgets, and prepare billing handoff."
 keywords: [project manager, project budget, project time, budgetary control, billable hours, tasks, projects, invoicing]
 faq: true
 ---

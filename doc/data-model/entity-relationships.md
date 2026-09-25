@@ -510,7 +510,7 @@ A timesheet can belong to zero or one invoice (optional). An invoice can have ma
 ## Related Documentation
 
 - [Standard Entities Reference](standard-entities.md) - Detailed documentation for each entity
-- [Permissions Guide](../security/permissions-guide.md) - How to work with entity permissions
+- [Permissions Guide](permissions-guide.md) - How to work with entity permissions
 - [TCQL Overview](../tcql/overview.md) - Query language for time cockpit
 - [Web API - OData](../web-api/odata.md) - REST API access to entities
 
@@ -518,4 +518,4 @@ A timesheet can belong to zero or one invoice (optional). An invoice can have ma
 
 - [Data Model Customization](../data-model-customization/overview.md)
 - [Creating Custom Entities](../data-model-customization/entity.md)
-- [Named Sets for Security](../security/named-sets.md)
+- [Named Sets for Security](permissions-guide.md#named-sets-reference)

@@ -1,6 +1,6 @@
 ---
 title: Department Lead FAQ - Team Approvals & Time Review
-description: Department lead FAQ for time cockpit: approve absences, review team time, check overtime, and see project-related time tracking.
+description: "Department lead FAQ for time cockpit: approve absences, review team time, check overtime, and see project-related time tracking."
 keywords: [department lead, absence approval, team time tracking, overtime, vacation approval, time report, team timesheets, department faq]
 faq: true
 ---
