@@ -36,7 +36,7 @@ This parameter has only an effect if you are using time cockpit's ChangeTracker.
 - `TriggerExecutionTime.OnDelete`: Indicates that the trigger is executed when a record already existed in the database and is deleted.
 
 > [!NOTE]
-Note that TriggerExecutionTime is a Flag Enum property. That is, you can combine OnInsert, OnUpdate and OnDelete via the | operator.
+> Note that TriggerExecutionTime is a Flag Enum property. That is, you can combine OnInsert, OnUpdate and OnDelete via the | operator.
 
 As with triggers in a database, you can access the affected records that are inserted/updated/deleted in the trigger. For that purpose, the trigger offers two collections:
 
@@ -101,4 +101,4 @@ To specify that you want to include only the relations that you explicitly menti
 If you do not want to include any relations, you have to combine `# SelectSettings.AutoIncludeRelations false` and `# IncludeClause NoInclude`.
 
 > [!NOTE]
-Be careful to use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the trigger. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
+> Be careful to use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the trigger. Validation rules and permissions will not work as expected if the necessary relations are not loaded.

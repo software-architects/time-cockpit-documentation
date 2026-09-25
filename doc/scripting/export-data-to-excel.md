@@ -16,7 +16,7 @@ time cockpit supports two ways of exporting data to Microsoft Office Excel:
 The following sample shows how to export the result of a [TCQL query](~/doc/tcql/overview.md) using an export [template file](~/doc/data-exchange/export.md) inside a script:
 
 > [!NOTE]
-The Export method shown in the code below expects either a template file or a list definition. If you specify a template the list definition is ignored. If you do not specify a template file you have to specify a list definition (i.e. template is automatically built based on the list definition).
+> The Export method shown in the code below expects either a template file or a list definition. If you specify a template the list definition is ignored. If you do not specify a template file you have to specify a list definition (i.e. template is automatically built based on the list definition).
 
 ```
 clr.AddReference("TimeCockpit.Data.Export")
@@ -46,6 +46,6 @@ The following sample shows how to generate an Microsoft Office Excel file using 
 You can convert an export script into an [Action](xref:TimeCockpit.Data.DataModel.Actions.ModelAction) to offer a button in time cockpit's user interface that exports the data of the selected row in a list. The following example shows how the sample shown above can be added as an action to the entity APP_UserDetail:
 
 > [!NOTE]
-Note that the action's code must only contain one top level `def` statement! If you need helper functions you have to define them as nested functions inside the one and only top level function (see sample code below).
+> Note that the action's code must only contain one top level `def` statement! If you need helper functions you have to define them as nested functions inside the one and only top level function (see sample code below).
 
 [!code-python[Export time sheet entries to excel action](code/export-time-sheet-entries-per-user-to-excel-action.py)]

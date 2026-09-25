@@ -51,7 +51,7 @@ Periods where you have been active on any of your devices and where you have alr
 ![Signal lanes](images/visualization-tracks.png "Signal lanes")
 
 > [!NOTE]
-By default, periods of inactivity that are longer than 15 minutes are interpreted as breaks (light green). However, you can alter the threshold of minutes in the options dialog. For more information refer to [Signal Tracker Options](~/doc/signal-tracker/options.md).
+> By default, periods of inactivity that are longer than 15 minutes are interpreted as breaks (light green). However, you can alter the threshold of minutes in the options dialog. For more information refer to [Signal Tracker Options](~/doc/signal-tracker/options.md).
 
 With the combined activity track users can quickly find periods where they have worked on one of their devices, but have not created time sheet entries for that period of time. Thus, time cockpit helps you to not leave any of your time unbooked and unbilled.
 
@@ -74,7 +74,7 @@ The CUA track subsumes the following information for you:
 Phone call signals are visualized as directed arrows. Incoming phone calls point in the right direction, whereas outgoing signals point in the left direction. Phone calls are not directly tracked by time cockpit's signal tracker, but need to be imported from a mobile phone or a telephony solution. You can find detailed information on how to import calls at [Signal Tracker for Phone Calls](~/doc/signal-tracker/phone-calls.md).
 
 > [!NOTE]
-You can configure the minimum length of a phone call. Calls that last shorter than the defined minimum length will not be shown in the time sheet calendar. You can change the minimum duration in the options dialog Signal Processing (please refer to [Signal Tracker Options](~/doc/signal-tracker/options.md)).
+> You can configure the minimum length of a phone call. Calls that last shorter than the defined minimum length will not be shown in the time sheet calendar. You can change the minimum duration in the options dialog Signal Processing (please refer to [Signal Tracker Options](~/doc/signal-tracker/options.md)).
 
 ![Phone call](images/phone-call.png "Phone call")
 

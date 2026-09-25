@@ -11,7 +11,7 @@ description: Use XML and .NET XML classes in IronPython scripts for time cockpit
 The following sample shows how to build the XML of a time cockpit form.
 
 > [!NOTE]
-While forms are stored in time cockpit's <xref:TimeCockpit.Data.DataModel.EntityView> entity, they should only be modified via the Model class interface.
+> While forms are stored in time cockpit's <xref:TimeCockpit.Data.DataModel.EntityView> entity, they should only be modified via the Model class interface.
 
 ```
 model = Context.GetWritableModel()

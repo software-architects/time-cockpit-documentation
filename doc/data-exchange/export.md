@@ -21,7 +21,7 @@ The full client of time cockpit offers another way to export data of a list to M
 You can use the quick export with or without a template. A template allows you to format the data in a special way or to add analysis or charts.
 
 > [!NOTE]
-Please note, that time cockpit can only work with Microsoft Office 2007 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
+> Please note, that time cockpit can only work with Microsoft Office 2007 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
 
 ### Default Format for Excel Export
 
@@ -34,7 +34,7 @@ When exporting your data without a template, all columns of your list will be ex
 Time cockpit searches for a named range **TemplateRow** in the template Excel. This area may contain [TCQL Expressions](~/doc/tcql/expression-language.md) in square brackets (e.g. `[=Current.USR_ProjectCode]`). You can access the exported objects with `Current`.
 
 > [!NOTE]
-Use **CTRL + F3** to access the **Name Manager** of Excel to set the named range **TemplateRow**.
+> Use **CTRL + F3** to access the **Name Manager** of Excel to set the named range **TemplateRow**.
 
 Outside the TemplateRow you can arrange everything the way you like. It will not be changed during export. Data below the TemplateRow will be moved down. Formulas containing references to the TemplateRow will be automatically extended (see comment in screenshot below). So you can add total lines to your template.
 

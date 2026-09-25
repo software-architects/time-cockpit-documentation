@@ -28,7 +28,7 @@ This information is derived from the invoicing rules specific to the project cor
 The billing address is required for generating the invoice document. Per default, the billing address is derived from the billing address of the customer. However, you can override the billing address for each invoice. To manage the billing address of your customers navigate to your [customer list](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
 >[!NOTE]
-The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice](~/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
+> The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice](~/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
 
 ## General Section
 
@@ -47,7 +47,7 @@ In an invoice, the `Gross Revenue` represents the total earnings derived from al
 ### Calculated and Deviating Revenue [Depracated]
 
 > [!NOTE]
-In past versions of time cockpit provided the fields `Calculated Revenue` and `Deviating Revenue`. Both fields are no longer required for future invoices. We recommend disabling the display of these fields in the [global settings](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings). For existing invoices, the value entered in the 'Deviating Net Revenue' field is still considered in the 'Net Revenue' field. It is not possible to simultaneously use deviating revenue and invoice items in a single invoice.
+> In past versions of time cockpit provided the fields `Calculated Revenue` and `Deviating Revenue`. Both fields are no longer required for future invoices. We recommend disabling the display of these fields in the [global settings](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings). For existing invoices, the value entered in the 'Deviating Net Revenue' field is still considered in the 'Net Revenue' field. It is not possible to simultaneously use deviating revenue and invoice items in a single invoice.
 
 ## Discount Section
 
@@ -62,7 +62,7 @@ To set up the payment discount:
 Once you've configured these settings, time cockpit will automatically calculate and display the `Discount Due Date` to avail of the discount. Additionally, the system will calculate the `Gross Revenue Discounted` for your convenience.
 
 >[!NOTE]
-If you set the `Payment Received On` date on the invoice and it falls within the discount period, time cockpit will automatically prefill the `Payment Amount` with the value for `Gross Revenue Discounted`.
+> If you set the `Payment Received On` date on the invoice and it falls within the discount period, time cockpit will automatically prefill the `Payment Amount` with the value for `Gross Revenue Discounted`.
 
 ## Invoice Report Section
 

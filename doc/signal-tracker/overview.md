@@ -50,4 +50,4 @@ If you have finished your time sheet for a certain period and want to delete the
 ![Delete signals](images/delete-signals.png "Delete signals")
 
 > [!NOTE]
-You can change the signal tracker from an opt-out model to an opt-in model by setting a registry key. For details see Auto-Start Behavior of Signal Trackers
+> You can change the signal tracker from an opt-out model to an opt-in model by setting a registry key. For details see Auto-Start Behavior of Signal Trackers

@@ -16,7 +16,7 @@ Name | Description
 expression | Expression that defines the sort order. See [TCQL Expression Language](expression-language.md) for details.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 

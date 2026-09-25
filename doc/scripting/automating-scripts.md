@@ -36,7 +36,7 @@ Hello World
 ```
 
 > [!NOTE]
-The script output is printed on the standard output unless we add the quiet flag.
+> The script output is printed on the standard output unless we add the quiet flag.
 
 By using the Windows Task Scheduler a periodic task to automate the previously shown script execution can be configured. After creating a basic (or normal) task and setting the options for the time of execution we need to provide the location of the ExecuteScript program and its parameters.
 

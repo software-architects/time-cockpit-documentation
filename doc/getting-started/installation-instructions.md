@@ -26,12 +26,12 @@ time cockpit synchronizes all data with Microsoft SQL Azure (find more informati
 ### Installation Wizard
 
 > [!NOTE]
-You need to have internet access to install and configure time cockpit, and the ports mentioned in system requirements have to be opened, otherwise the installation will fail.
+> You need to have internet access to install and configure time cockpit, and the ports mentioned in system requirements have to be opened, otherwise the installation will fail.
 
 ![Installation wizard](images/installer.png "Installation wizard")
 
 > [!NOTE]
-Please note that original version of time cockpit are always signed with a certificate from software architects. Do not install versions with another publisher than software architects.
+> Please note that original version of time cockpit are always signed with a certificate from software architects. Do not install versions with another publisher than software architects.
 
 The installation wizard will guide you through the following steps to install time cockpit:
 
@@ -40,7 +40,7 @@ The installation wizard will guide you through the following steps to install ti
 1. If all requirements are fulfilled, start the time cockpit setup by clicking the button "Start the installation of time cockpit" and follow the instructions on screen.
 
 > [!NOTE]
-The installation wizard if time cockpit automatically recognizes if you are working with a 32-bit or 64-bit operation system and installs the respective files in the correct folder.
+> The installation wizard if time cockpit automatically recognizes if you are working with a 32-bit or 64-bit operation system and installs the respective files in the correct folder.
 
 ### Configuration Wizard
 
@@ -55,7 +55,7 @@ If you are an IT administrator you possibly want to install all components separ
 time cockpit is based on the Microsoft .NET Framework 4.0. You can download it from [Microsoft .NET Framework 4.0](http://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&displaylang=en).
 
 > [!NOTE]
-Please not that you possibly need to restart your computer after installing Microsoft .NET Framework 4.0. Find more information in this blog entry.
+> Please not that you possibly need to restart your computer after installing Microsoft .NET Framework 4.0. Find more information in this blog entry.
 
 ### Installing Sync Framework 2.0
 

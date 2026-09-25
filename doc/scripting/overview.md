@@ -14,7 +14,7 @@ Time cockpit supports the use of [IronPython](http://ironpython.net/) to automat
 In this chapter we describe how you can write, create and run IronPython scripts in the time cockpit system.
 
 > [!NOTE]
-If you want to write a stand alone program (e.g. an interface importing data from another system) that should not run inside time cockpit you can also use your favorite .NET programming language (e.g. C#). See chapter [HowTo: Use C# to Access time cockpit API](https://help.timecockpit.com/?topic=html/ff51bcbb-0ed3-425f-83aa-5094f5899a98.htm) for details.
+> If you want to write a stand alone program (e.g. an interface importing data from another system) that should not run inside time cockpit you can also use your favorite .NET programming language (e.g. C#). See chapter [HowTo: Use C# to Access time cockpit API](https://help.timecockpit.com/?topic=html/ff51bcbb-0ed3-425f-83aa-5094f5899a98.htm) for details.
 
 ## The Built-In Script Editor
 
@@ -78,7 +78,7 @@ print "Done!"
 The model returned by [Model](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_Model) must not be changed. If you change anything in this model you will not be able to save your changes to the underlying database. If you need to have a writable model that can be saved use [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) to retrieve the model.
 
 > [!NOTE]
-[GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) can only be called in a script that is running on a Server context because in a Client context the model can never be changed!
+> [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) can only be called in a script that is running on a Server context because in a Client context the model can never be changed!
 
 The following sample script adds a new entity to the underlying model. Note that the model that should be changed is retrieved using [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel). The change is saved using the [SaveModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_SaveModel_TimeCockpit_Data_DataModel_Model_) method.
 

@@ -7,7 +7,7 @@ description: Use TCQL functions in time cockpit to calculate planned working hou
 Since Version 1.7 time cockpit has been able to calculate planned working hours and data about remaining paid time off for vacations. This chapter describes the functions that time cockpit contains to do this kind of calculations in TCQL statements or scripts.
 
 > [!NOTE]
-Note that you can only use this function in [TCQL Queries](xref:tcql). You cannot use them in in-memory [expressions](expression-language.md) (e.g. value-based coloring in timesheet calendar) or calculated properties (<xref:TimeCockpit.Data.DataModel.CalculatedProperty>).
+> Note that you can only use this function in [TCQL Queries](xref:tcql). You cannot use them in in-memory [expressions](expression-language.md) (e.g. value-based coloring in timesheet calendar) or calculated properties (<xref:TimeCockpit.Data.DataModel.CalculatedProperty>).
 
 ## RemainingVacationWeeks
 
@@ -88,7 +88,7 @@ endTime | End date/time (inclusive) for which the function calculates the result
 includeWeights | Indicating whether the function takes working time weights into account.
 
 > [!NOTE]
-You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+> You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
 
 ### Examples
 
@@ -108,7 +108,7 @@ includeWeights | Indicating whether the function takes working time weights into
 includeLumpSumOvertime | Indicating whether the result should include the lump sum for overtime defined for the user.
 
 > [!NOTE]
-You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+> You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
 
 ### Examples
 

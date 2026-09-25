@@ -13,7 +13,7 @@ By default, all time sheet entries that are created are marked as **office work*
 ![Home Office Flag](images/wc-work-from-home-flag.png "Home Office Flag")
 
 > [!NOTE] 
-Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
+> Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
 
 # Flagging a Whole Day
 
@@ -29,7 +29,7 @@ If you want to set a whole day to **Office** or **Work From Home** you can do th
 ![Work Location States](images/wc-work-from-home-three-states.png "Work Location States")
 
 > [!NOTE] 
-In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
+> In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
 
 # Reporting
 
@@ -42,4 +42,4 @@ In the standard data model, time cockpit displays the information if an employee
 ![Time Report](images/wc-work-from-home-time-report-pdf.png "Time Report")
 
 > [!NOTE] 
-If you want to analyse information about your employees working from home in a different way, take a look at time cockpit's [customization capabilities](~/doc/data-model-customization/overview.md) or drop us a mail at support@timecockpit.com.
+> If you want to analyse information about your employees working from home in a different way, take a look at time cockpit's [customization capabilities](~/doc/data-model-customization/overview.md) or drop us a mail at support@timecockpit.com.

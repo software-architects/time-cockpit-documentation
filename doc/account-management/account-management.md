@@ -9,7 +9,7 @@ Time cockpit offers an intuitive interface for managing account details, includi
 ![Account Overview](images/account-overview.png "Account Overview")
 
 >[!NOTE]
-Previously, account management was handled via the time cockpit website (www.timecockpit.com) until July 2023. Since then, account management has been moved to the time cockpit web app, offering users a unified and streamlined experience.
+> Previously, account management was handled via the time cockpit website (www.timecockpit.com) until July 2023. Since then, account management has been moved to the time cockpit web app, offering users a unified and streamlined experience.
 
 ## Adding Users
 
@@ -55,7 +55,7 @@ To ensure seamless billing and account management, time cockpit requires specifi
      - **Additional Address Info:** Include any supplementary information regarding your address.
 
 >[!NOTE]
-If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com)
+> If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com)
 
 ### Stripe
 

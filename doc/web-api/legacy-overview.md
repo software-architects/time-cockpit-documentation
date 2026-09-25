@@ -18,7 +18,7 @@ Three forms of authentication are currently supported:
 - [Basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) with username and password is used by tools that do not offer token authentication (e.g. [OData in Excel](http://office.microsoft.com/en-001/excel-help/connect-to-an-odata-feed-HA104019824.aspx)) and to initially acquire authentication tokens.
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the forseeable future. We strongly recommend to autenticate using PATs.
+> We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the forseeable future. We strongly recommend to autenticate using PATs.
 
 The following sample shows how to acquire a token via a simple web request and issue an exemplary service request with token authentication:
 

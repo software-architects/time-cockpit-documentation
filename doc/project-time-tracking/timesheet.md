@@ -11,7 +11,7 @@ In time cockpit you can create, edit and delete time sheet entries in the graphi
 - You want to export time sheet entries for analysis purposes.
 
 > [!NOTE]
-time cockpit is shipped with a sample excel export template for the standard time sheet list (see following register). You find this sample TimesheetListPivotAnalysis.xlsx in the installation directory of time cockpit.
+> time cockpit is shipped with a sample excel export template for the standard time sheet list (see following register). You find this sample TimesheetListPivotAnalysis.xlsx in the installation directory of time cockpit.
 
 For each time sheet you can define a specific hourly rate (`APP_HourlyRate`) differing from customer, project or task. If you do not enter a specific rate, the default hourly rate of project, customer or task will be used. You find the effective hourly rate of a time sheet in the calculated property `APP_HourlyRateActual`.
 

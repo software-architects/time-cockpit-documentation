@@ -25,10 +25,10 @@ entity_Name | Name of the source entity. The source entity has to exist in time 
 relation_path | Name of the relation that should be loaded together with the source entity. If you want to include subrelations, too, you have to include the name of the subrelation separated with dots (see example section below). If you want to include all subrelations recursively you can specify `.Include(*)`.
 
 > [!WARNING]
-Recursively including all subrelations with .Include(*) can result in large and complex queries that consume a lot of resources on the database. It is recommended to include only those relations that are really necessary to implement the corresponding query.
+> Recursively including all subrelations with .Include(*) can result in large and complex queries that consume a lot of resources on the database. It is recommended to include only those relations that are really necessary to implement the corresponding query.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 

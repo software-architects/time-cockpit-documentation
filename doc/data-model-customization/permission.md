@@ -13,7 +13,7 @@ Time cockpit is delivered with two predefined roles, ```Admin``` and ```User```.
 In the standard data model of time cockpit, the role concept is implemented with three entities. ```APP_UserDetail``` contains the information about a user. ```APP_UserRole``` contains the various roles supported by time cockpit (in standard ```Admin``` and ```User```). ```APP_UserDetailRole``` contains the assignment of a user to different roles. Time cockpit allows a user to be assigned to multiple roles.
 
 > [!WARNING]
-It is not recommended to set restrictive permissions on the entity ```APP_UserDetail```. It must be possible for the application to store its own user entry at any time. This is because the user's language is stored in the user entry. A user can change his / her language and must always be able to store his / her own user entry. Incorrect permissions can cause time cockpit to stop working. If you are not sure about permissions on the ```APP_UserDetail``` entity, contact support@timecockpit.com. In terms of permissions we recommend **KISS** - Keep it small and simple!
+> It is not recommended to set restrictive permissions on the entity ```APP_UserDetail```. It must be possible for the application to store its own user entry at any time. This is because the user's language is stored in the user entry. A user can change his / her language and must always be able to store his / her own user entry. Incorrect permissions can cause time cockpit to stop working. If you are not sure about permissions on the ```APP_UserDetail``` entity, contact support@timecockpit.com. In terms of permissions we recommend **KISS** - Keep it small and simple!
 
 ![Permission Entities](images/permission-entities.png "Permission Entities")
 
@@ -53,7 +53,7 @@ Using the set ```CurrentUserRoles```, you can create permissions to check whethe
 ```
 
 > [!NOTE]
-Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, the application must be restarted after changes to the role assignments. Logon sets are executed **only** once at the application startup and remain unchanged during the runtime of the application!
+> Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, the application must be restarted after changes to the role assignments. Logon sets are executed **only** once at the application startup and remain unchanged during the runtime of the application!
 
 ## Types of Permissions
 
@@ -103,7 +103,7 @@ To ensure that only users assigned to the ```Projectadmin``` role are allowed to
 ![Read-only Project Form](images/read-only-project-form-web.png "Read-only Project Form")
 
 > [!NOTE]
-If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
+> If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
 
 ## Requirement 2
 
@@ -130,4 +130,4 @@ The following figure shows two project lists. The left project list has been ope
 ![Project List Comparison](images/project-list-comparison.png "Project List Comparison")
 
 > [!NOTE]
-At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document. -->
+> At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document. -->

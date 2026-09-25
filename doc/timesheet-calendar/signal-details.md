@@ -24,7 +24,7 @@ Each signal category (application, changed files...) in the signal details pane 
 ![Change detail level](images/change-detail-level.png "Change detail level")
 
 > [!NOTE]
-In the keywords cloud, you can change the level of detail either in the context menu (compare histograms), but also via **Ctrl**-Mouse Wheel.
+> In the keywords cloud, you can change the level of detail either in the context menu (compare histograms), but also via **Ctrl**-Mouse Wheel.
 
 The provide information about when you have been doing what, the signal details pane interacts with the Combined Activity track in the time sheet calendar. You can select an item in the signal details pane (e.g. a bar in the application signal category) and time cockpit displays the period of time when you have used the given application. If you select additional bars while holding down the **Ctrl** key, you can select multiple bars.
 
@@ -83,6 +83,6 @@ The Wi-Fi Networks are displayed as a [histogram](https://en.wikipedia.org/wiki/
 The length of a bar in the histogram represents the duration how long an available Wi-Fi network was available. It does not matter if you were connected to the network. time cockpit only tracks the availability.
 
 > [!NOTE]
-This tracker is very helpful if you are travelling a lot and work with different available Wi-Fis. A lot of customers have their name in the Wi-Fi SSID. Thus, it is often easy to determine where you have been by taking a look which Wi-Fis you were connected to.
+> This tracker is very helpful if you are travelling a lot and work with different available Wi-Fis. A lot of customers have their name in the Wi-Fi SSID. Thus, it is often easy to determine where you have been by taking a look which Wi-Fis you were connected to.
 
 ![WIFI signals](images/wifi-signals.png "WIFI signals")

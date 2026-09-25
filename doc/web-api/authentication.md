@@ -11,7 +11,7 @@ Three forms of authentication are currently supported:
 - [PAT authentication](https://en.wikipedia.org/wiki/Personal_access_token).
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
+> We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
 
 ### Acquire PAT
 
@@ -69,7 +69,7 @@ public class Startup : FunctionsStartup
 ```
 
 > [!NOTE]
-We strongly discourage to store the PAT in source code, but to persist sensitive information in e.g. Microsoft Key Vault
+> We strongly discourage to store the PAT in source code, but to persist sensitive information in e.g. Microsoft Key Vault
 
 ### Query Metadata
 

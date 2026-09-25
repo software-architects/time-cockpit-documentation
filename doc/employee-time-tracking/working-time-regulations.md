@@ -7,14 +7,14 @@ description: Configure working time limits and regulations in time cockpit for A
 Since version 1.39, time cockpit provides a set of predefined rules for Austria and Germany that can be used to determine violations of working time limits in a given period.
 
 > [!WARNING]
-Please note that time cockpit does not ensure that legal obligations are fulfilled. It is the responsibility of the company using time cockpit to ensure to determine the applicable working time limits and enforce them. time cockpit only helps to highlight possible violations of working time limits.
+> Please note that time cockpit does not ensure that legal obligations are fulfilled. It is the responsibility of the company using time cockpit to ensure to determine the applicable working time limits and enforce them. time cockpit only helps to highlight possible violations of working time limits.
 
 ## Predefined Working Time Limits
 
 Predefined working time limits are shipped for Austria and Germany.
 
 > [!WARNING]
-Please note that time cockpit is not liable for the correctness of these rules.
+> Please note that time cockpit is not liable for the correctness of these rules.
 
 - Limits for Austria (as of 05.12.2023)
   - Max Working Time Per Day Excluding Travel Time [h]: 12h
@@ -37,7 +37,7 @@ Please note that time cockpit is not liable for the correctness of these rules.
     - [ArbZG Germany](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
 
 > [!IMPORTANT]
-The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
+> The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
 
 **Enhanced Working Time Validation (May 2025 Update)**
 
@@ -73,7 +73,7 @@ With this update, you can now **define those checks individually** per working t
 
 
 > [!WARNING]
-Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
+> Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
 
 Per default, time cockpit does not check any working time limits. You need to enable the checks once in the global settings. Further, you need to enable the checks that are actually performed. That is, you can disable certain checks if they do not apply to your company.
 
@@ -86,7 +86,7 @@ Per default, time cockpit does not take duration time sheet entries into account
 In the module **User** in the section **Working Time** you can view the violations under **Working Time Violations**. You can filter for a certain user and a select a period of time that should be checked for violations.
 
 > [!NOTE]
-Please note that by default time cockpit will select the current month as period. However, time cockpit will expand the period you selected to always include full weeks at the beginning and end of the period. If it would not do that, it would potentially miss violations of a weekly working time limit. Exceedance of the working time per day, are only calculated for the exact period you chose in the filter.
+> Please note that by default time cockpit will select the current month as period. However, time cockpit will expand the period you selected to always include full weeks at the beginning and end of the period. If it would not do that, it would potentially miss violations of a weekly working time limit. Exceedance of the working time per day, are only calculated for the exact period you chose in the filter.
 
 ![Working time violations](images/working-time-violations-web.png "Working time violations")
 
@@ -100,7 +100,7 @@ If the working time limits of Austria and Germany do not apply to you, you can c
 - Min break length: Indicates minimum number of minutes after Break after
 
 > [!NOTE]
-In contrast to the pre-configured limits for Austria and Germany, you cannot configure splitting options for breaks.
+> In contrast to the pre-configured limits for Austria and Germany, you cannot configure splitting options for breaks.
 
 ## Custom Working Time Limits
 

@@ -7,14 +7,14 @@ description: Access time cockpit's API from C# and other .NET languages. Learn a
 You can not only access time cockpit's API using [IronPython](http://ironpython.net/), you can also use your favorite .NET programming language (e.g. C#).
 
 > [!NOTE]
-Note that the code in this example connects to a user's [server data store](~/doc/getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
+> Note that the code in this example connects to a user's [server data store](~/doc/getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
 
 ## Project References
 
 Before you can access the time cockpit data store from C# you have to add certain references to your project:
 
 > [!NOTE]
-You can find the assemblies mentioned in this list in time cockpit's installation directory.
+> You can find the assemblies mentioned in this list in time cockpit's installation directory.
 
 - Antlr3.Runtime
 - Antlr3.StringTemplate

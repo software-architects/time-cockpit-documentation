@@ -33,7 +33,7 @@ if model.Entities.Contains("Project") == False:
 Entities (<xref:TimeCockpit.Data.DataModel.ModelEntity>) can have relations ([ModelEntityBase.Relations](xref:TimeCockpit.Data.DataModel.ModelEntityBase#TimeCockpit_Data_DataModel_ModelEntityBase_Relations) to other entities. You can add, update and remove relations. If you save a model using [DataContext.SaveObject](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_SaveModel_TimeCockpit_Data_DataModel_Model_), time cockpit will change the underlying database accordingly.
 
 > [!WARNING]
-time cockpit does not support the use of hierarchical relations in the moment. You can define hierarchical relationships in the database but the user interface does not treat them correctly
+> time cockpit does not support the use of hierarchical relations in the moment. You can define hierarchical relationships in the database but the user interface does not treat them correctly
 
 The following example shows how to create a model entity with relations in a Python script.
 

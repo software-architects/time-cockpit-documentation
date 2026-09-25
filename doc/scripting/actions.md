@@ -37,7 +37,7 @@ The following example shows the code for an action. Note that the action code mu
 Before an action is executed, time cockpit reloads the corresponding data rows before it passes them to the action via the `InputSet` property. This is necessary to make sure that the entire rows including all dependent objects are in memory. A list could have been optimized to load only a subset of the columns of a model entity. If time cockpit would not reload the data rows before executing the action, the action would possibly get incomplete data.
 
 > [!WARNING]
-Be aware that the input set does not guarantee a defined object order. Sorting may be required depending on the use-case.
+> Be aware that the input set does not guarantee a defined object order. Sorting may be required depending on the use-case.
 
 For reloading the entities, time cockpit generates a [TCQL](xref:tcql) statement with the following structure: `From C In [ModelEntityName][IncludeClause] Where C.[ModelEntityName]Uuid In {[SelectedUuids]} Select C`.
 
@@ -88,4 +88,4 @@ To specify that you want to include only the relations that you explicitly menti
 If you do not want to include any relations, you have to combine `# SelectSettings.AutoIncludeRelations false` and `# IncludeClause NoInclude`.
 
 > [!NOTE]
-Never use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the action. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
+> Never use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the action. Validation rules and permissions will not work as expected if the necessary relations are not loaded.

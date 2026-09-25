@@ -24,7 +24,7 @@ Every TCQL statement has the following structure:
 The `fromClause` defines the source of the query. The whereClause can be used to add conditions that the data from the source has to fulfill in order to be included in the query's result. orderByClause is used to sort the result. The selectClause defines the structure of the query result.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 Here are some simple examples for TCQL queries:
 
@@ -64,7 +64,7 @@ Select P
 ```
 
 > [!WARNING]
-time cockpit does not support sorting by aggregated values when querying the local data store.
+> time cockpit does not support sorting by aggregated values when querying the local data store.
 
 TCQL supports a number of functions that you can use inside expressions. Functions always start with a colon followed by the function name. Parameters are separated with commas.
 
@@ -103,7 +103,7 @@ Select New Project With {
 TCQL supports the use of aggregation functions.
 
 > [!NOTE]
-TCQL does not have a group by clause. The system generates grouping expressions for all expressions that are not used within an aggregation functions.
+> TCQL does not have a group by clause. The system generates grouping expressions for all expressions that are not used within an aggregation functions.
 
 ```
 From T In Timesheet 

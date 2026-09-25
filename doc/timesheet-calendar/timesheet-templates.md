@@ -31,7 +31,7 @@ Time sheet templates are highly flexible and can be adjusted as your projects an
 3. **Save Your Template**: After making your edits, click "Save template."
 
 >[!NOTE]
-If the time sheet form contains validation errors and doesn't meet the criteria of a valid time sheet entry (for instance, if you've left out mandatory information), you can still save the template. Time cockpit will prompt you to complete the missing mandatory fields when you use the template. On the other hand, if you've created a valid template, time cockpit will save the time sheet entry directly without opening a dialog.
+> If the time sheet form contains validation errors and doesn't meet the criteria of a valid time sheet entry (for instance, if you've left out mandatory information), you can still save the template. Time cockpit will prompt you to complete the missing mandatory fields when you use the template. On the other hand, if you've created a valid template, time cockpit will save the time sheet entry directly without opening a dialog.
 
 ## Drag and Drop
 Time sheet templates can be easily applied through drag and drop. Simply drag a template into the time sheet calendar or drop it on the signal bar or an Outlook appointment.

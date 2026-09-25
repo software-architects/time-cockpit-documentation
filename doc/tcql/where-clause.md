@@ -16,7 +16,7 @@ Name | Description
 searchCondition | Expression that defines the condition. See [TCQL Expression Language](expression-language.md) for details.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -44,7 +44,7 @@ From P In Project Where :Iif(P.ProjectName="Software Architects' TimeCockpit", "
 The following example shows a where-clause that references a relation.
 
 > [!NOTE]
-If the `where-clause` contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see [TCQL From Clause](from-clause.md) for details).
+> If the `where-clause` contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see [TCQL From Clause](from-clause.md) for details).
 
 ```
 // Return all projects that have a relation to customer "software architects"

@@ -22,7 +22,7 @@ In the standard configuration of time cockpit, you have to enter a description. 
 ![Timesheet Entry Form](images/wc-first-timesheet-entry.png "Timesheet Entry Form")
 
 > [!NOTE] 
-If the standard properties do not work for your business let us know at support@timecockpit.com. With time cockpit's customization capabilities, you can add your own properties, forms, lists etc. to integrate it into your organizational structure and processes to streamline your work. To get an overview of time cockpit's time cockpit's customization capabilities please refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
+> If the standard properties do not work for your business let us know at support@timecockpit.com. With time cockpit's customization capabilities, you can add your own properties, forms, lists etc. to integrate it into your organizational structure and processes to streamline your work. To get an overview of time cockpit's time cockpit's customization capabilities please refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
 
 
 ## Change
@@ -42,7 +42,7 @@ You can change all details of a time sheet entry in the time sheet entry form. B
 To move a time sheet entry click the time sheet entry, hold the mouse button pressed and move the mouse.
 
 > [!NOTE]
-In the week view you can move or copy time sheet entries from one day to another by drag & drop.
+> In the week view you can move or copy time sheet entries from one day to another by drag & drop.
 
 ## Copy
 

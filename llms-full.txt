@@ -2070,7 +2070,7 @@ When you execute the **Create Invoice** action, it assigns the selected timeshee
 Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
 
 > [!NOTE]
-Until version [2023-10](https://docs.timecockpit.com/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
+> Until version [2023-10](https://docs.timecockpit.com/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
 
 
 ## Automatic Creation of Invoice Items
@@ -2137,7 +2137,7 @@ In time cockpit, you have the flexibility to create manual invoices when needed.
 7. Save the manual invoice.
 
 >[!NOTE]
-With manual invoices, invoice items are **not** automatically generated from the time sheet entries within a specific period, giving you full control to define custom billing items and their details as needed.
+> With manual invoices, invoice items are **not** automatically generated from the time sheet entries within a specific period, giving you full control to define custom billing items and their details as needed.
 
 ## Generate an Invoice Report
 
@@ -2150,7 +2150,7 @@ Furthermore, the document itemizes all the assigned invoice items. Each invoice 
 If time sheet entries are associated with the invoice (created using the `Create Invoice` action), the display of the time sheet entry details on the invoice document can be enabled. You can do so by checking the `Incl. Timesheets on Invoice Document` flag on the given invoice. 
 
 >[!NOTE]
-If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
+> If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
 
 ### Invoices without VAT
 
@@ -2182,7 +2182,7 @@ In the footer of the invoice document, the corporate information of the entity i
 
 
 >[!NOTE]
-At the moment only one company/invoice issuer is supported.
+> At the moment only one company/invoice issuer is supported.
 
 ## Adding Timesheet Entries to an Existing Invoice
 
@@ -2195,7 +2195,7 @@ Occasionally, a time sheet entry may not have been included in an invoice. In su
 ![Assign to Existing Invoice](https://docs.timecockpit.com/doc/project-time-tracking/images/assign-to-existing-invoice.png "Assign to Existing Invoice")
 
 >[!NOTE]
-Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.
+> Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.
 
 ---
 
@@ -2229,7 +2229,7 @@ This information is derived from the invoicing rules specific to the project cor
 The billing address is required for generating the invoice document. Per default, the billing address is derived from the billing address of the customer. However, you can override the billing address for each invoice. To manage the billing address of your customers navigate to your [customer list](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
 >[!NOTE]
-The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice](https://docs.timecockpit.com/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
+> The address also has impact on your invoice document in regard to VAT. Please take a look at [Invoice](https://docs.timecockpit.com/doc/project-time-tracking/billing.md) - Generate an Invoice Report.
 
 ## General Section
 
@@ -2248,7 +2248,7 @@ In an invoice, the `Gross Revenue` represents the total earnings derived from al
 ### Calculated and Deviating Revenue [Depracated]
 
 > [!NOTE]
-In past versions of time cockpit provided the fields `Calculated Revenue` and `Deviating Revenue`. Both fields are no longer required for future invoices. We recommend disabling the display of these fields in the [global settings](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings). For existing invoices, the value entered in the 'Deviating Net Revenue' field is still considered in the 'Net Revenue' field. It is not possible to simultaneously use deviating revenue and invoice items in a single invoice.
+> In past versions of time cockpit provided the fields `Calculated Revenue` and `Deviating Revenue`. Both fields are no longer required for future invoices. We recommend disabling the display of these fields in the [global settings](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings). For existing invoices, the value entered in the 'Deviating Net Revenue' field is still considered in the 'Net Revenue' field. It is not possible to simultaneously use deviating revenue and invoice items in a single invoice.
 
 ## Discount Section
 
@@ -2263,7 +2263,7 @@ To set up the payment discount:
 Once you've configured these settings, time cockpit will automatically calculate and display the `Discount Due Date` to avail of the discount. Additionally, the system will calculate the `Gross Revenue Discounted` for your convenience.
 
 >[!NOTE]
-If you set the `Payment Received On` date on the invoice and it falls within the discount period, time cockpit will automatically prefill the `Payment Amount` with the value for `Gross Revenue Discounted`.
+> If you set the `Payment Received On` date on the invoice and it falls within the discount period, time cockpit will automatically prefill the `Payment Amount` with the value for `Gross Revenue Discounted`.
 
 ## Invoice Report Section
 
@@ -3773,14 +3773,14 @@ Source: https://docs.timecockpit.com/doc/employee-time-tracking/working-time-reg
 Since version 1.39, time cockpit provides a set of predefined rules for Austria and Germany that can be used to determine violations of working time limits in a given period.
 
 > [!WARNING]
-Please note that time cockpit does not ensure that legal obligations are fulfilled. It is the responsibility of the company using time cockpit to ensure to determine the applicable working time limits and enforce them. time cockpit only helps to highlight possible violations of working time limits.
+> Please note that time cockpit does not ensure that legal obligations are fulfilled. It is the responsibility of the company using time cockpit to ensure to determine the applicable working time limits and enforce them. time cockpit only helps to highlight possible violations of working time limits.
 
 ## Predefined Working Time Limits
 
 Predefined working time limits are shipped for Austria and Germany.
 
 > [!WARNING]
-Please note that time cockpit is not liable for the correctness of these rules.
+> Please note that time cockpit is not liable for the correctness of these rules.
 
 - Limits for Austria (as of 05.12.2023)
   - Max Working Time Per Day Excluding Travel Time [h]: 12h
@@ -3803,7 +3803,7 @@ Please note that time cockpit is not liable for the correctness of these rules.
     - [ArbZG Germany](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
 
 > [!IMPORTANT]
-The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
+> The new features are not enabled for existing customers by default. This way we do not interrupt existing processes. If you want to try the new features or know that you have a customized working time violation logic, please contact support@timecockpit.com
 
 **Enhanced Working Time Validation (May 2025 Update)**
 
@@ -3839,7 +3839,7 @@ With this update, you can now **define those checks individually** per working t
 
 
 > [!WARNING]
-Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
+> Please note that as of December 2023 time cockpit DOES NOT check whether the WEEKLY average working time over a calculation period (DE/AT: 16 weeks) has been exceeded.
 
 Per default, time cockpit does not check any working time limits. You need to enable the checks once in the global settings. Further, you need to enable the checks that are actually performed. That is, you can disable certain checks if they do not apply to your company.
 
@@ -3852,7 +3852,7 @@ Per default, time cockpit does not take duration time sheet entries into account
 In the module **User** in the section **Working Time** you can view the violations under **Working Time Violations**. You can filter for a certain user and a select a period of time that should be checked for violations.
 
 > [!NOTE]
-Please note that by default time cockpit will select the current month as period. However, time cockpit will expand the period you selected to always include full weeks at the beginning and end of the period. If it would not do that, it would potentially miss violations of a weekly working time limit. Exceedance of the working time per day, are only calculated for the exact period you chose in the filter.
+> Please note that by default time cockpit will select the current month as period. However, time cockpit will expand the period you selected to always include full weeks at the beginning and end of the period. If it would not do that, it would potentially miss violations of a weekly working time limit. Exceedance of the working time per day, are only calculated for the exact period you chose in the filter.
 
 ![Working time violations](https://docs.timecockpit.com/doc/employee-time-tracking/images/working-time-violations-web.png "Working time violations")
 
@@ -3866,7 +3866,7 @@ If the working time limits of Austria and Germany do not apply to you, you can c
 - Min break length: Indicates minimum number of minutes after Break after
 
 > [!NOTE]
-In contrast to the pre-configured limits for Austria and Germany, you cannot configure splitting options for breaks.
+> In contrast to the pre-configured limits for Austria and Germany, you cannot configure splitting options for breaks.
 
 ## Custom Working Time Limits
 
@@ -3924,7 +3924,7 @@ In the user selection area you can select the user for which the time sheet entr
 - Time cockpit provides a sophisticated permission system. You are able to specify read and write permissions for users and groups. Please find more information about permissions at [Permission Management](https://docs.timecockpit.com/doc/data-model-customization/permission.md).
 
 > [!NOTE]
-By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
+> By default, time cockpit does not ship any permissions. Everybody is allowed to see everything.
 
 ![User Selection](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-user-selection.png "User Selection")
 
@@ -4009,7 +4009,7 @@ In the standard configuration of time cockpit, you have to enter a description. 
 ![Timesheet Entry Form](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-first-timesheet-entry.png "Timesheet Entry Form")
 
 > [!NOTE] 
-If the standard properties do not work for your business let us know at support@timecockpit.com. With time cockpit's customization capabilities, you can add your own properties, forms, lists etc. to integrate it into your organizational structure and processes to streamline your work. To get an overview of time cockpit's time cockpit's customization capabilities please refer to [Data Model Customization](https://docs.timecockpit.com/doc/data-model-customization/overview.md)
+> If the standard properties do not work for your business let us know at support@timecockpit.com. With time cockpit's customization capabilities, you can add your own properties, forms, lists etc. to integrate it into your organizational structure and processes to streamline your work. To get an overview of time cockpit's time cockpit's customization capabilities please refer to [Data Model Customization](https://docs.timecockpit.com/doc/data-model-customization/overview.md)
 
 
 ## Change
@@ -4029,7 +4029,7 @@ You can change all details of a time sheet entry in the time sheet entry form. B
 To move a time sheet entry click the time sheet entry, hold the mouse button pressed and move the mouse.
 
 > [!NOTE]
-In the week view you can move or copy time sheet entries from one day to another by drag & drop.
+> In the week view you can move or copy time sheet entries from one day to another by drag & drop.
 
 ## Copy
 
@@ -4087,7 +4087,7 @@ Time sheet templates are highly flexible and can be adjusted as your projects an
 3. **Save Your Template**: After making your edits, click "Save template."
 
 >[!NOTE]
-If the time sheet form contains validation errors and doesn't meet the criteria of a valid time sheet entry (for instance, if you've left out mandatory information), you can still save the template. Time cockpit will prompt you to complete the missing mandatory fields when you use the template. On the other hand, if you've created a valid template, time cockpit will save the time sheet entry directly without opening a dialog.
+> If the time sheet form contains validation errors and doesn't meet the criteria of a valid time sheet entry (for instance, if you've left out mandatory information), you can still save the template. Time cockpit will prompt you to complete the missing mandatory fields when you use the template. On the other hand, if you've created a valid template, time cockpit will save the time sheet entry directly without opening a dialog.
 
 ## Drag and Drop
 Time sheet templates can be easily applied through drag and drop. Simply drag a template into the time sheet calendar or drop it on the signal bar or an Outlook appointment.
@@ -7168,7 +7168,7 @@ Time cockpit offers an intuitive interface for managing account details, includi
 ![Account Overview](https://docs.timecockpit.com/doc/account-management/images/account-overview.png "Account Overview")
 
 >[!NOTE]
-Previously, account management was handled via the time cockpit website (www.timecockpit.com) until July 2023. Since then, account management has been moved to the time cockpit web app, offering users a unified and streamlined experience.
+> Previously, account management was handled via the time cockpit website (www.timecockpit.com) until July 2023. Since then, account management has been moved to the time cockpit web app, offering users a unified and streamlined experience.
 
 ## Adding Users
 
@@ -7214,7 +7214,7 @@ To ensure seamless billing and account management, time cockpit requires specifi
      - **Additional Address Info:** Include any supplementary information regarding your address.
 
 >[!NOTE]
-If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com)
+> If you have any questions concerning billing please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com)
 
 ### Stripe
 
@@ -7251,14 +7251,14 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 ![Log In Office 365](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-office365-login.png "Log In Office 365")
 
 > [!NOTE]
-The login might open in the background. So check your windows with Alt + Tab if you are not immediately seeing the Office 365 prompt
+> The login might open in the background. So check your windows with Alt + Tab if you are not immediately seeing the Office 365 prompt
 
 * Click **Refresh** in the time cockpit toolbar to fetch Outlook appointments and mails from Office 365.
 
 ![Office 365 Data](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-office365-enabled.png "Office 365 Data")
 
 > [!NOTE]
-To transform your Outlook appointment to a time sheet entry just double-click it and enter missing data.
+> To transform your Outlook appointment to a time sheet entry just double-click it and enter missing data.
 
 ![Double-Click Appointment](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-transform-appointments.png "Double-Click Appointment")
 
@@ -7289,12 +7289,12 @@ The working time display shows the planned hours of work and actual hours of wor
 In the chapters [planned hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#planned-hours-of-work) and [actual hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#actual-hours-of-work) you find detailed information on how the time, which is shown in the working time display, are determined.
 
 > [!NOTE]
-In this documentation you find a sample script which shows, how you can [integrate holidays automatically for a given year](https://docs.timecockpit.com/doc/scripting/add-holidays.md). This sample contains all common holidays. You may adapt them to your concrete needs.
+> In this documentation you find a sample script which shows, how you can [integrate holidays automatically for a given year](https://docs.timecockpit.com/doc/scripting/add-holidays.md). This sample contains all common holidays. You may adapt them to your concrete needs.
 
 <!-- ## Private Time Sheet Entries
 
 > [!WARNING]
-Please consider that all versions after time cockpit 1.7 do not support hiding time sheets entries via the [TCQL expression](https://docs.timecockpit.com/doc/tcql/expression-language.md) configured in the options dialogue anymore. This function has been replaced by the significantly more powerful solution of working time weight (see chapter [actual hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#actual-hours-of-work)). If you use the old function of private time sheet entries, a warning will appear if you start time cockpit for first time which will indicate to use working time weight in the future.
+> Please consider that all versions after time cockpit 1.7 do not support hiding time sheets entries via the [TCQL expression](https://docs.timecockpit.com/doc/tcql/expression-language.md) configured in the options dialogue anymore. This function has been replaced by the significantly more powerful solution of working time weight (see chapter [actual hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#actual-hours-of-work)). If you use the old function of private time sheet entries, a warning will appear if you start time cockpit for first time which will indicate to use working time weight in the future.
 
 In time cockpit cockpit you have the possibility to enter private time sheet entries, which won’t be included in the actual hours of work (e.g. times for advanced training, travelling time without consideration to actual hours of work, etc.). If you want to use private time sheet entries, create a working time weight with 0 % (see chapter [actual hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#actual-hours-of-work)).
 
@@ -7365,7 +7365,7 @@ Examples:
 - `Current.Description + ' (' + Current.Project.Description + ')'` display the description of the time sheet entry concatenated with the description of the associated project
 
 > [!NOTE]
-Note that the description could contain a constant string, too. However, in practice you will mostly use a formula.
+> Note that the description could contain a constant string, too. However, in practice you will mostly use a formula.
 
 ### Expression for Grouping Time Sheet Entries (Optional)
 
@@ -7378,7 +7378,7 @@ Examples:
 - `:Iif(Current.Billable=True, :Translate('FormattingProfile.Billable.Billable'), :Translate('FormattingProfile.Billable.NotBillable'))`
 
 > [!NOTE]
-Do not return a color code or the name of a color. The color is assigned later in the configuration (see below). In this step we only need the caption for the bar chart row. Note that you can use the :Translate function if you need to support different languages.
+> Do not return a color code or the name of a color. The color is assigned later in the configuration (see below). In this step we only need the caption for the bar chart row. Note that you can use the :Translate function if you need to support different languages.
 
 ### Display Formatting Profile for
 
@@ -7710,7 +7710,7 @@ In time cockpit you can create, edit and delete time sheet entries in the graphi
 - You want to export time sheet entries for analysis purposes.
 
 > [!NOTE]
-time cockpit is shipped with a sample excel export template for the standard time sheet list (see following register). You find this sample TimesheetListPivotAnalysis.xlsx in the installation directory of time cockpit.
+> time cockpit is shipped with a sample excel export template for the standard time sheet list (see following register). You find this sample TimesheetListPivotAnalysis.xlsx in the installation directory of time cockpit.
 
 For each time sheet you can define a specific hourly rate (`APP_HourlyRate`) differing from customer, project or task. If you do not enter a specific rate, the default hourly rate of project, customer or task will be used. You find the effective hourly rate of a time sheet in the calculated property `APP_HourlyRateActual`.
 
@@ -7733,7 +7733,7 @@ By default, all time sheet entries that are created are marked as **office work*
 ![Home Office Flag](https://docs.timecockpit.com/doc/employee-time-tracking/images/wc-work-from-home-flag.png "Home Office Flag")
 
 > [!NOTE] 
-Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
+> Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
 
 # Flagging a Whole Day
 
@@ -7749,7 +7749,7 @@ If you want to set a whole day to **Office** or **Work From Home** you can do th
 ![Work Location States](https://docs.timecockpit.com/doc/employee-time-tracking/images/wc-work-from-home-three-states.png "Work Location States")
 
 > [!NOTE] 
-In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
+> In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
 
 # Reporting
 
@@ -7762,7 +7762,7 @@ In the standard data model, time cockpit displays the information if an employee
 ![Time Report](https://docs.timecockpit.com/doc/employee-time-tracking/images/wc-work-from-home-time-report-pdf.png "Time Report")
 
 > [!NOTE] 
-If you want to analyse information about your employees working from home in a different way, take a look at time cockpit's [customization capabilities](https://docs.timecockpit.com/doc/data-model-customization/overview.md) or drop us a mail at support@timecockpit.com.
+> If you want to analyse information about your employees working from home in a different way, take a look at time cockpit's [customization capabilities](https://docs.timecockpit.com/doc/data-model-customization/overview.md) or drop us a mail at support@timecockpit.com.
 
 ---
 
@@ -7813,7 +7813,7 @@ The report is located at **USERS --> WORKING TIME --> Time Report**
 10. **Signature:** This area is intended for a digital signature or acknowledgment.
 
 > [!NOTE]
-As always, you can create your own report using SSRS [reporting](https://docs.timecockpit.com/doc/reporting/custom-reports.md) or contact us at support@timecockpit.com to create your custom report for you.
+> As always, you can create your own report using SSRS [reporting](https://docs.timecockpit.com/doc/reporting/custom-reports.md) or contact us at support@timecockpit.com to create your custom report for you.
 
 ### Use Cases
 
@@ -7826,7 +7826,7 @@ As always, you can create your own report using SSRS [reporting](https://docs.ti
 ## Download Time Reports for Multiple Users [Beta]
 
 >[!NOTE]
-Currently, this feature is designed to generate up to 20 employees per month per execution. This limitation is a result of constraints within the SSRS library, which does not support parallel execution. We are actively addressing this challenge and are committed to resolving it in a future release.
+> Currently, this feature is designed to generate up to 20 employees per month per execution. This limitation is a result of constraints within the SSRS library, which does not support parallel execution. We are actively addressing this challenge and are committed to resolving it in a future release.
 
 Users can conveniently generate time reports in PDF or Excel format for a specified time period. This feature is particularly useful for users who need to generate time reports for multiple individuals, especially at the end of the month.
 
@@ -8409,7 +8409,7 @@ In order for time cockpit's importer to be useful, it has to have an understandi
 As an example, consider a situation where projects are imported. The import definition consists of a single worksheet mapping, mapping an excel worksheet to the project entity. The worksheet mapping contains multiple column mappings, mapping fields such as the project title and description, or the start date of the project. A column mapping may also map a relation, in which case a match criteria has to be chosen. The match criteria is a property related to the entity that contains the information that has to match the content of the cell that is imported. The importer queries the database for such an entity and ensures that exactly one item will be found. It will issue an error if none or multiple matches are found.
 
 > [!NOTE]
-An important thing to note about the importer is that it does not update existing rows but always creates new ones. Reimporting the sample file multiple times will cause duplicate items in time cockpit. Be sure to review the newly created data once it has been imported.
+> An important thing to note about the importer is that it does not update existing rows but always creates new ones. Reimporting the sample file multiple times will cause duplicate items in time cockpit. Be sure to review the newly created data once it has been imported.
 
 ## Viewing Import Definitions
 
@@ -8444,10 +8444,10 @@ Clicking **Select** will generate an excel file as well as a corresponding impor
 The country relation is special, as the importer cannot just set the value of the property to the name of the country. Instead it has to set it to the entity object that is identified by the value in the column. The criteria to find the related object can be adjusted by changing the 'Reference Criteria' of the column mapping. In this simple scenario, the reference criteria could only be changed to the ISO code of the country, as country has no other properties to match.
 
 > [!NOTE]
-It is important that the relation criteria is a unique property of the related entity as the importer will warn and fail to import data if relations lead to ambiguous references.
+> It is important that the relation criteria is a unique property of the related entity as the importer will warn and fail to import data if relations lead to ambiguous references.
 
 > [!NOTE]
-The relation criteria is not necessarily a direct property of the related entity. It can be any property that is 'reachable' from the target entity.
+> The relation criteria is not necessarily a direct property of the related entity. It can be any property that is 'reachable' from the target entity.
 
 Finally, we can observe that the automatically generated import definition also maps a status column. The status column is used for the importer to write back information on whether the import for this row was successful or not. If there was an error a message is written to the cell to aid the user to quickly identify and resolve problems when importing data.
 
@@ -8472,7 +8472,7 @@ The status column remains empty, as that column will be filled by the importer w
 In order to import the file with the customer data, we click on the 'Import' hyperlink in the list of import definitions which will open the import dialog. This dialog is used to import files for the chosen import definition. Ensure that the file you want to import is not open within excel and select the source file to import by clicking 'Select source file'.
 
 > [!NOTE]
-The source file is read at the time the source file is selected. Changes to the source file are not automatically picked up by the importer. If the source changes, the source file has to be re-selected. The time stamp next to the file name indicates the point in time the file was chosen.
+> The source file is read at the time the source file is selected. Changes to the source file are not automatically picked up by the importer. If the source changes, the source file has to be re-selected. The time stamp next to the file name indicates the point in time the file was chosen.
 
 ![Select source file](https://docs.timecockpit.com/doc/data-exchange/images/wc-select-source-file.png "Select source file")
 
@@ -8481,7 +8481,7 @@ After a source file has been selected, two buttons will become active: **Test im
 ![Successful import test](https://docs.timecockpit.com/doc/data-exchange/images/wc-import-test-successful.png "Successful import test")
 
 > [!NOTE]
-Executing an import will only commit the transaction if no error occurred. Rows producing an error have to be removed from the source file or changed to pass in order for any row of the import process to be actually saved.
+> Executing an import will only commit the transaction if no error occurred. Rows producing an error have to be removed from the source file or changed to pass in order for any row of the import process to be actually saved.
 
 The test as well as the real import produce a report file that can be saved. In order to do so, click the **Save results** button and a select a file to save to. The report file will be identical to the source file, but the status column (if one was mapped) will contain error messages or a message ('Ok.') indicating that the import succeeded.
 
@@ -8502,7 +8502,7 @@ The next step is to create a new import definition. Open the 'Import Definition'
 After loading the sample file, create a new worksheet mapping by clicking on the '+' sign below the worksheet mapping table. In the newly appeared row, click on the source column to open the combo box and select the 'Project' worksheet. Select the matching 'Project' entity in the 'Target Entity' column as well.
 
 > [!NOTE]
-time cockpit's importer is capable of automatically finding mappings if the name matches. This functionality can also be used on custom created sample workbooks by clicking the 'Generate mapping automatically' button. It is therefore a best practice to keep the naming of columns in worksheets identical to entity properties or the (localized) names of those properties.
+> time cockpit's importer is capable of automatically finding mappings if the name matches. This functionality can also be used on custom created sample workbooks by clicking the 'Generate mapping automatically' button. It is therefore a best practice to keep the naming of columns in worksheets identical to entity properties or the (localized) names of those properties.
 
 The second step is to map the column names to the properties of the target entity (project in this case). This is again achieved by clicking the '+' sign below the column mapping table. Since three columns are mapped we add three column mappings and map the following columns and properties:
 
@@ -8513,14 +8513,14 @@ Projectcode | Project Code | (empty)
 Customer Code | Customer | Customer Code
 
 > [!NOTE]
-When choosing the reference criteria for the 'Customer' relation, be sure to first select the target column, as the combo box for the relation criteria remains disabled until a relation member is actually selected.
+> When choosing the reference criteria for the 'Customer' relation, be sure to first select the target column, as the combo box for the relation criteria remains disabled until a relation member is actually selected.
 
 After mapping the columns, the import definition should appear similar to the image below. Note that the order of the column mappings does not matter.
 
 ![Import definition for Project](https://docs.timecockpit.com/doc/data-exchange/images/wc-import-definition-project-minimal.png "Import definition for Project")
 
 > [!NOTE]
-In this example, we did not use any status column. The status column is optional, but usually a good idea when importing complex data sets, as it makes spotting an error easier.
+> In this example, we did not use any status column. The status column is optional, but usually a good idea when importing complex data sets, as it makes spotting an error easier.
 
 After saving the import definition, the import can be performed just as if it was automatically generated.
 
@@ -8565,7 +8565,7 @@ The full client of time cockpit offers another way to export data of a list to M
 You can use the quick export with or without a template. A template allows you to format the data in a special way or to add analysis or charts.
 
 > [!NOTE]
-Please note, that time cockpit can only work with Microsoft Office 2007 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
+> Please note, that time cockpit can only work with Microsoft Office 2007 or newer. If you are using older versions of Microsoft Office, you will have to use the [Microsoft Office Compatibility Pack](http://support.microsoft.com/kb/924074/en).
 
 ### Default Format for Excel Export
 
@@ -8578,7 +8578,7 @@ When exporting your data without a template, all columns of your list will be ex
 Time cockpit searches for a named range **TemplateRow** in the template Excel. This area may contain [TCQL Expressions](https://docs.timecockpit.com/doc/tcql/expression-language.md) in square brackets (e.g. `[=Current.USR_ProjectCode]`). You can access the exported objects with `Current`.
 
 > [!NOTE]
-Use **CTRL + F3** to access the **Name Manager** of Excel to set the named range **TemplateRow**.
+> Use **CTRL + F3** to access the **Name Manager** of Excel to set the named range **TemplateRow**.
 
 Outside the TemplateRow you can arrange everything the way you like. It will not be changed during export. Data below the TemplateRow will be moved down. Formulas containing references to the TemplateRow will be automatically extended (see comment in screenshot below). So you can add total lines to your template.
 
@@ -8647,12 +8647,12 @@ time cockpit synchronizes all data with Microsoft SQL Azure (find more informati
 ### Installation Wizard
 
 > [!NOTE]
-You need to have internet access to install and configure time cockpit, and the ports mentioned in system requirements have to be opened, otherwise the installation will fail.
+> You need to have internet access to install and configure time cockpit, and the ports mentioned in system requirements have to be opened, otherwise the installation will fail.
 
 ![Installation wizard](https://docs.timecockpit.com/doc/getting-started/images/installer.png "Installation wizard")
 
 > [!NOTE]
-Please note that original version of time cockpit are always signed with a certificate from software architects. Do not install versions with another publisher than software architects.
+> Please note that original version of time cockpit are always signed with a certificate from software architects. Do not install versions with another publisher than software architects.
 
 The installation wizard will guide you through the following steps to install time cockpit:
 
@@ -8661,7 +8661,7 @@ The installation wizard will guide you through the following steps to install ti
 1. If all requirements are fulfilled, start the time cockpit setup by clicking the button "Start the installation of time cockpit" and follow the instructions on screen.
 
 > [!NOTE]
-The installation wizard if time cockpit automatically recognizes if you are working with a 32-bit or 64-bit operation system and installs the respective files in the correct folder.
+> The installation wizard if time cockpit automatically recognizes if you are working with a 32-bit or 64-bit operation system and installs the respective files in the correct folder.
 
 ### Configuration Wizard
 
@@ -8676,7 +8676,7 @@ If you are an IT administrator you possibly want to install all components separ
 time cockpit is based on the Microsoft .NET Framework 4.0. You can download it from [Microsoft .NET Framework 4.0](http://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&displaylang=en).
 
 > [!NOTE]
-Please not that you possibly need to restart your computer after installing Microsoft .NET Framework 4.0. Find more information in this blog entry.
+> Please not that you possibly need to restart your computer after installing Microsoft .NET Framework 4.0. Find more information in this blog entry.
 
 ### Installing Sync Framework 2.0
 
@@ -8734,10 +8734,10 @@ Source: https://docs.timecockpit.com/doc/getting-started/configuration-wizard.md
 # Configuration Wizard
 
 > [!NOTE]
-After installing time cockpit successfully the configuration wizard will guide through the first steps to configure time cockpit. If you cancel the configuration wizard, time cockpit will show the wizard again the next time you start time cockpit.
+> After installing time cockpit successfully the configuration wizard will guide through the first steps to configure time cockpit. If you cancel the configuration wizard, time cockpit will show the wizard again the next time you start time cockpit.
 
 > [!NOTE]
-You need to have internet access to install and configure time cockpit. In chapter [system requirements](https://docs.timecockpit.com/doc/getting-started/installation-instructions.md#system-requirements) you will find the requirements for the firewall configuration. If time cockpit cannot connect to SQL Azure, the configuration wizard cannot be completed.
+> You need to have internet access to install and configure time cockpit. In chapter [system requirements](https://docs.timecockpit.com/doc/getting-started/installation-instructions.md#system-requirements) you will find the requirements for the firewall configuration. If time cockpit cannot connect to SQL Azure, the configuration wizard cannot be completed.
 
 ## Step 1 - Choose Your Language
 
@@ -8760,7 +8760,7 @@ Choose the storage location of your local time cockpit database. time cockpit is
 Find more technical information on the local storage in chapter [system architecture](https://docs.timecockpit.com/doc/getting-started/system-architecture.md).
 
 > [!NOTE]
-Time cockpit does not support network drives as storage location.
+> Time cockpit does not support network drives as storage location.
 
 ![Configuration wizard step 3](https://docs.timecockpit.com/doc/getting-started/images/configuration-step-3.png "Configuration wizard step 3")
 
@@ -8769,7 +8769,7 @@ Time cockpit does not support network drives as storage location.
 You can install time cockpit on multiple devices (e.g. your desktop computer in the office, your notebook, your computer at home). time cockpit will sync changes automatically to all your devices, so every device has to have an unique name. If you install time cockpit on a new device, enter a new unique name. time cockpit will suggest to use your computer name If time cockpit was installed on this device previously, you can select the name of the device in the "existing devices" listbox.
 
 > [!NOTE]
-Please make sure that you do not use two devices with the same name at the same time, when using an existing device name. time cockpit will not work correctly and may even lose data when synchronizing two devices with the same name.
+> Please make sure that you do not use two devices with the same name at the same time, when using an existing device name. time cockpit will not work correctly and may even lose data when synchronizing two devices with the same name.
 
 ![Configuration wizard step 4](https://docs.timecockpit.com/doc/getting-started/images/configuration-step-4.png "Configuration wizard step 4")
 
@@ -8780,7 +8780,7 @@ We need to store your time cockpit username and password (stored hashed) on our 
 Contrary to the password that is used for authentication on our servers the signal data password will never be sent to our servers. So there is no way to decode your signal data on another computer than yours. If you are using multiple devices, you will have to enter it on any device you are using time cockpit. If you are using the Silverlight web client, you will have to enter your signal data, too.
 
 > [!WARNING]
-Because your password is not stored on our servers, please store your signal data password carefully. If you lose the password, you will lose all stored signals. There is no way to recover them.
+> Because your password is not stored on our servers, please store your signal data password carefully. If you lose the password, you will lose all stored signals. There is no way to recover them.
 
 ![Configuration wizard step 5](https://docs.timecockpit.com/doc/getting-started/images/configuration-step-5.png "Configuration wizard step 5")
 
@@ -8801,7 +8801,7 @@ There are several scenarios why a reset of the local configuration of a time coc
 The next time the application is started after the configuration has been reset the configuration wizard will be shown. This allows you to run a new initial synchronization for that client.
 
 > [!WARNING]
-Please note, that all data that has been created or modified on the client and has not been synchronized will be dismissed.
+> Please note, that all data that has been created or modified on the client and has not been synchronized will be dismissed.
 
 The configuration can be reset by starting TimeCockpit.UI.exe with the following command line parameter:
 
@@ -8924,7 +8924,7 @@ Source: https://docs.timecockpit.com/doc/getting-started/troubleshooting/force-i
 
 In some cases it’s necessary to force an initial synchronization for time cockpits full client. That means your local database (client database) will be deleted and replaced with the actual version of time cockpits server database. 
 > [!NOTE]
-Be aware that not synchronized data of the client database will be lost after an initial sync.
+> Be aware that not synchronized data of the client database will be lost after an initial sync.
 
 Examples for needed initial synchronization:
 * General Error in Synchronization
@@ -9049,7 +9049,7 @@ Enter your e-mail address you were registered at timecockpit and click the Butto
 ![Reset Password](https://docs.timecockpit.com/doc/getting-started/howtos/images/reset-password-2.png "Reset Password")
 
 > [!NOTE]
-In case of an unknown username please contact your time cockpit administrator to find out your registered e-mail address. If you are the time cockpit administrator please contact us at [support@timecockpit.com](mailto:support@timecockpit.com) to ask for your valid e-mail address.
+> In case of an unknown username please contact your time cockpit administrator to find out your registered e-mail address. If you are the time cockpit administrator please contact us at [support@timecockpit.com](mailto:support@timecockpit.com) to ask for your valid e-mail address.
 
 After a few minutes you will receive a mail at your entered e-mail address. To set a new password click on the button 'Change password!' inside the mail.
 
@@ -9111,7 +9111,7 @@ If you have finished your time sheet for a certain period and want to delete the
 ![Delete signals](https://docs.timecockpit.com/doc/signal-tracker/images/delete-signals.png "Delete signals")
 
 > [!NOTE]
-You can change the signal tracker from an opt-out model to an opt-in model by setting a registry key. For details see Auto-Start Behavior of Signal Trackers
+> You can change the signal tracker from an opt-out model to an opt-in model by setting a registry key. For details see Auto-Start Behavior of Signal Trackers
 
 ---
 
@@ -9168,7 +9168,7 @@ Periods where you have been active on any of your devices and where you have alr
 ![Signal lanes](https://docs.timecockpit.com/doc/timesheet-calendar/images/visualization-tracks.png "Signal lanes")
 
 > [!NOTE]
-By default, periods of inactivity that are longer than 15 minutes are interpreted as breaks (light green). However, you can alter the threshold of minutes in the options dialog. For more information refer to [Signal Tracker Options](https://docs.timecockpit.com/doc/signal-tracker/options.md).
+> By default, periods of inactivity that are longer than 15 minutes are interpreted as breaks (light green). However, you can alter the threshold of minutes in the options dialog. For more information refer to [Signal Tracker Options](https://docs.timecockpit.com/doc/signal-tracker/options.md).
 
 With the combined activity track users can quickly find periods where they have worked on one of their devices, but have not created time sheet entries for that period of time. Thus, time cockpit helps you to not leave any of your time unbooked and unbilled.
 
@@ -9191,7 +9191,7 @@ The CUA track subsumes the following information for you:
 Phone call signals are visualized as directed arrows. Incoming phone calls point in the right direction, whereas outgoing signals point in the left direction. Phone calls are not directly tracked by time cockpit's signal tracker, but need to be imported from a mobile phone or a telephony solution. You can find detailed information on how to import calls at [Signal Tracker for Phone Calls](https://docs.timecockpit.com/doc/signal-tracker/phone-calls.md).
 
 > [!NOTE]
-You can configure the minimum length of a phone call. Calls that last shorter than the defined minimum length will not be shown in the time sheet calendar. You can change the minimum duration in the options dialog Signal Processing (please refer to [Signal Tracker Options](https://docs.timecockpit.com/doc/signal-tracker/options.md)).
+> You can configure the minimum length of a phone call. Calls that last shorter than the defined minimum length will not be shown in the time sheet calendar. You can change the minimum duration in the options dialog Signal Processing (please refer to [Signal Tracker Options](https://docs.timecockpit.com/doc/signal-tracker/options.md)).
 
 ![Phone call](https://docs.timecockpit.com/doc/timesheet-calendar/images/phone-call.png "Phone call")
 
@@ -9247,7 +9247,7 @@ Each signal category (application, changed files...) in the signal details pane 
 ![Change detail level](https://docs.timecockpit.com/doc/timesheet-calendar/images/change-detail-level.png "Change detail level")
 
 > [!NOTE]
-In the keywords cloud, you can change the level of detail either in the context menu (compare histograms), but also via **Ctrl**-Mouse Wheel.
+> In the keywords cloud, you can change the level of detail either in the context menu (compare histograms), but also via **Ctrl**-Mouse Wheel.
 
 The provide information about when you have been doing what, the signal details pane interacts with the Combined Activity track in the time sheet calendar. You can select an item in the signal details pane (e.g. a bar in the application signal category) and time cockpit displays the period of time when you have used the given application. If you select additional bars while holding down the **Ctrl** key, you can select multiple bars.
 
@@ -9306,7 +9306,7 @@ The Wi-Fi Networks are displayed as a [histogram](https://en.wikipedia.org/wiki/
 The length of a bar in the histogram represents the duration how long an available Wi-Fi network was available. It does not matter if you were connected to the network. time cockpit only tracks the availability.
 
 > [!NOTE]
-This tracker is very helpful if you are travelling a lot and work with different available Wi-Fis. A lot of customers have their name in the Wi-Fi SSID. Thus, it is often easy to determine where you have been by taking a look which Wi-Fis you were connected to.
+> This tracker is very helpful if you are travelling a lot and work with different available Wi-Fis. A lot of customers have their name in the Wi-Fi SSID. Thus, it is often easy to determine where you have been by taking a look which Wi-Fis you were connected to.
 
 ![WIFI signals](https://docs.timecockpit.com/doc/timesheet-calendar/images/wifi-signals.png "WIFI signals")
 
@@ -9384,7 +9384,7 @@ Query interval (Interval)| Timespan | Interval within which the signal tracker r
 Limit for inactivity (ActivityTimeout)| Timespan | The limit for inactivity specifies when a duration without keyboard or mouse interaction is considered as break. The setting `00:00:30` means that after 30 seconds without user interaction a break begins. The break lasts as long as the next user interaction is recorded.	Smaller values may decrease the performance of your computer, larger values lead to more inaccurate values. We recommend using a timespan of 30 seconds or larger.
 
 > [!NOTE]
-Please note that you can also change the limit for inactivity in the options for the time sheet calendar. The setting in the signal tracker specifies the most accurate interval for inactivity that you can use for subsequent analysis.
+> Please note that you can also change the limit for inactivity in the options for the time sheet calendar. The setting in the signal tracker specifies the most accurate interval for inactivity that you can use for subsequent analysis.
 
 ---
 
@@ -9450,7 +9450,7 @@ The signal tracker for changed files trackes file writes on your computer. Usual
 If you exit or pause the signal tracker, it will not track your file writes.
 
 > [!NOTE]
-If you plan to execute an operation that writes a lot of files in the tracked folders (e.g. extract .zip file), it is recommended to exit or pause the signal tracker for file writes. Otherwise the signal tracker will produce a large amount of signals that may decrease the performance of time cockpit. If you already have a large amount of file signals, you can delete them in the Ribbon menu of the time sheet calendar.
+> If you plan to execute an operation that writes a lot of files in the tracked folders (e.g. extract .zip file), it is recommended to exit or pause the signal tracker for file writes. Otherwise the signal tracker will produce a large amount of signals that may decrease the performance of time cockpit. If you already have a large amount of file signals, you can delete them in the Ribbon menu of the time sheet calendar.
 
 ## Configuration Parameters for the Signal Tracker
 
@@ -9460,7 +9460,7 @@ Selected folders (`Paths`) | XML | List of folders that should be tracked. For e
 Ignore patterns (`ExcludePatterns`) | XML	| List of patterns, that should be ignored. Use * as placeholder. Example for ignore patterns:<br/><br/>`*.tmp` = all files that end with .tmp<br/>`*\iTunes\*` = all files, whose path contains iTunes<br/><br/>Time cockpit ignores all file writes in the following folders, no matter if they are included in the selected folders (please find additional information to this special folders at MSDN):<br/><br/>`Environment.SpecialFolder.Windows`<br/>`Environment.SpecialFolder.ProgramFiles`<br/>`Environment.SpecialFolder.ProgramFilesX86`
 
 > [!NOTE]
-Often you will need some time to find good settings for the signal tracker for file writes. We recommend to start with the default settings and adjust them over time. When you find files in the analysis that are not helpful exclude the folder or specify an exclude pattern for the file.
+> Often you will need some time to find good settings for the signal tracker for file writes. We recommend to start with the default settings and adjust them over time. When you find files in the analysis that are not helpful exclude the folder or specify an exclude pattern for the file.
 
 ---
 
@@ -11603,7 +11603,7 @@ Source: https://docs.timecockpit.com/doc/data-model-customization/overview.md
 # Customization Capabilities
 
 > [!NOTE]
-This section gives an introduction into advanced customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you want to customize time cockpit yourself, you need to download and install the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe). With the OnCockpit Admin you can customize nearly every aspect of time cockpit, like its data structures, user interface etc. Please be aware that if you are altering your production environment this might impact your team colleages. That is why we offer sandbox environments to test your customizations before you put them in production. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com).
+> This section gives an introduction into advanced customization capabilities of time cockpit. Customers have two options to customize their time cockpit. (1) DIY and (2) let the time cockpit team do it for you. If you want to customize time cockpit yourself, you need to download and install the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe). With the OnCockpit Admin you can customize nearly every aspect of time cockpit, like its data structures, user interface etc. Please be aware that if you are altering your production environment this might impact your team colleages. That is why we offer sandbox environments to test your customizations before you put them in production. If you are interested in any of the two options, please drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com).
 
 ## Development Process
 
@@ -11645,7 +11645,7 @@ If you are using Microsoft Entra (AAD) for federated authentication you cannot u
 ![Switch to Sandbox (AAD)](https://docs.timecockpit.com/doc/data-model-customization/images/ws-switch-to-sandbox.png "Switch to Sandbox (AAD)")
 
 >[!NOTE]
-You know that you are in the sandbox if time cockpit shows you the sandbox badge next to your user name.
+> You know that you are in the sandbox if time cockpit shows you the sandbox badge next to your user name.
 
 ![Sandbox Badge](https://docs.timecockpit.com/doc/data-model-customization/images/sandbox-badge.png "Sandbox Badge")
 
@@ -11698,14 +11698,14 @@ Example: The standard data model featues a validation rule ```APP_ValidateCustom
 In the ```Customization``` module, a tree of all the entities, lists, forms, actions, modules, and sets contained in the data model are displayed. These can only be edited on the ```Server``` in order to avoid synchronization conflicts at data model level.
 
 > [!NOTE]
-Each entity in the time cockpit data model corresponds to a table in the underlying database.
+> Each entity in the time cockpit data model corresponds to a table in the underlying database.
 
 ![Edit Entity](https://docs.timecockpit.com/doc/data-model-customization/images/edit-entity.png "Edit Entity")
 
 In the editor you can add and modify the properties of the entity, relationships to other entities, validation rules, permissions, and interfaces provided by the entity. Basically, each of the different elements can be added with the ```New item``` button in the Ribbon. The ```New item``` button is context-dependent, ie a new element of the selected type is created depending on which subgroup is selected on elements (properties, relationships, etc.).
 
 > [!NOTE]
-The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
+> The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
 
 ![Edit Project](https://docs.timecockpit.com/doc/data-model-customization/images/edit-project.png "Edit Project")
 
@@ -11728,7 +11728,7 @@ The deletion of properties and relations, as well as the insertion of properties
 Properties can be managed in the editing mode of an entity. To create a property, select the ```Properties``` subgroup so that the ```New item``` button creates a new property. Time cockpit provides various predefined types of properties. Each of these different types has its own representation in the user interface.
 
 > [!NOTE]
-Each property in the time cockpit data model corresponds to a column in a table in the underlying database
+> Each property in the time cockpit data model corresponds to a column in a table in the underlying database
 
 * **Text properties:** Text properties are used to store text. ```Maximum length``` allows users to define how long (in characters) the text may be. Text properties with a length of less than 100 characters are represented in the user interface with a single line input field. Texts with a maximum length of more than 100 lines are represented with multi-line input fields (this behavior can be changed in the respective form).
 
@@ -11749,7 +11749,7 @@ Each property in the time cockpit data model corresponds to a column in a table 
 Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](https://docs.timecockpit.com/doc/data-model-customization/list.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
 
 > [!NOTE]
-Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
+> Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
 
 When creating a new relationship, the following properties can be set:
 
@@ -11757,10 +11757,10 @@ When creating a new relationship, the following properties can be set:
 * Back-reference name: From a database point of view, a relationship has two directions. For example, the relationship customer on the project entity has the direction ```Project -> Customer``` and on the other hand ```Customer -> Project```. ```Project -> Customer``` assigns exactly one project to one customer. ```Customer -> Project``` means all projects assigned to a customer. The latter direction is represented in time cockpit with a named back-reference. Back-references can be navigated using [TCQL subqueries](https://docs.timecockpit.com/doc/tcql/expression-language.md). In addition, the back-reference name is used to create so-called back-reference tabs (see also [:N Hyperlinks](https://docs.timecockpit.com/doc/data-model-customization/list.md)).
 
 > [!NOTE]
-Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
+> Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
 
 > [!WARNING]
-Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
+> Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
 
 ## M:N Relationships (Multiple Assignments)
 
@@ -11818,7 +11818,7 @@ In the above example, ```Current``` represents an instace of ```APP_Project```. 
 Validation rules can be enabled or disabled. If a validation rule is disabled, time cockpit does not check if the criteria of the disabled validation rule is fulfilled.
 
 > [!NOTE]
-You can also disable validation rules shipped with the default data model, if necessary.
+> You can also disable validation rules shipped with the default data model, if necessary.
 
 ---
 
@@ -11953,7 +11953,7 @@ Select New With
 Now if we only want to view the time sheet entries for the project that have not already been billed, we could define an expression like Current.APP_IsBilled = False. The expression will be passed as additional filter clause to the query and thus return only the not billed time sheet entries.
 
 > [!NOTE]
-Conditions should only be used if absolutely necessary. It is a good practice to use parameters instead, because it is much easier for users to see which filters are applied.
+> Conditions should only be used if absolutely necessary. It is a good practice to use parameters instead, because it is much easier for users to see which filters are applied.
 
 ```
 From T In Timesheet Where T.APP_Project.APP_ProjectUuid = {@ProjectId} Select T
@@ -12024,7 +12024,7 @@ The filter operator property specifies which operator to use. Relations, as desc
 - Boolean properties can only be checked for equality (=) or inequality (<>).
 
 > [!NOTE]
-Any property or relation can be check for Null, e.g. ... = Null or ... <> Null.
+> Any property or relation can be check for Null, e.g. ... = Null or ... <> Null.
 
 ### DefaultValue
 
@@ -12047,14 +12047,14 @@ If an aggregate function is configured and a list of time sheet entries is group
 ![Aggregation in list](https://docs.timecockpit.com/doc/data-model-customization/images/aggregation-in-list.png "Aggregation in list")
 
 > [!NOTE]
-You can use Sum, Average, Minimum and Maximum as aggregate functions.
+> You can use Sum, Average, Minimum and Maximum as aggregate functions.
 
 ## Editable Lists
 
 To edit an item in a common list, you usually need to double click on the record to open it. However, time cockpit also provides means to edit records directly within the list itself (see figure). Each property type (text, numeric, bool) can be configured as inline editable.
 
 > [!NOTE]
-Relations do not provide inline editing capabilities right now.
+> Relations do not provide inline editing capabilities right now.
 
 ![Editable list](https://docs.timecockpit.com/doc/data-model-customization/images/editable-list.png "Editable list")
 
@@ -12104,7 +12104,7 @@ def actionSample(actionContext):
 ```
 
 > [!NOTE]
-Take a look at [Actions](https://docs.timecockpit.com/doc/scripting/actions.md) to see how time cockpit actions can be implemented.
+> Take a look at [Actions](https://docs.timecockpit.com/doc/scripting/actions.md) to see how time cockpit actions can be implemented.
 
 ---
 
@@ -12369,7 +12369,7 @@ Time cockpit is delivered with two predefined roles, ```Admin``` and ```User```.
 In the standard data model of time cockpit, the role concept is implemented with three entities. ```APP_UserDetail``` contains the information about a user. ```APP_UserRole``` contains the various roles supported by time cockpit (in standard ```Admin``` and ```User```). ```APP_UserDetailRole``` contains the assignment of a user to different roles. Time cockpit allows a user to be assigned to multiple roles.
 
 > [!WARNING]
-It is not recommended to set restrictive permissions on the entity ```APP_UserDetail```. It must be possible for the application to store its own user entry at any time. This is because the user's language is stored in the user entry. A user can change his / her language and must always be able to store his / her own user entry. Incorrect permissions can cause time cockpit to stop working. If you are not sure about permissions on the ```APP_UserDetail``` entity, contact support@timecockpit.com. In terms of permissions we recommend **KISS** - Keep it small and simple!
+> It is not recommended to set restrictive permissions on the entity ```APP_UserDetail```. It must be possible for the application to store its own user entry at any time. This is because the user's language is stored in the user entry. A user can change his / her language and must always be able to store his / her own user entry. Incorrect permissions can cause time cockpit to stop working. If you are not sure about permissions on the ```APP_UserDetail``` entity, contact support@timecockpit.com. In terms of permissions we recommend **KISS** - Keep it small and simple!
 
 ![Permission Entities](https://docs.timecockpit.com/doc/data-model-customization/images/permission-entities.png "Permission Entities")
 
@@ -12409,7 +12409,7 @@ Using the set ```CurrentUserRoles```, you can create permissions to check whethe
 ```
 
 > [!NOTE]
-Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, the application must be restarted after changes to the role assignments. Logon sets are executed **only** once at the application startup and remain unchanged during the runtime of the application!
+> Due to the fact that ```CurrentUserRoles``` is configured as a **logon set**, the application must be restarted after changes to the role assignments. Logon sets are executed **only** once at the application startup and remain unchanged during the runtime of the application!
 
 ## Types of Permissions
 
@@ -12459,7 +12459,7 @@ To ensure that only users assigned to the ```Projectadmin``` role are allowed to
 ![Read-only Project Form](https://docs.timecockpit.com/doc/data-model-customization/images/read-only-project-form-web.png "Read-only Project Form")
 
 > [!NOTE]
-If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
+> If you wanted to remove the write permissions for an element for all users, an expression which is always false (for example, ```1 = 0```) must be entered as a condition. The current version of the TCQL expression language does not support that you enter ```False``` as condition.
 
 ## Requirement 2
 
@@ -12486,7 +12486,7 @@ The following figure shows two project lists. The left project list has been ope
 ![Project List Comparison](https://docs.timecockpit.com/doc/data-model-customization/images/project-list-comparison.png "Project List Comparison")
 
 > [!NOTE]
-At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document. -->
+> At this point, the definition of a permission for a property is demostrated. Permissions on relations are the same in many respects, so they are not addressed separately in this document. -->
 
 ---
 
@@ -12914,7 +12914,7 @@ Every TCQL statement has the following structure:
 The `fromClause` defines the source of the query. The whereClause can be used to add conditions that the data from the source has to fulfill in order to be included in the query's result. orderByClause is used to sort the result. The selectClause defines the structure of the query result.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 Here are some simple examples for TCQL queries:
 
@@ -12954,7 +12954,7 @@ Select P
 ```
 
 > [!WARNING]
-time cockpit does not support sorting by aggregated values when querying the local data store.
+> time cockpit does not support sorting by aggregated values when querying the local data store.
 
 TCQL supports a number of functions that you can use inside expressions. Functions always start with a colon followed by the function name. Parameters are separated with commas.
 
@@ -12993,7 +12993,7 @@ Select New Project With {
 TCQL supports the use of aggregation functions.
 
 > [!NOTE]
-TCQL does not have a group by clause. The system generates grouping expressions for all expressions that are not used within an aggregation functions.
+> TCQL does not have a group by clause. The system generates grouping expressions for all expressions that are not used within an aggregation functions.
 
 ```
 From T In Timesheet 
@@ -13059,10 +13059,10 @@ entity_Name | Name of the source entity. The source entity has to exist in time 
 relation_path | Name of the relation that should be loaded together with the source entity. If you want to include subrelations, too, you have to include the name of the subrelation separated with dots (see example section below). If you want to include all subrelations recursively you can specify `.Include(*)`.
 
 > [!WARNING]
-Recursively including all subrelations with .Include(*) can result in large and complex queries that consume a lot of resources on the database. It is recommended to include only those relations that are really necessary to implement the corresponding query.
+> Recursively including all subrelations with .Include(*) can result in large and complex queries that consume a lot of resources on the database. It is recommended to include only those relations that are really necessary to implement the corresponding query.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -13116,7 +13116,7 @@ Name | Description
 searchCondition | Expression that defines the condition. See [TCQL Expression Language](https://docs.timecockpit.com/doc/tcql/expression-language.md) for details.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -13144,7 +13144,7 @@ From P In Project Where :Iif(P.ProjectName="Software Architects' TimeCockpit", "
 The following example shows a where-clause that references a relation.
 
 > [!NOTE]
-If the `where-clause` contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see [TCQL From Clause](https://docs.timecockpit.com/doc/tcql/from-clause.md) for details).
+> If the `where-clause` contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see [TCQL From Clause](https://docs.timecockpit.com/doc/tcql/from-clause.md) for details).
 
 ```
 // Return all projects that have a relation to customer "software architects"
@@ -13171,7 +13171,7 @@ Name | Description
 expression | Expression that defines the sort order. See [TCQL Expression Language](https://docs.timecockpit.com/doc/tcql/expression-language.md) for details.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write From, you cannot write from. Additionally identifiers have to start with a capital letter. Therefore you cannot write From p In Project.... Instead you have to write From P In Project... . This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -13227,10 +13227,10 @@ targetColumnIdentifier | Name of the property in the dynamically generated anony
 expression | Expression that defines the result column. See [TCQL Expression Language](https://docs.timecockpit.com/doc/tcql/expression-language.md) for details.
 
 > [!NOTE]
-The `VersionInfoOnly`-attribute can be used in scripts or applications that sync data from or into time cockpit. If you specify this attribute the TCQL runtime will not read any data except version information about the corresponding rows. This versioning data can be used to identify new, changed or deleted rows that may have to be included in a sync process.
+> The `VersionInfoOnly`-attribute can be used in scripts or applications that sync data from or into time cockpit. If you specify this attribute the TCQL runtime will not read any data except version information about the corresponding rows. This versioning data can be used to identify new, changed or deleted rows that may have to be included in a sync process.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -13254,7 +13254,7 @@ Select New With
 ```
 
 > [!NOTE]
-If the select-clause contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see TCQL From Clause for details). However, you can add the include-clause explicitly if you want.
+> If the select-clause contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see TCQL From Clause for details). However, you can add the include-clause explicitly if you want.
 
 The following example shows a select-clause that creates a list of Project entities:
 
@@ -13339,7 +13339,7 @@ parameterNameIdentifier | Name of a parameter that has been passed to the TCQL q
 propertyOfUserDetailEntity | Name of a property in the entity `APP_UserDetail`. You have access to a user's internal identification GUID using `UserDetailUuid`.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Simple Expressions
 
@@ -13362,7 +13362,7 @@ Current.ProcessName = 'calc' And (Current.EndTime - Current.BeginTime) * 24 * 60
 ```
 
 > [!NOTE]
-In TCQL you can use the subtract-operator (-) with date + time values. If you subtract two date + time values you will get the number of days between the two values. TCQL behaves just like Microsoft Office Excel (e.g. `#2010-01-02# - #2010-01-01#` will result in `1.0, #2010-01-01 14:00:00# - #2010-01-01 12:00:00#` will result in `2 / 24 = 0.083333...`).
+> In TCQL you can use the subtract-operator (-) with date + time values. If you subtract two date + time values you will get the number of days between the two values. TCQL behaves just like Microsoft Office Excel (e.g. `#2010-01-02# - #2010-01-01#` will result in `1.0, #2010-01-01 14:00:00# - #2010-01-01 12:00:00#` will result in `2 / 24 = 0.083333...`).
 
 The following example demonstrates how you can use the add operator to concat strings:
 
@@ -13387,7 +13387,7 @@ Select T
 ```
 
 > [!NOTE]
-Just like in SQL TCQL's Like operator supports two wildcard characters: % is the wildcard for 0..n characters, _ stands for exactly one character.
+> Just like in SQL TCQL's Like operator supports two wildcard characters: % is the wildcard for 0..n characters, _ stands for exactly one character.
 
 ## Functions
 
@@ -13439,7 +13439,7 @@ Function | Description
 ## Aggregation Functions
 
 > [!NOTE]
-In contrast to SQL you do not have to write a group by clause in TCQL. The TCQL runtime will include a grouping for every expression that is not used inside an aggregation function.
+> In contrast to SQL you do not have to write a group by clause in TCQL. The TCQL runtime will include a grouping for every expression that is not used inside an aggregation function.
 
 The following example shows two queries that include expressions using aggregation functions:
 
@@ -13506,7 +13506,7 @@ Select P
 ```
 
 > [!NOTE]
-By now time cockpit only supports sub-queries in TCQL queries but not in elements of the metadata repository (e.g. calculated properties, validation rules).
+> By now time cockpit only supports sub-queries in TCQL queries but not in elements of the metadata repository (e.g. calculated properties, validation rules).
 
 ## Expressions Using Sets
 
@@ -13557,7 +13557,7 @@ Source: https://docs.timecockpit.com/doc/tcql/functions-for-working-time-and-hol
 Since Version 1.7 time cockpit has been able to calculate planned working hours and data about remaining paid time off for vacations. This chapter describes the functions that time cockpit contains to do this kind of calculations in TCQL statements or scripts.
 
 > [!NOTE]
-Note that you can only use this function in [TCQL Queries](xref:tcql). You cannot use them in in-memory [expressions](https://docs.timecockpit.com/doc/tcql/expression-language.md) (e.g. value-based coloring in timesheet calendar) or calculated properties (<xref:TimeCockpit.Data.DataModel.CalculatedProperty>).
+> Note that you can only use this function in [TCQL Queries](xref:tcql). You cannot use them in in-memory [expressions](https://docs.timecockpit.com/doc/tcql/expression-language.md) (e.g. value-based coloring in timesheet calendar) or calculated properties (<xref:TimeCockpit.Data.DataModel.CalculatedProperty>).
 
 ## RemainingVacationWeeks
 
@@ -13638,7 +13638,7 @@ endTime | End date/time (inclusive) for which the function calculates the result
 includeWeights | Indicating whether the function takes working time weights into account.
 
 > [!NOTE]
-You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+> You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
 
 ### Examples
 
@@ -13658,7 +13658,7 @@ includeWeights | Indicating whether the function takes working time weights into
 includeLumpSumOvertime | Indicating whether the result should include the lump sum for overtime defined for the user.
 
 > [!NOTE]
-You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+> You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
 
 ### Examples
 
@@ -13728,7 +13728,7 @@ The query source describes the pool of entity objects that is queried and can ei
 The optional where condition describes a filter expression that indicates whether a specific entity should be part of the result set or not. The <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> is a base class for all expression with its main representative being <xref:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression>.
 
 > [!NOTE]
-Note that while an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> can have any result type, semantically it is necessary for an expression to produce a boolean result. The result of a query using a where condition with a result type other than boolean is undefined.
+> Note that while an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> can have any result type, semantically it is necessary for an expression to produce a boolean result. The result of a query using a where condition with a result type other than boolean is undefined.
 
 The order by clause describes the ordering of the query result and is described by an instance of the <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy> class node. An <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy> node consists of one or more <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression>s, with every expression holding a reference to an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> and a sort order (<xref:TimeCockpit.Data.QueryLanguage.Syntax.SortDirection>).
 
@@ -13755,7 +13755,7 @@ var q = TCQLExpression.Query(TCQLExpression.From("Project"));
 In the example above, a query is created passing only a <xref:TimeCockpit.Data.QueryLanguage.Syntax.QuerySource>, created using the [From()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_From_System_String_TimeCockpit_Data_QueryLanguage_Syntax_EntitySourceInclude___) method.
 
 > [!NOTE]
-Note that no alias was given. If the alias is redundant because only a single query is involved, it can be omitted by setting it to null (the default value). If the alias is null, it is automatically derived from the query source of the parenting query by choosing the first letter of the entity or back reference being selected. If the alias is already taken by a parenting query an incrementing number is appended.
+> Note that no alias was given. If the alias is redundant because only a single query is involved, it can be omitted by setting it to null (the default value). If the alias is null, it is automatically derived from the query source of the parenting query by choosing the first letter of the entity or back reference being selected. If the alias is already taken by a parenting query an incrementing number is appended.
 
 In order to filter the projects returned, a where condition can be added, such as in the following TCQL statement:
 
@@ -13899,7 +13899,7 @@ Time cockpit supports the use of [IronPython](http://ironpython.net/) to automat
 In this chapter we describe how you can write, create and run IronPython scripts in the time cockpit system.
 
 > [!NOTE]
-If you want to write a stand alone program (e.g. an interface importing data from another system) that should not run inside time cockpit you can also use your favorite .NET programming language (e.g. C#). See chapter [HowTo: Use C# to Access time cockpit API](https://help.timecockpit.com/?topic=html/ff51bcbb-0ed3-425f-83aa-5094f5899a98.htm) for details.
+> If you want to write a stand alone program (e.g. an interface importing data from another system) that should not run inside time cockpit you can also use your favorite .NET programming language (e.g. C#). See chapter [HowTo: Use C# to Access time cockpit API](https://help.timecockpit.com/?topic=html/ff51bcbb-0ed3-425f-83aa-5094f5899a98.htm) for details.
 
 ## The Built-In Script Editor
 
@@ -13963,7 +13963,7 @@ print "Done!"
 The model returned by [Model](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_Model) must not be changed. If you change anything in this model you will not be able to save your changes to the underlying database. If you need to have a writable model that can be saved use [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) to retrieve the model.
 
 > [!NOTE]
-[GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) can only be called in a script that is running on a Server context because in a Client context the model can never be changed!
+> [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel) can only be called in a script that is running on a Server context because in a Client context the model can never be changed!
 
 The following sample script adds a new entity to the underlying model. Note that the model that should be changed is retrieved using [GetWritableModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_GetWritableModel). The change is saved using the [SaveModel](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_SaveModel_TimeCockpit_Data_DataModel_Model_) method.
 
@@ -14059,7 +14059,7 @@ Hello World
 ```
 
 > [!NOTE]
-The script output is printed on the standard output unless we add the quiet flag.
+> The script output is printed on the standard output unless we add the quiet flag.
 
 By using the Windows Task Scheduler a periodic task to automate the previously shown script execution can be configured. After creating a basic (or normal) task and setting the options for the time of execution we need to provide the location of the ExecuteScript program and its parameters.
 
@@ -14106,7 +14106,7 @@ The following example shows the code for an action. Note that the action code mu
 Before an action is executed, time cockpit reloads the corresponding data rows before it passes them to the action via the `InputSet` property. This is necessary to make sure that the entire rows including all dependent objects are in memory. A list could have been optimized to load only a subset of the columns of a model entity. If time cockpit would not reload the data rows before executing the action, the action would possibly get incomplete data.
 
 > [!WARNING]
-Be aware that the input set does not guarantee a defined object order. Sorting may be required depending on the use-case.
+> Be aware that the input set does not guarantee a defined object order. Sorting may be required depending on the use-case.
 
 For reloading the entities, time cockpit generates a [TCQL](xref:tcql) statement with the following structure: `From C In [ModelEntityName][IncludeClause] Where C.[ModelEntityName]Uuid In {[SelectedUuids]} Select C`.
 
@@ -14157,7 +14157,7 @@ To specify that you want to include only the relations that you explicitly menti
 If you do not want to include any relations, you have to combine `# SelectSettings.AutoIncludeRelations false` and `# IncludeClause NoInclude`.
 
 > [!NOTE]
-Never use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the action. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
+> Never use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the action. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
 
 ---
 
@@ -14199,7 +14199,7 @@ This parameter has only an effect if you are using time cockpit's ChangeTracker.
 - `TriggerExecutionTime.OnDelete`: Indicates that the trigger is executed when a record already existed in the database and is deleted.
 
 > [!NOTE]
-Note that TriggerExecutionTime is a Flag Enum property. That is, you can combine OnInsert, OnUpdate and OnDelete via the | operator.
+> Note that TriggerExecutionTime is a Flag Enum property. That is, you can combine OnInsert, OnUpdate and OnDelete via the | operator.
 
 As with triggers in a database, you can access the affected records that are inserted/updated/deleted in the trigger. For that purpose, the trigger offers two collections:
 
@@ -14264,7 +14264,7 @@ To specify that you want to include only the relations that you explicitly menti
 If you do not want to include any relations, you have to combine `# SelectSettings.AutoIncludeRelations false` and `# IncludeClause NoInclude`.
 
 > [!NOTE]
-Be careful to use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the trigger. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
+> Be careful to use `# SelectSettings.AutoIncludeRelations false` if you will save the selected entities in the trigger. Validation rules and permissions will not work as expected if the necessary relations are not loaded.
 
 ---
 
@@ -14331,7 +14331,7 @@ time cockpit supports two ways of exporting data to Microsoft Office Excel:
 The following sample shows how to export the result of a [TCQL query](https://docs.timecockpit.com/doc/tcql/overview.md) using an export [template file](https://docs.timecockpit.com/doc/data-exchange/export.md) inside a script:
 
 > [!NOTE]
-The Export method shown in the code below expects either a template file or a list definition. If you specify a template the list definition is ignored. If you do not specify a template file you have to specify a list definition (i.e. template is automatically built based on the list definition).
+> The Export method shown in the code below expects either a template file or a list definition. If you specify a template the list definition is ignored. If you do not specify a template file you have to specify a list definition (i.e. template is automatically built based on the list definition).
 
 ```
 clr.AddReference("TimeCockpit.Data.Export")
@@ -14361,7 +14361,7 @@ The following sample shows how to generate an Microsoft Office Excel file using 
 You can convert an export script into an [Action](xref:TimeCockpit.Data.DataModel.Actions.ModelAction) to offer a button in time cockpit's user interface that exports the data of the selected row in a list. The following example shows how the sample shown above can be added as an action to the entity APP_UserDetail:
 
 > [!NOTE]
-Note that the action's code must only contain one top level `def` statement! If you need helper functions you have to define them as nested functions inside the one and only top level function (see sample code below).
+> Note that the action's code must only contain one top level `def` statement! If you need helper functions you have to define them as nested functions inside the one and only top level function (see sample code below).
 
 [!code-python[Export time sheet entries to excel action](https://docs.timecockpit.com/doc/scripting/code/export-time-sheet-entries-per-user-to-excel-action.py)]
 
@@ -14380,7 +14380,7 @@ CSV (Comma Seperated Files) are a common format for data exchange. In this chapt
 The original Python language contains a native csv module to handle CSV files. Unfortunately it has been written in C. Therefore you cannot use it in IronPython. Instead you could write your own import logic natively in IronPython. As an option you can use any CSV library available for .NET because you can use .NET types directly in IronPython (see also chapter [How To: Use .NET Framework Classes in Scripts](https://docs.timecockpit.com/doc/scripting/use-dot-net-classes-in-scripts.md)).
 
 > [!NOTE]
-The sample script in this chapter uses the CSV reader by Sébastien Lorion. You can find his library including source code at <http://www.codeproject.com/cs/database/CsvReader.asp>. Copyright for the CSV library by Sébastien Lorion, 2005. The library is licensed under MIT Open Source License.
+> The sample script in this chapter uses the CSV reader by Sébastien Lorion. You can find his library including source code at <http://www.codeproject.com/cs/database/CsvReader.asp>. Copyright for the CSV library by Sébastien Lorion, 2005. The library is licensed under MIT Open Source License.
 
 The following sample shows how to import the CSV library into your script:
 
@@ -14394,7 +14394,7 @@ from LumenWorks.Framework.IO.Csv import CsvReader
 ```
 
 > [!NOTE]
-time cockpit runs scripts inside a sandbox. Therefore it is not possible to use .NET libraries that target other .NET Framework versions than Microsoft .NET Framework 4.0. At the time of writing the binaries for the CSV library by Sébastien Lorion are not available for Microsoft .NET Framework 4.0. However, you can download Sébastien's source code, switch the target framework to Microsoft .NET Framework 4.0 and build it.
+> time cockpit runs scripts inside a sandbox. Therefore it is not possible to use .NET libraries that target other .NET Framework versions than Microsoft .NET Framework 4.0. At the time of writing the binaries for the CSV library by Sébastien Lorion are not available for Microsoft .NET Framework 4.0. However, you can download Sébastien's source code, switch the target framework to Microsoft .NET Framework 4.0 and build it.
 
 ## Import Timesheet Data From CSV
 
@@ -14480,7 +14480,7 @@ print "Done!"
 You can run the import script interactively in time cockpit. Another option is to use time cockpit's [ExecuteScript](https://docs.timecockpit.com/doc/scripting/automating-scripts.md) command line tool. With this you can e.g. run the import periodically using your preferred scheduler.
 
 > [!NOTE]
-We recommend that you use the switches -T and -s. -T means that the script is executing within a database transaction. If any error occurs all changes to the database are undone. -s means that the script uses the time cockpit server database instead of the client database. Run the script without time cockpit only if you explicitly want to be able to run it offline.
+> We recommend that you use the switches -T and -s. -T means that the script is executing within a database transaction. If any error occurs all changes to the database are undone. -s means that the script uses the time cockpit server database instead of the client database. Run the script without time cockpit only if you explicitly want to be able to run it offline.
 
 ```
 "C:\Program Files\software architects\time cockpit\time cockpit 2010\TimeCockpit.ExecuteScript.exe" -f "c:\temp\ImportCSV.py" -o "c:\temp\output.txt" -O -s -T
@@ -14589,7 +14589,7 @@ if model.Entities.Contains("Project") == False:
 Entities (<xref:TimeCockpit.Data.DataModel.ModelEntity>) can have relations ([ModelEntityBase.Relations](xref:TimeCockpit.Data.DataModel.ModelEntityBase#TimeCockpit_Data_DataModel_ModelEntityBase_Relations) to other entities. You can add, update and remove relations. If you save a model using [DataContext.SaveObject](xref:TimeCockpit.Data.DataContext#TimeCockpit_Data_DataContext_SaveModel_TimeCockpit_Data_DataModel_Model_), time cockpit will change the underlying database accordingly.
 
 > [!WARNING]
-time cockpit does not support the use of hierarchical relations in the moment. You can define hierarchical relationships in the database but the user interface does not treat them correctly
+> time cockpit does not support the use of hierarchical relations in the moment. You can define hierarchical relationships in the database but the user interface does not treat them correctly
 
 The following example shows how to create a model entity with relations in a Python script.
 
@@ -14759,14 +14759,14 @@ Source: https://docs.timecockpit.com/doc/scripting/use-c-sharp-to-access-time-co
 You can not only access time cockpit's API using [IronPython](http://ironpython.net/), you can also use your favorite .NET programming language (e.g. C#).
 
 > [!NOTE]
-Note that the code in this example connects to a user's [server data store](https://docs.timecockpit.com/doc/getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
+> Note that the code in this example connects to a user's [server data store](https://docs.timecockpit.com/doc/getting-started/system-architecture.md#central-data-storage). This is the recommended procedure for implementing interfaces that import or export data.
 
 ## Project References
 
 Before you can access the time cockpit data store from C# you have to add certain references to your project:
 
 > [!NOTE]
-You can find the assemblies mentioned in this list in time cockpit's installation directory.
+> You can find the assemblies mentioned in this list in time cockpit's installation directory.
 
 - Antlr3.Runtime
 - Antlr3.StringTemplate
@@ -14836,7 +14836,7 @@ Source: https://docs.timecockpit.com/doc/scripting/use-xml-in-scripts.md
 The following sample shows how to build the XML of a time cockpit form.
 
 > [!NOTE]
-While forms are stored in time cockpit's <xref:TimeCockpit.Data.DataModel.EntityView> entity, they should only be modified via the Model class interface.
+> While forms are stored in time cockpit's <xref:TimeCockpit.Data.DataModel.EntityView> entity, they should only be modified via the Model class interface.
 
 ```
 model = Context.GetWritableModel()
@@ -14905,7 +14905,7 @@ Three forms of authentication are currently supported:
 - [PAT authentication](https://en.wikipedia.org/wiki/Personal_access_token).
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
+> We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
 
 To learn how to authenticate against our Web API refer to [authentication](https://docs.timecockpit.com/doc/web-api/authentication.md).
 
@@ -14924,7 +14924,7 @@ Three forms of authentication are currently supported:
 - [PAT authentication](https://en.wikipedia.org/wiki/Personal_access_token).
 
 > [!WARNING]
-We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
+> We strongly discourage to use token or basic authentication. These methods of authentication will be disabled in the foreseeable future. We strongly recommend authenticating using PATs.
 
 ### Acquire PAT
 
@@ -14982,7 +14982,7 @@ public class Startup : FunctionsStartup
 ```
 
 > [!NOTE]
-We strongly discourage to store the PAT in source code, but to persist sensitive information in e.g. Microsoft Key Vault
+> We strongly discourage to store the PAT in source code, but to persist sensitive information in e.g. Microsoft Key Vault
 
 ### Query Metadata
 
@@ -15403,7 +15403,7 @@ To use the query endpoint, you first need to authentication against the service.
 While convenient, there are scenarios where the OData endpoint does not suffice. E.g. complex joins, or using custom time cockpit domain logic in a query. In these cases, we recommend the query endpoint. 
 
 > [!NOTE]
-If you are using the query endpoint you must map the json result to an object yourself.
+> If you are using the query endpoint you must map the json result to an object yourself.
 
 ## REST Sample
 
@@ -15427,7 +15427,7 @@ Accept: application/json
 The following sample shows some simple C# code to fetch a time cockpit project with a certain project code. Note that you can use plain TCQL with all its features just like if you were writing a query in the full client.
 
 > [!NOTE]
-This code uses a class `TcProject` which does the mapping between the json response from the time cockpit API and the domain object `TcProject`. Please refer [TimeCockpitClient](https://docs.timecockpit.com/doc/web-api/timecockpit-client.md) for a complete reference.
+> This code uses a class `TcProject` which does the mapping between the json response from the time cockpit API and the domain object `TcProject`. Please refer [TimeCockpitClient](https://docs.timecockpit.com/doc/web-api/timecockpit-client.md) for a complete reference.
 
 ```cs
 var code = "testproject";
@@ -15469,7 +15469,7 @@ With script lists, the data source of a list is an **Iron Python** script. For f
 Both TCQL lists and script lists can be referenced in the time cockpit UI, but they can also be queried using the time cockpit Web API.
 
 > [!NOTE]
-Since a script list is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+> Since a script list is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Use Cases
 
@@ -15490,7 +15490,7 @@ To use the query endpoint, you first need to authentication against the service.
 The following sample shows some simple C# code to fetch the standard time report list of time cockpit.
 
 > [!NOTE]
-Please be aware that this example demonstrates how to query the time report **list** and not the printable time report (PDF, Word, Excel). For an example on how to get a printable report programmatically refer to [Reporting Endpoint](https://docs.timecockpit.com/doc/web-api/reporting.md).
+> Please be aware that this example demonstrates how to query the time report **list** and not the printable time report (PDF, Word, Excel). For an example on how to get a printable report programmatically refer to [Reporting Endpoint](https://docs.timecockpit.com/doc/web-api/reporting.md).
 
 ```cs
 var userDetailUuid = new Guid("2019ff2c-edea-4864-b092-b0ba2b5be9c1"); // guid of the user to fetch the list data for
@@ -15532,7 +15532,7 @@ Source: https://docs.timecockpit.com/doc/web-api/executeaction.md
 In addition to querying and CRUD operations, the time cockpit Web API also allows you to execute your custom business logic. In time cockpit you custom business logic is called an [Action](https://docs.timecockpit.com/doc/scripting/actions.md). Similar to [script lists](https://docs.timecockpit.com/doc/data-model-customization/list.md) in time cockpit, actions are pieces of **IronPython** code that run in your instance of time cockpit. In contract to script lists, actions usually modify time cockpit in one way or the other.
 
 > [!NOTE]
-Since an action is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+> Since an action is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Use Cases
 
@@ -17905,7 +17905,7 @@ Source: https://docs.timecockpit.com/doc/reporting/custom-reports.md
 In addition to generated printable reports, custom reports can be added to a time cockpit list. The custom reports appears next to the standard **Print View** button. In the following chapter describes the workflow to integrate custom reports with your existing time cockpit lists.
 
 > [!NOTE]
-In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116). You can find a detail description how to do that at [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
+> In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116). You can find a detail description how to do that at [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
 
 ## Download Report Definition
 
@@ -17941,7 +17941,7 @@ Additionally, you can set advanced settings in the dialog:
 - Sort Order: The sort order determines at which position your custom report is show.
 
 > [!NOTE]
-The position of the standard List view and the Print View are fixed. You can only define the position within your customer reports
+> The position of the standard List view and the Print View are fixed. You can only define the position within your customer reports
 
 Click **Save & Close** and the report will be permanently attached to a list. After synchronizing, the report will be available to all users in a time cockpit account.
 

@@ -16,7 +16,7 @@ In order for time cockpit's importer to be useful, it has to have an understandi
 As an example, consider a situation where projects are imported. The import definition consists of a single worksheet mapping, mapping an excel worksheet to the project entity. The worksheet mapping contains multiple column mappings, mapping fields such as the project title and description, or the start date of the project. A column mapping may also map a relation, in which case a match criteria has to be chosen. The match criteria is a property related to the entity that contains the information that has to match the content of the cell that is imported. The importer queries the database for such an entity and ensures that exactly one item will be found. It will issue an error if none or multiple matches are found.
 
 > [!NOTE]
-An important thing to note about the importer is that it does not update existing rows but always creates new ones. Reimporting the sample file multiple times will cause duplicate items in time cockpit. Be sure to review the newly created data once it has been imported.
+> An important thing to note about the importer is that it does not update existing rows but always creates new ones. Reimporting the sample file multiple times will cause duplicate items in time cockpit. Be sure to review the newly created data once it has been imported.
 
 ## Viewing Import Definitions
 
@@ -51,10 +51,10 @@ Clicking **Select** will generate an excel file as well as a corresponding impor
 The country relation is special, as the importer cannot just set the value of the property to the name of the country. Instead it has to set it to the entity object that is identified by the value in the column. The criteria to find the related object can be adjusted by changing the 'Reference Criteria' of the column mapping. In this simple scenario, the reference criteria could only be changed to the ISO code of the country, as country has no other properties to match.
 
 > [!NOTE]
-It is important that the relation criteria is a unique property of the related entity as the importer will warn and fail to import data if relations lead to ambiguous references.
+> It is important that the relation criteria is a unique property of the related entity as the importer will warn and fail to import data if relations lead to ambiguous references.
 
 > [!NOTE]
-The relation criteria is not necessarily a direct property of the related entity. It can be any property that is 'reachable' from the target entity.
+> The relation criteria is not necessarily a direct property of the related entity. It can be any property that is 'reachable' from the target entity.
 
 Finally, we can observe that the automatically generated import definition also maps a status column. The status column is used for the importer to write back information on whether the import for this row was successful or not. If there was an error a message is written to the cell to aid the user to quickly identify and resolve problems when importing data.
 
@@ -79,7 +79,7 @@ The status column remains empty, as that column will be filled by the importer w
 In order to import the file with the customer data, we click on the 'Import' hyperlink in the list of import definitions which will open the import dialog. This dialog is used to import files for the chosen import definition. Ensure that the file you want to import is not open within excel and select the source file to import by clicking 'Select source file'.
 
 > [!NOTE]
-The source file is read at the time the source file is selected. Changes to the source file are not automatically picked up by the importer. If the source changes, the source file has to be re-selected. The time stamp next to the file name indicates the point in time the file was chosen.
+> The source file is read at the time the source file is selected. Changes to the source file are not automatically picked up by the importer. If the source changes, the source file has to be re-selected. The time stamp next to the file name indicates the point in time the file was chosen.
 
 ![Select source file](images/wc-select-source-file.png "Select source file")
 
@@ -88,7 +88,7 @@ After a source file has been selected, two buttons will become active: **Test im
 ![Successful import test](images/wc-import-test-successful.png "Successful import test")
 
 > [!NOTE]
-Executing an import will only commit the transaction if no error occurred. Rows producing an error have to be removed from the source file or changed to pass in order for any row of the import process to be actually saved.
+> Executing an import will only commit the transaction if no error occurred. Rows producing an error have to be removed from the source file or changed to pass in order for any row of the import process to be actually saved.
 
 The test as well as the real import produce a report file that can be saved. In order to do so, click the **Save results** button and a select a file to save to. The report file will be identical to the source file, but the status column (if one was mapped) will contain error messages or a message ('Ok.') indicating that the import succeeded.
 
@@ -109,7 +109,7 @@ The next step is to create a new import definition. Open the 'Import Definition'
 After loading the sample file, create a new worksheet mapping by clicking on the '+' sign below the worksheet mapping table. In the newly appeared row, click on the source column to open the combo box and select the 'Project' worksheet. Select the matching 'Project' entity in the 'Target Entity' column as well.
 
 > [!NOTE]
-time cockpit's importer is capable of automatically finding mappings if the name matches. This functionality can also be used on custom created sample workbooks by clicking the 'Generate mapping automatically' button. It is therefore a best practice to keep the naming of columns in worksheets identical to entity properties or the (localized) names of those properties.
+> time cockpit's importer is capable of automatically finding mappings if the name matches. This functionality can also be used on custom created sample workbooks by clicking the 'Generate mapping automatically' button. It is therefore a best practice to keep the naming of columns in worksheets identical to entity properties or the (localized) names of those properties.
 
 The second step is to map the column names to the properties of the target entity (project in this case). This is again achieved by clicking the '+' sign below the column mapping table. Since three columns are mapped we add three column mappings and map the following columns and properties:
 
@@ -120,14 +120,14 @@ Projectcode | Project Code | (empty)
 Customer Code | Customer | Customer Code
 
 > [!NOTE]
-When choosing the reference criteria for the 'Customer' relation, be sure to first select the target column, as the combo box for the relation criteria remains disabled until a relation member is actually selected.
+> When choosing the reference criteria for the 'Customer' relation, be sure to first select the target column, as the combo box for the relation criteria remains disabled until a relation member is actually selected.
 
 After mapping the columns, the import definition should appear similar to the image below. Note that the order of the column mappings does not matter.
 
 ![Import definition for Project](images/wc-import-definition-project-minimal.png "Import definition for Project")
 
 > [!NOTE]
-In this example, we did not use any status column. The status column is optional, but usually a good idea when importing complex data sets, as it makes spotting an error easier.
+> In this example, we did not use any status column. The status column is optional, but usually a good idea when importing complex data sets, as it makes spotting an error easier.
 
 After saving the import definition, the import can be performed just as if it was automatically generated.
 

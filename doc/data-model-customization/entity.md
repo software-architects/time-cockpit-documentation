@@ -17,14 +17,14 @@ Example: The standard data model featues a validation rule ```APP_ValidateCustom
 In the ```Customization``` module, a tree of all the entities, lists, forms, actions, modules, and sets contained in the data model are displayed. These can only be edited on the ```Server``` in order to avoid synchronization conflicts at data model level.
 
 > [!NOTE]
-Each entity in the time cockpit data model corresponds to a table in the underlying database.
+> Each entity in the time cockpit data model corresponds to a table in the underlying database.
 
 ![Edit Entity](images/edit-entity.png "Edit Entity")
 
 In the editor you can add and modify the properties of the entity, relationships to other entities, validation rules, permissions, and interfaces provided by the entity. Basically, each of the different elements can be added with the ```New item``` button in the Ribbon. The ```New item``` button is context-dependent, ie a new element of the selected type is created depending on which subgroup is selected on elements (properties, relationships, etc.).
 
 > [!NOTE]
-The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
+> The deletion of properties and relations, as well as the insertion of properties where no null values are allowed, represent operations which should be handled with particular care. If several users or devices have already been set up and an entity for which data already exists is edited, conflicts can occur during synchronization.
 
 ![Edit Project](images/edit-project.png "Edit Project")
 
@@ -47,7 +47,7 @@ The deletion of properties and relations, as well as the insertion of properties
 Properties can be managed in the editing mode of an entity. To create a property, select the ```Properties``` subgroup so that the ```New item``` button creates a new property. Time cockpit provides various predefined types of properties. Each of these different types has its own representation in the user interface.
 
 > [!NOTE]
-Each property in the time cockpit data model corresponds to a column in a table in the underlying database
+> Each property in the time cockpit data model corresponds to a column in a table in the underlying database
 
 * **Text properties:** Text properties are used to store text. ```Maximum length``` allows users to define how long (in characters) the text may be. Text properties with a length of less than 100 characters are represented in the user interface with a single line input field. Texts with a maximum length of more than 100 lines are represented with multi-line input fields (this behavior can be changed in the respective form).
 
@@ -68,7 +68,7 @@ Each property in the time cockpit data model corresponds to a column in a table 
 Entities can have relationships to other entities. These relationships correspond to so-called n:1 relationships. An example of a relationship would be the relationship between a project and its customer. This relationship assigns a customer to a project. Relationships are displayed in forms as combo boxes and in lists as [Hyperlinks](list.md). Just as one can access properties of an entity in TCQL, one can access relationships (e.g., ```Current.Customer``` outgoing from the project entity).  
 
 > [!NOTE]
-Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
+> Each relationship in the time cockpit data model corresponds to a foreign key relationship in the underlying database.
 
 When creating a new relationship, the following properties can be set:
 
@@ -76,10 +76,10 @@ When creating a new relationship, the following properties can be set:
 * Back-reference name: From a database point of view, a relationship has two directions. For example, the relationship customer on the project entity has the direction ```Project -> Customer``` and on the other hand ```Customer -> Project```. ```Project -> Customer``` assigns exactly one project to one customer. ```Customer -> Project``` means all projects assigned to a customer. The latter direction is represented in time cockpit with a named back-reference. Back-references can be navigated using [TCQL subqueries](~/doc/tcql/expression-language.md). In addition, the back-reference name is used to create so-called back-reference tabs (see also [:N Hyperlinks](list.md)).
 
 > [!NOTE]
-Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
+> Best practice for naming back-references using the example of the relationship ```Project -> Customer```: Since the back-reference represents the reverse direction of the relationship of ```Project -> Customer```, the back-reference name of the relationship is the name of the source entity in the plural that is ```Projects```.
 
 > [!WARNING]
-Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
+> Back-references cannot be accessed in TCQL. For example, the expression ```Current.Projects``` cannot be used in permissions, calculated properties, and validation rules. In the latter example, ```Current``` would represent the project entity, and Projects would reject the ```Project -> Customer``` relationship.
 
 ## M:N Relationships (Multiple Assignments)
 
@@ -137,4 +137,4 @@ In the above example, ```Current``` represents an instace of ```APP_Project```. 
 Validation rules can be enabled or disabled. If a validation rule is disabled, time cockpit does not check if the criteria of the disabled validation rule is fulfilled.
 
 > [!NOTE]
-You can also disable validation rules shipped with the default data model, if necessary.
+> You can also disable validation rules shipped with the default data model, if necessary.

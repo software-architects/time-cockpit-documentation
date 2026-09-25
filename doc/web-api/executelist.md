@@ -13,7 +13,7 @@ With script lists, the data source of a list is an **Iron Python** script. For f
 Both TCQL lists and script lists can be referenced in the time cockpit UI, but they can also be queried using the time cockpit Web API.
 
 > [!NOTE]
-Since a script list is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+> Since a script list is a piece of code that runs on our infrastructure, it must be reviewed and digitally [signed](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) by software architects. This measure protects our customers from the [noisy neighbor problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Use Cases
 
@@ -34,7 +34,7 @@ To use the query endpoint, you first need to authentication against the service.
 The following sample shows some simple C# code to fetch the standard time report list of time cockpit.
 
 > [!NOTE]
-Please be aware that this example demonstrates how to query the time report **list** and not the printable time report (PDF, Word, Excel). For an example on how to get a printable report programmatically refer to [Reporting Endpoint](reporting.md).
+> Please be aware that this example demonstrates how to query the time report **list** and not the printable time report (PDF, Word, Excel). For an example on how to get a printable report programmatically refer to [Reporting Endpoint](reporting.md).
 
 ```cs
 var userDetailUuid = new Guid("2019ff2c-edea-4864-b092-b0ba2b5be9c1"); // guid of the user to fetch the list data for

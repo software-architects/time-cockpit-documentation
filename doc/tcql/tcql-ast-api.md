@@ -21,7 +21,7 @@ The query source describes the pool of entity objects that is queried and can ei
 The optional where condition describes a filter expression that indicates whether a specific entity should be part of the result set or not. The <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> is a base class for all expression with its main representative being <xref:TimeCockpit.Data.QueryLanguage.Syntax.BinaryExpression>.
 
 > [!NOTE]
-Note that while an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> can have any result type, semantically it is necessary for an expression to produce a boolean result. The result of a query using a where condition with a result type other than boolean is undefined.
+> Note that while an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> can have any result type, semantically it is necessary for an expression to produce a boolean result. The result of a query using a where condition with a result type other than boolean is undefined.
 
 The order by clause describes the ordering of the query result and is described by an instance of the <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy> class node. An <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderBy> node consists of one or more <xref:TimeCockpit.Data.QueryLanguage.Syntax.OrderByExpression>s, with every expression holding a reference to an <xref:TimeCockpit.Data.QueryLanguage.Syntax.Expression> and a sort order (<xref:TimeCockpit.Data.QueryLanguage.Syntax.SortDirection>).
 
@@ -48,7 +48,7 @@ var q = TCQLExpression.Query(TCQLExpression.From("Project"));
 In the example above, a query is created passing only a <xref:TimeCockpit.Data.QueryLanguage.Syntax.QuerySource>, created using the [From()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_From_System_String_TimeCockpit_Data_QueryLanguage_Syntax_EntitySourceInclude___) method.
 
 > [!NOTE]
-Note that no alias was given. If the alias is redundant because only a single query is involved, it can be omitted by setting it to null (the default value). If the alias is null, it is automatically derived from the query source of the parenting query by choosing the first letter of the entity or back reference being selected. If the alias is already taken by a parenting query an incrementing number is appended.
+> Note that no alias was given. If the alias is redundant because only a single query is involved, it can be omitted by setting it to null (the default value). If the alias is null, it is automatically derived from the query source of the parenting query by choosing the first letter of the entity or back reference being selected. If the alias is already taken by a parenting query an incrementing number is appended.
 
 In order to filter the projects returned, a where condition can be added, such as in the following TCQL statement:
 

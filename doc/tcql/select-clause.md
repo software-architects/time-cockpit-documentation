@@ -28,10 +28,10 @@ targetColumnIdentifier | Name of the property in the dynamically generated anony
 expression | Expression that defines the result column. See [TCQL Expression Language](expression-language.md) for details.
 
 > [!NOTE]
-The `VersionInfoOnly`-attribute can be used in scripts or applications that sync data from or into time cockpit. If you specify this attribute the TCQL runtime will not read any data except version information about the corresponding rows. This versioning data can be used to identify new, changed or deleted rows that may have to be included in a sync process.
+> The `VersionInfoOnly`-attribute can be used in scripts or applications that sync data from or into time cockpit. If you specify this attribute the TCQL runtime will not read any data except version information about the corresponding rows. This versioning data can be used to identify new, changed or deleted rows that may have to be included in a sync process.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Examples
 
@@ -55,7 +55,7 @@ Select New With
 ```
 
 > [!NOTE]
-If the select-clause contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see TCQL From Clause for details). However, you can add the include-clause explicitly if you want.
+> If the select-clause contains references to relations TCQL includes the referenced entities automatically. Therefore you need not explicitly add an Include element in the from-clause (see TCQL From Clause for details). However, you can add the include-clause explicitly if you want.
 
 The following example shows a select-clause that creates a list of Project entities:
 

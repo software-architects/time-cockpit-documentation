@@ -5,10 +5,10 @@ description: Learn how to configure time cockpit using the configuration wizard.
 # Configuration Wizard
 
 > [!NOTE]
-After installing time cockpit successfully the configuration wizard will guide through the first steps to configure time cockpit. If you cancel the configuration wizard, time cockpit will show the wizard again the next time you start time cockpit.
+> After installing time cockpit successfully the configuration wizard will guide through the first steps to configure time cockpit. If you cancel the configuration wizard, time cockpit will show the wizard again the next time you start time cockpit.
 
 > [!NOTE]
-You need to have internet access to install and configure time cockpit. In chapter [system requirements](installation-instructions.md#system-requirements) you will find the requirements for the firewall configuration. If time cockpit cannot connect to SQL Azure, the configuration wizard cannot be completed.
+> You need to have internet access to install and configure time cockpit. In chapter [system requirements](installation-instructions.md#system-requirements) you will find the requirements for the firewall configuration. If time cockpit cannot connect to SQL Azure, the configuration wizard cannot be completed.
 
 ## Step 1 - Choose Your Language
 
@@ -31,7 +31,7 @@ Choose the storage location of your local time cockpit database. time cockpit is
 Find more technical information on the local storage in chapter [system architecture](system-architecture.md).
 
 > [!NOTE]
-Time cockpit does not support network drives as storage location.
+> Time cockpit does not support network drives as storage location.
 
 ![Configuration wizard step 3](images/configuration-step-3.png "Configuration wizard step 3")
 
@@ -40,7 +40,7 @@ Time cockpit does not support network drives as storage location.
 You can install time cockpit on multiple devices (e.g. your desktop computer in the office, your notebook, your computer at home). time cockpit will sync changes automatically to all your devices, so every device has to have an unique name. If you install time cockpit on a new device, enter a new unique name. time cockpit will suggest to use your computer name If time cockpit was installed on this device previously, you can select the name of the device in the "existing devices" listbox.
 
 > [!NOTE]
-Please make sure that you do not use two devices with the same name at the same time, when using an existing device name. time cockpit will not work correctly and may even lose data when synchronizing two devices with the same name.
+> Please make sure that you do not use two devices with the same name at the same time, when using an existing device name. time cockpit will not work correctly and may even lose data when synchronizing two devices with the same name.
 
 ![Configuration wizard step 4](images/configuration-step-4.png "Configuration wizard step 4")
 
@@ -51,7 +51,7 @@ We need to store your time cockpit username and password (stored hashed) on our 
 Contrary to the password that is used for authentication on our servers the signal data password will never be sent to our servers. So there is no way to decode your signal data on another computer than yours. If you are using multiple devices, you will have to enter it on any device you are using time cockpit. If you are using the Silverlight web client, you will have to enter your signal data, too.
 
 > [!WARNING]
-Because your password is not stored on our servers, please store your signal data password carefully. If you lose the password, you will lose all stored signals. There is no way to recover them.
+> Because your password is not stored on our servers, please store your signal data password carefully. If you lose the password, you will lose all stored signals. There is no way to recover them.
 
 ![Configuration wizard step 5](images/configuration-step-5.png "Configuration wizard step 5")
 
@@ -72,7 +72,7 @@ There are several scenarios why a reset of the local configuration of a time coc
 The next time the application is started after the configuration has been reset the configuration wizard will be shown. This allows you to run a new initial synchronization for that client.
 
 > [!WARNING]
-Please note, that all data that has been created or modified on the client and has not been synchronized will be dismissed.
+> Please note, that all data that has been created or modified on the client and has not been synchronized will be dismissed.
 
 The configuration can be reset by starting TimeCockpit.UI.exe with the following command line parameter:
 

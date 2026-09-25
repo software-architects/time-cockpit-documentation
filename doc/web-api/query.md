@@ -19,7 +19,7 @@ To use the query endpoint, you first need to authentication against the service.
 While convenient, there are scenarios where the OData endpoint does not suffice. E.g. complex joins, or using custom time cockpit domain logic in a query. In these cases, we recommend the query endpoint. 
 
 > [!NOTE]
-If you are using the query endpoint you must map the json result to an object yourself.
+> If you are using the query endpoint you must map the json result to an object yourself.
 
 ## REST Sample
 
@@ -43,7 +43,7 @@ Accept: application/json
 The following sample shows some simple C# code to fetch a time cockpit project with a certain project code. Note that you can use plain TCQL with all its features just like if you were writing a query in the full client.
 
 > [!NOTE]
-This code uses a class `TcProject` which does the mapping between the json response from the time cockpit API and the domain object `TcProject`. Please refer [TimeCockpitClient](timecockpit-client.md) for a complete reference.
+> This code uses a class `TcProject` which does the mapping between the json response from the time cockpit API and the domain object `TcProject`. Please refer [TimeCockpitClient](timecockpit-client.md) for a complete reference.
 
 ```cs
 var code = "testproject";

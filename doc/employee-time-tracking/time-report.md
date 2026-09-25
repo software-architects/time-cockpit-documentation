@@ -45,7 +45,7 @@ The report is located at **USERS --> WORKING TIME --> Time Report**
 10. **Signature:** This area is intended for a digital signature or acknowledgment.
 
 > [!NOTE]
-As always, you can create your own report using SSRS [reporting](~/doc/reporting/custom-reports.md) or contact us at support@timecockpit.com to create your custom report for you.
+> As always, you can create your own report using SSRS [reporting](~/doc/reporting/custom-reports.md) or contact us at support@timecockpit.com to create your custom report for you.
 
 ### Use Cases
 
@@ -58,7 +58,7 @@ As always, you can create your own report using SSRS [reporting](~/doc/reporting
 ## Download Time Reports for Multiple Users [Beta]
 
 >[!NOTE]
-Currently, this feature is designed to generate up to 20 employees per month per execution. This limitation is a result of constraints within the SSRS library, which does not support parallel execution. We are actively addressing this challenge and are committed to resolving it in a future release.
+> Currently, this feature is designed to generate up to 20 employees per month per execution. This limitation is a result of constraints within the SSRS library, which does not support parallel execution. We are actively addressing this challenge and are committed to resolving it in a future release.
 
 Users can conveniently generate time reports in PDF or Excel format for a specified time period. This feature is particularly useful for users who need to generate time reports for multiple individuals, especially at the end of the month.
 

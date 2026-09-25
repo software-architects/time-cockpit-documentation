@@ -7,7 +7,7 @@ description: Create and integrate custom SSRS reports in time cockpit. Download 
 In addition to generated printable reports, custom reports can be added to a time cockpit list. The custom reports appears next to the standard **Print View** button. In the following chapter describes the workflow to integrate custom reports with your existing time cockpit lists.
 
 > [!NOTE]
-In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116). You can find a detail description how to do that at [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
+> In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116). You can find a detail description how to do that at [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
 
 ## Download Report Definition
 
@@ -43,7 +43,7 @@ Additionally, you can set advanced settings in the dialog:
 - Sort Order: The sort order determines at which position your custom report is show.
 
 > [!NOTE]
-The position of the standard List view and the Print View are fixed. You can only define the position within your customer reports
+> The position of the standard List view and the Print View are fixed. You can only define the position within your customer reports
 
 Click **Save & Close** and the report will be permanently attached to a list. After synchronizing, the report will be available to all users in a time cockpit account.
 

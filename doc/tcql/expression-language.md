@@ -69,7 +69,7 @@ parameterNameIdentifier | Name of a parameter that has been passed to the TCQL q
 propertyOfUserDetailEntity | Name of a property in the entity `APP_UserDetail`. You have access to a user's internal identification GUID using `UserDetailUuid`.
 
 > [!NOTE]
-Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
+> Keywords in TCQL are case sensitive. Therefore you have to write `From`, you cannot write `from`. Additionally identifiers have to start with a capital letter. Therefore you cannot write `From p In Project...`. Instead you have to write `From P In Project...`. This behavior may change in future versions of time cockpit so that TCQL may be case insensitive in the future.
 
 ## Simple Expressions
 
@@ -92,7 +92,7 @@ Current.ProcessName = 'calc' And (Current.EndTime - Current.BeginTime) * 24 * 60
 ```
 
 > [!NOTE]
-In TCQL you can use the subtract-operator (-) with date + time values. If you subtract two date + time values you will get the number of days between the two values. TCQL behaves just like Microsoft Office Excel (e.g. `#2010-01-02# - #2010-01-01#` will result in `1.0, #2010-01-01 14:00:00# - #2010-01-01 12:00:00#` will result in `2 / 24 = 0.083333...`).
+> In TCQL you can use the subtract-operator (-) with date + time values. If you subtract two date + time values you will get the number of days between the two values. TCQL behaves just like Microsoft Office Excel (e.g. `#2010-01-02# - #2010-01-01#` will result in `1.0, #2010-01-01 14:00:00# - #2010-01-01 12:00:00#` will result in `2 / 24 = 0.083333...`).
 
 The following example demonstrates how you can use the add operator to concat strings:
 
@@ -117,7 +117,7 @@ Select T
 ```
 
 > [!NOTE]
-Just like in SQL TCQL's Like operator supports two wildcard characters: % is the wildcard for 0..n characters, _ stands for exactly one character.
+> Just like in SQL TCQL's Like operator supports two wildcard characters: % is the wildcard for 0..n characters, _ stands for exactly one character.
 
 ## Functions
 
@@ -169,7 +169,7 @@ Function | Description
 ## Aggregation Functions
 
 > [!NOTE]
-In contrast to SQL you do not have to write a group by clause in TCQL. The TCQL runtime will include a grouping for every expression that is not used inside an aggregation function.
+> In contrast to SQL you do not have to write a group by clause in TCQL. The TCQL runtime will include a grouping for every expression that is not used inside an aggregation function.
 
 The following example shows two queries that include expressions using aggregation functions:
 
@@ -236,7 +236,7 @@ Select P
 ```
 
 > [!NOTE]
-By now time cockpit only supports sub-queries in TCQL queries but not in elements of the metadata repository (e.g. calculated properties, validation rules).
+> By now time cockpit only supports sub-queries in TCQL queries but not in elements of the metadata repository (e.g. calculated properties, validation rules).
 
 ## Expressions Using Sets
 

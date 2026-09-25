@@ -73,7 +73,7 @@ When you execute the **Create Invoice** action, it assigns the selected timeshee
 Hourly rates for customers or projects can change over time. For this reason the action `Create Invoice` copies the concrete valid hourly rate into field `APP_HourlyRateBilled` of a time sheet entry. This field is also used in the calculated field `APP_Revenue` which shows you the revenue time sheet entries generated.
 
 > [!NOTE]
-Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
+> Until version [2023-10](~/doc/release-notes/2023-10.md), time cockpit could only aggregate time bookings into invoices. The time bookings assigned to an invoice were no longer editable by users. With version 2023-10, this functionality was expanded to allow the creation of multiple invoice items for a single invoice. As a result, the total invoice amount is now calculated based on the sum of all invoice items.
 
 
 ## Automatic Creation of Invoice Items
@@ -140,7 +140,7 @@ In time cockpit, you have the flexibility to create manual invoices when needed.
 7. Save the manual invoice.
 
 >[!NOTE]
-With manual invoices, invoice items are **not** automatically generated from the time sheet entries within a specific period, giving you full control to define custom billing items and their details as needed.
+> With manual invoices, invoice items are **not** automatically generated from the time sheet entries within a specific period, giving you full control to define custom billing items and their details as needed.
 
 ## Generate an Invoice Report
 
@@ -153,7 +153,7 @@ Furthermore, the document itemizes all the assigned invoice items. Each invoice 
 If time sheet entries are associated with the invoice (created using the `Create Invoice` action), the display of the time sheet entry details on the invoice document can be enabled. You can do so by checking the `Incl. Timesheets on Invoice Document` flag on the given invoice. 
 
 >[!NOTE]
-If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
+> If the quantity or price of any of the automatically generated service-related invoice items has been modified after the generation, the time sheet entry details will no longer correspond with the invoice items. In such cases, it is advisable to deactivate the display of the time sheet entry details on the invoice document. This ensures that the invoice remains accurate and consistent with the modified invoice items.
 
 ### Invoices without VAT
 
@@ -185,7 +185,7 @@ In the footer of the invoice document, the corporate information of the entity i
 
 
 >[!NOTE]
-At the moment only one company/invoice issuer is supported.
+> At the moment only one company/invoice issuer is supported.
 
 ## Adding Timesheet Entries to an Existing Invoice
 
@@ -198,4 +198,4 @@ Occasionally, a time sheet entry may not have been included in an invoice. In su
 ![Assign to Existing Invoice](images/assign-to-existing-invoice.png "Assign to Existing Invoice")
 
 >[!NOTE]
-Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.
+> Please note that using this action will add the time sheet entry to the existing invoice without updating the invoice items or the total amount of the invoice.

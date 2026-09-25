@@ -129,7 +129,7 @@ Select New With
 Now if we only want to view the time sheet entries for the project that have not already been billed, we could define an expression like Current.APP_IsBilled = False. The expression will be passed as additional filter clause to the query and thus return only the not billed time sheet entries.
 
 > [!NOTE]
-Conditions should only be used if absolutely necessary. It is a good practice to use parameters instead, because it is much easier for users to see which filters are applied.
+> Conditions should only be used if absolutely necessary. It is a good practice to use parameters instead, because it is much easier for users to see which filters are applied.
 
 ```
 From T In Timesheet Where T.APP_Project.APP_ProjectUuid = {@ProjectId} Select T
@@ -200,7 +200,7 @@ The filter operator property specifies which operator to use. Relations, as desc
 - Boolean properties can only be checked for equality (=) or inequality (<>).
 
 > [!NOTE]
-Any property or relation can be check for Null, e.g. ... = Null or ... <> Null.
+> Any property or relation can be check for Null, e.g. ... = Null or ... <> Null.
 
 ### DefaultValue
 
@@ -223,14 +223,14 @@ If an aggregate function is configured and a list of time sheet entries is group
 ![Aggregation in list](images/aggregation-in-list.png "Aggregation in list")
 
 > [!NOTE]
-You can use Sum, Average, Minimum and Maximum as aggregate functions.
+> You can use Sum, Average, Minimum and Maximum as aggregate functions.
 
 ## Editable Lists
 
 To edit an item in a common list, you usually need to double click on the record to open it. However, time cockpit also provides means to edit records directly within the list itself (see figure). Each property type (text, numeric, bool) can be configured as inline editable.
 
 > [!NOTE]
-Relations do not provide inline editing capabilities right now.
+> Relations do not provide inline editing capabilities right now.
 
 ![Editable list](images/editable-list.png "Editable list")
 
@@ -280,4 +280,4 @@ def actionSample(actionContext):
 ```
 
 > [!NOTE]
-Take a look at [Actions](~/doc/scripting/actions.md) to see how time cockpit actions can be implemented.
+> Take a look at [Actions](~/doc/scripting/actions.md) to see how time cockpit actions can be implemented.

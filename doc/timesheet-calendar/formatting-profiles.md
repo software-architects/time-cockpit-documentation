@@ -59,7 +59,7 @@ Examples:
 - `Current.Description + ' (' + Current.Project.Description + ')'` display the description of the time sheet entry concatenated with the description of the associated project
 
 > [!NOTE]
-Note that the description could contain a constant string, too. However, in practice you will mostly use a formula.
+> Note that the description could contain a constant string, too. However, in practice you will mostly use a formula.
 
 ### Expression for Grouping Time Sheet Entries (Optional)
 
@@ -72,7 +72,7 @@ Examples:
 - `:Iif(Current.Billable=True, :Translate('FormattingProfile.Billable.Billable'), :Translate('FormattingProfile.Billable.NotBillable'))`
 
 > [!NOTE]
-Do not return a color code or the name of a color. The color is assigned later in the configuration (see below). In this step we only need the caption for the bar chart row. Note that you can use the :Translate function if you need to support different languages.
+> Do not return a color code or the name of a color. The color is assigned later in the configuration (see below). In this step we only need the caption for the bar chart row. Note that you can use the :Translate function if you need to support different languages.
 
 ### Display Formatting Profile for
 

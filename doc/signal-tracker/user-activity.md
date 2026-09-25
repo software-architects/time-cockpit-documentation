@@ -20,4 +20,4 @@ Query interval (Interval)| Timespan | Interval within which the signal tracker r
 Limit for inactivity (ActivityTimeout)| Timespan | The limit for inactivity specifies when a duration without keyboard or mouse interaction is considered as break. The setting `00:00:30` means that after 30 seconds without user interaction a break begins. The break lasts as long as the next user interaction is recorded.	Smaller values may decrease the performance of your computer, larger values lead to more inaccurate values. We recommend using a timespan of 30 seconds or larger.
 
 > [!NOTE]
-Please note that you can also change the limit for inactivity in the options for the time sheet calendar. The setting in the signal tracker specifies the most accurate interval for inactivity that you can use for subsequent analysis.
+> Please note that you can also change the limit for inactivity in the options for the time sheet calendar. The setting in the signal tracker specifies the most accurate interval for inactivity that you can use for subsequent analysis.

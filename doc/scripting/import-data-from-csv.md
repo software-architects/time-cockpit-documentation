@@ -11,7 +11,7 @@ CSV (Comma Seperated Files) are a common format for data exchange. In this chapt
 The original Python language contains a native csv module to handle CSV files. Unfortunately it has been written in C. Therefore you cannot use it in IronPython. Instead you could write your own import logic natively in IronPython. As an option you can use any CSV library available for .NET because you can use .NET types directly in IronPython (see also chapter [How To: Use .NET Framework Classes in Scripts](use-dot-net-classes-in-scripts.md)).
 
 > [!NOTE]
-The sample script in this chapter uses the CSV reader by Sébastien Lorion. You can find his library including source code at <http://www.codeproject.com/cs/database/CsvReader.asp>. Copyright for the CSV library by Sébastien Lorion, 2005. The library is licensed under MIT Open Source License.
+> The sample script in this chapter uses the CSV reader by Sébastien Lorion. You can find his library including source code at <http://www.codeproject.com/cs/database/CsvReader.asp>. Copyright for the CSV library by Sébastien Lorion, 2005. The library is licensed under MIT Open Source License.
 
 The following sample shows how to import the CSV library into your script:
 
@@ -25,7 +25,7 @@ from LumenWorks.Framework.IO.Csv import CsvReader
 ```
 
 > [!NOTE]
-time cockpit runs scripts inside a sandbox. Therefore it is not possible to use .NET libraries that target other .NET Framework versions than Microsoft .NET Framework 4.0. At the time of writing the binaries for the CSV library by Sébastien Lorion are not available for Microsoft .NET Framework 4.0. However, you can download Sébastien's source code, switch the target framework to Microsoft .NET Framework 4.0 and build it.
+> time cockpit runs scripts inside a sandbox. Therefore it is not possible to use .NET libraries that target other .NET Framework versions than Microsoft .NET Framework 4.0. At the time of writing the binaries for the CSV library by Sébastien Lorion are not available for Microsoft .NET Framework 4.0. However, you can download Sébastien's source code, switch the target framework to Microsoft .NET Framework 4.0 and build it.
 
 ## Import Timesheet Data From CSV
 
@@ -111,7 +111,7 @@ print "Done!"
 You can run the import script interactively in time cockpit. Another option is to use time cockpit's [ExecuteScript](automating-scripts.md) command line tool. With this you can e.g. run the import periodically using your preferred scheduler.
 
 > [!NOTE]
-We recommend that you use the switches -T and -s. -T means that the script is executing within a database transaction. If any error occurs all changes to the database are undone. -s means that the script uses the time cockpit server database instead of the client database. Run the script without time cockpit only if you explicitly want to be able to run it offline.
+> We recommend that you use the switches -T and -s. -T means that the script is executing within a database transaction. If any error occurs all changes to the database are undone. -s means that the script uses the time cockpit server database instead of the client database. Run the script without time cockpit only if you explicitly want to be able to run it offline.
 
 ```
 "C:\Program Files\software architects\time cockpit\time cockpit 2010\TimeCockpit.ExecuteScript.exe" -f "c:\temp\ImportCSV.py" -o "c:\temp\output.txt" -O -s -T
