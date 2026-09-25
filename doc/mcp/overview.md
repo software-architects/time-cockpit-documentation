@@ -35,7 +35,7 @@ All client pages in this section use the production URL. To connect to another e
 
 - **You have to sign in again.** Every client stores its OAuth tokens per server URL. A new URL — whether a different environment or additional [URL segments](#connection-settings-header-or-url-segment) — starts with no token, so the client asks for a fresh Entra sign-in even though you were already signed in to the other URL. This is expected, not an error.
 - **The app registration needs the permission of that environment.** Each environment has its own scope (`https://mcp-preview.timecockpit.com/mcp.access` for preview). If your app registration has only been granted `mcp.access` of the production API, the preview sign-in fails with a consent error. See [Entra ID Setup](entra-id-setup.md).
-- **Codex may need another redirect URI.** Codex derives the callback ID in its redirect URI (`http://127.0.0.1:<port>/callback/<id>`) from the complete server URL, including path segments. Switching to preview or adding URL segments therefore produces a **new callback ID** that has to be registered on your app registration as well. `codex mcp add` prints the new value; see [Callback URL Specifics](codex.md#callback-url-specifics). Claude Code, the Claude app, VS Code and ChatGPT use fixed redirect URIs that do not depend on the server URL.
+- **Codex may need another redirect URI.** Codex derives the callback ID in its redirect URI (`http://127.0.0.1:<port>/callback/<id>`) from the complete server URL, including path segments. Switching to preview or adding URL segments therefore produces a **new callback ID** that has to be registered on your app registration as well. `codex mcp add` prints the new value; see [Callback URL Specifics](codex.md#callback-url-specifics). Claude Code, the Claude app, VS Code, Cursor and ChatGPT use fixed redirect URIs that do not depend on the server URL.
 
 Because tokens are stored per URL, you can register several environments side by side under different names (for example `timecockpit` and `timecockpit-preview`) and switch between them without signing in again each time.
 
@@ -71,7 +71,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 | [Visual Studio Code (Copilot agent mode)](vscode.md) | `.vscode/mcp.json` or user `mcp.json` | yes since VS Code 1.123 (`oauth.clientId`) | yes | tested |
 | [GitHub Copilot CLI](copilot-cli.md) | `%USERPROFILE%\.copilot\mcp-config.json` | unclear (client ID reportedly ignored) | yes | not verified |
 | [Microsoft 365 Copilot](microsoft-365-copilot.md) | Copilot Studio, M365 Admin Center, or declarative agent | yes, but Copilot Studio requires a client secret | no — use URL segments | not yet verified |
-| Cursor | `.cursor/mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |
+| [Cursor (editor, CLI)](cursor.md) | `.cursor/mcp.json` or `%USERPROFILE%\.cursor\mcp.json` (`auth.CLIENT_ID`) | yes | yes | not yet tested |
 | [ChatGPT (web, Business/Enterprise workspace)](chatgpt.md) | Custom app in the admin console (`chatgpt.com/admin/apps`), published to the workspace | yes (User-Defined OAuth Client, with client secret) | no — use URL segments | tested |
 | Microsoft Copilot (consumer) | — | — | — | no custom MCP support |
 
@@ -84,7 +84,7 @@ Every client has its own configuration. A server registered in Claude Code is in
 ## Getting Started
 
 1. Have your Entra administrator create the app registration described in [Entra ID Setup](entra-id-setup.md) and give you its client ID.
-2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [ChatGPT](chatgpt.md), [VS Code](vscode.md), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
+2. Configure your client: [Claude Code](claude-code.md), [Claude app](claude-app.md), [Codex](codex.md), [ChatGPT](chatgpt.md), [VS Code](vscode.md), [Cursor](cursor.md) (not tested), [Copilot CLI](copilot-cli.md), or [Microsoft 365 Copilot](microsoft-365-copilot.md).
 3. [Verify the connection](verify-connection.md) with the server's diagnostic tools.
 4. Install the [companion skills](companion-skills.md) so your assistant knows how to work with time cockpit.
 5. Try the [use cases and prompts](~/doc/ai-assistants/use-cases-and-prompts.md).

@@ -100,6 +100,9 @@ This is the official product documentation at https://docs.timecockpit.com. Link
 - [Time Report](https://docs.timecockpit.com/doc/employee-time-tracking/time-report.md): Generate detailed time reports in time cockpit showing working hours, breaks, home office days, overtime, and summaries for specific periods.
 - [Passive Booking Completion](https://docs.timecockpit.com/doc/employee-time-tracking/passive-booking-completion.md): Configure booking completion dates in time cockpit to lock time tracking entries and absences. Prevent edits after cutoff dates using TCQL expressions.
 - [How To - Pay Off Overtime/Vacation](https://docs.timecockpit.com/doc/getting-started/howtos/pay-off-overtime-vacation.md): Learn how to pay off overtime and vacation in time cockpit. Use overtime corrections and vacation entitlements to manage employee payouts.
+- [AI Assistants - Overview](https://docs.timecockpit.com/doc/ai-assistants/overview.md): Entry page for using AI assistants with time cockpit via the MCP server - what you can do, which assistants are supported, what you need, and how to get started safely.
+- [AI Assistants - Use Cases & Prompts](https://docs.timecockpit.com/doc/ai-assistants/use-cases-and-prompts.md): Ready-to-use prompts for project managers, project controllers, HR administrators, time tracking users, and department leads working with time cockpit through an AI assistant.
+- [AI Assistants - Dashboards & Visualizations](https://docs.timecockpit.com/doc/ai-assistants/dashboards.md): Prompts for building HTML, Excel, and Markdown dashboards from aggregated time cockpit data with an AI assistant - project portfolio, controlling, team utilization, absence calendar, and customer cockpit.
 
 ## For Users: Working with Time Cockpit
 
@@ -211,6 +214,22 @@ This is the official product documentation at https://docs.timecockpit.com. Link
 - [Reporting Endpoint](https://docs.timecockpit.com/doc/web-api/reporting.md): Generate time cockpit SSRS reports via Web API in PDF, Word, or Excel format. Fetch time reports and custom reports programmatically.
 - [Sample Implementation TimeCockpitClient](https://docs.timecockpit.com/doc/web-api/timecockpit-client.md): Sample implementation of TimeCockpitClient class for time cockpit Web API. Includes OData, query endpoint, and POCO mapping examples.
 
+## For Developers: MCP Server (AI Assistants)
+
+- [Overview](https://docs.timecockpit.com/doc/mcp/overview.md): Overview of the time cockpit MCP server, its endpoints, authentication with Microsoft Entra ID, per-connection settings, and the supported AI clients.
+- [Entra ID Setup](https://docs.timecockpit.com/doc/mcp/entra-id-setup.md): Register a client application for the time cockpit MCP server in your own Microsoft Entra ID tenant - platform, redirect URIs, API permission, admin consent - and hand the client ID to your users.
+- [Claude Code](https://docs.timecockpit.com/doc/mcp/claude-code.md): Register the time cockpit MCP server in Claude Code, sign in with Microsoft Entra ID, verify the connection, and share the configuration with your team via .mcp.json.
+- [Claude App, claude.ai & Cowork](https://docs.timecockpit.com/doc/mcp/claude-app.md): Add the time cockpit MCP server as a custom connector in claude.ai, Claude Desktop, Claude Mobile, and Cowork, using your organization's OAuth client ID and URL segments instead of headers.
+- [OpenAI Codex](https://docs.timecockpit.com/doc/mcp/codex.md): Register the time cockpit MCP server in OpenAI Codex (CLI, desktop app, IDE extension) with codex mcp add or config.toml, sign in with Microsoft Entra ID, and troubleshoot common errors.
+- [ChatGPT (Web, Business & Enterprise)](https://docs.timecockpit.com/doc/mcp/chatgpt.md): Register the time cockpit MCP server as a custom app in a ChatGPT Business or Enterprise workspace, publish it to all members, let every user sign in with Microsoft Entra ID, and import the companion skills as a plugin marketplace from GitHub.
+- [Visual Studio Code](https://docs.timecockpit.com/doc/mcp/vscode.md): Configure the time cockpit MCP server in Visual Studio Code for GitHub Copilot agent mode via mcp.json, including OAuth client ID, header inputs, Microsoft authentication, and troubleshooting.
+- [MCPJam Inspector](https://docs.timecockpit.com/doc/mcp/mcpjam.md): Connect the time cockpit MCP server to MCPJam Inspector before integrating it into an AI client, configure OAuth and sandbox headers, and run read-only diagnostic tests.
+- [Verify the Connection](https://docs.timecockpit.com/doc/mcp/verify-connection.md): Check a time cockpit MCP connection with the ping, get_environment, get_current_user, and entra_whoami tools, understand why tools may be missing, and compare configuration fields across clients.
+- [Access, Scope, and Confirmation](https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md): How the time cockpit MCP server restricts what an AI agent may do - the read-only access mode, the own-data scope, permission enforcement, and the confirmation handshake for changes.
+- [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md): What the row and size limits of the time cockpit MCP server mean, how to read a truncated result, why a list description can be derived from a sample, and which operations cannot be cancelled.
+- [Companion Skills & APM](https://docs.timecockpit.com/doc/mcp/companion-skills.md): Install the timecockpit-agents companion skills with Microsoft APM so AI assistants know how to connect to time cockpit, query with TCQL, book time, and run lists and actions.
+- [OnCockpit Admin (Local MCP Server)](https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md): Run the local time cockpit MCP server built into OnCockpit Admin over stdio, register it in Claude Code, VS Code or Codex, and use IronPython scripting for data model roundtrips, test data and automated tests.
+
 ## For Developers: Reporting (Custom Reports)
 
 - [Overview](https://docs.timecockpit.com/doc/reporting/overview.md): Create printable reports in time cockpit using Microsoft Reporting Services (SSRS). Learn about RDL files, report filters, and data sources for custom reports.
@@ -222,6 +241,7 @@ This is the official product documentation at https://docs.timecockpit.com. Link
 
 ## Release Notes
 
+- [October 2026](https://docs.timecockpit.com/doc/release-notes/2026-10.md): time cockpit release notes for October 2026. Advanced list filters, redesigned filter area, recently used values in combo boxes, filter parameters for dashboards, clearer form validation, a faster web client, and many bug fixes.
 - [September 2026](https://docs.timecockpit.com/doc/release-notes/2026-09.md): time cockpit release notes for September 2026. Shareable list views, badges and circles in lists, improved notifications and dialogs, Entra onboarding, dashboard configuration, and several bug fixes.
 - [June 2026](https://docs.timecockpit.com/doc/release-notes/2026-06.md): time cockpit release notes for June 2026. Dark mode, search in menu, UI modernization, Markdown dashboard widget, prorated vacation calculation, ZUGFeRD 2.3 COMFORT invoice PDFs, improved export for grouped lists, and several bug fixes.
 - [April 2026](https://docs.timecockpit.com/doc/release-notes/2026-04.md): time cockpit release notes for April 2026. Configurable report download filenames, seamless time entry docking, Signal improvements, improved formatting profile display, updated user deletion dialog, and several bug fixes.
@@ -235,7 +255,6 @@ This is the official product documentation at https://docs.timecockpit.com. Link
 - [February 2025](https://docs.timecockpit.com/doc/release-notes/2025-02.md): time cockpit release notes for February 2025. Bug fixes, improvements, and new features for the time tracking platform.
 - [December 2024](https://docs.timecockpit.com/doc/release-notes/2024-12.md): time cockpit release notes for December 2024. Bug fixes, improvements, and new features for the time tracking platform.
 - [November 2024](https://docs.timecockpit.com/doc/release-notes/2024-11.md): time cockpit release notes for November 2024. Bug fixes, improvements, and new features for the time tracking platform.
-- [September 2024](https://docs.timecockpit.com/doc/release-notes/2024-09.md): time cockpit release notes for September 2024. Bug fixes, improvements, and new features for the time tracking platform.
 
 Older release notes (back to April 2017) follow the URL pattern https://docs.timecockpit.com/doc/release-notes/YYYY-MM.md.
 

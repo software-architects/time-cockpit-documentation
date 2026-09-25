@@ -231,7 +231,8 @@ The output `applicationClientId` is the `<client-id>` for your users. Redirect U
 | ChatGPT (workspace custom app) | `https://chatgpt.com/connector/oauth/<callback-id>` — shown as **Callback URL** in the **New App** dialog, unique per app | Web (confidential client with secret, `client_secret_post`) |
 | Copilot Studio | `https://global.consent.azure-apim.net/redirect/<connector-id>` — shown after **Create**, different per tool | Web (confidential client with secret) |
 | M365 declarative agent / federated connector | `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` | Web |
-| Cursor | `http://localhost:8787/callback` | Mobile and desktop |
+| Cursor (desktop app, CLI) — not tested | `http://localhost:8787/callback` | Mobile and desktop |
+| Cursor web / cloud agents — not tested | `https://www.cursor.com/agents/mcp/oauth/callback` | Web |
 
 ## Values Users Need
 
