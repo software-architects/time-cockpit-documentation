@@ -39,13 +39,31 @@ function Get-Slug([string]$heading) {
     return $s
 }
 
-function Test-DeAnchor([string]$dePath, [string]$anchor) {
-    $file = Join-Path $script:DeRoot ($dePath -replace '/', '\')
-    if (-not (Test-Path -LiteralPath $file)) { return $false }
+function Get-HeadingSlugs([string]$file) {
+    # Slugs of all headings outside code fences, in document order.
+    $slugs = [System.Collections.Generic.List[string]]::new()
+    $inFence = $false
     foreach ($line in (Get-Content -LiteralPath $file -Encoding UTF8)) {
-        if ($line -match '^#{1,6}\s+(.+?)\s*$' -and (Get-Slug $Matches[1]) -eq $anchor.ToLowerInvariant()) { return $true }
+        if ($line -match '^\s*```') { $inFence = -not $inFence; continue }
+        if (-not $inFence -and $line -match '^#{1,6}\s+(.+?)\s*$') { $slugs.Add((Get-Slug $Matches[1])) }
     }
-    return $false
+    return $slugs
+}
+
+# Maps an English anchor to the German one: headings are translated 1:1, so the German
+# heading at the same position is the counterpart. Returns $null when it cannot be mapped.
+function Convert-Anchor([string]$enPath, [string]$dePath, [string]$anchor) {
+    $deFile = Join-Path $script:DeRoot ($dePath -replace '/', '\')
+    $enFile = Join-Path $script:RepoRoot ($enPath -replace '/', '\')
+    if (-not (Test-Path -LiteralPath $deFile)) { return $null }
+    $deSlugs = Get-HeadingSlugs $deFile
+    $a = $anchor.ToLowerInvariant()
+    if ($deSlugs -contains $a) { return $a }                     # already a German anchor
+    if (-not (Test-Path -LiteralPath $enFile)) { return $null }
+    $enSlugs = Get-HeadingSlugs $enFile
+    $i = $enSlugs.IndexOf($a)
+    if ($i -ge 0 -and $i -lt $deSlugs.Count) { return $deSlugs[$i] }
+    return $null
 }
 
 $rewritten = 0
@@ -63,7 +81,15 @@ foreach ($en in $map.Keys) {
         param($m)
         $target = $m.Groups[1].Value
         $title = $m.Groups[2].Value
-        if ($target -match '^(https?:|mailto:|xref:|#|/)') { return $m.Value }
+        if ($target -match '^#(.+)$') {
+            # Same-page anchor: map the English heading anchor to the German heading.
+            $mapped = Convert-Anchor $en $deRel $Matches[1]
+            if ($null -eq $mapped) { Write-Warning "anchor '$target' not found in $deRel, left as is"; return $m.Value }
+            if ($mapped -eq $Matches[1]) { return $m.Value }
+            $script:rewritten++
+            return "](#$mapped$title)"
+        }
+        if ($target -match '^(https?:|mailto:|xref:|/)') { return $m.Value }
 
         $anchor = ''
         $path = $target
@@ -85,7 +111,8 @@ foreach ($en in $map.Keys) {
             $dePath = $map[$enPath]
             $suffix = ''
             if ($anchor) {
-                if (Test-DeAnchor $dePath $anchor) { $suffix = "#$anchor" }
+                $mapped = Convert-Anchor $enPath $dePath $anchor
+                if ($null -ne $mapped) { $suffix = "#$mapped" }
                 else { Write-Warning "anchor '#$anchor' not found in $dePath (link in $deRel), dropped" }
             }
             $script:rewritten++
@@ -94,6 +121,21 @@ foreach ($en in $map.Keys) {
         $script:rewritten++
         $html = ($enPath -replace '\.md$', '.html')
         return "](/$html$(if ($anchor) { "#$anchor" })$title)"
+    })
+
+    # Cross references into the API reference (<xref:Uid> or [text](xref:Uid)): the API is
+    # only built in English, so they become absolute links to /api/<Uid>.html.
+    $text = [regex]::Replace($text, '<xref:([A-Za-z0-9_.`]+)>', {
+        param($m)
+        $uid = $m.Groups[1].Value
+        $script:rewritten++
+        return "[$uid](/api/$uid.html)"
+    })
+    $text = [regex]::Replace($text, '\]\(xref:([A-Za-z0-9_.`]+)\)', {
+        param($m)
+        $uid = $m.Groups[1].Value
+        $script:rewritten++
+        return "](/api/$uid.html)"
     })
 
     # HTML images and video posters
