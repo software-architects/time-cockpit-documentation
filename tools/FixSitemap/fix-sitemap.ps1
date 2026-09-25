@@ -1,7 +1,10 @@
-# Rewrites <lastmod> in _site/sitemap.xml with the last Git commit date of each page's
-# source file. DocFX writes the build time for every URL, which tells search engines
-# nothing. Run after "docfx build" (build.ps1 does this); requires git and the full
-# history (a shallow clone yields the checkout date for every file).
+# Post-processes _site/sitemap.xml after "docfx build" (tools/post-build.ps1 runs it):
+#   1. Removes URLs of pages that carry <meta name="robots" content="noindex"> (front
+#      matter _noindex: true). Always runs.
+#   2. Replaces <lastmod> (DocFX writes the build time for every URL, which tells search
+#      engines nothing) with the last Git commit date of each page's source file. Needs
+#      git and the full history; without them the build time is kept and a warning is
+#      printed.
 #
 # URL -> source mapping: doc/**.html -> doc/**.md, api/**.html -> api/**.yml,
 # */toc.html -> */toc.yml. URLs without a source keep the build time.
@@ -19,34 +22,48 @@ if (-not (Test-Path -LiteralPath $SitemapPath)) {
     Write-Warning "sitemap.xml not found at $SitemapPath. Build the site first."
     return
 }
-if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
-    Write-Warning "git not found; sitemap lastmod values stay at build time."
-    return
-}
 
-# One git call: walk commits newest first and remember the first date seen per file.
+# --- Last commit date per source file (one git call), empty when unavailable ----------
+
 $lastCommit = @{}
-Push-Location $repoRoot
-try {
-    $current = $null
-    foreach ($line in (& git log --format='%x01%cI' --name-only -- doc api toc.yml 2>$null)) {
-        if ($line.StartsWith([char]1)) { $current = $line.Substring(1); continue }
-        if ($line -eq '') { continue }
-        $key = $line.Replace('\', '/')
-        if (-not $lastCommit.ContainsKey($key)) { $lastCommit[$key] = $current }
+if (Get-Command git -ErrorAction SilentlyContinue) {
+    Push-Location $repoRoot
+    try {
+        $current = $null
+        foreach ($line in (& git log --format='%x01%cI' --name-only -- doc api toc.yml 2>$null)) {
+            if ($line.StartsWith([char]1)) { $current = $line.Substring(1); continue }
+            if ($line -eq '') { continue }
+            $key = $line.Replace('\', '/')
+            if (-not $lastCommit.ContainsKey($key)) { $lastCommit[$key] = $current }
+        }
+    }
+    finally {
+        Pop-Location
+    }
+    if ($lastCommit.Count -eq 0) {
+        Write-Warning "git log returned nothing (shallow clone?); sitemap lastmod values stay at build time."
     }
 }
-finally {
-    Pop-Location
+else {
+    Write-Warning "git not found; sitemap lastmod values stay at build time."
 }
-if ($lastCommit.Count -eq 0) {
-    Write-Warning "git log returned nothing (shallow clone?); sitemap lastmod values stay at build time."
-    return
-}
+
+# --- Rewrite the sitemap ----------------------------------------------------------------
 
 [xml]$xml = Get-Content -LiteralPath $SitemapPath -Encoding UTF8
 $ns = New-Object System.Xml.XmlNamespaceManager $xml.NameTable
 $ns.AddNamespace("s", "http://www.sitemaps.org/schemas/sitemap/0.9")
+
+function Test-NoIndex([string]$htmlPath) {
+    if (-not (Test-Path -LiteralPath $htmlPath)) { return $false }
+    # Only the <head> matters; read up to </head> instead of a fixed number of lines.
+    $head = [System.Text.StringBuilder]::new()
+    foreach ($line in [System.IO.File]::ReadLines($htmlPath)) {
+        [void]$head.AppendLine($line)
+        if ($line -match '</head>') { break }
+    }
+    return $head.ToString() -match 'name="robots"\s+content="noindex'
+}
 
 $siteRoot = Split-Path -Parent $SitemapPath
 $updated = 0
@@ -57,9 +74,7 @@ foreach ($url in @($xml.SelectNodes("//s:url", $ns))) {
     if (-not $loc.StartsWith($BaseUrl)) { $kept++; continue }
     $path = $loc.Substring($BaseUrl.Length).TrimStart('/')
 
-    # Pages that tell robots "noindex" must not be submitted via the sitemap.
-    $htmlPath = Join-Path $siteRoot ($path -replace '/', '\')
-    if ((Test-Path -LiteralPath $htmlPath) -and ((Get-Content -LiteralPath $htmlPath -TotalCount 80 -Encoding UTF8) -join "`n") -match 'name="robots"\s+content="noindex') {
+    if (Test-NoIndex (Join-Path $siteRoot ($path -replace '/', '\'))) {
         [void]$url.ParentNode.RemoveChild($url)
         $dropped++
         continue
