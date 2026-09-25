@@ -21,6 +21,16 @@ $ErrorActionPreference = "Stop"
 $map = Get-DePageMap
 if ($map.Count -eq 0) { Write-Host "relink-de: no German pages yet"; return }
 
+# Code files pulled in by [!code-...] includes are resolved relative to the page, so the
+# German pages need the same files next to them. Mirror them (gitignored, never edited).
+foreach ($codeDir in @('scripting/code')) {
+    $src = Join-Path $script:RepoRoot ('doc/' + $codeDir)
+    if (-not (Test-Path -LiteralPath $src)) { continue }
+    $dst = Join-Path $script:DeRoot ('doc\' + $codeDir.Replace('/', '\'))
+    if (Test-Path -LiteralPath $dst) { Remove-Item -LiteralPath $dst -Recurse -Force }
+    Copy-Item -LiteralPath $src -Destination $dst -Recurse
+}
+
 $imageExt = '\.(png|jpe?g|gif|svg|webp)$'
 
 function Resolve-EnPath([string]$enDir, [string]$target) {
