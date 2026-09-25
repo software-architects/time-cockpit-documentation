@@ -191,7 +191,7 @@ export default {
     const metaContent = (name) => document.querySelector(`meta[name="${name}"]`)?.content || '';
 
     const pageJsonLd = () => {
-      const isApi = metaContent('docfx:api') === 'true' || document.body.dataset.yamlMime === 'ManagedReference';
+      const isApi = document.body.dataset.yamlMime === 'ManagedReference';
       const isFaq = metaContent('docfx:faq') === 'true';
       const title = (document.querySelector('article h1')?.textContent || document.title).trim();
       const description = metaContent('description');

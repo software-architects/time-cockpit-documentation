@@ -1,5 +1,5 @@
 {{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
-{{!time cockpit: copy of templates/modern/layout/_master.tmpl (docfx 2.78.2 "modern") plus canonical/hreflang tags, analytics and the consent block. Re-diff against templates/modern when upgrading the vendored template.}}
+{{!time cockpit: copy of the docfx 2.81.0 "modern" layout/_master.tmpl plus canonical/hreflang and social meta tags, analytics, the all-pages link and the consent block. On every docfx upgrade run `dotnet docfx template export modern` and re-diff against `_exported_templates/modern/layout/_master.tmpl`.}}
 {{!include(/^public/.*/)}}
 {{!include(favicon.ico)}}
 {{!include(logo.svg)}}
@@ -11,14 +11,13 @@
       <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
     {{/redirect_url}}
     {{^redirect_url}}
-      {{!time cockpit: API pages (ManagedReference models, recognizable by name.0.value; the pipeline's old docfx does not set yamlmime)
+      {{!time cockpit: API pages (ManagedReference models, recognizable by name.0.value)
           add the namespace to the title, drop the site suffix to stay under 70 characters, and get a generated description.}}
       <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}}{{^name.0.value}} {{#_appTitle}}| {{_appTitle}}{{/_appTitle}}{{/name.0.value}}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} ({{namespace.uid}}){{/namespace.uid}}{{^name.0.value}} {{#_appTitle}}| {{_appTitle}}{{/_appTitle}}{{/name.0.value}}">
       {{#description}}<meta name="description" content="{{description}}">{{/description}}
       {{^description}}{{#name.0.value}}<meta name="description" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}}{{#namespace.uid}} in the {{namespace.uid}} namespace{{/namespace.uid}}{{#assemblies.0}}, assembly {{assemblies.0}}.dll{{/assemblies.0}}. time cockpit .NET API reference for customizing and scripting the data model.">{{/name.0.value}}{{/description}}
-      {{#name.0.value}}<meta name="docfx:api" content="true">{{/name.0.value}}
       {{#_noindex}}<meta name="robots" content="noindex, follow">{{/_noindex}}
       <link rel="canonical" href="https://docs.timecockpit.com/{{{_path}}}">
       <link rel="alternate" hreflang="en" href="https://docs.timecockpit.com/{{{_path}}}">

@@ -1,6 +1,6 @@
 # Builds the documentation site into _site and publishes the raw Markdown sources
 # plus llms.txt / llms-full.txt alongside it. This is the single command to run
-# before deploying _site; do not deploy after a plain "docfx docfx.json", because
+# before deploying _site; do not deploy after a plain "dotnet docfx", because
 # the .md files linked from llms.txt would be missing on the server (404).
 #
 # Usage:
@@ -18,20 +18,24 @@ $ErrorActionPreference = "Stop"
 $repoRoot = $PSScriptRoot
 Push-Location $repoRoot
 try {
-    if (-not (Get-Command docfx -ErrorAction SilentlyContinue)) {
-        throw "docfx not found. Install it with: dotnet tool install -g docfx"
+    if (-not (Get-Command dotnet -ErrorAction SilentlyContinue)) {
+        throw ".NET SDK not found. Install it from https://dot.net; docfx itself is restored from .config/dotnet-tools.json."
     }
+
+    Write-Host "==> dotnet tool restore (docfx version pinned in .config/dotnet-tools.json)"
+    & dotnet tool restore
+    if ($LASTEXITCODE -ne 0) { throw "dotnet tool restore failed with exit code $LASTEXITCODE" }
 
     Write-Host "==> generate-site-index.ps1 (doc/site-index.md from toc.yml)"
     & (Join-Path $repoRoot "tools\GenerateSiteIndex\generate-site-index.ps1")
 
     if ($SkipMetadata) {
-        Write-Host "==> docfx build docfx.json"
-        & docfx build docfx.json
+        Write-Host "==> dotnet docfx build docfx.json"
+        & dotnet docfx build docfx.json
     }
     else {
-        Write-Host "==> docfx docfx.json (metadata + build)"
-        & docfx docfx.json
+        Write-Host "==> dotnet docfx docfx.json (metadata + build)"
+        & dotnet docfx docfx.json
     }
     if ($LASTEXITCODE -ne 0) { throw "docfx failed with exit code $LASTEXITCODE" }
 
@@ -40,8 +44,8 @@ try {
     Write-Host "==> Done. _site is ready to deploy."
 
     if ($Serve) {
-        Write-Host "==> docfx serve _site"
-        & docfx serve _site
+        Write-Host "==> dotnet docfx serve _site --port 8087"
+        & dotnet docfx serve _site --port 8087
     }
 }
 finally {

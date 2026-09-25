@@ -6,8 +6,9 @@
 # Usage: build the site first, then run this script. The root build.ps1 does both
 # in the right order and is the preferred entry point:
 #   .\build.ps1
-# Manually:
-#   docfx docfx.json
+# Manually (docfx is the local dotnet tool pinned in .config/dotnet-tools.json):
+#   dotnet tool restore
+#   dotnet docfx build docfx.json
 #   .\tools\GenerateLlmsTxt\generate-llms.ps1
 #
 # Both output files are committed and registered as resources in docfx.json, so DocFX
@@ -316,5 +317,5 @@ if (Test-Path -LiteralPath $sitePath) {
     Write-Host "Copied $copied Markdown source files and the llms files to _site"
 }
 else {
-    Write-Warning "_site not found. Build the site first (docfx docfx.json), then re-run this script so the linked Markdown sources are published."
+    Write-Warning "_site not found. Build the site first (.\build.ps1 -SkipMetadata), then re-run this script so the linked Markdown sources are published."
 }
