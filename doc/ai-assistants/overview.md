@@ -7,7 +7,7 @@ description: Entry page for using AI assistants with time cockpit via the MCP se
 time cockpit provides an MCP server that lets AI assistants such as Claude, OpenAI Codex, GitHub Copilot, and Microsoft 365 Copilot read and — when you allow it — change your time cockpit data. You sign in with your normal Microsoft work account, and the assistant only sees what you are allowed to see in time cockpit.
 
 > [!NOTE]
-> The time cockpit MCP server is currently available to selected customers only. See [MCP Server](~/doc/mcp/overview.md) for details.
+> The time cockpit MCP server is currently in public preview. See [MCP Server](~/doc/mcp/overview.md) for details.
 
 ## What You Can Do
 

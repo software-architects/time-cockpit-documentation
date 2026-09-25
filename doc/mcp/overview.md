@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Connect AI Assistants to Time Cockpit
-description: Overview of the time cockpit MCP server, its endpoints, authentication with Microsoft Entra ID, per-connection settings, and the supported AI clients. Currently available to selected customers only.
+description: Overview of the time cockpit MCP server, its endpoints, authentication with Microsoft Entra ID, per-connection settings, and the supported AI clients. Currently in public preview.
 ---
 # Time Cockpit MCP Server
 
@@ -8,7 +8,7 @@ description: Overview of the time cockpit MCP server, its endpoints, authenticat
 > Under construction: The time cockpit MCP server and this documentation are under active development, and breaking changes are possible. Tools may be renamed, changed or removed, and dialog labels and configuration steps may change without notice. Check back for updates before rolling the setup out to your users, and expect to adapt your configuration, skills and prompts after an update.
 
 > [!NOTE]
-> Availability: The time cockpit MCP server is currently available to selected customers only. If you would like to use it with your time cockpit tenant, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com).
+> Availability: The time cockpit MCP server is currently in public preview. If you have questions or feedback, feel free to reach out to us at [support@timecockpit.com](mailto:support@timecockpit.com).
 
 The time cockpit MCP server exposes time cockpit data and functions (projects, customers, tasks, timesheets, named lists) to AI assistants via the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). It is a remote server that clients reach over Streamable HTTP. Every user signs in with their own Microsoft Entra ID work account, so the assistant only sees what that user is allowed to see in time cockpit. Model actions are not available through the MCP server; run them in the time cockpit UI.
 
