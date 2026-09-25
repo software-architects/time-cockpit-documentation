@@ -1,6 +1,6 @@
 ---
 title: MCP Server - OnCockpit Admin Local MCP Server
-description: Run the local time cockpit MCP server built into OnCockpit Admin over stdio, register it in Claude Code, VS Code or Codex, and use IronPython scripting for data model roundtrips, test data and automated tests.
+description: Run the local time cockpit MCP server in OnCockpit Admin over stdio, register it in Claude Code, VS Code or Codex and script data model roundtrips and tests.
 ---
 # OnCockpit Admin: Local MCP Server (stdio)
 

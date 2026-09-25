@@ -1,6 +1,6 @@
 ---
 title: AI Assistants - Dashboards and Visualizations
-description: Prompts for building HTML, Excel, and Markdown dashboards from aggregated time cockpit data with an AI assistant - project portfolio, controlling, team utilization, absence calendar, and customer cockpit.
+description: Prompts for building HTML, Excel and Markdown dashboards from time cockpit data with an AI assistant: project portfolio, controlling, utilization, absences.
 ---
 # Dashboards and Visualizations
 

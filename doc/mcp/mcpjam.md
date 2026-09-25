@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Test with MCPJam Inspector
-description: Connect the time cockpit MCP server to MCPJam Inspector before integrating it into an AI client, configure OAuth and sandbox headers, and run read-only diagnostic tests.
+description: Connect the time cockpit MCP server to MCPJam Inspector before integrating an AI client: configure OAuth and sandbox headers and run read-only tests.
 ---
 # Test the MCP Server with MCPJam Inspector
 

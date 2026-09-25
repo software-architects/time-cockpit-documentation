@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Cursor Setup
-description: Configure the time cockpit MCP server in Cursor (editor and CLI) via mcp.json with static OAuth client ID, sign in with Microsoft Entra ID, and troubleshoot common errors. Not yet tested.
+description: Configure the time cockpit MCP server in Cursor (editor and CLI) via mcp.json with a static OAuth client ID, sign in with Entra ID and fix common errors.
 ---
 # Cursor (Editor and CLI)
 

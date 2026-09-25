@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Claude App, claude.ai and Cowork Setup
-description: Add the time cockpit MCP server as a custom connector in claude.ai, Claude Desktop, Claude Mobile, and Cowork, using your organization's OAuth client ID and URL segments instead of headers.
+description: Add the time cockpit MCP server as a custom connector in claude.ai, Claude Desktop, Claude Mobile and Cowork with your OAuth client ID in URL segments.
 ---
 # Claude App, claude.ai and Cowork
 

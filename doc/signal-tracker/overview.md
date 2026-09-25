@@ -1,6 +1,6 @@
 ---
 title: Signal Trackers - Activity Tracking
-description: Learn about time cockpit's signal trackers that automatically track PC activities like computer activity, user activity, emails, phone calls, and more to simplify time tracking.
+description: time cockpit's signal trackers record PC activity such as active windows, user activity, emails and phone calls to simplify time tracking.
 ---
 # Signal Trackers
 

@@ -1,6 +1,6 @@
 ---
 title: Hourly Rate Management & Pricing Configuration
-description: Complete guide to configuring hourly rates for billing, understanding rate hierarchy, managing customer-specific pricing, role-based rates, and rate change workflows in time cockpit.
+description: Configure hourly rates for billing in time cockpit: rate hierarchy, customer-specific pricing, role-based rates and rate change workflows.
 keywords: [hourly rates, billing rates, project pricing, rate management, customer rates, role-based pricing, rate hierarchy, pricing configuration, billable rates, rate updates, pricing strategy]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Verify the Connection
-description: Check a time cockpit MCP connection with the ping, get_environment, get_current_user, and entra_whoami tools, understand why tools may be missing, and compare configuration fields across clients.
+description: Check a time cockpit MCP connection with the ping, get_environment, get_current_user and entra_whoami tools and learn why tools may be missing.
 ---
 # Verify the Connection
 

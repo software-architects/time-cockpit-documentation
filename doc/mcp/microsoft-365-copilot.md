@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Microsoft 365 Copilot Setup
-description: Three routes to bring the time cockpit MCP server into Microsoft 365 Copilot - Copilot Studio agents, declarative agents with MCP plugins, and custom federated connectors - with authentication options and recommendations.
+description: Three ways to bring the time cockpit MCP server into Microsoft 365 Copilot: Copilot Studio agents, declarative agents with MCP plugins, federated connectors.
 ---
 # Microsoft 365 Copilot
 

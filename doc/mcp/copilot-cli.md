@@ -1,6 +1,6 @@
 ---
 title: MCP Server - GitHub Copilot CLI
-description: Current status of the time cockpit MCP server with the GitHub Copilot CLI and the Copilot coding agent, including configuration locations and known authentication limitations.
+description: Status of the time cockpit MCP server with the GitHub Copilot CLI and the Copilot coding agent: configuration locations and known authentication limits.
 ---
 # GitHub Copilot CLI
 

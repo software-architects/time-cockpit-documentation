@@ -1,6 +1,6 @@
 ---
 title: MCP Server - Microsoft Entra ID Setup
-description: Register a client application for the time cockpit MCP server in your own Microsoft Entra ID tenant - platform, redirect URIs, API permission, admin consent - and hand the client ID to your users.
+description: Register a client app for the time cockpit MCP server in your Microsoft Entra ID tenant: platform, redirect URIs, API permission, admin consent, client ID.
 ---
 # Microsoft Entra ID Setup for the MCP Server
 
