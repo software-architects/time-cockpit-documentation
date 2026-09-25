@@ -174,13 +174,18 @@ export default {
     // so its block is added once the breadcrumb has items.
     const SITE = 'https://docs.timecockpit.com/';
     const ORG = { '@id': 'https://www.timecockpit.com/#organization' };
+    // Writes or updates one JSON-LD block; unchanged content is left alone.
     const addJsonLd = (id, data) => {
-      if (document.getElementById(id)) return;
-      const s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.id = id;
-      s.textContent = JSON.stringify({ '@context': 'https://schema.org', ...data });
-      document.head.appendChild(s);
+      const json = JSON.stringify({ '@context': 'https://schema.org', ...data });
+      let s = document.getElementById(id);
+      if (s && s.textContent === json) return;
+      if (!s) {
+        s = document.createElement('script');
+        s.type = 'application/ld+json';
+        s.id = id;
+        document.head.appendChild(s);
+      }
+      s.textContent = json;
     };
     const canonical = () => document.querySelector('link[rel=canonical]')?.href || location.href;
     const metaContent = (name) => document.querySelector(`meta[name="${name}"]`)?.content || '';

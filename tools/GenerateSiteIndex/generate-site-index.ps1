@@ -45,16 +45,35 @@ function Read-Toc([string]$tocPath) {
     return $root
 }
 
-function Write-Items($node, [int]$level, [System.Text.StringBuilder]$sb, [string]$hrefPrefix) {
+# Returns the Markdown link target for a TOC href, or $null when the entry should be
+# plain text: folders, toc.yml references and pages that do not exist would otherwise
+# become broken links on the index page.
+function Resolve-Href([string]$href, [string]$baseDir, [string]$linkPrefix) {
+    if (-not $href -or $href -eq 'site-index.md') { return $null }
+    if ($href -match '^https?://') { return $href }
+    $file = $href -replace '#.*$', ''
+    if ($file -notmatch '\.(md|yml)$') {
+        Write-Warning "site index: skipping '$href' (not a page)"
+        return $null
+    }
+    if (-not (Test-Path -LiteralPath (Join-Path $baseDir ($file -replace '/', '\')))) {
+        Write-Warning "site index: skipping '$href' (file not found)"
+        return $null
+    }
+    return "$linkPrefix$href"
+}
+
+function Write-Items($node, [int]$level, [System.Text.StringBuilder]$sb, [string]$baseDir, [string]$linkPrefix) {
     foreach ($item in $node.Items) {
         $indent = '  ' * $level
-        if ($item.Href -and $item.Href -ne 'site-index.md') {
-            [void]$sb.AppendLine("$indent- [$($item.Name)]($hrefPrefix$($item.Href))")
+        $target = Resolve-Href $item.Href $baseDir $linkPrefix
+        if ($target) {
+            [void]$sb.AppendLine("$indent- [$($item.Name)]($target)")
         }
         else {
             [void]$sb.AppendLine("$indent- $($item.Name)")
         }
-        Write-Items $item ($level + 1) $sb $hrefPrefix
+        Write-Items $item ($level + 1) $sb $baseDir $linkPrefix
     }
 }
 
@@ -70,14 +89,15 @@ $sb = [System.Text.StringBuilder]::new()
 
 $toc = Read-Toc (Join-Path $docRoot "toc.yml")
 foreach ($section in $toc.Items) {
-    if ($section.Href) {
-        [void]$sb.AppendLine("## [$($section.Name)]($($section.Href))")
+    $target = Resolve-Href $section.Href $docRoot ''
+    if ($target) {
+        [void]$sb.AppendLine("## [$($section.Name)]($target)")
     }
     else {
         [void]$sb.AppendLine("## $($section.Name)")
     }
     [void]$sb.AppendLine()
-    Write-Items $section 0 $sb ''
+    Write-Items $section 0 $sb $docRoot ''
     [void]$sb.AppendLine()
 }
 
@@ -89,7 +109,8 @@ if (Test-Path -LiteralPath $apiToc) {
     [void]$sb.AppendLine()
     $api = Read-Toc $apiToc
     foreach ($ns in $api.Items) {
-        if ($ns.Href) { [void]$sb.AppendLine("- [$($ns.Name)](~/api/$($ns.Href))") }
+        $target = Resolve-Href $ns.Href (Join-Path $repoRoot "api") '~/api/'
+        if ($target) { [void]$sb.AppendLine("- [$($ns.Name)]($target)") }
     }
     [void]$sb.AppendLine()
 }

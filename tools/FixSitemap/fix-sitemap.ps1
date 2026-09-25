@@ -48,12 +48,22 @@ if ($lastCommit.Count -eq 0) {
 $ns = New-Object System.Xml.XmlNamespaceManager $xml.NameTable
 $ns.AddNamespace("s", "http://www.sitemaps.org/schemas/sitemap/0.9")
 
+$siteRoot = Split-Path -Parent $SitemapPath
 $updated = 0
 $kept = 0
-foreach ($url in $xml.SelectNodes("//s:url", $ns)) {
+$dropped = 0
+foreach ($url in @($xml.SelectNodes("//s:url", $ns))) {
     $loc = $url.SelectSingleNode("s:loc", $ns).InnerText
     if (-not $loc.StartsWith($BaseUrl)) { $kept++; continue }
     $path = $loc.Substring($BaseUrl.Length).TrimStart('/')
+
+    # Pages that tell robots "noindex" must not be submitted via the sitemap.
+    $htmlPath = Join-Path $siteRoot ($path -replace '/', '\')
+    if ((Test-Path -LiteralPath $htmlPath) -and ((Get-Content -LiteralPath $htmlPath -TotalCount 80 -Encoding UTF8) -join "`n") -match 'name="robots"\s+content="noindex') {
+        [void]$url.ParentNode.RemoveChild($url)
+        $dropped++
+        continue
+    }
 
     $source = $null
     if ($path -match '^(.*/)?toc\.html$') { $source = ($path -replace '\.html$', '.yml') }
@@ -75,4 +85,4 @@ $settings.Encoding = New-Object System.Text.UTF8Encoding $false
 $writer = [System.Xml.XmlWriter]::Create($SitemapPath, $settings)
 try { $xml.Save($writer) } finally { $writer.Dispose() }
 
-Write-Host "sitemap.xml: lastmod from git for $updated URLs, $kept kept at build time"
+Write-Host "sitemap.xml: lastmod from git for $updated URLs, $kept kept at build time, $dropped noindex URLs removed"
