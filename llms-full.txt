@@ -7726,7 +7726,7 @@ Source: https://docs.timecockpit.com/doc/employee-time-tracking/work-from-home.m
 
 Since the corona pandemic remote work has become increasingly common. Time cockpit allows you to flag time sheet entries as work from home or office. This information can be important for various reasons. Various companies use this information to optimize their office space usage and reduce costs. Additionally, some countries (like Austria) offer special allowances for days spent working from home. Thus, it is important to accurately track work from home days to ensure that employees are paid the correct allowances.
 
-# Flagging a Time Sheet Entry
+## Flagging a Time Sheet Entry
 
 By default, all time sheet entries that are created are marked as **office work**. To indicate that you performed a task at home (or remote), check the **Home Office** flag in the time sheet form.
 
@@ -7735,7 +7735,7 @@ By default, all time sheet entries that are created are marked as **office work*
 > [!NOTE] 
 > Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
 
-# Flagging a Whole Day
+## Flagging a Whole Day
 
 If you want to set a whole day to **Office** or **Work From Home** you can do that directly in the time sheet calendar.
 
@@ -7751,7 +7751,7 @@ If you want to set a whole day to **Office** or **Work From Home** you can do th
 > [!NOTE] 
 > In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
 
-# Reporting
+## Reporting
 
 In the standard data model, time cockpit displays the information if an employee has spent her day in the office or at home in the time report.
 
@@ -11628,7 +11628,7 @@ Your test system is free for the time being. We only need to discuss any potenti
 ### Accessing the Sandbox WITHOUT Microsoft Entra (AAD)
 Users can easily log in to the test system by visiting [web.timecockpit.com](https://web.timecockpit.com). Use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 
-![Sandbox Login](https://docs.timecockpit.com/doc/data-model-customization/images/sandbox-login.png "Sandbox Login")
+![Sandbox Login](https://docs.timecockpit.com/doc/data-model-customization/images/sandbox-login.jpg "Sandbox Login")
 
 If you're using the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe) for customizations and development, you can connect to the sandbox by adding a "New Configuration" in the start dialog of OnCockpit Admin. Ensure that you use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 
@@ -12760,6 +12760,8 @@ For lists the name of the list has to be specified:
 
 Source: https://docs.timecockpit.com/doc/data-model-customization/feature-flags.md
 
+# Feature Flags
+
 ## Ensuring Compatibility in Time Cockpit
 
 Time Cockpit is highly customizable, allowing customers to tailor the application to their own structures and processes. These customizations can range from simple user interface or data model adjustments (e.g., adding additional tables) to more advanced topics like permission configurations.
@@ -12836,9 +12838,9 @@ In cases like the *Default Permissions* example, feature flags serve as compatib
 
 Source: https://docs.timecockpit.com/doc/migration-guides/default-permissions.md
 
-## Migration Guide for Default Permissions
+# Migration Guide for Default Permissions
 
-### Introduction and Overview
+## Introduction and Overview
 
 Default Permissions were introduced to make permissions in Time Cockpit clearer, more structured, and easier to manage. One of the main goals is to provide new customers with a smoother and faster onboarding experience. By enabling all relevant features and permissions by default, new users can start working with the system right away without the need for extensive configuration. This eliminates friction during the first steps and helps teams to be productive from day one. See [Default Permissions](https://docs.timecockpit.com/doc/employee-time-tracking/default-permissions.md).
 
@@ -12850,39 +12852,39 @@ For existing customers, Default Permissions bring clarity and structure to their
 
 Depending on the type of customer, there are three main scenarios that are explained in detail in this guide.
 
-### Overview of the Three Scenarios
+## Overview of the Three Scenarios
 
-#### 1️⃣ **New Customers**
+### 1️⃣ **New Customers**
 
 When a new customer registers with Time Cockpit, all features, including Default Permissions, are enabled by default. This gives all users direct access to all functions without additional configuration.
 
-#### 2️⃣ **Existing Customers without Permissions**
+### 2️⃣ **Existing Customers without Permissions**
 
 Existing customers who have not previously configured specific permissions must decide whether to use the new permissions. To make this decision, it is recommended to carefully read the article [Default Permissions](https://docs.timecockpit.com/doc/employee-time-tracking/default-permissions.md). It is important to understand the impact of the different roles and to assign them to the respective users accordingly. After assigning the roles, an email to `support@timecockpit.com` is required to activate the feature.
 
-#### 3️⃣ **Existing Customers with Custom Permissions**
+### 3️⃣ **Existing Customers with Custom Permissions**
 
 Customers with many custom adjustments in the permissions area should carefully review where Default Permissions might be helpful. In these cases, however, we recommend not activating the Default Permission feature directly but rather reviewing the existing permissions carefully.
 
-### Important Changes Due to Default Permissions
+## Important Changes Due to Default Permissions
 
 Before the rollout of Default Permissions, all users could create, edit, or delete records in **`GlobalSettings`**, **`ImportDefinition`**, and **`TemplateQuery`**. This is now only possible for employees with the **`BasedataAdmin`** role. Therefore, it is important to assign this role to the appropriate users.
 
-### Changes to the Admin Role
+## Changes to the Admin Role
 
 As part of the introduction of Default Permissions, the classic admin role was renamed to a specialized role called **Customization Admin**. This role can still adjust the data model, enable and disable permissions, but no longer manage all aspects of the system. A Customization Admin can still impersonate, allowing them to make themselves `AccountAdmin` to add or lock users.
 
 This change fixes a historical inconsistency: Previously, an administrator who could make data model adjustments could also manage all other aspects of the system. This is now more clearly separated.
 
-### Ensuring Previous Rights for Existing Customers
+## Ensuring Previous Rights for Existing Customers
 
 To ensure that existing customers have the same rights as before after the introduction of Default Permissions, all classic administrators are automatically assigned all relevant roles (`AccountAdmin`, `BillingAdmin`, `HumanResourcesAdmin`, etc.).
 
-### Replacement of the `IsTenantAdmin` Flag
+## Replacement of the `IsTenantAdmin` Flag
 
 The previous flag `IsTenantAdmin` has been replaced with the role `AccountAdmin`. This new role has the same rights as before, specifically the management of users and billing data.
 
-### Best Practices and Recommendations
+## Best Practices and Recommendations
 
 1. Review which roles are required for which users.
 2. Assign the appropriate roles in Time Cockpit.
@@ -14936,7 +14938,7 @@ To acquire a PAT follow these steps:
 4. Enter a description, the validity and select the scope of the PAT. We distinguish between two different scopes:
    1. Management: Allows you to programmatically create and disable users via the Web API
    2. Data: Allows you to manage all data in your account. If you have permissions in your tenant, you get the same permissions with the PAT as your user already has.
-![Create PAT](https://docs.timecockpit.com/doc/web-api/images/create-pat-1.png "Create PAT")
+![Create PAT](https://docs.timecockpit.com/doc/web-api/images/create-pat-1.jpg "Create PAT")
 5. Click "Create" and you are presented with the generated PAT. Copy the PAT to a save location e.g. a password safe.
 
 ### Authenticate using a PAT

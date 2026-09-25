@@ -23,7 +23,7 @@ To acquire a PAT follow these steps:
 4. Enter a description, the validity and select the scope of the PAT. We distinguish between two different scopes:
    1. Management: Allows you to programmatically create and disable users via the Web API
    2. Data: Allows you to manage all data in your account. If you have permissions in your tenant, you get the same permissions with the PAT as your user already has.
-![Create PAT](images/create-pat-1.png "Create PAT")
+![Create PAT](images/create-pat-1.jpg "Create PAT")
 5. Click "Create" and you are presented with the generated PAT. Copy the PAT to a save location e.g. a password safe.
 
 ### Authenticate using a PAT

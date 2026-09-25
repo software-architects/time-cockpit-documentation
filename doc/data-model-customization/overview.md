@@ -30,7 +30,7 @@ Your test system is free for the time being. We only need to discuss any potenti
 ### Accessing the Sandbox WITHOUT Microsoft Entra (AAD)
 Users can easily log in to the test system by visiting [web.timecockpit.com](https://web.timecockpit.com). Use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 
-![Sandbox Login](images/sandbox-login.png "Sandbox Login")
+![Sandbox Login](images/sandbox-login.jpg "Sandbox Login")
 
 If you're using the [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe) for customizations and development, you can connect to the sandbox by adding a "New Configuration" in the start dialog of OnCockpit Admin. Ensure that you use the following format for the username: `test/originalemailaddress`. The password is the same as for your production time cockpit account.
 

@@ -6,7 +6,7 @@ description: Track work from home vs office in time cockpit. Flag time sheet ent
 
 Since the corona pandemic remote work has become increasingly common. Time cockpit allows you to flag time sheet entries as work from home or office. This information can be important for various reasons. Various companies use this information to optimize their office space usage and reduce costs. Additionally, some countries (like Austria) offer special allowances for days spent working from home. Thus, it is important to accurately track work from home days to ensure that employees are paid the correct allowances.
 
-# Flagging a Time Sheet Entry
+## Flagging a Time Sheet Entry
 
 By default, all time sheet entries that are created are marked as **office work**. To indicate that you performed a task at home (or remote), check the **Home Office** flag in the time sheet form.
 
@@ -15,7 +15,7 @@ By default, all time sheet entries that are created are marked as **office work*
 > [!NOTE] 
 > Please be aware, that this only sets the given time sheet entry to **Home Office**. It does not indicate that you spent the whole day working from home.
 
-# Flagging a Whole Day
+## Flagging a Whole Day
 
 If you want to set a whole day to **Office** or **Work From Home** you can do that directly in the time sheet calendar.
 
@@ -31,7 +31,7 @@ If you want to set a whole day to **Office** or **Work From Home** you can do th
 > [!NOTE] 
 > In some countries employees are only payed work from home/home office allowances if the **whole** working time was spent at home. That is, all time sheet entries on a given day must be marked as **Home Office**.
 
-# Reporting
+## Reporting
 
 In the standard data model, time cockpit displays the information if an employee has spent her day in the office or at home in the time report.
 
