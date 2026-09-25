@@ -31,17 +31,17 @@ See [connection settings](overview.md#connection-settings-header-or-url-segment)
 
 The same setting has different names in each client:
 
-| Meaning | Codex `config.toml` | Claude Code `.mcp.json` | VS Code `mcp.json` | Copilot CLI `mcp-config.json` |
-|---------|--------------------|-------------------------|--------------------|-------------------------------|
-| Server entry | `[mcp_servers.<name>]` | `mcpServers.<name>` | `servers.<name>` | `mcpServers.<name>` |
-| Transport | `url` | `"type":"http"`, `url` | `"type":"http"`, `url` | `"type":"http"`, `url` |
-| Static headers | `http_headers = { }` | `headers` | `headers` | `headers` |
-| Headers from env/input | `env_http_headers` | `"${VAR}"` in `headers` | `"${input:id}"` + `inputs` | — |
-| Client ID | `oauth.client_id` / `--oauth-client-id` | `oauth.clientId` / `--client-id` | `oauth.clientId` | `oauth.clientId` (reportedly ignored) |
-| Callback port | `oauth.callback_port` | `oauth.callbackPort` / `--callback-port` | — (MSAL) | `oauth.callbackPort` |
-| Client secret | — | `--client-secret` (CLI) | CodeLens "Set Client Secret" | — |
-| Trigger sign-in | `codex mcp login <name>` | `claude mcp login <name>` / `/mcp` | start server → dialog **Allow** | `/mcp` → server → **Sign in** |
-| Status | `codex mcp list`, `/mcp` | `claude mcp list`, `/mcp` | **MCP: List Servers** | `/mcp` |
+| Meaning | Codex `config.toml` | Claude Code `.mcp.json` | VS Code `mcp.json` | Copilot CLI `mcp-config.json` | Cursor `mcp.json` (not tested) |
+|---------|--------------------|-------------------------|--------------------|-------------------------------|--------------------------------|
+| Server entry | `[mcp_servers.<name>]` | `mcpServers.<name>` | `servers.<name>` | `mcpServers.<name>` | `mcpServers.<name>` |
+| Transport | `url` | `"type":"http"`, `url` | `"type":"http"`, `url` | `"type":"http"`, `url` | `url` |
+| Static headers | `http_headers = { }` | `headers` | `headers` | `headers` | `headers` |
+| Headers from env/input | `env_http_headers` | `"${VAR}"` in `headers` | `"${input:id}"` + `inputs` | — | `"${env:VAR}"` in `headers` |
+| Client ID | `oauth.client_id` / `--oauth-client-id` | `oauth.clientId` / `--client-id` | `oauth.clientId` | `oauth.clientId` (reportedly ignored) | `auth.CLIENT_ID` |
+| Callback port | `oauth.callback_port` | `oauth.callbackPort` / `--callback-port` | — (MSAL) | `oauth.callbackPort` | — (fixed `8787`) |
+| Client secret | — | `--client-secret` (CLI) | CodeLens "Set Client Secret" | — | `auth.CLIENT_SECRET` |
+| Trigger sign-in | `codex mcp login <name>` | `claude mcp login <name>` / `/mcp` | start server → dialog **Allow** | `/mcp` → server → **Sign in** | **Customize** → server → Login / `agent mcp login <name>` |
+| Status | `codex mcp list`, `/mcp` | `claude mcp list`, `/mcp` | **MCP: List Servers** | `/mcp` | `agent mcp list`, **MCP Logs** |
 
 ## Related Pages
 
