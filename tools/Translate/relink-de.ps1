@@ -112,7 +112,8 @@ foreach ($en in $map.Keys) {
         if ($path -notmatch '\.md$') { return $m.Value }
 
         $enPath = Resolve-EnPath $enDir $path
-        if (Test-Path -LiteralPath (Join-Path $script:DeRoot ($enPath -replace '/', '\'))) { return $m.Value }   # already a DE page
+        # A translated target (checked first: when the German file name equals the English one,
+        # the target is both, and the anchor still has to be mapped).
         if ($map.ContainsKey($enPath)) {
             $dePath = $map[$enPath]
             $suffix = ''
@@ -121,9 +122,11 @@ foreach ($en in $map.Keys) {
                 if ($null -ne $mapped) { $suffix = "#$mapped" }
                 else { Write-Warning "anchor '#$anchor' not found in $dePath (link in $deRel), dropped" }
             }
+            if ("~/$dePath$suffix" -eq $target) { return $m.Value }   # already resolved
             $script:rewritten++
             return "](~/$dePath$suffix$title)"
         }
+        if (Test-Path -LiteralPath (Join-Path $script:DeRoot ($enPath -replace '/', '\'))) { return $m.Value }   # already a DE page
         $script:rewritten++
         $html = ($enPath -replace '\.md$', '.html')
         return "](/$html$(if ($anchor) { "#$anchor" })$title)"
