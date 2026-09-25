@@ -42,10 +42,16 @@ function Get-Slug([string]$heading) {
 function Get-HeadingSlugs([string]$file) {
     # Slugs of all headings outside code fences, in document order.
     $slugs = [System.Collections.Generic.List[string]]::new()
+    $seen = @{}
     $inFence = $false
     foreach ($line in (Get-Content -LiteralPath $file -Encoding UTF8)) {
         if ($line -match '^\s*```') { $inFence = -not $inFence; continue }
-        if (-not $inFence -and $line -match '^#{1,6}\s+(.+?)\s*$') { $slugs.Add((Get-Slug $Matches[1])) }
+        if (-not $inFence -and $line -match '^#{1,6}\s+(.+?)\s*$') {
+            $slug = Get-Slug $Matches[1]
+            # Duplicate headings get -1, -2, ... like DocFX's auto identifiers.
+            if ($seen.ContainsKey($slug)) { $seen[$slug]++; $slug = "$slug-$($seen[$slug])" } else { $seen[$slug] = 0 }
+            $slugs.Add($slug)
+        }
     }
     return $slugs
 }

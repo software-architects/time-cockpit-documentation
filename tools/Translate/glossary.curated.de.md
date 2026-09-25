@@ -44,6 +44,8 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | signal, signal tracker | Signal, Signal Tracker | "Signal Tracker" unchanged |
 | formatting profile | Formatprofil | |
 | timesheet template, Time Sheet Templates | Musterbuchung, Musterbuchungen | product UI label |
+| share (timesheet entries), timesheet suggestion | teilen, Buchungsvorschlag | the UI label "Share -> Anteil" below is the financial share, not this |
+| Customization module | Modul Anpassung | navigation: **Anpassung** |
 | list, form | Liste, Formular | never "EntityView" |
 | list profile | Listenprofil | |
 | named set | Named Set | unchanged |
