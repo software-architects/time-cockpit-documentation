@@ -4,13 +4,6 @@
 export default {
   defaultTheme: 'auto',
   showLightbox: (img) => img.naturalWidth > 200 || img.naturalHeight > 200,
-  iconLinks: [
-    {
-      icon: 'globe',
-      href: 'https://www.timecockpit.com',
-      title: 'time cockpit website'
-    }
-  ],
   start: () => {
     // The modern template renders ```mermaid blocks into <pre class="mermaid"> and
     // re-renders them on theme changes. This adds a zoom toolbar and drag-to-pan
@@ -97,7 +90,20 @@ export default {
     };
 
     const wrapAll = () => document.querySelectorAll('article pre.mermaid').forEach(wrap);
-    wrapAll();
-    new MutationObserver(wrapAll).observe(document.body, { childList: true, subtree: true });
+
+    // The navbar is rendered from toc.yml without honoring "target", so open
+    // external navbar entries (e.g. the website link) in a new tab.
+    const externalNavLinks = () => {
+      document.querySelectorAll('#navbar a[href^="http"]').forEach((a) => {
+        if (a.hostname !== location.hostname && a.target !== '_blank') {
+          a.target = '_blank';
+          a.rel = 'noopener';
+        }
+      });
+    };
+
+    const update = () => { wrapAll(); externalNavLinks(); };
+    update();
+    new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   }
 }
