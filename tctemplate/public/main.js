@@ -3,7 +3,7 @@
 
 export default {
   defaultTheme: 'auto',
-  showLightbox: (img) => img.naturalWidth > 200 || img.naturalHeight > 200,
+  // Lightbox: the template default (images larger than 200px that are not already links) is right.
   start: () => {
     // The modern template renders ```mermaid blocks into <pre class="mermaid"> and
     // re-renders them on theme changes. This adds a zoom toolbar and drag-to-pan
