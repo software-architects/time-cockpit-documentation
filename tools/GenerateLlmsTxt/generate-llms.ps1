@@ -3,7 +3,10 @@
 # raw Markdown sources (.md), which are not part of the regular DocFX output, so this
 # script also copies doc/**/*.md into _site after the site has been built.
 #
-# Usage: build the site first, then run this script:
+# Usage: build the site first, then run this script. The root build.ps1 does both
+# in the right order and is the preferred entry point:
+#   .\build.ps1
+# Manually:
 #   docfx docfx.json
 #   .\tools\GenerateLlmsTxt\generate-llms.ps1
 #
