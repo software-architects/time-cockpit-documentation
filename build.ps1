@@ -22,6 +22,9 @@ try {
         throw "docfx not found. Install it with: dotnet tool install -g docfx"
     }
 
+    Write-Host "==> generate-site-index.ps1 (doc/site-index.md from toc.yml)"
+    & (Join-Path $repoRoot "tools\GenerateSiteIndex\generate-site-index.ps1")
+
     if ($SkipMetadata) {
         Write-Host "==> docfx build docfx.json"
         & docfx build docfx.json
