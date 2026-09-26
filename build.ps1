@@ -32,6 +32,7 @@ try {
     Write-Host "==> relink-de.ps1 / build-de-toc.ps1 (German pages: links and navigation)"
     & (Join-Path $repoRoot "tools\Translate\relink-de.ps1")
     & (Join-Path $repoRoot "tools\Translate\build-de-toc.ps1")
+    & (Join-Path $repoRoot "tools\GenerateSiteIndex\generate-site-index.ps1") -Language de
 
     if ($SkipMetadata) {
         Write-Host "==> dotnet docfx build docfx.json"

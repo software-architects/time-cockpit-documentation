@@ -248,8 +248,50 @@ export default {
       if (items.length >= 2) addJsonLd('tc-jsonld-breadcrumb', { '@type': 'BreadcrumbList', itemListElement: items });
     };
 
+    // Language preference. The API reference exists only in English. Visitors who chose
+    // German get the English API pages (same URL, no /de/), but the switch keeps showing
+    // DE and the navbar leads back to the German documentation.
+    const LANG_KEY = 'tc-lang';
+    const readLang = () => { try { return localStorage.getItem(LANG_KEY); } catch { return null; } };
+    const writeLang = (lang) => { try { localStorage.setItem(LANG_KEY, lang); } catch { /* storage blocked */ } };
+    const isApiPage = location.pathname.startsWith('/api/') || !!document.querySelector('meta[name="docfx:api"]');
+    if (!isApiPage) writeLang(document.documentElement.lang === 'de' ? 'de' : 'en');
+
+    const DE_NAV = {
+      'Product Documentation': ['Produktdokumentation', '/de/doc/erste-schritte/ueberblick.html'],
+      'API Documentation': ['API-Dokumentation', null],
+      'Time Cockpit Website': ['Time Cockpit Website', 'https://www.timecockpit.com/de/'],
+    };
+    const apiLanguage = () => {
+      if (!isApiPage) return;
+      const lang = readLang() === 'de' ? 'de' : 'en';
+      const box = document.querySelector('.tc-lang');
+      if (box && box.dataset.apiLang !== lang) {
+        box.dataset.apiLang = lang;
+        const item = (l) => l === lang
+          ? `<span class="tc-lang-link active" lang="${l}" aria-current="true">${l.toUpperCase()}</span>`
+          : `<a class="tc-lang-link" data-lang="${l}" lang="${l}" hreflang="${l}" href="${location.pathname}">${l.toUpperCase()}</a>`;
+        box.innerHTML = item('en') + item('de');
+        box.title = lang === 'de' ? 'Die API-Referenz gibt es nur auf Englisch.' : '';
+      }
+      // Navbar entries are rendered by the template from /toc.json (English).
+      document.querySelectorAll('#navbar a.nav-link').forEach((a) => {
+        if (!a.dataset.enText) { a.dataset.enText = a.textContent.trim(); a.dataset.enHref = a.getAttribute('href'); }
+        const de = DE_NAV[a.dataset.enText];
+        const [text, href] = lang === 'de' && de ? [de[0], de[1] || a.dataset.enHref] : [a.dataset.enText, a.dataset.enHref];
+        if (a.textContent.trim() !== text) a.textContent = text;
+        if (a.getAttribute('href') !== href) a.setAttribute('href', href);
+      });
+    };
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest && e.target.closest('a.tc-lang-link[data-lang]');
+      if (!link) return;
+      writeLang(link.dataset.lang);
+      if (isApiPage) { e.preventDefault(); apiLanguage(); }
+    });
+
     pageJsonLd();
-    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); };
+    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); };
     update();
     new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   }

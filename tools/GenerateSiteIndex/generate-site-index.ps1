@@ -11,7 +11,10 @@
 # pipeline does not need to run it, but re-run it whenever doc/toc.yml changes.
 
 [CmdletBinding()]
-param()
+param(
+    [ValidateSet("en", "de")]
+    [string]$Language = "en"
+)
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
@@ -53,7 +56,7 @@ function Read-Toc([string]$tocPath) {
 # plain text: folders, toc.yml references and pages that do not exist would otherwise
 # become broken links on the index page.
 function Resolve-Href([string]$href, [string]$baseDir, [string]$linkPrefix) {
-    if (-not $href -or $href -eq 'all-pages.md') { return $null }
+    if (-not $href -or $href -eq 'all-pages.md' -or $href -eq 'alle-seiten.md') { return $null }
     if ($href -match '^https?://') { return $href }
     $file = $href -replace '#.*$', ''
     if ($file -notmatch '\.(md|yml)$') {
@@ -81,19 +84,38 @@ function Write-Items($node, [int]$level, [System.Text.StringBuilder]$sb, [string
     }
 }
 
+# English: doc/all-pages.md from doc/toc.yml. German (-Language de): de/doc/alle-seiten.md
+# from the generated de/doc/toc.yml, so it must run after tools/Translate/build-de-toc.ps1.
+$de = $Language -eq 'de'
+$tocRoot = if ($de) { Join-Path $repoRoot "de\doc" } else { $docRoot }
+$outName = if ($de) { 'alle-seiten.md' } else { 'all-pages.md' }
+# German links are written as ~/doc/... so relink-de.ps1 sees them as resolved.
+$pagePrefix = if ($de) { '~/doc/' } else { '' }
+
 $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine('---')
-[void]$sb.AppendLine('title: All Pages - Documentation Index')
-[void]$sb.AppendLine('description: "Complete index of the time cockpit documentation: every guide, FAQ, reference page and release note, plus the API reference namespaces."')
-[void]$sb.AppendLine('---')
-[void]$sb.AppendLine('# All Pages')
-[void]$sb.AppendLine()
-[void]$sb.AppendLine('Every page of the time cockpit documentation on one page, in the order of the navigation. Generated from `doc/toc.yml`; do not edit by hand.')
+if ($de) {
+    [void]$sb.AppendLine('title: Alle Seiten - Index der Dokumentation')
+    [void]$sb.AppendLine('description: "Vollständiger Index der time cockpit Dokumentation: alle Anleitungen, FAQs, Referenzseiten und Release Notes sowie die Namespaces der API-Referenz."')
+    [void]$sb.AppendLine('en_page: doc/all-pages.md')
+    [void]$sb.AppendLine('---')
+    [void]$sb.AppendLine('# Alle Seiten')
+    [void]$sb.AppendLine()
+    [void]$sb.AppendLine('Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge der Navigation. Generiert aus `de/doc/toc.yml`; nicht von Hand bearbeiten.')
+}
+else {
+    [void]$sb.AppendLine('title: All Pages - Documentation Index')
+    [void]$sb.AppendLine('description: "Complete index of the time cockpit documentation: every guide, FAQ, reference page and release note, plus the API reference namespaces."')
+    [void]$sb.AppendLine('---')
+    [void]$sb.AppendLine('# All Pages')
+    [void]$sb.AppendLine()
+    [void]$sb.AppendLine('Every page of the time cockpit documentation on one page, in the order of the navigation. Generated from `doc/toc.yml`; do not edit by hand.')
+}
 [void]$sb.AppendLine()
 
-$toc = Read-Toc (Join-Path $docRoot "toc.yml")
+$toc = Read-Toc (Join-Path $tocRoot "toc.yml")
 foreach ($section in $toc.Items) {
-    $target = Resolve-Href $section.Href $docRoot ''
+    $target = Resolve-Href $section.Href $tocRoot $pagePrefix
     if ($target) {
         [void]$sb.AppendLine("## [$($section.Name)]($target)")
     }
@@ -101,26 +123,38 @@ foreach ($section in $toc.Items) {
         [void]$sb.AppendLine("## $($section.Name)")
     }
     [void]$sb.AppendLine()
-    Write-Items $section 0 $sb $docRoot ''
+    Write-Items $section 0 $sb $tocRoot $pagePrefix
     [void]$sb.AppendLine()
 }
 
 $apiToc = Join-Path $repoRoot "api\toc.yml"
 if (Test-Path -LiteralPath $apiToc) {
-    [void]$sb.AppendLine('## API Reference')
+    if ($de) {
+        [void]$sb.AppendLine('## API-Referenz')
+        [void]$sb.AppendLine()
+        [void]$sb.AppendLine('.NET-Namespaces des time cockpit Datenmodells (nur auf Englisch); jede Namespace-Seite listet ihre Klassen.')
+    }
+    else {
+        [void]$sb.AppendLine('## API Reference')
+        [void]$sb.AppendLine()
+        [void]$sb.AppendLine('.NET namespaces of the time cockpit data model; each namespace page lists its classes.')
+    }
     [void]$sb.AppendLine()
-    [void]$sb.AppendLine('.NET namespaces of the time cockpit data model; each namespace page lists its classes.')
-    [void]$sb.AppendLine()
-    $api = Read-Toc $apiToc
-    foreach ($ns in $api.Items) {
-        $target = Resolve-Href $ns.Href (Join-Path $repoRoot "api") '~/api/'
-        if ($target) { [void]$sb.AppendLine("- [$($ns.Name)]($target)") }
+    # api/toc.yml (docfx metadata output) lists namespaces as top-level "- uid: X" entries;
+    # each has its page api/X.yml. The German build does not contain the API reference,
+    # so the German index links the English pages.
+    foreach ($line in (Get-Content -LiteralPath $apiToc -Encoding UTF8)) {
+        if ($line -notmatch '^-\s+uid:\s*(.+?)\s*$') { continue }
+        $uid = Remove-Quotes $Matches[1]
+        if (-not (Test-Path -LiteralPath (Join-Path $repoRoot "api\$uid.yml"))) { continue }
+        $target = if ($de) { "/api/$uid.html" } else { "~/api/$uid.yml" }
+        [void]$sb.AppendLine("- [$uid]($target)")
     }
     [void]$sb.AppendLine()
 }
 
-$outPath = Join-Path $docRoot "all-pages.md"
+$outPath = Join-Path $tocRoot $outName
 $content = $sb.ToString()
 [System.IO.File]::WriteAllText($outPath, $content, (New-Object System.Text.UTF8Encoding $false))
 $linkCount = ([regex]::Matches($content, '\]\(')).Count
-Write-Host "doc/all-pages.md: $linkCount links"
+Write-Host "$(if ($de) { 'de/doc' } else { 'doc' })/$($outName): $linkCount links"
