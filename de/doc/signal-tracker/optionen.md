@@ -9,7 +9,7 @@ Im Applikationsmenü von time cockpit links oben finden Sie den Optionsdialog, m
 
 ## Startoptionen des Signal Trackers
 
-In den **General Options** legen Sie fest, ob time cockpit beim Start prüfen soll, ob die Signal Tracker laufen. Wenn diese Option aktiviert ist, erinnert Sie time cockpit beim Start daran, die Signal Tracker zu starten (falls sie nicht laufen).
+In den **Allgemeinen Optionen** legen Sie fest, ob time cockpit beim Start prüfen soll, ob die Signal Tracker laufen. Wenn diese Option aktiviert ist, erinnert Sie time cockpit beim Start daran, die Signal Tracker zu starten (falls sie nicht laufen).
 
 Die zweite Option legt fest, ob die Signal Tracker automatisch gestartet werden, wenn Sie sich an Ihrem Computer anmelden.
 
@@ -17,7 +17,7 @@ Die zweite Option legt fest, ob die Signal Tracker automatisch gestartet werden,
 
 ## Optionen der Signalverarbeitung
 
-In den Optionen **Signal Processing** legen Sie die minimale Pausenlänge fest. Pausen, die kürzer als die festgelegte Zeit sind, werden als aktive Zeit angezeigt (siehe [Signal Tracker für Computeraktivität](~/doc/signal-tracker/computeraktivitaet.md)).
+In den Optionen **Signalverarbeitung** legen Sie die minimale Pausenlänge fest. Pausen, die kürzer als die festgelegte Zeit sind, werden als aktive Zeit angezeigt (siehe [Signal Tracker für Computeraktivität](~/doc/signal-tracker/computeraktivitaet.md)).
 
 Außerdem können Sie die Mindestdauer von Telefonaten festlegen. Telefonate, die kürzer als die festgelegte Zeit sind, werden im Kalender nicht angezeigt (siehe [Signal Tracker für Telefonate](~/doc/signal-tracker/telefonate.md)).
 

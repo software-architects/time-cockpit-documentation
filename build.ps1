@@ -22,6 +22,13 @@ try {
         throw ".NET SDK not found. Install it from https://dot.net; docfx itself is restored from .config/dotnet-tools.json."
     }
 
+    # docfx never deletes output, so pages that were renamed or removed would survive in
+    # _site (and fix-hreflang/fix-sitemap would pick them up). Always start clean.
+    $site = Join-Path $repoRoot "_site"
+    if (Test-Path -LiteralPath $site) {
+        Write-Host "==> removing previous _site"
+        Remove-Item -LiteralPath $site -Recurse -Force
+    }
     Write-Host "==> dotnet tool restore (docfx version pinned in .config/dotnet-tools.json)"
     & dotnet tool restore
     if ($LASTEXITCODE -ne 0) { throw "dotnet tool restore failed with exit code $LASTEXITCODE" }

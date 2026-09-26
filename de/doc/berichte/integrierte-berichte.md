@@ -1,6 +1,6 @@
 ---
 title: Integrierte Berichte - Standardberichte
-description: Die integrierten Berichte von time cockpit, darunter Umsatzentwicklung, Umsatz pro Kunde und Zeitbericht. Vorkonfigurierte SSRS-Berichte.
+description: Die integrierten Berichte von time cockpit, darunter Umsatzentwicklung, Umsatz pro Kunde und Stundenzettel. Vorkonfigurierte SSRS-Berichte.
 en_page: doc/reporting/built-in-reports.md
 ---
 # Integrierte Berichte
@@ -19,8 +19,8 @@ Der Bericht Umsatz pro Kunde zeigt die Umsatzentwicklung pro Kunde und Projekt. 
 
 ![Bericht Umsatz pro Kunde](/doc/reporting/images/revenue-per-customer-report.png "Bericht Umsatz pro Kunde")
 
-## Zeitbericht
+## Stundenzettel
 
-Der Zeitbericht zeigt die Anwesenheits-, Arbeits- und Pausenzeit eines Mitarbeiters für jeden Tag in einem ausgewählten Zeitraum.
+Der Stundenzettel zeigt die Anwesenheits-, Arbeits- und Pausenzeit eines Mitarbeiters für jeden Tag in einem ausgewählten Zeitraum.
 
-![Zeitbericht](/doc/reporting/images/time-report.png "Zeitbericht")
+![Stundenzettel](/doc/reporting/images/time-report.png "Stundenzettel")

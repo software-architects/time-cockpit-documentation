@@ -31,8 +31,8 @@ Beide Server können unter unterschiedlichen Namen nebeneinander registriert wer
 ## Voraussetzungen
 
 - Windows. OnCockpit Admin ist eine Windows-Desktopanwendung; der lokale MCP-Server ist unter macOS oder Linux nicht verfügbar.
-- **OnCockpit Admin aus dem Dev-Feed.** Der MCP-Modus ist derzeit nur im Dev-Kanal enthalten. Laden Sie das Installationsprogramm von `https://update-admin.on-cockpit.com/dev/Setup.exe` herunter und führen Sie es aus. Die Anwendung aktualisiert sich danach aus demselben Feed; den aktiven Feed sehen Sie in den Optionen unter **Statistics** (Zeile **Update Feed**).
-- Eine funktionierende **Konfiguration** in OnCockpit Admin. Starten Sie OnCockpit Admin einmal, legen Sie im Startdialog über **New Configuration** eine Konfiguration an und melden Sie sich an. Für eine Sandbox verwenden Sie das Benutzernamensmuster `test/your.email@example.com` (siehe [Zugriff auf die Sandbox](~/doc/datenmodell-anpassung/ueberblick.md#zugriff-auf-die-sandbox-ohne-microsoft-entra-aad)).
+- **OnCockpit Admin aus dem Dev-Feed.** Der MCP-Modus ist derzeit nur im Dev-Kanal enthalten. Laden Sie das Installationsprogramm von `https://update-admin.on-cockpit.com/dev/Setup.exe` herunter und führen Sie es aus. Die Anwendung aktualisiert sich danach aus demselben Feed; den aktiven Feed sehen Sie in den Optionen unter **Statistik** (Zeile **Update Feed**).
+- Eine funktionierende **Konfiguration** in OnCockpit Admin. Starten Sie OnCockpit Admin einmal, legen Sie im Startdialog über **Neu konfigurieren** eine Konfiguration an und melden Sie sich an. Für eine Sandbox verwenden Sie das Benutzernamensmuster `test/your.email@example.com` (siehe [Zugriff auf die Sandbox](~/doc/datenmodell-anpassung/ueberblick.md#zugriff-auf-die-sandbox-ohne-microsoft-entra-aad)).
 - Ein MCP-Client, der stdio-Server unterstützt.
 
 > [!NOTE]
@@ -145,7 +145,7 @@ Der lokale Server bietet dieselben gemeinsamen Tools wie der Remote-Server, mit 
 | `get_environment` | nein | | Der angemeldete Benutzer, die globalen Einstellungen des Mandanten und die ausgewerteten Named Sets. |
 | `get_named_set` | nein | | Ein ausgewertetes Named Set vollständig, mit einer höheren Zeilengrenze als `get_environment`. |
 | `get_current_user` | nein | | Der vollständige Datensatz des angemeldeten Benutzers. |
-| `get_timesheets` | nein | | Zeitbuchungen mit typisierten Filtern lesen (Datumsbereich, Projekt- oder Aufgabencode, Beschreibung, Benutzer). |
+| `get_timesheets` | nein | | Zeitbuchungen mit typisierten Filtern lesen (Datumsbereich, Projekt- oder Tätigkeitscode, Beschreibung, Benutzer). |
 | `create_timesheet` | **ja** | | Eine Zeitbuchung anlegen. |
 | `create_timesheet_suggestion` | **ja** | ja | **Nur lokal.** Eine bestehende Zeitbuchung anderen Benutzern als Buchungsvorschlag anbieten. Benötigt `confirmed=true`. |
 | `get_entities` | nein | | Die Entitäten des Datenmodells des Mandanten auflisten. Systementitäten sind ausgeblendet. |

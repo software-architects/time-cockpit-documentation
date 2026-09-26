@@ -23,8 +23,8 @@ So fügen Sie Ihrem time cockpit-Konto Benutzer hinzu:
 3. time cockpit zeigt eine Liste der Benutzer an, standardmäßig die aktivierten und sichtbaren Benutzer.
 4. Stellen Sie den Filter bei Bedarf so ein, dass auch deaktivierte und ausgeblendete Benutzer angezeigt werden.
 5. Um einen Benutzer hinzuzufügen, klicken Sie auf "Hinzufügen" und geben Sie die nötigen Informationen ein.
-6. Pflichtfelder sind "User Name", "Vorname" und "Nachname".
-7. Legen Sie die Eigenschaften "Enabled" und "Tenant Admin" fest
+6. Pflichtfelder sind "E-Mail (Benutzername)", "Vorname" und "Nachname".
+7. Legen Sie die Eigenschaften "Aktiv" und "Tenant Admin" fest
    - Aktivierte Benutzer werden nach ihren aktiven Tagen im Monat verrechnet.
    - Der Status "Tenant Admin" berechtigt dazu, das Konto zu verwalten, Benutzer hinzuzufügen, Zahlungsdaten zu aktualisieren und das Konto zu kündigen.
 

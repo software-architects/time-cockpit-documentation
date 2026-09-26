@@ -20,13 +20,13 @@ Diese FAQ beantwortet häufige Fragen von Abrechnungsadministratoren, die in tim
 
 ### Wie erstelle ich eine Rechnung aus nicht verrechneten Zeitbuchungen?
 
-Verwenden Sie **Verwaltung -> Billing -> Unbilled Timesheets**.
+Verwenden Sie **Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen**.
 
 Der Standardablauf:
 
-1. Öffnen Sie **Unbilled Timesheets**.
+1. Öffnen Sie **Nicht verrechnete Zeitbuchungen**.
 2. Wählen Sie die Zeitbuchungen aus, die Sie verrechnen möchten.
-3. Führen Sie im Menü **Aktionen** die Aktion **Create Invoice** aus.
+3. Führen Sie im Menü **Aktionen** die Aktion **Ausgangsrechnung anlegen** aus.
 4. Geben Sie die Rechnungsdetails ein.
 
 Laut Standarddokumentation führt die Aktion dann Folgendes aus:
@@ -47,13 +47,13 @@ Nach der Zuordnung zu einer Rechnung sind die zugehörigen Zeitbuchungen schreib
 
 ### Kann ich eine Rechnung nach der Erstellung bearbeiten oder korrigieren?
 
-Öffnen Sie die Rechnung unter **Verwaltung -> Rechnungen**.
+Öffnen Sie die Rechnung unter **Verwaltung -> Verrechnung -> Ausgangsrechnungen**.
 
 Die Standarddokumentation beschreibt Rechnungen als Kombination aus Rechnungsdaten und Rechnungspositionen. Sie erklärt außerdem, dass automatisch zugeordnete Zeitbuchungen nach der Verrechnung schreibgeschützt sind.
 
 In der Praxis bedeutet das:
 
-- prüfen Sie Rechnungsdaten wie Rechnungsnummer, Rechnungsdatum, Leistungszeitraum, Rechnungsadresse und die Einstellungen für den Rechnungsbericht im Rechnungsdatensatz
+- prüfen Sie Rechnungsdaten wie Rechnungsnummer, Rechnungsdatum, Leistungszeitraum, Rechnungsadresse und die Einstellungen für das Rechnungsdokument im Rechnungsdatensatz
 - prüfen Sie die erzeugten Rechnungspositionen sorgfältig, bevor Sie das Rechnungsdokument versenden
 - verwenden Sie manuelle Rechnungspositionen oder manuelle Rechnungen, wenn die automatische Standarderstellung nicht zu Ihrem Abrechnungsfall passt
 
@@ -94,18 +94,18 @@ Wenn Sie bei Festpreis- oder Pauschalaufträgen weiterhin Zeiten für interne Au
 
 ### Wie lege ich Stundensätze für die Verrechnung fest und aktualisiere sie?
 
-In der Standardhierarchie können Stundensätze bei Kunden, Projekten und Aufgaben gepflegt werden.
+In der Standardhierarchie können Stundensätze bei Kunden, Projekten und Tätigkeiten gepflegt werden.
 
 Die Standarddokumentation beschreibt folgende Vererbung:
 
 - ein Kunde kann einen Standardstundensatz haben
 - ein Projekt kann den Stundensatz des Kunden überschreiben
-- eine Aufgabe kann den Stundensatz des Projekts überschreiben
+- eine Tätigkeit kann den Stundensatz des Projekts überschreiben
 
 Wenn Sie eine Rechnung aus Zeitbuchungen erstellen, kopiert time cockpit den konkret gültigen verrechneten Stundensatz in die Zeitbuchung. Deshalb ändern spätere Änderungen des Stundensatzes die bereits verrechneten Einträge nicht rückwirkend.
 
 **Siehe auch:**
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md)
 
@@ -116,20 +116,20 @@ Wenn Sie eine Rechnung aus Zeitbuchungen erstellen, kopiert time cockpit den kon
 Verwenden Sie je nach Fragestellung die passende Liste:
 
 - **Zeitbuchungen** für die Prüfung einzelner Einträge
-- **Unbilled Timesheets** für verrechenbare Einträge, die noch nicht verrechnet sind
-- **Budgetary Control of Projects**, wenn Sie eine finanzielle Übersicht auf Projektebene benötigen
+- **Nicht verrechnete Zeitbuchungen** für verrechenbare Einträge, die noch nicht verrechnet sind
+- **Budgetkontrolle für Projekte**, wenn Sie eine finanzielle Übersicht auf Projektebene benötigen
 
 Die Standarddokumentation weist außerdem darauf hin:
 
 - Projekte können als verrechenbar oder nicht verrechenbar gekennzeichnet werden
-- Aufgaben können als nicht verrechenbar gekennzeichnet werden
+- Tätigkeiten können als nicht verrechenbar gekennzeichnet werden
 - Zeitbuchungen enthalten Informationen zur Verrechenbarkeit für die Prüfung vor der Rechnungslegung
 
 Das reicht in der Regel aus, um verrechenbare Arbeit vor der Rechnungserstellung von interner oder ausgeschlossener Arbeit zu trennen.
 
 **Siehe auch:**
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 
 ---
@@ -140,9 +140,9 @@ Das reicht in der Regel aus, um verrechenbare Arbeit vor der Rechnungserstellung
 
 Die nützlichsten Standardansichten für Abrechnungsadministratoren sind:
 
-- **Unbilled Timesheets** für Zeitbuchungen, die zur Prüfung für die Rechnungslegung bereitstehen
-- **Rechnungen** für erstellte Rechnungen und deren Nachverfolgung
-- **Budgetary Control of Projects** für Budget und Verrechnung im Kontext des Projekts
+- **Nicht verrechnete Zeitbuchungen** für Zeitbuchungen, die zur Prüfung für die Rechnungslegung bereitstehen
+- **Ausgangsrechnungen** für erstellte Rechnungen und deren Nachverfolgung
+- **Budgetkontrolle für Projekte** für Budget und Verrechnung im Kontext des Projekts
 - **Zeitbuchungen**, wenn Sie die einzelnen Einträge hinter einer Abrechnungsfrage prüfen müssen
 
 Wie oft Sie diese Ansichten prüfen, hängt von Ihrem Abrechnungszyklus ab. In der Produktdokumentation entsprechen sie vor allem der Vorbereitung von Rechnungen, der Prüfung von Rechnungen und der Abrechnungskontrolle auf Projektebene.
@@ -163,13 +163,13 @@ Die Standardfelder einer Rechnung sind unter [Rechnungsdatenfelder](~/doc/projek
 Wichtige Standardfelder sind:
 
 - **Rechnungsdatum**
-- **Invoice Number**
-- **Billing Address**
-- **Service Period Start**
-- **Service Period End**
-- Einstellungen für **Discount**
-- **Payment Received On**
-- **Incl. Timesheets on Invoice Report**
+- **Ausgangsrechnungsnummer**
+- **Rechnungsadresse**
+- **Leistungszeit Beginn**
+- **Leistungszeit Ende**
+- Einstellungen für **Skonto [%]**
+- **Bezahlt am**
+- **Inkl. Zeitnachweis am Rechnungsdokument**
 
 Die Rechnungsadresse wird standardmäßig vom Kunden übernommen, kann aber pro Rechnung überschrieben werden.
 
@@ -193,7 +193,7 @@ Wenn Sie in time cockpit eine strukturiertere Verrechnung mit mehreren Ansprechp
 
 **Siehe auch:**
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md)
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 
 ---
 
@@ -211,7 +211,7 @@ Wenn Sie in time cockpit eine strukturiertere Verrechnung mit mehreren Ansprechp
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md)
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 - [Datenexport](~/doc/datenaustausch/export.md)
 - [Web API: Überblick](/doc/web-api/overview.html)
 

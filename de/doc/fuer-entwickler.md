@@ -222,7 +222,7 @@ Weitere Anwendungsfälle folgen in Kürze!
 ### Häufige Integrationsszenarien
 
 **1. Externes Projektmanagement (JIRA, Azure DevOps)**
-- Projekte/Aufgaben nach time cockpit synchronisieren
+- Projekte/Tätigkeiten nach time cockpit synchronisieren
 - Zeitbuchungen an das externe System zurückspielen
 → [Beispiel für eine JIRA-Integration](/doc/developer-faq.html#how-do-i-access-time-cockpit-from-external-applications)
 

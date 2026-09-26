@@ -14,6 +14,6 @@ In time cockpit können Sie Zeitbuchungen im grafischen Zeiterfassungskalender a
 > [!NOTE]
 > time cockpit wird mit einer Excel-Beispielvorlage für den Export der Standardliste der Zeitbuchungen ausgeliefert (siehe folgendes Register). Diese Beispieldatei TimesheetListPivotAnalysis.xlsx finden Sie im Installationsverzeichnis von time cockpit.
 
-Für jede Zeitbuchung können Sie einen eigenen Stundensatz (`APP_HourlyRate`) festlegen, der von Kunde, Projekt oder Aufgabe abweicht. Wenn Sie keinen eigenen Satz eingeben, wird der Standardstundensatz von Projekt, Kunde oder Aufgabe verwendet. Den tatsächlich gültigen Stundensatz einer Zeitbuchung finden Sie in der berechneten Eigenschaft `APP_HourlyRateActual`.
+Für jede Zeitbuchung können Sie einen eigenen Stundensatz (`APP_HourlyRate`) festlegen, der von Kunde, Projekt oder Tätigkeit abweicht. Wenn Sie keinen eigenen Satz eingeben, wird der Standardstundensatz von Projekt, Kunde oder Tätigkeit verwendet. Den tatsächlich gültigen Stundensatz einer Zeitbuchung finden Sie in der berechneten Eigenschaft `APP_HourlyRateActual`.
 
 Zeitbuchungen können als nicht verrechenbar markiert werden (`APP_NoBilling`). Ob eine bestimmte Zeitbuchung verrechenbar ist oder nicht, sehen Sie in der Spalte `APP_Billable`.

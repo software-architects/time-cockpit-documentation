@@ -26,21 +26,21 @@ Diese Liste ist typischerweise relevant für:
 | Filter | Technische Referenz | Bedeutung |
 |---|---|---|
 | Benutzer | `@UserDetail` | Benutzer, dessen Einträge angezeigt werden |
-| Since | `@YearParam` | Startjahr der angezeigten Einträge |
-| Include Hidden Users | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
+| Seit | `@YearParam` | Startjahr der angezeigten Einträge |
+| Inkl. ausgeblendeter Benutzer | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
 
 ## Spalten
 
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Benutzer | `UserDetailName`, `UserDetailUuid` | Benutzer des Eintrags | Anzeigewert des Benutzerdetails |
-| Is Whole Day | `APP_IsWholeDay` | Ob der Eintrag ganztägig ist | Aus dem Krankenstandsdatensatz übernommen |
+| Ganztägig | `APP_IsWholeDay` | Ob der Eintrag ganztägig ist | Aus dem Krankenstandsdatensatz übernommen |
 | From | `APP_BeginTime` | Beginn des Krankenstands | Aus dem Krankenstandsdatensatz übernommen |
 | To | `APP_EndTime` | Ende des Krankenstands | Aus dem Krankenstandsdatensatz übernommen |
 | Description | `APP_Description` | Beschreibung des Eintrags | Aus dem Krankenstandsdatensatz übernommen |
-| Approved | `APP_IsApproved` | Genehmigungsstatus | Aus dem Krankenstandsdatensatz übernommen und angezeigt, wenn die Genehmigung von Krankenständen aktiv ist |
+| Genehmigt | `APP_IsApproved` | Genehmigungsstatus | Aus dem Krankenstandsdatensatz übernommen und angezeigt, wenn die Genehmigung von Krankenständen aktiv ist |
 
 ## Verwandte Seiten
 
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
-- [Absence Calendar](~/doc/referenz/listen/abwesenheitskalender.md)
+- [Abwesenheitskalender](~/doc/referenz/listen/abwesenheitskalender.md)

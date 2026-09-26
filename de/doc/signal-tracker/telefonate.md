@@ -82,5 +82,5 @@ Parametername | Datentyp | Beschreibung
 --- | --- | ---
 Delete imported files (`DeleteImportedFiles`) | Boolean (true / false) | Legt fest, ob die Datei nach dem Import gelöscht werden soll.
 Points in time are in local time zone (`IsLocalTime`) | Boolean (true / false) | Ist der Parameter auf true gesetzt, werden alle Zeitpunkte in der Importdatei als Zeitpunkte in Ihrer lokalen Zeitzone interpretiert. Andernfalls geht time cockpit davon aus, dass die Zeitpunkte in UTC angegeben sind.
-Query interval (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker nach zu importierenden Dateien sucht. Die Einstellung `00:05:00` legt fest, dass der Tracker alle 5 Minuten nach neuen Dateien suchen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten.
+Abfrageintervall (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker nach zu importierenden Dateien sucht. Die Einstellung `00:05:00` legt fest, dass der Tracker alle 5 Minuten nach neuen Dateien suchen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten.
 Path (`Path`) | Text | Pfad, in dem time cockpit nach zu importierenden Dateien suchen soll.

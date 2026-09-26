@@ -48,7 +48,7 @@ Wenn Sie den Signal Tracker für Microsoft TFS beenden oder pausieren, zeichnet 
 
 Parametername | Datentyp | Beschreibung
 --- | --- | ---
-Polling Intervall (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker nach neuen Changesets und Work-Item-Änderungen sucht. Die Einstellung `00:15:00` legt fest, dass der Tracker alle 15 Minuten nach Änderungen suchen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten.
+Abfrageintervall (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker nach neuen Changesets und Work-Item-Änderungen sucht. Die Einstellung `00:15:00` legt fest, dass der Tracker alle 15 Minuten nach Änderungen suchen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten.
 TFS Server URI (`ServerUri`) | Text | URI des Microsoft Team Foundation Server (z. B. http://mytfs:8080/tfs). Wenn Sie [Team Foundation Service](http://tfs.visualstudio.com/) verwenden, müssen Sie die Team Project Collection angeben, z. B. https://fabrikamfiber.visualstudio.com/DefaultCollection
 Project to Track (`Project`) | Text | Wenn Sie ein Projekt angeben, zeichnet time cockpit nur Changesets und Work-Item-Änderungen im angegebenen Projekt auf. Wenn Sie diesen Parameter leer lassen, zeichnet time cockpit alle Projekte in Microsoft TFS für Ihren Benutzer auf.
 Folder to Track (`Path`) | Text | Sie können einen Ordner in Microsoft TFS angeben, der aufgezeichnet werden soll. Wenn Sie diesen Parameter leer lassen, zeichnet time cockpit Änderungen in allen Ordnern für Ihren Benutzer auf.

@@ -9,14 +9,14 @@ en_page: doc/employee-time-tracking/absence-time-management.md
 > [!NOTE]
 > Überprüft im April 2026.
 
-time cockpit unterstützt einen Genehmigungsworkflow für Abwesenheiten, den Sie in den [Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) pro Abwesenheitsart aktivieren und im [Abwesenheitskalender](https://web.timecockpit.com/app/absence-time-calendar) prüfen können.
+time cockpit unterstützt einen Genehmigungsworkflow für Abwesenheiten, den Sie in den [Globalen Einstellungen](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) pro Abwesenheitsart aktivieren und im [Abwesenheitskalender](https://web.timecockpit.com/app/absence-time-calendar) prüfen können.
 
 Urlaub, Krankenstand und Zeitausgleich können unter [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation), [Benutzer -> Krankenstand](https://web.timecockpit.com/app/lists/entity/APP_SickLeave) und [Benutzer -> Zeitausgleich](https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime) sowie im Zeiterfassungskalender angelegt werden. Alle drei Abwesenheitsarten unterstützen ganztägige und stundenweise Einträge.
 
 > [!NOTE]
 > Die Genehmigung von Abwesenheiten wird an zwei Stellen gesteuert:
-> - Global Settings (pro Abwesenheitsart)
-> - Benutzerstammdaten (pro Benutzer über „Absence approval required“)
+> - Globale Einstellungen (pro Abwesenheitsart)
+> - Benutzerstammdaten (pro Benutzer über „Abwesenheitsgenehmigung erforderlich“)
 
 ## Abwesenheitsarten mit Genehmigung
 
@@ -30,16 +30,16 @@ Sobald Sie die Genehmigung für eine Kategorie aktivieren, müssen Benutzer ihre
 
 ## Wann ist eine Genehmigung der Abwesenheit erforderlich?
 
-Genehmigungen sind nur für Benutzer erforderlich, bei denen dies in den Benutzerstammdaten über das Kontrollkästchen „Absence approval required“ aktiviert ist.
+Genehmigungen sind nur für Benutzer erforderlich, bei denen dies in den Benutzerstammdaten über das Kontrollkästchen „Abwesenheitsgenehmigung erforderlich“ aktiviert ist.
 
-Für Benutzer, bei denen keine Genehmigung erforderlich ist, werden neu angelegte Abwesenheiten automatisch als genehmigt markiert, sofern der Genehmigungsworkflow in den Global Settings für die jeweilige Abwesenheitsart aktiviert ist.
+Für Benutzer, bei denen keine Genehmigung erforderlich ist, werden neu angelegte Abwesenheiten automatisch als genehmigt markiert, sofern der Genehmigungsworkflow in den Globalen Einstellungen für die jeweilige Abwesenheitsart aktiviert ist.
 
 > [!TIP]
 > Wenn Genehmigungen global aktiviert sind, ein Benutzer aber keine Genehmigung benötigt, werden seine neuen Abwesenheiten automatisch genehmigt.
 
 ## Wichtig: Bestehende Abwesenheiten nach dem Aktivieren der Genehmigung
 
-Sobald Sie den Workflow in den Global Settings und in den Benutzerstammdaten aktivieren, werden nicht genehmigte Abwesenheiten – auch vergangene Abwesenheiten, die vor dem Aktivieren dieser Funktion angelegt wurden – je nach Berechtigungen im Abwesenheitskalender als nicht genehmigt angezeigt. Abgeschlossene Abwesenheiten aus der Zeit vor der Aktivierung müssen daher nachträglich genehmigt werden.
+Sobald Sie den Workflow in den Globalen Einstellungen und in den Benutzerstammdaten aktivieren, werden nicht genehmigte Abwesenheiten – auch vergangene Abwesenheiten, die vor dem Aktivieren dieser Funktion angelegt wurden – je nach Berechtigungen im Abwesenheitskalender als nicht genehmigt angezeigt. Abgeschlossene Abwesenheiten aus der Zeit vor der Aktivierung müssen daher nachträglich genehmigt werden.
 
 > [!IMPORTANT]
 > Nach dem Aktivieren des Workflows können ältere Abwesenheiten als nicht genehmigt erscheinen und müssen gegebenenfalls nachträglich genehmigt werden.
@@ -52,7 +52,7 @@ Die folgende Tabelle gibt einen schnellen Überblick, was jede Rolle im Abwesenh
 |---|---|---:|---:|---:|---|
 | Zeiterfassungsbenutzer | Zugewiesene Abteilung | Nein | Nur eigene | Nein | – |
 | Abteilungsleiter | Eigene Abteilung + Abteilungen, in denen der Benutzer Abteilungsleiter ist | Ja | Eigene + Benutzer in der Abteilung des Abteilungsleiters | Ja | – |
-| HR-Administrator | Zugewiesene Abteilung (Standard) | Ja | Nur eigene (Standard) | Ja (im Namen der Abteilungsleiter) | Show all users, Abteilung, Benutzer |
+| HR-Administrator | Zugewiesene Abteilung (Standard) | Ja | Nur eigene (Standard) | Ja (im Namen der Abteilungsleiter) | Alle Benutzer anzeigen, Abteilung, Benutzer |
 
 ### Zeiterfassungsbenutzer
 
@@ -73,12 +73,12 @@ Sieht im Abwesenheitskalender alle Abwesenheiten der Benutzer in der zugewiesene
 
 Als HR-Administrator können Sie Abwesenheiten aller Benutzer im Namen der Abteilungsleiter genehmigen. Dazu stehen Ihnen zusätzliche Filter zur Verfügung:
 
-- Kontrollkästchen „Show all users“
+- Kontrollkästchen „Alle Benutzer anzeigen“
 - Dropdown „Abteilung“
 - Dropdown „Benutzer“
 
 > [!TIP]
-> Verwenden Sie „Show all users“ nur bei Bedarf und grenzen Sie die Auswahl dann über Abteilung und Benutzer ein, damit Kalender und Genehmigungsliste übersichtlich bleiben.
+> Verwenden Sie „Alle Benutzer anzeigen“ nur bei Bedarf und grenzen Sie die Auswahl dann über Abteilung und Benutzer ein, damit Kalender und Genehmigungsliste übersichtlich bleiben.
 
 ## Abwesenheiten genehmigen und ablehnen
 

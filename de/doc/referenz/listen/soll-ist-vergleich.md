@@ -1,12 +1,12 @@
 ---
-title: Soll-Ist-Vergleich (Target-Actual Hours Comparison)
-description: Referenz zur Standardliste Target-Actual Hours Comparison in time cockpit mit Zeitraumfiltern und den wichtigsten Soll-Ist-Berechnungen.
+title: Soll-Ist-Vergleich
+description: Referenz zur Standardliste Soll-Ist-Vergleich in time cockpit mit Zeitraumfiltern und den wichtigsten Soll-Ist-Berechnungen.
 en_page: doc/reference/lists/target-actual-hours-comparison.md
 ---
 
 # Soll-Ist-Vergleich
 
-Die Liste **Target-Actual Hours Comparison** vergleicht Soll- und Iststunden für einen ausgewählten Zeitraum und zeigt die daraus resultierende Abweichung pro Benutzer.
+Die Liste **Soll-Ist-Vergleich** vergleicht Soll- und Iststunden für einen ausgewählten Zeitraum und zeigt die daraus resultierende Abweichung pro Benutzer.
 
 ## Typische Zielgruppe
 
@@ -18,24 +18,24 @@ Diese Liste ist typischerweise relevant für:
 
 ## Navigation
 
-- Standardnavigation: `User -> Target-Actual Hours Comparison`
+- Standardnavigation: `Benutzer -> Soll-Ist-Vergleich`
 - Deeplink: `https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList`
 
 ## Standardfilter
 
 | Filter | Technische Referenz | Bedeutung |
 |---|---|---|
-| Start Date | `@StartDate` | Beginn des Vergleichszeitraums |
-| End Date | `@EndDate` | Ende des Vergleichszeitraums |
-| Consider Working Time Weight | `@IncludeWeights` | Bezieht Arbeitszeitgewichtungen in die Berechnung der Iststunden ein |
-| Include Hidden Users | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
+| Startdatum | `@StartDate` | Beginn des Vergleichszeitraums |
+| Enddatum | `@EndDate` | Ende des Vergleichszeitraums |
+| Arbeitszeitgewichtung berücksichtigen | `@IncludeWeights` | Bezieht Arbeitszeitgewichtungen in die Berechnung der Iststunden ein |
+| Inkl. ausgeblendeter Benutzer | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
 
 ## Spalten
 
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Benutzer | `UserDetailName`, `UserDetailUuid` | In der Zeile angezeigter Benutzer | Anzeigewert des Benutzerdetails |
-| Target Hours | `PlannedHoursOfWork` | Sollstunden für den Zeitraum | Mit der Standardfunktion für Sollstunden ohne Überstundenpauschale berechnet |
+| Soll-Stunden | `PlannedHoursOfWork` | Sollstunden für den Zeitraum | Mit der Standardfunktion für Sollstunden ohne Überstundenpauschale berechnet |
 | Target Hours Including Overtime | `PlannedHoursOfWorkIncludingLumpSumOvertime` | Sollstunden einschließlich monatlicher Überstundenpauschale | Mit der Standardfunktion für Sollstunden einschließlich Überstundenpauschale berechnet |
 | Ist | `ActualHoursOfWork` | Tatsächlich geleistete Stunden im Zeitraum | Mit der Standardfunktion für Iststunden und der ausgewählten Einstellung für Gewichtungen berechnet |
 | Abweichung | `Deviation` | Differenz zwischen Soll und Ist | Mit der Standardfunktion für Überstunden für den ausgewählten Zeitraum berechnet |
@@ -43,12 +43,12 @@ Diese Liste ist typischerweise relevant für:
 
 ## Hinweise
 
-- Diese Liste ist zeitraumbezogen. Wenn Sie eine Momentaufnahme zu einem einzelnen Datum benötigen, verwenden Sie [Überstunden zum Stichtag](~/doc/referenz/listen/ueberstunden-zum-stichtag.md).
+- Diese Liste ist zeitraumbezogen. Wenn Sie eine Momentaufnahme zu einem einzelnen Datum benötigen, verwenden Sie [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md).
 - Der Wert der Iststunden kann sich ändern, je nachdem, ob Arbeitszeitgewichtungen einbezogen werden.
 - Ausgeblendete Benutzer sind ausgeschlossen, sofern der entsprechende Filter nicht aktiviert ist.
 
 ## Verwandte Seiten
 
-- [Überstunden zum Stichtag](~/doc/referenz/listen/ueberstunden-zum-stichtag.md)
-- [Zeitbericht](~/doc/referenz/listen/zeitbericht.md)
+- [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md)
+- [Stundenzettel](~/doc/referenz/listen/stundenzettel.md)
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)

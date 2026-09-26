@@ -33,7 +33,7 @@ Das Hauptmenü besteht aus sogenannten Modulen (Zeiterfassung, Verwaltung, Benut
 ![Hauptmenü](/doc/timesheet-calendar/images/wc-menu.png "Hauptmenü")
 
 * Das Modul **Zeiterfassung** öffnet den Zeiterfassungskalender.
-* Das Modul **Verwaltung** enthält Listen zur Verwaltung Ihrer Stammdaten (Kunden, Projekte, Aufgaben usw.).
+* Das Modul **Verwaltung** enthält Listen zur Verwaltung Ihrer Stammdaten (Kunden, Projekte, Tätigkeiten usw.).
 * Das Modul **Benutzer** enthält Listen zur Verwaltung aller Daten rund um Benutzer und Mitarbeiter.
 
 ## Symbolleiste
@@ -53,7 +53,7 @@ In der Benutzerauswahl wählen Sie den Benutzer, dessen Zeitbuchungen angezeigt 
 
 ![Benutzerauswahl](/doc/timesheet-calendar/images/wc-user-selection.png "Benutzerauswahl")
 
-Seit Version 1.7 von time cockpit können Sie Benutzer in der Benutzerauswahl ausblenden. Wechseln Sie im Hauptmenü zu **Benutzer** und öffnen Sie die Liste **User Details**. Öffnen Sie den Benutzer, den Sie ausblenden möchten, und aktivieren Sie das Kontrollkästchen **Hidden**.
+Seit Version 1.7 von time cockpit können Sie Benutzer in der Benutzerauswahl ausblenden. Wechseln Sie im Hauptmenü zu **Benutzer** und öffnen Sie die Liste **Benutzerdetails**. Öffnen Sie den Benutzer, den Sie ausblenden möchten, und aktivieren Sie das Kontrollkästchen **Ausgeblendet**.
 
 ## Zeiterfassungskalender
 

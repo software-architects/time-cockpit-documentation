@@ -31,7 +31,7 @@ Benutzerspezifische Einstellungen | `%LocalAppData%\software architects\time coc
 
 Die Daten in time cockpit lassen sich in zwei Kategorien einteilen:
 
-- Stamm- und Zeiterfassungsdaten (z. B. Kunden, Projekte, Aufgaben, Zeitbuchungen, Rechnungen usw.)
+- Stamm- und Zeiterfassungsdaten (z. B. Kunden, Projekte, Tätigkeiten, Zeitbuchungen, Rechnungen usw.)
 - BLOB-Daten (z. B. Signale, Dateianhänge)
 
 Stamm- und Zeiterfassungsdaten werden in einer relationalen Datenbank auf dem Client-PC gespeichert. Aufgezeichnete Signale (z. B. Computeraktivität, Titel des aktiven Fensters) werden als BLOBs (Binary Large Objects) im Dateisystem gespeichert. Wir behandeln Signaldaten anders als Stammdaten, weil die Datenmenge deutlich größer werden kann und weil Ihre privaten Daten aus unserer Sicht noch mehr Schutz verdienen. Aus diesen Gründen werden Signale mit Ihrem persönlichen [Signaldatenpasswort](~/doc/erste-schritte/konfigurationsassistent.md#schritt-5---signaldatenpasswort-wählen) verschlüsselt und komprimiert. So halten wir die Datenmenge gering, und Ihre Daten sind stark geschützt, weil Ihr Signaldatenpasswort Ihren PC nie verlässt.

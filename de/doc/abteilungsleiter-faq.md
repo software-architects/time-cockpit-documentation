@@ -1,7 +1,7 @@
 ---
 title: Abteilungsleiter-FAQ - Genehmigungen und Zeitprüfung
 description: "Abteilungsleiter-FAQ zu time cockpit: Abwesenheiten genehmigen, Teamzeiten prüfen, Überstunden kontrollieren und projektbezogene Zeiten einsehen."
-keywords: [abteilungsleiter, abwesenheitsgenehmigung, zeiterfassung im team, überstunden, urlaubsgenehmigung, zeitbericht, zeitbuchungen des teams, abteilungsleiter faq]
+keywords: [abteilungsleiter, abwesenheitsgenehmigung, zeiterfassung im team, überstunden, urlaubsgenehmigung, stundenzettel, zeitbuchungen des teams, abteilungsleiter faq]
 faq: true
 en_page: doc/department-lead-faq.md
 ---
@@ -80,16 +80,16 @@ Die Standarddokumentation erklärt, wie Sie Überschneidungen im Kalender prüfe
 
 ### Wie prüfe ich, ob mein Team Zeiten korrekt erfasst?
 
-Abteilungsleiter können für diese Prüfung **Zeitbericht**, **Zeiterfassungskalender** und die Liste **Zeitbuchungen** kombinieren.
+Abteilungsleiter können für diese Prüfung **Stundenzettel**, **Zeiterfassungskalender** und die Liste **Zeitbuchungen** kombinieren.
 
-Verwenden Sie den [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md), wenn Sie eine Zusammenfassung der Arbeitszeit für einen Benutzer und einen Zeitraum benötigen. Der Bericht enthält Arbeitszeit, Pausen, Überstunden, Bemerkungen und zusammenfassende Informationen.
+Verwenden Sie den [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md), wenn Sie eine Zusammenfassung der Arbeitszeit für einen Benutzer und einen Zeitraum benötigen. Der Bericht enthält Arbeitszeit, Pausen, Überstunden, Bemerkungen und zusammenfassende Informationen.
 
-Wenn die Liste in Ihrer Navigation verfügbar ist, eignet sich auch **Target-Actual Hours Comparison** für zeitraumbezogene Prüfungen. Dort legen Sie fest:
+Wenn die Liste in Ihrer Navigation verfügbar ist, eignet sich auch der **Soll-Ist-Vergleich** für zeitraumbezogene Prüfungen. Dort legen Sie fest:
 
-- **Start Date**
-- **End Date**
-- **Consider Working Time Weight**
-- **Show Hidden Users**
+- **Startdatum**
+- **Enddatum**
+- **Arbeitszeitgewichtung berücksichtigen**
+- **Inkl. ausgeblendeter Benutzer**
 
 Die Liste zeigt dann pro Benutzer folgende Werte:
 
@@ -108,7 +108,7 @@ Verwenden Sie den [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender
 Verwenden Sie die Liste [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md), wenn Sie eine tabellarische Ansicht der Einträge Ihres Teams zur Prüfung oder zum Export benötigen.
 
 **Siehe auch:**
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
 
@@ -116,30 +116,30 @@ Verwenden Sie die Liste [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen
 
 ### Wie überwache ich Überstunden und Auslastung meiner Abteilung?
 
-Verwenden Sie den [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md) als wichtigste Quelle. Er enthält Sollstunden, tatsächliche Arbeitsstunden, die Überstunden im gewählten Zeitraum und den Überstundenstand zu Beginn des Zeitraums.
+Verwenden Sie den [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md) als wichtigste Quelle. Er enthält Sollstunden, tatsächliche Arbeitsstunden, die Überstunden im gewählten Zeitraum und den Überstundenstand zu Beginn des Zeitraums.
 
-Wenn die Liste in Ihrer Navigation verfügbar ist, bietet **Overtime per Effective Date** eine kompakte Momentaufnahme der Überstunden zu einem Datum. Sie hat folgende Filter:
+Wenn die Liste in Ihrer Navigation verfügbar ist, bietet die Liste **Arbeitszeitsaldo** eine kompakte Momentaufnahme der Überstunden zu einem Datum. Sie hat folgende Filter:
 
-- **Effective Date**
-- **Show Hidden Users**
+- **Stichtag**
+- **Inkl. ausgeblendeter Benutzer**
 
 Für jeden Benutzer zeigt sie:
 
 - den Benutzer
 - die Überstunden in Stunden
 - einen Datenbalken für den Überstundenwert
-- einen Link zu den Überstundenkorrekturen des Benutzers
+- einen Link zu den Korrekturen des Arbeitszeitsaldos des Benutzers
 
-Für einen zeitraumbezogenen Vergleich ist **Target-Actual Hours Comparison** die detailliertere Ansicht, weil sie Sollstunden, Iststunden und Abweichung über einen Zeitraum vergleicht.
+Für einen zeitraumbezogenen Vergleich ist der **Soll-Ist-Vergleich** die detailliertere Ansicht, weil er Sollstunden, Iststunden und Abweichung über einen Zeitraum vergleicht.
 
 Für eine detaillierte Untersuchung:
 
-1. Öffnen Sie den **Zeitbericht** für den betreffenden Mitarbeiter und Zeitraum.
+1. Öffnen Sie den **Stundenzettel** für den betreffenden Mitarbeiter und Zeitraum.
 2. Prüfen Sie die Überstunden zusammen mit Bemerkungen, Abwesenheiten und Pauseninformationen.
 3. Wenn Sie die zugrunde liegenden Einträge benötigen, öffnen Sie den Mitarbeiter im [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) oder prüfen Sie die Liste [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md).
 
 **Siehe auch:**
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Arbeitszeitregelungen](~/doc/arbeitszeiterfassung/arbeitszeitregelungen.md)
 - [Projektleiter-FAQ](~/doc/projektleiter-faq.md)
 
@@ -166,16 +166,16 @@ Für einen einzelnen Mitarbeiter und einen Tag oder eine Woche ist der [Zeiterfa
 
 Die nützlichsten Standardansichten für Abteilungsleiter sind:
 
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md) für Arbeitszeit, Pausen, Bemerkungen und Überstunden
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md) für Arbeitszeit, Pausen, Bemerkungen und Überstunden
 - der Abwesenheitskalender unter [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md) für genehmigte und offene Abwesenheiten
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md) für die tabellarische Prüfung projektbezogener Zeitbuchungen
-- `Overtime per Effective Date` für eine Momentaufnahme der Überstunden zu einem Stichtag
-- `Target-Actual Hours Comparison` für den Vergleich von Sollstunden, Iststunden und Abweichung über einen Zeitraum
+- `Arbeitszeitsaldo` für eine Momentaufnahme der Überstunden zu einem Stichtag
+- `Soll-Ist-Vergleich` für den Vergleich von Sollstunden, Iststunden und Abweichung über einen Zeitraum
 
 Wie oft Sie diese Ansichten prüfen, hängt von Ihrem internen Prozess ab. In der Produktdokumentation entsprechen sie vor allem drei Anwendungsfällen: Genehmigung von Abwesenheiten, Prüfung der Arbeitszeit und Prüfung projektbezogener Zeiten.
 
 **Siehe auch:**
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 - [Projektleiter-FAQ](~/doc/projektleiter-faq.md#welche-berichte-sollte-ich-als-projektleiter-regelmäßig-prüfen)
 
@@ -214,7 +214,7 @@ Für die Einrichtung des Kontos und die Stammdaten der Mitarbeiter lesen Sie die
 
 **Dokumentation:**
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
 - [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 

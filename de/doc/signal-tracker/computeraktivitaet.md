@@ -19,4 +19,4 @@ Zeiten, in denen der Signal Tracker für Computeraktivität nicht lief, werden i
 
 Parametername | Datentyp | Beschreibung
 --- | --- | ---
-Query interval (Interval) | Timespan | Intervall, in dem der Signal Tracker aufzeichnet, dass der Computer aktiv ist. Die Einstellung `00:00:10` legt fest, dass der Tracker alle 10 Sekunden aufzeichnet, dass der Computer aktiv ist. Kleinere Werte können die Leistung Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 10 Sekunden oder mehr.
+Abfrageintervall (Interval) | Zeitspanne | Intervall, in dem der Signal Tracker aufzeichnet, dass der Computer aktiv ist. Die Einstellung `00:00:10` legt fest, dass der Tracker alle 10 Sekunden aufzeichnet, dass der Computer aktiv ist. Kleinere Werte können die Leistung Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 10 Sekunden oder mehr.

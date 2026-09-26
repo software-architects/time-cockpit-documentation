@@ -33,7 +33,7 @@ Benutzer können sich ganz einfach unter [web.timecockpit.com](https://web.timec
 
 ![Sandbox-Anmeldung](/doc/data-model-customization/images/sandbox-login.jpg "Sandbox-Anmeldung")
 
-Wenn Sie den [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe) für Anpassungen und Entwicklung verwenden, können Sie sich mit der Sandbox verbinden, indem Sie im Startdialog des OnCockpit Admin eine "New Configuration" hinzufügen. Verwenden Sie für den Benutzernamen unbedingt das Format `test/originalemailaddress`. Das Passwort ist dasselbe wie für Ihr produktives time cockpit Konto.
+Wenn Sie den [OnCockpit Admin](https://update-admin.on-cockpit.com/general/Setup.exe) für Anpassungen und Entwicklung verwenden, können Sie sich mit der Sandbox verbinden, indem Sie im Startdialog des OnCockpit Admin über "Neu konfigurieren" eine Konfiguration hinzufügen. Verwenden Sie für den Benutzernamen unbedingt das Format `test/originalemailaddress`. Das Passwort ist dasselbe wie für Ihr produktives time cockpit Konto.
 
 ![Konfigurationsauswahl](/doc/data-model-customization/images/oncockpitadmin-configuration-selector.png "Konfigurationsauswahl")
 

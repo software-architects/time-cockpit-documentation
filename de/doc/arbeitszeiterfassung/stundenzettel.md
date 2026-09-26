@@ -1,19 +1,19 @@
 ---
-title: Zeitbericht - Zusammenfassung der Arbeitszeit
-description: Erstellen Sie in time cockpit Zeitberichte mit Arbeitszeiten, Pausen, Homeoffice-Tagen, Überstunden und Zusammenfassungen für bestimmte Zeiträume.
+title: Stundenzettel - Zusammenfassung der Arbeitszeit
+description: Erstellen Sie in time cockpit Stundenzettel mit Arbeitszeiten, Pausen, Homeoffice-Tagen, Überstunden und Zusammenfassungen für bestimmte Zeiträume.
 en_page: doc/employee-time-tracking/time-report.md
 ---
-# Zeitberichte
+# Stundenzettel
 
-Die Funktion **Zeitbericht** in time cockpit liefert eine detaillierte Zusammenfassung arbeitszeitbezogener Informationen für einen bestimmten Benutzer in einem festgelegten Arbeitszeitraum. Mit diesem umfassenden Bericht können Sie Arbeitszeiten, Pausen und weitere wichtige Details nachverfolgen und auswerten.
+Die Funktion **Stundenzettel** in time cockpit liefert eine detaillierte Zusammenfassung arbeitszeitbezogener Informationen für einen bestimmten Benutzer in einem festgelegten Arbeitszeitraum. Mit diesem umfassenden Bericht können Sie Arbeitszeiten, Pausen und weitere wichtige Details nachverfolgen und auswerten.
 
-Sie finden den Bericht unter **BENUTZER --> ARBEITSZEIT --> Zeitbericht**
+Sie finden den Bericht unter **BENUTZER --> ARBEITSZEIT --> Stundenzettel**
 
-![Menü Zeitbericht](/doc/employee-time-tracking/images/time-report-menu.png "Menü Zeitbericht")
+![Menü Stundenzettel](/doc/employee-time-tracking/images/time-report-menu.png "Menü Stundenzettel")
 
 ## Die wichtigsten Elemente des Berichts
 
-![Zeitbericht](/doc/employee-time-tracking/images/time-report.png "Zeitbericht")
+![Stundenzettel](/doc/employee-time-tracking/images/time-report.png "Stundenzettel")
 
 1. **Benutzerinformationen:** Der Bericht beginnt mit dem Namen des Benutzers, sodass Sie leicht erkennen, auf wen sich der Bericht bezieht.
 
@@ -56,25 +56,25 @@ Sie finden den Bericht unter **BENUTZER --> ARBEITSZEIT --> Zeitbericht**
 
 - **Urlaubsverwaltung:** Er vereinfacht die Nachverfolgung von Urlaubstagen und verbleibendem Urlaubsanspruch für Lohnverrechnung und Planung.
 
-## Zeitberichte für mehrere Benutzer herunterladen [Beta]
+## Stundenzettel für mehrere Benutzer herunterladen [Beta]
 
 >[!NOTE]
 > Derzeit ist diese Funktion darauf ausgelegt, pro Ausführung Berichte für bis zu 20 Mitarbeiter pro Monat zu erstellen. Diese Einschränkung ergibt sich aus der SSRS-Bibliothek, die keine parallele Ausführung unterstützt. Wir arbeiten aktiv an dieser Herausforderung und werden sie in einer künftigen Version lösen.
 
-Benutzer können Zeitberichte für einen bestimmten Zeitraum bequem im PDF- oder Excel-Format erstellen. Diese Funktion ist besonders nützlich, wenn Sie Zeitberichte für mehrere Personen erstellen müssen, vor allem am Monatsende.
+Benutzer können Stundenzettel für einen bestimmten Zeitraum bequem im PDF- oder Excel-Format erstellen. Diese Funktion ist besonders nützlich, wenn Sie Stundenzettel für mehrere Personen erstellen müssen, vor allem am Monatsende.
 
-<div class="tc-video" data-vimeo="869442493" data-title="Zeitberichte drucken" data-poster="/images/video-posters/869442493.jpg" style="--bs-aspect-ratio: 56.25%"></div>
+<div class="tc-video" data-vimeo="869442493" data-title="Stundenzettel drucken" data-poster="/images/video-posters/869442493.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Funktion aufrufen
 1. Öffnen Sie in time cockpit die Benutzerliste.
-2. Wählen Sie die Benutzer aus, für die Sie Zeitberichte erstellen möchten.
+2. Wählen Sie die Benutzer aus, für die Sie Stundenzettel erstellen möchten.
 3. Klicken Sie auf das Menü „Aktionen“.
 
-### Zeitberichte erstellen
-1. Wählen Sie im Menü „Aktionen“ die Option „Print Time Reports“.
+### Stundenzettel erstellen
+1. Wählen Sie im Menü „Aktionen“ die Option „Stundenzettel drucken“.
 2. Es öffnet sich ein Dialog, in dem Sie die Berichtserstellung konfigurieren.
 
-### Zeitberichte konfigurieren
+### Stundenzettel konfigurieren
 1. Im Dialog legen Sie den gewünschten Zeitraum fest, für den die Berichte erstellt werden sollen.
 2. Wählen Sie das Dateiformat, PDF oder Excel.
 

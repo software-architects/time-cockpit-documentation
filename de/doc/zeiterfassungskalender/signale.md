@@ -75,7 +75,7 @@ Die CUA-Spur fasst die folgenden Informationen für Sie zusammen:
 Telefonatsignale werden als gerichtete Pfeile dargestellt. Eingehende Telefonate zeigen nach rechts, ausgehende nach links. Telefonate werden nicht direkt vom Signal Tracker von time cockpit aufgezeichnet, sondern müssen aus einem Mobiltelefon oder einer Telefonielösung importiert werden. Ausführliche Informationen zum Import von Telefonaten finden Sie unter [Signal Tracker für Telefonate](/doc/signal-tracker/phone-calls.html).
 
 > [!NOTE]
-> Sie können die Mindestdauer eines Telefonats festlegen. Telefonate, die kürzer als die festgelegte Mindestdauer sind, werden im Zeiterfassungskalender nicht angezeigt. Die Mindestdauer ändern Sie im Optionsdialog Signal Processing (siehe [Optionen des Signal Trackers](/doc/signal-tracker/options.html)).
+> Sie können die Mindestdauer eines Telefonats festlegen. Telefonate, die kürzer als die festgelegte Mindestdauer sind, werden im Zeiterfassungskalender nicht angezeigt. Die Mindestdauer ändern Sie im Optionsdialog Signalverarbeitung (siehe [Optionen des Signal Trackers](/doc/signal-tracker/options.html)).
 
 ![Telefonat](/doc/timesheet-calendar/images/phone-call.png "Telefonat")
 

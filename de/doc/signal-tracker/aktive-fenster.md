@@ -17,4 +17,4 @@ Wenn Sie den Signal Tracker beenden oder pausieren, zeichnet er die verwendeten 
 
 Parametername | Datentyp| Beschreibung
 --- | --- | ---
-Query interval (Interval) | Timespan | Intervall, in dem der Signal Tracker das aktive Programm und den Titel des aktiven Fensters aufzeichnet. Die Einstellung `00:00:02` legt fest, dass der Tracker Programm und Fenstertitel alle 2 Sekunden aufzeichnet. Kleinere Werte können die Leistung Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 2 Sekunden.
+Abfrageintervall (Interval) | Zeitspanne | Intervall, in dem der Signal Tracker das aktive Programm und den Titel des aktiven Fensters aufzeichnet. Die Einstellung `00:00:02` legt fest, dass der Tracker Programm und Fenstertitel alle 2 Sekunden aufzeichnet. Kleinere Werte können die Leistung Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 2 Sekunden.

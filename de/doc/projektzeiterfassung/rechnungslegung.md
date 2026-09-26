@@ -19,13 +19,13 @@ Eine Rechnung besteht immer aus einer oder mehreren Rechnungspositionen. Eine Re
 
 Eine Rechnungsposition besteht aus folgenden Daten:
 
-- **Position:** Eine numerische Kennung für die Position der Rechnungsposition auf der Rechnung.
-- **Task:** Zugehörige Aufgabe eines Projekts (falls zutreffend).
+- **Pos.:** Eine numerische Kennung für die Position der Rechnungsposition auf der Rechnung.
+- **Tätigkeit:** Zugehörige Tätigkeit eines Projekts (falls zutreffend).
 - **Description:** Eine kurze Beschreibung des Produkts, der Dienstleistung oder der Gebühr.
-- **Quantity:** Die Menge oder Anzahl der Einheiten des enthaltenen Produkts oder der Dienstleistung.
+- **Anzahl:** Die Menge oder Anzahl der Einheiten des enthaltenen Produkts oder der Dienstleistung.
 - **Unit:** Die Maßeinheit der Position.
 - **Price:** Der Einzelpreis oder Satz für das Produkt oder die Dienstleistung.
-- **VAT:** Der für die Position geltende Umsatzsteuersatz (USt.).
+- **USt.:** Der für die Position geltende Umsatzsteuersatz (USt.).
 - **Total:** Die Gesamtkosten dieser Position (Preis x Menge).
 - **Total (incl. VAT):** Die Gesamtkosten einschließlich Umsatzsteuer.
 
@@ -45,9 +45,9 @@ Ein Artikel besteht aus folgenden Feldern:
 - **Description:** Eine kurze Beschreibung des Inhalts des Artikels.
 - **Unit:** Die Maßeinheit der Position.
 - **Price:** Der Einzelpreis oder Satz für den Artikel.
-- **Sort Order:** Die Reihenfolge, in der der Artikel in der Liste erscheint.
-- **VAT [%]:** Der für den Artikel geltende Umsatzsteuersatz (USt.). 
-- **Hidden:** Gibt an, ob der Artikel in der Combobox ausgeblendet oder sichtbar ist.
+- **Sortierreihenfolge:** Die Reihenfolge, in der der Artikel in der Liste erscheint.
+- **USt. [%]:** Der für den Artikel geltende Umsatzsteuersatz (USt.). 
+- **Ausgeblendet:** Gibt an, ob der Artikel in der Combobox ausgeblendet oder sichtbar ist.
 - **Total (incl. VAT):** Der Gesamtpreis des Artikels einschließlich Umsatzsteuer.
 
 ![Artikel](/doc/project-time-tracking/images/article.png "Artikel")
@@ -57,21 +57,21 @@ Ein Artikel besteht aus folgenden Feldern:
 
 ## So erstellen Sie eine Rechnung
 
-Das Standarddatenmodell von time cockpit enthält die Liste [Verwaltung -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). Diese Liste basiert auf dem Standardablauf der [Zeitbuchungen](https://web.timecockpit.com/app/lists/entity/APP_Timesheet), bietet aber zusätzliche Filter, um zwischen verrechenbaren und noch nicht verrechneten Stunden zu unterscheiden. Außerdem stellt sie die Aktion `Create Invoice` bereit, mit der Sie Zeitbuchungen einer Rechnung zuordnen. So erstellen Sie eine Rechnung:
+Das Standarddatenmodell von time cockpit enthält die Liste [Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). Diese Liste basiert auf dem Standardablauf der [Zeitbuchungen](https://web.timecockpit.com/app/lists/entity/APP_Timesheet), bietet aber zusätzliche Filter, um zwischen verrechenbaren und noch nicht verrechneten Stunden zu unterscheiden. Außerdem stellt sie die Aktion `Ausgangsrechnung anlegen` bereit, mit der Sie Zeitbuchungen einer Rechnung zuordnen. So erstellen Sie eine Rechnung:
 
-1. Öffnen Sie die Liste **Unbilled Timesheets**.
+1. Öffnen Sie die Liste **Nicht verrechnete Zeitbuchungen**.
 2. Wählen Sie die Zeitbuchungen aus, die in die Rechnung aufgenommen werden sollen.
-3. Wählen Sie im Menü **Aktionen** den Eintrag **Create Invoice**.
+3. Wählen Sie im Menü **Aktionen** den Eintrag **Ausgangsrechnung anlegen**.
 4. Geben Sie die Rechnungsdaten ein.
 
-Wenn Sie die Aktion **Create Invoice** ausführen, ordnet sie die ausgewählten Zeitbuchungen Rechnungspositionen zu. 
+Wenn Sie die Aktion **Ausgangsrechnung anlegen** ausführen, ordnet sie die ausgewählten Zeitbuchungen Rechnungspositionen zu. 
 
 <div class="tc-video" data-vimeo="871357620" data-title="Rechnungslegung" style="--bs-aspect-ratio: 51.82%"></div>
 
 > [!NOTE]
 > Sobald Zeitbuchungen einer Rechnungsposition oder Rechnung zugeordnet sind, werden sie **schreibgeschützt**, um versehentliche Änderungen nach der Verrechnung zu verhindern.
 
-Stundensätze für Kunden oder Projekte können sich im Lauf der Zeit ändern. Deshalb kopiert die Aktion `Create Invoice` den konkret gültigen Stundensatz in das Feld `APP_HourlyRateBilled` einer Zeitbuchung. Dieses Feld wird auch im berechneten Feld `APP_Revenue` verwendet, das den durch Zeitbuchungen erzielten Umsatz anzeigt.
+Stundensätze für Kunden oder Projekte können sich im Lauf der Zeit ändern. Deshalb kopiert die Aktion `Ausgangsrechnung anlegen` den konkret gültigen Stundensatz in das Feld `APP_HourlyRateBilled` einer Zeitbuchung. Dieses Feld wird auch im berechneten Feld `APP_Revenue` verwendet, das den durch Zeitbuchungen erzielten Umsatz anzeigt.
 
 > [!NOTE]
 > Bis zur Version [2023-10](/doc/release-notes/2023-10.html) konnte time cockpit Zeitbuchungen nur zu Rechnungen zusammenfassen. Die einer Rechnung zugeordneten Zeitbuchungen konnten von Benutzern nicht mehr bearbeitet werden. Mit Version 2023-10 wurde diese Funktion erweitert, sodass Sie für eine einzelne Rechnung mehrere Rechnungspositionen anlegen können. Der Rechnungsbetrag wird daher jetzt aus der Summe aller Rechnungspositionen berechnet.
@@ -83,18 +83,18 @@ Wenn Sie in time cockpit eine Rechnung erstellen, analysiert time cockpit die au
 
 ![Zeitbuchung für eine Reise](/doc/project-time-tracking/images/travel-timesheet.png "Zeitbuchung für eine Reise")
 
-Stellen Zeitbuchungen tatsächliche Arbeit für einen Kunden dar, legt time cockpit für jede Aufgabe innerhalb des Projekts eine Rechnungsposition an und verwendet dabei den Artikel "Service" (Code: serviceTime). Das System berechnet die Gesamtstunden jeder Rechnungsposition aus den zugehörigen Zeitbuchungen.
+Stellen Zeitbuchungen tatsächliche Arbeit für einen Kunden dar, legt time cockpit für jede Tätigkeit innerhalb des Projekts eine Rechnungsposition an und verwendet dabei den Artikel "Service" (Code: serviceTime). Das System berechnet die Gesamtstunden jeder Rechnungsposition aus den zugehörigen Zeitbuchungen.
 
 Das folgende Beispiel zeigt eine Rechnung mit drei Rechnungspositionen.
 
-* Support: Eine Rechnungsposition, die für die Aufgabe "Support" im jeweiligen Projekt angelegt wurde
-* Meeting: Eine Rechnungsposition, die für die Aufgabe "Meeting" im jeweiligen Projekt angelegt wurde
-* Travel Costs: Eine Rechnungsposition, die für Reisen im jeweiligen Projekt angelegt wurde. Reisen sind keiner Aufgabe zugeordnet, daher ist es auch die Rechnungsposition nicht.
+* Support: Eine Rechnungsposition, die für die Tätigkeit "Support" im jeweiligen Projekt angelegt wurde
+* Meeting: Eine Rechnungsposition, die für die Tätigkeit "Meeting" im jeweiligen Projekt angelegt wurde
+* Travel Costs: Eine Rechnungsposition, die für Reisen im jeweiligen Projekt angelegt wurde. Reisen sind keiner Tätigkeit zugeordnet, daher ist es auch die Rechnungsposition nicht.
 
 ![Beispiel für Rechnungspositionen](/doc/project-time-tracking/images/invoice-items-example.png "Beispiel für Rechnungspositionen")
 
 > [!NOTE]
-> Die Berechnung des Rechnungsbetrags (**Net Revenue** in der Rechnung) basiert daher auf der Summe aller Rechnungspositionen.
+> Die Berechnung des Rechnungsbetrags (**Nettoumsatz** in der Rechnung) basiert daher auf der Summe aller Rechnungspositionen.
 
 > [!NOTE]
 > Die Preise generierter Rechnungspositionen können geändert werden. In diesem Fall wird die aktualisierte Summe aller Rechnungspositionen in der Rechnung übernommen, zu der die Rechnungsposition gehört.
@@ -117,7 +117,7 @@ Wenn die automatische Generierung von Rechnungspositionen Ihre Anforderungen nic
 
 ### Den eigenen Artikel in einer Rechnung verwenden
 
-1. Wechseln Sie im Modul "Verwaltung" in den Bereich "Outgoing Invoices"
+1. Wechseln Sie im Modul "Verwaltung" in den Bereich "Ausgangsrechnungen"
 2.  Suchen Sie das Projekt, zu dem Sie den eigenen Artikel hinzufügen möchten.
 3.  Suchen Sie Ihre Rechnung.
 4.  Fügen Sie in den Rechnungsdetails eine neue Position hinzu.
@@ -133,7 +133,7 @@ In time cockpit können Sie bei Bedarf flexibel manuelle Rechnungen erstellen. D
 
 ### Schritte zum Erstellen einer manuellen Rechnung
 
-1. Öffnen Sie die Liste [**Verwaltung --> Billing --> Outgoing Invoices**](https://web.timecockpit.com/app/lists/entity/APP_Company).
+1. Öffnen Sie die Liste [**Verwaltung --> Verrechnung --> Ausgangsrechnungen**](https://web.timecockpit.com/app/lists/entity/APP_Company).
 2. Klicken Sie auf die Schaltfläche "Hinzufügen".
 4. Geben Sie die relevanten Daten der manuellen Rechnung ein, darunter Kundendaten, Rechnungsnummer und Rechnungsdatum.
 5. Fügen Sie nach Bedarf eigene Rechnungspositionen hinzu. Für jede Position können Sie Beschreibung, Menge, Einzelpreis und Steuersatz angeben.
@@ -143,15 +143,15 @@ In time cockpit können Sie bei Bedarf flexibel manuelle Rechnungen erstellen. D
 >[!NOTE]
 > Bei manuellen Rechnungen werden Rechnungspositionen **nicht** automatisch aus den Zeitbuchungen eines bestimmten Zeitraums generiert. So haben Sie die volle Kontrolle darüber, welche eigenen Rechnungspositionen Sie mit welchen Details anlegen.
 
-## Einen Rechnungsbericht generieren
+## Ein Rechnungsdokument generieren
 
 time cockpit kann für eine bestimmte Rechnung ein umfassendes PDF-Dokument erstellen, das die wesentlichen Angaben einer gültigen Rechnung enthält. Dazu gehören Kundenadresse, Rechnungsnummer, Rechnungsdatum und Leistungszeitraum. 
 
-![Rechnungsbericht](/doc/project-time-tracking/images/invoice-report.png "Rechnungsbericht")
+![Rechnungsdokument](/doc/project-time-tracking/images/invoice-report.png "Rechnungsdokument")
 
 Außerdem listet das Dokument alle zugeordneten Rechnungspositionen einzeln auf. Jede Rechnungsposition wird mit Menge, Einheit, Preis, Gesamtbetrag und dem zugehörigen Umsatzsteuersatz dargestellt. So erhalten Sie einen vollständigen Überblick über den Inhalt der Rechnung und können die verrechneten Positionen leicht prüfen und nachvollziehen.
 
-Sind der Rechnung Zeitbuchungen zugeordnet (erstellt mit der Aktion `Create Invoice`), können Sie die Anzeige der Details der Zeitbuchungen im Rechnungsdokument aktivieren. Setzen Sie dazu in der jeweiligen Rechnung das Kennzeichen `Incl. Timesheets on Invoice Document`. 
+Sind der Rechnung Zeitbuchungen zugeordnet (erstellt mit der Aktion `Ausgangsrechnung anlegen`), können Sie die Anzeige der Details der Zeitbuchungen im Rechnungsdokument aktivieren. Setzen Sie dazu in der jeweiligen Rechnung das Kennzeichen `Inkl. Zeitnachweis am Rechnungsdokument`. 
 
 >[!NOTE]
 > Wurden Menge oder Preis einer der automatisch generierten Rechnungspositionen für Dienstleistungen nach der Generierung geändert, stimmen die Details der Zeitbuchungen nicht mehr mit den Rechnungspositionen überein. In diesem Fall empfiehlt es sich, die Anzeige der Details der Zeitbuchungen im Rechnungsdokument zu deaktivieren. So bleibt die Rechnung korrekt und konsistent mit den geänderten Rechnungspositionen.
@@ -176,13 +176,13 @@ Bei Kunden **außerhalb** der EU wird unter dem Gesamtbetrag ein etwas anderer H
 **Deutsch**
 > Die oben angeführten Beträge verstehen sich ohne Umsatzsteuer. Die Umsatzsteuer muss vom Empfänger der Leistung berechnet und abgeführt werden.
 
-Werden Rechnungspositionen mit der Aktion `Create Invoice` automatisch generiert, hängt die Entscheidung über die Umsatzsteuer davon ab, ob das Heimatland des Kunden und des Rechnungsstellers dasselbe ist.
+Werden Rechnungspositionen mit der Aktion `Ausgangsrechnung anlegen` automatisch generiert, hängt die Entscheidung über die Umsatzsteuer davon ab, ob das Heimatland des Kunden und des Rechnungsstellers dasselbe ist.
 
 ### Unternehmensdaten des Rechnungsstellers
 
-In der Fußzeile des Rechnungsdokuments werden die Unternehmensdaten des Rechnungsstellers angezeigt. Diese Daten verwalten Sie unter [**Verwaltung --> Billing --> Companies**](https://web.timecockpit.com/app/lists/entity/APP_Company).
+In der Fußzeile des Rechnungsdokuments werden die Unternehmensdaten des Rechnungsstellers angezeigt. Diese Daten verwalten Sie unter [**Verwaltung --> Verrechnung --> Gesellschaften**](https://web.timecockpit.com/app/lists/entity/APP_Company).
 
-![Formular Company](/doc/project-time-tracking/images/company-form.png "Formular Company")
+![Formular Gesellschaft](/doc/project-time-tracking/images/company-form.png "Formular Gesellschaft")
 
 
 >[!NOTE]
@@ -190,11 +190,11 @@ In der Fußzeile des Rechnungsdokuments werden die Unternehmensdaten des Rechnun
 
 ## Zeitbuchungen zu einer bestehenden Rechnung hinzufügen
 
-Gelegentlich wurde eine Zeitbuchung nicht in eine Rechnung aufgenommen. In diesem Fall können Sie die Aktion "Assign to Existing Outgoing Invoice" verwenden. So gehen Sie vor:
+Gelegentlich wurde eine Zeitbuchung nicht in eine Rechnung aufgenommen. In diesem Fall können Sie die Aktion "Zu vorhandener Ausgangsrechnung zuordnen" verwenden. So gehen Sie vor:
 
-1. Öffnen Sie die Liste [**Verwaltung --> Billing --> Unbilled Time Sheets**](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList).
+1. Öffnen Sie die Liste [**Verwaltung --> Verrechnung --> Nicht verrechnete Zeitbuchungen**](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList).
 2. Wählen Sie die Zeitbuchung aus, die Sie einer bestehenden Rechnung hinzufügen möchten.
-3. Führen Sie die Aktion 'Assign to Existing Outgoing Invoice' aus.
+3. Führen Sie die Aktion 'Zu vorhandener Ausgangsrechnung zuordnen' aus.
 
 ![Einer bestehenden Rechnung zuordnen](/doc/project-time-tracking/images/assign-to-existing-invoice.png "Einer bestehenden Rechnung zuordnen")
 

@@ -15,7 +15,7 @@ Wenn Sie nur Teile der Liste exportieren möchten, können Sie mit [Microsoft Re
 
 ## Excel-Schnellexport (nur Vollclient)
 
-Der Vollclient von time cockpit bietet eine weitere Möglichkeit, die Daten einer Liste nach Microsoft Excel zu exportieren. Verwenden Sie **Quick Export** im Menüband. Sie können entweder alle Datensätze einer Liste oder nur die ausgewählten Elemente exportieren.
+Der Vollclient von time cockpit bietet eine weitere Möglichkeit, die Daten einer Liste nach Microsoft Excel zu exportieren. Verwenden Sie **Excel Export** im Menüband. Sie können entweder alle Datensätze einer Liste oder nur die ausgewählten Elemente exportieren.
 
 ![Schnellexport](/doc/data-exchange/images/quick-export.png "Schnellexport")
 

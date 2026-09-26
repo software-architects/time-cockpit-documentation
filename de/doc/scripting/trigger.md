@@ -8,7 +8,7 @@ en_page: doc/scripting/triggers.md
 In time cockpit können Sie sogenannte Trigger definieren. Ähnlich wie Datenbanktrigger sind Trigger in time cockpit kleine Codestücke, die automatisch ausgeführt werden, sobald ein Datensatz einer bestimmten Entität eingefügt, aktualisiert oder gelöscht wird. Typische Szenarien für Trigger in time cockpit sind:
 
 - Automatisch eindeutige Codes für Datensätze erzeugen, die eingefügt werden sollen
-- Erweiterte Validierung von Datensätzen (z. B. ob das Budget der Aufgaben das Budget eines Projekts überschreitet)
+- Erweiterte Validierung von Datensätzen (z. B. ob das Budget der Tätigkeiten das Budget eines Projekts überschreitet)
 - Die Integrität der Informationen in der Datenbank sicherstellen
 Trigger sind ein fortgeschrittenes Konzept in time cockpit. Daher können sie nicht über die Administrationsoberfläche definiert werden, sondern müssen per Skript erstellt werden.
 
@@ -83,7 +83,7 @@ Daher kann ein Trigger optional eine Verarbeitungsdirektive `# IncludeClause` en
   "<relation_name>[.<relation_name>...]"
  ```
 
-Angenommen, der folgende Trigger wird für Zeitbuchungen verwendet. Die `# IncludeClause` legt fest, dass Aufgaben, Projekte, Kunden und Rechnungen einbezogen werden sollen.
+Angenommen, der folgende Trigger wird für Zeitbuchungen verwendet. Die `# IncludeClause` legt fest, dass Tätigkeiten, Projekte, Kunden und Rechnungen einbezogen werden sollen.
 
 ```
 # IncludeClause .Include('APP_Task.APP_Project.APP_Customer').Include('Invoice')

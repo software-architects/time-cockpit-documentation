@@ -1,12 +1,12 @@
 ---
-title: Zeitbericht (Time Report) - Listenreferenz
-description: Referenz zur Standardliste Time Report in time cockpit mit Filtern, sichtbaren Spalten und dem wichtigsten Berechnungskontext des Berichts.
+title: Stundenzettel - Listenreferenz
+description: Referenz zur Standardliste Stundenzettel in time cockpit mit Filtern, sichtbaren Spalten und dem wichtigsten Berechnungskontext des Berichts.
 en_page: doc/reference/lists/time-report.md
 ---
 
-# Zeitbericht
+# Stundenzettel
 
-Die Liste **Time Report** erstellt einen tageweisen Bericht für einen Benutzer in einem ausgewählten Zeitraum. Sie kombiniert Anwesenheit, Sollstunden, Abwesenheiten sowie Informationen zu Überstunden und Urlaub.
+Die Liste **Stundenzettel** erstellt einen tageweisen Bericht für einen Benutzer in einem ausgewählten Zeitraum. Sie kombiniert Anwesenheit, Sollstunden, Abwesenheiten sowie Informationen zu Überstunden und Urlaub.
 
 ## Typische Zielgruppe
 
@@ -18,7 +18,7 @@ Diese Liste ist typischerweise relevant für:
 
 ## Navigation
 
-- Standardnavigation: `User -> Time Report`
+- Standardnavigation: `Benutzer -> Stundenzettel`
 - Deeplink: `https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList`
 
 ## Standardfilter
@@ -58,10 +58,10 @@ Diese Werte stammen aus den Standardberechnungen für Arbeitszeit, Überstunden,
 
 - Der Standardbericht erwartet jeweils einen Benutzer.
 - Beginn- und Enddatum müssen im selben Jahr liegen.
-- Der Bericht kombiniert Zeitbuchungen, Wochenarbeitszeit, Feiertage, Urlaub, Krankenstand, Zeitausgleich und Überstundenkorrekturen.
+- Der Bericht kombiniert Zeitbuchungen, Wochenarbeitszeit, Feiertage, Urlaub, Krankenstand, Zeitausgleich und Korrekturen des Arbeitszeitsaldos.
 
 ## Verwandte Seiten
 
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)
-- [Überstunden zum Stichtag](~/doc/referenz/listen/ueberstunden-zum-stichtag.md)
+- [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md)
 - [Soll-Ist-Vergleich](~/doc/referenz/listen/soll-ist-vergleich.md)

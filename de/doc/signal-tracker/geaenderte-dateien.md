@@ -20,7 +20,7 @@ Wenn Sie den Signal Tracker beenden oder pausieren, zeichnet er Ihre Schreibzugr
 
 Parametername | Datentyp | Beschreibung
 --- | --- | ---
-Selected folders (`Paths`) | XML | Liste der Ordner, die aufgezeichnet werden sollen. Für jeden Ordner können Sie festlegen, ob Unterordner rekursiv aufgezeichnet werden sollen.<br/>Standardmäßig zeichnet time cockpit Ihren Ordner Dokumente auf.<br/><br/>Der Signal Tracker für Schreibzugriffe auf Dateien unterstützt nur lokale Laufwerke. Netzlaufwerke werden derzeit nicht unterstützt. Außerdem können Laufwerke, die nicht beschreibbar sind, nicht aufgezeichnet werden.
+Überwachte Ordner (`Paths`) | XML | Liste der Ordner, die aufgezeichnet werden sollen. Für jeden Ordner können Sie festlegen, ob Unterordner rekursiv aufgezeichnet werden sollen.<br/>Standardmäßig zeichnet time cockpit Ihren Ordner Dokumente auf.<br/><br/>Der Signal Tracker für Schreibzugriffe auf Dateien unterstützt nur lokale Laufwerke. Netzlaufwerke werden derzeit nicht unterstützt. Außerdem können Laufwerke, die nicht beschreibbar sind, nicht aufgezeichnet werden.
 Ignore patterns (`ExcludePatterns`) | XML	| Liste der Muster, die ignoriert werden sollen. Verwenden Sie * als Platzhalter. Beispiele für Ausschlussmuster:<br/><br/>`*.tmp` = alle Dateien, die auf .tmp enden<br/>`*\iTunes\*` = alle Dateien, deren Pfad iTunes enthält<br/><br/>time cockpit ignoriert alle Schreibzugriffe auf Dateien in den folgenden Ordnern, unabhängig davon, ob sie in den ausgewählten Ordnern enthalten sind (weitere Informationen zu diesen Spezialordnern finden Sie im MSDN):<br/><br/>`Environment.SpecialFolder.Windows`<br/>`Environment.SpecialFolder.ProgramFiles`<br/>`Environment.SpecialFolder.ProgramFilesX86`
 
 > [!NOTE]

@@ -38,7 +38,7 @@ Eine einfache Checkliste für den ersten Tag:
 2. Das Modul **Zeiterfassung** öffnen.
 3. Den [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html) öffnen.
 4. Den ersten Eintrag anlegen.
-5. Mit Ihrer Führungskraft klären, welche Projekte oder Aufgaben Sie verwenden sollen.
+5. Mit Ihrer Führungskraft klären, welche Projekte oder Tätigkeiten Sie verwenden sollen.
 
 **Siehe auch:**
 - [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)

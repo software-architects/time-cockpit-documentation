@@ -55,20 +55,20 @@ Projektbudgets in Geldbeträgen verfolgen:
 - Wenn für den Kunden die Gesamtkosten zählen und nicht die Stunden
 - Projekte mit unterschiedlichen Verrechnungssätzen
 
-### Budgets auf Aufgabenebene (feine Steuerung)
+### Budgets auf Tätigkeitsebene (feine Steuerung)
 
 Für eine detaillierte Aufteilung des Budgets:
 
-1. Navigieren Sie zu **Verwaltung** → **[Aufgaben](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
-2. Setzen Sie für jede Aufgabe:
-   - **Planned Duration:** Stunden, die dieser Aufgabe zugeteilt sind
+1. Navigieren Sie zu **Verwaltung** → **[Tätigkeiten](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
+2. Setzen Sie für jede Tätigkeit:
+   - **Planned Duration:** Stunden, die dieser Tätigkeit zugeteilt sind
    - **Planned Revenue:** Zugeteilter Betrag (optional)
-3. Speichern Sie jede Aufgabe
+3. Speichern Sie jede Tätigkeit
 
-**Vorteile von Budgets auf Aufgabenebene:**
+**Vorteile von Budgets auf Tätigkeitsebene:**
 - Erkennen, welche Phasen das meiste Budget verbrauchen
 - Fortschritt im Detail verfolgen
-- Das Team warnen, wenn einzelne Aufgaben ihre Grenzen erreichen
+- Das Team warnen, wenn einzelne Tätigkeiten ihre Grenzen erreichen
 - Künftige Schätzungen verbessern
 
 ## Budgetverbrauch überwachen
@@ -77,22 +77,22 @@ Für eine detaillierte Aufteilung des Budgets:
 
 time cockpit bietet zwei leistungsfähige integrierte Ansichten:
 
-**[Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**
+**[Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**
 
-Navigieren Sie zu **Verwaltung** → **Projekte** → wählen Sie die Listenansicht **Budgetary Control**
+Navigieren Sie zu **Verwaltung** → **Projekte** → wählen Sie die Listenansicht **Budgetkontrolle**
 
 **Wichtige Spalten:**
 - **Planned vs. Actual**: Budgetierte und erfasste Stunden bzw. Kosten im Vergleich
 - **Remaining**: Noch verfügbare Stunden bzw. noch verfügbares Budget
 - **% Consumed**: Fortschrittsanzeige (ProgressPercent, ProgressBillablePercent)
 - **Forecast**: Voraussichtliche Gesamtstunden bzw. -kosten auf Basis des aktuellen Trends
-- **Revenue**: Gesamter verrechenbarer Betrag aus den Zeitbuchungen
+- **Umsatz**: Gesamter verrechenbarer Betrag aus den Zeitbuchungen
 - **Costs**: Interne Kosten auf Basis der Stundensätze der Mitarbeiter
-- **Margin**: Revenue - Costs (Rentabilität)
+- **Margin**: Umsatz - Costs (Rentabilität)
 
-**[Budgetary Control of Tasks](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**
+**[Budgetkontrolle für Tätigkeiten](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**
 
-Ähnlich wie die Ansicht auf Projektebene, zeigt aber Details auf Aufgabenebene für eine feine Überwachung.
+Ähnlich wie die Ansicht auf Projektebene, zeigt aber Details auf Tätigkeitsebene für eine feine Überwachung.
 
 ### Visuelle Kennzeichnung
 
@@ -180,8 +180,8 @@ Um die Rentabilität eines Projekts zu verstehen, müssen Sie sowohl die interne
 3. Setzen Sie **Default Hourly Rate:** auf seinen internen Kostensatz (z. B. 75 $/Stunde)
 4. Speichern Sie
 
-**Verrechenbarer Satz von Projekt bzw. Aufgabe (für den Kunden):**
-1. Navigieren Sie zu **Verwaltung** → **[Projekte](https://web.timecockpit.com/app/lists/APP_DefaultProjectList)** oder **[Aufgaben](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
+**Verrechenbarer Satz von Projekt bzw. Tätigkeit (für den Kunden):**
+1. Navigieren Sie zu **Verwaltung** → **[Projekte](https://web.timecockpit.com/app/lists/APP_DefaultProjectList)** oder **[Tätigkeiten](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
 2. Setzen Sie **Hourly Rate:** auf den Verrechnungssatz für den Kunden (z. B. 150 $/Stunde)
 3. Speichern Sie
 
@@ -205,9 +205,9 @@ Project: Website Development
 
 ### Methoden der Rentabilitätsanalyse
 
-**Option 1: Ansicht Budgetary Control**
+**Option 1: Ansicht Budgetkontrolle**
 Die integrierte Liste zeigt automatisch:
-- **Revenue**: Was Sie Kunden verrechnen
+- **Umsatz**: Was Sie Kunden verrechnen
 - **Costs**: Was Sie Mitarbeitern zahlen
 - **Margin**: Die berechnete Differenz
 
@@ -221,7 +221,7 @@ Erstellen Sie einen Bericht, der Folgendes zusammenfasst:
 Exportieren Sie die Daten der Zeitbuchungen nach Excel und erstellen Sie Pivot-Tabellen, die die Rentabilität zeigen nach:
 - Projekt
 - Kunde
-- Aufgabentyp
+- Tätigkeitstyp
 - Teammitglied
 - Zeitraum
 
@@ -249,7 +249,7 @@ Sagen Sie Fertigstellungstermine und Budgetüberschreitungen mit einer geschwind
 
 ### Prognose der Budgetkontrolle verwenden
 
-1. Navigieren Sie zu **Verwaltung** → **Projekte** → Ansicht **Budgetary Control**
+1. Navigieren Sie zu **Verwaltung** → **Projekte** → Ansicht **Budgetkontrolle**
 2. Prüfen Sie die Prognosespalten:
    - **Forecast Hours**: Voraussichtliche Gesamtstunden beim aktuellen Tempo
    - **Budget Variance**: Differenz zwischen Plan und Prognose
@@ -339,19 +339,19 @@ Wenn Prognosen Überschreitungen vorhersagen:
 
 ### Ansatz 1: Transparenz und Überwachung (empfohlen)
 
-**Budgets auf Aufgabenebene festlegen:**
-1. Konfigurieren Sie Budgets unter [Verwaltung → Aufgaben](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
+**Budgets auf Tätigkeitsebene festlegen:**
+1. Konfigurieren Sie Budgets unter [Verwaltung → Tätigkeiten](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)
 2. Teilen Sie die Budgets den Teammitgliedern mit
-3. Machen Sie die Budgets in den Aufgabenbeschreibungen sichtbar
+3. Machen Sie die Budgets in den Tätigkeitsbeschreibungen sichtbar
 
 **Regelmäßig überwachen:**
 - Wöchentliche Besprechungen zur Budgetüberprüfung
 - Berichte zur Budgetkontrolle mit dem Team teilen
-- Aufgaben kennzeichnen, die sich ihrer Grenze nähern (ab 80 %)
+- Tätigkeiten kennzeichnen, die sich ihrer Grenze nähern (ab 80 %)
 
 ### Ansatz 2: Proaktive Benachrichtigungen
 
-Richten Sie Warnungen ein, wenn Aufgaben ihre Budgetgrenzen erreichen:
+Richten Sie Warnungen ein, wenn Tätigkeiten ihre Budgetgrenzen erreichen:
 - **Schwelle 80 %**: Warnung an die zuständige Person
 - **Schwelle 90 %**: Eskalation an den Projektleiter
 - **Schwelle 100 %**: Genehmigung durch die Führungskraft für zusätzliche Zeit erforderlich
@@ -362,7 +362,7 @@ Richten Sie Warnungen ein, wenn Aufgaben ihre Budgetgrenzen erreichen:
 
 Schränken Sie mit Berechtigungen die Zeiterfassung ein, wenn Budgets überschritten sind:
 - Validierungsregeln für Zeitbuchungen anlegen
-- Speichern blockieren, wenn das Aufgabenbudget überschritten ist
+- Speichern blockieren, wenn das Tätigkeitsbudget überschritten ist
 - Freigabe durch die Führungskraft bei berechtigten Überschreitungen verlangen
 
 **Umsetzung**: Erfordert eine [Anpassung des Datenmodells](/doc/data-model-customization/entity.html)
@@ -370,7 +370,7 @@ Schränken Sie mit Berechtigungen die Zeiterfassung ein, wenn Budgets überschri
 ### Bewährter Ablauf
 
 **Planungsphase:**
-1. Realistische Aufgabenbudgets auf Basis historischer Daten festlegen
+1. Realistische Tätigkeitsbudgets auf Basis historischer Daten festlegen
 2. Budgets den zuständigen Personen mitteilen
 3. Die Gründe für Budgetgrenzen erklären (Rentabilität, Erwartungen des Kunden usw.)
 
@@ -383,7 +383,7 @@ Schränken Sie mit Berechtigungen die Zeiterfassung ein, wenn Budgets überschri
 **Umgang mit Abweichungen:**
 1. Beim Erreichen der Grenze: Verbleibende Arbeit realistisch einschätzen
 2. Bei Bedarf eine Budgeterhöhung beantragen (mit datengestützter Begründung)
-3. Oder den Umfang der Aufgabe an das Budget anpassen
+3. Oder den Umfang der Tätigkeit an das Budget anpassen
 4. Erkenntnisse für künftige Schätzungen dokumentieren
 
 ### Kultureller Ansatz
@@ -481,7 +481,7 @@ Siehe: [Leitfaden zu Berechtigungen](/doc/data-model/permissions-guide.html)
 ## Verwandte Funktionen
 
 ### Projektmanagement
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md) - Projekthierarchie einrichten
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md) - Projekthierarchie einrichten
 - [Stundensätze](~/doc/projektzeiterfassung/stundensaetze.md) - Verrechnungs- und Kostensätze konfigurieren
 - [Zeitbuchungen für Projekte](~/doc/projektzeiterfassung/zeitbuchungen.md) - Zeiten auf Projekte erfassen
 

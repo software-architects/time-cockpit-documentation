@@ -63,7 +63,7 @@ Verwenden Sie die Standardimplementierung der Budgetkontrolle und die zugehörig
 Siehe:
 
 - [Implementierung der Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)
-- [Kunde / Projekt / Aufgabe](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+- [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 
 ## Web API und Integrationen

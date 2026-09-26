@@ -11,7 +11,7 @@ en_page: doc/mcp/overview.md
 > [!NOTE]
 > Verfügbarkeit: Der MCP-Server von time cockpit befindet sich derzeit in der Public Preview. Bei Fragen oder Feedback erreichen Sie uns gerne unter [support@timecockpit.com](mailto:support@timecockpit.com).
 
-Der MCP-Server von time cockpit stellt Daten und Funktionen von time cockpit (Projekte, Kunden, Aufgaben, Zeitbuchungen, benannte Listen) über das [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) für KI-Assistenten bereit. Es handelt sich um einen Remote-Server, den Clients über Streamable HTTP erreichen. Jeder Benutzer meldet sich mit seinem eigenen Microsoft-Entra-ID-Geschäftskonto an, sodass der Assistent nur sieht, was dieser Benutzer in time cockpit sehen darf. Aktionen aus dem Datenmodell sind über den MCP-Server nicht verfügbar; führen Sie diese in der Oberfläche von time cockpit aus.
+Der MCP-Server von time cockpit stellt Daten und Funktionen von time cockpit (Projekte, Kunden, Tätigkeiten, Zeitbuchungen, benannte Listen) über das [Model Context Protocol](https://modelcontextprotocol.io/) (MCP) für KI-Assistenten bereit. Es handelt sich um einen Remote-Server, den Clients über Streamable HTTP erreichen. Jeder Benutzer meldet sich mit seinem eigenen Microsoft-Entra-ID-Geschäftskonto an, sodass der Assistent nur sieht, was dieser Benutzer in time cockpit sehen darf. Aktionen aus dem Datenmodell sind über den MCP-Server nicht verfügbar; führen Sie diese in der Oberfläche von time cockpit aus.
 
 Für Administratoren und Anpasser, die IronPython-Scripting gegen den Live-Datenkontext benötigen, gibt es einen lokalen stdio-Server (`OnCockpit.Admin.exe --mcp`, nur Windows); siehe [OnCockpit Admin: lokaler MCP-Server](/doc/mcp/oncockpit-admin-local.html). Der Rest dieses Abschnitts behandelt den Remote-Server.
 
@@ -96,7 +96,7 @@ Jeder Client hat seine eigene Konfiguration. Ein in Claude Code registrierter Se
 ## Was der Server nicht durchsetzen kann: Ihre Daten gehen an den KI-Anbieter
 
 > [!IMPORTANT]
-> Alles, was ein Assistent über den MCP-Server liest – Kunden, Projekte, Aufgaben, Zeitbuchungen, Namen, Stundensätze, Notizen –, wird an den KI-Anbieter (Anthropic, OpenAI, Microsoft, …) gesendet und nach dessen Bedingungen verarbeitet. Berechtigungen, `readonly` und `owndata` begrenzen, **was** ein Benutzer sehen kann, nicht aber, **wohin** die Daten gehen, sobald der Assistent sie hat.
+> Alles, was ein Assistent über den MCP-Server liest – Kunden, Projekte, Tätigkeiten, Zeitbuchungen, Namen, Stundensätze, Notizen –, wird an den KI-Anbieter (Anthropic, OpenAI, Microsoft, …) gesendet und nach dessen Bedingungen verarbeitet. Berechtigungen, `readonly` und `owndata` begrenzen, **was** ein Benutzer sehen kann, nicht aber, **wohin** die Daten gehen, sobald der Assistent sie hat.
 >
 > Klären Sie den Einsatz von KI-Assistenten mit time cockpit vorab mit Ihrer IT, Ihrem Datenschutzbeauftragten oder Ihrem Compliance-Team. Prüfen Sie die Einstellungen des Anbieters für den Plan Ihrer Organisation: Datenaufbewahrung, Chat-Gedächtnis, Teilen von Unterhaltungen und ob Ihre Daten für das Training von Modellen verwendet werden dürfen. Gehostete Clients wie ChatGPT und claude.ai können zusätzlich Chat-Kontext und Erinnerungen mit der verbundenen App teilen. time cockpit hat keinen Einfluss auf diese Einstellungen.
 

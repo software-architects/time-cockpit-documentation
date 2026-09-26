@@ -33,8 +33,8 @@ Diese Liste ist typischerweise relevant für:
 | Benutzer | `UserDetailName`, `UserDetailUuid` | Benutzer des Arbeitszeitdatensatzes | Anzeigewert des Benutzerdetails |
 | Working Time Category | `APP_WorkingTimeCategoryCode` | Code der zugehörigen Arbeitszeitkategorie | Aus der verknüpften Arbeitszeitkategorie übernommen |
 | Normal Working Hours Configured | `APP_HasConfiguredWorkingTimeWindows` | Ob explizite Arbeitszeitfenster vorhanden sind | Als `true` berechnet, wenn in der Woche mindestens ein konfiguriertes Fenster mit Beginn und Ende existiert |
-| Valid From | `APP_ValidFrom` | Beginn des Gültigkeitszeitraums | Aus dem Arbeitszeitdatensatz übernommen |
-| Valid Until | `APP_ValidUntil` | Ende des Gültigkeitszeitraums | Aus dem Arbeitszeitdatensatz übernommen |
+| Gültig ab | `APP_ValidFrom` | Beginn des Gültigkeitszeitraums | Aus dem Arbeitszeitdatensatz übernommen |
+| Gültig bis | `APP_ValidUntil` | Ende des Gültigkeitszeitraums | Aus dem Arbeitszeitdatensatz übernommen |
 | Description | `APP_Description` | Beschreibung des Datensatzes | Aus dem Arbeitszeitdatensatz übernommen |
 | Monday to Sunday | `APP_HoursMonday` ... `APP_HoursSunday` | Sollstunden pro Wochentag | Aus den Wochentagsfeldern des Datensatzes übernommen |
 | Sum Hours | `APP_SumHours` | Gesamte Soll-Wochenstunden | Aus dem Summenwert des Datensatzes übernommen |
@@ -48,4 +48,4 @@ Diese Liste ist typischerweise relevant für:
 ## Verwandte Seiten
 
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)
-- [Target-Actual Hours Comparison](~/doc/referenz/listen/soll-ist-vergleich.md)
+- [Soll-Ist-Vergleich](~/doc/referenz/listen/soll-ist-vergleich.md)

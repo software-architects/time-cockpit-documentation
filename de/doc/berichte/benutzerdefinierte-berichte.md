@@ -12,7 +12,7 @@ Zusätzlich zu den generierten druckbaren Berichten können Sie einer time cockp
 
 ## Berichtsdefinition herunterladen
 
-Am einfachsten beginnen Sie mit benutzerdefinierten Berichten, indem Sie die Berichtsdefinition aus dem Dropdown-Menü der geteilten Schaltfläche **Druckansicht** herunterladen. Klicken Sie auf **Download Report Definition**, um die Berichtsdefinition herunterzuladen, die für eine Standard-**Listenansicht** generiert wird.
+Am einfachsten beginnen Sie mit benutzerdefinierten Berichten, indem Sie die Berichtsdefinition aus dem Dropdown-Menü der geteilten Schaltfläche **Druckansicht** herunterladen. Klicken Sie auf **Berichtsdefinition downloaden**, um die Berichtsdefinition herunterzuladen, die für eine Standard-**Listenansicht** generiert wird.
 
 ![Berichtsdefinition herunterladen](/doc/reporting/images/download-report-definition.png "Berichtsdefinition herunterladen")
 
@@ -24,7 +24,7 @@ Die Verwendung von [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/l
 
 ## Bericht testen
 
-Um eine benutzerdefinierte Berichtsdefinition zu testen, öffnen Sie das **Zahnrad**-Menü und klicken Sie auf **Load Report Definition**. Der benutzerdefinierte Bericht wird in die eingebettete Berichtsanzeige von time cockpit geladen. Als Datenquelle verwendet time cockpit das Ergebnis der Liste, an die der Bericht angehängt wurde. Wenn Sie den Filter dieser Liste ändern, wird der Bericht mit den Daten gemäß den neuen Filterkriterien gefüllt.
+Um eine benutzerdefinierte Berichtsdefinition zu testen, öffnen Sie das **Zahnrad**-Menü und klicken Sie auf **Berichtsdefinition laden**. Der benutzerdefinierte Bericht wird in die eingebettete Berichtsanzeige von time cockpit geladen. Als Datenquelle verwendet time cockpit das Ergebnis der Liste, an die der Bericht angehängt wurde. Wenn Sie den Filter dieser Liste ändern, wird der Bericht mit den Daten gemäß den neuen Filterkriterien gefüllt.
 
 ![Bericht testen](/doc/reporting/images/test-report.png "Bericht testen")
 
@@ -40,8 +40,8 @@ Ein Klick auf **Bericht speichern** öffnet einen Dialog. Legen Sie dort einen a
 
 Zusätzlich können Sie im Dialog erweiterte Einstellungen festlegen:
 
-- Is Visible Expression: Ein TCQL-Ausdruck, der bestimmt, wann ein benutzerdefinierter Bericht sichtbar ist. Details zu TCQL-Ausdrücken finden Sie unter Expression Language (TCQL).
-- Sort Order: Die Sortierreihenfolge bestimmt, an welcher Position Ihr benutzerdefinierter Bericht angezeigt wird.
+- Formel für Sichtbarkeit: Ein TCQL-Ausdruck, der bestimmt, wann ein benutzerdefinierter Bericht sichtbar ist. Details zu TCQL-Ausdrücken finden Sie unter Expression Language (TCQL).
+- Sortierreihenfolge: Die Sortierreihenfolge bestimmt, an welcher Position Ihr benutzerdefinierter Bericht angezeigt wird.
 
 > [!NOTE]
 > Die Position der Standard-Listenansicht und der Druckansicht ist fest. Sie können nur die Position innerhalb Ihrer benutzerdefinierten Berichte festlegen.
@@ -50,6 +50,6 @@ Klicken Sie auf **Speichern & schließen**, und der Bericht wird dauerhaft an ei
 
 ## Bericht aktualisieren
 
-Um einen benutzerdefinierten Bericht zu aktualisieren, klicken Sie auf **Download Report Definition** und gehen Sie wie unter [Bericht anpassen](#bericht-anpassen) beschrieben vor. Wenn Sie mit den Änderungen am Bericht fertig sind, klicken Sie auf **Upload New Report Definition**. Damit wird die aktuelle Berichtsdefinition ersetzt.
+Um einen benutzerdefinierten Bericht zu aktualisieren, klicken Sie auf **Berichtsdefinition downloaden** und gehen Sie wie unter [Bericht anpassen](#bericht-anpassen) beschrieben vor. Wenn Sie mit den Änderungen am Bericht fertig sind, klicken Sie auf **Neue Berichtsdefinition uploaden**. Damit wird die aktuelle Berichtsdefinition ersetzt.
 
 ![Bericht speichern](/doc/reporting/images/update-report.png "Bericht aktualisieren")

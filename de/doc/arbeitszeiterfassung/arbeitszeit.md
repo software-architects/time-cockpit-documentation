@@ -19,7 +19,7 @@ Diese Seite behandelt:
 - Urlaubsanspruch und Resturlaub
 - Kalender der gesetzlichen Feiertage
 - Soll- und Iststunden im Vergleich
-- Überstunden und Überstundenkorrekturen
+- Überstunden und Korrekturen des Arbeitszeitsaldos
 
 ## Wochenarbeitszeit
 Vor Version 1.7 von time cockpit konnte nur die aktuelle Soll-Arbeitszeit pro Woche gespeichert werden. Sie wurde verwendet, um im Zeiterfassungskalender ein Diagramm mit Soll- und Ist-Arbeitszeit anzuzeigen. Wurden die Sollstunden pro Woche geändert, änderten sich die berechneten Sollstunden pro Tag, Woche und Monat auch für die Vergangenheit.
@@ -54,7 +54,7 @@ Den Urlaubsanspruch verwalten Sie unter [Benutzer -> Urlaubsanspruch](https://we
 
 Jeder Urlaubsverbrauch wird automatisch in Wochen umgerechnet. Dabei werden die Sollstunden jedes Tages berücksichtigt (siehe Wochenarbeitszeit). Auch nicht ganztägige Urlaube werden in Wochen umgerechnet.
 Gesetzliche Feiertage während eines Urlaubs verringern den Resturlaub nicht. Wie Sie gesetzliche Feiertage automatisch mit einem Skript anlegen, lesen Sie unter [Feiertage mit Skripten hinzufügen](/doc/scripting/add-holidays.html).
-Urlaube, die als Special Leave markiert sind, verringern den Resturlaub nicht. Mit Sonderurlaub können Sie zusätzlichen bezahlten Urlaub aus besonderen Anlässen wie Hochzeit oder Umzug gewähren.
+Urlaube, die als Sonderurlaub markiert sind, verringern den Resturlaub nicht. Mit Sonderurlaub können Sie zusätzlichen bezahlten Urlaub aus besonderen Anlässen wie Hochzeit oder Umzug gewähren.
 
 > [!NOTE]
 > In time cockpit können Sie außerdem Krankenstände und Zeitausgleich unter [Benutzer -> Krankenstand](https://web.timecockpit.com/app/lists/entity/APP_SickLeave) und [Benutzer -> Zeitausgleich](https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime) verwalten.
@@ -64,30 +64,30 @@ Urlaube, die als Special Leave markiert sind, verringern den Resturlaub nicht. M
 Für die Abfrage von Urlaubsdaten stehen Ihnen in time cockpit zwei vordefinierte Listen zur Verfügung:
 
 - Die Liste [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation) zeigt für einen Mitarbeiter den Verlauf von Urlaubsanspruch, Urlaubsverbrauch und Resturlaub.
-- Die Liste [Benutzer -> Vacation per Effective Date](https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList) zeigt alle Mitarbeiter mit ihrem Resturlaub zu einem Stichtag.
+- Die Liste [Benutzer -> Resturlaub](https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList) zeigt alle Mitarbeiter mit ihrem Resturlaub zu einem Stichtag.
 
 In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie den Resturlaub eines Mitarbeiters mit der Funktion [RemainingVacationWeeks](/doc/tcql/functions-for-working-time-and-holidays.html#remainingvacationweeks) berechnen.
 
 ## Gesetzliche Feiertage
 
-Unter [Benutzer -> Legal Holiday Calendars](https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar) legen Sie einen oder mehrere Feiertagskalender an, zum Beispiel pro Land, pro Region oder für unternehmensspezifische Anforderungen.
+Unter [Benutzer -> Feiertagskalender](https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar) legen Sie einen oder mehrere Feiertagskalender an, zum Beispiel pro Land, pro Region oder für unternehmensspezifische Anforderungen.
 
-Unter [Benutzer -> Legal Holidays](https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday) pflegen Sie die konkreten Feiertage, die zu einem Kalender gehören.
+Unter [Benutzer -> Feiertage](https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday) pflegen Sie die konkreten Feiertage, die zu einem Kalender gehören.
 
-Jedem Benutzer kann anschließend in **User Details** ein Feiertagskalender zugewiesen werden. time cockpit verwendet den zugewiesenen Kalender bei der Berechnung von Soll-Arbeitszeit, Überstunden und urlaubsbezogenen Werten.
+Jedem Benutzer kann anschließend in **Benutzerdetails** ein Feiertagskalender zugewiesen werden. time cockpit verwendet den zugewiesenen Kalender bei der Berechnung von Soll-Arbeitszeit, Überstunden und urlaubsbezogenen Werten.
 
 ## Soll-Arbeitszeit
 
 Seit Version 1.7 kann time cockpit die Soll-Arbeitszeit eines Mitarbeiters für einen bestimmten Zeitraum berechnen. Dabei werden folgende Daten verwendet:
 
-- Die [Wochenarbeitszeit](#wochenarbeitszeit) des Mitarbeiters. time cockpit kann die Soll-Arbeitszeit des Mitarbeiters inklusive oder exklusive der inkludierten Überstunden pro Monat berechnen. Die Liste **Benutzer -> Target-Actual Hours Comparison** enthält beide Werte.
+- Die [Wochenarbeitszeit](#wochenarbeitszeit) des Mitarbeiters. time cockpit kann die Soll-Arbeitszeit des Mitarbeiters inklusive oder exklusive der inkludierten Überstunden pro Monat berechnen. Die Liste **Benutzer -> Soll-Ist-Vergleich** enthält beide Werte.
 - [Verbrauchter Urlaub und Krankenstände](#urlaubsverwaltung) des Mitarbeiters.
 - Alle [gesetzlichen Feiertage](#gesetzliche-feiertage), die in time cockpit erfasst sind.
 
 > [!WARNING]
 > Bitte beachten Sie, dass Eintritts- und Austrittsdatum bei der Berechnung nicht berücksichtigt werden. Es wird nur der Gültigkeitszeitraum der Wochenarbeitszeit verwendet.
 
-Die Liste **Benutzer -> Target-Actual Hours Comparison** zeigt Ihnen Soll- und Ist-Arbeitszeit pro Mitarbeiter. Für Abweichungen zwischen Ist- und Sollstunden gelten folgende Regeln:
+Die Liste **Benutzer -> Soll-Ist-Vergleich** zeigt Ihnen Soll- und Ist-Arbeitszeit pro Mitarbeiter. Für Abweichungen zwischen Ist- und Sollstunden gelten folgende Regeln:
 
 - Hat ein Mitarbeiter weniger Stunden gearbeitet als die berechneten Sollstunden exkl. inkludierter Überstunden, wird die Abweichung zwischen Iststunden und Sollstunden exkl. inkludierter Überstunden angezeigt (negativer Wert).
 - Hat ein Mitarbeiter mehr Stunden gearbeitet als die berechneten Sollstunden inkl. inkludierter Überstunden, wird die Abweichung zwischen Iststunden und Sollstunden inkl. inkludierter Überstunden angezeigt (positiver Wert).
@@ -97,7 +97,7 @@ In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Soll-Arbeitszeit ein
 
 ## Ist-Arbeitszeit
 
-Die Ist-Arbeitszeit wird berechnet, indem alle Zeitbuchungen summiert werden. Überschneiden sich Zeitbuchungen, werden die Stunden nicht doppelt gezählt. Legen Sie zum Beispiel eine Zeitbuchung von 9 bis 11 Uhr und eine weitere von 10 bis 12 Uhr an, werden nur 3 Stunden gezählt. Seit Version 1.7 können Sie optional für jede Zeitbuchung eine Arbeitszeitgewichtung angeben (z. B. 150 % für Zeitbuchungen an Samstagen und Sonntagen). Die verfügbaren Arbeitszeitgewichtungen verwalten Sie im Menüpunkt **Working Time Weight**. Bei der Berechnung der Ist-Arbeitszeit wird die Dauer einer Zeitbuchung in Stunden mit der Arbeitszeitgewichtung multipliziert (sofern vorhanden).
+Die Ist-Arbeitszeit wird berechnet, indem alle Zeitbuchungen summiert werden. Überschneiden sich Zeitbuchungen, werden die Stunden nicht doppelt gezählt. Legen Sie zum Beispiel eine Zeitbuchung von 9 bis 11 Uhr und eine weitere von 10 bis 12 Uhr an, werden nur 3 Stunden gezählt. Seit Version 1.7 können Sie optional für jede Zeitbuchung eine Arbeitszeitgewichtung angeben (z. B. 150 % für Zeitbuchungen an Samstagen und Sonntagen). Die verfügbaren Arbeitszeitgewichtungen verwalten Sie im Menüpunkt **Arbeitszeitgewichtung**. Bei der Berechnung der Ist-Arbeitszeit wird die Dauer einer Zeitbuchung in Stunden mit der Arbeitszeitgewichtung multipliziert (sofern vorhanden).
 
 > [!NOTE]
 > time cockpit bietet keine Funktionen, um Arbeitszeitgewichtungen automatisch auszuwerten. Sie müssen die Gewichtung für jede Zeitbuchung manuell angeben. Ihre konkreten Berechnungsregeln für Arbeitszeitgewichtungen können Sie in Skripten und Aktionen abbilden. Bei Fragen wenden Sie sich bitte an support@timecockpit.com.
@@ -106,14 +106,14 @@ In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Ist-Arbeitszeit eine
 
 ## Überstundenberechnung
 
-Die Liste **Benutzer -> Overtime per Effective Date** ähnelt der Liste **Benutzer -> Target-Actual Hours Comparison**. In **Benutzer -> Target-Actual Hours Comparison** können Sie einen Zeitraum für die Berechnung von Ist- und Soll-Arbeitszeit wählen, während **Benutzer -> Overtime per Effective Date** die Überstunden ab dem Eintrittsdatum des Mitarbeiters berechnet.
+Die Liste **Benutzer -> Arbeitszeitsaldo** ähnelt der Liste **Benutzer -> Soll-Ist-Vergleich**. In **Benutzer -> Soll-Ist-Vergleich** können Sie einen Zeitraum für die Berechnung von Ist- und Soll-Arbeitszeit wählen, während **Benutzer -> Arbeitszeitsaldo** die Überstunden ab dem Eintrittsdatum des Mitarbeiters berechnet.
 
 Bei der Berechnung der Überstunden werden die Arbeitszeitgewichtung und die [inkludierten Überstunden](#wochenarbeitszeit) berücksichtigt.
 
-Über den Menüpunkt **Benutzer -> Overtime Corrections** können Sie die Überstunden eines Mitarbeiters für ein bestimmtes Datum manuell festlegen (z. B. um unvollständige Zeitbuchungen zu korrigieren oder wenn Überstunden ausbezahlt werden).
+Über den Menüpunkt **Benutzer -> Korrektur Arbeitszeitsaldo** können Sie die Überstunden eines Mitarbeiters für ein bestimmtes Datum manuell festlegen (z. B. um unvollständige Zeitbuchungen zu korrigieren oder wenn Überstunden ausbezahlt werden).
 
 > [!NOTE]
-> Bitte beachten Sie, dass die Überstundenkorrektur den Überstundenstand zum angegebenen Datum darstellt. Wenn Sie 100 eingeben, bedeutet das, dass der Mitarbeiter zum angegebenen Datum 100 Überstunden hat. Es bedeutet nicht, dass die Überstunden um 100 Stunden verringert oder erhöht werden.
+> Bitte beachten Sie, dass die Korrektur des Arbeitszeitsaldos den Überstundenstand zum angegebenen Datum darstellt. Wenn Sie 100 eingeben, bedeutet das, dass der Mitarbeiter zum angegebenen Datum 100 Überstunden hat. Es bedeutet nicht, dass die Überstunden um 100 Stunden verringert oder erhöht werden.
 
 In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Überstunden mit der Funktion [Overtime](/doc/tcql/functions-for-working-time-and-holidays.html#overtime) berechnen.
 
@@ -122,7 +122,7 @@ In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Überstunden mit der
 
 ## Sonderfälle bei Soll-Arbeitszeit und Überstunden
 
-Üblicherweise ändert sich die Wochenarbeitszeit zum Monatsende. Tragen Sie in diesem Fall beim ersten Datensatz den letzten Tag des Monats unter **Valid Until** und beim zweiten Datensatz den ersten Tag des Folgemonats unter **Valid From** ein.
+Üblicherweise ändert sich die Wochenarbeitszeit zum Monatsende. Tragen Sie in diesem Fall beim ersten Datensatz den letzten Tag des Monats unter **Gültig bis** und beim zweiten Datensatz den ersten Tag des Folgemonats unter **Gültig ab** ein.
 
 Ändert sich die Wochenarbeitszeit, wird die Überstundenberechnung komplexer. In diesem Fall teilt time cockpit die inkludierten Überstunden durch die Anzahl der Arbeitstage im Monat (unter Berücksichtigung von Urlaub, gesetzlichen Feiertagen und Krankenständen). Arbeitet ein Mitarbeiter in den ersten beiden Januarwochen 3 Tage pro Woche und in den letzten beiden Januarwochen 5 Tage pro Woche, ergeben sich ungefähr 7 Arbeitstage in der ersten und 12 Arbeitstage in der zweiten Januarhälfte. Die inkludierten Überstunden werden durch 19 (17 + 12) geteilt.
 

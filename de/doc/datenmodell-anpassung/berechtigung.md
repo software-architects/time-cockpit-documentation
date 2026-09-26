@@ -20,13 +20,13 @@ Im Standarddatenmodell von time cockpit ist das Rollenkonzept mit drei Entitäte
 
 ## Rollen verwalten
 
-Da Rollen ganz normale Datensätze sind, wie z. B. ein Projekt, eine Zeitbuchung oder ein Kunde, können sie ebenfalls mit der Schaltfläche ```New item``` angelegt werden. Nur Benutzer mit der Rolle ```Admin``` können neue Rollen anlegen. Eine Rolle hat 3 Eigenschaften.
+Da Rollen ganz normale Datensätze sind, wie z. B. ein Projekt, eine Zeitbuchung oder ein Kunde, können sie ebenfalls mit der Schaltfläche ```Neu``` angelegt werden. Nur Benutzer mit der Rolle ```Admin``` können neue Rollen anlegen. Eine Rolle hat 3 Eigenschaften.
 
 * Code: Der Code der Rolle. Der Code sollte kurz sein und **muss** eindeutig sein.
 * Name: Der Name der Rolle. Er dient dazu, die Rolle leichter zu erkennen.
 * Beschreibung: Eine optionale, ausführlichere Beschreibung der Rolle.
 
-Im Modul ```Benutzer``` finden Sie im Abschnitt "Rolemanagement" die Liste ```Roles```, in der Rollen hinzugefügt, bearbeitet und entfernt werden können. Zusätzlich bietet time cockpit eine Liste ```Assign roles```. In dieser Liste können Zuordnungen von Benutzern zu Rollen angelegt werden.
+Im Modul ```Benutzer``` finden Sie im Abschnitt "Rolemanagement" die Liste ```Rollen```, in der Rollen hinzugefügt, bearbeitet und entfernt werden können. Zusätzlich bietet time cockpit eine Liste ```Rollen zuordnen```. In dieser Liste können Zuordnungen von Benutzern zu Rollen angelegt werden.
 
 ![Berechtigungsverwaltung im Modul Benutzer](/doc/data-model-customization/images/permission-management-in-users-module.png "Berechtigungsverwaltung im Modul Benutzer")
 
@@ -63,7 +63,7 @@ In time cockpit können Berechtigungen für verschiedene Elemente des Datenmodel
 1. Nur Benutzer mit der Rolle ```Projectadmin``` sollen Projekte anlegen können
 1. Benutzer können Zeit nur auf Projekte erfassen, denen sie zugeordnet sind
 1. Nur Benutzer mit der Rolle ```Projectadmin``` dürfen die Eigenschaft ```Projectbudget``` sehen
-1. Die Liste ```budgetary control of projects``` soll nur für Benutzer mit der Rolle ```Evaluator``` verfügbar sein
+1. Die Liste ```Budgetkontrolle für Projekte``` soll nur für Benutzer mit der Rolle ```Evaluator``` verfügbar sein
 1. Die Aktion ```Complete project``` soll nur von einem ```Projectadmin``` ausgeführt werden
 
 Als Voraussetzung für die Anforderungen werden eine neue Rolle ```Projectadmin``` und ein neues Set ```MyProjects``` angelegt. Die Rolle ```Projectadmin``` soll einem Benutzer zugewiesen werden.
@@ -91,7 +91,7 @@ Berechtigungen auf Entitäten sind Berechtigungen auf Zeilenebene, weil z. B. ei
 
 ## Anforderung 1
 
-Eine Schreibberechtigung für eine Entität wird im Modul Anpassung unter ```Edit entity -> Permissions``` hinzugefügt. Grundsätzlich werden Berechtigungen für Entitäten und für Eigenschaften / Beziehungen mit demselben Mechanismus angelegt. Ob eine Berechtigung für eine Entität definiert wird, legen Sie im Formular ```New permission``` fest. Beim Hinzufügen einer neuen Berechtigung können Sie entweder die Entität selbst oder Eigenschaften und Beziehungen auswählen. Wählen Sie im Kombinationsfeld den Namen der Entität aus, wird eine Berechtigung für die Entität angelegt (in diesem Beispiel Projekt). Wählen Sie eine Eigenschaft oder Beziehung aus, wird eine Berechtigung angelegt, die nur für diese Eigenschaft / Beziehung gilt. Da für Anforderung (1) eine Entitätsberechtigung benötigt wird, wird der Name der Entität (```APP_Project```) ausgewählt.
+Eine Schreibberechtigung für eine Entität wird im Modul Anpassung unter ```Edit entity -> Permissions``` hinzugefügt. Grundsätzlich werden Berechtigungen für Entitäten und für Eigenschaften / Beziehungen mit demselben Mechanismus angelegt. Ob eine Berechtigung für eine Entität definiert wird, legen Sie im Formular ```Neue Berechtigung``` fest. Beim Hinzufügen einer neuen Berechtigung können Sie entweder die Entität selbst oder Eigenschaften und Beziehungen auswählen. Wählen Sie im Kombinationsfeld den Namen der Entität aus, wird eine Berechtigung für die Entität angelegt (in diesem Beispiel Projekt). Wählen Sie eine Eigenschaft oder Beziehung aus, wird eine Berechtigung angelegt, die nur für diese Eigenschaft / Beziehung gilt. Da für Anforderung (1) eine Entitätsberechtigung benötigt wird, wird der Name der Entität (```APP_Project```) ausgewählt.
 
 ![Entitäts- und Eigenschaftsberechtigung](/doc/data-model-customization/images/entity-vs-property-permission-web.png "Entitäts- und Eigenschaftsberechtigung")
 
@@ -118,7 +118,7 @@ Die Leseberechtigung ```Current.Code In Set ('MyProjects') Or 'PA' Set ('Current
 
 <!-- ## Berechtigungen auf Eigenschaften und Beziehungen
 
-Eine Schreibberechtigung für eine Eigenschaft und Beziehung wird im Modul Anpassung unter ```Edit entity -> Permissions``` hinzugefügt oder bearbeitet. Grundsätzlich werden Berechtigungen für Eigenschaften / Beziehungen und für Entitäten mit demselben Mechanismus angelegt. Ob eine Berechtigung für eine Eigenschaft / Beziehung definiert wird, legen Sie im Formular ```New permission``` fest. Wie die folgende Abbildung zeigt, können Sie im Kombinationsfeld für Berechtigungen auch Eigenschaften und Beziehungen sowie den _Namen der Entität_ auswählen. Wählen Sie im Kombinationsfeld den Namen einer Eigenschaft / Beziehung aus, wird eine Berechtigung für die Eigenschaft / Beziehung angelegt.
+Eine Schreibberechtigung für eine Eigenschaft und Beziehung wird im Modul Anpassung unter ```Edit entity -> Permissions``` hinzugefügt oder bearbeitet. Grundsätzlich werden Berechtigungen für Eigenschaften / Beziehungen und für Entitäten mit demselben Mechanismus angelegt. Ob eine Berechtigung für eine Eigenschaft / Beziehung definiert wird, legen Sie im Formular ```Neue Berechtigung``` fest. Wie die folgende Abbildung zeigt, können Sie im Kombinationsfeld für Berechtigungen auch Eigenschaften und Beziehungen sowie den _Namen der Entität_ auswählen. Wählen Sie im Kombinationsfeld den Namen einer Eigenschaft / Beziehung aus, wird eine Berechtigung für die Eigenschaft / Beziehung angelegt.
 
 ![Leseberechtigung für das Budget](/doc/data-model-customization/images/read-permission-on-budget.png "Leseberechtigung für das Budget") -->
 

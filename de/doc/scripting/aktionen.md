@@ -70,7 +70,7 @@ Eine Aktion kann optional eine Verarbeitungsdirektive `# IncludeClause` enthalte
   "<relation_name>[.<relation_name>...]"
  ```
 
-Angenommen, die folgende Aktion wird für Zeitbuchungen verwendet. Die `# IncludeClause` legt fest, dass Aufgaben, Projekte, Kunden und Rechnungen einbezogen werden sollen.
+Angenommen, die folgende Aktion wird für Zeitbuchungen verwendet. Die `# IncludeClause` legt fest, dass Tätigkeiten, Projekte, Kunden und Rechnungen einbezogen werden sollen.
 
 ```
 # IncludeClause .Include('APP_Task.APP_Project.APP_Customer').Include('Invoice')

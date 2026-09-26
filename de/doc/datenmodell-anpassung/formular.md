@@ -228,7 +228,7 @@ Die [TimeCockpit.Data.DataModel.View.RelationCell](/api/TimeCockpit.Data.DataMod
 
 Mit der Eigenschaft `SortDirection` können Sie die Einträge im Kombinationsfeld sortieren. Sie wird nur verwendet, wenn keine Standardliste für Beziehungen definiert ist und die Eigenschaft `List` nicht verwendet wird. Wird eine Liste als Datenquelle verwendet, gilt die Sortierung der Liste.
 
-Zusätzlich können Sie bei [TimeCockpit.Data.DataModel.View.RelationCell](/api/TimeCockpit.Data.DataModel.View.RelationCell.html)s eine `Condition` angeben, um die Werte des Kombinationsfelds zu filtern. Die `Condition` kann auf Werte des aktuellen [TimeCockpit.Data.EntityObject](/api/TimeCockpit.Data.EntityObject.html) verweisen. Im Standardformular `APP_TimesheetForm` wird die `Condition` verwendet, um nur Projekte anzuzeigen, die nicht abgeschlossen sind, und nur Aufgaben, die zum aktuell ausgewählten Projekt gehören:
+Zusätzlich können Sie bei [TimeCockpit.Data.DataModel.View.RelationCell](/api/TimeCockpit.Data.DataModel.View.RelationCell.html)s eine `Condition` angeben, um die Werte des Kombinationsfelds zu filtern. Die `Condition` kann auf Werte des aktuellen [TimeCockpit.Data.EntityObject](/api/TimeCockpit.Data.EntityObject.html) verweisen. Im Standardformular `APP_TimesheetForm` wird die `Condition` verwendet, um nur Projekte anzuzeigen, die nicht abgeschlossen sind, und nur Tätigkeiten, die zum aktuell ausgewählten Projekt gehören:
 
 ```
 <Section Header="=:Translate('Form.APP_TimesheetForm.ProjectSection')">

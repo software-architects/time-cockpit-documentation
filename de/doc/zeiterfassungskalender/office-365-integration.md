@@ -117,7 +117,7 @@ So machen Sie aus einem Outlook-Termin eine verrechenbare Zeitbuchung:
    - ✓ Beschreibung (aus dem Titel des Termins)
    - ✓ Ort (falls im Termin angegeben)
 3. **Vervollständigen Sie den Eintrag**, indem Sie Folgendes ergänzen:
-   - Projekt/Aufgabe (für die Verrechnung erforderlich)
+   - Projekt/Tätigkeit (für die Verrechnung erforderlich)
    - Zusätzliche Notizen oder Details
    - Kennzeichnung als verrechenbar (falls zutreffend)
 4. Klicken Sie auf **Speichern**

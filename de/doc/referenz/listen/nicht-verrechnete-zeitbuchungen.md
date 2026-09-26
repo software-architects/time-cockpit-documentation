@@ -1,12 +1,12 @@
 ---
-title: Nicht verrechnete Zeitbuchungen (Unbilled Timesheets)
-description: Referenz zur Standardliste Unbilled Timesheets in time cockpit mit Filtern, Spalten und der Aktion Create Invoice.
+title: Nicht verrechnete Zeitbuchungen
+description: Referenz zur Standardliste Nicht verrechnete Zeitbuchungen in time cockpit mit Filtern, Spalten und der Aktion Ausgangsrechnung anlegen.
 en_page: doc/reference/lists/unbilled-timesheets.md
 ---
 
 # Nicht verrechnete Zeitbuchungen
 
-Die Liste **Unbilled Timesheets** zeigt verrechenbare Zeitbuchungen, die noch keiner Rechnung zugeordnet sind. Sie ist der Standardausgangspunkt, um aus erfasster Arbeit Rechnungen zu erstellen.
+Die Liste **Nicht verrechnete Zeitbuchungen** zeigt verrechenbare Zeitbuchungen, die noch keiner Rechnung zugeordnet sind. Sie ist der Standardausgangspunkt, um aus erfasster Arbeit Rechnungen zu erstellen.
 
 ## Typische Zielgruppe
 
@@ -18,7 +18,7 @@ Mit den Standardberechtigungen ist diese Liste typischerweise relevant für:
 
 ## Navigation
 
-- Standardnavigation: `Management -> Billing -> Unbilled Timesheets`
+- Standardnavigation: `Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen`
 - Deeplink: `https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList`
 
 ## Was die Liste zeigt
@@ -40,11 +40,11 @@ Der Standardfilterbereich enthält diese Filter:
 | Benutzer | `APP_UserDetail` | Schränkt die Liste auf einen Benutzer ein |
 | Customer | `APP_Project.APP_Customer` | Schränkt die Liste auf einen Kunden ein |
 | Project | `APP_Project` | Schränkt die Liste auf ein Projekt ein |
-| Task | `APP_Task` | Schränkt die Liste auf eine Aufgabe ein |
+| Tätigkeit | `APP_Task` | Schränkt die Liste auf eine Tätigkeit ein |
 | Description | `APP_Description` | Sucht in der Beschreibung der Zeitbuchung |
 | From | `@BeginTime` | Zeigt Einträge ab dem ausgewählten Datum |
 | To | `@EndTime` | Zeigt Einträge bis zum ausgewählten Datum |
-| Billable | `APP_Billable` | Standardwert ist `true` |
+| Verrechenbar | `APP_Billable` | Standardwert ist `true` |
 | Billed | `APP_Billed` | Standardwert ist `false` |
 
 ## Spalten
@@ -56,7 +56,7 @@ Die folgende Tabelle dokumentiert die sichtbaren Standardspalten.
 | Benutzer | `APP_UserDetail`, Query-Alias `UserDetailName` | Benutzer, der die Zeitbuchung erfasst hat | Anzeigewert des zugehörigen Benutzerdetails |
 | Customer | `APP_Project.APP_Customer`, Query-Alias `CustomerName` | Kunde des zugehörigen Projekts | Anzeigewert des über das Projekt verknüpften Kunden |
 | Project | `APP_Project`, Query-Alias `ProjectName` | Zugehöriges Projekt | Anzeigewert des Projekts |
-| Task | `APP_Task`, Query-Alias `TaskName` | Zugehörige Aufgabe | Anzeigewert der Aufgabe |
+| Tätigkeit | `APP_Task`, Query-Alias `TaskName` | Zugehörige Tätigkeit | Anzeigewert der Tätigkeit |
 | Date | `APP_BeginTime`, angezeigt als `APP_Timesheet.APP_DateActual` | Kalenderdatum der Zeitbuchung | Basiert auf dem Beginndatum der Zeitbuchung |
 | Begin Time | `APP_BeginTimeActual` | Erfasste Beginnzeit | Aus der tatsächlichen Beginnzeit der Zeitbuchung übernommen |
 | End Time | `APP_EndTimeActual` | Erfasste Endzeit | Aus der tatsächlichen Endzeit der Zeitbuchung übernommen |
@@ -64,8 +64,8 @@ Die folgende Tabelle dokumentiert die sichtbaren Standardspalten.
 | Location | `APP_Location` | Ort oder Arbeitsort | Direkt aus der Zeitbuchung übernommen |
 | Hours | `APP_DurationInHours` | Dauer der Zeitbuchung | Berechnete Dauer der Zeitbuchung in Stunden |
 | Hourly Rate | `APP_HourlyRateActual` | Effektiver Stundensatz für verrechnungsbezogene Berechnungen | Aus dem tatsächlichen Stundensatz der Zeitbuchung übernommen |
-| Revenue | `APP_Revenue` | Berechneter Umsatz der Zeitbuchung | Standardumsatzwert der Zeitbuchung, typischerweise auf Basis von Dauer und effektivem Stundensatz |
-| Billable | `APP_Billable` | Gibt an, ob die Zeitbuchung verrechenbar ist | Aus der Zeitbuchung übernommen |
+| Umsatz | `APP_Revenue` | Berechneter Umsatz der Zeitbuchung | Standardumsatzwert der Zeitbuchung, typischerweise auf Basis von Dauer und effektivem Stundensatz |
+| Verrechenbar | `APP_Billable` | Gibt an, ob die Zeitbuchung verrechenbar ist | Aus der Zeitbuchung übernommen |
 | Billed | `APP_Billed` | Gibt an, ob die Zeitbuchung bereits der Verrechnung zugeordnet ist | Aus der Zeitbuchung übernommen |
 | Fixed Price | `APP_Project.APP_FixedPrice` | Gibt an, ob das zugehörige Projekt ein Fixpreisprojekt ist | Aus dem zugehörigen Projekt übernommen |
 
@@ -80,9 +80,9 @@ Damit lässt sich leichter eine Gruppe von Zeitbuchungen für eine einzelne Rech
 
 ## Standardaktion
 
-### Create Invoice
+### Ausgangsrechnung anlegen
 
-Die wichtigste Standardaktion dieser Liste ist `Create Invoice`.
+Die wichtigste Standardaktion dieser Liste ist `Ausgangsrechnung anlegen`.
 
 Im Standardablauf:
 
@@ -98,7 +98,7 @@ Den vollständigen Ablauf der Rechnungslegung finden Sie unter [Rechnungslegung]
 
 - Die Liste ist für verrechenbare Arbeit gedacht, die noch verrechnet werden muss.
 - Wenn Sie alle Zeitbuchungen statt nur der verrechenbaren und nicht verrechneten benötigen, verwenden Sie [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md).
-- Die Spaltenwerte stammen aus der zugrunde liegenden Zeitbuchung und dem zugehörigen Kunden-, Projekt-, Aufgaben- und Rechnungskontext.
+- Die Spaltenwerte stammen aus der zugrunde liegenden Zeitbuchung und dem zugehörigen Kunden-, Projekt-, Tätigkeits- und Rechnungskontext.
 
 ## Verwandte Seiten
 

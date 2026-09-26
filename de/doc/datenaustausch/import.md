@@ -31,7 +31,7 @@ Der Link führt zu einer Liste der Importdefinitionen. Ein Doppelklick auf eine 
 
 ## Neue Importdefinitionen automatisch generieren
 
-Öffnen Sie die Liste der Importdefinitionen und klicken Sie im Menüband auf 'New'. Damit öffnet sich der unten abgebildete Importdefinitionseditor. Der Importdefinitionseditor besteht aus vier Hauptbereichen:
+Öffnen Sie die Liste der Importdefinitionen und klicken Sie im Menüband auf 'Neu'. Damit öffnet sich der unten abgebildete Importdefinitionseditor. Der Importdefinitionseditor besteht aus vier Hauptbereichen:
 
 - Allgemeine Informationen: der Name, der Quelltyp und ob ein Berichtsprotokoll gespeichert werden soll.
 - Umgang mit der Beispieldatei: eine Beispieldatei für eine Importdefinition laden, speichern oder generieren.
@@ -44,7 +44,7 @@ Um eine Spaltenzuordnung festzulegen, benötigt der Importdefinitionseditor eine
 
 ![Auswahl der Entität im Modell](/doc/data-exchange/images/wc-model-entity-selection.png "Auswahl der Entität im Modell")
 
-Gehen wir zunächst vom ersten Szenario aus, in dem der Import eine Importdefinition und eine Beispieldatei für uns automatisch generieren soll. Klicken Sie auf **Create sample file** und wählen Sie **Customer** aus der Liste der verfügbaren Entitäten. Sie können auch mehrere Entitäten auswählen. Der Import legt dann mehrere Arbeitsblattzuordnungen an, eine pro ausgewählter Entität.
+Gehen wir zunächst vom ersten Szenario aus, in dem der Import eine Importdefinition und eine Beispieldatei für uns automatisch generieren soll. Klicken Sie auf **Vorlagedatei generieren** und wählen Sie **Customer** aus der Liste der verfügbaren Entitäten. Sie können auch mehrere Entitäten auswählen. Der Import legt dann mehrere Arbeitsblattzuordnungen an, eine pro ausgewählter Entität.
 
 Ein Klick auf **Auswählen** generiert eine Excel-Datei und eine passende Importdefinition. Wenn wir die angelegte Arbeitsblattzuordnung betrachten, sehen wir, dass der Import eine Arbeitsblattzuordnung für ein Arbeitsblatt namens **Customer** zur Entität **Customer** generiert hat, dazu eine Spaltenzuordnung für jede Eigenschaft von Customer (Kundennummer, Firmenbuchnummer, Firmenname, Kontaktinformationen, E-Mail, Fax usw.) und eine Spaltenzuordnung für die Beziehung zum Land.
 
@@ -59,7 +59,7 @@ Die Beziehung zum Land ist ein Sonderfall, da der Import den Wert der Eigenschaf
 
 Schließlich sehen wir, dass die automatisch generierte Importdefinition auch eine Statusspalte zuordnet. In die Statusspalte schreibt der Import zurück, ob der Import der jeweiligen Zeile erfolgreich war. Ist ein Fehler aufgetreten, wird eine Meldung in die Zelle geschrieben, damit Sie Probleme beim Importieren schnell erkennen und beheben können.
 
-Um die generierte Beispieldatei anzusehen, klicken Sie auf 'Save sample file'. Der Editor fragt nach einem Dateipfad und speichert die Beispieldatei am gewählten Ort. Wenn Sie die gespeicherte Datei öffnen, sehen Sie eine Excel-Datei ähnlich der folgenden Abbildung:
+Um die generierte Beispieldatei anzusehen, klicken Sie auf 'Vorlagedatei speichern'. Der Editor fragt nach einem Dateipfad und speichert die Beispieldatei am gewählten Ort. Wenn Sie die gespeicherte Datei öffnen, sehen Sie eine Excel-Datei ähnlich der folgenden Abbildung:
 
 ![Generierte Excel-Datei für Kunden](/doc/data-exchange/images/customer-excel.png "Generierte Excel-Datei für Kunden")
 
@@ -77,14 +77,14 @@ CUST1 | 123450001 | Nowhere Corp | Ms. Customer 1 | nobody@nowhere.com | +435060
 
 Die Statusspalte bleibt leer, da der Import sie mit dem Ergebnis des Imports für die jeweilige Zeile füllt.
 
-Um die Datei mit den Kundendaten zu importieren, klicken wir in der Liste der Importdefinitionen auf den Link 'Import'. Damit öffnet sich der Importdialog. In diesem Dialog importieren Sie Dateien für die gewählte Importdefinition. Stellen Sie sicher, dass die zu importierende Datei nicht in Excel geöffnet ist, und wählen Sie die Quelldatei über 'Select source file' aus.
+Um die Datei mit den Kundendaten zu importieren, klicken wir in der Liste der Importdefinitionen auf den Link 'Import'. Damit öffnet sich der Importdialog. In diesem Dialog importieren Sie Dateien für die gewählte Importdefinition. Stellen Sie sicher, dass die zu importierende Datei nicht in Excel geöffnet ist, und wählen Sie die Quelldatei über 'Datei auswählen' aus.
 
 > [!NOTE]
 > Die Quelldatei wird in dem Moment gelesen, in dem Sie sie auswählen. Spätere Änderungen an der Quelldatei übernimmt der Import nicht automatisch. Wenn sich die Quelle ändert, müssen Sie die Quelldatei erneut auswählen. Der Zeitstempel neben dem Dateinamen zeigt, wann die Datei ausgewählt wurde.
 
 ![Quelldatei auswählen](/doc/data-exchange/images/wc-select-source-file.png "Quelldatei auswählen")
 
-Nachdem Sie eine Quelldatei ausgewählt haben, werden zwei Schaltflächen aktiv: **Test import** und **Import durchführen**. Beim Testen eines Imports wird die Transaktion nach Abschluss zurückgesetzt. So können Sie den Import testen und sehen, ob er erfolgreich wäre, ohne tatsächlich Zeilen zu importieren. Beim Durchführen des Imports wird die Transaktion nur dann festgeschrieben, wenn überhaupt keine Fehler aufgetreten sind. Um zu prüfen, ob unser Beispielimport korrekt funktioniert, klicken Sie auf die Schaltfläche **Test import**:
+Nachdem Sie eine Quelldatei ausgewählt haben, werden zwei Schaltflächen aktiv: **Import testen** und **Import durchführen**. Beim Testen eines Imports wird die Transaktion nach Abschluss zurückgesetzt. So können Sie den Import testen und sehen, ob er erfolgreich wäre, ohne tatsächlich Zeilen zu importieren. Beim Durchführen des Imports wird die Transaktion nur dann festgeschrieben, wenn überhaupt keine Fehler aufgetreten sind. Um zu prüfen, ob unser Beispielimport korrekt funktioniert, klicken Sie auf die Schaltfläche **Import testen**:
 
 ![Erfolgreicher Importtest](/doc/data-exchange/images/wc-import-test-successful.png "Erfolgreicher Importtest")
 
@@ -105,7 +105,7 @@ Wir legen also ein neues Excel-Arbeitsblatt an, benennen es in 'Project' um und 
 
 ![Excel-Datei für Projekte](/doc/data-exchange/images/project-import-excel.png "Excel-Datei für Projekte")
 
-Als Nächstes legen Sie eine neue Importdefinition an. Öffnen Sie die Liste 'Importdefinition' und fügen Sie eine neue Importdefinition hinzu. Geben Sie einen Namen ein (z. B. 'Project minimal') und klicken Sie auf 'Load sample file'.
+Als Nächstes legen Sie eine neue Importdefinition an. Öffnen Sie die Liste 'Importdefinition' und fügen Sie eine neue Importdefinition hinzu. Geben Sie einen Namen ein (z. B. 'Project minimal') und klicken Sie auf 'Vorlagedatei laden'.
 
 Nachdem Sie die Beispieldatei geladen haben, legen Sie eine neue Arbeitsblattzuordnung an, indem Sie auf das '+'-Zeichen unter der Tabelle der Arbeitsblattzuordnungen klicken. Klicken Sie in der neu erschienenen Zeile auf die Quellspalte, um das Kombinationsfeld zu öffnen, und wählen Sie das Arbeitsblatt 'Project'. Wählen Sie außerdem in der Spalte 'Zielentität' die passende Entität 'Project'.
 

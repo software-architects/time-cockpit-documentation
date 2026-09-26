@@ -22,8 +22,8 @@ Diese Seite beschreibt die Standard-Navigationsstruktur in time cockpit, wenn `A
 
 Die Navigation von time cockpit hat drei Ebenen:
 
-1. **Modul**: Navigationseintrag der obersten Ebene, zum Beispiel `Timesheet`, `Management` oder `User`
-2. **Abschnitt**: Gruppierung innerhalb eines Moduls, zum Beispiel `Billing`
+1. **Modul**: Navigationseintrag der obersten Ebene, zum Beispiel `Zeiterfassung`, `Verwaltung` oder `Benutzer`
+2. **Abschnitt**: Gruppierung innerhalb eines Moduls, zum Beispiel `Verrechnung`
 3. **Befehl**: Menüeintrag, der eine Liste oder ein Formular öffnet
 
 ## Rollenbasierter Zugriff im Überblick
@@ -33,11 +33,11 @@ Die Navigation von time cockpit hat drei Ebenen:
 | Rolle | Schwerpunkt | Wichtigste Aufgaben |
 |------|---------------|---------------------|
 | **AccountAdmin** | Kontoverwaltung | Benutzerkonten, Rollen, Abrechnung, Kontoeinstellungen |
-| **BaseDataAdmin** | Stammdaten | Kunden, Projekte, Aufgaben, globale Einstellungen, Importdefinitionen |
-| **BillingAdmin** | Rechnungslegung und Umsatz | Rechnungen, Artikel, Einheiten, Firmen, Verrechnung von Projekten |
+| **BaseDataAdmin** | Stammdaten | Kunden, Projekte, Tätigkeiten, globale Einstellungen, Importdefinitionen |
+| **BillingAdmin** | Rechnungslegung und Umsatz | Rechnungen, Artikel, Einheiten, Gesellschaften, Verrechnung von Projekten |
 | **HumanResourcesAdmin** | HR und Mitarbeiterdaten | Benutzerdetails, Abwesenheiten, Arbeitszeit, Urlaubsansprüche |
 | **ProjectController** | Projektüberwachung | Lesezugriff auf alle Zeitbuchungen, Rechnungen und Projektdaten |
-| **ProjectManager** | Projektdurchführung | Zugewiesene Projekte verwalten, projektbezogene Zeitbuchungen ansehen, Aufgaben aktualisieren |
+| **ProjectManager** | Projektdurchführung | Zugewiesene Projekte verwalten, projektbezogene Zeitbuchungen ansehen, Tätigkeiten aktualisieren |
 | **DepartmentLead** | Teamführung | Abwesenheiten genehmigen, Zeiterfassungsdaten der Abteilung prüfen |
 | **NotificationManager** | Systembenachrichtigungen | Benachrichtigungen der Anwendung verwalten und versenden |
 | **User** | Zeiterfassung | Eigene Zeitbuchungen, Abwesenheiten und zugehörige Selbstbedienungsfunktionen |
@@ -49,88 +49,88 @@ Die Navigation von time cockpit hat drei Ebenen:
 | Zeiterfassung -> Zeitbuchungen | APP_Timesheet | https://web.timecockpit.com/app/lists/entity/APP_Timesheet |
 | Verwaltung -> Kunden | APP_Customer | https://web.timecockpit.com/app/lists/entity/APP_Customer |
 | Verwaltung -> Projekte | APP_Project | https://web.timecockpit.com/app/lists/entity/APP_Project |
-| Verwaltung -> Aufgaben | APP_Task | https://web.timecockpit.com/app/lists/entity/APP_Task |
-| Verwaltung -> Billing -> Rechnungen | APP_Invoice | https://web.timecockpit.com/app/lists/entity/APP_Invoice |
-| Verwaltung -> Billing -> Unbilled Timesheets | APP_UnbilledTimesheetsList | https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList |
-| Verwaltung -> Billing -> Budgetary Control of Projects | APP_BudgetaryControlOfProjectsList | https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList |
-| Verwaltung -> Billing -> Budgetary Control of Tasks | APP_BudgetaryControlOfTasksList | https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList |
-| Verwaltung -> Billing -> Articles | APP_Article | https://web.timecockpit.com/app/lists/entity/APP_Article |
-| Verwaltung -> Billing -> Units | APP_Unit | https://web.timecockpit.com/app/lists/entity/APP_Unit |
-| Verwaltung -> Billing -> Companies | APP_Company | https://web.timecockpit.com/app/lists/entity/APP_Company |
-| Verwaltung -> Countries | APP_Country | https://web.timecockpit.com/app/lists/entity/APP_Country |
-| Verwaltung -> Means of Transport | APP_MeansOfTransport | https://web.timecockpit.com/app/lists/entity/APP_MeansOfTransport |
-| Verwaltung -> Global Settings | APP_GlobalSettings | https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings |
+| Verwaltung -> Tätigkeiten | APP_Task | https://web.timecockpit.com/app/lists/entity/APP_Task |
+| Verwaltung -> Verrechnung -> Ausgangsrechnungen | APP_Invoice | https://web.timecockpit.com/app/lists/entity/APP_Invoice |
+| Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen | APP_UnbilledTimesheetsList | https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList |
+| Verwaltung -> Verrechnung -> Budgetkontrolle für Projekte | APP_BudgetaryControlOfProjectsList | https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList |
+| Verwaltung -> Verrechnung -> Budgetkontrolle für Tätigkeiten | APP_BudgetaryControlOfTasksList | https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList |
+| Verwaltung -> Verrechnung -> Artikel | APP_Article | https://web.timecockpit.com/app/lists/entity/APP_Article |
+| Verwaltung -> Verrechnung -> Einheiten | APP_Unit | https://web.timecockpit.com/app/lists/entity/APP_Unit |
+| Verwaltung -> Verrechnung -> Gesellschaften | APP_Company | https://web.timecockpit.com/app/lists/entity/APP_Company |
+| Verwaltung -> Länder | APP_Country | https://web.timecockpit.com/app/lists/entity/APP_Country |
+| Verwaltung -> Verkehrsmittel | APP_MeansOfTransport | https://web.timecockpit.com/app/lists/entity/APP_MeansOfTransport |
+| Verwaltung -> Globale Einstellungen | APP_GlobalSettings | https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings |
 | Verwaltung -> Musterbuchungen | APP_TimesheetTemplate | https://web.timecockpit.com/app/lists/entity/APP_TimesheetTemplate |
-| Verwaltung -> Template Queries | APP_TemplateQuery | https://web.timecockpit.com/app/lists/entity/APP_TemplateQuery |
+| Verwaltung -> Musterabfragen | APP_TemplateQuery | https://web.timecockpit.com/app/lists/entity/APP_TemplateQuery |
 | Verwaltung -> Importdefinitionen | APP_DefaultImportDefinitionList | https://web.timecockpit.com/app/lists/APP_DefaultImportDefinitionList |
-| Benutzer -> User Details | APP_UserDetail | https://web.timecockpit.com/app/lists/entity/APP_UserDetail |
+| Benutzer -> Benutzerdetails | APP_UserDetail | https://web.timecockpit.com/app/lists/entity/APP_UserDetail |
 | Benutzer -> Wochenarbeitszeit | APP_WeeklyHoursOfWork | https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork |
-| Benutzer -> Departments | APP_Department | https://web.timecockpit.com/app/lists/entity/APP_Department |
-| Benutzer -> Legal Holiday Calendars | APP_LegalHolidayCalendar | https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar |
-| Benutzer -> Legal Holidays | APP_LegalHoliday | https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday |
+| Benutzer -> Abteilungen | APP_Department | https://web.timecockpit.com/app/lists/entity/APP_Department |
+| Benutzer -> Feiertagskalender | APP_LegalHolidayCalendar | https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar |
+| Benutzer -> Feiertage | APP_LegalHoliday | https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday |
 | Benutzer -> Urlaub | APP_Vacation | https://web.timecockpit.com/app/lists/entity/APP_Vacation |
 | Benutzer -> Urlaubsanspruch | APP_VacationEntitlement | https://web.timecockpit.com/app/lists/entity/APP_VacationEntitlement |
-| Benutzer -> Vacation per Effective Date | APP_VacationPerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList |
+| Benutzer -> Resturlaub | APP_VacationPerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList |
 | Benutzer -> Krankenstand | APP_SickLeave | https://web.timecockpit.com/app/lists/entity/APP_SickLeave |
 | Benutzer -> Zeitausgleich | APP_CompensatoryTime | https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime |
-| Benutzer -> Working Time Weights | APP_WorkingTimeWeight | https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeWeight |
-| Benutzer -> Overtime Corrections | APP_OvertimeCorrection | https://web.timecockpit.com/app/lists/entity/APP_OvertimeCorrection |
-| Benutzer -> Overtime per Effective Date | APP_OvertimePerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_OvertimePerEffectiveDateList |
-| Benutzer -> Target-Actual Hours Comparison | APP_TargetActualHoursComparisonList | https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList |
-| Benutzer -> Zeitbericht | APP_DefaultTimeReportList | https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList |
-| Benutzer -> Home Office Overview | APP_HomeOfficeOverviewList | https://web.timecockpit.com/app/lists/APP_HomeOfficeOverviewList |
-| Benutzer -> Working Time Limits | APP_WorkingTimeLimit | https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeLimit |
-| Benutzer -> Working Time Violations | APP_DefaultWorkingTimeViolationList | https://web.timecockpit.com/app/lists/APP_DefaultWorkingTimeViolationList |
-| Benutzer -> Add Roles | APP_UserRole | https://web.timecockpit.com/app/lists/entity/APP_UserRole |
-| Benutzer -> Assign Roles | APP_UserDetailRole | https://web.timecockpit.com/app/lists/entity/APP_UserDetailRole |
+| Benutzer -> Arbeitszeitgewichtung | APP_WorkingTimeWeight | https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeWeight |
+| Benutzer -> Korrektur Arbeitszeitsaldo | APP_OvertimeCorrection | https://web.timecockpit.com/app/lists/entity/APP_OvertimeCorrection |
+| Benutzer -> Arbeitszeitsaldo | APP_OvertimePerEffectiveDateList | https://web.timecockpit.com/app/lists/APP_OvertimePerEffectiveDateList |
+| Benutzer -> Soll-Ist-Vergleich | APP_TargetActualHoursComparisonList | https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList |
+| Benutzer -> Stundenzettel | APP_DefaultTimeReportList | https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList |
+| Benutzer -> Telearbeitstage | APP_HomeOfficeOverviewList | https://web.timecockpit.com/app/lists/APP_HomeOfficeOverviewList |
+| Benutzer -> Höchstarbeitszeit | APP_WorkingTimeLimit | https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeLimit |
+| Benutzer -> Arbeitszeitverletzungen | APP_DefaultWorkingTimeViolationList | https://web.timecockpit.com/app/lists/APP_DefaultWorkingTimeViolationList |
+| Benutzer -> Rollen | APP_UserRole | https://web.timecockpit.com/app/lists/entity/APP_UserRole |
+| Benutzer -> Rollen zuordnen | APP_UserDetailRole | https://web.timecockpit.com/app/lists/entity/APP_UserDetailRole |
 
 ## Typische Zugriffsszenarien nach Rolle
 
 ### Ablauf für BillingAdmin
 
 **Verfügbare Navigation:**
-- Verwaltung -> Billing -> Rechnungen, Unbilled Timesheets, Budgetary Control of Projects, Articles, Units, Companies
+- Verwaltung -> Verrechnung -> Ausgangsrechnungen, Nicht verrechnete Zeitbuchungen, Budgetkontrolle für Projekte, Artikel, Einheiten, Gesellschaften
 - Lesezugriff auf alle Zeitbuchungen und Projekte
 
 **Typische Aufgaben:**
-1. [Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList) öffnen
+1. [Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList) öffnen
 2. Rechnungen aus verrechenbaren Zeitbuchungen erstellen
-3. [Rechnungen](https://web.timecockpit.com/app/lists/entity/APP_Invoice) verwalten
-4. [Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList) prüfen
+3. [Ausgangsrechnungen](https://web.timecockpit.com/app/lists/entity/APP_Invoice) verwalten
+4. [Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList) prüfen
 
 ### Ablauf für HumanResourcesAdmin
 
 **Verfügbare Navigation:**
-- Benutzer -> User Details, Wochenarbeitszeit, Departments, Legal Holidays
+- Benutzer -> Benutzerdetails, Wochenarbeitszeit, Abteilungen, Feiertage
 - Benutzer -> Urlaub, Krankenstand, Zeitausgleich
-- Benutzer -> Working Time Limits, Working Time Weights
+- Benutzer -> Höchstarbeitszeit, Arbeitszeitgewichtung
 
 **Typische Aufgaben:**
-1. [User Details](https://web.timecockpit.com/app/lists/entity/APP_UserDetail) verwalten
+1. [Benutzerdetails](https://web.timecockpit.com/app/lists/entity/APP_UserDetail) verwalten
 2. [Wochenarbeitszeit](https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork) konfigurieren
 3. [Urlaubsanträge](https://web.timecockpit.com/app/lists/entity/APP_Vacation) prüfen
-4. [Working Time Limits](https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeLimit) einrichten
+4. [Höchstarbeitszeit](https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeLimit) einrichten
 
 ### Ablauf für ProjectManager
 
 **Verfügbare Navigation:**
-- Verwaltung -> Billing -> Budgetary Control of Projects und Budgetary Control of Tasks für zugewiesene Projekte
-- Verwaltung -> Projekte und Aufgaben für zugewiesene Projekte
+- Verwaltung -> Verrechnung -> Budgetkontrolle für Projekte und Budgetkontrolle für Tätigkeiten für zugewiesene Projekte
+- Verwaltung -> Projekte und Tätigkeiten für zugewiesene Projekte
 
 **Typische Aufgaben:**
-1. [Projekte](https://web.timecockpit.com/app/lists/entity/APP_Project) und [Aufgaben](https://web.timecockpit.com/app/lists/entity/APP_Task) aktualisieren
-2. [Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList) überwachen
+1. [Projekte](https://web.timecockpit.com/app/lists/entity/APP_Project) und [Tätigkeiten](https://web.timecockpit.com/app/lists/entity/APP_Task) aktualisieren
+2. [Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList) überwachen
 3. Projektbezogene Zeitbuchungen prüfen
 
 ### Ablauf für DepartmentLead
 
 **Verfügbare Navigation:**
 - Benutzer -> Urlaub, Krankenstand und Zeitausgleich für Mitarbeiter der Abteilung
-- Benutzer -> Zeitbericht, Overtime Corrections und Overtime per Effective Date für Mitarbeiter der Abteilung
+- Benutzer -> Stundenzettel, Korrektur Arbeitszeitsaldo und Arbeitszeitsaldo für Mitarbeiter der Abteilung
 
 **Typische Aufgaben:**
 1. [Urlaubsanträge](https://web.timecockpit.com/app/lists/entity/APP_Vacation) genehmigen
-2. [Zeitbericht](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList) prüfen
+2. [Stundenzettel](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList) prüfen
 3. Abwesenheiten und Überstunden des Teams überwachen
 
 ## Verwandte Dokumentation

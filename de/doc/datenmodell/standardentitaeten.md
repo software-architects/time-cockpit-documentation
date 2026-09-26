@@ -21,7 +21,7 @@ Diese Seite dokumentiert ausführlich die wichtigsten Entitäten im Standarddate
 
 Die zentrale Entität zum Erfassen der Arbeitszeit. Jede Zeitbuchung in time cockpit ist ein Timesheet-Datensatz.
 
-**Zweck**: Erfasst einzelne Zeitbuchungen mit Beginn- und Endzeit, Zuordnung zu Projekt und Aufgabe, Beschreibung und Verrechnungsinformationen.
+**Zweck**: Erfasst einzelne Zeitbuchungen mit Beginn- und Endzeit, Zuordnung zu Projekt und Tätigkeit, Beschreibung und Verrechnungsinformationen.
 
 #### Wichtige Eigenschaften
 
@@ -51,21 +51,21 @@ Die zentrale Entität zum Erfassen der Arbeitszeit. Jede Zeitbuchung in time coc
 |----------|--------|-------------|----------|-------------|
 | `APP_UserDetail` | APP_UserDetail | Viele zu eins | Ja | Wer die Zeit erfasst hat |
 | `APP_Project` | APP_Project | Viele zu eins | Nein | Zugeordnetes Projekt |
-| `APP_Task` | APP_Task | Viele zu eins | Nein | Zugeordnete Aufgabe (legt das Projekt fest) |
+| `APP_Task` | APP_Task | Viele zu eins | Nein | Zugeordnete Tätigkeit (legt das Projekt fest) |
 | `APP_Invoice` | APP_Invoice | Viele zu eins | Nein | Rechnung, auf der diese Zeit verrechnet wurde |
 | `APP_WorkingTimeWeight` | APP_WorkingTimeWeight | Viele zu eins | Nein | Zeitgewichtung (z. B. 1,5-fach für Samstag) |
 | `APP_JourneyMeansOfTransport` | APP_MeansOfTransport | Viele zu eins | Nein | Verkehrsmittel (Auto, Zug, Flugzeug) |
 
 #### Geschäftsregeln
 
-1. **Projekt oder Aufgabe erforderlich**: Entweder `APP_Project` oder `APP_Task` muss gesetzt sein
-2. **Aufgabe legt Projekt fest**: Ist `APP_Task` gesetzt, wird `APP_Project` aus `Task.Project` abgeleitet
+1. **Projekt oder Tätigkeit erforderlich**: Entweder `APP_Project` oder `APP_Task` muss gesetzt sein
+2. **Tätigkeit legt Projekt fest**: Ist `APP_Task` gesetzt, wird `APP_Project` aus `Task.Project` abgeleitet
 3. **Berechnung des Stundensatzes**:
-   - Ist `APP_Task.HourlyRate` gesetzt → Stundensatz der Aufgabe verwenden
+   - Ist `APP_Task.HourlyRate` gesetzt → Stundensatz der Tätigkeit verwenden
    - Sonst, wenn `APP_Project.HourlyRate` gesetzt ist → Stundensatz des Projekts verwenden  
    - Sonst, wenn `APP_Customer.HourlyRate` gesetzt ist → Stundensatz des Kunden verwenden
    - Sonst → internen Stundensatz des Benutzers `APP_UserDetail.HourlyRate` verwenden
-4. **Berechnung von „verrechenbar“**: `APP_Billable` übernimmt standardmäßig das Verrechenbar-Kennzeichen von Projekt/Aufgabe
+4. **Berechnung von „verrechenbar“**: `APP_Billable` übernimmt standardmäßig das Verrechenbar-Kennzeichen von Projekt/Tätigkeit
 5. **Berechnung des Umsatzes**: Wird nur berechnet, wenn `Billable = true` und ein Stundensatz gesetzt ist
 
 #### Berechtigungen
@@ -246,7 +246,7 @@ Select New With
 
 Untereinheiten von Projekten, die bestimmte Arbeitspakete oder Phasen abbilden.
 
-**Zweck**: Projekte in erfassbare Aufgaben mit eigenen Budgets und Stundensätzen aufteilen.
+**Zweck**: Projekte in erfassbare Tätigkeiten mit eigenen Budgets und Stundensätzen aufteilen.
 
 #### Wichtige Eigenschaften
 
@@ -256,10 +256,10 @@ Untereinheiten von Projekten, die bestimmte Arbeitspakete oder Phasen abbilden.
 | `APP_TaskName` | Text(200) | Ja | Anzeigename |
 | `APP_Code` | Text(50) | Ja | Kurzcode |
 | `APP_Description` | Text(2000) | Nein | Ausführliche Beschreibung |
-| `APP_BudgetInHours` | Decimal(18,2) | Nein | Zeitbudget für diese Aufgabe |
+| `APP_BudgetInHours` | Decimal(18,2) | Nein | Zeitbudget für diese Tätigkeit |
 | `APP_HourlyRate` | Decimal(18,2) | Nein | Eigener Stundensatz (überschreibt den Stundensatz des Projekts) |
 | `APP_Billable` | Boolean | Nein | Überschreibt die Verrechenbar-Einstellung des Projekts |
-| `APP_Closed` | Boolean | Ja | Standard: false - Ist die Aufgabe abgeschlossen? |
+| `APP_Closed` | Boolean | Ja | Standard: false - Ist die Tätigkeit abgeschlossen? |
 | `APP_CodeAndDescription` | Text | Berechnet | `Code + " - " + TaskName` |
 
 #### Beziehungen
@@ -270,7 +270,7 @@ Untereinheiten von Projekten, die bestimmte Arbeitspakete oder Phasen abbilden.
 
 #### TCQL-Beispiele
 
-**Aufschlüsselung der Aufgaben mit Stunden abrufen:**
+**Aufschlüsselung der Tätigkeiten mit Stunden abrufen:**
 ```tcql
 From T In APP_Task
 Where T.APP_Project.APP_Code = 'AdventureApp'

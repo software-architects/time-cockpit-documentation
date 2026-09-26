@@ -17,4 +17,4 @@ Wenn Sie den Signal Tracker beenden oder pausieren, zeichnet er keine Netzwerkve
 
 Parametername | Datentyp | Beschreibung
 --- | --- | ---
-Query interval (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker Netzwerkverbindungen aufzeichnet. Die Einstellung `00:01:00` legt fest, dass der Tracker Netzwerkverbindungen jede Minute aufzeichnen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 1 Minute.
+Abfrageintervall (`Interval`) | Zeitspanne | Intervall, in dem der Signal Tracker Netzwerkverbindungen aufzeichnet. Die Einstellung `00:01:00` legt fest, dass der Tracker Netzwerkverbindungen jede Minute aufzeichnen soll. Kleinere Werte können die Performance Ihres Computers verringern, größere Werte führen zu ungenaueren Werten. Wir empfehlen eine Zeitspanne von 1 Minute.

@@ -38,7 +38,7 @@ Für Österreich und Deutschland werden vordefinierte Arbeitszeitgrenzen mitgeli
     - [ArbZG Deutschland](https://www.gesetze-im-internet.de/arbzg/BJNR117100994.html)
 
 > [!IMPORTANT]
-> Die neuen Funktionen sind für bestehende Kunden standardmäßig nicht aktiviert. So unterbrechen wir keine bestehenden Prozesse. Wenn Sie die neuen Funktionen ausprobieren möchten oder wissen, dass Sie eine angepasste Logik für Arbeitszeitverstöße verwenden, wenden Sie sich bitte an support@timecockpit.com
+> Die neuen Funktionen sind für bestehende Kunden standardmäßig nicht aktiviert. So unterbrechen wir keine bestehenden Prozesse. Wenn Sie die neuen Funktionen ausprobieren möchten oder wissen, dass Sie eine angepasste Logik für Arbeitszeitverletzungen verwenden, wenden Sie sich bitte an support@timecockpit.com
 
 **Erweiterte Arbeitszeitprüfung (Update Mai 2025)**
 
@@ -70,30 +70,30 @@ Das ermöglicht:
 **Verbesserte Konfigurationsmöglichkeiten**
 
 Bisher konnten Einstellungen wie die anzuwendenden Prüfungen (z. B. Nachtruhe, Höchststunden) nur global festgelegt werden.  
-Mit diesem Update können Sie diese Prüfungen jetzt **für jede Arbeitszeitgrenze einzeln festlegen** und haben damit deutlich mehr Kontrolle und Flexibilität.
+Mit diesem Update können Sie diese Prüfungen jetzt **für jede Höchstarbeitszeit einzeln festlegen** und haben damit deutlich mehr Kontrolle und Flexibilität.
 
 
 > [!WARNING]
 > Bitte beachten Sie, dass time cockpit mit Stand Dezember 2023 NICHT prüft, ob die durchschnittliche WÖCHENTLICHE Arbeitszeit über einen Durchrechnungszeitraum (DE/AT: 16 Wochen) überschritten wurde.
 
-Standardmäßig prüft time cockpit keine Arbeitszeitgrenzen. Sie müssen die Prüfungen einmalig in den globalen Einstellungen aktivieren. Außerdem müssen Sie die Prüfungen aktivieren, die tatsächlich durchgeführt werden sollen. Sie können also bestimmte Prüfungen deaktivieren, wenn sie für Ihr Unternehmen nicht gelten.
+Standardmäßig prüft time cockpit keine Arbeitszeitgrenzen. Sie müssen die Prüfungen einmalig in den Globalen Einstellungen aktivieren. Außerdem müssen Sie die Prüfungen aktivieren, die tatsächlich durchgeführt werden sollen. Sie können also bestimmte Prüfungen deaktivieren, wenn sie für Ihr Unternehmen nicht gelten.
 
-![Arbeitszeitgrenzen](/doc/employee-time-tracking/images/working-time-limits-web.png "Arbeitszeitgrenzen")
+![Höchstarbeitszeit](/doc/employee-time-tracking/images/working-time-limits-web.png "Höchstarbeitszeit")
 
 Standardmäßig berücksichtigt time cockpit Reisezeiten nicht, wenn es die Überschreitung einer Arbeitszeitgrenze ermittelt. Eine Zeitbuchung gilt als Reise, wenn zumindest ein Verkehrsmittel ausgewählt ist.
 
 Standardmäßig berücksichtigt time cockpit keine Dauerbuchungen. Das liegt daran, dass Dauerbuchungen keine Beginn- oder Endzeit haben. Deshalb kann time cockpit nicht feststellen, ob innerhalb eines bestimmten Zeitraums eine Pause eingehalten wurde.
 
-Im Modul **Benutzer** finden Sie im Abschnitt **Arbeitszeit** unter **Arbeitszeitverstöße** die Verstöße. Sie können nach einem bestimmten Benutzer filtern und einen Zeitraum auswählen, der auf Verstöße geprüft werden soll.
+Im Modul **Benutzer** finden Sie im Abschnitt **Arbeitszeit** unter **Arbeitszeitverletzungen** die Verstöße. Sie können nach einem bestimmten Benutzer filtern und einen Zeitraum auswählen, der auf Verstöße geprüft werden soll.
 
 > [!NOTE]
 > Bitte beachten Sie, dass time cockpit standardmäßig den aktuellen Monat als Zeitraum auswählt. time cockpit erweitert den gewählten Zeitraum jedoch so, dass er am Anfang und am Ende immer volle Wochen umfasst. Andernfalls könnten Verstöße gegen eine wöchentliche Arbeitszeitgrenze übersehen werden. Überschreitungen der Arbeitszeit pro Tag werden nur für den genau im Filter gewählten Zeitraum berechnet.
 
-![Arbeitszeitverstöße](/doc/employee-time-tracking/images/working-time-violations-web.png "Arbeitszeitverstöße")
+![Arbeitszeitverletzungen](/doc/employee-time-tracking/images/working-time-violations-web.png "Arbeitszeitverletzungen")
 
 ## Konfigurierbare Arbeitszeitgrenzen
 
-Wenn die Arbeitszeitgrenzen für Österreich und Deutschland für Sie nicht gelten, können Sie in time cockpit eigene Arbeitszeitgrenzen konfigurieren. Das machen Sie unter **Arbeitszeitgrenzen** im Modul **Benutzer**. Damit die Arbeitszeitgrenze funktioniert, müssen Sie vier Parameter festlegen:
+Wenn die Arbeitszeitgrenzen für Österreich und Deutschland für Sie nicht gelten, können Sie in time cockpit eigene Arbeitszeitgrenzen konfigurieren. Das machen Sie unter **Höchstarbeitszeit** im Modul **Benutzer**. Damit die Höchstarbeitszeit funktioniert, müssen Sie vier Parameter festlegen:
 
 - Maximale Arbeitszeit pro Tag: die maximale Anzahl an Arbeitsstunden an einem Tag
 - Maximale Arbeitszeit pro Woche: die maximale Anzahl an Arbeitsstunden in einer Woche

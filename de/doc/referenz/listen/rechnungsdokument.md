@@ -1,12 +1,12 @@
 ---
-title: Rechnungsbericht (Invoice Report)
-description: Referenz zur Standardliste Invoice Report in time cockpit mit den Feldern von Rechnung, Rechnungsposition und Zeitbuchung, die der Bericht verwendet.
+title: Rechnungsdokument
+description: Referenz zur Standardliste Rechnungsdokument in time cockpit mit den Feldern von Rechnung, Rechnungsposition und Zeitbuchung, die der Bericht verwendet.
 en_page: doc/reference/lists/invoice-report.md
 ---
 
-# Rechnungsbericht
+# Rechnungsdokument
 
-Die Liste **Invoice Report** ist die Datenquelle für das Standard-PDF der Rechnung. Sie sammelt die Kopfdaten der Rechnung, die Rechnungspositionen, die Unternehmensdaten und optional die verknüpften Zeitbuchungen.
+Die Liste **Rechnungsdokument** ist die Datenquelle für das Standard-PDF der Rechnung. Sie sammelt die Kopfdaten der Rechnung, die Rechnungspositionen, die Unternehmensdaten und optional die verknüpften Zeitbuchungen.
 
 ## Typische Zielgruppe
 
@@ -26,7 +26,7 @@ Die Liste selbst stellt eine kompakte Ansicht der Rechnungskopfdaten bereit:
 
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
-| Invoice Number | `InvoiceNumber` | Nummer der Rechnung | Aus dem Rechnungsdatensatz übernommen |
+| Ausgangsrechnungsnummer | `InvoiceNumber` | Nummer der Rechnung | Aus dem Rechnungsdatensatz übernommen |
 | Rechnungsdatum | `InvoiceDate` | Datum der Rechnung | Aus dem Rechnungsdatensatz übernommen |
 | Description | `Description` | Beschreibung der Rechnung | Aus dem Rechnungsdatensatz übernommen |
 
@@ -41,6 +41,6 @@ Wenn das Rechnungs-PDF erstellt wird, lädt der Bericht zusätzliche Datensätze
 
 ## Verwandte Seiten
 
-- [Rechnung erstellen](~/doc/referenz/aktionen/rechnung-erstellen.md)
+- [Ausgangsrechnung anlegen](~/doc/referenz/aktionen/ausgangsrechnung-anlegen.md)
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md)

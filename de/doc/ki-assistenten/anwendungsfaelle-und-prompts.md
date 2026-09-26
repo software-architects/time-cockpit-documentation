@@ -15,15 +15,15 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Projektbudget im Vergleich zu den Ist-Stunden
 
-*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetary Control of Projects, TCQL
+*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetkontrolle für Projekte, TCQL
 
 > Vergleiche das Budget mit den tatsächlich gebuchten Stunden aller meiner Projekte im Zeitraum {FROM} bis {TO}. Gruppiere nach Projekt und zeige Projektcode, Projektname, Budgetstunden, gebuchte Stunden, Restbudget und Verbrauch in Prozent. Verwende nur Standardentitäten und prüfe zuerst die verfügbaren Felder. Weise auf abgeschnittene Ergebnisse oder fehlende Budgets hin.
 
-### Projektstatus und offene Aufgaben
+### Projektstatus und offene Tätigkeiten
 
-*Verwendete Daten:* Projekte, Aufgaben, Standardlisten für Projekte und Aufgaben
+*Verwendete Daten:* Projekte, Tätigkeiten, Standardlisten für Projekte und Tätigkeiten
 
-> Analysiere meine Projekte und zeige offene und abgeschlossene Aufgaben pro Projekt. Gib Projektcode, Projektname, Aufgabencode, Aufgabenbeschreibung, Aufgabenbudget und Status aus. Sortiere zuerst nach Projekt, dann nach Aufgabenstatus. Verwende nur Standardfelder.
+> Analysiere meine Projekte und zeige offene und abgeschlossene Tätigkeiten pro Projekt. Gib Projektcode, Projektname, Tätigkeitscode, Tätigkeitsbeschreibung, Tätigkeitsbudget und Status aus. Sortiere zuerst nach Projekt, dann nach Tätigkeitsstatus. Verwende nur Standardfelder.
 
 ### Projektstunden pro Mitarbeiter
 
@@ -33,7 +33,7 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Projekte mit kritischem Budgetverbrauch
 
-*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetary Control of Projects
+*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetkontrolle für Projekte
 
 > Finde alle offenen Projekte, deren gebuchte Stunden mindestens 80 Prozent des Projektbudgets erreichen oder es überschreiten. Zeige Projektcode, Projektname, Budget, gebuchte Stunden, Verbrauch in Prozent und Restbudget. Sortiere nach dem höchsten Verbrauch.
 
@@ -47,15 +47,15 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Nicht verrechnete Zeitbuchungen
 
-*Verwendete Daten:* Liste Unbilled Timesheets, Zeitbuchungen
+*Verwendete Daten:* Liste Nicht verrechnete Zeitbuchungen, Zeitbuchungen
 
-> Ermittle alle nicht verrechneten Zeitbuchungen von {FROM} bis {TO}. Gruppiere sie nach Kunde und Projekt und zeige Mitarbeiter, Datum, Aufgabe, Stunden, Verrechenbarkeit und Rechnungsstatus. Verwende bevorzugt die vorhandene Standardliste und gib an, welche Datenquelle du verwendet hast.
+> Ermittle alle nicht verrechneten Zeitbuchungen von {FROM} bis {TO}. Gruppiere sie nach Kunde und Projekt und zeige Mitarbeiter, Datum, Tätigkeit, Stunden, Verrechenbarkeit und Rechnungsstatus. Verwende bevorzugt die vorhandene Standardliste und gib an, welche Datenquelle du verwendet hast.
 
-### Budgetkontrolle für Projekte und Aufgaben
+### Budgetkontrolle für Projekte und Tätigkeiten
 
-*Verwendete Daten:* Liste Budgetary Control of Projects, Liste Budgetary Control of Tasks
+*Verwendete Daten:* Liste Budgetkontrolle für Projekte, Liste Budgetkontrolle für Tätigkeiten
 
-> Erstelle eine Budgetkontrolle für alle offenen Projekte und Aufgaben. Zeige Budgetstunden, gebuchte Stunden, Restbudget und Verbrauch in Prozent. Hebe Überschreitungen deutlich hervor und unterscheide zwischen Projektbudget und Aufgabenbudget.
+> Erstelle eine Budgetkontrolle für alle offenen Projekte und Tätigkeiten. Zeige Budgetstunden, gebuchte Stunden, Restbudget und Verbrauch in Prozent. Hebe Überschreitungen deutlich hervor und unterscheide zwischen Projektbudget und Tätigkeitsbudget.
 
 ### Umsatz nach Kunde und Projekt
 
@@ -67,7 +67,7 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 *Verwendete Daten:* Zeitbuchungen, Rechnungen
 
-> Finde alle verrechenbaren Zeitbuchungen im Zeitraum {FROM} bis {TO}, die noch keiner Rechnung zugeordnet sind. Zeige Eintrags-ID, Mitarbeiter, Projekt, Aufgabe, Datum, Stunden und Umsatz. Stelle keinen Eintrag als vollständig dar, wenn das Ergebnis abgeschnitten wurde.
+> Finde alle verrechenbaren Zeitbuchungen im Zeitraum {FROM} bis {TO}, die noch keiner Rechnung zugeordnet sind. Zeige Eintrags-ID, Mitarbeiter, Projekt, Tätigkeit, Datum, Stunden und Umsatz. Stelle keinen Eintrag als vollständig dar, wenn das Ergebnis abgeschnitten wurde.
 
 ### Monatlicher Controlling-Bericht
 
@@ -103,17 +103,17 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Sollzeit, Istzeit und Überstunden
 
-*Verwendete Daten:* Benutzer, Arbeitszeitgrenzen, Arbeitszeitgewichtungen, TCQL
+*Verwendete Daten:* Benutzer, Höchstarbeitszeit, Arbeitszeitgewichtung, TCQL
 
 > Vergleiche Soll-Arbeitszeit, tatsächlich gebuchte Arbeitszeit und Überstunden aller aktiven Mitarbeiter von {FROM} bis {TO}. Zeige die Abweichungen pro Mitarbeiter und sortiere nach der größten positiven oder negativen Differenz. Berücksichtige die konfigurierten Arbeitszeitregelungen.
 
 ## Zeiterfassungsbenutzer
 
-### Meine Arbeitszeitverstöße
+### Meine Arbeitszeitverletzungen
 
-*Verwendete Daten:* Liste Working Time Violations, Zeitbuchungen
+*Verwendete Daten:* Liste Arbeitszeitverletzungen, Zeitbuchungen
 
-> Prüfe meine eigenen Arbeitszeitverstöße im Zeitraum {FROM} bis {TO}. Zeige Datum, betroffene Einträge, Art des Verstoßes und die relevanten Zeitwerte. Verwende bevorzugt die Standardliste und meine Zeitbuchungen nur ergänzend. Nimm keine Korrekturen automatisch vor.
+> Prüfe meine eigenen Arbeitszeitverletzungen im Zeitraum {FROM} bis {TO}. Zeige Datum, betroffene Einträge, Art des Verstoßes und die relevanten Zeitwerte. Verwende bevorzugt die Standardliste und meine Zeitbuchungen nur ergänzend. Nimm keine Korrekturen automatisch vor.
 
 ### Ungewöhnliche Lücken und Überschneidungen
 
@@ -123,9 +123,9 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Meine Stunden pro Projekt
 
-*Verwendete Daten:* Zeitbuchungen, Projekte, Aufgaben
+*Verwendete Daten:* Zeitbuchungen, Projekte, Tätigkeiten
 
-> Fasse meine Zeitbuchungen von {FROM} bis {TO} nach Projekt und Aufgabe zusammen. Zeige Anzahl der Einträge, gebuchte Stunden, verrechenbare Stunden und nicht verrechenbare Stunden. Gib am Ende eine Gesamtsumme aus und nenne den genauen Datenzeitraum.
+> Fasse meine Zeitbuchungen von {FROM} bis {TO} nach Projekt und Tätigkeit zusammen. Zeige Anzahl der Einträge, gebuchte Stunden, verrechenbare Stunden und nicht verrechenbare Stunden. Gib am Ende eine Gesamtsumme aus und nenne den genauen Datenzeitraum.
 
 ### Urlaub anlegen
 
@@ -167,15 +167,15 @@ Die Zeile *Verwendete Daten* nennt die Entitäten, Listen oder Tools von time co
 
 ### Auslastung des Teams
 
-*Verwendete Daten:* Zeitbuchungen, Benutzer, Arbeitszeitgrenzen
+*Verwendete Daten:* Zeitbuchungen, Benutzer, Höchstarbeitszeit
 
 > Analysiere die Auslastung meiner Abteilung im Zeitraum {FROM} bis {TO}. Vergleiche Soll-Arbeitszeit, gebuchte Stunden, verrechenbare Stunden und Abwesenheiten pro Mitarbeiter. Markiere deutliche Über- oder Unterauslastung.
 
 ## Weiterer Anwendungsfall: Zeitbuchungen aus ChatGPT- oder Claude-Chats ableiten
 
-*Verwendete Daten:* Chat-Export, Projekte, Aufgaben, Zeitbuchungen, TCQL
+*Verwendete Daten:* Chat-Export, Projekte, Tätigkeiten, Zeitbuchungen, TCQL
 
-> Ich hänge einen Export meiner ChatGPT- oder Claude-Chats an. Ermittle daraus mögliche Arbeitstätigkeiten, Zeitangaben, Projekte und Aufgaben. Ordne die ermittelten Tätigkeiten nach Möglichkeit meinen Projekten und Aufgaben zu. Vergleiche sie mit meinen vorhandenen Zeitbuchungen im Zeitraum {FROM} bis {TO}. Zeige bereits gebuchte Tätigkeiten, mögliche fehlende Einträge und unsichere Zuordnungen getrennt an. Erstelle nur Vorschläge und lege keine Zeitbuchungen ohne meine ausdrückliche Bestätigung an.
+> Ich hänge einen Export meiner ChatGPT- oder Claude-Chats an. Ermittle daraus mögliche Arbeitstätigkeiten, Zeitangaben, Projekte und Tätigkeiten. Ordne die ermittelten Arbeitstätigkeiten nach Möglichkeit meinen Projekten und Tätigkeiten zu. Vergleiche sie mit meinen vorhandenen Zeitbuchungen im Zeitraum {FROM} bis {TO}. Zeige bereits gebuchte Tätigkeiten, mögliche fehlende Einträge und unsichere Zuordnungen getrennt an. Erstelle nur Vorschläge und lege keine Zeitbuchungen ohne meine ausdrückliche Bestätigung an.
 >
 > Betrachte die Zeitstempel der Chats nur als Anhaltspunkt. Lässt sich aus dem Chat keine verlässliche Dauer ableiten, markiere die Tätigkeit als unsicher und frage nach, statt eine Dauer zu erfinden.
 

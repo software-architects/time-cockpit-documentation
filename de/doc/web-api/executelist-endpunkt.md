@@ -1,6 +1,6 @@
 ---
 title: ExecuteList-API - Listen programmgesteuert abfragen
-description: time cockpit Listen über die Web API ausführen. TCQL-Listen und Skriptlisten für Datenanalyse, Arbeitszeitverstöße und Projektcontrolling abfragen.
+description: time cockpit Listen über die Web API ausführen. TCQL-Listen und Skriptlisten für Datenanalyse, Arbeitszeitverletzungen und Projektcontrolling abfragen.
 en_page: doc/web-api/executelist.md
 ---
 # ExecuteList-Endpunkt
@@ -18,7 +18,7 @@ Sowohl TCQL-Listen als auch Skriptlisten können in der Benutzeroberfläche von 
 
 ## Anwendungsfälle
 
-- Arbeitszeitverstöße abfragen, um sie an die jeweiligen Mitarbeiter zu senden
+- Arbeitszeitverletzungen abfragen, um sie an die jeweiligen Mitarbeiter zu senden
 - Eine Projektcontrolling-Liste abfragen, um sie z. B. in PowerBI zu verwenden
 - Verrechnete Zeitbuchungen abfragen, um sie in einem nachgelagerten Abrechnungssystem zu verarbeiten
 
@@ -32,10 +32,10 @@ Um den Query-Endpunkt zu verwenden, müssen Sie sich zuerst beim Dienst authenti
 
 ## C#-Beispiel
 
-Das folgende Beispiel zeigt einfachen C#-Code, der die Standard-Zeitberichtsliste von time cockpit abruft.
+Das folgende Beispiel zeigt einfachen C#-Code, der die Standard-Stundenzettelliste von time cockpit abruft.
 
 > [!NOTE]
-> Beachten Sie, dass dieses Beispiel zeigt, wie Sie die Zeitbericht-**Liste** abfragen, nicht den druckbaren Zeitbericht (PDF, Word, Excel). Ein Beispiel, wie Sie einen druckbaren Bericht programmgesteuert abrufen, finden Sie unter [Reporting-Endpunkt](~/doc/web-api/reporting-endpunkt.md).
+> Beachten Sie, dass dieses Beispiel zeigt, wie Sie die Stundenzettel-**Liste** abfragen, nicht den druckbaren Stundenzettel (PDF, Word, Excel). Ein Beispiel, wie Sie einen druckbaren Bericht programmgesteuert abrufen, finden Sie unter [Reporting-Endpunkt](~/doc/web-api/reporting-endpunkt.md).
 
 ```cs
 var userDetailUuid = new Guid("2019ff2c-edea-4864-b092-b0ba2b5be9c1"); // guid of the user to fetch the list data for

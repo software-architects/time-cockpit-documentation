@@ -101,8 +101,8 @@ Installieren Sie time cockpit als Progressive Web App für ein besseres Erlebnis
 ### ✅ Schnelle Zeiterfassung
 
 **Zeitbuchungen anlegen:**
-- Tippen Sie auf **+** oder **New**.
-- Wählen Sie Projekt/Aufgabe aus den Auswahllisten (für Touch optimiert).
+- Tippen Sie auf **+** oder **Neu**.
+- Wählen Sie Projekt/Tätigkeit aus den Auswahllisten (für Touch optimiert).
 - Legen Sie Beginn- und Endzeit mit den mobilen Zeitauswahlen fest.
 - Geben Sie eine kurze Beschreibung ein.
 - Tippen Sie auf **Speichern**.
@@ -130,7 +130,7 @@ Installieren Sie time cockpit als Progressive Web App für ein besseres Erlebnis
 
 **Abwesenheit beantragen:**
 1. Navigieren Sie zu **Benutzer** → **Urlaub**.
-2. Tippen Sie auf **New**.
+2. Tippen Sie auf **Neu**.
 3. Wählen Sie die Art der Abwesenheit (Urlaub, Krankenstand usw.).
 4. Wählen Sie Beginn- und Enddatum (mobile Datumsauswahl).
 5. Geben Sie einen Grund oder Notizen ein.
@@ -191,7 +191,7 @@ Installieren Sie time cockpit als Progressive Web App für ein besseres Erlebnis
 
 **Lösungsansatz:**
 1. **Eintrag auf dem Mobilgerät anlegen** mit den wichtigsten Angaben:
-   - Projekt/Aufgabe
+   - Projekt/Tätigkeit
    - Dauer
    - Kurze Notiz
 2. **Vollständige Beschreibung später am Schreibtisch ergänzen**:
@@ -266,7 +266,7 @@ Siehe: [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
 
 **Ablauf:**
 1. **Ankunft vor Ort**: Eintrag für die Reise anlegen:
-   - Aufgabe: "Reise" oder "Fahrt"
+   - Tätigkeit: "Reise" oder "Fahrt"
    - Dauer: Fahrzeit
    - Ort: "Büro → Kundenstandort A"
 2. **Geleistete Arbeit**: Eintrag für die Arbeit vor Ort anlegen
@@ -329,7 +329,7 @@ Siehe: [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
 ### 1. Eingaben vereinfachen
 
 **Auf dem Mobilgerät bevorzugen:**
-- ✓ Auswahllisten für Projekt/Aufgabe (touch-freundlich)
+- ✓ Auswahllisten für Projekt/Tätigkeit (touch-freundlich)
 - ✓ Vordefinierte Werte
 - ✓ Zeitauswahl (statt manueller Eingabe)
 - ✓ Kurze Beschreibungen

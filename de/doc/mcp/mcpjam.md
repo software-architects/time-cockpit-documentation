@@ -124,7 +124,7 @@ Wenn Sie `userDetailId` weglassen, bleibt die Abfrage auf den angemeldeten Benut
 |---------|-------|
 | Automatisches OAuth findet weder CIMD noch DCR | Setzen Sie **Registration Strategy** auf **Preregistration (Client Credentials)** und geben Sie die vorregistrierte Client-ID ein. |
 | Server ist verbunden, aber der Mandant ist falsch | Führen Sie `entra_whoami` aus; prüfen Sie den ermittelten Mandanten und die angeforderte `TcTenantId`. |
-| Ergebnisse sind leer | Prüfen Sie den Datumsbereich und führen Sie `get_timesheets` ohne Projekt- oder Aufgabenfilter aus. |
+| Ergebnisse sind leer | Prüfen Sie den Datumsbereich und führen Sie `get_timesheets` ohne Projekt- oder Tätigkeitsfilter aus. |
 | Schreibende Tools fehlen | Prüfen Sie, ob die Verbindung `access=readonly` verwendet; das blendet schreibende Tools absichtlich aus. |
 | Die Sandbox wurde nicht ausgewählt | Prüfen Sie, ob `X-sandbox-environment: test` vorhanden ist und kein widersprüchliches URL-Segment konfiguriert ist. |
 

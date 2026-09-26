@@ -57,9 +57,9 @@ Ist die Genehmigung von Abwesenheiten aktiviert, legen Mitarbeiter Abwesenheitsa
 
 ### Genehmigung von Abwesenheiten aktivieren
 
-**Konfiguration in den Global Settings:**
+**Konfiguration in den Globalen Einstellungen:**
 
-1. Öffnen Sie die **[Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings)**.
+1. Öffnen Sie die **[Globalen Einstellungen](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings)**.
 2. Aktivieren Sie die Genehmigung pro Abwesenheitsart:
    - ☑ **Enable Vacation Approval**
    - ☑ **Enable Compensatory Time Off Approval**
@@ -70,9 +70,9 @@ Ist die Genehmigung von Abwesenheiten aktiviert, legen Mitarbeiter Abwesenheitsa
 
 Nicht alle Mitarbeiter benötigen unbedingt eine Genehmigung (etwa Geschäftsführung oder Führungskräfte):
 
-1. Öffnen Sie **Benutzer** → **[User Details](https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList)**.
+1. Öffnen Sie **Benutzer** → **[Benutzerdetails](https://web.timecockpit.com/app/lists/APP_DefaultUserDetailList)**.
 2. Öffnen Sie den Datensatz des Mitarbeiters.
-3. Aktivieren oder deaktivieren Sie **☑ Absence Approval Required**.
+3. Aktivieren oder deaktivieren Sie **☑ Abwesenheitsgenehmigung erforderlich**.
 4. Speichern Sie.
 
 **Ergebnis:**
@@ -106,7 +106,7 @@ Nicht alle Mitarbeiter benötigen unbedingt eine Genehmigung (etwa Geschäftsfü
 
 **HR-Administratoren**
 - Können Abwesenheiten im Namen der Abteilungsleiter genehmigen
-- Haben Zugriff auf alle Abteilungen (über den Filter „Show all users“)
+- Haben Zugriff auf alle Abteilungen (über den Filter „Alle Benutzer anzeigen“)
 - Übernehmen Genehmigungen, wenn Abteilungsleiter nicht verfügbar sind
 - Behandeln Ausnahmen im Genehmigungsworkflow
 
@@ -134,13 +134,13 @@ Nicht alle Mitarbeiter benötigen unbedingt eine Genehmigung (etwa Geschäftsfü
 1. Öffnen Sie **Benutzer** → **[Urlaub](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)** (oder Krankenstand, Zeitausgleich).
 2. Filtern Sie:
    - **Abteilung:** Ihre Abteilung (gegebenenfalls automatisch)
-   - **Is Approved:** False
+   - **Genehmigt:** False
 3. Prüfen Sie die Liste der offenen Genehmigungen.
 
 **Als HR-Administrator:**
 
 1. Öffnen Sie den **[Abwesenheitskalender](https://web.timecockpit.com/app/absence-time-calendar)**.
-2. Aktivieren Sie das Kontrollkästchen **☑ Show All Users**.
+2. Aktivieren Sie das Kontrollkästchen **☑ Alle Benutzer anzeigen**.
 3. Filtern Sie optional nach:
    - **Abteilung:** eine bestimmte Abteilung
    - **Benutzer:** ein bestimmter Mitarbeiter
@@ -168,9 +168,9 @@ Nicht alle Mitarbeiter benötigen unbedingt eine Genehmigung (etwa Geschäftsfü
 **Sammelgenehmigung (mehrere Anträge):**
 
 1. Öffnen Sie **Benutzer** → **[Urlaub](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)**.
-2. Filtern Sie auf offene Genehmigungen (**Is Approved = False**).
+2. Filtern Sie auf offene Genehmigungen (**Genehmigt = False**).
 3. Wählen Sie **mehrere Anträge** aus (STRG+Klick).
-4. Führen Sie in der Symbolleiste die Aktion **Approve Absence** aus.
+4. Führen Sie in der Symbolleiste die Aktion **Abwesenheit Genehmigen** aus.
 5. Alle ausgewählten Anträge werden gleichzeitig genehmigt.
 
 **Bearbeiten vor der Genehmigung:**
@@ -187,7 +187,7 @@ Wenn die Termine angepasst werden müssen:
 |------|---------|-------------|-------------------------|
 | **Zeiterfassungsbenutzer** | Abwesenheiten der eigenen Abteilung (aus Datenschutzgründen ohne Abwesenheitsart) | ❌ Nein | Nur eigene |
 | **Abteilungsleiter** | Eigene Abteilung + Abteilungen, deren Leiter er ist | ✅ Ja (eigene Abteilungen) | Eigene + Mitglieder der Abteilung |
-| **HR-Administrator** | Alle Benutzer (mit dem Filter „Show all users“) | ✅ Ja (im Namen der Abteilungsleiter) | Alle (bei aktiviertem Filter) |
+| **HR-Administrator** | Alle Benutzer (mit dem Filter „Alle Benutzer anzeigen“) | ✅ Ja (im Namen der Abteilungsleiter) | Alle (bei aktiviertem Filter) |
 
 **Schutz der Privatsphäre:**
 Normale Benutzer sehen, dass Kollegen abwesend sind, aber NICHT, ob es sich um Urlaub, Krankenstand oder Zeitausgleich handelt. Das verhindert eine Stigmatisierung von Krankenständen.
@@ -203,7 +203,7 @@ Normale Benutzer sehen, dass Kollegen abwesend sind, aber NICHT, ob es sich um U
 1. Öffnen Sie die **[Stammdaten der Abteilung](https://web.timecockpit.com/app/lists/APP_DefaultDepartmentList)**.
 2. Öffnen Sie den Datensatz der Abteilung.
 3. Suchen Sie die Einstellungen des Abteilungsleiters.
-4. Deaktivieren Sie **☑ Receive Notification** für diesen Abteilungsleiter.
+4. Deaktivieren Sie **☑ Benachrichtigungen zur Abwesenheitsgenehmigung erhalten** für diesen Abteilungsleiter.
 5. Speichern Sie.
 
 **Wenn eine Abwesenheit genehmigt/abgelehnt wird:**
@@ -336,11 +336,11 @@ Legen Sie eine eigene Aktion „Approve Timesheet“ an:
 **1. Prüfung verrechenbarer Stunden**
 - Der Projektleiter prüft, ob die Stunden berechtigt und verrechenbar sind
 - Prüft die Beschreibungen auf kundentaugliche Inhalte
-- Stellt sicher, dass die richtigen Projekte/Aufgaben gewählt wurden
+- Stellt sicher, dass die richtigen Projekte/Tätigkeiten gewählt wurden
 - Verhindert zu hohe oder falsche Verrechnung
 
 **2. Einhaltung des Budgets**
-- Der Manager prüft, ob Einträge die Budgets von Aufgaben/Projekten überschreiten
+- Der Manager prüft, ob Einträge die Budgets von Tätigkeiten/Projekten überschreiten
 - Markiert Budgetüberschreitungen zur Klärung
 - Leitet Zeiten auf die richtigen Budgetpositionen um
 
@@ -515,7 +515,7 @@ Bei Vollkosten von 50 €/Stunde = **1.500–2.000 € Ersparnis pro Prüfung**
 
 ### Projektmanagement
 - [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md) - Projektrentabilität (die Genehmigung von Zeitbuchungen unterstützt die Budgetkontrolle)
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md) - Projekthierarchie
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md) - Projekthierarchie
 
 ### Berichte
 - [Integrierte Berichte](~/doc/berichte/integrierte-berichte.md) - Berichte zu Abwesenheiten und Zeitbuchungen

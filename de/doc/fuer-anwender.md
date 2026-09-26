@@ -31,7 +31,7 @@ Diese Seiten beschreiben die üblichen täglichen Abläufe:
 
 Nutzen Sie diese Seiten für projektbezogene Zeiterfassung und Verrechnung:
 
-- [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
+- [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
 - [Zeitbuchungen](/doc/project-time-tracking/timesheet.html)
 - [Budgetkontrolle und Rentabilität](/doc/project-time-tracking/budget-tracking.html)
 - [Rechnungslegung](/doc/project-time-tracking/billing.html)
@@ -46,7 +46,7 @@ Nutzen Sie diese Seiten für Abwesenheiten, Arbeitszeit und Genehmigungen:
 - [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
 - [Genehmigungsworkflows](/doc/employee-time-tracking/approval-workflows.html)
 - [Arbeitszeitregelungen](/doc/employee-time-tracking/working-time-regulations.html)
-- [Zeitbericht](/doc/employee-time-tracking/time-report.html)
+- [Stundenzettel](/doc/employee-time-tracking/time-report.html)
 - [Standardberechtigungen](/doc/employee-time-tracking/default-permissions.html)
 
 ## Berichte und Datenaustausch
@@ -72,7 +72,7 @@ Wenn Sie mit einer konkreten Aufgabe starten möchten, sind diese Seiten meist d
 
 - Zeitbuchungen erfassen: [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
 - Urlaub beantragen oder Krankenstand eintragen: [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- Mit Projekten und Aufgaben arbeiten: [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
+- Mit Projekten und Tätigkeiten arbeiten: [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
 - Rechnungen erstellen: [Rechnungslegung](/doc/project-time-tracking/billing.html)
 - Berechtigungen und Rollensichtbarkeit prüfen: [Standardberechtigungen](/doc/employee-time-tracking/default-permissions.html)
 

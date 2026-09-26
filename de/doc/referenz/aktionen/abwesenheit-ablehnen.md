@@ -1,12 +1,12 @@
 ---
-title: Abwesenheit ablehnen (Reject Absence) - Aktionsreferenz
-description: Referenz zur Standardaktion Reject Absence in time cockpit mit dem Parameter für den Ablehnungsgrund und dem standardmäßigen Löschverhalten.
+title: Abwesenheit ablehnen - Aktionsreferenz
+description: Referenz zur Standardaktion Abwesenheit Ablehnen in time cockpit mit dem Parameter für den Ablehnungsgrund und dem standardmäßigen Löschverhalten.
 en_page: doc/reference/actions/reject-absence.md
 ---
 
 # Abwesenheit ablehnen
 
-Die Aktion **Reject Absence** lehnt offene Abwesenheitsanträge ab.
+Die Aktion **Abwesenheit Ablehnen** lehnt offene Abwesenheitsanträge ab.
 
 Sie wird für diese Standardabwesenheitsarten verwendet:
 

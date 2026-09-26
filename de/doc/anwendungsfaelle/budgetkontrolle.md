@@ -4,15 +4,15 @@ description: "Technischer Einblick in die Listen zur Budgetkontrolle von time co
 en_page: doc/use-cases/budgetary-control.md
 ---
 
-# Budgetkontrolle von Projekten und Aufgaben
+# Budgetkontrolle von Projekten und Tätigkeiten
 
 time cockpit bietet leistungsfähige integrierte Listen für die Rentabilitätsanalyse von Projekten in Echtzeit. Diese Listen führen Daten aus Zeitbuchungen und Rechnungen zusammen und ermöglichen so eine umfassende Budgetkontrolle.
 
 ## Überblick
 
 Die Funktionen zur Budgetkontrolle bestehen aus zwei Hauptlisten:
-- **[Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**: Budgetanalyse auf Projektebene
-- **[Budgetary Control of Tasks](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**: Budgetanalyse auf Aufgabenebene
+- **[Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**: Budgetanalyse auf Projektebene
+- **[Budgetkontrolle für Tätigkeiten](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**: Budgetanalyse auf Tätigkeitsebene
 
 Beide Listen sind als **eigene Python-Skripte** umgesetzt, die Daten aus mehreren Quellen zusammenfassen und abgeleitete Kennzahlen in Echtzeit berechnen.
 
@@ -220,7 +220,7 @@ Select New With {
 ```
 
 **Wichtige Muster**:
-- **Aufgabe oder Projekt**: `T.Project = Null` prüft, ob die Zeitbuchung einer Aufgabe zugeordnet ist (dann wird `T.Task.Project` verwendet) oder direkt einem Projekt
+- **Tätigkeit oder Projekt**: `T.Project = Null` prüft, ob die Zeitbuchung einer Tätigkeit zugeordnet ist (dann wird `T.Task.Project` verwendet) oder direkt einem Projekt
 - **Gruppierung**: Gruppiert automatisch nach Projekt (und für die Sortierung nach Kunde)
 - **Bedingte Summen**: Verwendet ausgiebig `:Iif()`, um Werte bedingt einzubeziehen
 
@@ -359,6 +359,6 @@ Nicht direkt – es handelt sich um **zur Laufzeit berechnete Listen**, nicht um
 
 ## Siehe auch
 
-- **Ähnlicher Anwendungsfall**: [Target vs. Actual Hours Comparison](https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList)
-- **Verwandte Liste**: [Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
+- **Ähnlicher Anwendungsfall**: [Soll-Ist-Vergleich](https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList)
+- **Verwandte Liste**: [Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
 - **Alternative über die API**: [Beispiele für den Query-Endpunkt](/doc/web-api/query.html)

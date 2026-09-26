@@ -1,12 +1,12 @@
 ---
-title: Abwesenheitskalender (Absence Calendar)
+title: Abwesenheitskalender
 description: Referenz zur Standardliste Abwesenheitskalender in time cockpit mit Filtern, Sichtbarkeitsregeln und Aktionen für die Genehmigung.
 en_page: doc/reference/lists/absence-calendar.md
 ---
 
 # Abwesenheitskalender
 
-Die Liste **Absence Calendar** fasst Urlaub, Krankenstand und Zeitausgleich in einer kalenderorientierten Liste zusammen. Sie ist besonders nützlich für offene Genehmigungen und für den Überblick über mehrere Benutzer.
+Die Liste **Abwesenheitskalender** fasst Urlaub, Krankenstand und Zeitausgleich in einer kalenderorientierten Liste zusammen. Sie ist besonders nützlich für offene Genehmigungen und für den Überblick über mehrere Benutzer.
 
 ## Typische Zielgruppe
 
@@ -28,8 +28,8 @@ Diese Liste ist typischerweise relevant für:
 | From | `@BeginTime` | Beginn des Kalenderintervalls |
 | To | `@EndTime` | Ende des Kalenderintervalls |
 | Benutzer | `@UserDetail` | Schränkt die Liste auf einen Benutzer ein |
-| Department | `@Department` | Schränkt die Liste auf eine Abteilung ein |
-| Show All Users | `@ShowAllUsers` | Nur für HR verfügbare Option, um das Ergebnis zu erweitern |
+| Abteilung | `@Department` | Schränkt die Liste auf eine Abteilung ein |
+| Alle Benutzer anzeigen | `@ShowAllUsers` | Nur für HR verfügbare Option, um das Ergebnis zu erweitern |
 | Show Only Pending List | `@ShowOnlyPendingList` | Interner Modus, um sich auf offene Anträge zu konzentrieren |
 
 ## Spalten
@@ -37,13 +37,13 @@ Diese Liste ist typischerweise relevant für:
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Category | `PendingAbsenceType` | Offene Kategorie der Zeile | Wird auf Kategorien wie eigene offene Anträge oder offene Genehmigungen im Team gesetzt |
-| Department | `DepartmentName` | Abteilung des abwesenden Benutzers | Aus der Abteilung des Benutzers übernommen |
+| Abteilung | `DepartmentName` | Abteilung des abwesenden Benutzers | Aus der Abteilung des Benutzers übernommen |
 | Benutzer | `UserDetailName`, `UserDetailUuid` | In der Zeile angezeigter Benutzer | Anzeigewert des Benutzerdetails |
 | Absence | `AbsenceTypeDisplayName` | Anzeigename der Abwesenheitsart | Aus der Abwesenheitsentität abgeleitet und für Sonderurlaub angepasst |
 | Description | `AbsenceDescription` | Beschreibung der Abwesenheit | Wird direkt angezeigt, wenn der aktuelle Benutzer sie sehen darf; andernfalls wird die Zeile verallgemeinert |
 | Begin | `BeginTime` | Beginn der Abwesenheit | Aus dem Abwesenheitsdatensatz übernommen und als Tag oder als Datum/Uhrzeit formatiert |
 | End | `EndTime` | Ende der Abwesenheit | Aus dem Abwesenheitsdatensatz übernommen und als Tag oder als Datum/Uhrzeit formatiert |
-| Approved | `Approved` | In der Liste sichtbarer Genehmigungsstatus | Aus dem Abwesenheitsdatensatz und der Genehmigungskonfiguration abgeleitet |
+| Genehmigt | `Approved` | In der Liste sichtbarer Genehmigungsstatus | Aus dem Abwesenheitsdatensatz und der Genehmigungskonfiguration abgeleitet |
 | Approve | `APP_ApproveAbsenceAction` | Standardaktion zur Genehmigung | Sichtbar für offene Genehmigungen im Team |
 | Reject | `APP_RejectAbsenceAction` | Standardaktion zur Ablehnung | Sichtbar für offene Genehmigungen im Team |
 

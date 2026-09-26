@@ -1,18 +1,18 @@
 ---
-title: Rechnung erstellen (Create Invoice) - Aktionsreferenz
-description: Referenz zur Standardaktion Create Invoice in time cockpit mit Voraussetzungen, Parametern und Nebeneffekten im Standardablauf.
+title: Ausgangsrechnung anlegen - Aktionsreferenz
+description: Referenz zur Standardaktion Ausgangsrechnung anlegen in time cockpit mit Voraussetzungen, Parametern und Nebeneffekten im Standardablauf.
 en_page: doc/reference/actions/create-invoice.md
 ---
 
-# Rechnung erstellen
+# Ausgangsrechnung anlegen
 
-Die Aktion **Create Invoice** erstellt aus ausgewählten, nicht verrechneten Zeitbuchungen eine neue Ausgangsrechnung.
+Die Aktion **Ausgangsrechnung anlegen** erstellt aus ausgewählten, nicht verrechneten Zeitbuchungen eine neue Ausgangsrechnung.
 
 ## Wo die Aktion verfügbar ist
 
 In der Standardkonfiguration wird diese Aktion hier verwendet:
 
-- [Verwaltung -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
+- [Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
 
 Mit den Standardberechtigungen ist die Aktion für **Abrechnungsadministratoren** vorgesehen.
 
@@ -40,10 +40,10 @@ Wenn Sie die Aktion ausführen, öffnet time cockpit ein Parameterformular mit d
 | Feld | Technische Referenz | Bedeutung |
 |---|---|---|
 | Rechnungsdatum | `APP_InvoiceDate` | Datum, das in der neuen Rechnung gespeichert wird |
-| Invoice Number | `APP_InvoiceNumber` | Zu verwendende Rechnungsnummer, wenn Sie sie explizit festlegen |
+| Rechnungsnummer | `APP_InvoiceNumber` | Zu verwendende Rechnungsnummer, wenn Sie sie explizit festlegen |
 | Invoice Description | `APP_InvoiceDescription` | In der Rechnung gespeicherte Beschreibung |
-| Service Start Date | `APP_ServiceStartDate` | Optionales Beginndatum des Leistungszeitraums |
-| Service End Date | `APP_ServiceEndDate` | Optionales Enddatum des Leistungszeitraums |
+| Leistungszeitraum Beginn | `APP_ServiceStartDate` | Optionales Beginndatum des Leistungszeitraums |
+| Leistungszeitraum Ende | `APP_ServiceEndDate` | Optionales Enddatum des Leistungszeitraums |
 
 Das Standardparameterformular bietet außerdem Aktionen, um die Rechnungsnummer manuell oder automatisch festzulegen.
 
@@ -57,7 +57,7 @@ Ist die Aktion erfolgreich, führt sie diese Standardschritte aus:
 2. Sie speichert das Rechnungsdatum, die Einstellungen der Rechnungsnummer, die optionale Beschreibung und den optionalen Leistungszeitraum.
 3. Sie ordnet die ausgewählten Zeitbuchungen der neuen Rechnung zu.
 4. Sie kopiert bei verrechenbaren Zeitbuchungen den aktuellen Verrechnungssatz in `APP_HourlyRateBilled`.
-5. Sie erstellt Rechnungspositionen für Dienstleistungszeit, gruppiert nach Aufgabe und Stundensatz.
+5. Sie erstellt Rechnungspositionen für Dienstleistungszeit, gruppiert nach Tätigkeit und Stundensatz.
 6. Optional erstellt sie eine zusätzliche Rechnungsposition für Reisekosten, wenn die ausgewählten Zeitbuchungen eine Fahrtstrecke enthalten.
 7. Sie aktualisiert den Kostenwert der Rechnung auf Basis der Stundenkostensätze der beteiligten Benutzer.
 
@@ -66,7 +66,7 @@ Ist die Aktion erfolgreich, führt sie diese Standardschritte aus:
 Einige Standardverhalten werden leicht übersehen:
 
 - **Ersatzwert für den Leistungszeitraum:** Werden keine Leistungsdaten eingegeben, verwendet die Aktion das früheste und das späteste Datum der ausgewählten Zeitbuchungen.
-- **Gruppierung der Rechnungspositionen:** Dienstleistungspositionen werden nach Aufgabe und Stundensatz gruppiert, nicht unbedingt eine Position pro Zeitbuchung.
+- **Gruppierung der Rechnungspositionen:** Dienstleistungspositionen werden nach Tätigkeit und Stundensatz gruppiert, nicht unbedingt eine Position pro Zeitbuchung.
 - **Festschreiben des Stundensatzes:** Der verrechnete Stundensatz wird in die Zeitbuchung kopiert, sodass spätere Änderungen des Satzes bereits verrechnete Daten nicht verändern.
 - **Umsatzsteuer bei Auslandsgeschäften:** Unterscheidet sich das Land des Kunden vom Land des Rechnungsstellers, setzt die Aktion den Umsatzsteuersatz der generierten Rechnungspositionen auf `0`.
 - **Reisekosten:** Ist eine Fahrtstrecke vorhanden, kann die Aktion eine eigene Rechnungsposition auf Basis des Artikels `travelCosts` hinzufügen.

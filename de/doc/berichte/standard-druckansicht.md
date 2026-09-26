@@ -13,17 +13,17 @@ Jede Liste bietet die Option **Druckansicht**, die eine druckbare Version der Li
 
 ![Exportoptionen](/doc/reporting/images/export-options.png "Exportoptionen")
 
-In der **Druckansicht** können Sie verschiedene Berichtsparameter (**Bericht**, **Layout** und **Page Setup**) ändern:
+In der **Druckansicht** können Sie verschiedene Berichtsparameter (**Bericht**, **Layout** und **Seite einrichten**) ändern:
 
 Option | Beschreibung
 --- | ---
-Title | Der Titel des Berichts.
-Show Filter | Legt fest, ob der Filterkopf oben im Bericht angezeigt wird.
-Font Family | Bestimmt die Schriftart, die im gesamten Bericht verwendet wird. In der Druckansicht kann nur eine Schriftart verwendet werden.
-Font Size | Bestimmt die Schriftgröße für die Datenzeilen und die Kopfzeile. Die Schriftgröße wirkt sich nicht auf die Schriftgröße des Titels aus.
-Wrap Mode | Auto Fit: Passt die Breite der Spalten an den breitesten Text in den ersten 500 Zeilen an.<br/>Wrap: Überschreitet der Text in einer Spalte eine bestimmte Breite, wird er umbrochen.<br/>Truncate: Überschreitet der Text in einer Spalte eine bestimmte Breite, wird er abgeschnitten.
-Color | Bestimmt die Farbe der Kopfzeile und der Trennlinien.
-Orientation | Automatic: Bestimmt die Ausrichtung anhand der Breite der Daten im Bericht.<br/>Portrait: Der Bericht wird im Hochformat erstellt.<br/>Landscape: Der Bericht wird im Querformat erstellt.
-Page Size | Eine Auswahl vordefinierter Berichtsformate.
+Überschrift | Der Titel des Berichts.
+Filter anzeigen | Legt fest, ob der Filterkopf oben im Bericht angezeigt wird.
+Schriftart | Bestimmt die Schriftart, die im gesamten Bericht verwendet wird. In der Druckansicht kann nur eine Schriftart verwendet werden.
+Schriftgröße [pt] | Bestimmt die Schriftgröße für die Datenzeilen und die Kopfzeile. Die Schriftgröße wirkt sich nicht auf die Schriftgröße des Titels aus.
+Zeilenumbruchsmodus | Spaltenbreite anpassen: Passt die Breite der Spalten an den breitesten Text in den ersten 500 Zeilen an.<br/>Zeilenumbruch: Überschreitet der Text in einer Spalte eine bestimmte Breite, wird er umbrochen.<br/>Abschneiden: Überschreitet der Text in einer Spalte eine bestimmte Breite, wird er abgeschnitten.
+Farbe | Bestimmt die Farbe der Kopfzeile und der Trennlinien.
+Ausrichtung | Automatisch: Bestimmt die Ausrichtung anhand der Breite der Daten im Bericht.<br/>Hochformat: Der Bericht wird im Hochformat erstellt.<br/>Querformat: Der Bericht wird im Querformat erstellt.
+Papiergröße | Eine Auswahl vordefinierter Berichtsformate.
 
 Jeder Bericht kann in verschiedene Ausgabeformate exportiert werden: PDF, Excel oder Word. Verwenden Sie dazu das Dropdown-Menü der geteilten Schaltfläche **Druckansicht** oder die entsprechenden Schaltflächen im Menü der Berichtsanzeige.

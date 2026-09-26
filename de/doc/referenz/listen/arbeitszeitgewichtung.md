@@ -1,12 +1,12 @@
 ---
-title: Arbeitszeitgewichtungen (Working Time Weights)
-description: Referenz der Standardliste Working Time Weights in time cockpit mit den Gewichtungswerten, die in Arbeitszeitberechnungen verwendet werden.
+title: Arbeitszeitgewichtung
+description: Referenz der Standardliste Arbeitszeitgewichtung in time cockpit mit den Gewichtungswerten, die in Arbeitszeitberechnungen verwendet werden.
 en_page: doc/reference/lists/working-time-weights.md
 ---
 
-# Arbeitszeitgewichtungen
+# Arbeitszeitgewichtung
 
-Die Liste **Working Time Weights** speichert Gewichtungsdefinitionen, die Arbeitszeitberechnungen beeinflussen.
+Die Liste **Arbeitszeitgewichtung** speichert Gewichtungsdefinitionen, die Arbeitszeitberechnungen beeinflussen.
 
 ## Typische Zielgruppe
 
@@ -17,7 +17,7 @@ Diese Liste ist typischerweise relevant für:
 
 ## Navigation
 
-- Standardnavigation: `Benutzer -> Working Time Weights`
+- Standardnavigation: `Benutzer -> Arbeitszeitgewichtung`
 - Deeplink: `https://web.timecockpit.com/app/lists/entity/APP_WorkingTimeWeight`
 
 ## Spalten
@@ -31,5 +31,5 @@ Diese Liste ist typischerweise relevant für:
 
 ## Verwandte Seiten
 
-- [Target-Actual Hours Comparison](~/doc/referenz/listen/soll-ist-vergleich.md)
+- [Soll-Ist-Vergleich](~/doc/referenz/listen/soll-ist-vergleich.md)
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)

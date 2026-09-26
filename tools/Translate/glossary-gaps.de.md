@@ -2,7 +2,7 @@
 
 UI labels the German translation kept in English because `glossary.de.md` had no entry, with the German label the product actually uses. Found in the product repository (`TimeCockpit`): data model localizers `classic/TimeCockpit.Programmability/DataModel/Localization/*_de.cs` (L), `classic/OnCockpit.Programmability/DataModel/Localization/*_de.cs` (OL), WPF resources `classic/TimeCockpit.UI/WPF/**/Resources.de.resx` (W) and the web i18n files (web). Collected 2026-09-26.
 
-Workflow: confirm or correct a row, move it into `glossary.curated.de.md`, rerun `build-glossary.ps1`, then replace the English label in `de/doc/**`.
+Status: applied on 2026-09-26. All rows are in `glossary.curated.de.md` (section "Product UI labels") and were replaced in `de/doc/**`; 13 German pages were renamed to the product terms. Keep this file as the record of the sources.
 
 ## Conflicts with the current glossary, `toc.de.json` or German pages
 

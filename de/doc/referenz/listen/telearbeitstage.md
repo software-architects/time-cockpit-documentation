@@ -1,12 +1,12 @@
 ---
-title: Homeoffice-Übersicht (Home Office Overview)
-description: Referenz zur Standardliste Home Office Overview in time cockpit mit der Logik der Tageszählung und dem Drill-down zu den Details.
+title: Telearbeitstage
+description: Referenz zur Standardliste Telearbeitstage in time cockpit mit der Logik der Tageszählung und dem Drill-down zu den Details.
 en_page: doc/reference/lists/home-office-overview.md
 ---
 
-# Homeoffice-Übersicht
+# Telearbeitstage
 
-Die Liste **Home Office Overview** zählt die Homeoffice-Tage pro Benutzer für einen ausgewählten Zeitraum.
+Die Liste **Telearbeitstage** zählt die Homeoffice-Tage pro Benutzer für einen ausgewählten Zeitraum.
 
 ## Typische Zielgruppe
 
@@ -18,7 +18,7 @@ Diese Liste ist typischerweise relevant für:
 
 ## Navigation
 
-- Standardnavigation: `User -> Home Office Overview`
+- Standardnavigation: `Benutzer -> Telearbeitstage`
 - Deeplink: `https://web.timecockpit.com/app/lists/APP_HomeOfficeOverviewList`
 
 ## Standardfilter
@@ -26,7 +26,7 @@ Diese Liste ist typischerweise relevant für:
 | Filter | Technische Referenz | Bedeutung |
 |---|---|---|
 | Benutzer | `@UserDetailFilter` | Schränkt die Liste auf einen Benutzer ein |
-| Include Hidden Users | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
+| Inkl. ausgeblendeter Benutzer | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
 | From | `@BeginTimeFilter` | Beginn des Zählzeitraums |
 | To | `@EndTimeFilter` | Ende des Zählzeitraums |
 
@@ -35,7 +35,7 @@ Diese Liste ist typischerweise relevant für:
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Benutzer | `Fullname`, `UserDetailUuid` | In der Zeile angezeigter Benutzer | Anzeigewert des Benutzerdetails |
-| Telework Days | `HomeOfficeCount` | Anzahl der gezählten Homeoffice-Tage | Ein Tag zählt nur, wenn er mindestens eine relevante Homeoffice-Zeitbuchung und keine relevante Zeitbuchung außerhalb des Homeoffice enthält |
+| Telearbeitstage | `HomeOfficeCount` | Anzahl der gezählten Homeoffice-Tage | Ein Tag zählt nur, wenn er mindestens eine relevante Homeoffice-Zeitbuchung und keine relevante Zeitbuchung außerhalb des Homeoffice enthält |
 | Details | Link auf `HomeOfficeDetailList` | Drill-down zu den detaillierten Datensätzen | Öffnet die Detailliste mit denselben Filtern für Benutzer und Datum |
 
 ## Hinweise
@@ -45,5 +45,5 @@ Diese Liste ist typischerweise relevant für:
 
 ## Verwandte Seiten
 
-- [Zeitbericht](~/doc/referenz/listen/zeitbericht.md)
+- [Stundenzettel](~/doc/referenz/listen/stundenzettel.md)
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)

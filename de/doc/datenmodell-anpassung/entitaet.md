@@ -22,7 +22,7 @@ Im Modul ```Anpassung``` wird ein Baum aller Entitäten, Listen, Formulare, Akti
 
 ![Entität bearbeiten](/doc/data-model-customization/images/edit-entity.png "Entität bearbeiten")
 
-Im Editor können Sie die Eigenschaften der Entität, Beziehungen zu anderen Entitäten, Validierungsregeln, Berechtigungen und die von der Entität bereitgestellten Schnittstellen hinzufügen und ändern. Grundsätzlich lässt sich jedes dieser Elemente mit der Schaltfläche ```New item``` im Menüband hinzufügen. Die Schaltfläche ```New item``` ist kontextabhängig, d. h. es wird ein neues Element des ausgewählten Typs angelegt, je nachdem, welche Untergruppe der Elemente (Eigenschaften, Beziehungen usw.) ausgewählt ist.
+Im Editor können Sie die Eigenschaften der Entität, Beziehungen zu anderen Entitäten, Validierungsregeln, Berechtigungen und die von der Entität bereitgestellten Schnittstellen hinzufügen und ändern. Grundsätzlich lässt sich jedes dieser Elemente mit der Schaltfläche ```Neu``` im Menüband hinzufügen. Die Schaltfläche ```Neu``` ist kontextabhängig, d. h. es wird ein neues Element des ausgewählten Typs angelegt, je nachdem, welche Untergruppe der Elemente (Eigenschaften, Beziehungen usw.) ausgewählt ist.
 
 > [!NOTE]
 > Das Löschen von Eigenschaften und Beziehungen sowie das Einfügen von Eigenschaften, bei denen keine Null-Werte erlaubt sind, sind Operationen, die mit besonderer Sorgfalt durchgeführt werden sollten. Wenn bereits mehrere Benutzer oder Geräte eingerichtet sind und eine Entität bearbeitet wird, für die bereits Daten vorhanden sind, kann es bei der Synchronisierung zu Konflikten kommen.
@@ -31,21 +31,21 @@ Im Editor können Sie die Eigenschaften der Entität, Beziehungen zu anderen Ent
 
 ## Systemeigenschaften einer Entität
 
-* **Invariant friendly name:** Der Invariant friendly name ist der Name einer Entität in benutzerfreundlicher Form. Jede Entität hat zwei Namen. Einerseits wird beim Anlegen einer Entität ein eindeutiger technischer Name (z. B. ```APP_Project```) vergeben. Dieser Name wird als Tabellenname in der Datenbank verwendet und erscheint nur im Administrationsbereich. Der Invariant friendly name wird in der Benutzeroberfläche angezeigt.
+* **Anzeigename:** Der Anzeigename ist der Name einer Entität in benutzerfreundlicher Form. Jede Entität hat zwei Namen. Einerseits wird beim Anlegen einer Entität ein eindeutiger technischer Name (z. B. ```APP_Project```) vergeben. Dieser Name wird als Tabellenname in der Datenbank verwendet und erscheint nur im Administrationsbereich. Der Anzeigename wird in der Benutzeroberfläche angezeigt.
 
-* **Default display property**: Die Default display property legt fest, welche Eigenschaft standardmäßig angezeigt wird (z. B. in einem Kombinationsfeld), wenn eine Instanz einer Entität in der Benutzeroberfläche dargestellt wird. Bei Kunden ist die Default display property beispielsweise ```CompanyName```.
+* **Anzeigeeigenschaft**: Die Anzeigeeigenschaft legt fest, welche Eigenschaft standardmäßig angezeigt wird (z. B. in einem Kombinationsfeld), wenn eine Instanz einer Entität in der Benutzeroberfläche dargestellt wird. Bei Kunden ist die Anzeigeeigenschaft beispielsweise ```CompanyName```.
 
-![Default Display Property](/doc/data-model-customization/images/default-display-property.png "Default Display Property")
+![Anzeigeeigenschaft](/doc/data-model-customization/images/default-display-property.png "Anzeigeeigenschaft")
 
-* **Default list:** Benutzer können eigene Listen für Entitäten anlegen (siehe [Eigene Listen](~/doc/datenmodell-anpassung/liste.md)). Diese eigenen Listen können als Standardliste einer Entität festgelegt werden. Wird für ein Projekt beispielsweise eine Liste "MyProjectList" definiert und als Standardliste festgelegt, verwendet die Benutzeroberfläche MyProjectList immer dann, wenn eine Liste von Projekten angezeigt werden muss. Ist keine Standardliste ausgewählt, erzeugt time cockpit automatisch zur Laufzeit eine Liste mit allen Eigenschaften und Beziehungen einer Entität.
+* **Standard Liste:** Benutzer können eigene Listen für Entitäten anlegen (siehe [Eigene Listen](~/doc/datenmodell-anpassung/liste.md)). Diese eigenen Listen können als Standardliste einer Entität festgelegt werden. Wird für ein Projekt beispielsweise eine Liste "MyProjectList" definiert und als Standardliste festgelegt, verwendet die Benutzeroberfläche MyProjectList immer dann, wenn eine Liste von Projekten angezeigt werden muss. Ist keine Standardliste ausgewählt, erzeugt time cockpit automatisch zur Laufzeit eine Liste mit allen Eigenschaften und Beziehungen einer Entität.
 
-* **Default list for relations:** Benutzer können eine eigene Liste für eine Entität anlegen und sie als Standardliste für Beziehungen festlegen. Beispiel: Hat die Entität ```APP_Project``` eine eigene Liste für Beziehungen "CustomProjectRelationList", wird diese Liste in der Benutzeroberfläche immer dann verwendet, wenn eine Liste von Projekten in einem Kombinationsfeld angezeigt werden muss.
+* **Standard Liste für Relationen:** Benutzer können eine eigene Liste für eine Entität anlegen und sie als Standardliste für Beziehungen festlegen. Beispiel: Hat die Entität ```APP_Project``` eine eigene Liste für Beziehungen "CustomProjectRelationList", wird diese Liste in der Benutzeroberfläche immer dann verwendet, wenn eine Liste von Projekten in einem Kombinationsfeld angezeigt werden muss.
 
-* **Default form:** Die Eigenschaft Default form verhält sich ähnlich wie die Eigenschaft Default list. Der einzige Unterschied ist, dass ein Standardformular von der Benutzeroberfläche immer dann verwendet wird, wenn eine einzelne Instanz eines Datensatzes (z. B. ein Projekt) angezeigt werden soll. Ist kein Standardformular hinterlegt, erzeugt time cockpit ein Formular mit allen Eigenschaften und Beziehungen der Entität.
+* **Standard Form:** Die Eigenschaft Standard Form verhält sich ähnlich wie die Eigenschaft Standard Liste. Der einzige Unterschied ist, dass ein Standardformular von der Benutzeroberfläche immer dann verwendet wird, wenn eine einzelne Instanz eines Datensatzes (z. B. ein Projekt) angezeigt werden soll. Ist kein Standardformular hinterlegt, erzeugt time cockpit ein Formular mit allen Eigenschaften und Beziehungen der Entität.
 
 ## Eigenschaften
 
-Eigenschaften werden im Bearbeitungsmodus einer Entität verwaltet. Um eine Eigenschaft anzulegen, wählen Sie die Untergruppe ```Properties``` aus, damit die Schaltfläche ```New item``` eine neue Eigenschaft anlegt. time cockpit bietet verschiedene vordefinierte Typen von Eigenschaften. Jeder dieser Typen hat eine eigene Darstellung in der Benutzeroberfläche.
+Eigenschaften werden im Bearbeitungsmodus einer Entität verwaltet. Um eine Eigenschaft anzulegen, wählen Sie die Untergruppe ```Eigenschaften``` aus, damit die Schaltfläche ```Neu``` eine neue Eigenschaft anlegt. time cockpit bietet verschiedene vordefinierte Typen von Eigenschaften. Jeder dieser Typen hat eine eigene Darstellung in der Benutzeroberfläche.
 
 > [!NOTE]
 > Jede Eigenschaft im Datenmodell von time cockpit entspricht einer Spalte in einer Tabelle der zugrunde liegenden Datenbank.

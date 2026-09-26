@@ -18,7 +18,7 @@ Ersetzen Sie die Platzhalter in geschweiften Klammern durch Ihre Werte.
 
 ## Dashboard für das Projektportfolio (HTML)
 
-*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetary Control of Projects, TCQL → HTML-Datei
+*Verwendete Daten:* Projekte, Zeitbuchungen, Liste Budgetkontrolle für Projekte, TCQL → HTML-Datei
 
 > Erstelle ein Projektportfolio-Dashboard für alle offenen Projekte als einzelne HTML-Datei. Lade die Daten über den MCP-Server von time cockpit: pro Projekt die Budgetstunden, die gebuchten Stunden im Zeitraum {FROM} bis {TO}, die verrechenbaren Stunden und das Restbudget, aggregiert mit TCQL. Zeige oben KPI-Kacheln (Anzahl der Projekte, Gesamtbudget, gesamt gebucht, Anzahl der Projekte mit mehr als 80 % Verbrauch), darunter ein horizontales Balkendiagramm des Budgetverbrauchs pro Projekt in Ampelfarben (grün < 80 %, gelb 80–100 %, rot > 100 %) und eine sortierbare Tabelle. Schreibe Datenstand, Zeitraum und Filter in die Kopfzeile. Verwende nur Standardentitäten und weise im Dashboard auf abgeschnittene Ergebnisse hin.
 
@@ -30,21 +30,21 @@ Ersetzen Sie die Platzhalter in geschweiften Klammern durch Ihre Werte.
 
 ## Heatmap der Teamauslastung
 
-*Verwendete Daten:* Zeitbuchungen, Benutzer, Arbeitszeitgrenzen, Urlaub, Krankenstände, TCQL → HTML
+*Verwendete Daten:* Zeitbuchungen, Benutzer, Höchstarbeitszeit, Urlaub, Krankenstände, TCQL → HTML
 
 > Erstelle eine Heatmap der Auslastung meiner Abteilung von {FROM} bis {TO}: Zeilen = Mitarbeiter, Spalten = Kalenderwochen, Zellfarbe = gebuchte Stunden im Verhältnis zur geplanten Wochenarbeitszeit (unter 70 % blau, 70–110 % grün, über 110 % rot). Markiere Wochen mit genehmigtem Urlaub oder Krankenstand grau. Liefere das Ergebnis als HTML-Datei mit Legende, einem Tooltip pro Zelle (Stunden, Soll, Abwesenheiten) und einer Zusammenfassung der drei höchsten und niedrigsten Auslastungen. Aggregiere pro Mitarbeiter und Woche auf dem Server mit TCQL.
 
 ## Persönliches Wochen-Dashboard
 
-*Verwendete Daten:* aktueller Benutzer, Zeitbuchungen, Projekte, Aufgaben → Markdown oder HTML
+*Verwendete Daten:* aktueller Benutzer, Zeitbuchungen, Projekte, Tätigkeiten → Markdown oder HTML
 
 > Erstelle mein persönliches Dashboard für die Kalenderwoche {WEEK}: tägliche Balken der gebuchten Stunden im Vergleich zu meinem Tagessoll, Verteilung der Stunden nach Projekt als Ringdiagramm, Anteil der verrechenbaren Stunden, eine Liste der Tage mit Lücken oder unter dem Soll und die fünf größten Einträge. Verwende nur meine eigenen Zeitbuchungen, keine anderer Personen. Gib das Dashboard als HTML-Datei aus, dazu eine dreizeilige Textzusammenfassung, die ich im Team-Chat posten kann.
 
 ## Budgetampel als wiederkehrender Bericht
 
-*Verwendete Daten:* Liste Budgetary Control of Projects, Liste Budgetary Control of Tasks → Markdown, geplante Aufgabe
+*Verwendete Daten:* Liste Budgetkontrolle für Projekte, Liste Budgetkontrolle für Tätigkeiten → Markdown, geplante Aufgabe
 
-> Erstelle eine Budgetampel für alle offenen Projekte und Aufgaben: eine Tabelle mit Projekt, Aufgabe, Budget, gebucht, Verbrauch in Prozent und Ampelstatus, absteigend nach Verbrauch sortiert, darüber die Anzahl der grünen, gelben und roten Einträge. Verwende bevorzugt die Standardlisten. Formuliere den Bericht so, dass er unverändert als wöchentliche geplante Aufgabe wiederholt werden kann: Nenne den Datenstand, hebe Änderungen gegenüber dem vorherigen Lauf hervor, wenn ich den letzten Bericht anhänge, und nimm keine Änderungen an Daten vor.
+> Erstelle eine Budgetampel für alle offenen Projekte und Tätigkeiten: eine Tabelle mit Projekt, Tätigkeit, Budget, gebucht, Verbrauch in Prozent und Ampelstatus, absteigend nach Verbrauch sortiert, darüber die Anzahl der grünen, gelben und roten Einträge. Verwende bevorzugt die Standardlisten. Formuliere den Bericht so, dass er unverändert als wöchentliche geplante Aufgabe wiederholt werden kann: Nenne den Datenstand, hebe Änderungen gegenüber dem vorherigen Lauf hervor, wenn ich den letzten Bericht anhänge, und nimm keine Änderungen an Daten vor.
 
 ## Abwesenheitskalender der Abteilung
 

@@ -23,7 +23,7 @@ Diese FAQ beantwortet häufige Fragen von HR-Administratoren, die in time cockpi
 Im Standard von time cockpit besteht das Onboarding in der Regel aus zwei Teilen:
 
 1. Legen Sie das Benutzerkonto in der [Kontoverwaltung](~/doc/kontoverwaltung/kontoverwaltung.md) an oder aktivieren Sie es.
-2. Pflegen Sie die Stammdaten des Mitarbeiters unter **Benutzer -> User Details**.
+2. Pflegen Sie die Stammdaten des Mitarbeiters unter **Benutzer -> Benutzerdetails**.
 
 Die Standardeinrichtung durch HR umfasst in der Regel:
 
@@ -47,9 +47,9 @@ Typische Standardrollen sind:
 
 Für das Offboarding:
 
-1. Setzen Sie im Mitarbeiterdatensatz das **Date of Separation**.
+1. Setzen Sie im Mitarbeiterdatensatz das **Austrittsdatum**.
 2. Setzen Sie den Benutzer in der **Kontoverwaltung** auf **Active = false**, wenn er keinen Zugriff mehr haben und nicht mehr verrechnet werden soll.
-3. Setzen Sie **Hidden**, wenn der Benutzer nicht mehr in Auswahllisten erscheinen soll.
+3. Setzen Sie **Ausgeblendet**, wenn der Benutzer nicht mehr in Auswahllisten erscheinen soll.
 4. Löschen Sie den Benutzer nicht, wenn Sie historische Daten behalten müssen.
 
 **Siehe auch:**
@@ -88,7 +88,7 @@ Wichtiges Standardverhalten:
 
 **Siehe auch:**
 - [Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 
 ---
 
@@ -143,7 +143,7 @@ Wenn Ihr Unternehmen besondere Regeln für den Aufbau oder Verfall von Urlaub be
 Wenn der Genehmigungsworkflow aktiviert ist, können HR-Administratoren Abwesenheiten aller Benutzer im Namen der Abteilungsleiter genehmigen.
 
 1. Öffnen Sie den Abwesenheitskalender, der unter [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md) beschrieben ist.
-2. Aktivieren Sie **Show all users**, wenn Sie abteilungsübergreifend arbeiten müssen.
+2. Aktivieren Sie **Alle Benutzer anzeigen**, wenn Sie abteilungsübergreifend arbeiten müssen.
 3. Grenzen Sie das Ergebnis bei Bedarf mit den Filtern **Abteilung** und **Benutzer** ein.
 4. Wählen Sie eine offene Zeile in der Liste über dem Kalender aus, um die Abwesenheit als Vorschau anzuzeigen.
 5. Verwenden Sie die Aktion zum Genehmigen oder Ablehnen in den Spalten ganz rechts.
@@ -202,21 +202,21 @@ Der Genehmigungsworkflow kann für jede Abwesenheitsart separat aktiviert werden
 
 Die wichtigsten Standardansichten für HR-Administratoren sind:
 
-- **Zeitbericht** für Arbeitszeit, Pausen, Bemerkungen und Überstunden in einem gewählten Zeitraum
-- **Target-Actual Hours Comparison** für Soll- und Iststunden über einen Zeitraum
-- **Overtime per Effective Date** für eine Momentaufnahme der Überstunden zu einem Datum
-- **Working Time Violations**, wenn Ihr Mandant Arbeitszeitregelungen verwendet
+- **Stundenzettel** für Arbeitszeit, Pausen, Bemerkungen und Überstunden in einem gewählten Zeitraum
+- **Soll-Ist-Vergleich** für Soll- und Iststunden über einen Zeitraum
+- **Arbeitszeitsaldo** für eine Momentaufnahme der Überstunden zu einem Datum
+- **Arbeitszeitverletzungen**, wenn Ihr Mandant Arbeitszeitregelungen verwendet
 - abwesenheitsbezogene Listen und der Abwesenheitskalender für Urlaub, Krankenstand und Zeitausgleich
 
 Kombinieren Sie diese Ansichten je nach Fragestellung:
 
-1. Beginnen Sie mit dem **Zeitbericht**, wenn Sie eine detaillierte Ansicht für einen Benutzer und einen Zeitraum benötigen.
-2. Verwenden Sie **Target-Actual Hours Comparison**, wenn Sie Benutzer über einen Zeitraum vergleichen möchten.
-3. Verwenden Sie **Overtime per Effective Date**, wenn Sie den Überstundenstand zu einem bestimmten Datum benötigen.
-4. Verwenden Sie **Working Time Violations**, wenn Sie regelbasierte Arbeitszeitverstöße prüfen und die Funktion in Ihrem Mandanten eingerichtet ist.
+1. Beginnen Sie mit dem **Stundenzettel**, wenn Sie eine detaillierte Ansicht für einen Benutzer und einen Zeitraum benötigen.
+2. Verwenden Sie den **Soll-Ist-Vergleich**, wenn Sie Benutzer über einen Zeitraum vergleichen möchten.
+3. Verwenden Sie den **Arbeitszeitsaldo**, wenn Sie den Überstundenstand zu einem bestimmten Datum benötigen.
+4. Verwenden Sie die Liste **Arbeitszeitverletzungen**, wenn Sie regelbasierte Arbeitszeitverletzungen prüfen und die Funktion in Ihrem Mandanten eingerichtet ist.
 
 **Siehe auch:**
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)
 - [Arbeitszeitregelungen](~/doc/arbeitszeiterfassung/arbeitszeitregelungen.md)
 
@@ -235,7 +235,7 @@ Prüfen Sie vor dem Export:
 
 Typische Standardquellen sind:
 
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 - [Datenexport](~/doc/datenaustausch/export.md)
@@ -243,7 +243,7 @@ Typische Standardquellen sind:
 Die Standarddokumentation erklärt, wie Sie Daten exportieren. Das endgültige Format für die Lohnverrechnung hängt jedoch von Ihrem nachgelagerten Lohnverrechnungssystem und einer eventuell verwendeten eigenen Integration ab.
 
 **Siehe auch:**
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
 - [Datenexport](~/doc/datenaustausch/export.md)
 - [Entwickler-FAQ](~/doc/entwickler-faq.md)
@@ -263,7 +263,7 @@ Die Standarddokumentation erklärt, wie Sie Daten exportieren. Das endgültige F
 **Dokumentation:**
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 - [Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)
-- [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+- [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
 - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
 - [Kontoverwaltung](~/doc/kontoverwaltung/kontoverwaltung.md)
 

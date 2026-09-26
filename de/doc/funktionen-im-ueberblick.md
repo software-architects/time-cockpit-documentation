@@ -40,9 +40,9 @@ Verbinden Sie Ihre bestehenden Kalender und Werkzeuge.
 ## 📊 Projektmanagement
 
 ### Projektstruktur & Einrichtung
-Organisieren Sie die Arbeit nach Kunden, Projekten und Aufgaben.
+Organisieren Sie die Arbeit nach Kunden, Projekten und Tätigkeiten.
 
-- **[Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)** - Die Projekthierarchie einrichten
+- **[Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)** - Die Projekthierarchie einrichten
 - **[Zeitbuchungen im Projekt](/doc/project-time-tracking/timesheet.html)** - Projektbezogene Ansichten der Zeiterfassung
 
 **Mehr erfahren:** [Funktionen der projektbezogenen Zeiterfassung](https://www.timecockpit.com/features/project-time-tracking/)
@@ -81,14 +81,14 @@ Machen Sie aus erfassten Zeiten Kundenrechnungen.
 Konfigurieren Sie Stundensätze und Preisstrategien.
 
 - **[Stundensätze verwalten & Preisgestaltung](/doc/project-time-tracking/hourly-rates.html)** - 💵 **NEU!** Vollständiger Leitfaden zur Konfiguration von Stundensätzen
-  - Hierarchie der Stundensätze (Aufgabe → Projekt → Benutzer → Unternehmen)
+  - Hierarchie der Stundensätze (Tätigkeit → Projekt → Benutzer → Unternehmen)
   - Kundenspezifische Preisstrategien
   - Rollen- und leistungsbasierte Stundensätze
   - Hinweise zu mehreren Währungen
   - Abläufe bei Änderungen von Stundensätzen
 
 **Wichtige Funktionen:**
-- Stundensätze auf Projekt-, Aufgaben- und Mitarbeiterebene festlegen
+- Stundensätze auf Projekt-, Tätigkeits- und Mitarbeiterebene festlegen
 - Interne Kosten und verrechenbare Beträge verfolgen
 - Mischsätze sowie rollen- oder leistungsbasierte Preise umsetzen
 - Stundensatzänderungen während eines Projekts verwalten
@@ -102,7 +102,7 @@ Erfassen Sie Arbeitszeiten und Abwesenheiten von Mitarbeitern und stellen Sie di
 - **[Arbeitszeit / Abwesenheitsverwaltung](/doc/employee-time-tracking/working-time.html)** - Arbeitszeiten und Überstunden verwalten
 - **[Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)** - Urlaub, Krankenstand, Zeitausgleich
 - **[Arbeitszeitregelungen](/doc/employee-time-tracking/working-time-regulations.html)** - Einhaltung des Arbeitsrechts
-- **[Zeitbericht](/doc/employee-time-tracking/time-report.html)** - Zeitberichte für Mitarbeiter
+- **[Stundenzettel](/doc/employee-time-tracking/time-report.html)** - Stundenzettel für Mitarbeiter
 - **[Erfassung von Homeoffice](/doc/employee-time-tracking/work-from-home.html)** - Zeiterfassung bei Remote-Arbeit
 
 **Mehr erfahren:** [Funktionen der Arbeitszeiterfassung](https://www.timecockpit.com/features/employee-time-tracking/)
@@ -259,7 +259,7 @@ Verstehen Sie die Datenstruktur von time cockpit.
 ### „Ich möchte …"
 
 **… Zeiten auf Kundenprojekte erfassen**
-→ [Zeitbuchungen im Projekt](/doc/project-time-tracking/timesheet.html) | [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
+→ [Zeitbuchungen im Projekt](/doc/project-time-tracking/timesheet.html) | [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
 
 **… Budgetüberschreitungen in Projekten verhindern**
 → [Budgetkontrolle](/doc/project-time-tracking/budget-tracking.html) | [Anwendungsfall Budgetkontrolle](/doc/use-cases/budgetary-control.html)

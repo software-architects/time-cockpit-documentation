@@ -38,20 +38,20 @@ time cockpit verwendet ein kaskadierendes System von Stundensätzen mit einer kl
 
 ### Priorität der Sätze (von der höchsten zur niedrigsten)
 
-**1. Aufgabenspezifischer Satz** (höchste Priorität)
-- Wird bei einzelnen Aufgaben festgelegt
+**1. Tätigkeitsspezifischer Satz** (höchste Priorität)
+- Wird bei einzelnen Tätigkeiten festgelegt
 - Feinste Steuerungsmöglichkeit
 - Überschreibt alle anderen Sätze
 
 **2. Standardsatz des Projekts**
 - Wird bei Projekten festgelegt
-- Gilt für alle Aufgaben bzw. Einträge dieses Projekts (sofern kein Aufgabensatz angegeben ist)
+- Gilt für alle Tätigkeiten bzw. Einträge dieses Projekts (sofern kein Tätigkeitssatz angegeben ist)
 - Häufigste Vorgehensweise
 
 **3. Satz des Mitarbeiters bzw. Benutzers**
 - Wird im Datensatz des Mitarbeiters festgelegt
 - Wird typischerweise für den internen Kostensatz verwendet (nicht für den verrechenbaren Satz)
-- Rückfallwert, wenn es keinen Projekt- oder Aufgabensatz gibt
+- Rückfallwert, wenn es keinen Projekt- oder Tätigkeitssatz gibt
 
 **4. Standardsatz des Unternehmens** (niedrigste Priorität, Rückfallwert)
 - Globaler Standardsatz (in den Einstellungen konfiguriert)
@@ -74,11 +74,11 @@ Entry for Task A on Project B by Employee C:
 **Beispiel:**
 - Mitarbeiter: John (Standardsatz: 125 $/Stunde interne Kosten)
 - Projekt: Client Website (Standardsatz: 150 $/Stunde)
-- Aufgabe: "Senior Development" (eigener Satz: 200 $/Stunde)
-- Aufgabe: "Junior Development" (kein eigener Satz)
+- Tätigkeit: "Senior Development" (eigener Satz: 200 $/Stunde)
+- Tätigkeit: "Junior Development" (kein eigener Satz)
 
 **Ergebnis:**
-- Johns Zeit auf "Senior Development" → verrechnet mit 200 $/Stunde (Aufgabensatz)
+- Johns Zeit auf "Senior Development" → verrechnet mit 200 $/Stunde (Tätigkeitssatz)
 - Johns Zeit auf "Junior Development" → verrechnet mit 150 $/Stunde (Projektsatz)
 
 ## Stundensätze festlegen
@@ -94,7 +94,7 @@ Am besten geeignet für: einheitliche Sätze für das gesamte Projekt
 4. Klicken Sie auf **Speichern**
 
 **Auswirkung:**
-- Alle Zeitbuchungen dieses Projekts verwenden 150 $ (sofern kein Aufgabensatz ihn überschreibt)
+- Alle Zeitbuchungen dieses Projekts verwenden 150 $ (sofern kein Tätigkeitssatz ihn überschreibt)
 - Einfache, einheitliche Preisgestaltung
 - Leicht zu verwalten
 
@@ -103,13 +103,13 @@ Am besten geeignet für: einheitliche Sätze für das gesamte Projekt
 - Mischsatz über das ganze Team
 - Einfache Verrechnung nach Aufwand
 
-### Sätze auf Aufgabenebene (feine Steuerung)
+### Sätze auf Tätigkeitsebene (feine Steuerung)
 
 Am besten geeignet für: unterschiedliche Sätze für unterschiedliche Arten von Arbeit
 
 **Konfiguration:**
-1. Navigieren Sie zu **Verwaltung** → **[Aufgaben](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
-2. Öffnen Sie die Aufgabe
+1. Navigieren Sie zu **Verwaltung** → **[Tätigkeiten](https://web.timecockpit.com/app/lists/APP_DefaultTaskList)**
+2. Öffnen Sie die Tätigkeit
 3. Setzen Sie **Hourly Rate:** (z. B. 200 $)
 4. Klicken Sie auf **Speichern**
 
@@ -241,7 +241,7 @@ Legen Sie eine eigene Entität "Rate Card" an:
 **Suchlogik:**
 Beim Anlegen einer Zeitbuchung sucht ein Skript den Satz in der Rate Card anhand folgender Kriterien:
 - Aktueller Kunde
-- Aktuelle Aufgabe bzw. Leistungsart
+- Aktuelle Tätigkeit bzw. Leistungsart
 - Stichtag (für historische Sätze)
 
 **Vorteile:**
@@ -291,13 +291,13 @@ Internal profit margin varies (50%, 100%, 200%)
 **Konzept:** Unterschiedliche Sätze je nach Erfahrung bzw. Rolle des Mitarbeiters
 
 **Einrichtung:**
-Legen Sie Aufgaben nach Rolle an:
-- Aufgabe: "Senior Development" → Satz: 200 $/Stunde
-- Aufgabe: "Mid-Level Development" → Satz: 150 $/Stunde
-- Aufgabe: "Junior Development" → Satz: 100 $/Stunde
-- Aufgabe: "QA/Testing" → Satz: 80 $/Stunde
+Legen Sie Tätigkeiten nach Rolle an:
+- Tätigkeit: "Senior Development" → Satz: 200 $/Stunde
+- Tätigkeit: "Mid-Level Development" → Satz: 150 $/Stunde
+- Tätigkeit: "Junior Development" → Satz: 100 $/Stunde
+- Tätigkeit: "QA/Testing" → Satz: 80 $/Stunde
 
-Die Mitarbeiter wählen bei der Zeiterfassung die passende Aufgabe aus.
+Die Mitarbeiter wählen bei der Zeiterfassung die passende Tätigkeit aus.
 
 **Wann einsetzen:**
 - Der Kunde möchte die Kosten steuern (setzt Junior-Mitarbeiter für einfache Arbeiten ein)
@@ -325,11 +325,11 @@ Optimizes cost (right person for right job)
 **Konzept:** Unterschiedliche Sätze für unterschiedliche Leistungen bzw. Ergebnisse
 
 **Einrichtung:**
-Aufgaben nach Leistungsart gegliedert:
-- Aufgabe: "Consulting & Advisory" → Satz: 250 $/Stunde
-- Aufgabe: "Development & Implementation" → Satz: 150 $/Stunde
-- Aufgabe: "Support & Maintenance" → Satz: 100 $/Stunde
-- Aufgabe: "Training & Documentation" → Satz: 120 $/Stunde
+Tätigkeiten nach Leistungsart gegliedert:
+- Tätigkeit: "Consulting & Advisory" → Satz: 250 $/Stunde
+- Tätigkeit: "Development & Implementation" → Satz: 150 $/Stunde
+- Tätigkeit: "Support & Maintenance" → Satz: 100 $/Stunde
+- Tätigkeit: "Training & Documentation" → Satz: 120 $/Stunde
 
 **Wann einsetzen:**
 - Vielfältiges Leistungsangebot
@@ -478,7 +478,7 @@ Required Billable Rate = $75 / (1 - 0.40) = $125/hour minimum
 **Zweck:** Verrechenbarer Satz, der für die Umsatzberechnung verwendet wird
 
 **Gesetzt durch:**
-- Automatische Befüllung anhand der Satzhierarchie (Aufgabe → Projekt → Benutzer)
+- Automatische Befüllung anhand der Satzhierarchie (Tätigkeit → Projekt → Benutzer)
 - Kann pro Eintrag manuell überschrieben werden (sofern die Berechtigungen es zulassen)
 
 **Verwendet für:**
@@ -536,7 +536,7 @@ if timesheet.HourlyRateActual == 0:
 ### Import und Export von Sätzen
 
 **Massenänderung von Sätzen:**
-1. Exportieren Sie Projekte bzw. Aufgaben über den [Datenexport](/doc/data-exchange/export.html) nach Excel
+1. Exportieren Sie Projekte bzw. Tätigkeiten über den [Datenexport](/doc/data-exchange/export.html) nach Excel
 2. Aktualisieren Sie die Sätze in Excel
 3. Importieren Sie sie über den [Datenimport](/doc/data-exchange/import.html) wieder
 
@@ -574,7 +574,7 @@ if timesheet.HourlyRateActual == 0:
 4. Korrigieren Sie sie vor der Verrechnung
 
 **Häufige Probleme:**
-- ❌ Mitarbeiter hat die falsche Aufgabe gewählt (falscher Satz angewendet)
+- ❌ Mitarbeiter hat die falsche Tätigkeit gewählt (falscher Satz angewendet)
 - ❌ Projektsatz nach Vertragsänderung nicht aktualisiert
 - ❌ Manuelle Überschreibung falsch angewendet
 - ❌ Fehlender Satz (Einträge mit einem Satz von null)
@@ -583,7 +583,7 @@ if timesheet.HourlyRateActual == 0:
 
 ### Projektmanagement
 - [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md) - Rentabilitätsanalyse mithilfe von Sätzen
-- [Kunden, Projekte und Aufgaben](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md) - Projekthierarchie einrichten
+- [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md) - Projekthierarchie einrichten
 
 ### Rechnungslegung
 - [Rechnungserstellung und Ablauf der Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md) - Wie Sätze in Rechnungen einfließen

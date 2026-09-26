@@ -1,12 +1,12 @@
 ---
-title: Abwesenheit genehmigen (Approve Absence) - Aktionsreferenz
-description: Referenz zur Standardaktion Approve Absence in time cockpit mit Verfügbarkeit, Prüfung der Berechtigungen und Nebeneffekten im Standardablauf.
+title: Abwesenheit genehmigen - Aktionsreferenz
+description: Referenz zur Standardaktion Abwesenheit Genehmigen in time cockpit mit Verfügbarkeit, Prüfung der Berechtigungen und Nebeneffekten im Standardablauf.
 en_page: doc/reference/actions/approve-absence.md
 ---
 
 # Abwesenheit genehmigen
 
-Die Aktion **Approve Absence** genehmigt offene Abwesenheitsanträge.
+Die Aktion **Abwesenheit Genehmigen** genehmigt offene Abwesenheitsanträge.
 
 Sie wird für diese Standardabwesenheitsarten verwendet:
 

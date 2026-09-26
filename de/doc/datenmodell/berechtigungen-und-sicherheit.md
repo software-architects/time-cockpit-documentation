@@ -351,7 +351,7 @@ Schränken Sie den Zugriff auf bestimmte Eigenschaften (Felder) innerhalb einer 
 
 ## Berechtigungen für Aktionen
 
-Legen Sie fest, wer bestimmte Aktionen ausführen darf (z. B. Rechnung erstellen, Urlaub genehmigen).
+Legen Sie fest, wer bestimmte Aktionen ausführen darf (z. B. Ausgangsrechnung anlegen, Urlaub genehmigen).
 
 **Beispiel**: Rechnungslegung nur für Abrechnungsadministratoren
 ```tcql

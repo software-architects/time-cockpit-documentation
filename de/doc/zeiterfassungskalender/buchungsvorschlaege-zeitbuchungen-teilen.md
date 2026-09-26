@@ -13,7 +13,7 @@ Die geteilten Einträge erscheinen beim Empfänger als **Vorschläge** im Zeiter
 
 Ein typisches Szenario:
 
-- Ein Berater erfasst Zeiten auf einen bestimmten Kunden, ein Projekt und eine Aufgabe.
+- Ein Berater erfasst Zeiten auf einen bestimmten Kunden, ein Projekt und eine Tätigkeit.
 - Ein Kollege hat am selben Arbeitspaket gearbeitet und soll seine Zeit ähnlich buchen, ist sich aber über den richtigen Umfang, die Beschreibung oder die Dauer nicht sicher.
 - Statt eine lange Erklärung per Chat oder E-Mail zu schicken, **teilt der Berater eine bestehende Zeitbuchung** als Vorschlag.
 - Der Kollege prüft den Vorschlag direkt im Kalender und **nimmt ihn an** (bei Bedarf passt er die Details vor dem Speichern an).
@@ -67,27 +67,27 @@ Je nach Einrichtung Ihrer Benachrichtigungen können neue Vorschläge auch in Ih
 
 Um Zeitbuchungen teilen bzw. Buchungsvorschläge zu verwenden, müssen alle folgenden Bedingungen erfüllt sein:
 
-1. **In den Global Settings aktiviert**
-   - Die Einstellung `Enable Timesheet Suggestions` in den Global Settings muss `true` sein.
+1. **In den Globalen Einstellungen aktiviert**
+   - Die Einstellung `Zeitbuchungsvorschläge aktivieren` in den Globalen Einstellungen muss `true` sein.
 2. **Zugriff auf den Zeiterfassungskalender**
    - Benutzer brauchen die Berechtigung, Zeitbuchungen im Zeiterfassungskalender anzuzeigen und anzulegen.
 
 > [!NOTE]
 > Ist die Funktion nicht installiert oder nicht aktiviert, stehen die Schaltfläche **Teilen** und die zugehörigen Elemente der Oberfläche nicht zur Verfügung.
 
-## Buchungsvorschläge aktivieren (Global Settings)
+## Buchungsvorschläge aktivieren (Globale Einstellungen)
 
-1. Öffnen Sie **Global Settings**:
+1. Öffnen Sie **Globale Einstellungen**:
    - Typische URL: https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings
-2. Suchen Sie die Einstellung **Enable Timesheet Suggestions** (technischer Name `APP_TimesheetSuggestionsEnabled`).
+2. Suchen Sie die Einstellung **Zeitbuchungsvorschläge aktivieren** (technischer Name `APP_TimesheetSuggestionsEnabled`).
 3. Setzen Sie sie auf **aktiviert/true**.
 4. Laden Sie die Web-App neu.
 
-![Buchungsvorschläge in den Global Settings aktivieren](/doc/timesheet-calendar/images/enable-timesheet-suggestions.png "Buchungsvorschläge in den Global Settings aktivieren")
+![Buchungsvorschläge in den Globalen Einstellungen aktivieren](/doc/timesheet-calendar/images/enable-timesheet-suggestions.png "Buchungsvorschläge in den Globalen Einstellungen aktivieren")
 
 > [!TIP]
-> Wenn Sie die Einstellung im Formular der Global Settings nicht sehen, ist sie möglicherweise nicht in Ihrer aktuellen Anpassung dieses Formulars enthalten.
-> In diesem Fall müssen Sie die Eigenschaft `APP_TimesheetSuggestionsEnabled` zu Ihrer Formularanpassung der Global Settings hinzufügen.
+> Wenn Sie die Einstellung im Formular der Globalen Einstellungen nicht sehen, ist sie möglicherweise nicht in Ihrer aktuellen Anpassung dieses Formulars enthalten.
+> In diesem Fall müssen Sie die Eigenschaft `APP_TimesheetSuggestionsEnabled` zu Ihrer Formularanpassung der Globalen Einstellungen hinzufügen.
 
 ## So verwenden Sie die Funktion
 

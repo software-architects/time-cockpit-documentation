@@ -18,30 +18,30 @@ Diese Seiten ergänzen die rollenbasierten FAQs und die Anleitungen zu Arbeitsab
 Hier starten:
 
 - Listen für Verrechnung und Projekte:
-  [Unbilled Timesheets](~/doc/referenz/listen/nicht-verrechnete-zeitbuchungen.md),
-  [Budgetary Control of Projects](~/doc/referenz/listen/budgetkontrolle-projekte.md),
-  [Budgetary Control of Tasks](~/doc/referenz/listen/budgetkontrolle-aufgaben.md),
-  [Invoice Report](~/doc/referenz/listen/rechnungsbericht.md)
+  [Nicht verrechnete Zeitbuchungen](~/doc/referenz/listen/nicht-verrechnete-zeitbuchungen.md),
+  [Budgetkontrolle für Projekte](~/doc/referenz/listen/budgetkontrolle-projekte.md),
+  [Budgetkontrolle für Tätigkeiten](~/doc/referenz/listen/budgetkontrolle-taetigkeiten.md),
+  [Rechnungsdokument](~/doc/referenz/listen/rechnungsdokument.md)
 - Listen für Anwesenheit und Abwesenheiten:
   [Urlaub](~/doc/referenz/listen/urlaub.md),
   [Urlaubsanspruch](~/doc/referenz/listen/urlaubsanspruch.md),
-  [Urlaub zum Stichtag](~/doc/referenz/listen/urlaub-zum-stichtag.md),
+  [Resturlaub](~/doc/referenz/listen/resturlaub.md),
   [Krankenstand](~/doc/referenz/listen/krankenstand.md),
   [Zeitausgleich](~/doc/referenz/listen/zeitausgleich.md),
   [Wochenarbeitszeit](~/doc/referenz/listen/wochenarbeitszeit.md),
-  [Arbeitszeitgrenzen](~/doc/referenz/listen/arbeitszeitgrenzen.md),
-  [Arbeitszeitgewichtungen](~/doc/referenz/listen/arbeitszeitgewichtungen.md),
-  [Arbeitszeitverstöße](~/doc/referenz/listen/arbeitszeitverstoesse.md),
-  [Absence Calendar](~/doc/referenz/listen/abwesenheitskalender.md)
+  [Höchstarbeitszeit](~/doc/referenz/listen/hoechstarbeitszeit.md),
+  [Arbeitszeitgewichtung](~/doc/referenz/listen/arbeitszeitgewichtung.md),
+  [Arbeitszeitverletzungen](~/doc/referenz/listen/arbeitszeitverletzungen.md),
+  [Abwesenheitskalender](~/doc/referenz/listen/abwesenheitskalender.md)
 - Listen für Berichte und Auswertungen:
-  [Overtime per Effective Date](~/doc/referenz/listen/ueberstunden-zum-stichtag.md),
-  [Target-Actual Hours Comparison](~/doc/referenz/listen/soll-ist-vergleich.md),
-  [Zeitbericht](~/doc/referenz/listen/zeitbericht.md),
-  [Home Office Overview](~/doc/referenz/listen/homeoffice-uebersicht.md)
+  [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md),
+  [Soll-Ist-Vergleich](~/doc/referenz/listen/soll-ist-vergleich.md),
+  [Stundenzettel](~/doc/referenz/listen/stundenzettel.md),
+  [Telearbeitstage](~/doc/referenz/listen/telearbeitstage.md)
 - Aktionen:
-  [Create Invoice](~/doc/referenz/aktionen/rechnung-erstellen.md),
-  [Assign to Existing Outgoing Invoice](~/doc/referenz/aktionen/bestehender-ausgangsrechnung-zuordnen.md),
-  [Approve Absence](~/doc/referenz/aktionen/abwesenheit-genehmigen.md),
-  [Reject Absence](~/doc/referenz/aktionen/abwesenheit-ablehnen.md)
+  [Ausgangsrechnung anlegen](~/doc/referenz/aktionen/ausgangsrechnung-anlegen.md),
+  [Zu vorhandener Ausgangsrechnung zuordnen](~/doc/referenz/aktionen/zu-vorhandener-ausgangsrechnung-zuordnen.md),
+  [Abwesenheit Genehmigen](~/doc/referenz/aktionen/abwesenheit-genehmigen.md),
+  [Abwesenheit Ablehnen](~/doc/referenz/aktionen/abwesenheit-ablehnen.md)
 
 Weitere Referenzseiten zu Listen und Aktionen werden laufend ergänzt.

@@ -12,7 +12,7 @@ time cockpit bietet einen MCP-Server, über den KI-Assistenten wie Claude, OpenA
 
 ## Was Sie tun können
 
-- Fragen zu Ihren Projekten, Aufgaben, Zeitbuchungen, Budgets und Abwesenheiten in natürlicher Sprache stellen.
+- Fragen zu Ihren Projekten, Tätigkeiten, Zeitbuchungen, Budgets und Abwesenheiten in natürlicher Sprache stellen.
 - Ihre eigenen Stunden pro Projekt zusammenfassen, Lücken in Ihrer Zeiterfassung finden oder Ihren Resturlaub prüfen.
 - Den Assistenten Berichte und Dashboards aus aggregierten Daten von time cockpit erstellen lassen.
 - Datensätze anlegen oder ändern (zum Beispiel einen Urlaubseintrag) – der Assistent zeigt Ihnen die geplante Änderung immer zuerst und bittet um Bestätigung.

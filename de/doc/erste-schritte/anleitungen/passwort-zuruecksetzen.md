@@ -5,11 +5,11 @@ en_page: doc/getting-started/howtos/reset-password.md
 ---
 # Passwort zurücksetzen
 
-Um Ihr Passwort zurückzusetzen, öffnen Sie die Anmeldeseite unseres time cockpit Web-Clients [web.timecockpit.com](https://web.timecockpit.com/) und klicken Sie auf den Link 'Reset password'.
+Um Ihr Passwort zurückzusetzen, öffnen Sie die Anmeldeseite unseres time cockpit Web-Clients [web.timecockpit.com](https://web.timecockpit.com/) und klicken Sie auf den Link 'Passwort zurücksetzen'.
 
 ![Anmeldeseite](/doc/getting-started/howtos/images/reset-password-1.png "Anmeldeseite")
 
-Geben Sie die E-Mail-Adresse ein, mit der Sie bei time cockpit registriert sind, und klicken Sie auf die Schaltfläche 'Reset Password'.
+Geben Sie die E-Mail-Adresse ein, mit der Sie bei time cockpit registriert sind, und klicken Sie auf die Schaltfläche 'Passwort zurücksetzen'.
 
 ![Passwort zurücksetzen](/doc/getting-started/howtos/images/reset-password-2.png "Passwort zurücksetzen")
 

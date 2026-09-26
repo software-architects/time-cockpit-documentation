@@ -25,20 +25,20 @@ Diese Liste ist typischerweise relevant für:
 | Filter | Technische Referenz | Bedeutung |
 |---|---|---|
 | Benutzer | `@UserDetail` | Beschränkt die Liste auf einen Benutzer |
-| Include Hidden Users | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
+| Inkl. ausgeblendeter Benutzer | `@IncludeHiddenUsers` | Bezieht ausgeblendete Benutzer ein |
 
 ## Spalten
 
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Benutzer | `UserDetailName`, `UserDetailUuid` | Benutzer des Anspruchsdatensatzes | Anzeigewert des Benutzerdetails |
-| Vacation Entitlement Date | `APP_VacationEntitlementDate` | Datum, ab dem der Anspruch wirksam wird | Aus dem Anspruchsdatensatz übernommen |
-| Number of Weeks | `APP_NumberOfWeeks` | Anzahl der gewährten oder abgezogenen Urlaubswochen | Aus dem Anspruchsdatensatz übernommen |
-| Extraordinary Entitlement | `APP_IsExtraordinary` | Kennzeichnet den Anspruch als außerordentlich, sodass er nicht aliquotiert wird (siehe [Aliquoter Urlaub](~/doc/arbeitszeiterfassung/aliquoter-urlaub.md)) | Aus dem Anspruchsdatensatz übernommen |
+| Entstehungsdatum | `APP_VacationEntitlementDate` | Datum, ab dem der Anspruch wirksam wird | Aus dem Anspruchsdatensatz übernommen |
+| Anzahl Wochen | `APP_NumberOfWeeks` | Anzahl der gewährten oder abgezogenen Urlaubswochen | Aus dem Anspruchsdatensatz übernommen |
+| Außerordentlicher Urlaubsanspruch | `APP_IsExtraordinary` | Kennzeichnet den Anspruch als außerordentlich, sodass er nicht aliquotiert wird (siehe [Aliquoter Urlaub](~/doc/arbeitszeiterfassung/aliquoter-urlaub.md)) | Aus dem Anspruchsdatensatz übernommen |
 | Description | `APP_Description` | Freitextbeschreibung des Anspruchs | Aus dem Anspruchsdatensatz übernommen |
 
 ## Verwandte Seiten
 
 - [Urlaub](~/doc/referenz/listen/urlaub.md)
-- [Urlaub zum Stichtag](~/doc/referenz/listen/urlaub-zum-stichtag.md)
+- [Resturlaub](~/doc/referenz/listen/resturlaub.md)
 - [Aliquoter Urlaub](~/doc/arbeitszeiterfassung/aliquoter-urlaub.md)

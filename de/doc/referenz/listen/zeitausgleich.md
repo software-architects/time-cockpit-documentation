@@ -26,20 +26,20 @@ Diese Liste ist typischerweise relevant für:
 | Filter | Technische Referenz | Bedeutung |
 |---|---|---|
 | Benutzer | `@UserDetail` | Benutzer, dessen Einträge angezeigt werden |
-| Since | `@YearParam` | Startjahr der angezeigten Einträge |
+| Seit | `@YearParam` | Startjahr der angezeigten Einträge |
 
 ## Spalten
 
 | Spalte | Technische Referenz | Bedeutung | Ermittlung des Werts |
 |---|---|---|---|
 | Benutzer | `APP_UserDetail` | Benutzer des Eintrags | Aus dem Zeitausgleichsdatensatz übernommen |
-| Is Whole Day | `APP_IsWholeDay` | Ob der Eintrag ganztägig ist | Aus dem Zeitausgleichsdatensatz übernommen |
+| Ganztägig | `APP_IsWholeDay` | Ob der Eintrag ganztägig ist | Aus dem Zeitausgleichsdatensatz übernommen |
 | From | `APP_BeginTime` | Beginn des Eintrags | Aus dem Zeitausgleichsdatensatz übernommen |
 | To | `APP_EndTime` | Ende des Eintrags | Aus dem Zeitausgleichsdatensatz übernommen |
 | Description | `APP_Description` | Beschreibung des Eintrags | Aus dem Zeitausgleichsdatensatz übernommen |
-| Approved | `APP_IsApproved` | Genehmigungsstatus | Aus dem Datensatz übernommen und angezeigt, wenn die Genehmigung von Zeitausgleich aktiv ist |
+| Genehmigt | `APP_IsApproved` | Genehmigungsstatus | Aus dem Datensatz übernommen und angezeigt, wenn die Genehmigung von Zeitausgleich aktiv ist |
 
 ## Verwandte Seiten
 
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
-- [Absence Calendar](~/doc/referenz/listen/abwesenheitskalender.md)
+- [Abwesenheitskalender](~/doc/referenz/listen/abwesenheitskalender.md)

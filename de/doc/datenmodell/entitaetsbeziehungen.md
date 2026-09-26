@@ -127,7 +127,7 @@ erDiagram
 ### Wichtige Beziehungen
 
 - `APP_Customer` ist die Wurzel; jedes `APP_Project` gehört zu genau einem Kunden.
-- `APP_Task` gehört zu genau einem `APP_Project`; ein Projekt kann viele Aufgaben haben.
+- `APP_Task` gehört zu genau einem `APP_Project`; ein Projekt kann viele Tätigkeiten haben.
 - `APP_Timesheet` hat einen Pflicht-Fremdschlüssel auf `APP_UserDetail`, einen Pflicht-Fremdschlüssel auf `APP_Project` und einen optionalen Fremdschlüssel auf `APP_Task`.
 - `APP_Timesheet` hat einen optionalen Fremdschlüssel auf `APP_Invoice` und ist damit höchstens einer Rechnung zugeordnet.
 - `APP_Invoice` gehört zu genau einem `APP_Project`; ein Projekt kann viele Rechnungen haben.
@@ -278,7 +278,7 @@ erDiagram
 
 ### Wichtige Beziehungen
 
-- `APP_UserDetail` ist die zentrale Entität dieses Bereichs; alle Datensätze zu Abwesenheiten, Arbeitszeitplänen und Arbeitszeitgrenzen haben einen Pflicht-Fremdschlüssel darauf.
+- `APP_UserDetail` ist die zentrale Entität dieses Bereichs; alle Datensätze zu Abwesenheiten, Arbeitszeitplänen und Höchstarbeitszeiten haben einen Pflicht-Fremdschlüssel darauf.
 - `APP_Vacation`, `APP_SickLeave` und `APP_CompensatoryTime` haben jeweils einen Pflicht-Fremdschlüssel auf `APP_UserDetail` (den Mitarbeiter) und einen optionalen Fremdschlüssel zurück auf `APP_UserDetail` (die genehmigende Person).
 - `APP_WeeklyHoursOfWork`, `APP_VacationEntitlement`, `APP_WorkingTimeLimit` und `APP_OvertimeCorrection` haben jeweils einen Pflicht-Fremdschlüssel auf `APP_UserDetail`; ein Benutzer kann von jedem Typ viele Datensätze haben.
 - `APP_UserDetail` hat einen optionalen Fremdschlüssel auf `APP_Department`; eine Abteilung kann viele Benutzer haben.

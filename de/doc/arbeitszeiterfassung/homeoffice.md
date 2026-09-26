@@ -34,13 +34,13 @@ Wenn Sie einen ganzen Tag auf **Office** oder **Work From Home** setzen möchten
 
 ## Berichte
 
-Im Standarddatenmodell zeigt time cockpit im Zeitbericht an, ob ein Mitarbeiter den Tag im Büro oder zu Hause verbracht hat.
+Im Standarddatenmodell zeigt time cockpit im Stundenzettel an, ob ein Mitarbeiter den Tag im Büro oder zu Hause verbracht hat.
 
-1. Öffnen Sie den [Zeitbericht](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList), um den Standard-Zeitbericht anzuzeigen, oder wechseln Sie im Menü zu **Benutzer** --> **Arbeitszeit** --> **Zeitbericht**
-2. Klicken Sie auf **Export** --> **Zeitbericht**, um den druckbaren PDF-Zeitbericht zu öffnen.
-![Zeitbericht auswählen](/doc/employee-time-tracking/images/wc-work-from-home-time-report-print-view.png "Zeitbericht auswählen")
-1. Der Zeitbericht markiert jeden Tag, den ein Benutzer im Homeoffice gearbeitet hat, mit einem kleinen Häkchen. Außerdem zeigt er einen zusammengefassten Wert, wie viel Zeit ein Mitarbeiter im gewählten Zeitraum im Homeoffice verbracht hat.
-![Zeitbericht](/doc/employee-time-tracking/images/wc-work-from-home-time-report-pdf.png "Zeitbericht")
+1. Öffnen Sie den [Stundenzettel](https://web.timecockpit.com/app/lists/APP_DefaultTimeReportList), um den Standard-Stundenzettel anzuzeigen, oder wechseln Sie im Menü zu **Benutzer** --> **Arbeitszeit** --> **Stundenzettel**
+2. Klicken Sie auf **Export** --> **Stundenzettel**, um den druckbaren PDF-Stundenzettel zu öffnen.
+![Stundenzettel auswählen](/doc/employee-time-tracking/images/wc-work-from-home-time-report-print-view.png "Stundenzettel auswählen")
+1. Der Stundenzettel markiert jeden Tag, den ein Benutzer im Homeoffice gearbeitet hat, mit einem kleinen Häkchen. Außerdem zeigt er einen zusammengefassten Wert, wie viel Zeit ein Mitarbeiter im gewählten Zeitraum im Homeoffice verbracht hat.
+![Stundenzettel](/doc/employee-time-tracking/images/wc-work-from-home-time-report-pdf.png "Stundenzettel")
 
 > [!NOTE] 
 > Wenn Sie die Homeoffice-Informationen Ihrer Mitarbeiter auf andere Weise auswerten möchten, sehen Sie sich die [Anpassungsmöglichkeiten](/doc/data-model-customization/overview.html) von time cockpit an oder schreiben Sie uns an support@timecockpit.com.

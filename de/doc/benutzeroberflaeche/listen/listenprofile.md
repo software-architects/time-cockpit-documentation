@@ -25,7 +25,7 @@ Die Profilfunktion ergänzt jede Liste in time cockpit um eine zusätzliche Scha
 - **Ansicht zurücksetzen:** Setzt die Ansicht einer Liste auf die Standardeinstellungen zurück.
 - **Profil speichern:** Bestehende Profile können aktualisiert werden, um geänderte Listeneinstellungen zu übernehmen.
 - **Als neues Profil speichern:** Benutzer können ein neues Profil mit angepassten Listeneinstellungen anlegen.
-- **Delete profile:** Benutzer können Profile löschen, die sie nicht mehr benötigen.
+- **Profil löschen:** Benutzer können Profile löschen, die sie nicht mehr benötigen.
 
 ### Ein Profil als Standard festlegen
 

@@ -12,7 +12,7 @@ Wurde ein Urlaubsanspruch erst vor Kurzem gewährt, steht dem Mitarbeiter mögli
 
 Ohne Aliquotierung enthält der Resturlaub den vollen Anspruch ab dem Zeitpunkt, an dem er angelegt wird. Mit aktivierter Aliquotierung zieht time cockpit den Teil jedes aktuellen Anspruchs ab, der noch nicht „erworben“ ist – also die Tage, die noch bis zu einem vollen Jahr nach dem Anspruchsdatum fehlen.
 
-Die Aliquotierung gilt für die Liste **Vacation per Effective Date**. Sie schalten sie mit dem Filter **Prorate** in dieser Liste ein oder aus.
+Die Aliquotierung gilt für die Liste **Resturlaub**. Sie schalten sie mit dem Filter **Aliquotieren** in dieser Liste ein oder aus.
 
 ## Funktionsweise
 
@@ -40,7 +40,7 @@ Ein Anspruch wird nur dann aliquotiert, wenn **alle** folgenden Bedingungen erf�
 - Sein Anspruchsdatum liegt innerhalb des Einjahreszeitraums vor dem Stichtag (also von `effective date minus one year plus one day` bis `effective date`)
 - Er ist **nicht** als außerordentlicher Anspruch markiert
 
-Ansprüche, die als **Extraordinary Entitlement** markiert sind, werden nie aliquotiert. Verwenden Sie diese Markierung für einmalige Gewährungen (z. B. Bonusurlaub), die sofort in voller Höhe verfügbar sein sollen.
+Ansprüche, die als **Außerordentlicher Urlaubsanspruch** markiert sind, werden nie aliquotiert. Verwenden Sie diese Markierung für einmalige Gewährungen (z. B. Bonusurlaub), die sofort in voller Höhe verfügbar sein sollen.
 
 ## Beispiel
 
@@ -64,25 +64,25 @@ Zum 1. April hat der Mitarbeiter also etwa ein Viertel des Jahresanspruchs erwor
 
 ## Außerordentlicher Anspruch
 
-Das Kontrollkästchen **Extraordinary Entitlement** in einem Urlaubsanspruch markiert den Anspruch als einmalige Gewährung, die nicht aliquotiert werden soll. Typische Anwendungsfälle:
+Das Kontrollkästchen **Außerordentlicher Urlaubsanspruch** in einem Urlaubsanspruch markiert den Anspruch als einmalige Gewährung, die nicht aliquotiert werden soll. Typische Anwendungsfälle:
 
 - Bonusurlaub für ein Firmenjubiläum oder eine besondere Leistung
 - Zusätzlicher Urlaub, der im Rahmen einer Vereinbarung oder Einigung gewährt wird
 - Ausgleichsansprüche, die sofort verfügbar sein sollen
 
-Um einen Anspruch als außerordentlich zu markieren, öffnen Sie ihn unter `User -> Vacation Entitlement` und aktivieren Sie **Extraordinary Entitlement**. Ist das Kontrollkästchen nicht aktiviert, wird der Anspruch als regulärer (aliquotierbarer) Anspruch behandelt.
+Um einen Anspruch als außerordentlich zu markieren, öffnen Sie ihn unter `Benutzer -> Urlaubsanspruch` und aktivieren Sie **Außerordentlicher Urlaubsanspruch**. Ist das Kontrollkästchen nicht aktiviert, wird der Anspruch als regulärer (aliquotierbarer) Anspruch behandelt.
 
-## Aliquotierung in der Liste Vacation per Effective Date verwenden
+## Aliquotierung in der Liste Resturlaub verwenden
 
-1. Öffnen Sie `User -> Vacation per Effective Date`.
-2. Setzen Sie den Filter **Effective Date** auf das Datum, das Sie prüfen möchten.
-3. Setzen Sie den Filter **Prorate** auf **Ja**, um aliquote Salden zu sehen, oder auf **Nein** (Standard), um den normalen Saldo zu sehen.
+1. Öffnen Sie `Benutzer -> Resturlaub`.
+2. Setzen Sie den Filter **Stichtag** auf das Datum, das Sie prüfen möchten.
+3. Setzen Sie den Filter **Aliquotieren** auf **Ja**, um aliquote Salden zu sehen, oder auf **Nein** (Standard), um den normalen Saldo zu sehen.
 
-Die Spalte **Remaining Leave in Weeks** zeigt den aliquoten Saldo, wenn der Filter aktiv ist.
+Die Spalte **Resturlaub in Wochen** zeigt den aliquoten Saldo, wenn der Filter aktiv ist.
 
 ## Verwandte Seiten
 
-- [Vacation per Effective Date](/doc/reference/lists/vacation-per-effective-date.html)
+- [Resturlaub](/doc/reference/lists/vacation-per-effective-date.html)
 - [Urlaubsanspruch](/doc/reference/lists/vacation-entitlement.html)
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)

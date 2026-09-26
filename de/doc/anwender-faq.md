@@ -53,7 +53,7 @@ Das Kennzeichen „verrechenbar" steuert, ob eine Zeitbuchung für die Rechnungs
 - **Verrechenbare** Einträge können in der Rechnungslegung verwendet werden.
 - **Nicht verrechenbare** Einträge bleiben in der Zeiterfassung, werden aber bei der Rechnungserstellung nicht berücksichtigt.
 
-Projekte können verrechenbar oder nicht verrechenbar sein, und auch Aufgaben können als nicht verrechenbar gekennzeichnet werden.
+Projekte können verrechenbar oder nicht verrechenbar sein, und auch Tätigkeiten können als nicht verrechenbar gekennzeichnet werden.
 
 **Siehe auch:**
 - [Zeitbuchungen](/doc/project-time-tracking/timesheet.html)
@@ -108,23 +108,23 @@ Später können Sie die Musterbuchung in den Kalender ziehen, um schneller neue 
 
 ## Projekte, Stundensätze und Budgets
 
-### Wie lege ich einen neuen Kunden, ein Projekt und eine Aufgabe an?
+### Wie lege ich einen neuen Kunden, ein Projekt und eine Tätigkeit an?
 
-Wenn Ihre Rolle die nötigen Berechtigungen umfasst, verwenden Sie die Standardhierarchie **Kunde -> Projekt -> Aufgabe**.
+Wenn Ihre Rolle die nötigen Berechtigungen umfasst, verwenden Sie die Standardhierarchie **Kunde -> Projekt -> Tätigkeit**.
 
 - Pflegen Sie zuerst die Kunden.
 - Legen Sie Projekte unter dem Kunden an.
-- Legen Sie Aufgaben unter dem Projekt an, wenn Sie eine detailliertere Erfassung benötigen.
+- Legen Sie Tätigkeiten unter dem Projekt an, wenn Sie eine detailliertere Erfassung benötigen.
 
 **Siehe auch:**
-- [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
+- [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
 - [Projektleiter-FAQ](/doc/project-manager-faq.html)
 
 ---
 
 ### Wie verfolge ich Zeiten gegen Projektbudgets?
 
-Wenn Sie Zugriff auf die Ansichten für das Projektmanagement haben, verwenden Sie **Budgetary Control of Projects** oder **Budgetary Control of Tasks**.
+Wenn Sie Zugriff auf die Ansichten für das Projektmanagement haben, verwenden Sie **Budgetkontrolle für Projekte** oder **Budgetkontrolle für Tätigkeiten**.
 
 Diese Standardlisten kombinieren Daten aus Zeitbuchungen und Rechnungen und sind die wichtigsten Ansichten im Produkt für die Budgetkontrolle.
 
@@ -146,16 +146,16 @@ So sehen Sie die einzelnen Einträge hinter dem Projekt.
 
 ---
 
-### Wie ordne ich Kunden, Projekten oder Aufgaben Stundensätze zu?
+### Wie ordne ich Kunden, Projekten oder Tätigkeiten Stundensätze zu?
 
-In der Standardhierarchie können Stundensätze bei Kunden, Projekten und Aufgaben gepflegt werden.
+In der Standardhierarchie können Stundensätze bei Kunden, Projekten und Tätigkeiten gepflegt werden.
 
 - ein Kunde kann den Standardstundensatz festlegen
 - ein Projekt kann den Stundensatz des Kunden überschreiben
-- eine Aufgabe kann den Stundensatz des Projekts überschreiben
+- eine Tätigkeit kann den Stundensatz des Projekts überschreiben
 
 **Siehe auch:**
-- [Kunde / Projekt / Aufgabe](/doc/project-time-tracking/customer-project-task.html)
+- [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
 - [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
 
 ---
@@ -232,10 +232,10 @@ Prüfen Sie in der Urlaubsliste und in Ihren Benachrichtigungen, ob der Antrag n
 
 ### Wie erstelle ich eine Rechnung aus Zeitbuchungen?
 
-Wenn Sie Berechtigungen für die Rechnungslegung haben, verwenden Sie **Verwaltung -> Billing -> Unbilled Timesheets**.
+Wenn Sie Berechtigungen für die Rechnungslegung haben, verwenden Sie **Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen**.
 
 1. Wählen Sie die relevanten, noch nicht verrechneten Zeitbuchungen aus.
-2. Führen Sie im Menü **Aktionen** die Aktion **Create Invoice** aus.
+2. Führen Sie im Menü **Aktionen** die Aktion **Ausgangsrechnung anlegen** aus.
 3. Geben Sie die Rechnungsdetails ein.
 
 Das ist der Standardablauf der Rechnungslegung, wie er in der Dokumentation zur Rechnungslegung beschrieben ist.
@@ -275,7 +275,7 @@ Der genaue weitere Ablauf in der Buchhaltung hängt von Ihrem externen System ab
 
 Wenn Sie die nötigen Berechtigungen haben, verrechnen Sie nur die ausgewählte Teilmenge der noch nicht verrechneten Zeitbuchungen des Projekts.
 
-Ein praktischer Standardweg: Filtern Sie **Unbilled Timesheets** nach Projekt, Zeitraum oder einem anderen relevanten Kriterium und erstellen Sie die Rechnung anschließend aus den ausgewählten Einträgen.
+Ein praktischer Standardweg: Filtern Sie **Nicht verrechnete Zeitbuchungen** nach Projekt, Zeitraum oder einem anderen relevanten Kriterium und erstellen Sie die Rechnung anschließend aus den ausgewählten Einträgen.
 
 **Siehe auch:**
 - [Rechnungslegung](/doc/project-time-tracking/billing.html)
@@ -290,7 +290,7 @@ Ein praktischer Standardweg: Filtern Sie **Unbilled Timesheets** nach Projekt, Z
 Der genaue Ablauf hängt davon ab, wie Ihr Mandant konfiguriert ist.
 
 - Wenn Sie sich über Microsoft anmelden, verwenden Sie den Ablauf Ihres Microsoft-Kontos.
-- Wenn Sie ein von time cockpit verwaltetes Passwort verwenden, öffnen Sie `https://web.timecockpit.com` und klicken Sie auf **Reset password**.
+- Wenn Sie ein von time cockpit verwaltetes Passwort verwenden, öffnen Sie `https://web.timecockpit.com` und klicken Sie auf **Passwort zurücksetzen**.
 
 **Siehe auch:**
 - [Kontoverwaltung](~/doc/kontoverwaltung/kontoverwaltung.md)

@@ -46,7 +46,7 @@ Die Signal Tracker zeichnen nicht den Inhalt der erfassten Elemente auf, etwa de
 
 Aufgezeichnete Signale sind personenbezogene Daten des Benutzers. time cockpit enthält keine Funktionen, mit denen Signale anderer Benutzer angezeigt werden können, und es gibt keine Möglichkeit, Signale zu aggregieren, um sie benutzerübergreifend auszuwerten.
 
-Wenn Sie Ihre Zeitbuchungen für einen bestimmten Zeitraum abgeschlossen haben und die zugehörigen Signale löschen möchten oder wenn Sie Signale aufgezeichnet haben, die Sie nicht behalten möchten, können Sie mit der Ribbon-Schaltfläche **Delete signals** Signale für einen Zeitraum entfernen. Sie können alle Signale oder nur ausgewählte Signaltypen löschen.
+Wenn Sie Ihre Zeitbuchungen für einen bestimmten Zeitraum abgeschlossen haben und die zugehörigen Signale löschen möchten oder wenn Sie Signale aufgezeichnet haben, die Sie nicht behalten möchten, können Sie mit der Ribbon-Schaltfläche **Signale löschen** Signale für einen Zeitraum entfernen. Sie können alle Signale oder nur ausgewählte Signaltypen löschen.
 
 ![Signale löschen](/doc/signal-tracker/images/delete-signals.png "Signale löschen")
 

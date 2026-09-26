@@ -18,7 +18,7 @@ Sie können Zeitbuchungen auf verschiedene Arten anlegen:
 
 Unabhängig vom gewählten Weg erhalten Sie das Formular für eine neue Zeitbuchung. Um die Zeitbuchung zu speichern, klicken Sie auf **Speichern** oder drücken Sie auf der Tastatur **STRG + Enter**.
 
-In der Standardkonfiguration von time cockpit müssen Sie eine Beschreibung eingeben. Zusätzlich stehen Felder wie Ort, Homeoffice, Projekt, Aufgabe usw. zur Verfügung.
+In der Standardkonfiguration von time cockpit müssen Sie eine Beschreibung eingeben. Zusätzlich stehen Felder wie Ort, Homeoffice, Projekt, Tätigkeit usw. zur Verfügung.
 
 ![Formular für Zeitbuchungen](/doc/timesheet-calendar/images/wc-first-timesheet-entry.png "Formular für Zeitbuchungen")
 

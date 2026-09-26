@@ -24,15 +24,15 @@ Den Suchdialog können Sie von überall im Web-Client öffnen.
 3. Prüfen Sie das passende Ergebnis und seinen Navigationspfad.
 4. Wählen Sie das Ergebnis aus, um es zu öffnen.
 
-Eine Suche nach `Invoices` findet zum Beispiel **Outgoing Invoices** und zeigt den Speicherort unter **Verwaltung > Billing** an.
+Eine Suche nach `Rechnungen` findet zum Beispiel **Ausgangsrechnungen** und zeigt den Speicherort unter **Verwaltung > Verrechnung** an.
 
-[![Suchergebnisse für Invoices im Navigationsmenü von time cockpit](/doc/ui/images/menu-search-invoices.png "Menüsuche mit Outgoing Invoices")](/doc/ui/images/menu-search-invoices.png)
+[![Suchergebnisse für Invoices im Navigationsmenü von time cockpit](/doc/ui/images/menu-search-invoices.png "Menüsuche mit Ausgangsrechnungen")](/doc/ui/images/menu-search-invoices.png)
 
 Drücken Sie **Esc**, um die Suche zu schließen, ohne ein Ergebnis zu öffnen.
 
 ## Tipps zur Suche
 
-- Suchen Sie nach dem sichtbaren Namen des Menüeintrags, etwa `Customers`, `Projects` oder `Invoices`.
+- Suchen Sie nach dem sichtbaren Namen des Menüeintrags, etwa `Kunden`, `Projekte` oder `Rechnungen`.
 - Verwenden Sie einen markanten Teil eines längeren Namens, wenn Sie den genauen Wortlaut nicht mehr wissen.
 - Prüfen Sie den angezeigten Menüpfad, wenn mehrere Ergebnisse ähnliche Namen haben.
 - Die Suchergebnisse berücksichtigen die Menüeinträge und Berechtigungen, die Ihrem Benutzerkonto zur Verfügung stehen.

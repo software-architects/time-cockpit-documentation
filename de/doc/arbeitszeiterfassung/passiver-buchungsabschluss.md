@@ -21,7 +21,7 @@ Wenn Sie die Funktion in Ihrer Umgebung aktivieren möchten, wenden Sie sich ger
 
 ### Standardkonfiguration
 
-- Um die Konfiguration zu ändern, öffnen Sie [Global Settings](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings).
+- Um die Konfiguration zu ändern, öffnen Sie [Globale Einstellungen](https://web.timecockpit.com/app/lists/entity/APP_GlobalSettings).
 - Der Standard-TCQL-Ausdruck stellt sicher, dass:
   - ab dem **15. jedes Monats** der **Buchungszeitraum** des Vormonats abgeschlossen ist.
   - Zeitbuchungen und Abwesenheiten aus dem abgeschlossenen Zeitraum nicht mehr geändert werden können.
@@ -48,9 +48,9 @@ Beim Festlegen eines abweichenden Datums gilt:
 ## Einschränkungen beim Wiedereröffnen von Buchungszeiträumen
 
 Für das Öffnen eines abgeschlossenen Buchungszeitraums gelten folgende Einschränkungen:
-- Der Buchungszeitraum **kann nicht wieder geöffnet werden**, wenn der Benutzer im wieder zu öffnenden Zeitraum **Überstundenkorrekturen** hat.
-- Ist das Wiedereröffnen trotz bestehender Überstundenkorrekturen erforderlich:
-  1. Die Überstundenkorrekturen müssen zuerst **gelöscht** werden.
+- Der Buchungszeitraum **kann nicht wieder geöffnet werden**, wenn der Benutzer im wieder zu öffnenden Zeitraum **Korrekturen des Arbeitszeitsaldos** hat.
+- Ist das Wiedereröffnen trotz bestehender Korrekturen des Arbeitszeitsaldos erforderlich:
+  1. Die Korrekturen des Arbeitszeitsaldos müssen zuerst **gelöscht** werden.
   2. Nachdem die Zeitbuchungen angepasst wurden, müssen die Korrekturen **mit den richtigen Werten neu angelegt** werden.
 
 > [!NOTE]

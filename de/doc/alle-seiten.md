@@ -15,7 +15,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Mobiler Zugriff](~/doc/erste-schritte/mobile-zeiterfassung.md)
 - [Funktionen](~/doc/funktionen-im-ueberblick.md)
   - Projektmanagement
-    - [Kunde / Projekt / Aufgabe](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+    - [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
     - [Budgetverfolgung & Rentabilität](~/doc/projektzeiterfassung/budgetkontrolle.md)
     - [Budgetkontrolle (technisch)](~/doc/anwendungsfaelle/budgetkontrolle.md)
   - Rechnungslegung
@@ -48,27 +48,27 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
     - Verrechnung und Projekte
       - [Nicht verrechnete Zeitbuchungen](~/doc/referenz/listen/nicht-verrechnete-zeitbuchungen.md)
       - [Budgetkontrolle für Projekte](~/doc/referenz/listen/budgetkontrolle-projekte.md)
-      - [Budgetkontrolle für Aufgaben](~/doc/referenz/listen/budgetkontrolle-aufgaben.md)
-      - [Rechnungsbericht](~/doc/referenz/listen/rechnungsbericht.md)
+      - [Budgetkontrolle für Tätigkeiten](~/doc/referenz/listen/budgetkontrolle-taetigkeiten.md)
+      - [Rechnungsdokument](~/doc/referenz/listen/rechnungsdokument.md)
     - Anwesenheit und Urlaub
       - [Urlaub](~/doc/referenz/listen/urlaub.md)
       - [Urlaubsanspruch](~/doc/referenz/listen/urlaubsanspruch.md)
-      - [Urlaub zum Stichtag](~/doc/referenz/listen/urlaub-zum-stichtag.md)
+      - [Resturlaub](~/doc/referenz/listen/resturlaub.md)
       - [Krankenstand](~/doc/referenz/listen/krankenstand.md)
       - [Zeitausgleich](~/doc/referenz/listen/zeitausgleich.md)
       - [Wochenarbeitszeit](~/doc/referenz/listen/wochenarbeitszeit.md)
-      - [Arbeitszeitgrenzen](~/doc/referenz/listen/arbeitszeitgrenzen.md)
-      - [Arbeitszeitgewichtungen](~/doc/referenz/listen/arbeitszeitgewichtungen.md)
-      - [Arbeitszeitverstöße](~/doc/referenz/listen/arbeitszeitverstoesse.md)
+      - [Höchstarbeitszeit](~/doc/referenz/listen/hoechstarbeitszeit.md)
+      - [Arbeitszeitgewichtung](~/doc/referenz/listen/arbeitszeitgewichtung.md)
+      - [Arbeitszeitverletzungen](~/doc/referenz/listen/arbeitszeitverletzungen.md)
       - [Abwesenheitskalender](~/doc/referenz/listen/abwesenheitskalender.md)
     - Berichte und Analysen
-      - [Überstunden zum Stichtag](~/doc/referenz/listen/ueberstunden-zum-stichtag.md)
+      - [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md)
       - [Soll-Ist-Vergleich](~/doc/referenz/listen/soll-ist-vergleich.md)
-      - [Zeitbericht](~/doc/referenz/listen/zeitbericht.md)
-      - [Homeoffice-Übersicht](~/doc/referenz/listen/homeoffice-uebersicht.md)
+      - [Stundenzettel](~/doc/referenz/listen/stundenzettel.md)
+      - [Telearbeitstage](~/doc/referenz/listen/telearbeitstage.md)
   - Aktionen
-    - [Rechnung erstellen](~/doc/referenz/aktionen/rechnung-erstellen.md)
-    - [Bestehender Ausgangsrechnung zuordnen](~/doc/referenz/aktionen/bestehender-ausgangsrechnung-zuordnen.md)
+    - [Ausgangsrechnung anlegen](~/doc/referenz/aktionen/ausgangsrechnung-anlegen.md)
+    - [Zu vorhandener Ausgangsrechnung zuordnen](~/doc/referenz/aktionen/zu-vorhandener-ausgangsrechnung-zuordnen.md)
     - [Abwesenheit genehmigen](~/doc/referenz/aktionen/abwesenheit-genehmigen.md)
     - [Abwesenheit ablehnen](~/doc/referenz/aktionen/abwesenheit-ablehnen.md)
 - Kontoverwaltung
@@ -83,7 +83,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Buchungsvorschläge (Zeitbuchungen teilen)](~/doc/zeiterfassungskalender/buchungsvorschlaege-zeitbuchungen-teilen.md)
   - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
 - Projektzeiterfassung
-  - [Kunde / Projekt / Aufgabe](~/doc/projektzeiterfassung/kunde-projekt-aufgabe.md)
+  - [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
   - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
   - Rechnungslegung
     - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
@@ -93,7 +93,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
   - [Arbeitszeitregelungen](~/doc/arbeitszeiterfassung/arbeitszeitregelungen.md)
   - [Homeoffice](~/doc/arbeitszeiterfassung/homeoffice.md)
-  - [Zeitbericht](~/doc/arbeitszeiterfassung/zeitbericht.md)
+  - [Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)
   - [Passiver Buchungsabschluss](~/doc/arbeitszeiterfassung/passiver-buchungsabschluss.md)
   - Anleitungen
     - [Überstunden/Urlaub auszahlen](~/doc/erste-schritte/anleitungen/ueberstunden-urlaub-auszahlen.md)

@@ -1,6 +1,6 @@
 ---
 title: Reporting-API - Berichte programmgesteuert erzeugen
-description: SSRS-Berichte von time cockpit über die Web API als PDF, Word oder Excel erzeugen. Zeitberichte und eigene Berichte programmgesteuert abrufen.
+description: SSRS-Berichte von time cockpit über die Web API als PDF, Word oder Excel erzeugen. Stundenzettel und eigene Berichte programmgesteuert abrufen.
 en_page: doc/web-api/reporting.md
 ---
 # Reporting-Endpunkt
@@ -11,7 +11,7 @@ Manchmal ist es notwendig, Berichte von time cockpit programmgesteuert zu erzeug
 
 ## Anwendungsfälle
 
-- Den integrierten Zeitbericht abrufen, um ihn an die jeweiligen Mitarbeiter zu senden
+- Den integrierten Stundenzettel abrufen, um ihn an die jeweiligen Mitarbeiter zu senden
 - Einen eigenen Fortschrittsbericht abrufen, um ihn an den entsprechenden Kunden zu senden
 
 ## Service-Endpunkt
@@ -28,7 +28,7 @@ Um den Query-Endpunkt zu verwenden, müssen Sie sich zuerst beim Dienst authenti
 
 ## C#-Beispiel
 
-Das folgende Beispiel zeigt einfachen C#-Code, der den Standard-Zeitbericht von time cockpit abruft.
+Das folgende Beispiel zeigt einfachen C#-Code, der den Standard-Stundenzettel von time cockpit abruft.
 
 ```cs
 var reportUuid = new Guid("7dd35f33-d2c1-49ed-b341-d2c2250e7a49"); // guid of the default time report

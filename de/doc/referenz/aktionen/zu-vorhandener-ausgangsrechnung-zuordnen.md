@@ -1,18 +1,18 @@
 ---
-title: Bestehender Ausgangsrechnung zuordnen - Aktionsreferenz
-description: Referenz zur Standardaktion Assign to Existing Outgoing Invoice in time cockpit mit Voraussetzungen, Parametern und Nebeneffekten.
+title: Zu vorhandener Ausgangsrechnung zuordnen - Aktionsreferenz
+description: Referenz zur Standardaktion Zu vorhandener Ausgangsrechnung zuordnen in time cockpit mit Voraussetzungen, Parametern und Nebeneffekten.
 en_page: doc/reference/actions/assign-to-existing-outgoing-invoice.md
 ---
 
-# Bestehender Ausgangsrechnung zuordnen
+# Zu vorhandener Ausgangsrechnung zuordnen
 
-Die Aktion **Assign to Existing Outgoing Invoice** ordnet ausgewählte Zeitbuchungen einer bereits vorhandenen Ausgangsrechnung zu.
+Die Aktion **Zu vorhandener Ausgangsrechnung zuordnen** ordnet ausgewählte Zeitbuchungen einer bereits vorhandenen Ausgangsrechnung zu.
 
 ## Wo die Aktion verfügbar ist
 
 In der Standardkonfiguration wird diese Aktion hier verwendet:
 
-- [Verwaltung -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
+- [Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
 
 Mit den Standardberechtigungen ist diese Aktion für **Abrechnungsadministratoren** vorgesehen.
 
@@ -32,7 +32,7 @@ Wenn Sie die Aktion ausführen, lässt time cockpit Sie diesen Parameter auswäh
 
 | Feld | Technische Referenz | Bedeutung |
 |---|---|---|
-| Outgoing Invoice | `APP_Invoice` | Bestehende Rechnung, der die ausgewählten Zeitbuchungen zugeordnet werden sollen |
+| Ausgangsrechnung | `APP_Invoice` | Bestehende Rechnung, der die ausgewählten Zeitbuchungen zugeordnet werden sollen |
 
 ## Was die Aktion ändert
 
@@ -64,6 +64,6 @@ Die Standardaktion bricht mit einem Validierungsfehler ab, wenn:
 ## Verwandte Seiten
 
 - [Nicht verrechnete Zeitbuchungen](~/doc/referenz/listen/nicht-verrechnete-zeitbuchungen.md)
-- [Rechnung erstellen](~/doc/referenz/aktionen/rechnung-erstellen.md)
+- [Ausgangsrechnung anlegen](~/doc/referenz/aktionen/ausgangsrechnung-anlegen.md)
 - [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 - [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)

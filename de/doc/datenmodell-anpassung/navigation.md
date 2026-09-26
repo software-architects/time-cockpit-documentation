@@ -19,22 +19,22 @@ Module werden im Modul Anpassung angelegt. Im Folgenden zeigen wir nur, wie Sie 
 
 ![Neues Modul](/doc/data-model-customization/images/new-module.png "Neues Modul")
 
-Um ein neues Modul anzulegen, wechseln Sie in das Modul Anpassung, wechseln auf Server und klicken wie in der obigen Abbildung auf New module. Ein Modul hat vier Pflichtfelder:
+Um ein neues Modul anzulegen, wechseln Sie in das Modul Anpassung, wechseln auf Server und klicken wie in der obigen Abbildung auf Neues Modul. Ein Modul hat vier Pflichtfelder:
 
 Feld | Beschreibung
 --- | ---
 Name |Der technische Name des Moduls. Dieser Name muss eindeutig sein.
-Display name | Der Name, der in der Benutzeroberfläche angezeigt wird.
-Sort order | Die Sortierreihenfolge legt fest, in welcher Reihenfolge die Module links unten angezeigt werden.
-Module type | Legt den Typ des Moduls fest. In diesem Thema legen wir nur ein Navigation Module an.
+Anzeigename | Der Name, der in der Benutzeroberfläche angezeigt wird.
+Sortierreihenfolge | Die Sortierreihenfolge legt fest, in welcher Reihenfolge die Module links unten angezeigt werden.
+Modultyp | Legt den Typ des Moduls fest. In diesem Thema legen wir nur ein Navigation Module an.
 
 Die obigen Felder müssen einen Wert haben, damit das Modul gespeichert werden kann. Zusätzlich können Sie folgende Felder konfigurieren:
 
 Feld | Beschreibung
 --- | ---
 Icon | time cockpit bietet standardmäßig eine vordefinierte Auswahl an Symbolen für Ihr Modul. Das gewählte Symbol erscheint links unten in time cockpit neben dem Anzeigenamen Ihres Moduls. Für unser Modul Invoicing wählen wir das Symbol Billing.
-Is visible expression | Mit der Is visible expression steuern Sie zum Beispiel, welche Benutzer das Modul sehen dürfen. Wenn Sie das Modul Invoicing vor allen Benutzern außer Administratoren und Mitarbeitenden des Backoffice verbergen möchten, können Sie folgende Is visible expression definieren: `'Admin' In Set('CurrentUserRoles') Or 'BackOffice' In Set('CurrentUserRoles')`. Is enabled expression: Deaktivierte Module werden links unten in time cockpit grau angezeigt.
-Default data context | Dieses Feld teilt time cockpit mit, welcher Kontext beim Öffnen eines Moduls standardmäßig verwendet wird. Sie können zwischen zwei Optionen wählen, Client und Server. Wählen Sie Client, zeigt das Modul die Daten aus Ihrer lokalen Datenbank an. Wählen Sie Server, zeigt das Modul die Daten aus Ihrer zentralen Datenbank an. Da unser Modul Invoicing nur auf dem Server verfügbar sein soll, wählen wir Server als Default data context.
+Formel für Sichtbarkeit | Mit der Formel für Sichtbarkeit steuern Sie zum Beispiel, welche Benutzer das Modul sehen dürfen. Wenn Sie das Modul Invoicing vor allen Benutzern außer Administratoren und Mitarbeitenden des Backoffice verbergen möchten, können Sie folgende Formel für Sichtbarkeit definieren: `'Admin' In Set('CurrentUserRoles') Or 'BackOffice' In Set('CurrentUserRoles')`. Formel für Verfügbarkeit: Deaktivierte Module werden links unten in time cockpit grau angezeigt.
+Standard Datenkontext | Dieses Feld teilt time cockpit mit, welcher Kontext beim Öffnen eines Moduls standardmäßig verwendet wird. Sie können zwischen zwei Optionen wählen, Client und Server. Wählen Sie Client, zeigt das Modul die Daten aus Ihrer lokalen Datenbank an. Wählen Sie Server, zeigt das Modul die Daten aus Ihrer zentralen Datenbank an. Da unser Modul Invoicing nur auf dem Server verfügbar sein soll, wählen wir Server als Standard Datenkontext.
 
 Die folgende Abbildung zeigt das konfigurierte Modul. Wir haben nun die oberste Ebene unserer Menüstruktur konfiguriert, ein Symbol gewählt und festgelegt, für wen das Modul sichtbar sein soll.
 
@@ -49,17 +49,17 @@ Abschnitte sind die zweite Ebene der Menühierarchie. Ein Abschnitt fasst mehrer
 Feld | Beschreibung
 --- | ---
 Name of section | Der technische Name des Abschnitts. Dieser Name muss pro Modul eindeutig sein.
-Display name | Der Name, der in der Benutzeroberfläche angezeigt wird.
+Anzeigename | Der Name, der in der Benutzeroberfläche angezeigt wird.
 
-Außerdem können Sie TCQL-Ausdrücke definieren, die steuern, ob der Abschnitt sichtbar ist und ob er aktiviert sein soll. Wie bei Modulen können Sie einen Abschnitt vor Benutzern verbergen, die nicht zu einer bestimmten Gruppe gehören. Die **Is enabled expression** legt fest, ob ein Abschnitt deaktiviert angezeigt wird oder nicht.
+Außerdem können Sie TCQL-Ausdrücke definieren, die steuern, ob der Abschnitt sichtbar ist und ob er aktiviert sein soll. Wie bei Modulen können Sie einen Abschnitt vor Benutzern verbergen, die nicht zu einer bestimmten Gruppe gehören. Die **Formel für Verfügbarkeit** legt fest, ob ein Abschnitt deaktiviert angezeigt wird oder nicht.
 
-Um einen neuen Abschnitt anzulegen, klicken Sie in der Baumansicht Sections mit der rechten Maustaste auf den Knoten Section und wählen New section. Für unser Modul Invoicing legen wir zwei Abschnitte für zwei unterschiedliche Themen an. Der erste Abschnitt, Time Sheet Related, fasst alle Links zusammen, die sich auf Zeitbuchungen beziehen. Der zweite Abschnitt, Invoices, fasst alle Links zusammen, die sich auf Rechnungen beziehen.
+Um einen neuen Abschnitt anzulegen, klicken Sie in der Baumansicht Sections mit der rechten Maustaste auf den Knoten Section und wählen Neuer Bereich. Für unser Modul Invoicing legen wir zwei Abschnitte für zwei unterschiedliche Themen an. Der erste Abschnitt, Time Sheet Related, fasst alle Links zusammen, die sich auf Zeitbuchungen beziehen. Der zweite Abschnitt, Invoices, fasst alle Links zusammen, die sich auf Rechnungen beziehen.
 
 ![Neuer Abschnitt](/doc/data-model-customization/images/new-section.png "Neuer Abschnitt")
 
-Der erste Abschnitt, Time Sheet Related, soll für alle Benutzer zugänglich sein, die das Modul Invoicing sehen dürfen. Wir benötigen weder eine **Is visible expression** noch eine **Is enabled expression**, weil nur Administratoren und Mitarbeitende des Backoffice das Modul Invoicing und alle seine Abschnitte sehen. Mitarbeitende des Backoffice dürfen diesen Abschnitt sehen, damit sie Korrekturen an nicht verrechneten Zeitbuchungen vornehmen können.
+Der erste Abschnitt, Time Sheet Related, soll für alle Benutzer zugänglich sein, die das Modul Invoicing sehen dürfen. Wir benötigen weder eine **Formel für Sichtbarkeit** noch eine **Formel für Verfügbarkeit**, weil nur Administratoren und Mitarbeitende des Backoffice das Modul Invoicing und alle seine Abschnitte sehen. Mitarbeitende des Backoffice dürfen diesen Abschnitt sehen, damit sie Korrekturen an nicht verrechneten Zeitbuchungen vornehmen können.
 
-Der zweite Abschnitt, Invoices, soll nur für Administratoren zugänglich sein. Wir möchten den Abschnitt jedoch nicht vollständig verbergen, sondern ihn für Mitarbeitende des Backoffice nur deaktivieren. Die folgende **Is enabled expression** stellt sicher, dass der Abschnitt Invoicing nur für Administratoren zugänglich ist.
+Der zweite Abschnitt, Invoices, soll nur für Administratoren zugänglich sein. Wir möchten den Abschnitt jedoch nicht vollständig verbergen, sondern ihn für Mitarbeitende des Backoffice nur deaktivieren. Die folgende **Formel für Verfügbarkeit** stellt sicher, dass der Abschnitt Invoicing nur für Administratoren zugänglich ist.
 
 ```
 'Admin' In Set('CurrentUserRoles')
@@ -67,7 +67,7 @@ Der zweite Abschnitt, Invoices, soll nur für Administratoren zugänglich sein. 
 
 ![Deaktivierter Abschnitt](/doc/data-model-customization/images/disabled-section.png "Deaktivierter Abschnitt")
 
-Bevor wir prüfen, ob die **Is enabled expression** den Abschnitt Invoicing für Mitarbeitende des Backoffice deaktiviert, müssen wir die letzte Ebene der Menühierarchie hinzufügen, nämlich Links.
+Bevor wir prüfen, ob die **Formel für Verfügbarkeit** den Abschnitt Invoicing für Mitarbeitende des Backoffice deaktiviert, müssen wir die letzte Ebene der Menühierarchie hinzufügen, nämlich Links.
 
 ## Links
 
@@ -79,8 +79,8 @@ Ein Link hat viele Felder mit Modulen und Abschnitten gemeinsam. Zusätzlich bie
 
 Feld | Beschreibung
 --- | ---
-Target | Das Feld Target gibt an, ob time cockpit beim Klick auf den Link einen neuen Tab öffnen oder einen bestehenden Tab mit demselben Namen wiederverwenden soll. Es ähnelt stark dem Attribut Target in HTML. In der folgenden Abbildung haben wir UnbilledTS als Target für den Link festgelegt. Wenn wir kein Target festlegen, sondern das Feld leer lassen, öffnet time cockpit bei jedem Klick auf den Link einen neuen Tab.
-Type of the link | time cockpit unterstützt standardmäßig 5 verschiedene Arten von Links. Im Folgenden beschreiben wir die Verwendung der häufigsten Linkart, NamedList. Ein Link vom Typ NamedList zeigt eine Liste von Datensätzen einer bestimmten Entität an.
+Zielfenster | Das Feld Zielfenster gibt an, ob time cockpit beim Klick auf den Link einen neuen Tab öffnen oder einen bestehenden Tab mit demselben Namen wiederverwenden soll. Es ähnelt stark dem Attribut Target in HTML. In der folgenden Abbildung haben wir UnbilledTS als Zielfenster für den Link festgelegt. Wenn wir kein Zielfenster festlegen, sondern das Feld leer lassen, öffnet time cockpit bei jedem Klick auf den Link einen neuen Tab.
+Typ des Links | time cockpit unterstützt standardmäßig 5 verschiedene Arten von Links. Im Folgenden beschreiben wir die Verwendung der häufigsten Linkart, NamedList. Ein Link vom Typ NamedList zeigt eine Liste von Datensätzen einer bestimmten Entität an.
 
 ![Link konfigurieren](/doc/data-model-customization/images/configure-link.png "Link konfigurieren")
 
