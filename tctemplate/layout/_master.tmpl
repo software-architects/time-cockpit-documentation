@@ -191,7 +191,7 @@
         <div class="flex-fill">
           {{{_appFooter}}}{{^_appFooter}}<span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>{{/_appFooter}}
           {{!time cockpit: server-rendered link to the index of all pages, for crawlers without JavaScript.}}
-          &middot; <a href="{{_rel}}doc/all-pages.html">{{_labelAllPages}}{{^_labelAllPages}}All pages{{/_labelAllPages}}</a>
+          &middot; <a href="{{#_allPagesUrl}}{{_allPagesUrl}}{{/_allPagesUrl}}{{^_allPagesUrl}}{{_rel}}doc/all-pages.html{{/_allPagesUrl}}">{{_labelAllPages}}{{^_labelAllPages}}All pages{{/_labelAllPages}}</a>
         </div>
       </div>
     </footer>

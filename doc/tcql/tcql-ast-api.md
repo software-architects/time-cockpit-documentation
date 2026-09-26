@@ -75,7 +75,7 @@ The expression tree in TCQL is a tree with <xref:TimeCockpit.Data.QueryLanguage.
 - Set
 - NamedSetReference
 
-The constant values can be created by calling the corresponding overload to [Constant()]((xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_Constant_System_String_)). Function calls can be created using the [FunctionCall()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) function. Consider following TCQL statement:
+The constant values can be created by calling the corresponding overload to [Constant()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_Constant_System_String_). Function calls can be created using the [FunctionCall()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) function. Consider following TCQL statement:
 
 ```
 From T In Timesheet Where T.BeginTime < :Now() Select T
@@ -92,7 +92,7 @@ var q = TCQLExpression.Query(
             TCQLExpression.SelectAlias());
 ```
 
-Additional parameter expressions can be passed to the [TCQLExpression.FunctionCall()]((xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) method as additional parameters.
+Additional parameter expressions can be passed to the [TCQLExpression.FunctionCall()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) method as additional parameters.
 
 ## Select New With
 In previous examples, the simplistic [SelectAlias()](xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_SelectAlias_System_String_System_Int32_) was used to define the structure of the returned EntityObjects. With TCQL Select New queries can be expressed in the following way:

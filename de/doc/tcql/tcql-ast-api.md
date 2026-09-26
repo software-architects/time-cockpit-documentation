@@ -76,7 +76,7 @@ Der Ausdrucksbaum in TCQL ist ein Baum, in dem [TimeCockpit.Data.QueryLanguage.S
 - Set
 - NamedSetReference
 
-Die konstanten Werte können durch Aufruf der entsprechenden Überladung von [Constant()]((xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_Constant_System_String_)) erzeugt werden. Funktionsaufrufe lassen sich mit der Funktion [FunctionCall()](/api/TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression.html#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) erzeugen. Betrachten Sie folgende TCQL-Anweisung:
+Die konstanten Werte können durch Aufruf der entsprechenden Überladung von [Constant()](/api/TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression.html#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_Constant_System_String_) erzeugt werden. Funktionsaufrufe lassen sich mit der Funktion [FunctionCall()](/api/TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression.html#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) erzeugen. Betrachten Sie folgende TCQL-Anweisung:
 
 ```
 From T In Timesheet Where T.BeginTime < :Now() Select T
@@ -93,7 +93,7 @@ var q = TCQLExpression.Query(
             TCQLExpression.SelectAlias());
 ```
 
-Weitere Parameterausdrücke können der Methode [TCQLExpression.FunctionCall()]((xref:TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) als zusätzliche Parameter übergeben werden.
+Weitere Parameterausdrücke können der Methode [TCQLExpression.FunctionCall()](/api/TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression.html#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_FunctionCall_System_String_TimeCockpit_Data_QueryLanguage_Syntax_Expression___) als zusätzliche Parameter übergeben werden.
 
 ## Select New With
 In den vorherigen Beispielen wurde das einfache [SelectAlias()](/api/TimeCockpit.Data.QueryLanguage.Syntax.TCQLExpression.html#TimeCockpit_Data_QueryLanguage_Syntax_TCQLExpression_SelectAlias_System_String_System_Int32_) verwendet, um die Struktur der zurückgegebenen EntityObjects festzulegen. Abfragen mit TCQL Select New lassen sich folgendermaßen ausdrücken:
