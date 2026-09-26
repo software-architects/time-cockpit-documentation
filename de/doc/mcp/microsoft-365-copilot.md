@@ -19,7 +19,7 @@ Endbenutzer können im Copilot-Chat keine MCP-URL eingeben. MCP-Server gelangen 
 | B) Deklarativer Agent mit MCP-Plugin (M365 Agents Toolkit) | Entwickler, Administrator veröffentlicht | Entra SSO, OAuth 2.0 Auth Code, DCR, None (kein API-Schlüssel) | nein | GA |
 | C) Custom Federated Connector (M365 Admin Center → Copilot → Connectors) | Global / AI Administrator | Entra SSO, OAuth 2.0, None | nein | Preview, nur lesende Tools |
 
-Da keiner dieser Wege eigene Header unterstützt, übergeben Sie Mandant und Modi als [URL-Segmente](/doc/mcp/overview.html#connection-settings-header-or-url-segment).
+Da keiner dieser Wege eigene Header unterstützt, übergeben Sie Mandant und Modi als [URL-Segmente](~/doc/mcp/ueberblick.md#verbindungseinstellungen-header-oder-url-segment).
 
 ## Weg A: Copilot Studio
 
@@ -30,7 +30,7 @@ Da keiner dieser Wege eigene Header unterstützt, übergeben Sie Mandant und Mod
 5. **Create a new connection** → Entra-Anmeldung → **Add to agent**. Testen Sie den Agent, dann **Channels → Teams and Microsoft 365 Copilot → Make agent available in Microsoft 365 Copilot** und, falls erforderlich, **Submit for admin approval**.
 
 > [!NOTE]
-> Copilot Studio verlangt im manuellen Modus ein **Client Secret** und benötigt daher einen **vertraulichen Client**. Legen Sie für Copilot Studio eine eigene App-Registrierung an (Plattform *Web*, Client Secret, Berechtigung `mcp.access`), statt der Public-Client-Registrierung, die Claude Code und Codex verwenden, ein Secret hinzuzufügen – siehe [Einrichtung in Entra ID](/doc/mcp/entra-id-setup.html).
+> Copilot Studio verlangt im manuellen Modus ein **Client Secret** und benötigt daher einen **vertraulichen Client**. Legen Sie für Copilot Studio eine eigene App-Registrierung an (Plattform *Web*, Client Secret, Berechtigung `mcp.access`), statt der Public-Client-Registrierung, die Claude Code und Codex verwenden, ein Secret hinzuzufügen – siehe [Einrichtung in Entra ID](~/doc/mcp/entra-id-einrichtung.md).
 
 Technisch ist das MCP-Tool ein Custom Connector der Power Platform, daher gelten die Data-Loss-Prevention-Richtlinien Ihres Mandanten. Wenn ein statischer Header unvermeidbar ist, ist die Alternative **Custom connector → Import OpenAPI** (mit `x-ms-agentic-protocol: mcp-streamable-1.0`) und die Richtlinie **Set HTTP header** – deutlich aufwendiger als ein URL-Segment.
 
@@ -49,6 +49,6 @@ Microsoft 365 Admin Center → **Copilot → Connectors → Gallery → Create a
 
 ## Verwandte Seiten
 
-- [Überblick über den MCP-Server](/doc/mcp/overview.html)
-- [Einrichtung in Entra ID](/doc/mcp/entra-id-setup.html)
+- [Überblick über den MCP-Server](~/doc/mcp/ueberblick.md)
+- [Einrichtung in Entra ID](~/doc/mcp/entra-id-einrichtung.md)
 - [Microsoft Learn: Add an existing MCP server in Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-add-existing-server-to-agent)

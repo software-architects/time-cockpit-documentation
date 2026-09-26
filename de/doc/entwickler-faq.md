@@ -18,19 +18,19 @@ Diese Seite beantwortet häufige technische Fragen zur Anpassung und Integration
 
 Beginnen Sie mit diesen Seiten:
 
-- [Beziehungen zwischen Entitäten](/doc/data-model/entity-relationships.html)
-- [Referenz der Standardentitäten](/doc/data-model/standard-entities.html)
-- [Anpassung des Datenmodells: Überblick](/doc/data-model-customization/overview.html)
+- [Beziehungen zwischen Entitäten](~/doc/datenmodell/entitaetsbeziehungen.md)
+- [Referenz der Standardentitäten](~/doc/datenmodell/standardentitaeten.md)
+- [Anpassung des Datenmodells: Überblick](~/doc/datenmodell-anpassung/ueberblick.md)
 
 ### Wie lege ich eigene Felder, Entitäten, Listen oder Formulare an?
 
 Verwenden Sie die Dokumentation zur Anpassung des Datenmodells:
 
-- [Entitäten](/doc/data-model-customization/entity.html)
-- [Listen](/doc/data-model-customization/list.html)
-- [Formulare](/doc/data-model-customization/form.html)
-- [Navigation](/doc/data-model-customization/navigation.html)
-- [Berechtigungen](/doc/data-model-customization/permission.html)
+- [Entitäten](~/doc/datenmodell-anpassung/entitaet.md)
+- [Listen](~/doc/datenmodell-anpassung/liste.md)
+- [Formulare](~/doc/datenmodell-anpassung/formular.md)
+- [Navigation](~/doc/datenmodell-anpassung/navigation.md)
+- [Berechtigungen](~/doc/datenmodell-anpassung/berechtigung.md)
 
 ## Abfragen und Berechnungen
 
@@ -40,11 +40,11 @@ Verwenden Sie TCQL für Abfragen innerhalb von time cockpit und den Query-Endpun
 
 Beginnen Sie hier:
 
-- [TCQL: Überblick](/doc/tcql/overview.html)
-- [From-Klausel](/doc/tcql/from-clause.html)
-- [Where-Klausel](/doc/tcql/where-clause.html)
-- [Select-Klausel](/doc/tcql/select-clause.html)
-- [Ausdruckssprache](/doc/tcql/expression-language.html)
+- [TCQL: Überblick](~/doc/tcql/ueberblick.md)
+- [From-Klausel](~/doc/tcql/from-klausel.md)
+- [Where-Klausel](~/doc/tcql/where-klausel.md)
+- [Select-Klausel](~/doc/tcql/select-klausel.md)
+- [Ausdruckssprache](~/doc/tcql/ausdruckssprache.md)
 
 ### Wie arbeite ich mit Berechnungen für Überstunden, Arbeitszeit oder Feiertage?
 
@@ -52,7 +52,7 @@ Verwenden Sie die integrierten Arbeitszeitfunktionen und die vorhandenen Entitä
 
 Siehe:
 
-- [Funktionen für Arbeitszeit und Feiertage](/doc/tcql/functions-for-working-time-and-holidays.html)
+- [Funktionen für Arbeitszeit und Feiertage](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md)
 - [Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md)
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 
@@ -74,11 +74,11 @@ Verwenden Sie die Web API.
 
 Beginnen Sie mit:
 
-- [Web API: Überblick](/doc/web-api/overview.html)
-- [Authentifizierung](/doc/web-api/authentication.html)
-- [OData-Endpunkt](/doc/web-api/odata.html)
-- [Query-Endpunkt](/doc/web-api/query.html)
-- [ExecuteAction-Endpunkt](/doc/web-api/executeaction.html)
+- [Web API: Überblick](~/doc/web-api/ueberblick.md)
+- [Authentifizierung](~/doc/web-api/authentifizierung.md)
+- [OData-Endpunkt](~/doc/web-api/odata-endpunkt.md)
+- [Query-Endpunkt](~/doc/web-api/query-endpunkt.md)
+- [ExecuteAction-Endpunkt](~/doc/web-api/executeaction-endpunkt.md)
 
 ### Soll ich OData oder den Query-Endpunkt verwenden?
 
@@ -92,8 +92,8 @@ Verwenden Sie:
 Je nach Szenario verwenden Sie:
 
 - [Datenexport](~/doc/datenaustausch/export.md)
-- [OData-Endpunkt](/doc/web-api/odata.html)
-- [Query-Endpunkt](/doc/web-api/query.html)
+- [OData-Endpunkt](~/doc/web-api/odata-endpunkt.md)
+- [Query-Endpunkt](~/doc/web-api/query-endpunkt.md)
 
 ## Automatisierung und Scripting
 
@@ -101,9 +101,9 @@ Je nach Szenario verwenden Sie:
 
 Die Standardoptionen sind:
 
-- [Aktionen](/doc/scripting/actions.html) für Logik, die ein Benutzer auslöst
-- [Trigger](/doc/scripting/triggers.html) für Logik beim Speichern
-- [Skripte automatisieren](/doc/scripting/automating-scripts.html) für geplante oder wiederholte Ausführung
+- [Aktionen](~/doc/scripting/aktionen.md) für Logik, die ein Benutzer auslöst
+- [Trigger](~/doc/scripting/trigger.md) für Logik beim Speichern
+- [Skripte automatisieren](~/doc/scripting/skripte-automatisieren.md) für geplante oder wiederholte Ausführung
 
 ### Wie setze ich Genehmigungs- oder Benachrichtigungsabläufe um?
 
@@ -116,10 +116,10 @@ Genehmigungsworkflows werden in der Regel mit einer Kombination aus folgenden Ba
 
 Siehe:
 
-- [Trigger](/doc/scripting/triggers.html)
-- [Aktionen](/doc/scripting/actions.html)
+- [Trigger](~/doc/scripting/trigger.md)
+- [Aktionen](~/doc/scripting/aktionen.md)
 - [Genehmigungsworkflows](~/doc/arbeitszeiterfassung/genehmigungsworkflows.md)
-- [Berechtigungen](/doc/data-model-customization/permission.html)
+- [Berechtigungen](~/doc/datenmodell-anpassung/berechtigung.md)
 
 ## Berichte
 
@@ -145,7 +145,7 @@ Verwenden Sie Entitätsberechtigungen, Rollenzuordnungen und bei Bedarf Named Se
 
 Siehe:
 
-- [Leitfaden zu Berechtigungen und Sicherheit](/doc/data-model/permissions-guide.html)
+- [Leitfaden zu Berechtigungen und Sicherheit](~/doc/datenmodell/berechtigungen-und-sicherheit.md)
 - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
 - [Navigation, Zugriffsrechte und Menüstruktur](~/doc/navigation-und-zugriffsrechte.md)
 
@@ -153,7 +153,7 @@ Siehe:
 
 Siehe:
 
-- [Migrationsleitfaden Standardberechtigungen](/doc/migration-guides/default-permissions.html)
+- [Migrationsleitfaden Standardberechtigungen](~/doc/migrationsleitfaeden/standardberechtigungen.md)
 - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
 
 ## Beispiele und weiterführende Informationen
@@ -163,10 +163,10 @@ Siehe:
 Nützliche Ausgangspunkte:
 
 - [Implementierung der Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)
-- [Scripting: Überblick](/doc/scripting/overview.html)
-- [Mit C# auf die time cockpit API zugreifen](/doc/scripting/use-c-sharp-to-access-time-cockpit-api.html)
-- [Daten aus CSV importieren](/doc/scripting/import-data-from-csv.html)
-- [Daten nach Microsoft Excel exportieren](/doc/scripting/export-data-to-excel.html)
+- [Scripting: Überblick](~/doc/scripting/ueberblick.md)
+- [Mit C# auf die time cockpit API zugreifen](~/doc/scripting/mit-csharp-auf-die-api-zugreifen.md)
+- [Daten aus CSV importieren](~/doc/scripting/daten-aus-csv-importieren.md)
+- [Daten nach Microsoft Excel exportieren](~/doc/scripting/daten-nach-excel-exportieren.md)
 
 ## Brauchen Sie mehr Hilfe?
 

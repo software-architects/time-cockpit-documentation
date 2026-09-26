@@ -23,7 +23,7 @@ In der Standardkonfiguration von time cockpit müssen Sie eine Beschreibung eing
 ![Formular für Zeitbuchungen](/doc/timesheet-calendar/images/wc-first-timesheet-entry.png "Formular für Zeitbuchungen")
 
 > [!NOTE]
-> Wenn die Standardeigenschaften nicht zu Ihrem Unternehmen passen, schreiben Sie uns an support@timecockpit.com. Mit den Anpassungsmöglichkeiten von time cockpit können Sie eigene Eigenschaften, Formulare, Listen usw. hinzufügen, um time cockpit in Ihre Organisationsstruktur und Ihre Prozesse zu integrieren und Ihre Arbeit zu vereinfachen. Einen Überblick über die Anpassungsmöglichkeiten von time cockpit finden Sie unter [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
+> Wenn die Standardeigenschaften nicht zu Ihrem Unternehmen passen, schreiben Sie uns an support@timecockpit.com. Mit den Anpassungsmöglichkeiten von time cockpit können Sie eigene Eigenschaften, Formulare, Listen usw. hinzufügen, um time cockpit in Ihre Organisationsstruktur und Ihre Prozesse zu integrieren und Ihre Arbeit zu vereinfachen. Einen Überblick über die Anpassungsmöglichkeiten von time cockpit finden Sie unter [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)
 
 
 ## Ändern
@@ -62,6 +62,6 @@ Sie können Zeitbuchungen auf folgende Arten löschen:
 
 ## Aktionen im Zeiterfassungskalender
 
-Wenn Sie wiederkehrende Aufgaben im Zeiterfassungskalender erledigen möchten, können Sie in time cockpit Aktionen anlegen. Wie Sie eine neue Aktion erstellen, lesen Sie unter [Aktionen](/doc/scripting/actions.html). Benötigt die Aktion kein Input-Set, ist sie immer verfügbar. Erwartet die Aktion eine oder mehrere Zeitbuchungen als Input-Set, können Sie sie nur aufrufen, wenn Sie im Kalender eine oder mehrere Zeitbuchungen ausgewählt haben.
+Wenn Sie wiederkehrende Aufgaben im Zeiterfassungskalender erledigen möchten, können Sie in time cockpit Aktionen anlegen. Wie Sie eine neue Aktion erstellen, lesen Sie unter [Aktionen](~/doc/scripting/aktionen.md). Benötigt die Aktion kein Input-Set, ist sie immer verfügbar. Erwartet die Aktion eine oder mehrere Zeitbuchungen als Input-Set, können Sie sie nur aufrufen, wenn Sie im Kalender eine oder mehrere Zeitbuchungen ausgewählt haben.
 
 ![Aktionen](/doc/timesheet-calendar/images/wc-action-in-calendar.png "Aktionen")

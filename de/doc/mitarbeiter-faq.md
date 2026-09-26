@@ -11,7 +11,7 @@ en_page: doc/employee-faq.md
 Diese FAQ beantwortet häufige Fragen von Mitarbeitern, die mit time cockpit Arbeitszeiten erfassen, Abwesenheiten beantragen und ihre täglichen Einträge prüfen.
 
 > [!NOTE]
-> Diese FAQ konzentriert sich auf den Alltag von Mitarbeitern. Für administrative Fragen oder rollenspezifische Funktionen lesen Sie die [Anwender-FAQ](/doc/user-faq.html) oder die passende Rollen-FAQ.
+> Diese FAQ konzentriert sich auf den Alltag von Mitarbeitern. Für administrative Fragen oder rollenspezifische Funktionen lesen Sie die [Anwender-FAQ](~/doc/anwender-faq.md) oder die passende Rollen-FAQ.
 
 > [!NOTE]
 > Überprüft im April 2026.
@@ -25,8 +25,8 @@ Diese FAQ beantwortet häufige Fragen von Mitarbeitern, die mit time cockpit Arb
 Wenn Sie nicht sicher sind, welche Anmeldemethode Sie verwenden sollen, fragen Sie Ihren Administrator.
 
 **Siehe auch:**
-- [Web-Client](/doc/getting-started/web-client.html)
-- [Kontoverwaltung](/doc/account-management/account-management.html)
+- [Web-Client](~/doc/erste-schritte/web-client.md)
+- [Kontoverwaltung](~/doc/kontoverwaltung/kontoverwaltung.md)
 
 ---
 
@@ -36,13 +36,13 @@ Eine einfache Checkliste für den ersten Tag:
 
 1. Erfolgreich anmelden.
 2. Das Modul **Zeiterfassung** öffnen.
-3. Den [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html) öffnen.
+3. Den [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) öffnen.
 4. Den ersten Eintrag anlegen.
 5. Mit Ihrer Führungskraft klären, welche Projekte oder Tätigkeiten Sie verwenden sollen.
 
 **Siehe auch:**
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
 
 ---
 
@@ -50,7 +50,7 @@ Eine einfache Checkliste für den ersten Tag:
 
 ### Wie erfasse ich meine Zeiten jeden Tag schnell?
 
-Verwenden Sie den [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html) und legen Sie Einträge während der Arbeit oder am Ende des Tages an.
+Verwenden Sie den [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) und legen Sie Einträge während der Arbeit oder am Ende des Tages an.
 
 Im Standardkalender legen Sie einen Eintrag an, indem Sie
 
@@ -59,8 +59,8 @@ Im Standardkalender legen Sie einen Eintrag an, indem Sie
 - `STRG + I` drücken.
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -71,8 +71,8 @@ Im Standardkalender legen Sie einen Eintrag an, indem Sie
 Nutzen Sie Ihren Kalender, Notizen oder andere Arbeitsaufzeichnungen, um den Tag so genau wie möglich zu rekonstruieren.
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -83,8 +83,8 @@ Legen Sie getrennte Einträge für die verschiedenen Arbeitsblöcke des Tages an
 Bewährt hat sich ein Eintrag pro sinnvoller Tätigkeit oder pro Projektblock, ohne überlappende Einträge.
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -105,8 +105,8 @@ Urlaub kann als ganztägige oder als stundenweise Abwesenheit eingetragen werden
 Ist der Genehmigungsworkflow aktiviert, prüft anschließend die eingerichtete genehmigende Person den Antrag.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [Anwender-FAQ](/doc/user-faq.html#how-do-i-request-vacation-time)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [Anwender-FAQ](~/doc/anwender-faq.md#wie-beantrage-ich-urlaub)
 
 ---
 
@@ -125,8 +125,8 @@ Wenn Sie den Antrag nicht direkt ändern können, wenden Sie sich an die genehmi
 Ist der Genehmigungsworkflow aktiviert, werden abgelehnte Abwesenheitsanträge nach der Ablehnung gelöscht.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [HR-Administrator-FAQ](/doc/hr-administrator-faq.html)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)
 
 ---
 
@@ -148,8 +148,8 @@ Ist der Genehmigungsworkflow für Krankenstände aktiviert, durchläuft der Date
 Wenn für Ihren Benutzer eine Genehmigung erforderlich ist, bleibt der Krankenstand offen, bis er geprüft wurde. Ist keine Genehmigung erforderlich, werden neue Krankenstände automatisch genehmigt, sobald der Workflow global aktiviert ist.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [Anwender-FAQ](/doc/user-faq.html#whats-the-difference-between-vacation-and-sick-leave)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [Anwender-FAQ](~/doc/anwender-faq.md#was-ist-der-unterschied-zwischen-urlaub-und-krankenstand)
 
 ---
 
@@ -164,8 +164,8 @@ Sie können time cockpit außerdem aus dem Browser heraus als Progressive Web Ap
 Der Standard-Web-Client benötigt eine Internetverbindung.
 
 **Siehe auch:**
-- [Web-Client](/doc/getting-started/web-client.html)
-- [Anwender-FAQ](/doc/user-faq.html#can-i-use-time-cockpit-on-mobile-devices)
+- [Web-Client](~/doc/erste-schritte/web-client.md)
+- [Anwender-FAQ](~/doc/anwender-faq.md#kann-ich-time-cockpit-auf-mobilen-geräten-verwenden)
 
 ---
 
@@ -174,23 +174,23 @@ Der Standard-Web-Client benötigt eine Internetverbindung.
 Prüfen Sie zuerst die eingerichtete Anmeldemethode, Ihren Browser und Ihre Netzwerkverbindung. Besteht das Problem weiterhin, wenden Sie sich an Ihren internen Administrator oder an `support@timecockpit.com`.
 
 **Siehe auch:**
-- [Web-Client](/doc/getting-started/web-client.html)
-- [Kontoverwaltung](/doc/account-management/account-management.html)
+- [Web-Client](~/doc/erste-schritte/web-client.md)
+- [Kontoverwaltung](~/doc/kontoverwaltung/kontoverwaltung.md)
 
 ---
 
 ## Brauchen Sie mehr Hilfe?
 
 ### Verwandte FAQs
-- [Anwender-FAQ](/doc/user-faq.html)
-- [Abteilungsleiter-FAQ](/doc/department-lead-faq.html)
-- [HR-Administrator-FAQ](/doc/hr-administrator-faq.html)
+- [Anwender-FAQ](~/doc/anwender-faq.md)
+- [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)
+- [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)
 
 ### Dokumentation
 - [Erste Schritte](~/doc/erste-schritte/ueberblick.md)
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 
 ### Support
 - **Ihre Führungskraft:** bei Prozessfragen

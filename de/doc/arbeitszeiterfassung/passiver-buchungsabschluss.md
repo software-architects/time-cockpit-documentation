@@ -14,7 +14,7 @@ Standardmäßig setzt der vorkonfigurierte TCQL-Ausdruck das Buchungsabschlussda
 ![Buchungsabschlussdatum konfigurieren](/doc/employee-time-tracking/images/booking-completion-date-config.png "Buchungsabschlussdatum konfigurieren")
 
 > [!NOTE]
-> Derzeit ist die Funktion **Buchungsabschluss** technisch an die Funktion **Standardberechtigungen** gekoppelt (Details finden Sie in unserem [Migrationsleitfaden](/doc/migration-guides/default-permissions.html)).
+> Derzeit ist die Funktion **Buchungsabschluss** technisch an die Funktion **Standardberechtigungen** gekoppelt (Details finden Sie in unserem [Migrationsleitfaden](~/doc/migrationsleitfaeden/standardberechtigungen.md)).
 Wenn Sie die Funktion in Ihrer Umgebung aktivieren möchten, wenden Sie sich gerne an [support@timecockpit.com](mailto:support@timecockpit.com) – wir aktivieren sie gerne für Sie.
 
 ## Funktionsweise

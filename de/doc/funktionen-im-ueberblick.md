@@ -17,10 +17,10 @@ Entdecken Sie den umfassenden Funktionsumfang von time cockpit, geordnet nach Be
 ### Zeiterfassungskalender
 Intuitive grafische Oberfläche zur Erfassung der täglichen Arbeitszeiten.
 
-- **[Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)** - Die zentrale Kalenderoberfläche mit Tages-, Wochen- und Monatsansicht
-- **[Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)** - Zeitbuchungen anlegen, bearbeiten und verwalten
-- **[Musterbuchungen](/doc/timesheet-calendar/timesheet-templates.html)** - Wiederkehrende Zeitbuchungen automatisieren
-- **[Signale & Aktivitätsdaten](/doc/timesheet-calendar/signals.html)** - Erfasste Aktivitätsdaten anzeigen
+- **[Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)** - Die zentrale Kalenderoberfläche mit Tages-, Wochen- und Monatsansicht
+- **[Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)** - Zeitbuchungen anlegen, bearbeiten und verwalten
+- **[Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)** - Wiederkehrende Zeitbuchungen automatisieren
+- **[Signale & Aktivitätsdaten](~/doc/zeiterfassungskalender/signale.md)** - Erfasste Aktivitätsdaten anzeigen
 
 **Mehr erfahren:** [Funktionen des Zeiterfassungskalenders](https://www.timecockpit.com/features/time-tracking-calendar/)
 
@@ -34,24 +34,24 @@ Erfassen Sie Zeiten überall und auf jedem Gerät.
 ### Kalenderintegrationen
 Verbinden Sie Ihre bestehenden Kalender und Werkzeuge.
 
-- **[Outlook-Termine](/doc/timesheet-calendar/outlook-appointments.html)** - Synchronisierung mit Microsoft Outlook/Office 365
-- **[Office-365-Integration](/doc/timesheet-calendar/office365.html)** - Kalendersynchronisierung
+- **[Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md)** - Synchronisierung mit Microsoft Outlook/Office 365
+- **[Office-365-Integration](~/doc/zeiterfassungskalender/office-365-integration.md)** - Kalendersynchronisierung
 
 ## 📊 Projektmanagement
 
 ### Projektstruktur & Einrichtung
 Organisieren Sie die Arbeit nach Kunden, Projekten und Tätigkeiten.
 
-- **[Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)** - Die Projekthierarchie einrichten
-- **[Zeitbuchungen im Projekt](/doc/project-time-tracking/timesheet.html)** - Projektbezogene Ansichten der Zeiterfassung
+- **[Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)** - Die Projekthierarchie einrichten
+- **[Zeitbuchungen im Projekt](~/doc/projektzeiterfassung/zeitbuchungen.md)** - Projektbezogene Ansichten der Zeiterfassung
 
 **Mehr erfahren:** [Funktionen der projektbezogenen Zeiterfassung](https://www.timecockpit.com/features/project-time-tracking/)
 
 ### Budget & Rentabilität
 Halten Sie Projekte rentabel und im Budget.
 
-- **[Budgetkontrolle und Rentabilitätsanalyse](/doc/project-time-tracking/budget-tracking.html)** - 💰 **NEU!** Projektbudgets überwachen, Kosten und Umsatz vergleichen, den Projektabschluss prognostizieren
-- **[Anwendungsfall Budgetkontrolle](/doc/use-cases/budgetary-control.html)** - Technischer Einblick in die Logik der Budgetberechnung
+- **[Budgetkontrolle und Rentabilitätsanalyse](~/doc/projektzeiterfassung/budgetkontrolle.md)** - 💰 **NEU!** Projektbudgets überwachen, Kosten und Umsatz vergleichen, den Projektabschluss prognostizieren
+- **[Anwendungsfall Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)** - Technischer Einblick in die Logik der Budgetberechnung
 
 **Wichtige Funktionen:**
 - Stunden- und kostenbasierte Budgets festlegen
@@ -67,8 +67,8 @@ Halten Sie Projekte rentabel und im Budget.
 ### Rechnungen erstellen
 Machen Sie aus erfassten Zeiten Kundenrechnungen.
 
-- **[Rechnungserstellung & Verrechnungsablauf](/doc/project-time-tracking/billing.html)** - Schritt-für-Schritt-Anleitung zur Rechnungslegung
-- **[Rechnungsdatenfelder](/doc/project-time-tracking/invoice-data-fields.html)** - Die Rechnungskonfiguration verstehen
+- **[Rechnungserstellung & Verrechnungsablauf](~/doc/projektzeiterfassung/rechnungslegung.md)** - Schritt-für-Schritt-Anleitung zur Rechnungslegung
+- **[Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md)** - Die Rechnungskonfiguration verstehen
 
 **Wichtige Abläufe:**
 - Rechnungen aus nicht verrechneten Zeitbuchungen erstellen
@@ -80,7 +80,7 @@ Machen Sie aus erfassten Zeiten Kundenrechnungen.
 ### Preise & Stundensätze
 Konfigurieren Sie Stundensätze und Preisstrategien.
 
-- **[Stundensätze verwalten & Preisgestaltung](/doc/project-time-tracking/hourly-rates.html)** - 💵 **NEU!** Vollständiger Leitfaden zur Konfiguration von Stundensätzen
+- **[Stundensätze verwalten & Preisgestaltung](~/doc/projektzeiterfassung/stundensaetze.md)** - 💵 **NEU!** Vollständiger Leitfaden zur Konfiguration von Stundensätzen
   - Hierarchie der Stundensätze (Tätigkeit → Projekt → Benutzer → Unternehmen)
   - Kundenspezifische Preisstrategien
   - Rollen- und leistungsbasierte Stundensätze
@@ -99,18 +99,18 @@ Konfigurieren Sie Stundensätze und Preisstrategien.
 ### Arbeitszeitverwaltung
 Erfassen Sie Arbeitszeiten und Abwesenheiten von Mitarbeitern und stellen Sie die Einhaltung von Vorschriften sicher.
 
-- **[Arbeitszeit / Abwesenheitsverwaltung](/doc/employee-time-tracking/working-time.html)** - Arbeitszeiten und Überstunden verwalten
-- **[Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)** - Urlaub, Krankenstand, Zeitausgleich
-- **[Arbeitszeitregelungen](/doc/employee-time-tracking/working-time-regulations.html)** - Einhaltung des Arbeitsrechts
-- **[Stundenzettel](/doc/employee-time-tracking/time-report.html)** - Stundenzettel für Mitarbeiter
-- **[Erfassung von Homeoffice](/doc/employee-time-tracking/work-from-home.html)** - Zeiterfassung bei Remote-Arbeit
+- **[Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)** - Arbeitszeiten und Überstunden verwalten
+- **[Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)** - Urlaub, Krankenstand, Zeitausgleich
+- **[Arbeitszeitregelungen](~/doc/arbeitszeiterfassung/arbeitszeitregelungen.md)** - Einhaltung des Arbeitsrechts
+- **[Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)** - Stundenzettel für Mitarbeiter
+- **[Erfassung von Homeoffice](~/doc/arbeitszeiterfassung/homeoffice.md)** - Zeiterfassung bei Remote-Arbeit
 
 **Mehr erfahren:** [Funktionen der Arbeitszeiterfassung](https://www.timecockpit.com/features/employee-time-tracking/)
 
 ### Genehmigungsworkflows
 Strukturierte Genehmigungsprozesse für Abwesenheiten und Zeitbuchungen.
 
-- **[Genehmigungsworkflows](/doc/employee-time-tracking/approval-workflows.html)** - ✅ **NEU!** Vollständiger Leitfaden zu den Workflows
+- **[Genehmigungsworkflows](~/doc/arbeitszeiterfassung/genehmigungsworkflows.md)** - ✅ **NEU!** Vollständiger Leitfaden zu den Workflows
   - Genehmigungsprozess für Urlaub
   - Genehmigung von Krankenstand und Zeitausgleich
   - Rollenbasierte Berechtigungen (Abteilungsleiter, HR-Administrator)
@@ -127,17 +127,17 @@ Strukturierte Genehmigungsprozesse für Abwesenheiten und Zeitbuchungen.
 ### Berechtigungen & Sicherheit
 Legen Sie fest, wer was sehen und tun darf.
 
-- **[Leitfaden zu Standardberechtigungen](/doc/employee-time-tracking/default-permissions.html)** - Rollenbasierte Zugriffskontrolle
-- **[Referenz zu Berechtigungen](/doc/data-model/permissions-guide.html)** - Umfassende Dokumentation der Berechtigungen
+- **[Leitfaden zu Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)** - Rollenbasierte Zugriffskontrolle
+- **[Referenz zu Berechtigungen](~/doc/datenmodell/berechtigungen-und-sicherheit.md)** - Umfassende Dokumentation der Berechtigungen
 
 ## 📈 Berichte & Analysen
 
 ### Integrierte Berichte
 Vorkonfigurierte Berichte für häufige Auswertungen.
 
-- **[Berichte: Überblick](/doc/reporting/overview.html)** - Einführung in Berichte mit SSRS
-- **[Integrierte Berichte](/doc/reporting/built-in-reports.html)** - Katalog der Standardberichte
-- **[Standard-Druckansicht](/doc/reporting/standard-print-view.html)** - Schnelle Drucklayouts
+- **[Berichte: Überblick](~/doc/berichte/ueberblick.md)** - Einführung in Berichte mit SSRS
+- **[Integrierte Berichte](~/doc/berichte/integrierte-berichte.md)** - Katalog der Standardberichte
+- **[Standard-Druckansicht](~/doc/berichte/standard-druckansicht.md)** - Schnelle Drucklayouts
 
 **Häufige Berichte:**
 - Projektzeit nach Mitarbeiter
@@ -151,22 +151,22 @@ Vorkonfigurierte Berichte für häufige Auswertungen.
 ### Eigene Berichte
 Erstellen Sie Berichte, die genau auf Ihre Anforderungen zugeschnitten sind.
 
-- **[Eigene Berichte](/doc/reporting/custom-reports.html)** - Eigene SSRS-Berichte erstellen
-- **[Abfragesprache TCQL](/doc/tcql/overview.html)** - Daten programmgesteuert abfragen
-- **[Datenexport](/doc/data-exchange/export.html)** - Für Auswertungen nach Excel exportieren
+- **[Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md)** - Eigene SSRS-Berichte erstellen
+- **[Abfragesprache TCQL](~/doc/tcql/ueberblick.md)** - Daten programmgesteuert abfragen
+- **[Datenexport](~/doc/datenaustausch/export.md)** - Für Auswertungen nach Excel exportieren
 
 ## 🤖 Aktivitätserfassung (nur Desktop)
 
 ### Automatische Zeiterfassung
 Lassen Sie time cockpit Ihre Computeraktivität automatisch aufzeichnen.
 
-- **[Signal Tracker: Überblick](/doc/signal-tracker/overview.html)** - Einführung in die Aktivitätserfassung
-- **[Aktive Fenster erfassen](/doc/signal-tracker/active-windows.html)** - Die Nutzung von Anwendungen aufzeichnen
-- **[Dateiänderungen erfassen](/doc/signal-tracker/changed-files.html)** - Bearbeitete Dateien überwachen
-- **[E-Mails erfassen](/doc/signal-tracker/sent-emails.html)** - Gesendete E-Mails aufzeichnen
-- **[Telefonate erfassen](/doc/signal-tracker/phone-calls.html)** - Telefonaktivität protokollieren
-- **[Computeraktivität](/doc/signal-tracker/computer-activity.html)** - Tastatur- und Mausaktivität
-- **[Netzwerkverbindungen](/doc/signal-tracker/network-connections.html)** - Die Netzwerknutzung aufzeichnen
+- **[Signal Tracker: Überblick](~/doc/signal-tracker/ueberblick.md)** - Einführung in die Aktivitätserfassung
+- **[Aktive Fenster erfassen](~/doc/signal-tracker/aktive-fenster.md)** - Die Nutzung von Anwendungen aufzeichnen
+- **[Dateiänderungen erfassen](~/doc/signal-tracker/geaenderte-dateien.md)** - Bearbeitete Dateien überwachen
+- **[E-Mails erfassen](~/doc/signal-tracker/gesendete-e-mails.md)** - Gesendete E-Mails aufzeichnen
+- **[Telefonate erfassen](~/doc/signal-tracker/telefonate.md)** - Telefonaktivität protokollieren
+- **[Computeraktivität](~/doc/signal-tracker/computeraktivitaet.md)** - Tastatur- und Mausaktivität
+- **[Netzwerkverbindungen](~/doc/signal-tracker/netzwerkverbindungen.md)** - Die Netzwerknutzung aufzeichnen
 
 **Mehr erfahren:** [Funktionen der Aktivitätserfassung](https://www.timecockpit.com/features/activity-tracking/)
 
@@ -178,51 +178,51 @@ Lassen Sie time cockpit Ihre Computeraktivität automatisch aufzeichnen.
 ### Import & Export
 Verbinden Sie time cockpit mit externen Systemen.
 
-- **[Datenimport](/doc/data-exchange/import.html)** - Import aus Excel/CSV
-- **[Datenexport](/doc/data-exchange/export.html)** - Export nach Excel und in andere Formate
-- **[Web API: Überblick](/doc/web-api/overview.html)** - Programmgesteuerter Datenzugriff
+- **[Datenimport](~/doc/datenaustausch/import.md)** - Import aus Excel/CSV
+- **[Datenexport](~/doc/datenaustausch/export.md)** - Export nach Excel und in andere Formate
+- **[Web API: Überblick](~/doc/web-api/ueberblick.md)** - Programmgesteuerter Datenzugriff
 
 **Mehr erfahren:** [Integrationsfunktionen](https://www.timecockpit.com/features/integration/)
 
 ### API & Automatisierung
 Integrieren Sie time cockpit in Ihre Abläufe.
 
-- **[Authentifizierung](/doc/web-api/authentication.html)** - Authentifizierungsmethoden der API
-- **[OData-Endpunkte](/doc/web-api/odata.html)** - Datenzugriff über REST
-- **[TCQL-Query-Endpunkt](/doc/web-api/query.html)** - Erweiterte Abfragen
-- **[Aktionen ausführen](/doc/web-api/executeaction.html)** - Aktionen über die API auslösen
-- **[Reporting-API](/doc/web-api/reporting.html)** - Berichte programmgesteuert erzeugen
+- **[Authentifizierung](~/doc/web-api/authentifizierung.md)** - Authentifizierungsmethoden der API
+- **[OData-Endpunkte](~/doc/web-api/odata-endpunkt.md)** - Datenzugriff über REST
+- **[TCQL-Query-Endpunkt](~/doc/web-api/query-endpunkt.md)** - Erweiterte Abfragen
+- **[Aktionen ausführen](~/doc/web-api/executeaction-endpunkt.md)** - Aktionen über die API auslösen
+- **[Reporting-API](~/doc/web-api/reporting-endpunkt.md)** - Berichte programmgesteuert erzeugen
 
 ## ⚙️ Anpassung
 
 ### Anpassung des Datenmodells
 Passen Sie time cockpit an Ihre Geschäftsprozesse an.
 
-- **[Anpassung: Überblick](/doc/data-model-customization/overview.html)** - Einführung in die Anpassung
-- **[Entitäten anpassen](/doc/data-model-customization/entity.html)** - Eigene Felder und Entitäten hinzufügen
-- **[Listen anpassen](/doc/data-model-customization/list.html)** - Eigene Ansichten erstellen
-- **[Formulare anpassen](/doc/data-model-customization/form.html)** - Eigene Formulare gestalten
-- **[Dashboards anpassen](/doc/data-model-customization/dashboard.html)** - Eigene Dashboards erstellen
-- **[Feature Flags](/doc/data-model-customization/feature-flags.html)** - Funktionen aktivieren/deaktivieren
+- **[Anpassung: Überblick](~/doc/datenmodell-anpassung/ueberblick.md)** - Einführung in die Anpassung
+- **[Entitäten anpassen](~/doc/datenmodell-anpassung/entitaet.md)** - Eigene Felder und Entitäten hinzufügen
+- **[Listen anpassen](~/doc/datenmodell-anpassung/liste.md)** - Eigene Ansichten erstellen
+- **[Formulare anpassen](~/doc/datenmodell-anpassung/formular.md)** - Eigene Formulare gestalten
+- **[Dashboards anpassen](~/doc/datenmodell-anpassung/dashboard.md)** - Eigene Dashboards erstellen
+- **[Feature Flags](~/doc/datenmodell-anpassung/feature-flags.md)** - Funktionen aktivieren/deaktivieren
 
 **Mehr erfahren:** [Anpassungsmöglichkeiten](https://www.timecockpit.com/features/customization/)
 
 ### Scripting & Automatisierung
 Automatisieren Sie Geschäftslogik mit Python-Skripten.
 
-- **[Scripting: Überblick](/doc/scripting/overview.html)** - Einführung in das Scripting mit IronPython
-- **[Aktionen](/doc/scripting/actions.html)** - Eigene Geschäftslogik und Abläufe
-- **[Trigger](/doc/scripting/triggers.html)** - Ereignisgesteuerte Automatisierung
-- **[Skripte automatisieren](/doc/scripting/automating-scripts.html)** - Zeitgesteuerte Automatisierung
+- **[Scripting: Überblick](~/doc/scripting/ueberblick.md)** - Einführung in das Scripting mit IronPython
+- **[Aktionen](~/doc/scripting/aktionen.md)** - Eigene Geschäftslogik und Abläufe
+- **[Trigger](~/doc/scripting/trigger.md)** - Ereignisgesteuerte Automatisierung
+- **[Skripte automatisieren](~/doc/scripting/skripte-automatisieren.md)** - Zeitgesteuerte Automatisierung
 
 ## 🏢 Enterprise-Funktionen
 
 ### Integration mit Azure Active Directory
 Authentifizierung und Benutzerverwaltung auf Unternehmensniveau.
 
-- **[AAD-Integration](/doc/enterprise/aad.html)** - Authentifizierung mit Azure AD
-- **[Benutzerbereitstellung](/doc/enterprise/user-provisioning.html)** - Automatisierte Benutzerverwaltung
-- **[Eigener Hostname](/doc/enterprise/custom-hostname.html)** - Eigene URL (z. B. timecockpit.yourcompany.com)
+- **[AAD-Integration](~/doc/enterprise/azure-active-directory.md)** - Authentifizierung mit Azure AD
+- **[Benutzerbereitstellung](~/doc/enterprise/benutzerbereitstellung.md)** - Automatisierte Benutzerverwaltung
+- **[Eigener Hostname](~/doc/enterprise/eigener-hostname.md)** - Eigene URL (z. B. timecockpit.yourcompany.com)
 
 **Mehr erfahren:** [Enterprise-Funktionen](https://www.timecockpit.com/features/enterprise/) | [Sicherheitsfunktionen](https://www.timecockpit.com/features/security/)
 
@@ -242,66 +242,66 @@ Kurze Antworten, geordnet nach Rolle.
 - **[Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md)** - Grundlegende Fragen zur Zeiterfassung
 
 **Rollenspezifisch:**
-- **[Projektleiter-FAQ](/doc/project-manager-faq.html)** - Budgetkontrolle & Zeitverwaltung im Team
-- **[Abteilungsleiter-FAQ](/doc/department-lead-faq.html)** - Teamaufsicht & Genehmigung von Abwesenheiten
-- **[HR-Administrator-FAQ](/doc/hr-administrator-faq.html)** - Mitarbeiterverwaltung & Einhaltung von Vorschriften
-- **[Abrechnungs-FAQ](/doc/billing-admin-faq.html)** - Rechnungslegung & Umsatzverfolgung
-- **[Entwickler-FAQ](/doc/developer-faq.html)** - Fragen zu API & Anpassung
+- **[Projektleiter-FAQ](~/doc/projektleiter-faq.md)** - Budgetkontrolle & Zeitverwaltung im Team
+- **[Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)** - Teamaufsicht & Genehmigung von Abwesenheiten
+- **[HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)** - Mitarbeiterverwaltung & Einhaltung von Vorschriften
+- **[Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)** - Rechnungslegung & Umsatzverfolgung
+- **[Entwickler-FAQ](~/doc/entwickler-faq.md)** - Fragen zu API & Anpassung
 
 ### Referenz zum Datenmodell
 Verstehen Sie die Datenstruktur von time cockpit.
 
-- **[Entitätsbeziehungen](/doc/data-model/entity-relationships.html)** - ER-Diagramme mit Mermaid
-- **[Standardentitäten](/doc/data-model/standard-entities.html)** - Referenzdokumentation der Entitäten
+- **[Entitätsbeziehungen](~/doc/datenmodell/entitaetsbeziehungen.md)** - ER-Diagramme mit Mermaid
+- **[Standardentitäten](~/doc/datenmodell/standardentitaeten.md)** - Referenzdokumentation der Entitäten
 
 ## 🔍 Funktionen nach Anwendungsfall finden
 
 ### „Ich möchte …"
 
 **… Zeiten auf Kundenprojekte erfassen**
-→ [Zeitbuchungen im Projekt](/doc/project-time-tracking/timesheet.html) | [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
+→ [Zeitbuchungen im Projekt](~/doc/projektzeiterfassung/zeitbuchungen.md) | [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 
 **… Budgetüberschreitungen in Projekten verhindern**
-→ [Budgetkontrolle](/doc/project-time-tracking/budget-tracking.html) | [Anwendungsfall Budgetkontrolle](/doc/use-cases/budgetary-control.html)
+→ [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md) | [Anwendungsfall Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)
 
 **… Kunden die geleistete Arbeitszeit verrechnen**
-→ [Rechnungslegung](/doc/project-time-tracking/billing.html) | [Stundensätze](/doc/project-time-tracking/hourly-rates.html)
+→ [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md) | [Stundensätze](~/doc/projektzeiterfassung/stundensaetze.md)
 
 **… Urlaubsanträge von Mitarbeitern verwalten**
-→ [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html) | [Genehmigungsworkflows](/doc/employee-time-tracking/approval-workflows.html)
+→ [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md) | [Genehmigungsworkflows](~/doc/arbeitszeiterfassung/genehmigungsworkflows.md)
 
 **… die Arbeitszeit von Mitarbeitern gesetzeskonform erfassen**
-→ [Arbeitszeit](/doc/employee-time-tracking/working-time.html) | [Arbeitszeitregelungen](/doc/employee-time-tracking/working-time-regulations.html)
+→ [Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md) | [Arbeitszeitregelungen](~/doc/arbeitszeiterfassung/arbeitszeitregelungen.md)
 
 **… Abwesenheiten im Team genehmigen**
-→ [Genehmigungsworkflows](/doc/employee-time-tracking/approval-workflows.html) | [Abteilungsleiter-FAQ](/doc/department-lead-faq.html)
+→ [Genehmigungsworkflows](~/doc/arbeitszeiterfassung/genehmigungsworkflows.md) | [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)
 
 **… Zeiten auf dem Smartphone erfassen**
 → [Mobiler Zugriff](~/doc/erste-schritte/mobile-zeiterfassung.md)
 
 **… die Rentabilität von Projekten verstehen**
-→ [Budgetkontrolle](/doc/project-time-tracking/budget-tracking.html) | [Stundensätze](/doc/project-time-tracking/hourly-rates.html)
+→ [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md) | [Stundensätze](~/doc/projektzeiterfassung/stundensaetze.md)
 
 **… wiederkehrende Aufgaben automatisieren**
-→ [Scripting-Aktionen](/doc/scripting/actions.html) | [Trigger](/doc/scripting/triggers.html)
+→ [Scripting-Aktionen](~/doc/scripting/aktionen.md) | [Trigger](~/doc/scripting/trigger.md)
 
 **… externe Systeme anbinden**
-→ [Web API](/doc/web-api/overview.html) | [Datenaustausch](/doc/data-exchange/import.html)
+→ [Web API](~/doc/web-api/ueberblick.md) | [Datenaustausch](~/doc/datenaustausch/import.md)
 
 **… time cockpit an meine Abläufe anpassen**
-→ [Anpassung: Überblick](/doc/data-model-customization/overview.html) | [Entitäten anpassen](/doc/data-model-customization/entity.html)
+→ [Anpassung: Überblick](~/doc/datenmodell-anpassung/ueberblick.md) | [Entitäten anpassen](~/doc/datenmodell-anpassung/entitaet.md)
 
 **… eigene Berichte erstellen**
-→ [Eigene Berichte](/doc/reporting/custom-reports.html) | [TCQL](/doc/tcql/overview.html)
+→ [Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md) | [TCQL](~/doc/tcql/ueberblick.md)
 
 ## 📱 Highlights
 
 ### Neu & kürzlich verbessert
 Kürzlich hinzugefügte oder deutlich verbesserte Funktionen.
 
-- 💰 **[Budgetkontrolle](/doc/project-time-tracking/budget-tracking.html)** - Umfassende Budgetüberwachung und Rentabilitätsanalyse
-- 💵 **[Stundensätze](/doc/project-time-tracking/hourly-rates.html)** - Erweiterte Verwaltung von Stundensätzen und Preisstrategien
-- ✅ **[Genehmigungsworkflows](/doc/employee-time-tracking/approval-workflows.html)** - Strukturierte Genehmigung von Abwesenheiten und Zeitbuchungen
+- 💰 **[Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md)** - Umfassende Budgetüberwachung und Rentabilitätsanalyse
+- 💵 **[Stundensätze](~/doc/projektzeiterfassung/stundensaetze.md)** - Erweiterte Verwaltung von Stundensätzen und Preisstrategien
+- ✅ **[Genehmigungsworkflows](~/doc/arbeitszeiterfassung/genehmigungsworkflows.md)** - Strukturierte Genehmigung von Abwesenheiten und Zeitbuchungen
 - 📱 **[Mobiler Zugriff](~/doc/erste-schritte/mobile-zeiterfassung.md)** - Verbesserte mobile und responsive Nutzung
 
 ### Beliebteste Funktionen
@@ -316,18 +316,18 @@ Kürzlich hinzugefügte oder deutlich verbesserte Funktionen.
 ### Funktionen für Power-User
 
 **Erweiterte Möglichkeiten für erfahrene Anwender:**
-- [Budgetkontrolle](/doc/use-cases/budgetary-control.html) - Detaillierter Einblick in Budgetberechnungen
-- [TCQL](/doc/tcql/overview.html) - Erweiterte Abfragesprache
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html) - Die Datenstruktur anpassen
-- [Scripting](/doc/scripting/overview.html) - Automatisierung mit Python
-- [Web API](/doc/web-api/overview.html) - Programmgesteuerte Integration
+- [Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md) - Detaillierter Einblick in Budgetberechnungen
+- [TCQL](~/doc/tcql/ueberblick.md) - Erweiterte Abfragesprache
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md) - Die Datenstruktur anpassen
+- [Scripting](~/doc/scripting/ueberblick.md) - Automatisierung mit Python
+- [Web API](~/doc/web-api/ueberblick.md) - Programmgesteuerte Integration
 
 ## 🛠️ Support & Ressourcen
 
 ### Dokumentation
 - **[Für Anwender](~/doc/fuer-anwender.md)** - Einstiegsseite der Anwenderdokumentation
 - **[Für Entwickler](~/doc/fuer-entwickler.md)** - Dokumentation für Entwickler & API
-- **[Release Notes](/doc/release-notes/2026-10.html)** - Neuerungen jeder Version
+- **[Release Notes](~/doc/release-notes/2026-10.md)** - Neuerungen jeder Version
 
 ### Hilfe erhalten
 - **E-Mail

@@ -27,7 +27,7 @@ Vor dem aktuellen Standardberechtigungsmodell verwendete time cockpit ein einfac
 - **Neukunden**: Die Standardberechtigungen werden automatisch aktiviert.
 - **Bestandskunden** (Konten, die vor dem 10.12.2025 angelegt wurden): Die Standardberechtigungen werden nicht automatisch aktiviert, damit bestehende eigene Berechtigungen nicht unbeabsichtigt geändert werden. Um sie zu aktivieren, wenden Sie sich an [support@timecockpit.com](mailto:support@timecockpit.com).
 
-Die zugehörige Referenz zur Navigation finden Sie unter [Navigationsberechtigungen und Menüstruktur](/doc/navigation-access-permissions.html).
+Die zugehörige Referenz zur Navigation finden Sie unter [Navigationsberechtigungen und Menüstruktur](~/doc/navigation-und-zugriffsrechte.md).
 
 ## Standardrollen
 

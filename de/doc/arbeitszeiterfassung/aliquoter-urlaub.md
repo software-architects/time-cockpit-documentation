@@ -82,7 +82,7 @@ Die Spalte **Resturlaub in Wochen** zeigt den aliquoten Saldo, wenn der Filter a
 
 ## Verwandte Seiten
 
-- [Resturlaub](/doc/reference/lists/vacation-per-effective-date.html)
-- [Urlaubsanspruch](/doc/reference/lists/vacation-entitlement.html)
+- [Resturlaub](~/doc/referenz/listen/resturlaub.md)
+- [Urlaubsanspruch](~/doc/referenz/listen/urlaubsanspruch.md)
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)
 - [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)

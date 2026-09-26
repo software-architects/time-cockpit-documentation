@@ -11,11 +11,11 @@ Dieses Kapitel gibt einen Überblick darüber, was in time cockpit angepasst wer
 
 time cockpit wird durch Metadaten gesteuert. Das heißt, möglichst viele Informationen über kundenspezifische Anpassungen (Entitäten, Eigenschaften, Beziehungen, Validierungsregeln usw.) werden im Datenmodell konfiguriert. In den meisten Fällen beeinflussen Anpassungen des Datenmodells, wie die Benutzeroberfläche aussieht und sich verhält.
 
-Beispiel: Das Standarddatenmodell enthält eine Validierungsregel ```APP_ValidateCustomerSet```, die sicherstellt, dass jedes Projekt einem Kunden zugeordnet ist. Da diese Validierungsregel im Datenmodell hinterlegt ist, zeigt die Benutzeroberfläche einen Validierungsfehler an, wenn die Validierungsregel nicht erfüllt ist, also kein Kunde gesetzt ist. Wird ein Projekt ohne Kunde per Skript ([Das Datenmodell ändern](/doc/scripting/modify-data-model.html)) oder über die ([Web API](~/doc/web-api/ueberblick.md)) angelegt, verhindert der Validierungsfehler ebenfalls, dass das ungültige Projekt gespeichert wird. Weitere Beispiele für Informationen im Datenmodell, die die Benutzeroberfläche steuern, sind Formatierungsoptionen für Datums-/Uhrzeit- oder numerische Felder.
+Beispiel: Das Standarddatenmodell enthält eine Validierungsregel ```APP_ValidateCustomerSet```, die sicherstellt, dass jedes Projekt einem Kunden zugeordnet ist. Da diese Validierungsregel im Datenmodell hinterlegt ist, zeigt die Benutzeroberfläche einen Validierungsfehler an, wenn die Validierungsregel nicht erfüllt ist, also kein Kunde gesetzt ist. Wird ein Projekt ohne Kunde per Skript ([Das Datenmodell ändern](~/doc/scripting/datenmodell-aendern.md)) oder über die ([Web API](~/doc/web-api/ueberblick.md)) angelegt, verhindert der Validierungsfehler ebenfalls, dass das ungültige Projekt gespeichert wird. Weitere Beispiele für Informationen im Datenmodell, die die Benutzeroberfläche steuern, sind Formatierungsoptionen für Datums-/Uhrzeit- oder numerische Felder.
 
 ## Entitäten bearbeiten
 
-Im Modul ```Anpassung``` wird ein Baum aller Entitäten, Listen, Formulare, Aktionen, Module und Sets angezeigt, die im Datenmodell enthalten sind. Diese können nur auf dem ```Server``` bearbeitet werden, um Synchronisierungskonflikte auf Ebene des Datenmodells zu vermeiden.
+Im Modul ```Anpassungen``` wird ein Baum aller Entitäten, Listen, Formulare, Aktionen, Module und Sets angezeigt, die im Datenmodell enthalten sind. Diese können nur auf dem ```Server``` bearbeitet werden, um Synchronisierungskonflikte auf Ebene des Datenmodells zu vermeiden.
 
 > [!NOTE]
 > Jede Entität im Datenmodell von time cockpit entspricht einer Tabelle in der zugrunde liegenden Datenbank.
@@ -119,7 +119,7 @@ Die Pflege von Mehrfachzuordnungen von ```Project``` zu ```Customer``` lässt si
 
 ## Validierungsregeln
 
-Auf Entitäten können Validierungsregeln definiert werden, um sicherzustellen, dass eine Instanz einer Entität, z. B. ein Datensatz in der Projekttabelle, bestimmte Kriterien erfüllt. Diese Kriterien ergeben sich aus den Geschäftsregeln eines Unternehmens. Ist eine Validierungsregel nicht erfüllt, kann der Datensatz nicht gespeichert werden. Das gilt für das Speichern eines Datensatzes in der Benutzeroberfläche ebenso wie per [Scripting](/doc/scripting/overview.html) und über die [Web API](~/doc/web-api/ueberblick.md).
+Auf Entitäten können Validierungsregeln definiert werden, um sicherzustellen, dass eine Instanz einer Entität, z. B. ein Datensatz in der Projekttabelle, bestimmte Kriterien erfüllt. Diese Kriterien ergeben sich aus den Geschäftsregeln eines Unternehmens. Ist eine Validierungsregel nicht erfüllt, kann der Datensatz nicht gespeichert werden. Das gilt für das Speichern eines Datensatzes in der Benutzeroberfläche ebenso wie per [Scripting](~/doc/scripting/ueberblick.md) und über die [Web API](~/doc/web-api/ueberblick.md).
 
 ![Validierungsregeln](/doc/data-model-customization/images/validation-rules.png "Validierungsregeln")
 

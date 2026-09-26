@@ -80,7 +80,7 @@ Sie können mehrere Instanzen von time cockpit auf einem Computer betreiben (z. 
 
 ## Autostart-Verhalten der Signal Tracker
 
-Standardmäßig konfiguriert time cockpit die [Signal Tracker](/doc/signal-tracker/overview.html) so, dass sie bei jeder Anmeldung automatisch starten. Endbenutzer, die keine Datenerfassung durch Signal Tracker wünschen, können sie in der [Konfigurationsoberfläche der Signal Tracker](/doc/signal-tracker/overview.html#signal-tracker-configuration-ui) beenden. Ein beendeter Signal Tracker startet nicht mehr automatisch, auch nicht nach einem Neustart des Computers.
+Standardmäßig konfiguriert time cockpit die [Signal Tracker](~/doc/signal-tracker/ueberblick.md) so, dass sie bei jeder Anmeldung automatisch starten. Endbenutzer, die keine Datenerfassung durch Signal Tracker wünschen, können sie in der [Konfigurationsoberfläche der Signal Tracker](~/doc/signal-tracker/ueberblick.md#signal-tracker-konfiguration) beenden. Ein beendeter Signal Tracker startet nicht mehr automatisch, auch nicht nach einem Neustart des Computers.
 
 Unternehmen können das Autostart-Verhalten der Signal Tracker vom oben beschriebenen Opt-out-Modell auf ein Opt-in-Modell umstellen, indem sie einen Schlüssel in die Registry des Computers eintragen, bevor ein Benutzer die Signal Tracker von time cockpit zum ersten Mal startet. In der Praxis empfehlen wir, die Änderung der Registry automatisiert auf alle Computer zu verteilen, z. B. mit Active Directory-Gruppenrichtlinien oder Softwareverteilungswerkzeugen von Drittanbietern. Der Registry-Schlüssel, der das time cockpit-Installationsprogramm von Opt-out auf Opt-in umstellt, lautet `HKEY_LOCAL_MACHINE\SOFTWARE\software architects\SkipInitialSignalTrackerAutostart` (Typ `DWORD`, Wert `1`).
 

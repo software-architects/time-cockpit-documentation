@@ -5,6 +5,7 @@
 # Sources (TimeCockpit monorepo next to this repo, adjust -ProductRoot if needed):
 #   web/Source/CockpitFramework.Web.UI.Angular/libs/cofx/assets/i18n/messages-cofx.json
 #   web/Source/CockpitFramework.Web.UI.Angular/libs/time-cockpit-calendar/assets/i18n/messages-tc.json
+#   web/Source/CockpitFramework.Web.UI.Angular/libs/time-cockpit-vacation-calendar/assets/i18n/messages-tc-vacation.json
 # Each leaf is { "en": "...", "de": "..." }. Only labels up to 6 words without HTML or
 # placeholders are taken over; sentences and messages are not glossary material.
 
@@ -18,7 +19,8 @@ $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 if (-not $ProductRoot) { $ProductRoot = Join-Path (Resolve-Path (Join-Path $scriptDir "..\..\..")).Path "TimeCockpit" }
 $sources = @(
     "web\Source\CockpitFramework.Web.UI.Angular\libs\cofx\assets\i18n\messages-cofx.json",
-    "web\Source\CockpitFramework.Web.UI.Angular\libs\time-cockpit-calendar\assets\i18n\messages-tc.json"
+    "web\Source\CockpitFramework.Web.UI.Angular\libs\time-cockpit-calendar\assets\i18n\messages-tc.json",
+    "web\Source\CockpitFramework.Web.UI.Angular\libs\time-cockpit-vacation-calendar\assets\i18n\messages-tc-vacation.json"
 )
 
 $pairs = @{}

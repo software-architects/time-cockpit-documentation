@@ -6,7 +6,8 @@
 # Rules (see AGENTS.md, "German documentation"):
 #   - Page links (.md, "~/doc/..." or relative to the English source folder):
 #       translated  -> ~/doc/<de path>.md (anchor kept only if a matching DE heading exists)
-#       not yet     -> /doc/<en path>.html (root-absolute, English site)
+#       not yet     -> /doc/<en path>.html (root-absolute, English site); such links and absolute
+#                      docs.timecockpit.com/doc links switch to German once the page is translated
 #       already DE  -> left alone
 #   - Image links: a file under de/doc/<de folder>/images/ wins (German screenshot),
 #     otherwise the English image root-absolute: /doc/<en folder>/images/<name>
@@ -126,6 +127,22 @@ foreach ($en in $map.Keys) {
             if ($mapped -eq $Matches[1]) { return $m.Value }
             $script:rewritten++
             return "](#$mapped$title)"
+        }
+        # Links to the English site (/doc/x.html, set while x was not translated yet, or
+        # absolute docs.timecockpit.com URLs): switch to the German page once it exists.
+        if ($target -match '^(?:https://docs\.timecockpit\.com)?/doc/([^#?]+)\.html(?:#(.+))?$') {
+            $enPath = "doc/$($Matches[1]).md"
+            $anchor = $Matches[2]
+            if (-not $map.ContainsKey($enPath)) { return $m.Value }
+            $dePath = $map[$enPath]
+            $suffix = ''
+            if ($anchor) {
+                $mapped = Convert-Anchor $enPath $dePath $anchor
+                if ($null -ne $mapped) { $suffix = "#$mapped" }
+                else { Write-Warning "anchor '#$anchor' not found in $dePath (link in $deRel), dropped" }
+            }
+            $script:rewritten++
+            return "](~/$dePath$suffix$title)"
         }
         if ($target -match '^(https?:|mailto:|xref:|/)') { return $m.Value }
 

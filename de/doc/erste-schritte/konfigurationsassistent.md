@@ -47,7 +47,7 @@ Sie können time cockpit auf mehreren Geräten installieren (z. B. auf Ihrem Des
 
 ## Schritt 5 - Signaldatenpasswort wählen
 
-Wir müssen Ihren time cockpit-Benutzernamen und Ihr Passwort (als Hash) auf unseren Servern speichern, damit Sie sich bei unseren Diensten anmelden können. Ihre automatisch aufgezeichneten Signaldaten (siehe [Signal Tracker](/doc/signal-tracker/overview.html)) halten wir aber für noch schützenswerter. Deshalb können Sie ein eigenes Passwort wählen, mit dem Ihre Signaldaten verschlüsselt werden.
+Wir müssen Ihren time cockpit-Benutzernamen und Ihr Passwort (als Hash) auf unseren Servern speichern, damit Sie sich bei unseren Diensten anmelden können. Ihre automatisch aufgezeichneten Signaldaten (siehe [Signal Tracker](~/doc/signal-tracker/ueberblick.md)) halten wir aber für noch schützenswerter. Deshalb können Sie ein eigenes Passwort wählen, mit dem Ihre Signaldaten verschlüsselt werden.
 
 Anders als das Passwort für die Anmeldung an unseren Servern wird das Signaldatenpasswort nie an unsere Server gesendet. Ihre Signaldaten lassen sich daher auf keinem anderen Computer als Ihrem eigenen entschlüsseln. Wenn Sie mehrere Geräte verwenden, müssen Sie es auf jedem Gerät eingeben, auf dem Sie time cockpit verwenden. Wenn Sie den Silverlight-Web-Client verwenden, müssen Sie Ihre Signaldaten ebenfalls eingeben.
 

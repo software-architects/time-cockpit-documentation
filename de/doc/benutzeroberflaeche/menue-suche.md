@@ -37,4 +37,4 @@ Drücken Sie **Esc**, um die Suche zu schließen, ohne ein Ergebnis zu öffnen.
 - Prüfen Sie den angezeigten Menüpfad, wenn mehrere Ergebnisse ähnliche Namen haben.
 - Die Suchergebnisse berücksichtigen die Menüeinträge und Berechtigungen, die Ihrem Benutzerkonto zur Verfügung stehen.
 
-Die Menüsuche wurde mit dem [Release vom Juni 2026](/doc/release-notes/2026-06.html) eingeführt.
+Die Menüsuche wurde mit dem [Release vom Juni 2026](~/doc/release-notes/2026-06.md) eingeführt.

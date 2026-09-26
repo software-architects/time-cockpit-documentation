@@ -32,7 +32,7 @@ Wenn Sie Ihre Daten ohne Vorlage exportieren, werden alle Spalten Ihrer Liste ex
 
 ### Exportvorlage
 
-time cockpit sucht in der Excel-Vorlage nach einem benannten Bereich **TemplateRow**. Dieser Bereich kann [TCQL-Ausdrücke](/doc/tcql/expression-language.html) in eckigen Klammern enthalten (z. B. `[=Current.USR_ProjectCode]`). Auf die exportierten Objekte greifen Sie mit `Current` zu.
+time cockpit sucht in der Excel-Vorlage nach einem benannten Bereich **TemplateRow**. Dieser Bereich kann [TCQL-Ausdrücke](~/doc/tcql/ausdruckssprache.md) in eckigen Klammern enthalten (z. B. `[=Current.USR_ProjectCode]`). Auf die exportierten Objekte greifen Sie mit `Current` zu.
 
 > [!NOTE]
 > Mit **STRG + F3** öffnen Sie den **Namens-Manager** von Excel, um den benannten Bereich **TemplateRow** festzulegen.

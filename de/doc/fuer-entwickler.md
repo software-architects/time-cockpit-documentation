@@ -12,71 +12,71 @@ Willkommen in der Entwicklerdokumentation von time cockpit! Dieser Bereich enth�
 
 ### Neu in der Entwicklung mit time cockpit?
 
-1. **[Entwickler-FAQ](/doc/developer-faq.html)** - Häufige Fragen und kurze Antworten
-2. **[Datenmodell: Überblick](/doc/data-model/entity-relationships.html)** - Die Struktur der Entitäten verstehen
-3. **[Web API: Überblick](/doc/web-api/overview.html)** - Programmgesteuert auf time cockpit zugreifen
-4. **[TCQL: Überblick](/doc/tcql/overview.html)** - Die Abfragesprache lernen
+1. **[Entwickler-FAQ](~/doc/entwickler-faq.md)** - Häufige Fragen und kurze Antworten
+2. **[Datenmodell: Überblick](~/doc/datenmodell/entitaetsbeziehungen.md)** - Die Struktur der Entitäten verstehen
+3. **[Web API: Überblick](~/doc/web-api/ueberblick.md)** - Programmgesteuert auf time cockpit zugreifen
+4. **[TCQL: Überblick](~/doc/tcql/ueberblick.md)** - Die Abfragesprache lernen
 
 ### Beliebte Anwendungsfälle
 
-- [Budgetkontrolle umsetzen](/doc/use-cases/budgetary-control.html)
-- [Projektbudgets überwachen](/doc/developer-faq.html#how-can-i-analyze-project-budget-or-profitability-data)
-- [JIRA-Integration](/doc/developer-faq.html#how-do-i-access-time-cockpit-from-external-applications)
-- [Eigene Workflows automatisieren](/doc/developer-faq.html#how-do-i-implement-approval-or-notification-workflows)
+- [Budgetkontrolle umsetzen](~/doc/anwendungsfaelle/budgetkontrolle.md)
+- [Projektbudgets überwachen](~/doc/entwickler-faq.md#wie-werte-ich-projektbudgets-oder-rentabilität-aus)
+- [JIRA-Integration](~/doc/entwickler-faq.md#wie-greife-ich-aus-externen-anwendungen-auf-time-cockpit-zu)
+- [Eigene Workflows automatisieren](~/doc/entwickler-faq.md#wie-setze-ich-genehmigungs--oder-benachrichtigungsabläufe-um)
 
 ## 📊 Datenmodell
 
 Verstehen Sie die Datenstruktur und die Beziehungen in time cockpit.
 
 ### Grundkonzepte
-- **[Entitätsbeziehungen](/doc/data-model/entity-relationships.html)** - Visuelle ER-Diagramme für alle Bereiche
+- **[Entitätsbeziehungen](~/doc/datenmodell/entitaetsbeziehungen.md)** - Visuelle ER-Diagramme für alle Bereiche
   - Bereich Projekte & Rechnungslegung
   - Bereich Zeit & Anwesenheit  
   - Sicherheit & Benutzerverwaltung
   - Stammdaten & Konfiguration
 
-- **[Referenz der Standardentitäten](/doc/data-model/standard-entities.html)** - Vollständige Dokumentation der Entitäten
+- **[Referenz der Standardentitäten](~/doc/datenmodell/standardentitaeten.md)** - Vollständige Dokumentation der Entitäten
   - APP_Timesheet, APP_Project, APP_Task
   - Eigenschaften, Beziehungen, Berechtigungen
   - Beispiele für TCQL und Web API
 
-- **[Leitfaden zu Berechtigungen & Sicherheit](/doc/data-model/permissions-guide.html)** - Sicherheitsarchitektur
+- **[Leitfaden zu Berechtigungen & Sicherheit](~/doc/datenmodell/berechtigungen-und-sicherheit.md)** - Sicherheitsarchitektur
   - Rollenbasierte Zugriffskontrolle (RBAC)
   - Muster für Sicherheit auf Zeilenebene
   - Named Sets
   - Häufige Berechtigungsszenarien
 
 ### Anpassung
-- **[Anpassung des Datenmodells: Überblick](/doc/data-model-customization/overview.html)**
-- **[Eigene Entitäten anlegen](/doc/data-model-customization/entity.html)**
-- **[Eigene Listen](/doc/data-model-customization/list.html)**
-- **[Eigene Formulare](/doc/data-model-customization/form.html)**
-- **[Berechtigungen konfigurieren](/doc/data-model-customization/permission.html)**
-- **[Navigation anpassen](/doc/data-model-customization/navigation.html)**
-- **[Dashboards](/doc/data-model-customization/dashboard.html)**
-- **[Feature Flags](/doc/data-model-customization/feature-flags.html)**
+- **[Anpassung des Datenmodells: Überblick](~/doc/datenmodell-anpassung/ueberblick.md)**
+- **[Eigene Entitäten anlegen](~/doc/datenmodell-anpassung/entitaet.md)**
+- **[Eigene Listen](~/doc/datenmodell-anpassung/liste.md)**
+- **[Eigene Formulare](~/doc/datenmodell-anpassung/formular.md)**
+- **[Berechtigungen konfigurieren](~/doc/datenmodell-anpassung/berechtigung.md)**
+- **[Navigation anpassen](~/doc/datenmodell-anpassung/navigation.md)**
+- **[Dashboards](~/doc/datenmodell-anpassung/dashboard.md)**
+- **[Feature Flags](~/doc/datenmodell-anpassung/feature-flags.md)**
 
 ## 🔍 TCQL - Time Cockpit Query Language
 
 TCQL ist die ausdrucksbasierte Abfragesprache, mit der Sie auf Daten in time cockpit zugreifen und sie bearbeiten.
 
 ### Grundlegende Syntax
-- **[Überblick](/doc/tcql/overview.html)** - Einführung in TCQL
-- **[From-Klausel](/doc/tcql/from-clause.html)** - Auswahl der Datenquelle
-- **[Where-Klausel](/doc/tcql/where-clause.html)** - Daten filtern
-- **[Select-Klausel](/doc/tcql/select-clause.html)** - Projektionen und Aggregationen
-- **[Order-By-Klausel](/doc/tcql/order-by-clause.html)** - Ergebnisse sortieren
-- **[Ausdruckssprache](/doc/tcql/expression-language.html)** - Operatoren und Funktionen
+- **[Überblick](~/doc/tcql/ueberblick.md)** - Einführung in TCQL
+- **[From-Klausel](~/doc/tcql/from-klausel.md)** - Auswahl der Datenquelle
+- **[Where-Klausel](~/doc/tcql/where-klausel.md)** - Daten filtern
+- **[Select-Klausel](~/doc/tcql/select-klausel.md)** - Projektionen und Aggregationen
+- **[Order-By-Klausel](~/doc/tcql/order-by-klausel.md)** - Ergebnisse sortieren
+- **[Ausdruckssprache](~/doc/tcql/ausdruckssprache.md)** - Operatoren und Funktionen
 
 ### Spezielle Funktionen
-- **[Funktionen für Arbeitszeit & Feiertage](/doc/tcql/functions-for-working-time-and-holidays.html)**
+- **[Funktionen für Arbeitszeit & Feiertage](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md)**
   - `:GetWorkTime()` - Arbeitsstunden berechnen
   - `:GetWeeklyHoursOfWork()` - Sollstunden
   - `:BookingCompletionDateOfUser()` - Buchungsabschlussdatum
   - `:FirstOfMonth()`, `:LastOfMonth()` - Datumshilfen
 
 ### Fortgeschrittene Themen
-- **[TCQL AST API](/doc/tcql/tcql-ast-api.html)** - Abfragen programmgesteuert aufbauen
+- **[TCQL AST API](~/doc/tcql/tcql-ast-api.md)** - Abfragen programmgesteuert aufbauen
 
 ### Beispielabfragen
 
@@ -100,21 +100,21 @@ Where
 Select T
 ```
 
-Weitere Beispiele → [Entwickler-FAQ](/doc/developer-faq.html)
+Weitere Beispiele → [Entwickler-FAQ](~/doc/entwickler-faq.md)
 
 ## 🔌 Web API
 
 Greifen Sie über die REST/OData-API auf Daten in time cockpit zu.
 
 ### API-Dokumentation
-- **[Überblick](/doc/web-api/overview.html)** - API-Architektur
-- **[Authentifizierung](/doc/web-api/authentication.html)** - OAuth, Bearer-Tokens
-- **[OData-Endpunkt](/doc/web-api/odata.html)** - REST-CRUD-Operationen
-- **[Query-Endpunkt](/doc/web-api/query.html)** - TCQL über HTTP ausführen
-- **[ExecuteList-Endpunkt](/doc/web-api/executelist.html)** - Vordefinierte Listen ausführen
-- **[ExecuteAction-Endpunkt](/doc/web-api/executeaction.html)** - Aktionen auslösen
-- **[Reporting-Endpunkt](/doc/web-api/reporting.html)** - Berichte erzeugen
-- **[Beispielimplementierung](/doc/web-api/timecockpit-client.html)** - Client-Bibliothek
+- **[Überblick](~/doc/web-api/ueberblick.md)** - API-Architektur
+- **[Authentifizierung](~/doc/web-api/authentifizierung.md)** - OAuth, Bearer-Tokens
+- **[OData-Endpunkt](~/doc/web-api/odata-endpunkt.md)** - REST-CRUD-Operationen
+- **[Query-Endpunkt](~/doc/web-api/query-endpunkt.md)** - TCQL über HTTP ausführen
+- **[ExecuteList-Endpunkt](~/doc/web-api/executelist-endpunkt.md)** - Vordefinierte Listen ausführen
+- **[ExecuteAction-Endpunkt](~/doc/web-api/executeaction-endpunkt.md)** - Aktionen auslösen
+- **[Reporting-Endpunkt](~/doc/web-api/reporting-endpunkt.md)** - Berichte erzeugen
+- **[Beispielimplementierung](~/doc/web-api/timecockpit-client.md)** - Client-Bibliothek
 
 ### Kurze Beispiele
 
@@ -154,31 +154,31 @@ Content-Type: application/json
 }
 ```
 
-Weitere Beispiele → [Web-API-Dokumentation](/doc/web-api/overview.html)
+Weitere Beispiele → [Web-API-Dokumentation](~/doc/web-api/ueberblick.md)
 
 ## ⚙️ Scripting & Automatisierung
 
 Automatisieren Sie Abläufe und erweitern Sie die Funktionalität mit Python (IronPython).
 
 ### Grundkonzepte
-- **[Scripting: Überblick](/doc/scripting/overview.html)** - Einführung in das Scripting
-- **[Aktionen](/doc/scripting/actions.html)** - Vom Benutzer ausgelöste Operationen
-- **[Trigger](/doc/scripting/triggers.html)** - Ereignisgesteuerte Automatisierung
-- **[Skripte automatisieren](/doc/scripting/automating-scripts.html)** - Zeitgesteuerte Ausführung
+- **[Scripting: Überblick](~/doc/scripting/ueberblick.md)** - Einführung in das Scripting
+- **[Aktionen](~/doc/scripting/aktionen.md)** - Vom Benutzer ausgelöste Operationen
+- **[Trigger](~/doc/scripting/trigger.md)** - Ereignisgesteuerte Automatisierung
+- **[Skripte automatisieren](~/doc/scripting/skripte-automatisieren.md)** - Zeitgesteuerte Ausführung
 
 ### Häufige Szenarien
 
 **Anleitungen:**
-- [Eine Dateieigenschaft hinzufügen](/doc/scripting/add-file-property.html)
-- [Feiertage per Skript hinzufügen](/doc/scripting/add-holidays.html)
-- [Daten nach Excel exportieren](/doc/scripting/export-data-to-excel.html)
-- [Daten aus CSV importieren](/doc/scripting/import-data-from-csv.html)
-- [Aus SQL Server importieren](/doc/scripting/import-data-from-sql-server.html)
-- [Das Datenmodell ändern](/doc/scripting/modify-data-model.html)
-- [E-Mails bei Budgetüberschreitung senden](/doc/scripting/send-mail-when-over-budget.html)
-- [.NET-Framework-Klassen verwenden](/doc/scripting/use-dot-net-classes-in-scripts.html)
-- [Mit C# auf die API zugreifen](/doc/scripting/use-c-sharp-to-access-time-cockpit-api.html)
-- [XML in Skripten verwenden](/doc/scripting/use-xml-in-scripts.html)
+- [Eine Dateieigenschaft hinzufügen](~/doc/scripting/dateieigenschaft-hinzufuegen.md)
+- [Feiertage per Skript hinzufügen](~/doc/scripting/feiertage-per-skript-hinzufuegen.md)
+- [Daten nach Excel exportieren](~/doc/scripting/daten-nach-excel-exportieren.md)
+- [Daten aus CSV importieren](~/doc/scripting/daten-aus-csv-importieren.md)
+- [Aus SQL Server importieren](~/doc/scripting/daten-aus-sql-server-importieren.md)
+- [Das Datenmodell ändern](~/doc/scripting/datenmodell-aendern.md)
+- [E-Mails bei Budgetüberschreitung senden](~/doc/scripting/e-mail-bei-budgetueberschreitung-senden.md)
+- [.NET-Framework-Klassen verwenden](~/doc/scripting/dotnet-framework-klassen-in-skripten-verwenden.md)
+- [Mit C# auf die API zugreifen](~/doc/scripting/mit-csharp-auf-die-api-zugreifen.md)
+- [XML in Skripten verwenden](~/doc/scripting/xml-in-skripten-verwenden.md)
 
 ### Beispiel: Urlaub automatisch genehmigen
 
@@ -194,22 +194,22 @@ def approveVacationTrigger(actionContext):
         dc.SaveObject(vacation)
 ```
 
-Weitere Beispiele → [Scripting-Anleitungen](/doc/scripting/overview.html)
+Weitere Beispiele → [Scripting-Anleitungen](~/doc/scripting/ueberblick.md)
 
 ## 📈 Berichte
 
 Erstellen Sie eigene Berichte und Datenvisualisierungen.
 
-- **[Überblick](/doc/reporting/overview.html)** - Architektur der Berichte
-- **[Standard-Druckansicht](/doc/reporting/standard-print-view.html)** - Integrierte Vorlagen
-- **[Eigene Berichte](/doc/reporting/custom-reports.html)** - Selbst erstellen
-- **[Integrierte Berichte](/doc/reporting/built-in-reports.html)** - Verfügbare Berichte
+- **[Überblick](~/doc/berichte/ueberblick.md)** - Architektur der Berichte
+- **[Standard-Druckansicht](~/doc/berichte/standard-druckansicht.md)** - Integrierte Vorlagen
+- **[Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md)** - Selbst erstellen
+- **[Integrierte Berichte](~/doc/berichte/integrierte-berichte.md)** - Verfügbare Berichte
 
 ## 💡 Anwendungsfälle & Beispiele
 
 Umsetzungsbeispiele aus der Praxis:
 
-- **[Budgetkontrolle](/doc/use-cases/budgetary-control.html)** - Überwachung von Projektbudgets mit berechneten Kennzahlen
+- **[Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)** - Überwachung von Projektbudgets mit berechneten Kennzahlen
   - Gebuchte vs. budgetierte Stunden
   - Analyse von Umsatz vs. Kosten
   - Effektive Stundensätze
@@ -224,28 +224,28 @@ Weitere Anwendungsfälle folgen in Kürze!
 **1. Externes Projektmanagement (JIRA, Azure DevOps)**
 - Projekte/Tätigkeiten nach time cockpit synchronisieren
 - Zeitbuchungen an das externe System zurückspielen
-→ [Beispiel für eine JIRA-Integration](/doc/developer-faq.html#how-do-i-access-time-cockpit-from-external-applications)
+→ [Beispiel für eine JIRA-Integration](~/doc/entwickler-faq.md#wie-greife-ich-aus-externen-anwendungen-auf-time-cockpit-zu)
 
 **2. Buchhaltungssysteme (DATEV, SAP)**
 - Rechnungen und verrechenbare Stunden exportieren
 - Stammdaten zu Kunden/Projekten importieren
-→ [Datenexport](/doc/data-exchange/export.html)
+→ [Datenexport](~/doc/datenaustausch/export.md)
 
 **3. HR-Systeme**
 - Mitarbeiterstammdaten synchronisieren
 - Arbeitszeit für die Lohnverrechnung exportieren
-→ [Datenimport/-export](/doc/data-exchange/import.html)
+→ [Datenimport/-export](~/doc/datenaustausch/import.md)
 
 **4. Eigene Dashboards (Power BI, Tableau)**
 - Zeitbuchungsdaten über OData abfragen
 - Echtzeit-Dashboards erstellen
-→ [OData-Endpunkt](/doc/web-api/odata.html)
+→ [OData-Endpunkt](~/doc/web-api/odata-endpunkt.md)
 
 ## 🔐 Sicherheit für Entwickler
 
-- **[Leitfaden zu Berechtigungen](/doc/data-model/permissions-guide.html)** - Eigene Sicherheitslogik umsetzen
-- **[Migration der Standardberechtigungen](/doc/migration-guides/default-permissions.html)** - Das neue Sicherheitsmodell aktivieren
-- **[AAD-Integration](/doc/enterprise/aad.html)** - Authentifizierung für Unternehmen
+- **[Leitfaden zu Berechtigungen](~/doc/datenmodell/berechtigungen-und-sicherheit.md)** - Eigene Sicherheitslogik umsetzen
+- **[Migration der Standardberechtigungen](~/doc/migrationsleitfaeden/standardberechtigungen.md)** - Das neue Sicherheitsmodell aktivieren
+- **[AAD-Integration](~/doc/enterprise/azure-active-directory.md)** - Authentifizierung für Unternehmen
 
 ## 🛠️ Entwicklungswerkzeuge
 
@@ -266,7 +266,7 @@ Weitere Anwendungsfälle folgen in Kürze!
 ## 📞 Hilfe erhalten
 
 ### Ressourcen
-- **[Entwickler-FAQ](/doc/developer-faq.html)** - Kurze Antworten auf häufige Fragen
+- **[Entwickler-FAQ](~/doc/entwickler-faq.md)** - Kurze Antworten auf häufige Fragen
 - **Release Notes** - Bleiben Sie über Änderungen an der API auf dem Laufenden
 - **Support** - Wenden Sie sich für technische Unterstützung an den time cockpit Support
 

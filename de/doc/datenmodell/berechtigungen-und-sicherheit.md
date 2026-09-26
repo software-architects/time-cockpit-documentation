@@ -544,6 +544,6 @@ Stellen Sie sicher, dass Benutzer nur Daten ihrer eigenen Firma sehen:
 
 - [Referenz der Standardentitäten](~/doc/datenmodell/standardentitaeten.md) - Berechtigungen einzelner Entitäten
 - [Dokumentation der Named Sets](#referenz-der-named-sets)
-- [TCQL-Ausdruckssprache](/doc/tcql/expression-language.html)
+- [TCQL-Ausdruckssprache](~/doc/tcql/ausdruckssprache.md)
 - [Migrationsleitfaden für Standardberechtigungen](~/doc/migrationsleitfaeden/standardberechtigungen.md)
-- [Anpassung des Datenmodells - Berechtigungen](/doc/data-model-customization/permission.html)
+- [Anpassung des Datenmodells - Berechtigungen](~/doc/datenmodell-anpassung/berechtigung.md)

@@ -243,9 +243,9 @@ time cockpit zeigt danach keine Termine und E-Mails mehr an.
 - [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md) - Wiederkehrende Einträge automatisieren
 
 ### Weitere Integrationen
-- [Web API im Überblick](/doc/web-api/overview.html) - Eigene Integrationen entwickeln
-- [Datenimport](/doc/data-exchange/import.html) - Aus anderen Systemen importieren
-- [Datenexport](/doc/data-exchange/export.html) - In andere Werkzeuge exportieren
+- [Web API im Überblick](~/doc/web-api/ueberblick.md) - Eigene Integrationen entwickeln
+- [Datenimport](~/doc/datenaustausch/import.md) - Aus anderen Systemen importieren
+- [Datenexport](~/doc/datenaustausch/export.md) - In andere Werkzeuge exportieren
 
 ### Mobil und Zugriff
 - [Mobile Nutzung](~/doc/erste-schritte/mobile-zeiterfassung.md) - time cockpit auf Smartphones und Tablets verwenden

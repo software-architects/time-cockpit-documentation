@@ -109,7 +109,7 @@ print "Done!"
 
 ## Skript ausführen
 
-Sie können das Importskript interaktiv in time cockpit ausführen. Eine weitere Möglichkeit ist das Kommandozeilenwerkzeug [ExecuteScript](/doc/scripting/automating-scripts.html) von time cockpit. Damit können Sie den Import z. B. mit Ihrem bevorzugten Scheduler regelmäßig ausführen.
+Sie können das Importskript interaktiv in time cockpit ausführen. Eine weitere Möglichkeit ist das Kommandozeilenwerkzeug [ExecuteScript](~/doc/scripting/skripte-automatisieren.md) von time cockpit. Damit können Sie den Import z. B. mit Ihrem bevorzugten Scheduler regelmäßig ausführen.
 
 > [!NOTE]
 > Wir empfehlen, die Schalter -T und -s zu verwenden. -T bedeutet, dass das Skript innerhalb einer Datenbanktransaktion ausgeführt wird. Tritt ein Fehler auf, werden alle Änderungen an der Datenbank rückgängig gemacht. -s bedeutet, dass das Skript die Serverdatenbank von time cockpit statt der Client-Datenbank verwendet. Führen Sie das Skript nur dann ohne time cockpit aus, wenn Sie es ausdrücklich offline ausführen können möchten.

@@ -213,7 +213,7 @@ Wenn Sie in time cockpit eine strukturiertere Verrechnung mit mehreren Ansprechp
 - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
 - [Kunden, Projekte und Tätigkeiten](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
 - [Datenexport](~/doc/datenaustausch/export.md)
-- [Web API: Überblick](/doc/web-api/overview.html)
+- [Web API: Überblick](~/doc/web-api/ueberblick.md)
 
 **Support:**
 - **E-Mail:** support@timecockpit.com

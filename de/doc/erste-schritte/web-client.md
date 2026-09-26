@@ -18,7 +18,7 @@ Wenn Sie gerade erst mit time cockpit beginnen, empfehlen wir den Web-Client. Er
 - Mit dem Web-Client können Sie keine Computersignale aufzeichnen. Wenn Sie jedoch den Vollclient installiert haben, um Signale aufzuzeichnen, können Sie die aufgezeichneten Signale auch im Web-Client ansehen. Derzeit arbeiten wir an einer schlanken Version des Signal Trackers, die ohne den WPF-Vollclient funktioniert.
 - Das Datenmodell lässt sich im Web-Client nicht ändern. Alle Änderungen, die Sie mit dem Vollclient vornehmen, stehen aber auch im Web-Client zur Verfügung.
 
-Wenn Sie Fragen zu Signal Trackern oder zu den Anpassungsmöglichkeiten von time cockpit haben, schreiben Sie uns an [support@timecockpit.com](mailto:support@timecockpit.com) oder lesen Sie [Anpassung des Datenmodells](/doc/data-model-customization/overview.html).
+Wenn Sie Fragen zu Signal Trackern oder zu den Anpassungsmöglichkeiten von time cockpit haben, schreiben Sie uns an [support@timecockpit.com](mailto:support@timecockpit.com) oder lesen Sie [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md).
 
 
 ## time cockpit als Progressive Web App (PWA) verwenden

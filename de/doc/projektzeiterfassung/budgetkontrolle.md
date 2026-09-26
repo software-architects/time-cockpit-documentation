@@ -365,7 +365,7 @@ Schränken Sie mit Berechtigungen die Zeiterfassung ein, wenn Budgets überschri
 - Speichern blockieren, wenn das Tätigkeitsbudget überschritten ist
 - Freigabe durch die Führungskraft bei berechtigten Überschreitungen verlangen
 
-**Umsetzung**: Erfordert eine [Anpassung des Datenmodells](/doc/data-model-customization/entity.html)
+**Umsetzung**: Erfordert eine [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/entitaet.md)
 
 ### Bewährter Ablauf
 
@@ -476,7 +476,7 @@ Die Listen zur Budgetkontrolle berücksichtigen rollenbasierte Berechtigungen:
 
 Normale Benutzer (Mitarbeiter) sehen diese Listen nicht in der Navigation.
 
-Siehe: [Leitfaden zu Berechtigungen](/doc/data-model/permissions-guide.html)
+Siehe: [Leitfaden zu Berechtigungen](~/doc/datenmodell/berechtigungen-und-sicherheit.md)
 
 ## Verwandte Funktionen
 
@@ -490,24 +490,24 @@ Siehe: [Leitfaden zu Berechtigungen](/doc/data-model/permissions-guide.html)
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md) - Rechnungsfelder verstehen
 
 ### Berichte
-- [Integrierte Berichte](/doc/reporting/built-in-reports.html) - Standardberichte für Projekte
-- [Eigene Berichte](/doc/reporting/custom-reports.html) - Maßgeschneiderte Budgetberichte erstellen
+- [Integrierte Berichte](~/doc/berichte/integrierte-berichte.md) - Standardberichte für Projekte
+- [Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md) - Maßgeschneiderte Budgetberichte erstellen
 
 ### Fortgeschritten
-- [Anwendungsfall Budgetkontrolle](/doc/use-cases/budgetary-control.html) - Technischer Einblick in die Berechnungslogik
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html) - Eigene Budgetkontrollen aufbauen
-- [Scripting im Überblick](/doc/scripting/overview.html) - Budgetbenachrichtigungen automatisieren
+- [Anwendungsfall Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md) - Technischer Einblick in die Berechnungslogik
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md) - Eigene Budgetkontrollen aufbauen
+- [Scripting im Überblick](~/doc/scripting/ueberblick.md) - Budgetbenachrichtigungen automatisieren
 
 ## Siehe auch
 
 **FAQs:**
-- [Projektleiter-FAQ](/doc/project-manager-faq.html) - Rollenspezifische Fragen zur Budgetkontrolle
-- [Abrechnungsadministrator-FAQ](/doc/billing-admin-faq.html) - Fragen zu Umsatz und Rechnungslegung
+- [Projektleiter-FAQ](~/doc/projektleiter-faq.md) - Rollenspezifische Fragen zur Budgetkontrolle
+- [Abrechnungsadministrator-FAQ](~/doc/abrechnungs-faq.md) - Fragen zu Umsatz und Rechnungslegung
 
 **API und Integration:**
-- [Web API im Überblick](/doc/web-api/overview.html) - Programmgesteuert auf Budgetdaten zugreifen
-- [TCQL-Abfragesprache](/doc/tcql/overview.html) - Budgetdaten abfragen
+- [Web API im Überblick](~/doc/web-api/ueberblick.md) - Programmgesteuert auf Budgetdaten zugreifen
+- [TCQL-Abfragesprache](~/doc/tcql/ueberblick.md) - Budgetdaten abfragen
 
 ---
 
-*Unterstützung bei der Budgetkontrolle erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) oder in der [Projektleiter-FAQ](/doc/project-manager-faq.html).*
+*Unterstützung bei der Budgetkontrolle erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) oder in der [Projektleiter-FAQ](~/doc/projektleiter-faq.md).*

@@ -43,4 +43,4 @@ Im Standarddatenmodell zeigt time cockpit im Stundenzettel an, ob ein Mitarbeite
 ![Stundenzettel](/doc/employee-time-tracking/images/wc-work-from-home-time-report-pdf.png "Stundenzettel")
 
 > [!NOTE] 
-> Wenn Sie die Homeoffice-Informationen Ihrer Mitarbeiter auf andere Weise auswerten möchten, sehen Sie sich die [Anpassungsmöglichkeiten](/doc/data-model-customization/overview.html) von time cockpit an oder schreiben Sie uns an support@timecockpit.com.
+> Wenn Sie die Homeoffice-Informationen Ihrer Mitarbeiter auf andere Weise auswerten möchten, sehen Sie sich die [Anpassungsmöglichkeiten](~/doc/datenmodell-anpassung/ueberblick.md) von time cockpit an oder schreiben Sie uns an support@timecockpit.com.

@@ -329,7 +329,7 @@ Legen Sie eine eigene Aktion „Approve Timesheet“ an:
 - Benachrichtigt den Mitarbeiter
 - Die Einträge können danach verrechnet werden
 
-**Siehe:** [Scripting - Aktionen](/doc/scripting/actions.html), [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
+**Siehe:** [Scripting - Aktionen](~/doc/scripting/aktionen.md), [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)
 
 ### Anwendungsfälle für die Genehmigung von Zeitbuchungen
 
@@ -522,21 +522,21 @@ Bei Vollkosten von 50 €/Stunde = **1.500–2.000 € Ersparnis pro Prüfung**
 - [Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md) - Dashboards mit Genehmigungskennzahlen
 
 ### Fortgeschritten
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html) - Eigene Felder für die Genehmigung von Zeitbuchungen
-- [Scripting - Aktionen](/doc/scripting/actions.html) - Eigene Genehmigungsaktionen und Automatisierung
-- [Scripting - Trigger](/doc/scripting/triggers.html) - Automatische Benachrichtigungen zu Genehmigungen
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md) - Eigene Felder für die Genehmigung von Zeitbuchungen
+- [Scripting - Aktionen](~/doc/scripting/aktionen.md) - Eigene Genehmigungsaktionen und Automatisierung
+- [Scripting - Trigger](~/doc/scripting/trigger.md) - Automatische Benachrichtigungen zu Genehmigungen
 
 ## Siehe auch
 
 **FAQs:**
-- [Abteilungsleiter-FAQ](/doc/department-lead-faq.html) - Rollenspezifische Fragen zu Genehmigungen
-- [HR-Administrator-FAQ](/doc/hr-administrator-faq.html) - Fragen zu Genehmigungen und Richtlinien aus HR-Sicht
+- [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md) - Rollenspezifische Fragen zu Genehmigungen
+- [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md) - Fragen zu Genehmigungen und Richtlinien aus HR-Sicht
 - [Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md) - Fragen zu Urlaubsanträgen
 
 **API und Automatisierung:**
-- [Web API – Überblick](/doc/web-api/overview.html) - Genehmigungsworkflows per Programm
-- [Scripting – Überblick](/doc/scripting/overview.html) - Automatisierung von Workflows
+- [Web API – Überblick](~/doc/web-api/ueberblick.md) - Genehmigungsworkflows per Programm
+- [Scripting – Überblick](~/doc/scripting/ueberblick.md) - Automatisierung von Workflows
 
 ---
 
-*Unterstützung zu Genehmigungsworkflows erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) sowie in der [Abteilungsleiter-FAQ](/doc/department-lead-faq.html) und der [HR-Administrator-FAQ](/doc/hr-administrator-faq.html).*
+*Unterstützung zu Genehmigungsworkflows erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) sowie in der [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md) und der [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md).*

@@ -281,4 +281,4 @@ def actionSample(actionContext):
 ```
 
 > [!NOTE]
-> Unter [Aktionen](/doc/scripting/actions.html) erfahren Sie, wie time cockpit Aktionen umgesetzt werden können.
+> Unter [Aktionen](~/doc/scripting/aktionen.md) erfahren Sie, wie time cockpit Aktionen umgesetzt werden können.

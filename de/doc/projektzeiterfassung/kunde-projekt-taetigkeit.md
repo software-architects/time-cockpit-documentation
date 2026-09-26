@@ -11,7 +11,7 @@ en_page: doc/project-time-tracking/customer-project-task.md
 Diese Seite beschreibt die Standardhierarchie aus Kunde, Projekt und Tätigkeit, die Teil des Standarddatenmodells von time cockpit ist.
 
 > [!NOTE]
-> Sie können Entitäten des Standarddatenmodells erweitern, aber nicht löschen. Das ist notwendig, damit Upgrades des Standarddatenmodells möglich sind. Ihre Änderungen bleiben bei Upgrades unverändert erhalten. <br/><br/>Standardlisten und -formulare können Sie nicht direkt ändern. Wenn Sie eigene Listen und Formulare anlegen möchten, kopieren Sie die entsprechenden Definitionen im [Modul Anpassung](/doc/data-model-customization/overview.html), passen Sie die Kopie an und verknüpfen Sie sie in Ihrer Navigation. Änderungen an Standardlisten und -formularen werden nicht automatisch in Ihre Kopien übernommen.
+> Sie können Entitäten des Standarddatenmodells erweitern, aber nicht löschen. Das ist notwendig, damit Upgrades des Standarddatenmodells möglich sind. Ihre Änderungen bleiben bei Upgrades unverändert erhalten. <br/><br/>Standardlisten und -formulare können Sie nicht direkt ändern. Wenn Sie eigene Listen und Formulare anlegen möchten, kopieren Sie die entsprechenden Definitionen im [Modul Anpassungen](~/doc/datenmodell-anpassung/ueberblick.md), passen Sie die Kopie an und verknüpfen Sie sie in Ihrer Navigation. Änderungen an Standardlisten und -formularen werden nicht automatisch in Ihre Kopien übernommen.
 
 ## Kunde
 
@@ -47,7 +47,7 @@ Tätigkeiten können als nicht verrechenbar markiert werden (`APP_NoBilling`).
 
 Seit time cockpit Version 1.7 können Sie globale Tätigkeiten aktivieren. Globale Tätigkeiten sind keinem bestimmten Projekt zugeordnet, sondern stehen für alle Projekte zur Verfügung, zum Beispiel Reisen, Vertrieb oder Support. Um globale Tätigkeiten in Versionen größer als 1.7 zu aktivieren, müssen Sie die Beziehung zwischen Tätigkeit und Projekt als optional ("nullable") konfigurieren. Globale Tätigkeiten sind standardmäßig nicht aktiviert. Wenn Sie diese Funktion nutzen möchten, gehen Sie wie folgt vor:
 
-- Wechseln Sie in das [Modul Anpassung](/doc/data-model-customization/overview.html).
+- Wechseln Sie in das [Modul Anpassungen](~/doc/datenmodell-anpassung/ueberblick.md).
 - Wechseln Sie zu Server.
 - Suchen Sie im Entitätenbaum die Entität `APP_Task`. Klicken Sie mit der rechten Maustaste auf den Knoten und klicken Sie auf `Edit Entity`.
 - Wechseln Sie zu den Validierungsregeln.

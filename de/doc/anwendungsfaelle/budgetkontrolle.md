@@ -350,15 +350,15 @@ Nicht direkt – es handelt sich um **zur Laufzeit berechnete Listen**, nicht um
 
 ## Verwandte Dokumentation
 
-- [Referenz der Entität APP_Project](/doc/data-model/standard-entities.html#app_project)
-- [Referenz der Entität APP_Timesheet](/doc/data-model/standard-entities.html#app_timesheet)
-- [Referenz der Entität APP_Invoice](/doc/data-model/standard-entities.html)
-- [Leitfaden zu eigenen Listen](/doc/data-model-customization/list.html)
-- [TCQL im Überblick](/doc/tcql/overview.html)
-- [Scripting im Überblick](/doc/scripting/overview.html)
+- [Referenz der Entität APP_Project](~/doc/datenmodell/standardentitaeten.md#app_project)
+- [Referenz der Entität APP_Timesheet](~/doc/datenmodell/standardentitaeten.md#app_timesheet)
+- [Referenz der Entität APP_Invoice](~/doc/datenmodell/standardentitaeten.md)
+- [Leitfaden zu eigenen Listen](~/doc/datenmodell-anpassung/liste.md)
+- [TCQL im Überblick](~/doc/tcql/ueberblick.md)
+- [Scripting im Überblick](~/doc/scripting/ueberblick.md)
 
 ## Siehe auch
 
 - **Ähnlicher Anwendungsfall**: [Soll-Ist-Vergleich](https://web.timecockpit.com/app/lists/APP_TargetActualHoursComparisonList)
 - **Verwandte Liste**: [Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList)
-- **Alternative über die API**: [Beispiele für den Query-Endpunkt](/doc/web-api/query.html)
+- **Alternative über die API**: [Beispiele für den Query-Endpunkt](~/doc/web-api/query-endpunkt.md)

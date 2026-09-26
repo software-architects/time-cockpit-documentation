@@ -85,7 +85,7 @@ Im Bereich Kennzahl legen Sie fest, welche Kennzahl im Balkendiagramm verwendet 
 
 ### Ausdruck für die Kennzahl
 
-Geben Sie einen [Ausdruck](/doc/tcql/expression-language.html) für die Kennzahl ein, aus der das Balkendiagramm erzeugt wird. Mit `Current` greifen Sie auf die angezeigte Zeitbuchung zu. Sie können auf alle Eigenschaften und Beziehungen von `APP_Timesheet` zugreifen.
+Geben Sie einen [Ausdruck](~/doc/tcql/ausdruckssprache.md) für die Kennzahl ein, aus der das Balkendiagramm erzeugt wird. Mit `Current` greifen Sie auf die angezeigte Zeitbuchung zu. Sie können auf alle Eigenschaften und Beziehungen von `APP_Timesheet` zugreifen.
 
 Die Kennzahl wird für alle eindeutigen Werte des Gruppierungsausdrucks (siehe oben) aggregiert. In unserem Beispiel (siehe Screenshots) werden die Zeitbuchungen in zwei Gruppen eingeteilt: verrechenbare und nicht verrechenbare Einträge. Als Kennzahl ist `APP_DurationInHours` angegeben. Sie erhalten daher im Diagramm zwei Balken, die die Anzahl der verrechenbaren und der nicht verrechenbaren Stunden zeigen.
 

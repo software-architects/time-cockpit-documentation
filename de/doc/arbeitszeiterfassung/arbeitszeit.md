@@ -31,7 +31,7 @@ Die Soll-Arbeitszeit wird pro Wochentag gespeichert. Sie können die Wochenarbei
 > [!WARNING]
 > Bitte beachten Sie, dass sich die Gültigkeitszeiträume **nicht überschneiden dürfen**. Es ist nicht erlaubt, 38,5 Stunden Wochenarbeitszeit für 1.1.2013 bis 31.12.2013 und 40 Stunden Wochenarbeitszeit für 1.12.2013 bis 31.12.2014 anzugeben. Für Dezember 2013 wären beide Werte gültig, und time cockpit kann die Soll-Arbeitszeit nicht korrekt berechnen.
 
-In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Soll-Arbeitszeit eines Mitarbeiters mit der Funktion [AverageHoursOfWorkPerDay](/doc/tcql/functions-for-working-time-and-holidays.html#averagehoursofworkperday) berechnen.
+In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie die Soll-Arbeitszeit eines Mitarbeiters mit der Funktion [AverageHoursOfWorkPerDay](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#averagehoursofworkperday) berechnen.
 
 ## Urlaubsanspruch
 
@@ -53,7 +53,7 @@ Den Urlaubsanspruch verwalten Sie unter [Benutzer -> Urlaubsanspruch](https://we
 Über den Menüpunkt [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation) verwalten Sie die Urlaube Ihrer Mitarbeiter. Die Berechnung des Resturlaubs basiert auf Wochen. Mitarbeiter haben Anspruch auf eine bestimmte Anzahl von Urlaubswochen. In vielen Fällen ist es nicht möglich, Urlaub in Tagen statt in Wochen zu berechnen, weil Teilzeitbeschäftigte an jedem Tag unterschiedlich viele Stunden arbeiten oder weil sich die Wochenarbeitszeit ändert. Für die Berechnung des Resturlaubs gelten folgende Regeln:
 
 Jeder Urlaubsverbrauch wird automatisch in Wochen umgerechnet. Dabei werden die Sollstunden jedes Tages berücksichtigt (siehe Wochenarbeitszeit). Auch nicht ganztägige Urlaube werden in Wochen umgerechnet.
-Gesetzliche Feiertage während eines Urlaubs verringern den Resturlaub nicht. Wie Sie gesetzliche Feiertage automatisch mit einem Skript anlegen, lesen Sie unter [Feiertage mit Skripten hinzufügen](/doc/scripting/add-holidays.html).
+Gesetzliche Feiertage während eines Urlaubs verringern den Resturlaub nicht. Wie Sie gesetzliche Feiertage automatisch mit einem Skript anlegen, lesen Sie unter [Feiertage mit Skripten hinzufügen](~/doc/scripting/feiertage-per-skript-hinzufuegen.md).
 Urlaube, die als Sonderurlaub markiert sind, verringern den Resturlaub nicht. Mit Sonderurlaub können Sie zusätzlichen bezahlten Urlaub aus besonderen Anlässen wie Hochzeit oder Umzug gewähren.
 
 > [!NOTE]
@@ -66,7 +66,7 @@ Für die Abfrage von Urlaubsdaten stehen Ihnen in time cockpit zwei vordefiniert
 - Die Liste [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation) zeigt für einen Mitarbeiter den Verlauf von Urlaubsanspruch, Urlaubsverbrauch und Resturlaub.
 - Die Liste [Benutzer -> Resturlaub](https://web.timecockpit.com/app/lists/APP_VacationPerEffectiveDateList) zeigt alle Mitarbeiter mit ihrem Resturlaub zu einem Stichtag.
 
-In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie den Resturlaub eines Mitarbeiters mit der Funktion [RemainingVacationWeeks](/doc/tcql/functions-for-working-time-and-holidays.html#remainingvacationweeks) berechnen.
+In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie den Resturlaub eines Mitarbeiters mit der Funktion [RemainingVacationWeeks](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#remainingvacationweeks) berechnen.
 
 ## Gesetzliche Feiertage
 
@@ -93,7 +93,7 @@ Die Liste **Benutzer -> Soll-Ist-Vergleich** zeigt Ihnen Soll- und Ist-Arbeitsze
 - Hat ein Mitarbeiter mehr Stunden gearbeitet als die berechneten Sollstunden inkl. inkludierter Überstunden, wird die Abweichung zwischen Iststunden und Sollstunden inkl. inkludierter Überstunden angezeigt (positiver Wert).
 - Liegen die Iststunden zwischen den berechneten Sollstunden exkl. inkludierter Überstunden und den Sollstunden inkl. inkludierter Überstunden, beträgt die Abweichung 0.
 
-In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Soll-Arbeitszeit eines Mitarbeiters für einen bestimmten Zeitraum mit der Funktion [PlannedHoursOfWork](/doc/tcql/functions-for-working-time-and-holidays.html#plannedhoursofwork) berechnen.
+In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie die Soll-Arbeitszeit eines Mitarbeiters für einen bestimmten Zeitraum mit der Funktion [PlannedHoursOfWork](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#plannedhoursofwork) berechnen.
 
 ## Ist-Arbeitszeit
 
@@ -102,7 +102,7 @@ Die Ist-Arbeitszeit wird berechnet, indem alle Zeitbuchungen summiert werden. Ü
 > [!NOTE]
 > time cockpit bietet keine Funktionen, um Arbeitszeitgewichtungen automatisch auszuwerten. Sie müssen die Gewichtung für jede Zeitbuchung manuell angeben. Ihre konkreten Berechnungsregeln für Arbeitszeitgewichtungen können Sie in Skripten und Aktionen abbilden. Bei Fragen wenden Sie sich bitte an support@timecockpit.com.
 
-In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Ist-Arbeitszeit eines Mitarbeiters mit der Funktion [ActualHoursOfWork](/doc/tcql/functions-for-working-time-and-holidays.html#actualhoursofwork) abfragen.
+In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie die Ist-Arbeitszeit eines Mitarbeiters mit der Funktion [ActualHoursOfWork](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#actualhoursofwork) abfragen.
 
 ## Überstundenberechnung
 
@@ -115,7 +115,7 @@ Bei der Berechnung der Überstunden werden die Arbeitszeitgewichtung und die [in
 > [!NOTE]
 > Bitte beachten Sie, dass die Korrektur des Arbeitszeitsaldos den Überstundenstand zum angegebenen Datum darstellt. Wenn Sie 100 eingeben, bedeutet das, dass der Mitarbeiter zum angegebenen Datum 100 Überstunden hat. Es bedeutet nicht, dass die Überstunden um 100 Stunden verringert oder erhöht werden.
 
-In [TCQL-Abfragen](/doc/tcql/overview.html) können Sie die Überstunden mit der Funktion [Overtime](/doc/tcql/functions-for-working-time-and-holidays.html#overtime) berechnen.
+In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie die Überstunden mit der Funktion [Overtime](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#overtime) berechnen.
 
 > [!WARNING]
 > Bitte beachten Sie, dass Eintritts- und Austrittsdatum bei der Berechnung nicht berücksichtigt werden. Es wird nur der Gültigkeitszeitraum der Wochenarbeitszeit verwendet.

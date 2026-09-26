@@ -27,4 +27,4 @@ Das folgende Beispiel zeigt den Zeiterfassungskalender mit aktiviertem dunklen M
 > [!TIP]
 > Der dunkle Modus ändert nur das Erscheinungsbild. Ihre Kalenderdaten, Listenkonfiguration, Dashboards und Berechtigungen bleiben unverändert.
 
-Der dunkle Modus wurde mit dem [Release vom Juni 2026](/doc/release-notes/2026-06.html) eingeführt.
+Der dunkle Modus wurde mit dem [Release vom Juni 2026](~/doc/release-notes/2026-06.md) eingeführt.

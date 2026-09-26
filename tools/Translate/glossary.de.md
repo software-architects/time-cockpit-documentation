@@ -9,7 +9,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | English | German | Notes |
 |---|---|---|
 | time cockpit | time cockpit | unchanged, lowercase; "Time Cockpit" only where the English source capitalizes at sentence start |
-| Time Sheet Calendar | Zeiterfassungskalender | module and list name |
+| Time Sheet Calendar | Zeiterfassungskalender | module name in the full client; the product also says "Zeitbuchungskalender" (ribbon, options, settings) and the web client mostly "Kalender"; the docs keep Zeiterfassungskalender |
 | timesheet, time sheet entry, timesheet entry | Zeitbuchung (pl. Zeitbuchungen) | "Zeiterfassung" for the activity, "Zeitbuchung" for the record |
 | Timesheets (list) | Zeitbuchungen | |
 | Timesheet module | Modul Zeiterfassung | navigation: **Zeiterfassung** |
@@ -49,7 +49,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | formatting profile | Formatprofil | |
 | timesheet template, Time Sheet Templates | Musterbuchung, Musterbuchungen | product UI label |
 | share (timesheet entries), timesheet suggestion | teilen, Buchungsvorschlag | the UI label "Share -> Anteil" below is the financial share, not this |
-| Customization module | Modul Anpassung | navigation: **Anpassung** |
+| Customization module | Modul Anpassungen | navigation: **Anpassungen** (web menu and data model) |
 | list, form | Liste, Formular | never "EntityView" |
 | list profile | Listenprofil | |
 | named set | Named Set | unchanged |
@@ -60,7 +60,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | role | Rolle | role names (Time Tracking User, Project Manager, Project Controller, Billing Admin, HR Administrator, Department Lead, Account Admin) stay English in code and lists; in running text: Zeiterfassungsbenutzer, Projektleiter, Projektcontroller, Abrechnungsadministrator, HR-Administrator, Abteilungsleiter, Kontoadministrator |
 | department, department lead | Abteilung, Abteilungsleiter | |
 | user, user detail | Benutzer, Benutzerdetail | |
-| account management | Kontoverwaltung | |
+| account management | Kontoverwaltung | the web settings menu shows "Account Verwaltung"; the docs keep Kontoverwaltung until the product text is fixed |
 | web client | Web-Client | |
 | full client (desktop) | Vollclient (Desktop) | |
 | mobile access | mobiler Zugriff | |
@@ -208,6 +208,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 |---|---|
 | 1 advanced filter | 1 erweiterter Filter |
 | 1 user | 1 Benutzer |
+| Absence Time Calendar | Abwesenheitskalender |
 | Accept | Annehmen |
 | Account | Konto |
 | Account Information | Kontoinformationen |
@@ -244,6 +245,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 | Applications | Applikationen |
 | Apply | Anwenden |
 | Apply Filter | Filter anwenden |
+| Approval required | Genehmigung erforderlich |
 | Automatic (derived from earlier bookings) | Automatisch (aus früheren Buchungen abgeleitet) |
 | back | zurück |
 | Billing Information | Rechnungsdaten |
@@ -459,6 +461,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 | My Templates | Meine Musterbuchungen |
 | New Version | Neue Version |
 | Next day | Nächster Tag |
+| Next month | Nächster Monat |
 | Next week | Nächste Woche |
 | No | Nein |
 | No activities on these days | Keine Tätigkeiten an diesen Tagen |
@@ -472,6 +475,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 | No results | Keine Treffer |
 | No User Selected | Kein Benutzer ausgewählt |
 | Notifications | Benachrichtigungen |
+| Number of Months | Anzahl der Monate |
 | O+TW | O+TA |
 | Object not Found | Objekt nicht gefunden |
 | of the month | des Monats |
@@ -505,6 +509,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 | Pre- and postprocessing formulas | Vor- und Nachverarbeitungsformeln |
 | Preprocessing Formula | Vorverarbeitungsformel |
 | Previous day | Voriger Tag |
+| Previous month | Voriger Monat |
 | Previous week | Vorige Woche |
 | Pricing Plan | Preisplan |
 | Print view | Druckansicht |
@@ -589,6 +594,7 @@ No German label in the product (keep English): Share List, Move or group, Change
 | Source Column Type | Typ der Quellspalte |
 | Source Sheet | Quellblatt |
 | Start | Beginnzeit |
+| Start Date | Startdatum |
 | Start typing to search the menu | Beginnen Sie zu tippen, um das Menü zu durchsuchen |
 | State (US only) | Bundesstaat (nur USA) |
 | Status Column | Statusspalte |

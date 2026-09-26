@@ -74,7 +74,7 @@ Wenn Sie die Aktion **Ausgangsrechnung anlegen** ausführen, ordnet sie die ausg
 Stundensätze für Kunden oder Projekte können sich im Lauf der Zeit ändern. Deshalb kopiert die Aktion `Ausgangsrechnung anlegen` den konkret gültigen Stundensatz in das Feld `APP_HourlyRateBilled` einer Zeitbuchung. Dieses Feld wird auch im berechneten Feld `APP_Revenue` verwendet, das den durch Zeitbuchungen erzielten Umsatz anzeigt.
 
 > [!NOTE]
-> Bis zur Version [2023-10](/doc/release-notes/2023-10.html) konnte time cockpit Zeitbuchungen nur zu Rechnungen zusammenfassen. Die einer Rechnung zugeordneten Zeitbuchungen konnten von Benutzern nicht mehr bearbeitet werden. Mit Version 2023-10 wurde diese Funktion erweitert, sodass Sie für eine einzelne Rechnung mehrere Rechnungspositionen anlegen können. Der Rechnungsbetrag wird daher jetzt aus der Summe aller Rechnungspositionen berechnet.
+> Bis zur Version [2023-10](~/doc/release-notes/2023-10.md) konnte time cockpit Zeitbuchungen nur zu Rechnungen zusammenfassen. Die einer Rechnung zugeordneten Zeitbuchungen konnten von Benutzern nicht mehr bearbeitet werden. Mit Version 2023-10 wurde diese Funktion erweitert, sodass Sie für eine einzelne Rechnung mehrere Rechnungspositionen anlegen können. Der Rechnungsbetrag wird daher jetzt aus der Summe aller Rechnungspositionen berechnet.
 
 
 ## Automatische Erstellung von Rechnungspositionen

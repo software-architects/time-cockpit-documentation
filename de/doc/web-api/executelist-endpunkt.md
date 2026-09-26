@@ -9,7 +9,7 @@ Neben dem [OData-Endpunkt](~/doc/web-api/odata-endpunkt.md) für CRUD-Operatione
 
 Wie unter [Listen anpassen](~/doc/datenmodell-anpassung/liste.md) beschrieben, können Sie entweder TCQL-Listen oder sogenannte Skriptlisten definieren. Bei TCQL-Listen ist die Datenquelle einer Liste eine einfache TCQL-Abfrage. TCQL-Abfragen haben einen wesentlichen Nachteil: Sie können Tabellen nicht beliebig verknüpfen, sondern nur entlang der Beziehungen, die im Datenmodell von time cockpit definiert sind. 
 
-Bei Skriptlisten ist die Datenquelle einer Liste ein **Iron Python**-Skript. Weitere Informationen finden Sie unter [Scripting](/doc/scripting/overview.html). Beim Schreiben einer Skriptliste steht Ihnen ein großer Teil des .NET Frameworks zur Verfügung. Das bedeutet auch, dass Sie in einer Skriptliste mehrere TCQL-Abfragen ausführen und z. B. die Ergebnisse mehrerer Abfragen zu einem konsolidierten Ergebnis zusammenführen können. In gewisser Weise sind Skriptlisten mit einer Datenbank-View vergleichbar.
+Bei Skriptlisten ist die Datenquelle einer Liste ein **Iron Python**-Skript. Weitere Informationen finden Sie unter [Scripting](~/doc/scripting/ueberblick.md). Beim Schreiben einer Skriptliste steht Ihnen ein großer Teil des .NET Frameworks zur Verfügung. Das bedeutet auch, dass Sie in einer Skriptliste mehrere TCQL-Abfragen ausführen und z. B. die Ergebnisse mehrerer Abfragen zu einem konsolidierten Ergebnis zusammenführen können. In gewisser Weise sind Skriptlisten mit einer Datenbank-View vergleichbar.
 
 Sowohl TCQL-Listen als auch Skriptlisten können in der Benutzeroberfläche von time cockpit referenziert, aber auch über die Web API von time cockpit abgefragt werden.
 

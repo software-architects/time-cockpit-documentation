@@ -133,6 +133,6 @@ Verwenden Sie `create_object`, `update_object`, `delete_object` oder `create_tim
 ## Verwandte Seiten
 
 - [Überblick über den MCP-Server](~/doc/mcp/ueberblick.md)
-- [Verbindung prüfen](/doc/mcp/verify-connection.html)
-- [Einrichtung in Entra ID](/doc/mcp/entra-id-setup.html)
-- [Begleitende Skills und APM](/doc/mcp/companion-skills.html)
+- [Verbindung prüfen](~/doc/mcp/verbindung-pruefen.md)
+- [Einrichtung in Entra ID](~/doc/mcp/entra-id-einrichtung.md)
+- [Begleitende Skills und APM](~/doc/mcp/begleitende-skills.md)

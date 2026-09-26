@@ -15,11 +15,11 @@ Die oberste Ebene eines Menüs in time cockpit ist ein Modul. Module befinden si
 
 ![Modulbereich](/doc/data-model-customization/images/wc-menu.png "Modulbereich")
 
-Module werden im Modul Anpassung angelegt. Im Folgenden zeigen wir nur, wie Sie die häufigste Art von Modulen anlegen, ein Navigation Module. In einem Navigation Module können Sie Links auf Listen definieren, um beispielsweise durch Ihre Stammdaten zu navigieren. Im Folgenden definieren wir ein eigenes Modul für die Rechnungslegung (Invoicing).
+Module werden im Modul Anpassungen angelegt. Im Folgenden zeigen wir nur, wie Sie die häufigste Art von Modulen anlegen, ein Navigation Module. In einem Navigation Module können Sie Links auf Listen definieren, um beispielsweise durch Ihre Stammdaten zu navigieren. Im Folgenden definieren wir ein eigenes Modul für die Rechnungslegung (Invoicing).
 
 ![Neues Modul](/doc/data-model-customization/images/new-module.png "Neues Modul")
 
-Um ein neues Modul anzulegen, wechseln Sie in das Modul Anpassung, wechseln auf Server und klicken wie in der obigen Abbildung auf Neues Modul. Ein Modul hat vier Pflichtfelder:
+Um ein neues Modul anzulegen, wechseln Sie in das Modul Anpassungen, wechseln auf Server und klicken wie in der obigen Abbildung auf Neues Modul. Ein Modul hat vier Pflichtfelder:
 
 Feld | Beschreibung
 --- | ---

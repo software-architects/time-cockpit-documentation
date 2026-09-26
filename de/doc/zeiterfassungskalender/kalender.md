@@ -46,7 +46,7 @@ Die Symbolleiste enthält Befehle, die für den Zeiterfassungskalender oder für
 
 In der Benutzerauswahl wählen Sie den Benutzer, dessen Zeitbuchungen angezeigt werden sollen. Beachten Sie dabei folgende Einschränkungen:
 
-- time cockpit bietet ein ausgefeiltes Berechtigungssystem. Sie können Lese- und Schreibberechtigungen für Benutzer und Gruppen festlegen. Weitere Informationen zu Berechtigungen finden Sie unter [Berechtigungsverwaltung](/doc/data-model-customization/permission.html).
+- time cockpit bietet ein ausgefeiltes Berechtigungssystem. Sie können Lese- und Schreibberechtigungen für Benutzer und Gruppen festlegen. Weitere Informationen zu Berechtigungen finden Sie unter [Berechtigungsverwaltung](~/doc/datenmodell-anpassung/berechtigung.md).
 
 > [!NOTE]
 > Standardmäßig liefert time cockpit keine Berechtigungen aus. Alle Benutzer dürfen alles sehen.
@@ -60,7 +60,7 @@ Seit Version 1.7 von time cockpit können Sie Benutzer in der Benutzerauswahl au
 Der Zeiterfassungskalender zeigt verschiedene Arten von Informationen:
 
 * Zeitbuchungen
-* Abwesenheiten (Urlaub, Zeitausgleich, Krankenstand). Siehe auch [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html).
+* Abwesenheiten (Urlaub, Zeitausgleich, Krankenstand). Siehe auch [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md).
 * Outlook-Termine und gesendete E-Mails aus Ihrem Office 365-Konto. Siehe auch [Office 365](~/doc/zeiterfassungskalender/office-365-integration.md).
 
 Sie können Zeitbuchungen manuell anlegen, ändern oder löschen, oder Sie legen sie mithilfe von Signalen oder Microsoft Office Outlook-Terminen an. Der Zeiterfassungskalender besteht aus folgenden Bereichen:

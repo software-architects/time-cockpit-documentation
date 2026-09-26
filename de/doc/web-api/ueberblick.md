@@ -11,7 +11,7 @@ Die time cockpit API bietet verschiedene Endpunkte:
 - [OData-Endpunkt](~/doc/web-api/odata-endpunkt.md): Unterstützt gefilterte Abfragen, Metadaten-Reflection und Datenmanipulation (d. h. Einfügen, Ändern, Löschen)
 - [Query-Endpunkt](~/doc/web-api/query-endpunkt.md): Unterstützt Abfragen von Daten in time cockpit mit der [time cockpit Abfragesprache](~/doc/tcql/ueberblick.md) (TCQL).
 - [ExecuteList-Endpunkt](~/doc/web-api/executelist-endpunkt.md): Führt time cockpit [Listen](~/doc/datenmodell-anpassung/liste.md) aus. Listen zeigen Daten in der Benutzeroberfläche in Tabellenform an, ihre Daten können aber auch über die Web API abgerufen werden.
-- [ExecuteAction-Endpunkt](~/doc/web-api/executeaction-endpunkt.md): Führt time cockpit [Aktionen](/doc/scripting/actions.html) aus. Eine Aktion ist eigene Geschäftslogik, die in Ihrem time cockpit Tenant gehostet wird.
+- [ExecuteAction-Endpunkt](~/doc/web-api/executeaction-endpunkt.md): Führt time cockpit [Aktionen](~/doc/scripting/aktionen.md) aus. Eine Aktion ist eigene Geschäftslogik, die in Ihrem time cockpit Tenant gehostet wird.
 - [Reporting-Endpunkt](~/doc/web-api/reporting-endpunkt.md): Führt einen time cockpit [SSRS-Bericht](~/doc/berichte/ueberblick.md) aus.
 
 ## Basisadresse

@@ -311,5 +311,5 @@ Die folgenden Entitäten sind ebenfalls dokumentiert, jedoch weniger ausführlic
 
 - [Entity-Relationship-Diagramme](~/doc/datenmodell/entitaetsbeziehungen.md)
 - [Leitfaden zu Berechtigungen](~/doc/datenmodell/berechtigungen-und-sicherheit.md)
-- [TCQL-Sprachreferenz](/doc/tcql/overview.html)
-- [Dokumentation der OData-API](/doc/web-api/odata.html)
+- [TCQL-Sprachreferenz](~/doc/tcql/ueberblick.md)
+- [Dokumentation der OData-API](~/doc/web-api/odata-endpunkt.md)

@@ -5,7 +5,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | English | German | Notes |
 |---|---|---|
 | time cockpit | time cockpit | unchanged, lowercase; "Time Cockpit" only where the English source capitalizes at sentence start |
-| Time Sheet Calendar | Zeiterfassungskalender | module and list name |
+| Time Sheet Calendar | Zeiterfassungskalender | module name in the full client; the product also says "Zeitbuchungskalender" (ribbon, options, settings) and the web client mostly "Kalender"; the docs keep Zeiterfassungskalender |
 | timesheet, time sheet entry, timesheet entry | Zeitbuchung (pl. Zeitbuchungen) | "Zeiterfassung" for the activity, "Zeitbuchung" for the record |
 | Timesheets (list) | Zeitbuchungen | |
 | Timesheet module | Modul Zeiterfassung | navigation: **Zeiterfassung** |
@@ -45,7 +45,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | formatting profile | Formatprofil | |
 | timesheet template, Time Sheet Templates | Musterbuchung, Musterbuchungen | product UI label |
 | share (timesheet entries), timesheet suggestion | teilen, Buchungsvorschlag | the UI label "Share -> Anteil" below is the financial share, not this |
-| Customization module | Modul Anpassung | navigation: **Anpassung** |
+| Customization module | Modul Anpassungen | navigation: **Anpassungen** (web menu and data model) |
 | list, form | Liste, Formular | never "EntityView" |
 | list profile | Listenprofil | |
 | named set | Named Set | unchanged |
@@ -56,7 +56,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | role | Rolle | role names (Time Tracking User, Project Manager, Project Controller, Billing Admin, HR Administrator, Department Lead, Account Admin) stay English in code and lists; in running text: Zeiterfassungsbenutzer, Projektleiter, Projektcontroller, Abrechnungsadministrator, HR-Administrator, Abteilungsleiter, Kontoadministrator |
 | department, department lead | Abteilung, Abteilungsleiter | |
 | user, user detail | Benutzer, Benutzerdetail | |
-| account management | Kontoverwaltung | |
+| account management | Kontoverwaltung | the web settings menu shows "Account Verwaltung"; the docs keep Kontoverwaltung until the product text is fixed |
 | web client | Web-Client | |
 | full client (desktop) | Vollclient (Desktop) | |
 | mobile access | mobiler Zugriff | |

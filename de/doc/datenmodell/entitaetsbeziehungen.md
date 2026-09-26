@@ -512,11 +512,11 @@ Eine Zeitbuchung kann null oder einer Rechnung zugeordnet sein (optional). Eine 
 
 - [Referenz der Standardentitäten](~/doc/datenmodell/standardentitaeten.md) - Ausführliche Dokumentation jeder Entität
 - [Leitfaden zu Berechtigungen](~/doc/datenmodell/berechtigungen-und-sicherheit.md) - Mit Berechtigungen auf Entitäten arbeiten
-- [TCQL: Überblick](/doc/tcql/overview.html) - Die Abfragesprache von time cockpit
-- [Web API - OData](/doc/web-api/odata.html) - REST-API-Zugriff auf Entitäten
+- [TCQL: Überblick](~/doc/tcql/ueberblick.md) - Die Abfragesprache von time cockpit
+- [Web API - OData](~/doc/web-api/odata-endpunkt.md) - REST-API-Zugriff auf Entitäten
 
 ## Siehe auch
 
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
-- [Eigene Entitäten anlegen](/doc/data-model-customization/entity.html)
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)
+- [Eigene Entitäten anlegen](~/doc/datenmodell-anpassung/entitaet.md)
 - [Named Sets für die Sicherheit](~/doc/datenmodell/berechtigungen-und-sicherheit.md#referenz-der-named-sets)

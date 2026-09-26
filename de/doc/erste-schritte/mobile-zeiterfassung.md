@@ -217,7 +217,7 @@ Installieren Sie time cockpit als Progressive Web App für ein besseres Erlebnis
 - Sehen Sie aufgezeichnete Signale im mobilen Web-Client an (nur lesend).
 - Erfassen Sie mobile Arbeit (Telefonate, Reisen, Besprechungen) manuell.
 
-Siehe: [Signal Tracker - Überblick](/doc/signal-tracker/overview.html) (nur Desktop)
+Siehe: [Signal Tracker - Überblick](~/doc/signal-tracker/ueberblick.md) (nur Desktop)
 
 ### ❌ Keine Anpassung des Datenmodells
 
@@ -230,7 +230,7 @@ Siehe: [Signal Tracker - Überblick](/doc/signal-tracker/overview.html) (nur Des
 - Alle eigenen Entitäten und Listen funktionieren wie gewohnt
 - Berechtigungen werden durchgesetzt
 
-Siehe: [Anpassung des Datenmodells](/doc/data-model-customization/overview.html)
+Siehe: [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)
 
 ### ❌ Internetverbindung erforderlich
 
@@ -483,7 +483,7 @@ time cockpit verbessert das mobile Erlebnis laufend:
 - Spracheingabe für Beschreibungen
 - Standortbestimmung für Reisezeiten (unter Berücksichtigung des Datenschutzes)
 
-Die neuesten mobilen Verbesserungen finden Sie in den [Release Notes](/doc/release-notes/2026-10.html).
+Die neuesten mobilen Verbesserungen finden Sie in den [Release Notes](~/doc/release-notes/2026-10.md).
 
 ## Verwandte Themen
 
@@ -492,16 +492,16 @@ Die neuesten mobilen Verbesserungen finden Sie in den [Release Notes](/doc/relea
 - [Überblick](~/doc/erste-schritte/ueberblick.md) - Einführung in time cockpit
 
 ### Funktionen der Zeiterfassung
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html) - Kalenderoberfläche (für den Desktop optimiert, funktioniert aber auch mobil)
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html) - Einträge anlegen und bearbeiten
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) - Kalenderoberfläche (für den Desktop optimiert, funktioniert aber auch mobil)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md) - Einträge anlegen und bearbeiten
 
 ### FAQs zur mobilen Nutzung
 - [Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md) - Häufige Fragen von Mitarbeitern zur mobilen Nutzung
 - [Anwender-FAQ](~/doc/anwender-faq.md) - Allgemeine Nutzung einschließlich mobiler Zeiterfassung
 
 ### Fortgeschritten
-- [Signal Tracker - Überblick](/doc/signal-tracker/overview.html) - Aktivitätsaufzeichnung nur am Desktop
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html) - Anpassung nur am Desktop
+- [Signal Tracker - Überblick](~/doc/signal-tracker/ueberblick.md) - Aktivitätsaufzeichnung nur am Desktop
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md) - Anpassung nur am Desktop
 
 ## Siehe auch
 

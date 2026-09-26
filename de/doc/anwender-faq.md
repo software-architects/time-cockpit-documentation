@@ -11,7 +11,7 @@ en_page: doc/user-faq.md
 Diese FAQ beantwortet häufige Fragen von time cockpit Anwendern. Sie konzentriert sich auf die alltägliche Nutzung des Produkts und verweist auf die rollenspezifischen FAQs, wenn ein Thema von Berechtigungen abhängt.
 
 > [!NOTE]
-> Sie suchen Fragen für Entwickler zur API, zum Datenmodell oder zu Anpassungen? Lesen Sie die [Entwickler-FAQ](/doc/developer-faq.html).
+> Sie suchen Fragen für Entwickler zur API, zum Datenmodell oder zu Anpassungen? Lesen Sie die [Entwickler-FAQ](~/doc/entwickler-faq.md).
 
 > [!NOTE]
 > Überprüft im April 2026.
@@ -29,8 +29,8 @@ Im Standardkalender können Sie eine Zeitbuchung auf mehrere Arten anlegen:
 Geben Sie anschließend die Details im Formular ein und speichern Sie den Eintrag.
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -41,8 +41,8 @@ In der Wochen- oder Arbeitswochenansicht können Sie eine Zeitbuchung kopieren, 
 Dadurch entsteht eine Kopie des ausgewählten Eintrags zur Zielzeit.
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -56,8 +56,8 @@ Das Kennzeichen „verrechenbar" steuert, ob eine Zeitbuchung für die Rechnungs
 Projekte können verrechenbar oder nicht verrechenbar sein, und auch Tätigkeiten können als nicht verrechenbar gekennzeichnet werden.
 
 **Siehe auch:**
-- [Zeitbuchungen](/doc/project-time-tracking/timesheet.html)
-- [Rechnungslegung](/doc/project-time-tracking/billing.html)
+- [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
+- [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
 
 ---
 
@@ -72,8 +72,8 @@ Sie können:
 - einen Eintrag per Drag & Drop verschieben
 
 **Siehe auch:**
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 
 ---
 
@@ -101,8 +101,8 @@ Im Standardablauf werden Musterbuchungen aus einer bestehenden Zeitbuchung erste
 Später können Sie die Musterbuchung in den Kalender ziehen, um schneller neue Einträge anzulegen.
 
 **Siehe auch:**
-- [Musterbuchungen](/doc/timesheet-calendar/timesheet-templates.html)
-- [Arbeiten mit Zeitbuchungen](/doc/timesheet-calendar/working-with-timesheet-entries.html)
+- [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)
+- [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md)
 
 ---
 
@@ -117,8 +117,8 @@ Wenn Ihre Rolle die nötigen Berechtigungen umfasst, verwenden Sie die Standardh
 - Legen Sie Tätigkeiten unter dem Projekt an, wenn Sie eine detailliertere Erfassung benötigen.
 
 **Siehe auch:**
-- [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
-- [Projektleiter-FAQ](/doc/project-manager-faq.html)
+- [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
+- [Projektleiter-FAQ](~/doc/projektleiter-faq.md)
 
 ---
 
@@ -129,20 +129,20 @@ Wenn Sie Zugriff auf die Ansichten für das Projektmanagement haben, verwenden S
 Diese Standardlisten kombinieren Daten aus Zeitbuchungen und Rechnungen und sind die wichtigsten Ansichten im Produkt für die Budgetkontrolle.
 
 **Siehe auch:**
-- [Anwendungsfall Budgetkontrolle](/doc/use-cases/budgetary-control.html)
-- [Projektleiter-FAQ](/doc/project-manager-faq.html)
+- [Anwendungsfall Budgetkontrolle](~/doc/anwendungsfaelle/budgetkontrolle.md)
+- [Projektleiter-FAQ](~/doc/projektleiter-faq.md)
 
 ---
 
 ### Wie sehe ich alle Zeiten, die für ein bestimmtes Projekt erfasst wurden?
 
-Verwenden Sie die Liste [Zeitbuchungen](/doc/project-time-tracking/timesheet.html) und filtern Sie sie nach dem Projekt und dem relevanten Zeitraum.
+Verwenden Sie die Liste [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md) und filtern Sie sie nach dem Projekt und dem relevanten Zeitraum.
 
 So sehen Sie die einzelnen Einträge hinter dem Projekt.
 
 **Siehe auch:**
-- [Zeitbuchungen](/doc/project-time-tracking/timesheet.html)
-- [Datenexport](/doc/data-exchange/export.html)
+- [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
+- [Datenexport](~/doc/datenaustausch/export.md)
 
 ---
 
@@ -155,8 +155,8 @@ In der Standardhierarchie können Stundensätze bei Kunden, Projekten und Tätig
 - eine Tätigkeit kann den Stundensatz des Projekts überschreiben
 
 **Siehe auch:**
-- [Kunde / Projekt / Tätigkeit](/doc/project-time-tracking/customer-project-task.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 
 ---
 
@@ -175,7 +175,7 @@ Sie können einen Urlaubsantrag auch aus dem **Zeiterfassungskalender** heraus a
 Ist der Genehmigungsworkflow aktiviert, prüft die eingerichtete genehmigende Person den Antrag, und Sie erhalten nach der Genehmigung oder Ablehnung eine Benachrichtigung.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
 - [Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md)
 
 ---
@@ -191,8 +191,8 @@ Im Standard von time cockpit sind das getrennte Abwesenheitsarten.
 Alle drei Abwesenheitsarten können auch aus dem **Zeiterfassungskalender** heraus angelegt und entweder als ganztägige oder als stundenweise Abwesenheit eingetragen werden.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [Arbeitszeit / Abwesenheitsverwaltung](/doc/employee-time-tracking/working-time.html)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)
 
 ---
 
@@ -209,10 +209,10 @@ Sie können Ihren Resturlaub auf zwei praktische Arten prüfen:
 Wenn Sie keine der beiden Ansichten sehen, wenden Sie sich an HR oder Ihren Administrator, da die Sichtbarkeit von Berechtigungen und der Konfiguration des Mandanten abhängt.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [Zeiterfassungskalender](/doc/timesheet-calendar/calendar.html)
-- [Arbeitszeit / Abwesenheitsverwaltung](/doc/employee-time-tracking/working-time.html)
-- [HR-Administrator-FAQ](/doc/hr-administrator-faq.html)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
+- [Arbeitszeit / Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/arbeitszeit.md)
+- [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)
 
 ---
 
@@ -223,8 +223,8 @@ Time Cockpit unterstützt den Genehmigungsworkflow, legt aber keine produktweite
 Prüfen Sie in der Urlaubsliste und in Ihren Benachrichtigungen, ob der Antrag noch offen ist oder bereits bearbeitet wurde.
 
 **Siehe auch:**
-- [Abwesenheitsverwaltung](/doc/employee-time-tracking/absence-time-management.html)
-- [Abteilungsleiter-FAQ](/doc/department-lead-faq.html)
+- [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md)
+- [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)
 
 ---
 
@@ -241,8 +241,8 @@ Wenn Sie Berechtigungen für die Rechnungslegung haben, verwenden Sie **Verwaltu
 Das ist der Standardablauf der Rechnungslegung, wie er in der Dokumentation zur Rechnungslegung beschrieben ist.
 
 **Siehe auch:**
-- [Rechnungslegung](/doc/project-time-tracking/billing.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 
 ---
 
@@ -253,8 +253,8 @@ Sobald Zeitbuchungen einer Rechnungsposition oder Rechnung zugeordnet sind, sind
 Wenn nach der Rechnungslegung Korrekturen nötig sind, klären Sie den Ablauf mit Ihrem Abrechnungsadministrator.
 
 **Siehe auch:**
-- [Rechnungslegung](/doc/project-time-tracking/billing.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 
 ---
 
@@ -265,9 +265,9 @@ Verwenden Sie die Standardexportoptionen der betreffenden Rechnung oder Listenan
 Der genaue weitere Ablauf in der Buchhaltung hängt von Ihrem externen System ab.
 
 **Siehe auch:**
-- [Datenexport](/doc/data-exchange/export.html)
-- [Web API: Überblick](/doc/web-api/overview.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Datenexport](~/doc/datenaustausch/export.md)
+- [Web API: Überblick](~/doc/web-api/ueberblick.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 
 ---
 
@@ -278,8 +278,8 @@ Wenn Sie die nötigen Berechtigungen haben, verrechnen Sie nur die ausgewählte 
 Ein praktischer Standardweg: Filtern Sie **Nicht verrechnete Zeitbuchungen** nach Projekt, Zeitraum oder einem anderen relevanten Kriterium und erstellen Sie die Rechnung anschließend aus den ausgewählten Einträgen.
 
 **Siehe auch:**
-- [Rechnungslegung](/doc/project-time-tracking/billing.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Rechnungslegung](~/doc/projektzeiterfassung/rechnungslegung.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 
 ---
 
@@ -311,16 +311,16 @@ Prüfen Sie zuerst, ob das Problem mit Ihrer Anmeldemethode, Ihrem Browser oder 
 ## Brauchen Sie mehr Hilfe?
 
 ### Verwandte FAQs
-- [Projektleiter-FAQ](/doc/project-manager-faq.html)
-- [HR-Administrator-FAQ](/doc/hr-administrator-faq.html)
-- [Abteilungsleiter-FAQ](/doc/department-lead-faq.html)
-- [Abrechnungs-FAQ](/doc/billing-admin-faq.html)
+- [Projektleiter-FAQ](~/doc/projektleiter-faq.md)
+- [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)
+- [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)
+- [Abrechnungs-FAQ](~/doc/abrechnungs-faq.md)
 - [Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md)
 
 ### Dokumentation
 - [Für Anwender - Gesamte Dokumentation](~/doc/fuer-anwender.md)
 - [Für Entwickler - API & Anpassung](~/doc/fuer-entwickler.md)
-- [Entwickler-FAQ](/doc/developer-faq.html)
+- [Entwickler-FAQ](~/doc/entwickler-faq.md)
 
 ### Support
 - **E-Mail:** support@timecockpit.com

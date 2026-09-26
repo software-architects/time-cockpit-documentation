@@ -254,7 +254,7 @@ Beim Anlegen einer Zeitbuchung sucht ein Skript den Satz in der Rate Card anhand
 - ❌ Aufwendiger in der Wartung
 - ❌ Erfordert Know-how in der Anpassung
 
-**Siehe:** [Anpassung des Datenmodells](/doc/data-model-customization/overview.html), [Scripting: Aktionen](/doc/scripting/actions.html)
+**Siehe:** [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md), [Scripting: Aktionen](~/doc/scripting/aktionen.md)
 
 ## Preismodelle
 
@@ -384,7 +384,7 @@ Tätigkeiten nach Leistungsart gegliedert:
 - Führen Sie die Währungsumrechnung in der Buchhaltungssoftware durch
 - Halten Sie die Daten in time cockpit in einer einzigen Währung
 
-**Siehe:** [Datenaustausch](/doc/data-exchange/export.html), [Web API](/doc/web-api/overview.html)
+**Siehe:** [Datenaustausch](~/doc/datenaustausch/export.md), [Web API](~/doc/web-api/ueberblick.md)
 
 ### Festpreisprojekte (keine Verrechnung nach Stundensatz)
 
@@ -401,7 +401,7 @@ Auch bei Festpreisprojekten sind Stundensätze für die interne Nachverfolgung w
 - die Rentabilität zu ermitteln: `Fixed Price - (Hours × Internal Cost)`
 - künftige Schätzungen zu verbessern
 
-**Siehe:** [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md), [Abrechnungsadministrator-FAQ](/doc/billing-admin-faq.html#how-do-i-handle-retainer-and-fixed-price-contracts)
+**Siehe:** [Budgetkontrolle](~/doc/projektzeiterfassung/budgetkontrolle.md), [Abrechnungsadministrator-FAQ](~/doc/abrechnungs-faq.md#wie-gehe-ich-mit-pauschal--und-festpreisverträgen-um)
 
 ## Best Practices für die Verwaltung von Stundensätzen
 
@@ -531,17 +531,17 @@ if timesheet.HourlyRateActual == 0:
         timesheet.HourlyRateActual = GetCompanyDefaultRate()
 ```
 
-**Siehe:** [Scripting: Trigger](/doc/scripting/triggers.html), [Scripting: Aktionen](/doc/scripting/actions.html)
+**Siehe:** [Scripting: Trigger](~/doc/scripting/trigger.md), [Scripting: Aktionen](~/doc/scripting/aktionen.md)
 
 ### Import und Export von Sätzen
 
 **Massenänderung von Sätzen:**
-1. Exportieren Sie Projekte bzw. Tätigkeiten über den [Datenexport](/doc/data-exchange/export.html) nach Excel
+1. Exportieren Sie Projekte bzw. Tätigkeiten über den [Datenexport](~/doc/datenaustausch/export.md) nach Excel
 2. Aktualisieren Sie die Sätze in Excel
-3. Importieren Sie sie über den [Datenimport](/doc/data-exchange/import.html) wieder
+3. Importieren Sie sie über den [Datenimport](~/doc/datenaustausch/import.md) wieder
 
 **API-Zugriff:**
-- Sätze programmgesteuert über die [Web API](/doc/web-api/overview.html) aktualisieren
+- Sätze programmgesteuert über die [Web API](~/doc/web-api/ueberblick.md) aktualisieren
 - Sätze aus einem externen Preissystem synchronisieren
 - Satzerhöhungen auf Basis des Verbraucherpreisindex oder von Verträgen automatisieren
 
@@ -563,7 +563,7 @@ if timesheet.HourlyRateActual == 0:
 - Erstellen Sie SSRS-Berichte mit Auswertungen der Sätze
 - Exportieren Sie nach Excel für Pivot-Auswertungen
 
-**Siehe:** [Integrierte Berichte](/doc/reporting/built-in-reports.html), [Eigene Berichte](/doc/reporting/custom-reports.html)
+**Siehe:** [Integrierte Berichte](~/doc/berichte/integrierte-berichte.md), [Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md)
 
 ### Prüfung der Einhaltung von Sätzen
 
@@ -590,24 +590,24 @@ if timesheet.HourlyRateActual == 0:
 - [Rechnungsdatenfelder](~/doc/projektzeiterfassung/rechnungsdatenfelder.md) - Rechnungsbeträge verstehen
 
 ### Berichte
-- [Integrierte Berichte](/doc/reporting/built-in-reports.html) - Berichte zu Sätzen und Umsatz
-- [Eigene Berichte](/doc/reporting/custom-reports.html) - Berichte zur Auswertung von Sätzen erstellen
+- [Integrierte Berichte](~/doc/berichte/integrierte-berichte.md) - Berichte zu Sätzen und Umsatz
+- [Eigene Berichte](~/doc/berichte/benutzerdefinierte-berichte.md) - Berichte zur Auswertung von Sätzen erstellen
 
 ### Fortgeschritten
-- [Anpassung des Datenmodells](/doc/data-model-customization/overview.html) - Eigene Satztabellen aufbauen
-- [Scripting: Aktionen](/doc/scripting/actions.html) - Logik für Sätze automatisieren
-- [Scripting: Trigger](/doc/scripting/triggers.html) - Regeln für Sätze durchsetzen
+- [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md) - Eigene Satztabellen aufbauen
+- [Scripting: Aktionen](~/doc/scripting/aktionen.md) - Logik für Sätze automatisieren
+- [Scripting: Trigger](~/doc/scripting/trigger.md) - Regeln für Sätze durchsetzen
 
 ## Siehe auch
 
 **FAQs:**
-- [Abrechnungsadministrator-FAQ](/doc/billing-admin-faq.html) - Fragen zur Verwaltung von Sätzen
-- [Projektleiter-FAQ](/doc/project-manager-faq.html) - Fragen zur Rentabilität
+- [Abrechnungsadministrator-FAQ](~/doc/abrechnungs-faq.md) - Fragen zur Verwaltung von Sätzen
+- [Projektleiter-FAQ](~/doc/projektleiter-faq.md) - Fragen zur Rentabilität
 
 **API und Integration:**
-- [Web API im Überblick](/doc/web-api/overview.html) - Sätze programmgesteuert aktualisieren
-- [Datenaustausch: Export](/doc/data-exchange/export.html) - Massenänderung von Sätzen
+- [Web API im Überblick](~/doc/web-api/ueberblick.md) - Sätze programmgesteuert aktualisieren
+- [Datenaustausch: Export](~/doc/datenaustausch/export.md) - Massenänderung von Sätzen
 
 ---
 
-*Unterstützung bei der Konfiguration von Sätzen erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) oder in der [Abrechnungsadministrator-FAQ](/doc/billing-admin-faq.html).*
+*Unterstützung bei der Konfiguration von Sätzen erhalten Sie unter [support@timecockpit.com](mailto:support@timecockpit.com) oder in der [Abrechnungsadministrator-FAQ](~/doc/abrechnungs-faq.md).*
