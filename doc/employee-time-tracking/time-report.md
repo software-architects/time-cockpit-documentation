@@ -62,7 +62,7 @@ The report is located at **USERS --> WORKING TIME --> Time Report**
 
 Users can conveniently generate time reports in PDF or Excel format for a specified time period. This feature is particularly useful for users who need to generate time reports for multiple individuals, especially at the end of the month.
 
-<div class="tc-video" data-vimeo="869442493" data-title="print-time-reports" data-poster="../../images/video-posters/869442493.jpg" style="--bs-aspect-ratio: 56.25%"></div>
+<div class="tc-video" data-youtube="elWZKNf-P3I" data-title="Time Cockpit How-To: Print Time Reports for Multiple Users" data-poster="../../images/video-posters/elWZKNf-P3I.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Accessing the Feature
 1. Navigate to the user list within time cockpit.

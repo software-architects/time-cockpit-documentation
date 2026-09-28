@@ -63,7 +63,7 @@ Sie finden den Bericht unter **BENUTZER --> ARBEITSZEIT --> Stundenzettel**
 
 Benutzer können Stundenzettel für einen bestimmten Zeitraum bequem im PDF- oder Excel-Format erstellen. Diese Funktion ist besonders nützlich, wenn Sie Stundenzettel für mehrere Personen erstellen müssen, vor allem am Monatsende.
 
-<div class="tc-video" data-vimeo="869442493" data-title="Stundenzettel drucken" data-poster="/images/video-posters/869442493.jpg" style="--bs-aspect-ratio: 56.25%"></div>
+<div class="tc-video" data-youtube="elWZKNf-P3I" data-title="Stundenzettel drucken" data-poster="/images/video-posters/elWZKNf-P3I.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Funktion aufrufen
 1. Öffnen Sie in time cockpit die Benutzerliste.

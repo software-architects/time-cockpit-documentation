@@ -103,7 +103,7 @@ Das folgende Beispiel zeigt eine Rechnung mit drei Rechnungspositionen.
 
 Wenn die automatische Generierung von Rechnungspositionen Ihre Anforderungen nicht erfüllt, können Sie flexibel eigene Rechnungspositionen und Artikel anlegen. Bietet Ihr Unternehmen zum Beispiel sowohl Beratung zur Zeiterfassung an als auch Zeiterfassungsterminals als Hardware, und sollen beide auf einer einzigen Rechnung stehen, können Sie einen eigenen Artikel wie "Time Tracking Terminal" definieren. Das könnte wie folgt aussehen.
 
-<div class="tc-video" data-vimeo="870320759" data-title="Eigene Rechnungsposition" data-poster="/images/video-posters/870320759.jpg" style="--bs-aspect-ratio: 56.27%"></div>
+<div class="tc-video" data-youtube="SEJ2l0iUH1g" data-title="Eigene Rechnungsposition" data-poster="/images/video-posters/SEJ2l0iUH1g.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Einen eigenen Artikel anlegen
 
