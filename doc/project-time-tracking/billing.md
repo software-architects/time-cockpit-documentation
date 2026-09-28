@@ -65,7 +65,7 @@ The time cockpit default data model contains the list [Management -> Billing -> 
 
 When you execute the **Create Invoice** action, it assigns the selected timesheets to invoice items. 
 
-<div class="tc-video" data-vimeo="871357620" data-title="invoicing" style="--bs-aspect-ratio: 51.82%"></div>
+<div class="tc-video" data-youtube="tnP0-jU6mUQ" data-title="Time Cockpit How-To: Create Invoices from Tracked Time" data-poster="../../images/video-posters/tnP0-jU6mUQ.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 > [!NOTE]
 > Once timesheet entries are associated with an invoice item or invoice, they become **read-only** to prevent inadvertent modifications after billing.

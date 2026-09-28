@@ -7,7 +7,7 @@ en_page: doc/timesheet-calendar/timesheet-templates.md
 
 Musterbuchungen sind eine leistungsfähige Funktion von time cockpit, die Ihre Zeiterfassung vereinfacht und effizienter und einheitlicher macht. Musterbuchungen sind vorkonfigurierte Zeitbuchungen, die Sie schnell in Ihre Zeiterfassung übernehmen können. Mit Musterbuchungen müssen Sie dieselben Informationen nicht immer wieder manuell eingeben. Wählen Sie einfach die passende Musterbuchung aus und übernehmen Sie sie in Ihre Zeiterfassung.
 
-<div class="tc-video" data-vimeo="871507268" data-title="Musterbuchungen" style="--bs-aspect-ratio: 51.82%"></div>
+<div class="tc-video" data-youtube="Sn7hNR69YOo" data-title="Musterbuchungen" data-poster="/images/video-posters/Sn7hNR69YOo.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 ### Musterbuchung anlegen
 

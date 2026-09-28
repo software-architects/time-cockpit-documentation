@@ -66,7 +66,7 @@ Das Standarddatenmodell von time cockpit enthält die Liste [Verwaltung -> Verre
 
 Wenn Sie die Aktion **Ausgangsrechnung anlegen** ausführen, ordnet sie die ausgewählten Zeitbuchungen Rechnungspositionen zu. 
 
-<div class="tc-video" data-vimeo="871357620" data-title="Rechnungslegung" style="--bs-aspect-ratio: 51.82%"></div>
+<div class="tc-video" data-youtube="tnP0-jU6mUQ" data-title="Rechnungslegung" data-poster="/images/video-posters/tnP0-jU6mUQ.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
 > [!NOTE]
 > Sobald Zeitbuchungen einer Rechnungsposition oder Rechnung zugeordnet sind, werden sie **schreibgeschützt**, um versehentliche Änderungen nach der Verrechnung zu verhindern.
