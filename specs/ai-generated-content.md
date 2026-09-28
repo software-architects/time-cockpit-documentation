@@ -98,40 +98,42 @@ Before committing documentation:
 - Inline for relevant blog posts and supplementary content
 - FAQ pages for role-specific features and best practices
 
-**URL Patterns**:
-- Feature pages: `https://www.timecockpit.com/features/{slug}/`
-- Blog posts: `https://www.timecockpit.com/blog/{slug}/`
-- Always use absolute URLs, not relative paths
+**URL Patterns** (site relaunched 2026; the old `/features/...` URLs only redirect to `/project-time-tracking/`, old dated blog posts `/blog/YYYY/MM/DD/...` redirect to the home page and must not be linked):
+- Product pages: `https://www.timecockpit.com/{slug}/`, German pages `https://www.timecockpit.com/de/{slug}/`
+- Blog posts: `https://www.timecockpit.com/blog/{slug}/`, German `https://www.timecockpit.com/de/blog/{slug}/`
+- Always use absolute URLs. German documentation pages link the German marketing page.
+- Source of truth: `https://www.timecockpit.com/sitemap-0.xml`; the German counterpart is the page's `hreflang="de"` link.
 
-**Verified Feature Page Slugs**:
-- `/features/project-time-tracking/`
-- `/features/employee-time-tracking/`
-- `/features/project-invoicing/`
-- `/features/time-tracking-calendar/`
-- `/features/activity-tracking/`
-- `/features/reporting/`
-- `/features/integration/`
-- `/features/customization/`
-- `/features/enterprise/`
-- `/features/security/`
-- `/features/saas/`
+**Verified product page slugs (EN -> DE, checked 2026-09-28)**:
+- `/project-time-tracking/` -> `/de/projektzeiterfassung/`
+- `/employee-time-tracking/` -> `/de/arbeitszeiterfassung/`
+- `/project-invoicing/` -> `/de/projektabrechnung/`
+- `/time-tracking-calendar/` -> `/de/zeiterfassungskalender/`
+- `/activity-tracking/` -> `/de/aktivitaeten-aufzeichnen/`
+- `/time-tracking-integration-web-api/` -> `/de/zeiterfassung-integration-web-api/`
+- `/customizable-time-tracking/` -> `/de/anpassbare-zeiterfassung/`
+- `/enterprise-time-tracking/` -> `/de/enterprise-zeiterfassung/`
+- `/security-data-protection/` -> `/de/sicherheit-datenschutz/`
+- `/mcp-server-ai-assistants/` -> `/de/mcp-server-ki-assistenten/`
+- `/pricing/` -> `/de/preis/`
+- `/company/contact/` -> `/de/firma/kontakt/`
+- Reporting has no English page; German: `/de/projektcontrolling-software/`
 
-**Example Blog Post Slugs** (verify before using):
-- `/blog/benefits-of-project-time-tracking/`
-- `/blog/project-timetracking-kpis/`
-- `/blog/project-time-tracking-revenue/`
-- `/blog/project-time-tracking-excel-migration-guide/`
-- `/blog/time-tracking-mandatory-startups-smb-dach/`
+**Example blog post slugs (EN -> DE, verify before using)**:
+- `/blog/benefits-of-project-time-tracking/` -> `/de/blog/vorteile-projekt-zeiterfassung/`
+- `/blog/key-business-kpis-project-time-tracking/` -> `/de/blog/wichtige-unternehmenskennzahlen-projektzeiterfassung/`
+- `/blog/project-time-tracking-revenue-service-providers/` -> `/de/blog/projektzeiterfassung-umsatz-dienstleister/`
+- `/blog/project-time-tracking-excel-migration-guide/` -> `/de/blog/projektzeiterfassung-excel-umstieg-leitfaden/`
 
 **Placement Examples**:
 
 ```markdown
 > [!TIP]
-> Discover time cockpit's [employee time tracking features](https://www.timecockpit.com/features/employee-time-tracking/) 
+> Discover time cockpit's [employee time tracking features](https://www.timecockpit.com/employee-time-tracking/) 
 > and learn about [legal requirements](https://www.timecockpit.com/blog/time-tracking-mandatory-startups-smb-dach/).
 
 → [Full Guide](~/doc/timesheet-calendar/working-with-timesheet-entries.md) | 
-[Learn about Features](https://www.timecockpit.com/features/time-tracking-calendar/)
+[Learn about Features](https://www.timecockpit.com/time-tracking-calendar/)
 ```
 
 ## 3. Target Audience & Personas
@@ -602,7 +604,7 @@ See Section 2.2 above
 - **Date**: 2026-02-09
 - **Strategy**: 
   - Focus on business/user documentation (not developer docs)
-  - Link to feature pages: `/features/project-time-tracking/`, `/features/employee-time-tracking/`, etc.
+  - Link to feature pages: `/project-time-tracking/`, `/employee-time-tracking/`, etc. (German pages: `/de/...`)
   - Link to relevant blog posts: `/blog/benefits-of-project-time-tracking/`, `/blog/project-timetracking-kpis/`, etc.
   - Use contextual linking (natural flow) rather than forced links
   - Verify all URLs exist and use correct slugs
@@ -621,7 +623,7 @@ See Section 2.2 above
   - `doc/hr-administrator-faq.md` - Employee tracking + compliance blog
 
 **Link Building Guidelines**:
-1. **Use absolute URLs** for cross-domain links: `https://www.timecockpit.com/features/...`
+1. **Use absolute URLs** for cross-domain links: `https://www.timecockpit.com/project-time-tracking/`
 2. **Verify slugs** from actual content files in `TimeCockpit.WebsiteV2/src/content/`
 3. **Contextual placement**: Add links where they naturally enhance user understanding
 4. **TIP boxes**: Use for prominent feature page links at document start

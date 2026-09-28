@@ -10,7 +10,7 @@ en_page: doc/timesheet-calendar/office365.md
 Verbinden Sie time cockpit mit Ihrem Office-365-Konto, um Outlook-Termine und gesendete E-Mails direkt in Ihrem Zeiterfassungskalender anzuzeigen und so einen vollständigen Überblick über Ihren Arbeitstag zu erhalten.
 
 > [!TIP]
-> **Möchten Sie Ihre Zeiterfassung vereinfachen?** Die Office-365-Integration hilft Ihnen, Zeiten genauer zu erfassen, indem sie Ihren Kalender und Ihre E-Mails einbindet. Mehr über [Integrationen für die Zeiterfassung](https://www.timecockpit.com/features/integration/).
+> **Möchten Sie Ihre Zeiterfassung vereinfachen?** Die Office-365-Integration hilft Ihnen, Zeiten genauer zu erfassen, indem sie Ihren Kalender und Ihre E-Mails einbindet. Mehr über [Integrationen für die Zeiterfassung](https://www.timecockpit.com/de/zeiterfassung-integration-web-api/).
 
 ## Überblick
 
@@ -258,7 +258,7 @@ time cockpit zeigt danach keine Termine und E-Mails mehr an.
 - [Mitarbeiter-FAQ](~/doc/mitarbeiter-faq.md) - Fragen zur täglichen Zeiterfassung
 
 **Ressourcen auf der Website:**
-- [Integrationsfunktionen](https://www.timecockpit.com/features/integration/) - Überblick über die Integrationen von time cockpit
+- [Integrationsfunktionen](https://www.timecockpit.com/de/zeiterfassung-integration-web-api/) - Überblick über die Integrationen von time cockpit
 
 ---
 

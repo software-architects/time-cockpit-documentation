@@ -10,7 +10,7 @@ en_page: doc/project-time-tracking/hourly-rates.md
 Konfigurieren und verwalten Sie Stundensätze für eine korrekte Verrechnung, die Verfolgung der Rentabilität und die Rechnungslegung an Kunden. Lernen Sie Satzhierarchien, Strategien für Satzänderungen und Abläufe der Preisgestaltung kennen.
 
 > [!TIP]
-> **Sie möchten Ihre Preisstrategie optimieren?** Erfahren Sie, wie Sie durch ein effektives Management der Stundensätze [den Projektumsatz maximieren](https://www.timecockpit.com/blog/project-time-tracking-revenue/). Entdecken Sie unsere [Funktionen für die Projektverrechnung](https://www.timecockpit.com/features/project-invoicing/).
+> **Sie möchten Ihre Preisstrategie optimieren?** Erfahren Sie, wie Sie durch ein effektives Management der Stundensätze [den Projektumsatz maximieren](https://www.timecockpit.com/de/blog/projektzeiterfassung-umsatz-dienstleister/). Entdecken Sie unsere [Funktionen für die Projektverrechnung](https://www.timecockpit.com/de/projektabrechnung/).
 
 ## Überblick
 

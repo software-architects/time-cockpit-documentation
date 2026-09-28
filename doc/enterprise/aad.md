@@ -54,4 +54,4 @@ To enable "Security Defaults" and "MFA," refer to the following Azure documentat
 
 By following the steps above and taking advantage of Azure Active Directory's security features, you can enhance authentication security for your time cockpit account.
 
-For additional assistance or troubleshooting, please refer to the [time cockpit Support](https://www.timecockpit.com/en/support) resources.
+For additional assistance or troubleshooting, please contact [time cockpit support](mailto:support@timecockpit.com).

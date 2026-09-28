@@ -55,4 +55,4 @@ Wie Sie die „Sicherheitsstandards“ und „MFA“ aktivieren, lesen Sie in de
 
 Wenn Sie die oben beschriebenen Schritte befolgen und die Sicherheitsfunktionen von Azure Active Directory nutzen, erhöhen Sie die Sicherheit der Authentifizierung für Ihr time cockpit Konto.
 
-Weitere Unterstützung und Hilfe bei der Problembehebung finden Sie in den Ressourcen des [time cockpit Supports](https://www.timecockpit.com/en/support).
+Weitere Unterstützung und Hilfe bei der Problembehebung erhalten Sie beim [time cockpit Support](mailto:support@timecockpit.com).

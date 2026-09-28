@@ -13,4 +13,4 @@ Die Hauptanwendung, der Signal Tracker und die Anwendung zur Skriptausführung p
 
 ![Logdateien senden](/doc/getting-started/troubleshooting/images/send-log-files-en.png "Logdateien senden")
 
-Das aktuelle Format ist ein log4j-kompatibles XML-Format, das sich mit einem der zahlreichen Logdatei-Viewer von Drittanbietern lesen und darstellen lässt. Zwei kostenlose Optionen sind [YALV! - Yet Another Log4Net Viewer](https://github.com/LukePet/YALV) und [LogExpert](https://logexpert.codeplex.com/).
+Das aktuelle Format ist ein log4j-kompatibles XML-Format, das sich mit einem der zahlreichen Logdatei-Viewer von Drittanbietern lesen und darstellen lässt. Zwei kostenlose Optionen sind [YALV! - Yet Another Log4Net Viewer](https://github.com/LukePet/YALV) und [LogExpert](https://github.com/LogExperts/LogExpert).

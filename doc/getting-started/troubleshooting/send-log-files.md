@@ -12,4 +12,4 @@ The main UI, signal tracker and script execution application record log files of
 
 ![Send Log Files](images/send-log-files-en.png "Send Log Files")
 
-The current format is a log4j-compatible XML format that can be read and visualized by one of the large number of third-party log file viewers. Two free options are [YALV! - Yet Another Log4Net Viewer](https://github.com/LukePet/YALV) and [LogExpert](https://logexpert.codeplex.com/).
+The current format is a log4j-compatible XML format that can be read and visualized by one of the large number of third-party log file viewers. Two free options are [YALV! - Yet Another Log4Net Viewer](https://github.com/LukePet/YALV) and [LogExpert](https://github.com/LogExperts/LogExpert).

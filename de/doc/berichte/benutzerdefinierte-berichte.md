@@ -8,7 +8,7 @@ en_page: doc/reporting/custom-reports.md
 Zusätzlich zu den generierten druckbaren Berichten können Sie einer time cockpit-Liste benutzerdefinierte Berichte hinzufügen. Die benutzerdefinierten Berichte erscheinen neben der Standardschaltfläche **Druckansicht**. Das folgende Kapitel beschreibt den Ablauf, mit dem Sie benutzerdefinierte Berichte in Ihre bestehenden time cockpit-Listen einbinden.
 
 > [!NOTE]
-> In diesem Artikel zeigen wir Ihnen, wie Sie die Berichtsfunktionen von time cockpit verwenden. Der Artikel erklärt jedoch nicht, wie Sie eigene Berichte in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116) erstellen. Eine ausführliche Beschreibung dazu finden Sie unter [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
+> In diesem Artikel zeigen wir Ihnen, wie Sie die Berichtsfunktionen von time cockpit verwenden. Der Artikel erklärt jedoch nicht, wie Sie eigene Berichte in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116) erstellen.
 
 ## Berichtsdefinition herunterladen
 
@@ -20,7 +20,7 @@ Von dort aus passen Sie den Bericht nach Ihren Wünschen an. Zum Bearbeiten eine
 
 ## Bericht anpassen
 
-Die Verwendung von [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) ist nicht Gegenstand dieses Artikels. Eine ausführliche Anleitung zum Erstellen benutzerdefinierter Berichte finden Sie in diesem Video: [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit). Dort finden Sie auch einen umfangreichen Foliensatz zu [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) im Allgemeinen.
+Die Verwendung von [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) ist nicht Gegenstand dieses Artikels.
 
 ## Bericht testen
 

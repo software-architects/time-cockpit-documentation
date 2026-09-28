@@ -9,7 +9,7 @@ keywords: [hourly rates, billing rates, project pricing, rate management, custom
 Configure and manage hourly rates for accurate billing, profitability tracking, and customer invoicing. Understand rate hierarchies, update strategies, and pricing workflows.
 
 > [!TIP]
-> **Optimizing your pricing strategy?** Learn how to [maximize project revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue/) through effective rate management. Explore our [Project Invoicing features](https://www.timecockpit.com/features/project-invoicing/).
+> **Optimizing your pricing strategy?** Learn how to [maximize project revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue-service-providers/) through effective rate management. Explore our [Project Invoicing features](https://www.timecockpit.com/project-invoicing/).
 
 ## Overview
 

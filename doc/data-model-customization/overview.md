@@ -77,4 +77,4 @@ Additionally, time cockpit features a powerful web api which lets you query and 
 
 Time cockpit allows you to create sandbox environments to test your changes before implementing them in your production environment.
 
-Sandbox environments are essentially copies of your production environment, where you can test new features, workflows, and configurations without risking any negative impact on your live data. With sandbox environments, you can experiment freely and make changes without worrying about potential errors or consequences. For further information also refer to [Playing in the Sandbox](https://www.timecockpit.com/blog/2016/05/27/Playing-in-the-Sandbox).
+Sandbox environments are essentially copies of your production environment, where you can test new features, workflows, and configurations without risking any negative impact on your live data. With sandbox environments, you can experiment freely and make changes without worrying about potential errors or consequences.

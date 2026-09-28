@@ -7,7 +7,7 @@ description: Import data from Excel and CSV files into time cockpit. Learn about
 In Version 1.10 of time cockpit we have introduced an importer module that is capable of importing data from excel and CSV files.
 
 > [!TIP]
-> Migrating from Excel? Read our comprehensive [Excel to time cockpit migration guide](https://www.timecockpit.com/blog/project-time-tracking-excel-migration-guide/) and learn about time cockpit's [integration capabilities](https://www.timecockpit.com/features/integration/).
+> Migrating from Excel? Read our comprehensive [Excel to time cockpit migration guide](https://www.timecockpit.com/blog/project-time-tracking-excel-migration-guide/) and learn about time cockpit's [integration capabilities](https://www.timecockpit.com/time-tracking-integration-web-api/).
 
 Often it is necessary to import data from external sources into time cockpit. Use cases include importing a list of projects or customers, time sheet entries from previous time tracking solutions or from an external contractor not tracking time sheet entries with time cockpit.
 

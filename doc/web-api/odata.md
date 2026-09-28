@@ -6,11 +6,11 @@ description: Learn how to use time cockpit's OData endpoint to query, insert, up
 
 The [Open Data Protocol (OData)](http://www.odata.org/) is a web service protocol for data exchange. It supports filtered queries, metadata reflection, and data manipulation (i.e. insert, update, delete). 
 
-Time cockpit provides an OData endpoint exposing model and data while including individual data model configurations. OData can be consumed via client applications (e.g. [PowerBI](https://www.microsoft.com/en-us/power-platform/products/power-bi), [Excel](http://www.timecockpit.com/blog/2014/04/29/Your-Data-in-a-Geographical-Context), [LINQPad](https://www.linqpad.net/)) and various programming languages (e.g. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), [TypeScript](http://jaystack.com/blog/typescript-meets-odata-with-the-help-of-jaydata-and-jaysvcutil), [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)).
+Time cockpit provides an OData endpoint exposing model and data while including individual data model configurations. OData can be consumed via client applications (e.g. [PowerBI](https://www.microsoft.com/en-us/power-platform/products/power-bi), Excel, [LINQPad](https://www.linqpad.net/)) and various programming languages (e.g. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), TypeScript, [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)).
 
 ## Service Endpoint
 
-The address of our OData endpoint is <https://api.timecockpit.com/odata>.
+The address of our OData endpoint is `https://api.timecockpit.com/odata`.
 
 ## Authentication
 
@@ -78,7 +78,7 @@ using (var httpClient = new HttpClient())
 
 ## Example Query: Get All Countries
 
-The following example shows how to query all items of the entity type APP_Country. Using HTTP GET on the corresponding entity set results in an unfiltered query. The sample uses token authentication and the response contains a collection of four countries. Note that the result is encoded as [JSON](http://www.json.org/) and contains some [OData-specific information](http://www.odata.org/documentation/odata-version-2-0/json-format/).
+The following example shows how to query all items of the entity type APP_Country. Using HTTP GET on the corresponding entity set results in an unfiltered query. The sample uses token authentication and the response contains a collection of four countries. Note that the result is encoded as [JSON](https://www.json.org/) and contains some [OData-specific information](http://www.odata.org/documentation/odata-version-2-0/json-format/).
 
 ### Request
 

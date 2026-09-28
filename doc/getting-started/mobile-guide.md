@@ -9,7 +9,7 @@ keywords: [mobile time tracking, responsive time tracking, track time on phone, 
 Use time cockpit on any mobile device through your web browser. The responsive web client adapts to smartphones and tablets, enabling on-the-go time tracking.
 
 > [!TIP]
-> **Looking for mobile time tracking?** Time cockpit's web client provides responsive, mobile-friendly access without requiring a native app. Learn more about [modern time tracking features](https://www.timecockpit.com/features/time-tracking-calendar/).
+> **Looking for mobile time tracking?** Time cockpit's web client provides responsive, mobile-friendly access without requiring a native app. Learn more about [modern time tracking features](https://www.timecockpit.com/time-tracking-calendar/).
 
 ## Overview
 

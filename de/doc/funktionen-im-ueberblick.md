@@ -10,7 +10,7 @@ en_page: doc/features-overview.md
 Entdecken Sie den umfassenden Funktionsumfang von time cockpit, geordnet nach Bereichen. Zu jeder Funktion finden Sie ausführliche Dokumentation, damit Sie das Beste aus Ihrer Zeiterfassung herausholen.
 
 > [!TIP]
-> **Sie suchen einen geschäftlich orientierten Überblick?** Auf unserer [Funktionsseite](https://www.timecockpit.com/features/) sehen Sie, wie time cockpit konkrete geschäftliche Herausforderungen löst. Diese Seite bietet die ausführliche technische Dokumentation zur Verwendung jeder Funktion.
+> **Sie suchen einen geschäftlich orientierten Überblick?** Auf unserer [Funktionsseite](https://www.timecockpit.com/de/) sehen Sie, wie time cockpit konkrete geschäftliche Herausforderungen löst. Diese Seite bietet die ausführliche technische Dokumentation zur Verwendung jeder Funktion.
 
 ## 📅 Kernfunktionen der Zeiterfassung
 
@@ -22,7 +22,7 @@ Intuitive grafische Oberfläche zur Erfassung der täglichen Arbeitszeiten.
 - **[Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)** - Wiederkehrende Zeitbuchungen automatisieren
 - **[Signale & Aktivitätsdaten](~/doc/zeiterfassungskalender/signale.md)** - Erfasste Aktivitätsdaten anzeigen
 
-**Mehr erfahren:** [Funktionen des Zeiterfassungskalenders](https://www.timecockpit.com/features/time-tracking-calendar/)
+**Mehr erfahren:** [Funktionen des Zeiterfassungskalenders](https://www.timecockpit.com/de/zeiterfassungskalender/)
 
 ### Zugriff & Plattformen
 Erfassen Sie Zeiten überall und auf jedem Gerät.
@@ -45,7 +45,7 @@ Organisieren Sie die Arbeit nach Kunden, Projekten und Tätigkeiten.
 - **[Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)** - Die Projekthierarchie einrichten
 - **[Zeitbuchungen im Projekt](~/doc/projektzeiterfassung/zeitbuchungen.md)** - Projektbezogene Ansichten der Zeiterfassung
 
-**Mehr erfahren:** [Funktionen der projektbezogenen Zeiterfassung](https://www.timecockpit.com/features/project-time-tracking/)
+**Mehr erfahren:** [Funktionen der projektbezogenen Zeiterfassung](https://www.timecockpit.com/de/projektzeiterfassung/)
 
 ### Budget & Rentabilität
 Halten Sie Projekte rentabel und im Budget.
@@ -60,7 +60,7 @@ Halten Sie Projekte rentabel und im Budget.
 - Verrechenbare und nicht verrechenbare Zeit verfolgen
 - Interne Kosten und Kundenverrechnung vergleichen
 
-**Mehr erfahren:** [Projektrentabilität steigern](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) | [Projekt-KPIs verfolgen](https://www.timecockpit.com/blog/project-timetracking-kpis/)
+**Mehr erfahren:** [Projektrentabilität steigern](https://www.timecockpit.com/de/blog/vorteile-projekt-zeiterfassung/) | [Projekt-KPIs verfolgen](https://www.timecockpit.com/de/blog/wichtige-unternehmenskennzahlen-projektzeiterfassung/)
 
 ## 💰 Rechnungslegung & Verrechnung
 
@@ -75,7 +75,7 @@ Machen Sie aus erfassten Zeiten Kundenrechnungen.
 - Manuelle Rechnungserstellung für Fixpreisprojekte
 - Pauschalen und wiederkehrende Verrechnung
 
-**Mehr erfahren:** [Funktionen der Projektverrechnung](https://www.timecockpit.com/features/project-invoicing/) | [Umsatz maximieren](https://www.timecockpit.com/blog/project-time-tracking-revenue/)
+**Mehr erfahren:** [Funktionen der Projektverrechnung](https://www.timecockpit.com/de/projektabrechnung/) | [Umsatz maximieren](https://www.timecockpit.com/de/blog/projektzeiterfassung-umsatz-dienstleister/)
 
 ### Preise & Stundensätze
 Konfigurieren Sie Stundensätze und Preisstrategien.
@@ -105,7 +105,7 @@ Erfassen Sie Arbeitszeiten und Abwesenheiten von Mitarbeitern und stellen Sie di
 - **[Stundenzettel](~/doc/arbeitszeiterfassung/stundenzettel.md)** - Stundenzettel für Mitarbeiter
 - **[Erfassung von Homeoffice](~/doc/arbeitszeiterfassung/homeoffice.md)** - Zeiterfassung bei Remote-Arbeit
 
-**Mehr erfahren:** [Funktionen der Arbeitszeiterfassung](https://www.timecockpit.com/features/employee-time-tracking/)
+**Mehr erfahren:** [Funktionen der Arbeitszeiterfassung](https://www.timecockpit.com/de/arbeitszeiterfassung/)
 
 ### Genehmigungsworkflows
 Strukturierte Genehmigungsprozesse für Abwesenheiten und Zeitbuchungen.
@@ -146,7 +146,7 @@ Vorkonfigurierte Berichte für häufige Auswertungen.
 - Budgetabweichung
 - Umsatzberichte
 
-**Mehr erfahren:** [Funktionen für Berichte & Analysen](https://www.timecockpit.com/features/reporting/)
+**Mehr erfahren:** [Funktionen für Berichte & Analysen](https://www.timecockpit.com/de/projektcontrolling-software/)
 
 ### Eigene Berichte
 Erstellen Sie Berichte, die genau auf Ihre Anforderungen zugeschnitten sind.
@@ -168,7 +168,7 @@ Lassen Sie time cockpit Ihre Computeraktivität automatisch aufzeichnen.
 - **[Computeraktivität](~/doc/signal-tracker/computeraktivitaet.md)** - Tastatur- und Mausaktivität
 - **[Netzwerkverbindungen](~/doc/signal-tracker/netzwerkverbindungen.md)** - Die Netzwerknutzung aufzeichnen
 
-**Mehr erfahren:** [Funktionen der Aktivitätserfassung](https://www.timecockpit.com/features/activity-tracking/)
+**Mehr erfahren:** [Funktionen der Aktivitätserfassung](https://www.timecockpit.com/de/aktivitaeten-aufzeichnen/)
 
 > [!NOTE]
 > Die Signalerfassung erfordert den **Windows-Desktop-Client**. Die erfassten Signale können Sie im Web-Client ansehen.
@@ -182,7 +182,7 @@ Verbinden Sie time cockpit mit externen Systemen.
 - **[Datenexport](~/doc/datenaustausch/export.md)** - Export nach Excel und in andere Formate
 - **[Web API: Überblick](~/doc/web-api/ueberblick.md)** - Programmgesteuerter Datenzugriff
 
-**Mehr erfahren:** [Integrationsfunktionen](https://www.timecockpit.com/features/integration/)
+**Mehr erfahren:** [Integrationsfunktionen](https://www.timecockpit.com/de/zeiterfassung-integration-web-api/)
 
 ### API & Automatisierung
 Integrieren Sie time cockpit in Ihre Abläufe.
@@ -205,7 +205,7 @@ Passen Sie time cockpit an Ihre Geschäftsprozesse an.
 - **[Dashboards anpassen](~/doc/datenmodell-anpassung/dashboard.md)** - Eigene Dashboards erstellen
 - **[Feature Flags](~/doc/datenmodell-anpassung/feature-flags.md)** - Funktionen aktivieren/deaktivieren
 
-**Mehr erfahren:** [Anpassungsmöglichkeiten](https://www.timecockpit.com/features/customization/)
+**Mehr erfahren:** [Anpassungsmöglichkeiten](https://www.timecockpit.com/de/anpassbare-zeiterfassung/)
 
 ### Scripting & Automatisierung
 Automatisieren Sie Geschäftslogik mit Python-Skripten.
@@ -224,7 +224,7 @@ Authentifizierung und Benutzerverwaltung auf Unternehmensniveau.
 - **[Benutzerbereitstellung](~/doc/enterprise/benutzerbereitstellung.md)** - Automatisierte Benutzerverwaltung
 - **[Eigener Hostname](~/doc/enterprise/eigener-hostname.md)** - Eigene URL (z. B. timecockpit.yourcompany.com)
 
-**Mehr erfahren:** [Enterprise-Funktionen](https://www.timecockpit.com/features/enterprise/) | [Sicherheitsfunktionen](https://www.timecockpit.com/features/security/)
+**Mehr erfahren:** [Enterprise-Funktionen](https://www.timecockpit.com/de/enterprise-zeiterfassung/) | [Sicherheitsfunktionen](https://www.timecockpit.com/de/sicherheit-datenschutz/)
 
 ## 🎓 Lernressourcen
 
@@ -334,7 +334,7 @@ Kürzlich hinzugefügte oder deutlich verbesserte Funktionen.
 
 :** [support@timecockpit.com](mailto:support@timecockpit.com)
 - **FAQs:** Siehe die rollenspezifischen FAQ-Seiten oben
-- **Website:** [www.timecockpit.com](https://www.timecockpit.com/)
+- **Website:** [www.timecockpit.com](https://www.timecockpit.com/de/)
 
 ---
 

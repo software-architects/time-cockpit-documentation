@@ -7,7 +7,7 @@ description: "time cockpit's signal trackers record PC activity such as active w
 Time cockpit contains a number of signal trackers, which track you activities on your PC. The tracked activities are called signals in time cockpit. They will be displayed in the graphical time sheet calendar to make booking your time easier.
 
 > [!TIP]
-> Learn how [automatic activity tracking](https://www.timecockpit.com/features/activity-tracking/) helps you remember what you worked on throughout the day, making time tracking effortless and accurate.
+> Learn how [automatic activity tracking](https://www.timecockpit.com/activity-tracking/) helps you remember what you worked on throughout the day, making time tracking effortless and accurate.
 
 Time cockpit contains the following signal trackers:
 

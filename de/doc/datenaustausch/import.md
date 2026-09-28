@@ -8,7 +8,7 @@ en_page: doc/data-exchange/import.md
 Mit Version 1.10 von time cockpit haben wir ein Importmodul eingeführt, das Daten aus Excel- und CSV-Dateien importieren kann.
 
 > [!TIP]
-> Sie steigen von Excel um? Lesen Sie unseren ausführlichen [Leitfaden für die Migration von Excel zu time cockpit](https://www.timecockpit.com/blog/project-time-tracking-excel-migration-guide/) und erfahren Sie mehr über die [Integrationsmöglichkeiten](https://www.timecockpit.com/features/integration/) von time cockpit.
+> Sie steigen von Excel um? Lesen Sie unseren ausführlichen [Leitfaden für die Migration von Excel zu time cockpit](https://www.timecockpit.com/de/blog/projektzeiterfassung-excel-umstieg-leitfaden/) und erfahren Sie mehr über die [Integrationsmöglichkeiten](https://www.timecockpit.com/de/zeiterfassung-integration-web-api/) von time cockpit.
 
 Häufig müssen Daten aus externen Quellen in time cockpit importiert werden. Beispiele sind der Import einer Liste von Projekten oder Kunden, von Zeitbuchungen aus früheren Zeiterfassungslösungen oder von einem externen Auftragnehmer, der seine Zeiten nicht mit time cockpit erfasst.
 

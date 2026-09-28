@@ -10,7 +10,7 @@ en_page: doc/employee-time-tracking/approval-workflows.md
 Richten Sie strukturierte Genehmigungsworkflows für Abwesenheiten, Urlaubsanträge, Krankenstände und Zeitbuchungen ein. Stellen Sie die Einhaltung von Vorgaben sicher, verbessern Sie die Planbarkeit und vereinfachen Sie Genehmigungsprozesse mit rollenbasierten Berechtigungen und automatischen Benachrichtigungen.
 
 > [!TIP]
-> **Möchten Sie die Abwesenheitsverwaltung vereinfachen?** Erfahren Sie, wie Ihnen die [Funktionen zur Arbeitszeiterfassung](https://www.timecockpit.com/features/employee-time-tracking/) von time cockpit helfen, Abwesenheiten, Überstunden und Arbeitszeitregelungen effizient zu verwalten.
+> **Möchten Sie die Abwesenheitsverwaltung vereinfachen?** Erfahren Sie, wie Ihnen die [Funktionen zur Arbeitszeiterfassung](https://www.timecockpit.com/de/arbeitszeiterfassung/) von time cockpit helfen, Abwesenheiten, Überstunden und Arbeitszeitregelungen effizient zu verwalten.
 
 ## Überblick
 

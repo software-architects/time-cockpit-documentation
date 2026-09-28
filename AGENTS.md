@@ -46,7 +46,7 @@ CI is the classic (non-YAML) Azure DevOps build pipeline `TimeCockpit.Documentat
 - Pages under `doc/mcp/` carry a "Preliminary documentation" warning banner. Keep it until the feature is released.
 - Videos are consent-gated. Never paste a raw YouTube/Vimeo iframe. Use `<div class="tc-video" data-youtube="ID" data-title="..." data-poster="images/video-posters/ID.jpg"></div>` (or `data-vimeo="ID"`); `tctemplate/public/main.js` renders a local poster/placeholder until the visitor accepts "External Media" in the cookie banner. Store posters locally, never link a third-party thumbnail.
 - Privacy: Google Analytics is loaded only after consent (Silktide banner configured in `tctemplate/layout/_master.tmpl`); Simple Analytics is cookieless and always on. Do not add other third-party scripts, fonts or embeds without a consent gate.
-- Links to the marketing site are absolute (`https://www.timecockpit.com/features/...`, `https://www.timecockpit.com/blog/...`). Verify the slug exists before linking.
+- Links to the marketing site are absolute (`https://www.timecockpit.com/project-time-tracking/`, `https://www.timecockpit.com/blog/...`); German pages link the German marketing page (`/de/...`). The old `/features/...` URLs and dated blog posts no longer exist. Verify the slug in `https://www.timecockpit.com/sitemap-0.xml` before linking; verified slugs are listed in `specs/ai-generated-content.md`.
 - UI navigation paths follow the real app modules: "Management" (not "Data Exchange"), "User" (not "Employee Time Tracking"). See `specs/ai-generated-content.md`.
 
 ## German documentation

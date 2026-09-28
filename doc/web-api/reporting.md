@@ -15,11 +15,11 @@ Sometimes it is necessary to generate time cockpit reports programmatically. For
 
 ## Service Endpoint
 
-The address of our query endpoint is <https://api.timecockpit.com/report/show>. You can use the `format` url parameter to get different formats of the report:
+The address of our query endpoint is `https://api.timecockpit.com/report/show`. You can use the `format` url parameter to get different formats of the report:
 
-- PDF: https://api.timecockpit.com/report/show/?**format=pdf**
-- Word: https://api.timecockpit.com/report/show/?**format=wordopenxml**
-- Excel: https://api.timecockpit.com/report/show/?**format=excelopenxml**
+- PDF: `https://api.timecockpit.com/report/show/?format=pdf`
+- Word: `https://api.timecockpit.com/report/show/?format=wordopenxml`
+- Excel: `https://api.timecockpit.com/report/show/?format=excelopenxml`
 
 ## Authentication
 

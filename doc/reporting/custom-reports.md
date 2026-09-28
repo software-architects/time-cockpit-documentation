@@ -7,7 +7,7 @@ description: Create and integrate custom SSRS reports in time cockpit. Download 
 In addition to generated printable reports, custom reports can be added to a time cockpit list. The custom reports appears next to the standard **Print View** button. In the following chapter describes the workflow to integrate custom reports with your existing time cockpit lists.
 
 > [!NOTE]
-> In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116). You can find a detail description how to do that at [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit).
+> In this article, we would like to show you how to use the reporting features in time cockpit. However, the article does not explain how to build your own custom reports in [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116).
 
 ## Download Report Definition
 
@@ -19,7 +19,7 @@ From there, start changing the report to your likings. To edit an .rdl file usin
 
 ## Customize Report
 
-How to use [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) is not in the scope of this article. Please find detailed instructions on how to create custom report in this video: [Building Custom Reports](https://www.timecockpit.com/blog/2014/02/27/Building-Custom-Reports-in-Time-Cockpit). There you can also find an extensive slide deck on [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) in general.
+How to use [Reporting Services (SSRS)](http://msdn.microsoft.com/de-de/library/ms159106.aspx) is not in the scope of this article.
 
 ## Test Report
 

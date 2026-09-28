@@ -8,7 +8,7 @@ Time cockpit offers a web-based API. HTTP, REST and JSON can be used to access a
 
 ## Service Endpoint
 
-The address of our web API is <https://api.timecockpit.com>. It is only accessible via HTTPS and with valid authentication.
+The address of our web API is `https://api.timecockpit.com`. It is only accessible via HTTPS and with valid authentication.
 
 ## Authentication
 

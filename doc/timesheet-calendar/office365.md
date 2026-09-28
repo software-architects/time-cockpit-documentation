@@ -9,7 +9,7 @@ keywords: [Office 365 integration, Outlook integration, calendar sync, email syn
 Connect time cockpit with your Office 365 account to display Outlook appointments and sent emails directly in your time sheet calendar, providing a holistic view of your workday.
 
 > [!TIP]
-> **Want to streamline your time tracking?** Office 365 integration helps you track time more accurately by syncing your calendar and emails. Learn more about [time tracking integrations](https://www.timecockpit.com/features/integration/).
+> **Want to streamline your time tracking?** Office 365 integration helps you track time more accurately by syncing your calendar and emails. Learn more about [time tracking integrations](https://www.timecockpit.com/time-tracking-integration-web-api/).
 
 ## Overview
 
@@ -257,7 +257,7 @@ Time cockpit will no longer display appointments or emails.
 - [Employee FAQ](../employee-faq.md) - Daily time entry questions
 
 **Website Resources:**
-- [Integration Features](https://www.timecockpit.com/features/integration/) - Overview of time cockpit integrations
+- [Integration Features](https://www.timecockpit.com/time-tracking-integration-web-api/) - Overview of time cockpit integrations
 
 ---
 

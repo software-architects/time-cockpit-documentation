@@ -9,7 +9,7 @@ keywords: [time cockpit features, feature overview, capabilities, time tracking 
 Explore time cockpit's comprehensive feature set organized by capability. Find detailed documentation for each feature to get the most out of your time tracking.
 
 > [!TIP]
-> **Want a business-focused overview?** Visit our [features page](https://www.timecockpit.com/features/) to see how time cockpit solves specific business challenges. This page provides detailed technical documentation for using each feature.
+> **Want a business-focused overview?** Visit our [features page](https://www.timecockpit.com/) to see how time cockpit solves specific business challenges. This page provides detailed technical documentation for using each feature.
 
 ## 📅 Core Time Tracking
 
@@ -21,7 +21,7 @@ Intuitive graphical interface for tracking daily working hours.
 - **[Timesheet Templates](timesheet-calendar/timesheet-templates.md)** - Automate recurring time entries
 - **[Signals & Activity Data](timesheet-calendar/signals.md)** - View captured activity data
 
-**Learn more:** [Time Tracking Calendar features](https://www.timecockpit.com/features/time-tracking-calendar/)
+**Learn more:** [Time Tracking Calendar features](https://www.timecockpit.com/time-tracking-calendar/)
 
 ### Access & Platforms
 Track time anywhere, on any device.
@@ -44,7 +44,7 @@ Organize work by customers, projects, and tasks.
 - **[Customers, Projects & Tasks](project-time-tracking/customer-project-task.md)** - Setting up project hierarchy
 - **[Project Time Sheets](project-time-tracking/timesheet.md)** - Project-specific time tracking views
 
-**Learn more:** [Project Time Tracking features](https://www.timecockpit.com/features/project-time-tracking/)
+**Learn more:** [Project Time Tracking features](https://www.timecockpit.com/project-time-tracking/)
 
 ### Budget & Profitability
 Keep projects profitable and on budget.
@@ -59,7 +59,7 @@ Keep projects profitable and on budget.
 - Track billable vs. non-billable time
 - Analyze internal costs vs. customer billing
 
-**Learn more:** [Boost project profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) | [Track project KPIs](https://www.timecockpit.com/blog/project-timetracking-kpis/)
+**Learn more:** [Boost project profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) | [Track project KPIs](https://www.timecockpit.com/blog/key-business-kpis-project-time-tracking/)
 
 ## 💰 Invoicing & Billing
 
@@ -74,7 +74,7 @@ Convert tracked time into customer invoices.
 - Manual invoice creation for fixed-price projects
 - Retainer and recurring billing
 
-**Learn more:** [Project Invoicing features](https://www.timecockpit.com/features/project-invoicing/) | [Maximize revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue/)
+**Learn more:** [Project Invoicing features](https://www.timecockpit.com/project-invoicing/) | [Maximize revenue](https://www.timecockpit.com/blog/project-time-tracking-revenue-service-providers/)
 
 ### Pricing & Rates
 Configure billing rates and pricing strategies.
@@ -104,7 +104,7 @@ Track employee hours, absences, and compliance.
 - **[Time Report](employee-time-tracking/time-report.md)** - Employee time reporting
 - **[Work from Home Tracking](employee-time-tracking/work-from-home.md)** - Remote work time tracking
 
-**Learn more:** [Employee Time Tracking features](https://www.timecockpit.com/features/employee-time-tracking/)
+**Learn more:** [Employee Time Tracking features](https://www.timecockpit.com/employee-time-tracking/)
 
 ### Approval Workflows
 Structured approval processes for absences and timesheets.
@@ -145,7 +145,7 @@ Pre-configured reports for common analysis needs.
 - Budget variance
 - Revenue reports
 
-**Learn more:** [Reporting & Analytics features](https://www.timecockpit.com/features/reporting/)
+**Learn more:** [Reporting & Analytics features](https://www.timecockpit.com/project-time-tracking/)
 
 ### Custom Reports
 Create tailored reports for your specific needs.
@@ -167,7 +167,7 @@ Let time cockpit track your computer activity automatically.
 - **[Computer Activity](signal-tracker/computer-activity.md)** - Keyboard/mouse activity
 - **[Network Connections](signal-tracker/network-connections.md)** - Track network usage
 
-**Learn more:** [Activity Tracking features](https://www.timecockpit.com/features/activity-tracking/)
+**Learn more:** [Activity Tracking features](https://www.timecockpit.com/activity-tracking/)
 
 > [!NOTE]
 > Signal tracking requires the **Windows desktop client**. View captured signals in the web client.
@@ -181,7 +181,7 @@ Connect time cockpit with external systems.
 - **[Data Export](data-exchange/export.md)** - Export to Excel and other formats
 - **[Web API Overview](web-api/overview.md)** - Programmatic data access
 
-**Learn more:** [Integration features](https://www.timecockpit.com/features/integration/)
+**Learn more:** [Integration features](https://www.timecockpit.com/time-tracking-integration-web-api/)
 
 ### API & Automation
 Integrate time cockpit with your workflow.
@@ -204,7 +204,7 @@ Adapt time cockpit to your business processes.
 - **[Dashboard Customization](data-model-customization/dashboard.md)** - Build custom dashboards
 - **[Feature Flags](data-model-customization/feature-flags.md)** - Enable/disable features
 
-**Learn more:** [Customization features](https://www.timecockpit.com/features/customization/)
+**Learn more:** [Customization features](https://www.timecockpit.com/customizable-time-tracking/)
 
 ### Scripting & Automation
 Automate business logic with Python scripts.
@@ -223,7 +223,7 @@ Enterprise-grade authentication and user management.
 - **[User Provisioning](enterprise/user-provisioning.md)** - Automated user management
 - **[Custom Hostname](enterprise/custom-hostname.md)** - Branded URL (e.g., timecockpit.yourcompany.com)
 
-**Learn more:** [Enterprise features](https://www.timecockpit.com/features/enterprise/) | [Security features](https://www.timecockpit.com/features/security/)
+**Learn more:** [Enterprise features](https://www.timecockpit.com/enterprise-time-tracking/) | [Security features](https://www.timecockpit.com/security-data-protection/)
 
 ## 🎓 Learning Resources
 

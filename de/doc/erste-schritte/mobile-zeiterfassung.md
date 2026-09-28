@@ -10,7 +10,7 @@ en_page: doc/getting-started/mobile-guide.md
 Verwenden Sie time cockpit auf jedem mobilen Gerät über Ihren Webbrowser. Der responsive Web-Client passt sich an Smartphones und Tablets an und ermöglicht so die Zeiterfassung unterwegs.
 
 > [!TIP]
-> **Sie suchen eine mobile Zeiterfassung?** Der Web-Client von time cockpit bietet einen responsiven, mobilfreundlichen Zugriff, ohne dass Sie eine native App benötigen. Erfahren Sie mehr über [moderne Funktionen für die Zeiterfassung](https://www.timecockpit.com/features/time-tracking-calendar/).
+> **Sie suchen eine mobile Zeiterfassung?** Der Web-Client von time cockpit bietet einen responsiven, mobilfreundlichen Zugriff, ohne dass Sie eine native App benötigen. Erfahren Sie mehr über [moderne Funktionen für die Zeiterfassung](https://www.timecockpit.com/de/zeiterfassungskalender/).
 
 ## Überblick
 
@@ -506,7 +506,7 @@ Die neuesten mobilen Verbesserungen finden Sie in den [Release Notes](~/doc/rele
 ## Siehe auch
 
 **Ressourcen der Community:**
-- Blog: [Bewährte Vorgehensweisen für die mobile Zeiterfassung](https://www.timecockpit.com/blog/) (falls verfügbar)
+- Blog: [Bewährte Vorgehensweisen für die mobile Zeiterfassung](https://www.timecockpit.com/de/blog/) (falls verfügbar)
 - Support: [support@timecockpit.com](mailto:support@timecockpit.com) für Fragen zur mobilen Nutzung
 
 ---

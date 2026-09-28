@@ -9,7 +9,7 @@ Neben dem [OData](~/doc/web-api/odata-endpunkt.md)-Endpunkt für CRUD-Operatione
 
 ## Service-Endpunkt
 
-Die Adresse unseres Query-Endpunkts ist <https://api.timecockpit.com/select>.
+Die Adresse unseres Query-Endpunkts ist `https://api.timecockpit.com/select`.
 
 ## Authentifizierung
 

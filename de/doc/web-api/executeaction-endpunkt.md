@@ -8,7 +8,7 @@ en_page: doc/web-api/executeaction.md
 Zusätzlich zu Abfragen und CRUD-Operationen können Sie über die Web API von time cockpit auch Ihre eigene Geschäftslogik ausführen. In time cockpit heißt eigene Geschäftslogik [Aktion](~/doc/scripting/aktionen.md). Ähnlich wie [Skriptlisten](~/doc/datenmodell-anpassung/liste.md) in time cockpit sind Aktionen **IronPython**-Code, der in Ihrer time cockpit Instanz läuft. Im Gegensatz zu Skriptlisten verändern Aktionen time cockpit üblicherweise auf die eine oder andere Weise.
 
 > [!NOTE]
-> Da eine Aktion Code ist, der auf unserer Infrastruktur läuft, muss sie von software architects geprüft und digital [signiert](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) werden. Diese Maßnahme schützt unsere Kunden vor dem [Noisy-Neighbor-Problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+> Da eine Aktion Code ist, der auf unserer Infrastruktur läuft, muss sie von software architects geprüft und digital signiert werden. Diese Maßnahme schützt unsere Kunden vor dem [Noisy-Neighbor-Problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Anwendungsfälle
 
@@ -18,7 +18,7 @@ Zusätzlich zu Abfragen und CRUD-Operationen können Sie über die Web API von t
 
 ## Service-Endpunkt
 
-Die Adresse unseres Query-Endpunkts ist <https://api.timecockpit.com/action>. Beispiel: `https://api.timecockpit.com/action/USR_SetHomeOfficeFlag`
+Die Adresse unseres Query-Endpunkts ist `https://api.timecockpit.com/action`. Beispiel: `https://api.timecockpit.com/action/USR_SetHomeOfficeFlag`
 
 ## Authentifizierung
 

@@ -10,7 +10,7 @@ en_page: doc/project-time-tracking/budget-tracking.md
 Überwachen Sie Projektbudgets in Echtzeit, vergleichen Sie tatsächliche Kosten mit verrechenbaren Beträgen und prognostizieren Sie den Projektabschluss, um die Rentabilität zu sichern und Budgetüberschreitungen zu vermeiden.
 
 > [!TIP]
-> **Sie möchten die Rentabilität Ihrer Projekte maximieren?** Erfahren Sie, wie time cockpit Ihnen hilft, [die Projektrentabilität zu steigern](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) und [die wichtigsten Projekt-KPIs](https://www.timecockpit.com/blog/project-timetracking-kpis/) zu verfolgen. Entdecken Sie unsere [Funktionen für die projektbezogene Zeiterfassung](https://www.timecockpit.com/features/project-time-tracking/).
+> **Sie möchten die Rentabilität Ihrer Projekte maximieren?** Erfahren Sie, wie time cockpit Ihnen hilft, [die Projektrentabilität zu steigern](https://www.timecockpit.com/de/blog/vorteile-projekt-zeiterfassung/) und [die wichtigsten Projekt-KPIs](https://www.timecockpit.com/de/blog/wichtige-unternehmenskennzahlen-projektzeiterfassung/) zu verfolgen. Entdecken Sie unsere [Funktionen für die projektbezogene Zeiterfassung](https://www.timecockpit.com/de/projektzeiterfassung/).
 
 ## Überblick
 

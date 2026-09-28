@@ -7,11 +7,11 @@ en_page: doc/web-api/odata.md
 
 Das [Open Data Protocol (OData)](http://www.odata.org/) ist ein Webservice-Protokoll für den Datenaustausch. Es unterstützt gefilterte Abfragen, Metadaten-Reflection und Datenmanipulation (d. h. Einfügen, Ändern, Löschen). 
 
-Time cockpit bietet einen OData-Endpunkt, der Modell und Daten einschließlich individueller Konfigurationen des Datenmodells bereitstellt. OData kann von Client-Anwendungen (z. B. [PowerBI](https://www.microsoft.com/en-us/power-platform/products/power-bi), [Excel](http://www.timecockpit.com/blog/2014/04/29/Your-Data-in-a-Geographical-Context), [LINQPad](https://www.linqpad.net/)) und aus verschiedenen Programmiersprachen (z. B. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), [TypeScript](http://jaystack.com/blog/typescript-meets-odata-with-the-help-of-jaydata-and-jaysvcutil), [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)) genutzt werden.
+Time cockpit bietet einen OData-Endpunkt, der Modell und Daten einschließlich individueller Konfigurationen des Datenmodells bereitstellt. OData kann von Client-Anwendungen (z. B. [PowerBI](https://www.microsoft.com/en-us/power-platform/products/power-bi), Excel, [LINQPad](https://www.linqpad.net/)) und aus verschiedenen Programmiersprachen (z. B. [C#](http://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api/calling-an-odata-service-from-a-net-client), TypeScript, [Java](http://restlet.org/learn/guide/2.2/extensions/odata/)) genutzt werden.
 
 ## Service-Endpunkt
 
-Die Adresse unseres OData-Endpunkts ist <https://api.timecockpit.com/odata>.
+Die Adresse unseres OData-Endpunkts ist `https://api.timecockpit.com/odata`.
 
 ## Authentifizierung
 
@@ -79,7 +79,7 @@ using (var httpClient = new HttpClient())
 
 ## Beispielabfrage: Alle Länder abrufen
 
-Das folgende Beispiel zeigt, wie Sie alle Elemente des Entitätstyps APP_Country abfragen. Ein HTTP GET auf das entsprechende Entity Set ergibt eine ungefilterte Abfrage. Das Beispiel verwendet Token-Authentifizierung, und die Antwort enthält eine Sammlung von vier Ländern. Beachten Sie, dass das Ergebnis als [JSON](http://www.json.org/) kodiert ist und einige [OData-spezifische Informationen](http://www.odata.org/documentation/odata-version-2-0/json-format/) enthält.
+Das folgende Beispiel zeigt, wie Sie alle Elemente des Entitätstyps APP_Country abfragen. Ein HTTP GET auf das entsprechende Entity Set ergibt eine ungefilterte Abfrage. Das Beispiel verwendet Token-Authentifizierung, und die Antwort enthält eine Sammlung von vier Ländern. Beachten Sie, dass das Ergebnis als [JSON](https://www.json.org/) kodiert ist und einige [OData-spezifische Informationen](http://www.odata.org/documentation/odata-version-2-0/json-format/) enthält.
 
 ### Anfrage
 

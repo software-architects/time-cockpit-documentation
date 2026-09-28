@@ -8,7 +8,7 @@ en_page: doc/timesheet-calendar/calendar.md
 Der Zeiterfassungskalender ist das zentrale Werkzeug, um in time cockpit Zeitbuchungen anzulegen. In diesem Abschnitt beschreiben wir die wichtigsten Bereiche des Zeiterfassungskalenders. Wie Sie Ihre Zeitbuchungen anlegen und bearbeiten, lesen Sie unter [Arbeiten mit Zeitbuchungen](~/doc/zeiterfassungskalender/arbeiten-mit-zeitbuchungen.md).
 
 > [!TIP]
-> Möchten Sie den Kalender in Aktion sehen? Auf unserer [Funktionsseite zum Zeiterfassungskalender](https://www.timecockpit.com/features/time-tracking-calendar/) finden Sie einen interaktiven Überblick und Videos.
+> Möchten Sie den Kalender in Aktion sehen? Auf unserer [Funktionsseite zum Zeiterfassungskalender](https://www.timecockpit.com/de/zeiterfassungskalender/) finden Sie einen interaktiven Überblick und Videos.
 
 ## Elemente des Zeiterfassungskalenders
 

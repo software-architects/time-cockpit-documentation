@@ -16,11 +16,11 @@ Manchmal ist es notwendig, Berichte von time cockpit programmgesteuert zu erzeug
 
 ## Service-Endpunkt
 
-Die Adresse unseres Query-Endpunkts ist <https://api.timecockpit.com/report/show>. Mit dem URL-Parameter `format` können Sie den Bericht in verschiedenen Formaten abrufen:
+Die Adresse unseres Query-Endpunkts ist `https://api.timecockpit.com/report/show`. Mit dem URL-Parameter `format` können Sie den Bericht in verschiedenen Formaten abrufen:
 
-- PDF: https://api.timecockpit.com/report/show/?**format=pdf**
-- Word: https://api.timecockpit.com/report/show/?**format=wordopenxml**
-- Excel: https://api.timecockpit.com/report/show/?**format=excelopenxml**
+- PDF: `https://api.timecockpit.com/report/show/?format=pdf`
+- Word: `https://api.timecockpit.com/report/show/?format=wordopenxml`
+- Excel: `https://api.timecockpit.com/report/show/?format=excelopenxml`
 
 ## Authentifizierung
 

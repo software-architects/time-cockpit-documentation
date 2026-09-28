@@ -8,7 +8,7 @@ en_page: doc/signal-tracker/overview.md
 time cockpit enthält eine Reihe von Signal Trackern, die Ihre Aktivitäten auf Ihrem PC aufzeichnen. Die aufgezeichneten Aktivitäten heißen in time cockpit Signale. Sie werden im grafischen Zeiterfassungskalender angezeigt, damit Sie Ihre Zeit einfacher buchen können.
 
 > [!TIP]
-> Erfahren Sie, wie Ihnen die [automatische Aktivitätserfassung](https://www.timecockpit.com/features/activity-tracking/) hilft, sich daran zu erinnern, woran Sie im Laufe des Tages gearbeitet haben, und die Zeiterfassung mühelos und genau macht.
+> Erfahren Sie, wie Ihnen die [automatische Aktivitätserfassung](https://www.timecockpit.com/de/aktivitaeten-aufzeichnen/) hilft, sich daran zu erinnern, woran Sie im Laufe des Tages gearbeitet haben, und die Zeiterfassung mühelos und genau macht.
 
 time cockpit enthält die folgenden Signal Tracker:
 

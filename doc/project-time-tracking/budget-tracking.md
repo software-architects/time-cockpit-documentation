@@ -9,7 +9,7 @@ keywords: [project budget tracking, budget monitoring, cost tracking, profitabil
 Monitor project budgets in real-time, track actual costs versus billable amounts, and forecast project completion to ensure profitability and prevent budget overruns.
 
 > [!TIP]
-> **Want to maximize project profitability?** Learn how time cockpit helps you [boost project profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) and track [essential project KPIs](https://www.timecockpit.com/blog/project-timetracking-kpis/). Explore our [Project Time Tracking features](https://www.timecockpit.com/features/project-time-tracking/).
+> **Want to maximize project profitability?** Learn how time cockpit helps you [boost project profitability](https://www.timecockpit.com/blog/benefits-of-project-time-tracking/) and track [essential project KPIs](https://www.timecockpit.com/blog/key-business-kpis-project-time-tracking/). Explore our [Project Time Tracking features](https://www.timecockpit.com/project-time-tracking/).
 
 ## Overview
 

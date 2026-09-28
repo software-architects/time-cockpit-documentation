@@ -14,7 +14,7 @@ Bei Skriptlisten ist die Datenquelle einer Liste ein **Iron Python**-Skript. Wei
 Sowohl TCQL-Listen als auch Skriptlisten können in der Benutzeroberfläche von time cockpit referenziert, aber auch über die Web API von time cockpit abgefragt werden.
 
 > [!NOTE]
-> Da eine Skriptliste Code ist, der auf unserer Infrastruktur läuft, muss sie von software architects geprüft und digital [signiert](https://www.timecockpit.com/blog/2014/11/27/Why-You-Need-to-Sign-Your-Custom-Code) werden. Diese Maßnahme schützt unsere Kunden vor dem [Noisy-Neighbor-Problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
+> Da eine Skriptliste Code ist, der auf unserer Infrastruktur läuft, muss sie von software architects geprüft und digital signiert werden. Diese Maßnahme schützt unsere Kunden vor dem [Noisy-Neighbor-Problem](https://learn.microsoft.com/en-us/azure/architecture/antipatterns/noisy-neighbor/noisy-neighbor).
 
 ## Anwendungsfälle
 
@@ -24,7 +24,7 @@ Sowohl TCQL-Listen als auch Skriptlisten können in der Benutzeroberfläche von 
 
 ## Service-Endpunkt
 
-Die Adresse unseres Query-Endpunkts ist <https://api.timecockpit.com/executelist>. Mit dem URL-Parameter `top` können Sie die Ergebnismenge begrenzen. Beispiel: `https://api.timecockpit.com/executelist/APP_DefaultTimeReportList?$top=301`
+Die Adresse unseres Query-Endpunkts ist `https://api.timecockpit.com/executelist`. Mit dem URL-Parameter `top` können Sie die Ergebnismenge begrenzen. Beispiel: `https://api.timecockpit.com/executelist/APP_DefaultTimeReportList?$top=301`
 
 ## Authentifizierung
 

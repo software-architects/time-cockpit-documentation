@@ -9,7 +9,7 @@ keywords: [approval workflow, absence approval, vacation approval, timesheet app
 Implement structured approval workflows for absences, vacation requests, sick leave, and timesheets. Ensure compliance, improve planning visibility, and streamline approval processes with role-based permissions and automatic notifications.
 
 > [!TIP]
-> **Want to streamline absence management?** Learn how time cockpit's [employee time tracking features](https://www.timecockpit.com/features/employee-time-tracking/) help you manage absences, overtime, and working time regulations efficiently.
+> **Want to streamline absence management?** Learn how time cockpit's [employee time tracking features](https://www.timecockpit.com/employee-time-tracking/) help you manage absences, overtime, and working time regulations efficiently.
 
 ## Overview
 

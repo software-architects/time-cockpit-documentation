@@ -8,7 +8,7 @@ Besides offering an [OData](odata.md) endpoint for CRUD operations, time cockpit
 
 ## Service Endpoint
 
-The address of our query endpoint is <https://api.timecockpit.com/select>.
+The address of our query endpoint is `https://api.timecockpit.com/select`.
 
 ## Authentication
 

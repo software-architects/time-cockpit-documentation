@@ -78,4 +78,4 @@ Zusätzlich bietet time cockpit eine leistungsfähige Web API, mit der Sie alle 
 
 In time cockpit können Sie Sandbox-Umgebungen anlegen, um Ihre Änderungen zu testen, bevor Sie sie in Ihrer Produktivumgebung umsetzen.
 
-Sandbox-Umgebungen sind im Wesentlichen Kopien Ihrer Produktivumgebung, in denen Sie neue Funktionen, Workflows und Konfigurationen testen können, ohne negative Auswirkungen auf Ihre Live-Daten zu riskieren. Mit Sandbox-Umgebungen können Sie frei experimentieren und Änderungen vornehmen, ohne sich über mögliche Fehler oder Folgen Gedanken machen zu müssen. Weitere Informationen finden Sie auch unter [Playing in the Sandbox](https://www.timecockpit.com/blog/2016/05/27/Playing-in-the-Sandbox).
+Sandbox-Umgebungen sind im Wesentlichen Kopien Ihrer Produktivumgebung, in denen Sie neue Funktionen, Workflows und Konfigurationen testen können, ohne negative Auswirkungen auf Ihre Live-Daten zu riskieren. Mit Sandbox-Umgebungen können Sie frei experimentieren und Änderungen vornehmen, ohne sich über mögliche Fehler oder Folgen Gedanken machen zu müssen.
