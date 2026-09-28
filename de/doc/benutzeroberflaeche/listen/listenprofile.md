@@ -18,7 +18,7 @@ Die Profilfunktion ergänzt jede Liste in time cockpit um eine zusätzliche Scha
 - Benutzer können Listeneinstellungen anpassen, einschließlich angezeigter Spalten, Spaltenreihenfolge, Gruppierung, Auf- und Zuklappstatus der Gruppierung und Sortierreihenfolge.
 - Profile können benannt werden, damit sie leicht zu erkennen und zu verwalten sind.
 
-<div class="tc-video" data-vimeo="864699078" data-title="Listenprofile anlegen" data-poster="/images/video-posters/864699078.jpg" style="--bs-aspect-ratio: 88.13%"></div>
+<div class="tc-video" data-youtube="LVQhOT_Aq40" data-title="Listenprofile anlegen" data-poster="/images/video-posters/LVQhOT_Aq40.jpg" style="--bs-aspect-ratio: 75%"></div>
 
 ### Profilaktionen
 
