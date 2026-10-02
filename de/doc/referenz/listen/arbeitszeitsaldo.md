@@ -72,9 +72,13 @@ Verwenden Sie diese Liste, wenn Sie den aktuellen Saldo zu einem bestimmten Datu
 - Die Liste ist schreibgeschützt. In der Standardkonfiguration dient sie als Auswertungsliste, nicht als Liste zur Datenpflege.
 - Wenn Sie nachvollziehen müssen, warum sich ein Saldo geändert hat, öffnen Sie die zugehörigen Korrekturen des Arbeitszeitsaldos und vergleichen Sie das Ergebnis mit der Sollarbeitszeit und den erfassten Einträgen des Benutzers.
 
+> [!IMPORTANT]
+> Korrekturen des Arbeitszeitsaldos gelten ab Beginn des angegebenen **Stichtags**. Soll der Saldo zum Ende eines Tages korrigiert werden, verwenden Sie als Stichtag den Folgetag. Um den Saldo zum Ende des 15.07. auf 0 zu setzen, tragen Sie den 16.07. ein. Weitere Beispiele finden Sie in der Anleitung [Überstunden und Urlaub auszahlen](~/doc/erste-schritte/anleitungen/ueberstunden-urlaub-auszahlen.md).
+
 ## Verwandte Seiten
 
 - [Arbeitszeit / Urlaub](~/doc/arbeitszeiterfassung/arbeitszeit.md)
+- [Überstunden und Urlaub auszahlen](~/doc/erste-schritte/anleitungen/ueberstunden-urlaub-auszahlen.md)
 - [Abteilungsleiter-FAQ](~/doc/abteilungsleiter-faq.md)
 - [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md)
 - [Navigation und Zugriffsrechte](~/doc/navigation-und-zugriffsrechte.md)

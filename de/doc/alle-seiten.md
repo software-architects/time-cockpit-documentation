@@ -1,6 +1,6 @@
 ---
 title: Alle Seiten - Index der Dokumentation
-description: "VollstÃ¤ndiger Index der time cockpit Dokumentation: alle Anleitungen, FAQs, Referenzseiten und Release Notes sowie die Namespaces der API-Referenz."
+description: "Vollständiger Index der time cockpit Dokumentation: alle Anleitungen, FAQs, Referenzseiten und Release Notes sowie die Namespaces der API-Referenz."
 en_page: doc/all-pages.md
 ---
 # Alle Seiten

@@ -73,7 +73,8 @@ Use this list if you want the current balance on one specific date. Use **Target
 
 ## Related Pages
 
-- [Working Time / Leave](../../employee-time-tracking/working-time.md)
-- [Department Lead FAQ](../../department-lead-faq.md)
-- [HR Administrator FAQ](../../hr-administrator-faq.md)
-- [Navigation Access Permissions & Menu Structure](../../navigation-access-permissions.md)
+- [Working Time / Leave](~/doc/employee-time-tracking/working-time.md)
+- [Pay Off Overtime/Vacation](~/doc/getting-started/howtos/pay-off-overtime-vacation.md)
+- [Department Lead FAQ](~/doc/department-lead-faq.md)
+- [HR Administrator FAQ](~/doc/hr-administrator-faq.md)
+- [Navigation Access Permissions & Menu Structure](~/doc/navigation-access-permissions.md)

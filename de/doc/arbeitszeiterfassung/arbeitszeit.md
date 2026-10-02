@@ -115,6 +115,9 @@ Bei der Berechnung der Überstunden werden die Arbeitszeitgewichtung und die [in
 > [!NOTE]
 > Bitte beachten Sie, dass die Korrektur des Arbeitszeitsaldos den Überstundenstand zum angegebenen Datum darstellt. Wenn Sie 100 eingeben, bedeutet das, dass der Mitarbeiter zum angegebenen Datum 100 Überstunden hat. Es bedeutet nicht, dass die Überstunden um 100 Stunden verringert oder erhöht werden.
 
+> [!IMPORTANT]
+> Eine Korrektur des Arbeitszeitsaldos gilt ab Beginn des angegebenen **Stichtags**. Soll der Arbeitszeitsaldo zum Ende eines Tages auf einen bestimmten Wert gesetzt werden, verwenden Sie als Stichtag den Folgetag. Um den Saldo zum Ende des 15.07. auf 0 zu setzen, tragen Sie daher den 16.07. als Stichtag ein. Weitere Beispiele finden Sie in der Anleitung [Überstunden und Urlaub auszahlen](~/doc/erste-schritte/anleitungen/ueberstunden-urlaub-auszahlen.md).
+
 In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie die Überstunden mit der Funktion [Overtime](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#overtime) berechnen.
 
 > [!WARNING]

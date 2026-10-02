@@ -114,6 +114,9 @@ There is a menu item **User -> Overtime Corrections** that allows you to manuall
 > [!NOTE]
 > Please note, that the overtime correction represents the number of overtime for the specified date. If you enter 100, that means the employee has 100 hours overtime at the specified date. It does not mean that the number of overtime is reduced or increased by 100 hours.
 
+> [!IMPORTANT]
+> An overtime correction applies from the beginning of its **Effective Date**. To set the overtime balance at the end of a day, use the following calendar day as the **Effective Date**. For example, to set the balance to 0 at the end of July 15, enter July 16 as the effective date. See [Pay Off Overtime/Vacation](~/doc/getting-started/howtos/pay-off-overtime-vacation.md) for more examples.
+
 In [TCQL queries](~/doc/tcql/overview.md) you can calculate the overtime with the function [Overtime](~/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
 
 > [!WARNING]
