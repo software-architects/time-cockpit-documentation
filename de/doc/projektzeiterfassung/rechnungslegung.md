@@ -55,6 +55,18 @@ Ein Artikel besteht aus folgenden Feldern:
 > [!NOTE]
 > time cockpit liefert Artikel für Dienstleistungszeit und Reisezeit mit. Eine Liste Ihrer Artikel finden Sie in Ihrer [Artikelliste](https://web.timecockpit.com/app/lists/entity/APP_Article).
 
+### Einheit
+
+Rechnungspositionen und Artikel verweisen auf eine Maßeinheit. Eine Einheit besteht aus folgenden Feldern:
+
+- **Code:** Ein eindeutiger Code zur Identifikation der Einheit.
+- **Name:** Der Name der Einheit. Er wird in der Spalte Einheit des Rechnungsdokuments gedruckt.
+- **Ausgeblendet:** Gibt an, ob die Einheit in der Combobox ausgeblendet oder sichtbar ist.
+- **E-Rechnungs-Einheitencode:** Der Einheitencode nach UN/ECE Recommendation 20, der in die ZUGFeRD-Daten des Rechnungs-PDFs geschrieben wird, zum Beispiel `HUR` für Stunden, `DAY` für Tage, `KMT` für Kilometer oder `C62` für Stück. Es werden nur Codes dieser Liste akzeptiert, in Großbuchstaben geschrieben. Rechnungspositionen, deren Einheit keinen E-Rechnungs-Einheitencode hat, werden mit `HUR` geschrieben.
+
+> [!NOTE]
+> time cockpit liefert die Einheiten "h" (Code `hour`, E-Rechnungs-Einheitencode `HUR`) und "km" (Code `kilometer`, E-Rechnungs-Einheitencode `KMT`) mit. Wenn Sie eigene Einheiten angelegt haben, prüfen Sie deren E-Rechnungs-Einheitencode in Ihrer [Einheitenliste](https://web.timecockpit.com/app/lists/entity/APP_Unit), bevor Sie elektronische Rechnungen versenden. Einheiten, deren Code bereits ein gültiger UN/ECE-Code war, haben diesen mit dem Release im November 2026 als E-Rechnungs-Einheitencode erhalten; alle anderen Einheiten haben keinen.
+
 ## So erstellen Sie eine Rechnung
 
 Das Standarddatenmodell von time cockpit enthält die Liste [Verwaltung -> Verrechnung -> Nicht verrechnete Zeitbuchungen](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). Diese Liste basiert auf dem Standardablauf der [Zeitbuchungen](https://web.timecockpit.com/app/lists/entity/APP_Timesheet), bietet aber zusätzliche Filter, um zwischen verrechenbaren und noch nicht verrechneten Stunden zu unterscheiden. Außerdem stellt sie die Aktion `Ausgangsrechnung anlegen` bereit, mit der Sie Zeitbuchungen einer Rechnung zuordnen. So erstellen Sie eine Rechnung:

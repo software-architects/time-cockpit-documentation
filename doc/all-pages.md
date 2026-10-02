@@ -218,6 +218,7 @@ Every page of the time cockpit documentation on one page, in the order of the na
 ## Release Notes
 
 - 2026
+  - [November](release-notes/2026-11.md)
   - [October](release-notes/2026-10.md)
   - [September](release-notes/2026-09.md)
   - [June](release-notes/2026-06.md)

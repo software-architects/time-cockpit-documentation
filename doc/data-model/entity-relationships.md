@@ -107,7 +107,9 @@ erDiagram
     APP_Unit {
         guid APP_UnitUuid PK
         string APP_Code
-        string APP_UnitName
+        string APP_Description
+        boolean APP_IsHidden
+        string APP_EInvoiceUnitCode
     }
 
     APP_UserDetail {
@@ -387,8 +389,10 @@ erDiagram
     
     APP_Unit {
         guid APP_UnitUuid PK
-        string APP_Code "e.g., hour, piece, km"
-        string APP_UnitName
+        string APP_Code "e.g., hour, kilometer"
+        string APP_Description "Name"
+        boolean APP_IsHidden
+        string APP_EInvoiceUnitCode "UN/ECE Rec 20, e.g., HUR, KMT"
     }
     
     APP_Country {
