@@ -62,10 +62,22 @@ Rechnungspositionen und Artikel verweisen auf eine Maßeinheit. Eine Einheit bes
 - **Code:** Ein eindeutiger Code zur Identifikation der Einheit.
 - **Name:** Der Name der Einheit. Er wird in der Spalte Einheit des Rechnungsdokuments gedruckt.
 - **Ausgeblendet:** Gibt an, ob die Einheit in der Combobox ausgeblendet oder sichtbar ist.
-- **E-Rechnungs-Einheitencode:** Der Einheitencode nach UN/ECE Recommendation 20, der in die ZUGFeRD-Daten des Rechnungs-PDFs geschrieben wird, zum Beispiel `HUR` für Stunden, `DAY` für Tage, `KMT` für Kilometer oder `C62` für Stück. Es werden nur Codes dieser Liste akzeptiert, in Großbuchstaben geschrieben. Rechnungspositionen, deren Einheit keinen E-Rechnungs-Einheitencode hat, werden mit `HUR` geschrieben.
+- **E-Rechnungs-Einheitencode:** Der Einheitencode nach UN/ECE Recommendation 20, der in die ZUGFeRD-Daten des Rechnungs-PDFs geschrieben wird. Rechnungspositionen, deren Einheit keinen E-Rechnungs-Einheitencode hat, werden mit `HUR` geschrieben. time cockpit akzeptiert folgende Codes, in Großbuchstaben geschrieben:
+
+  | Code | Einheit | Code | Einheit |
+  |---|---|---|---|
+  | `SEC` | Sekunde | `C62` | Einheit |
+  | `MIN` | Minute | `H87` | Stück |
+  | `HUR` | Stunde | `EA` | Je |
+  | `DAY` | Tag | `LS` | Pauschale |
+  | `WEE` | Woche | `SET` | Set |
+  | `MON` | Monat | `KMT` | Kilometer |
+  | `QAN` | Quartal | `MTR` | Meter |
+  | `SAN` | Halbjahr | `P1` | Prozent |
+  | `ANN` | Jahr | | |
 
 > [!NOTE]
-> time cockpit liefert die Einheiten "h" (Code `hour`, E-Rechnungs-Einheitencode `HUR`) und "km" (Code `kilometer`, E-Rechnungs-Einheitencode `KMT`) mit. Wenn Sie eigene Einheiten angelegt haben, prüfen Sie deren E-Rechnungs-Einheitencode in Ihrer [Einheitenliste](https://web.timecockpit.com/app/lists/entity/APP_Unit), bevor Sie elektronische Rechnungen versenden. Einheiten, deren Code bereits ein gültiger UN/ECE-Code war, haben diesen mit dem Release im November 2026 als E-Rechnungs-Einheitencode erhalten; alle anderen Einheiten haben keinen.
+> time cockpit liefert die Einheiten "h" (Code `hour`, E-Rechnungs-Einheitencode `HUR`) und "km" (Code `kilometer`, E-Rechnungs-Einheitencode `KMT`) mit. Wenn Sie eigene Einheiten angelegt haben, prüfen Sie deren E-Rechnungs-Einheitencode in Ihrer [Einheitenliste](https://web.timecockpit.com/app/lists/entity/APP_Unit), bevor Sie elektronische Rechnungen versenden. Einheiten, deren Code bereits einer dieser Codes war, haben diesen mit dem Release im November 2026 als E-Rechnungs-Einheitencode erhalten; alle anderen Einheiten haben keinen.
 
 ## So erstellen Sie eine Rechnung
 
