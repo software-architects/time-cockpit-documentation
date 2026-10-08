@@ -241,3 +241,28 @@ Additionally, <xref:TimeCockpit.Data.DataModel.View.RelationCell>s allow you to 
 ### Other Cell Types
 
 Time cockpit offers some more <xref:TimeCockpit.Data.DataModel.View.Cell>s. You can find all available cell types in the API Documentation(<xref:TimeCockpit.Data.DataModel.View.Cell>).
+
+## Properties for the Web Client
+
+Some properties of forms, lists and cells are only evaluated by the time cockpit web client, for example `ShowNullAs` on a <xref:TimeCockpit.Data.DataModel.View.BoundCell> or `HideSaveButton` on a <xref:TimeCockpit.Data.DataModel.View.Form>. The API documentation marks them with <xref:TimeCockpit.Data.DataModel.View.WebMemberAttribute>.
+
+Write these properties with the `web:` prefix and declare the prefix as ignorable on the root element:
+
+```
+<Form ModelEntityName="APP_Timesheet" web:HideSaveButton="True" xmlns="clr-namespace:TimeCockpit.Data.DataModel.View;assembly=TimeCockpit.Data"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="web" xmlns:web="http://www.timecockpit.com/2016/web/controls">
+  <Tab Header="General">
+    <Section>
+      <SectionColumn>
+        <BoundCell Content="=Current.APP_Billable" web:ShowNullAs="False" />
+      </SectionColumn>
+    </Section>
+  </Tab>
+</Form>
+```
+
+The prefix keeps the markup loadable for desktop clients that do not know these properties. Newer clients also accept the properties without the prefix (`ShowNullAs="False"`, `HideSaveButton="True"` in the example above), but older desktop clients then fail to load the form or list. Use the unprefixed form only when no older desktop client accesses the tenant. If an element carries both forms, the prefixed value is used.
+
+> [!WARNING] Review required: The first time cockpit version that accepts the unprefixed form is not yet fixed.
+
+On a <xref:TimeCockpit.Data.DataModel.View.BoundCell>, properties of a more specific cell type (for example `IsPercent` of a <xref:TimeCockpit.Data.DataModel.View.NumericCell>) still need the prefix, because the web client chooses the specific cell type only at runtime. Use the specific cell type to write them without the prefix.

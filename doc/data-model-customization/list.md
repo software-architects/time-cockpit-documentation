@@ -281,3 +281,9 @@ def actionSample(actionContext):
 
 > [!NOTE]
 > Take a look at [Actions](~/doc/scripting/actions.md) to see how time cockpit actions can be implemented.
+
+## Properties for the Web Client
+
+Lists and their cells also have properties that only the web client evaluates, for example `PageSize` on a <xref:TimeCockpit.Data.DataModel.View.List> or `DisplayStyle` on a <xref:TimeCockpit.Data.DataModel.View.TextCell>. They are written the same way as in forms, see [Properties for the Web Client](form.md#properties-for-the-web-client).
+
+On a list, `web:EditFormName` is an exception: it does not replace `EditFormName`, but overrides it in the web client only. A list can therefore open a different form in the web client than on the desktop.
