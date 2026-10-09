@@ -219,6 +219,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
 ## Release Notes
 
 - 2026
+  - [November](~/doc/release-notes/2026-11.md)
   - [Oktober](~/doc/release-notes/2026-10.md)
   - [September](~/doc/release-notes/2026-09.md)
   - [Juni](~/doc/release-notes/2026-06.md)

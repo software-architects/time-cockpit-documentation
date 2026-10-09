@@ -54,6 +54,30 @@ An article consists of the following fields:
 > [!NOTE]
 > Time cockpit ships articles for service time and travel time. See a list of your articles in your [articles list](https://web.timecockpit.com/app/lists/entity/APP_Article).
 
+### Unit
+
+Invoice items and articles refer to a unit of measurement. A unit consists of the following fields:
+
+- **Code:** A unique code identifier for the unit.
+- **Name:** The name of the unit. It is printed in the unit column of the invoice document.
+- **Hidden:** Indicates whether the unit is hidden or visible in the combobox.
+- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts the following codes, written in capital letters:
+
+  | Code | Unit | Code | Unit |
+  |---|---|---|---|
+  | `SEC` | Second | `C62` | Unit |
+  | `MIN` | Minute | `H87` | Piece |
+  | `HUR` | Hour | `EA` | Each |
+  | `DAY` | Day | `LS` | Lump sum |
+  | `WEE` | Week | `SET` | Set |
+  | `MON` | Month | `KMT` | Kilometer |
+  | `QAN` | Quarter | `MTR` | Meter |
+  | `SAN` | Half year | `P1` | Percent |
+  | `ANN` | Year | | |
+
+> [!NOTE]
+> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was one of these codes received that code as its e-invoice unit code with the November 2026 release; all other units have none.
+
 ## How to Create an Invoice
 
 The time cockpit default data model contains the list [Management -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list is based on the standard [Timesheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) workflow, but adds dedicated filters to distinguish between billable and unbilled hours. It also provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
