@@ -2052,6 +2052,30 @@ An article consists of the following fields:
 > [!NOTE]
 > Time cockpit ships articles for service time and travel time. See a list of your articles in your [articles list](https://web.timecockpit.com/app/lists/entity/APP_Article).
 
+### Unit
+
+Invoice items and articles refer to a unit of measurement. A unit consists of the following fields:
+
+- **Code:** A unique code identifier for the unit.
+- **Name:** The name of the unit. It is printed in the unit column of the invoice document.
+- **Hidden:** Indicates whether the unit is hidden or visible in the combobox.
+- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts the following codes, written in capital letters:
+
+  | Code | Unit | Code | Unit |
+  |---|---|---|---|
+  | `SEC` | Second | `C62` | Unit |
+  | `MIN` | Minute | `H87` | Piece |
+  | `HUR` | Hour | `EA` | Each |
+  | `DAY` | Day | `LS` | Lump sum |
+  | `WEE` | Week | `SET` | Set |
+  | `MON` | Month | `KMT` | Kilometer |
+  | `QAN` | Quarter | `MTR` | Meter |
+  | `SAN` | Half year | `P1` | Percent |
+  | `ANN` | Year | | |
+
+> [!NOTE]
+> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was one of these codes received that code as its e-invoice unit code with the November 2026 release; all other units have none.
+
 ## How to Create an Invoice
 
 The time cockpit default data model contains the list [Management -> Billing -> Unbilled Timesheets](https://web.timecockpit.com/app/lists/APP_UnbilledTimesheetsList). This list is based on the standard [Timesheets](https://web.timecockpit.com/app/lists/entity/APP_Timesheet) workflow, but adds dedicated filters to distinguish between billable and unbilled hours. It also provides the `Create Invoice` action to assign timesheet entries to an invoice. To generate an invoice, follow these steps:
@@ -10740,7 +10764,9 @@ erDiagram
     APP_Unit {
         guid APP_UnitUuid PK
         string APP_Code
-        string APP_UnitName
+        string APP_Description
+        boolean APP_IsHidden
+        string APP_EInvoiceUnitCode
     }
 
     APP_UserDetail {
@@ -11020,8 +11046,10 @@ erDiagram
     
     APP_Unit {
         guid APP_UnitUuid PK
-        string APP_Code "e.g., hour, piece, km"
-        string APP_UnitName
+        string APP_Code "e.g., hour, kilometer"
+        string APP_Description "Name"
+        boolean APP_IsHidden
+        string APP_EInvoiceUnitCode "UN/ECE Rec 20, e.g., HUR, KMT"
     }
     
     APP_Country {
@@ -18379,6 +18407,36 @@ Click **Save & Close** and the report will be permanently attached to a list. Af
 To update a custom report, click **Download Report Definition** and proceed with the steps as described in [Customize Report](#customize-report). When finished altering a report, click **Upload New Report Definition**. This will replace the current report definition.
 
 ![Save report](https://docs.timecockpit.com/doc/reporting/images/update-report.png "Update report")
+
+---
+
+# Release Notes November 2026
+
+Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
+
+# 📅 November 2026
+
+## 🐛 Bug Fixes
+
+- **Unit Column on Invoice PDFs**  
+  Since the ZUGFeRD update, the unit column of invoice PDFs stayed empty. It shows the unit name again. Units have a new field **E-Invoice Unit Code** that holds the UN/ECE Recommendation 20 code written to the ZUGFeRD data, so kilometers are no longer reported as hours. The shipped units "h" and "km" received `HUR` and `KMT`; check your own units in the [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit). See [Invoicing](https://docs.timecockpit.com/doc/project-time-tracking/billing.md#unit) (#6041).
+
+- **Reverse Charge Note on Invoice PDFs**  
+  Since the ZUGFeRD update, invoice PDFs showed the reverse charge note intended for customers outside the EU even when the country of the invoice is an EU member. The note matches the country again.
+
+- **Valid ZUGFeRD Data**  
+  The ZUGFeRD data embedded in invoice PDFs failed schema validation because the delivery block was missing. It now contains the delivery date (the end of the service period, otherwise its start, otherwise the invoice date), the e-mail addresses of the company and the customer as electronic addresses, and the payment terms "Zahlbar netto" when a payment target without discount is set.
+
+## 🛠 Notes for Customizers
+
+These changes affect customers who maintain their own data model, lists, forms, or actions.
+
+- **Invoice Report Data**  
+  The `InvoiceDetails` dataset that `APP_CreateInvoiceReportAction` passes to the invoice report contains the field `Unit` (unit name) again, plus `EInvoiceUnitCode`. `UnitCode` (the unit's code) stays available. The `Invoices` dataset contains `IsEuMember` again, next to `CustomerIsEuMember`. Customized copies of the invoice report that use `Fields!Unit` or `Fields!IsEuMember` work again without changes.
+
+> **Note:**
+> These release notes describe what's included in the November 2026 release. Availability can depend on rollout rings and tenant configuration.
+> If you have questions, please contact support@timecockpit.com.
 
 ---
 
