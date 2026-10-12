@@ -4,6 +4,9 @@ description: Resolve signal tracking suspension in time cockpit caused by system
 ---
 # Signal tracking has been suspended
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 ## Possible raised exception
 
 MessageSecurityException

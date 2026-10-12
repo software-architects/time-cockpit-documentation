@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/computer-activity.md
 ---
 # Signal Tracker für Computeraktivität
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für Computeraktivität zeichnet auf, wann Ihr Computer ein- und ausgeschaltet wird. Diese Information ist besonders hilfreich, wenn Sie den Großteil Ihrer Arbeitszeit am PC verbringen. Die Zeitpunkte, zu denen Sie Ihren Computer ein- und ausschalten, markieren meist Beginn und Ende Ihres Arbeitstages.
 
 ## Gesammelte Daten

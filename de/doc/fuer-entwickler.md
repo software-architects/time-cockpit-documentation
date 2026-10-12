@@ -252,7 +252,7 @@ Weitere Anwendungsfälle folgen in Kürze!
 ### Änderungen testen
 
 **TCQL-Konsole**: Abfragen interaktiv im Web-Client testen
-**Skript-Debugger**: Im Vollclient für die Skriptentwicklung verfügbar
+**Skript-Debugger**: Im Fullclient für die Skriptentwicklung verfügbar
 **API-Tests**: Postman oder ähnliche Werkzeuge mit Bearer-Authentifizierung verwenden
 
 ### Best Practices

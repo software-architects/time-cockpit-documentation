@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/active-windows.md
 ---
 # Signal Tracker für aktive Fenster
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für aktive Fenster zeichnet das Programm auf, mit dem Sie gerade arbeiten. Zusätzlich zeichnet er den Titel des aktiven Fensters auf. Der Name des Programms und der Fenstertitel lassen oft auf den Kunden und das Projekt schließen, an dem Sie gerade arbeiten.
 
 ## Gesammelte Daten

@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/overview.md
 ---
 # Signal Tracker
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 time cockpit enthält eine Reihe von Signal Trackern, die Ihre Aktivitäten auf Ihrem PC aufzeichnen. Die aufgezeichneten Aktivitäten heißen in time cockpit Signale. Sie werden im grafischen Zeiterfassungskalender angezeigt, damit Sie Ihre Zeit einfacher buchen können.
 
 > [!TIP]

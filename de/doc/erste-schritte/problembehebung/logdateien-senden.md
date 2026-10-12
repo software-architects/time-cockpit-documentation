@@ -7,9 +7,9 @@ en_page: doc/getting-started/troubleshooting/send-log-files.md
 
 Bei der Nutzung der Software und Dienste von time cockpit stehen mehrere Quellen für Diagnose- und Fehlerbehebungsinformationen zur Verfügung. Die folgenden Abschnitte zeigen, wie Sie für typische Nutzungsszenarien Diagnoseinformationen zur Problembehebung sammeln.
 
-## Logdateien des Vollclients
+## Logdateien des Fullclients
 
-Die Hauptanwendung, der Signal Tracker und die Anwendung zur Skriptausführung protokollieren relevante Aktionen und auftretende Fehler in Logdateien. Die Logdateien des time cockpit-Vollclients liegen in `%LOCALAPPDATA%\software architects\Time Cockpit`, und die Dateinamen enden je nach Softwareversion auf `.log` oder `.log.xml`. Über verschiedene Log-Level wählen Sie den Detailgrad und die Menge der aufgezeichneten Daten. Im Normalbetrieb reicht der Level Warning oder Error. Bei Fehlern können Sie den Log-Level auf Information oder Verbose erhöhen, um zusätzliche Details aufzuzeichnen und die Fehlerdiagnose zu erleichtern.
+Die Hauptanwendung, der Signal Tracker und die Anwendung zur Skriptausführung protokollieren relevante Aktionen und auftretende Fehler in Logdateien. Die Logdateien des time cockpit-Fullclients liegen in `%LOCALAPPDATA%\software architects\Time Cockpit`, und die Dateinamen enden je nach Softwareversion auf `.log` oder `.log.xml`. Über verschiedene Log-Level wählen Sie den Detailgrad und die Menge der aufgezeichneten Daten. Im Normalbetrieb reicht der Level Warning oder Error. Bei Fehlern können Sie den Log-Level auf Information oder Verbose erhöhen, um zusätzliche Details aufzuzeichnen und die Fehlerdiagnose zu erleichtern.
 
 ![Logdateien senden](/doc/getting-started/troubleshooting/images/send-log-files-en.png "Logdateien senden")
 

@@ -29,7 +29,7 @@ Erfassen Sie Zeiten überall und auf jedem Gerät.
 
 - **[Web-Client](~/doc/erste-schritte/web-client.md)** - Zugriff im Browser mit PWA-Unterstützung
 - **[Mobiler Zugriff](~/doc/erste-schritte/mobile-zeiterfassung.md)** - 📱 **NEU!** time cockpit auf Smartphones und Tablets verwenden
-- **[Installation des Vollclients](~/doc/erste-schritte/installationsanleitung.md)** - Desktop-Anwendung für Windows
+- **[Installation des Fullclients](~/doc/erste-schritte/installationsanleitung.md)** - Desktop-Anwendung für Windows
 
 ### Kalenderintegrationen
 Verbinden Sie Ihre bestehenden Kalender und Werkzeuge.

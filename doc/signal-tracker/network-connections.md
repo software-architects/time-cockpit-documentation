@@ -4,6 +4,9 @@ description: Track LAN and Wi-Fi network connections in time cockpit. Identify w
 ---
 # Signal Tracker for Network Connections	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for network connections tracks all networks the computer was connected with and all available Wi-Fi networks. If you are working in different locations with your laptop, the names of connected and available networks may help you to identify the customer you were working for.
 
 ## Collected Data

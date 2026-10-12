@@ -25,6 +25,7 @@ These pages cover the standard daily workflows:
 - [Outlook Appointments](timesheet-calendar/outlook-appointments.md)
 - [Time Sheet Templates](timesheet-calendar/timesheet-templates.md)
 - [Working Time](employee-time-tracking/working-time.md)
+- [time cockpit sidekick](sidekick/overview.md) (early preview)
 
 ## Project Work
 
@@ -77,7 +78,7 @@ If you want to start with a specific task, these pages are usually the right fir
 
 ## Additional Areas
 
-- Windows desktop client features: [Signal Tracker Overview](signal-tracker/overview.md)
+- Windows desktop client features: [Signal Tracker Overview](signal-tracker/overview.md) (classic, being replaced by sidekick)
 - Enterprise topics: [AAD Integration](enterprise/aad.md)
 - Release notes: [Release Notes](release-notes/2026-02.md)
 

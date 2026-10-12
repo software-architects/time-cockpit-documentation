@@ -47,7 +47,7 @@ Sie haben die Wahl zwischen Microsoft Visual Studio 2012 zusammen mit [Microsoft
 Sie können [Microsoft SQL Server 2008 R2 Report Builder 3.0](http://www.microsoft.com/en-us/download/details.aspx?id=6116) von der Website von Microsoft herunterladen. Er ist kostenlos, wenn Sie eine gültige Lizenz für einen SQL Server besitzen. Details zu den Nutzungsbedingungen von Report Builder finden Sie in seinem Installationsassistenten.
 
 1. **Profitieren nur time cockpit-Administratoren von dieser neuen Funktion?**<br/>
-Derzeit können nur time cockpit-Administratoren benutzerdefinierte Berichte erstellen und anzeigen. Mit dem Release im April 2014 werden wir die Möglichkeit ergänzen, benutzerdefinierte Berichte in Ihre time cockpit-Datenbank hochzuladen. Hochgeladene Berichte stehen dann auch anderen Benutzern zur Verfügung (Vollclient und Web-Client). Das Erstellen benutzerdefinierter Berichte bleibt jedoch immer time cockpit-Administratoren vorbehalten.
+Derzeit können nur time cockpit-Administratoren benutzerdefinierte Berichte erstellen und anzeigen. Mit dem Release im April 2014 werden wir die Möglichkeit ergänzen, benutzerdefinierte Berichte in Ihre time cockpit-Datenbank hochzuladen. Hochgeladene Berichte stehen dann auch anderen Benutzern zur Verfügung (Fullclient und Web-Client). Das Erstellen benutzerdefinierter Berichte bleibt jedoch immer time cockpit-Administratoren vorbehalten.
 
 1. **Greifen die benutzerdefinierten Berichte direkt auf die Datenbank von time cockpit zu?**<br/>
 Nein. Berichte erhalten ihre Daten über die Geschäftslogikschicht von time cockpit. Daher gelten Berechtigungen, Geschäftslogik (z. B. berechnete Eigenschaften) usw. und stehen zur Verfügung.<br/><br/>

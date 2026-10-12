@@ -82,6 +82,11 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)
   - [Buchungsvorschläge (Zeitbuchungen teilen)](~/doc/zeiterfassungskalender/buchungsvorschlaege-zeitbuchungen-teilen.md)
   - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
+- Aktivitäten aufzeichnen mit sidekick (Early Preview)
+  - [Überblick](~/doc/sidekick/ueberblick.md)
+  - [Installation & Koppeln](~/doc/sidekick/installation-und-koppeln.md)
+  - [Signale im Kalender](~/doc/sidekick/signale-im-kalender.md)
+  - [Datenschutz & Daten](~/doc/sidekick/datenschutz-und-daten.md)
 - Projektzeiterfassung
   - [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
   - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
@@ -112,7 +117,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Überblick](~/doc/berichte/ueberblick.md)
   - [Standard-Druckansicht](~/doc/berichte/standard-druckansicht.md)
   - [Integrierte Berichte](~/doc/berichte/integrierte-berichte.md)
-- Vollclient (Desktop)
+- Fullclient (Desktop)
   - [Installationsanleitung](~/doc/erste-schritte/installationsanleitung.md)
   - [Konfigurationsassistent](~/doc/erste-schritte/konfigurationsassistent.md)
   - [Systemarchitektur](~/doc/erste-schritte/systemarchitektur.md)
@@ -125,7 +130,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
     - [CryptographicException](~/doc/erste-schritte/problembehebung/cryptographicexception-konfigurationsassistent.md)
   - Anleitungen
     - [Passwort zurücksetzen](~/doc/erste-schritte/anleitungen/passwort-zuruecksetzen.md)
-  - Signal Tracker
+  - Aktivitäten aufzeichnen (klassischer Signal Tracker)
     - [Überblick](~/doc/signal-tracker/ueberblick.md)
     - [Signale](~/doc/zeiterfassungskalender/signale.md)
     - [Signaldetails](~/doc/zeiterfassungskalender/signaldetails.md)

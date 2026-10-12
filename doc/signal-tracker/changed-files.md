@@ -4,6 +4,9 @@ description: Track file writes on your computer with time cockpit's changed file
 ---
 # Signal Tracker for Changed Files	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for changed files tracks files writes on your computer. The name of the files and folders may often help you to identify the customer and project you are working on.
 
 ## Collected Data

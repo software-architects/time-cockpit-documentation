@@ -205,7 +205,7 @@ Installieren Sie time cockpit als Progressive Web App für ein besseres Erlebnis
 ### ❌ Keine Signalaufzeichnung
 
 **Herausforderung:**
-- Die Aktivitätsaufzeichnung (Signal Tracker) erfordert den Vollclient am Desktop.
+- Die Aktivitätsaufzeichnung (Signal Tracker) erfordert den Fullclient am Desktop.
 - Nicht aufgezeichnet werden können:
   - aktive Fenster
   - Dateiänderungen
@@ -408,7 +408,7 @@ Siehe: [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)
 
 ## Vergleich: mobiles Web und Desktop-Client
 
-| Funktion | Mobiles Web | Desktop-Vollclient |
+| Funktion | Mobiles Web | Desktop-Fullclient |
 |---------|------------|---------------------|
 | **Zeiterfassung** | ✅ Volle Unterstützung | ✅ Volle Unterstützung |
 | **Kalenderansicht** | ✅ Tagesansicht am besten | ✅ Alle Ansichten optimiert |

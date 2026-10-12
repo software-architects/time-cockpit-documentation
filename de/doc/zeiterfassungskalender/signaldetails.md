@@ -5,6 +5,9 @@ en_page: doc/timesheet-calendar/signal-details.md
 ---
 # Signaldetails
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signaldetailbereich zeigt Details zu den gesammelten Signaldaten an (siehe auch [Signal Tracker](~/doc/signal-tracker/ueberblick.md)).
 
 time cockpit zeigt im Signaldetailbereich die folgenden zusätzlichen Informationen an:

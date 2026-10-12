@@ -4,6 +4,9 @@ description: Configure signal tracker startup and processing options in time coc
 ---
 # Signal Tracker Options
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 In the application menu of time cockpit in the upper left corner you will find the options dialog that helps you to configure how signals should be processed and displayed.
 
 ## Signal Tracker Startup Options

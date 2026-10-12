@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/options.md
 ---
 # Optionen des Signal Trackers
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Im Applikationsmenü von time cockpit links oben finden Sie den Optionsdialog, mit dem Sie konfigurieren, wie Signale verarbeitet und angezeigt werden.
 
 ## Startoptionen des Signal Trackers

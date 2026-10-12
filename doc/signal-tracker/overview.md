@@ -4,6 +4,9 @@ description: "time cockpit's signal trackers record PC activity such as active w
 ---
 # Signal Trackers
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 Time cockpit contains a number of signal trackers, which track you activities on your PC. The tracked activities are called signals in time cockpit. They will be displayed in the graphical time sheet calendar to make booking your time easier.
 
 > [!TIP]

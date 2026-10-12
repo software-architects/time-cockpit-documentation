@@ -4,6 +4,9 @@ description: "How signals work in time cockpit's calendar: duration signals, poi
 ---
 # Signals
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 In the right pane of the time sheet calendar you see the processed signals captured by the [Signal Tracker](~/doc/signal-tracker/overview.md). Signal data helps users to remember what they have spent their time on and create time sheet entries accurately. time cockpit distinguishes between **duration signals** and **point signals**. Duration signals are e.g. applications, window titles or user activity. Examples for point signals are sent mails, incoming and outgoing phone calls or a user note.
 
 ![Signal tracker pane](images/signal-tracker-pane.png "Signal tracker pane")

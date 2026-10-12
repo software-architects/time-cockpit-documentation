@@ -30,6 +30,7 @@ These pages cover the standard daily workflows:
 - [Outlook Appointments](https://docs.timecockpit.com/doc/timesheet-calendar/outlook-appointments.md)
 - [Time Sheet Templates](https://docs.timecockpit.com/doc/timesheet-calendar/timesheet-templates.md)
 - [Working Time](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md)
+- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) (early preview)
 
 ## Project Work
 
@@ -82,7 +83,7 @@ If you want to start with a specific task, these pages are usually the right fir
 
 ## Additional Areas
 
-- Windows desktop client features: [Signal Tracker Overview](https://docs.timecockpit.com/doc/signal-tracker/overview.md)
+- Windows desktop client features: [Signal Tracker Overview](https://docs.timecockpit.com/doc/signal-tracker/overview.md) (classic, being replaced by sidekick)
 - Enterprise topics: [AAD Integration](https://docs.timecockpit.com/doc/enterprise/aad.md)
 - Release notes: [Release Notes](https://docs.timecockpit.com/doc/release-notes/2026-02.md)
 
@@ -7701,6 +7702,373 @@ The following table keeps the technical permission rules from the data model. Ea
 
 ---
 
+# Activity Tracking with time cockpit sidekick
+
+Source: https://docs.timecockpit.com/doc/sidekick/overview.md
+
+# time cockpit sidekick
+
+> [!WARNING]
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
+
+The signals appear only in your own calendar.
+
+## What sidekick Records
+
+From the moment it is installed, sidekick records every source except changed files. Every source except presence can be switched off in sidekick under **Settings**.
+
+| Signal | Default | What is recorded |
+|---|---|---|
+| Presence and activity | Always on | When the computer was on, when you were using it (from the time between your inputs, not from what you type), and when it was locked. |
+| Foreground windows | On | Which application was in front, for how long, and its window title. Window titles can be switched off, and exclusion rules record a window without its title or not at all. |
+| Changed files | Off | Which files changed in the folders you choose, never their content. Nothing is watched until you switch it on and choose folders. |
+| Git | On | Time and message of commits and branch switches. sidekick looks for repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**. No code. |
+| Claude Code and Codex sessions | On | When and in which project you worked with Claude Code or Codex, including token usage. Of the text of your prompts, at most the start of the first prompt, as the name of the session. |
+| Microphone | On | Which application uses the microphone, never any audio. |
+| Wi-Fi | On | The name of the connected Wi-Fi network and the names of the networks in reach, never a hardware address. |
+| SSH logins | Only for added machines | Interactive SSH logins on Linux machines you add as remote machines in sidekick's settings. |
+
+sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code and Codex sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
+
+What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md).
+
+## sidekick and the Classic Signal Tracker
+
+sidekick is the successor to the [classic signal tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
+
+The main differences:
+
+- sidekick is a separate app. You do not need the full client.
+- sidekick keeps its signals on your computer. The calendar reads them directly from sidekick.
+
+The calendar shows signals from only one source at a time. In the calendar settings under **Signals** you choose either **Do not show signals**, **Show signals of the classic time cockpit signal tracker** or **Show signals of time cockpit sidekick**.
+
+## Requirements
+
+- Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version is still being tested and has some limitations; see [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
+- On Windows, no administrator rights: sidekick installs for your Windows user only.
+- The time cockpit web client, opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
+
+## Next Steps
+
+- [Installing and Pairing sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md): download, installation and connection to the calendar.
+- [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md): the activity band, the detail lanes and the right pane.
+- [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.
+
+---
+
+# Install and Pair time cockpit sidekick
+
+Source: https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md
+
+# Installing and Pairing sidekick
+
+> [!WARNING]
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+Setting up time cockpit sidekick takes three steps: install sidekick, create a token in sidekick, and enter the address and the token in the settings of the Time Sheet Calendar.
+
+## Install sidekick
+
+sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The macOS version is still being tested; see [Install on macOS](#install-on-macos) for its limitations.
+
+<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+
+### Install on Windows
+
+1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The calendar settings link to the same file (**Download sidekick**).
+2. Run the installer. It installs sidekick for your Windows user only, needs no administrator rights and asks no questions. The program goes to `%LOCALAPPDATA%\TimeCockpit.Sidekick`, and a Start menu entry is added.
+3. Windows SmartScreen may warn about the installer, because sidekick is a new program. The installer is signed. To continue, click **More info** and then **Run anyway**.
+4. After the installation sidekick starts, switches on its autostart and opens its window. Its icon, the time cockpit logo, appears in the notification area of the taskbar (possibly hidden under the arrow).
+
+Closing the window does not stop sidekick; it keeps recording in the background. To open the window again, double-click the icon or choose **Open sidekick…** in its menu.
+
+### Install on macOS
+
+> [!NOTE]
+> The macOS version is still being tested. Unlike the Windows version, it is not signed and does not update itself.
+
+1. Download the disk image for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg). **About This Mac** in the Apple menu shows which chip your Mac has.
+2. Open the downloaded `.dmg` file and drag **time cockpit sidekick** into the **Applications** folder.
+3. Start sidekick from the **Applications** folder. Because the app is not signed, macOS blocks the first start. Open **System Settings** > **Privacy & Security**, click **Open Anyway** next to the message about time cockpit sidekick, and confirm with **Open**. On older macOS versions you can instead Control-click the app and choose **Open**.
+4. sidekick runs in the menu bar, not in the Dock. Click its icon in the menu bar to open its menu.
+5. To record window titles, allow screen recording for sidekick in **System Settings** > **Privacy & Security** > **Screen Recording**, then quit sidekick and start it again. Without this permission sidekick records which application was in front, but no window titles. sidekick does not take screenshots.
+
+Limitations of the macOS version:
+
+- No automatic updates. To update, download the disk image again and replace the app in the **Applications** folder.
+- The autostart may not work reliably for the unsigned app. If sidekick is not running after you sign in, start it from the **Applications** folder.
+- macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
+- Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
+- The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
+
+### Autostart and Updates
+
+- The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
+- On Windows, sidekick updates itself. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the tray icon then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+
+## Pair sidekick With the Calendar
+
+The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, for example `https://web.timecockpit.com`.
+
+### In sidekick: Create a Token
+
+1. Open sidekick and go to the tab **Pairing**.
+2. Under **Paired calendars**, click **+ Pair a calendar**. As long as no calendar is paired, the form **Pair a new calendar** is already open.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser, usually `https://web.timecockpit.com`. You can enter a name under **Label (optional)**.
+4. Click **Create token**. A token is valid only for this address and is shown only once, for ten minutes at most.
+5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. The token disappears after ten minutes at the latest, so enter it in the calendar right away.
+
+sidekick stores only a hash of the token, never the token itself. If you lose the token, create a new one.
+
+### In the Calendar: Enter Address and Token
+
+1. Open the Time Sheet Calendar in the time cockpit web client, in a browser on the same computer.
+2. Open the gear **Settings**.
+3. Under **Signals**, choose **Show signals of time cockpit sidekick**.
+4. Paste the address into **Address of sidekick** and the token into **Token**.
+5. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device.
+6. Click **Save**.
+
+Your browser may ask whether the time cockpit page may access devices in your local network. Allow it; otherwise the browser blocks the connection to sidekick.
+
+The calendar shows signals from only one source at a time. If you choose sidekick, the signals of the [classic signal tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md) are no longer shown.
+
+## Connection Status in the Calendar
+
+At the top right of the right pane of the calendar, a status shows whether the calendar reaches sidekick. If it does not, the right pane explains why.
+
+| Status | What the calendar says | What to do |
+|---|---|---|
+| **sidekick connected** | — | Nothing. The calendar reads the signals. |
+| **Connecting to sidekick …** | — | Wait a moment. |
+| **sidekick not running** | Start time cockpit sidekick on this computer. The calendar connects on its own once it runs. | Start sidekick, for example from the Start menu. |
+| **Token does not match sidekick** | The token in the calendar settings is missing or does not match sidekick. Enter the token from sidekick and test the connection. | Create a new token in sidekick, enter it in the calendar settings and click **Test connection**. |
+| **Token belongs to another address** | The token was paired for another address. Pair this address in sidekick and enter the new token in the calendar settings. | In sidekick, choose the address at which you opened time cockpit, create a token and enter it in the calendar. |
+| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page, or pair the address of this page in sidekick. |
+
+If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick**. Enter the new address in the calendar settings.
+
+## The Tray Icon Menu
+
+Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
+
+- The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
+- **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
+- **Open sidekick…** opens the window.
+- **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
+- **Install update … and restart** appears when an update is ready.
+- **Open data folder** opens the folder in which sidekick stores its data.
+- **Quit** ends sidekick. Nothing is recorded until it runs again.
+
+While recording is paused, sidekick still records whether the computer was on and whether it was locked. That is why a pause shows up as a gap in your activity instead of a gap in the day.
+
+## Revoke a Paired Calendar
+
+In sidekick, open the tab **Pairing**. Under **Paired calendars**, click **Revoke** next to the calendar. The calendar can then no longer read anything.
+
+To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read** in the area **Connection to the calendar**.
+
+## Uninstall sidekick
+
+Uninstall time cockpit sidekick in the Windows settings under **Apps**. The uninstaller stops a running sidekick and removes the program and the autostart entry. On macOS, quit sidekick and move the app from the **Applications** folder to the Trash.
+
+Your recorded data stays in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). To remove it as well, delete it in the tab **Data** before uninstalling (see [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)), or delete the folder afterwards.
+
+---
+
+# sidekick Signals in the Time Sheet Calendar
+
+Source: https://docs.timecockpit.com/doc/sidekick/calendar-signals.md
+
+# sidekick Signals in the Time Sheet Calendar
+
+> [!WARNING]
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+Once time cockpit sidekick is [paired with the calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md), the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
+
+The signals appear only in your own calendar. If you open the calendar of another user, the right pane says **Only in your own calendar**.
+
+## The Activity Band
+
+In every view of the calendar, a narrow band next to each day shows your activity as recorded by sidekick. It distinguishes:
+
+- time in which you were active and which is already booked,
+- time in which you were active and which is not booked yet,
+- time in which the computer was on without your input.
+
+The unbooked active time is the time you most likely still have to book.
+
+In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the button **Day view** at the top of the right pane.
+
+## Detail Lanes in the Day View
+
+In the day view, the calendar draws detail lanes next to your bookings. The head of the lanes groups them under **Presence**, **Work** and **Proposal** and shows a key figure for each lane, for example the covered time or the number of commits.
+
+| Lane | What it shows |
+|---|---|
+| **Active** | When you were active at the computer. |
+| **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
+| **Claude** | Claude Code sessions, one column per session, grouped by project, with prompts and token usage. |
+| **Codex** | Codex sessions, in the same way as Claude. |
+| **Git** | Commits and branch switches. |
+| **Files** | File changes per folder. A click on a folder block shows its folder tree in the right pane. |
+| **Wi-Fi** | The connected Wi-Fi network. |
+| **SSH** | Logins on remote machines. Shown only on days with a login. |
+| **Projects** | The projects the signals point to, per quarter hour. |
+| **Proposal** | The proposed bookings for the day (see below). |
+
+Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. A project has the same colour in the calendar as in sidekick.
+
+Bookings are created on the calendar grid as usual, never in the lanes.
+
+## The Right Pane
+
+The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes, the right pane is narrowed to their time ranges. The pane has two tabs.
+
+### Signals
+
+The tab **Signals** lists the signals by kind, each in its own section:
+
+- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **Files**: the folders and files that changed.
+- **AI**: your time with Claude Code and Codex, the tokens and an estimated cost based on API list prices. A subscription is billed differently.
+- **Applications**: the applications in the foreground, with their durations and window titles.
+- **Window titles**: the window titles of the day.
+- **Wi-Fi**: the connected networks and the networks in reach.
+
+### Proposal
+
+The tab **Proposal** shows the proposed bookings of the day by pattern: when, what spoke for it, and a **Book** button. **Book** opens the form for a new booking with the project, task and text of the pattern.
+
+The proposal learns from your bookings of the last 30 days and needs an up-to-date version of sidekick. If a signal does not fit a pattern, you can stop counting it as evidence for that pattern; the tab lists such exclusions so you can undo them.
+
+A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
+
+## Marking Times
+
+- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
+- Press **/** to search the keywords. The search filters the word cloud and marks in the calendar when the matching words came up. **Esc** clears the search.
+- Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
+
+## Refresh
+
+While today is visible in the calendar, the signals are loaded again every minute. Other days are not reloaded automatically.
+
+## Related Pages
+
+- [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md)
+- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
+- [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
+
+---
+
+# sidekick Privacy and Data - What Is Recorded
+
+Source: https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md
+
+# sidekick Privacy and Data
+
+> [!WARNING]
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
+
+## What sidekick Records
+
+From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
+
+- When the computer was on, when you were using it (from the time between your inputs) and when it was locked.
+- Which application was in the foreground, for how long, and its window title.
+- Which files changed in the folders you choose (off by default; nothing is watched until you switch it on and choose folders).
+- Time and message of Git commits and branch switches in the repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**.
+- When and in which project you worked with Claude Code or Codex, the times of your prompts, the token usage, and a name for each session (see below).
+- Which application uses the microphone.
+- The names of the connected Wi-Fi network and of the networks in reach, with their signal strength.
+- Interactive SSH logins on Linux machines you add as remote machines.
+
+Window titles, file paths and commit messages can say a lot about your work. That is why exclusions, the pause and the deletion described below exist.
+
+## What sidekick Never Records
+
+- Keystrokes. Your activity is derived from the time between your inputs, not from what you type.
+- File contents.
+- Screenshots.
+- The clipboard.
+- Terminal commands.
+- Browser URLs.
+- Any audio. The microphone signal only says which application had the microphone open. sidekick opens no audio stream.
+- The BSSID, MAC address or any other hardware address of a Wi-Fi network. Only network names are recorded.
+- The text of your prompts to Claude Code and Codex. The only exception is the session name: sidekick uses the title Claude Code writes for a session, and when there is none (always for Codex), the first 80 characters of the first prompt.
+
+## Where the Data Is Stored
+
+sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). **Open data folder** in the menu of the tray icon opens this folder.
+
+- `signals.sqlite` holds the signals. It is an unencrypted SQLite database in your Windows profile.
+- `tokens.json` holds only a hash of each pairing token, never the token itself.
+- `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
+- `config.json` holds the settings.
+- `tracker.log` is a log file. It contains no window titles and no paths.
+
+Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
+
+## What Leaves Your Computer
+
+- sidekick uploads no signals and sends no telemetry.
+- The only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
+- If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
+
+## How the Calendar Reads the Signals
+
+- sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
+- Every time cockpit address, for example `https://web.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser.
+- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore and the signals you exclude as evidence for the proposal. Neither changes a signal.
+- The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
+- To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
+
+## Controlling What Is Recorded
+
+In sidekick under **Settings**:
+
+- Every source except presence can be switched off: **Windows**, **Files**, **Microphone**, **Wi-Fi**, **Claude Code**, **Codex** and **Git**.
+- **Record window titles** in the area **Windows** keeps the application names and times but drops all window titles.
+- **Exclusions** in the area **Windows** apply to single applications or windows. **Time only, without title** keeps the time but drops the window title. **Do not record** records nothing at all; the time disappears from the day. Exclusions are applied before anything is stored.
+- By default, password managers and private browser windows are recorded without their titles, and the window of sidekick itself is not recorded. The calendar shows windows without titles as **redacted**.
+- **Watch file changes** in the area **Files** is off by default, and without folders nothing is watched. sidekick records which files change, never their content.
+
+To pause the recording, use **Pause** in the menu of the tray icon (**15 min**, **1 h** or **until resumed**). While paused, sidekick still records whether the computer was on and whether it was locked, so the pause shows up as a gap in your activity.
+
+## Deleting Data
+
+In sidekick, open the tab **Data**. In the area **Delete data**:
+
+- **Delete today…** deletes the signals of today.
+- **Delete period…** deletes the signals between two days.
+- **Delete everything…** deletes all signals.
+
+sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick does not import the existing Claude Code, Codex and Git history again.
+
+Uninstalling sidekick does not delete the data folder.
+
+## What sidekick Does Not Protect Against
+
+- Anyone with access to your Windows account. The database is an unencrypted file in your profile.
+- Other programs that run under your Windows account. They can read the database and the token file directly, or read window titles the same way sidekick does.
+- Malicious or compromised code in the time cockpit web application itself. A paired calendar can read your signals.
+
+## Wi-Fi Names on Windows 11 24H2 and Later
+
+Windows 11 24H2 and later give Wi-Fi names to desktop apps only with location access. Without it, sidekick records no Wi-Fi names and reports an error for the Wi-Fi source. To allow it, open the Windows settings, go to **Privacy & security** > **Location**, and turn on **Location services** and **Let desktop apps access your location**.
+
+sidekick does not read your location. Windows only requires this setting before it hands out network names.
+
+---
+
 # Time Sheet - Tabular View & Export
 
 Source: https://docs.timecockpit.com/doc/project-time-tracking/timesheet.md
@@ -8975,6 +9343,9 @@ Source: https://docs.timecockpit.com/doc/getting-started/troubleshooting/signal-
 
 # Signal tracking has been suspended
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 ## Possible raised exception
 
 MessageSecurityException
@@ -9079,6 +9450,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/overview.md
 
 # Signal Trackers
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 Time cockpit contains a number of signal trackers, which track you activities on your PC. The tracked activities are called signals in time cockpit. They will be displayed in the graphical time sheet calendar to make booking your time easier.
 
 > [!TIP]
@@ -9134,6 +9508,9 @@ If you have finished your time sheet for a certain period and want to delete the
 Source: https://docs.timecockpit.com/doc/timesheet-calendar/signals.md
 
 # Signals
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 In the right pane of the time sheet calendar you see the processed signals captured by the [Signal Tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md). Signal data helps users to remember what they have spent their time on and create time sheet entries accurately. time cockpit distinguishes between **duration signals** and **point signals**. Duration signals are e.g. applications, window titles or user activity. Examples for point signals are sent mails, incoming and outgoing phone calls or a user note.
 
@@ -9241,6 +9618,9 @@ Source: https://docs.timecockpit.com/doc/timesheet-calendar/signal-details.md
 
 # Signal Details
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal details pane displays details about collected signal data (see also [Signal Tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md)).
 
 time cockpit shows the following additional information in the signal details pane:
@@ -9332,6 +9712,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/options.md
 
 # Signal Tracker Options
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 In the application menu of time cockpit in the upper left corner you will find the options dialog that helps you to configure how signals should be processed and displayed.
 
 ## Signal Tracker Startup Options
@@ -9358,6 +9741,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/computer-activity.md
 
 # Signal Tracker for Computer Activity
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for computer activity tracks when your computer is turned on and off. This information is particularly helpful if you spend most of your working time at your PC. The points in time when you turn on and off your computer mostly mark the start and end of your working day.
 
 ## Collected Data
@@ -9381,6 +9767,9 @@ Query interval (Interval) | Timespan | Interval within which the signal tracker 
 Source: https://docs.timecockpit.com/doc/signal-tracker/user-activity.md
 
 # Signal Tracker for User Activity
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal tracker for user activity tracks when you are working at your computer by attending your keyboard and mouse activity. We do not track what you are typing but only that your are currently using the keyboard. This signal tracker may help you to identify times when you left you computer like lunch time or meetings.
 
@@ -9408,6 +9797,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/active-windows.md
 
 # Signal Tracker for Active Windows
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for active windows records the program with which you are currently working. Additionally it tracks the title of the active window. The name of the program and the title of the window often imply the customer and project you are working on.
 
 ## Collected Data
@@ -9429,6 +9821,9 @@ Query interval (Interval) | Timespan | Interval within which the signal tracker 
 Source: https://docs.timecockpit.com/doc/signal-tracker/sent-emails.md
 
 # Signal Tracker for Sent Emails	
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal tracker for sent emails tracks all emails sent with Microsoft Office Outlook. This signal tracker may help you to identify when you have finished some work package and sent the results to you customer or colleagues.
 
@@ -9454,6 +9849,9 @@ Resolve email adress (ResolveAddress) | Boolean | Specifies if time cockpit shou
 Source: https://docs.timecockpit.com/doc/signal-tracker/changed-files.md
 
 # Signal Tracker for Changed Files	
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal tracker for changed files tracks files writes on your computer. The name of the files and folders may often help you to identify the customer and project you are working on.
 
@@ -9484,6 +9882,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/network-connections.md
 
 # Signal Tracker for Network Connections	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for network connections tracks all networks the computer was connected with and all available Wi-Fi networks. If you are working in different locations with your laptop, the names of connected and available networks may help you to identify the customer you were working for.
 
 ## Collected Data
@@ -9505,6 +9906,9 @@ Query interval (`Interval`) | Timespan | Interval within which the signal tracke
 Source: https://docs.timecockpit.com/doc/signal-tracker/notes.md
 
 # Signal Tracker for Notes	
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal tracker for user notes allows you to capture small notes about your work. Notes are more lightweight than time sheet entries so you interrupt your workflow less when capturing a note.
 
@@ -9531,6 +9935,9 @@ Name of the form (`Form`) | Text | Name of the form that is used to enter a note
 Source: https://docs.timecockpit.com/doc/signal-tracker/phone-calls.md
 
 # Signal Tracker for Phone Calls	
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal tracker for phone calls allows you to import the call history of your mobile phone. This information is especially helpful for users who often call customers or partners and want to bill or analyze their calls. From the name of your contact you can usually derive the customer or project you are working on.
 
@@ -9620,6 +10027,9 @@ Source: https://docs.timecockpit.com/doc/signal-tracker/team-foundation-server.m
 
 # Signal Tracker for Team Foundation Server	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for Microsoft Team Foundation Server is able to track change sets and work item changes. Developers who are using Microsoft TFS and want to book time sheet entries per work item (user story, task, bug) can easily track when the have been working on which item.
 
 ## Collected Data
@@ -9695,6 +10105,9 @@ The typical installation locations are (depending on visual studio version):
 Source: https://docs.timecockpit.com/doc/signal-tracker/import-signals.md
 
 # Import Signals from Text Files	
+
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
 
 The signal importer is able to import signals from CSV files.
 

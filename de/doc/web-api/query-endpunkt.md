@@ -41,7 +41,7 @@ Accept: application/json
 
 ## C#-Beispiel
 
-Das folgende Beispiel zeigt einfachen C#-Code, der ein time cockpit Projekt mit einem bestimmten Projektcode abruft. Beachten Sie, dass Sie reines TCQL mit allen seinen Funktionen verwenden können, genau wie beim Schreiben einer Abfrage im Vollclient.
+Das folgende Beispiel zeigt einfachen C#-Code, der ein time cockpit Projekt mit einem bestimmten Projektcode abruft. Beachten Sie, dass Sie reines TCQL mit allen seinen Funktionen verwenden können, genau wie beim Schreiben einer Abfrage im Fullclient.
 
 > [!NOTE]
 > Dieser Code verwendet eine Klasse `TcProject`, die die JSON-Antwort der time cockpit API auf das Domänenobjekt `TcProject` abbildet. Eine vollständige Referenz finden Sie unter [TimeCockpitClient](~/doc/web-api/timecockpit-client.md).

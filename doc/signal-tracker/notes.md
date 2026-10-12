@@ -4,6 +4,9 @@ description: Capture lightweight notes about your work in time cockpit. Use keyb
 ---
 # Signal Tracker for Notes	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for user notes allows you to capture small notes about your work. Notes are more lightweight than time sheet entries so you interrupt your workflow less when capturing a note.
 
 ## Collected Data

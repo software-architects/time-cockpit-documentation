@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/user-activity.md
 ---
 # Signal Tracker für Benutzeraktivität
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für Benutzeraktivität zeichnet auf, wann Sie an Ihrem Computer arbeiten, indem er Ihre Tastatur- und Mausaktivität verfolgt. Wir zeichnen nicht auf, was Sie tippen, sondern nur, dass Sie gerade die Tastatur verwenden. Dieser Signal Tracker hilft Ihnen, Zeiten zu erkennen, in denen Sie nicht am Computer waren, z. B. in der Mittagspause oder in Besprechungen.
 
 ## Gesammelte Daten

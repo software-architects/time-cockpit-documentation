@@ -4,6 +4,9 @@ description: Track emails sent with Microsoft Office Outlook in time cockpit. Id
 ---
 # Signal Tracker for Sent Emails	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for sent emails tracks all emails sent with Microsoft Office Outlook. This signal tracker may help you to identify when you have finished some work package and sent the results to you customer or colleagues.
 
 ## Collected Data

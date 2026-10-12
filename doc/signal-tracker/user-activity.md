@@ -4,6 +4,9 @@ description: Track keyboard and mouse activity in time cockpit to identify worki
 ---
 # Signal Tracker for User Activity
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for user activity tracks when you are working at your computer by attending your keyboard and mouse activity. We do not track what you are typing but only that your are currently using the keyboard. This signal tracker may help you to identify times when you left you computer like lunch time or meetings.
 
 ## Collected Data

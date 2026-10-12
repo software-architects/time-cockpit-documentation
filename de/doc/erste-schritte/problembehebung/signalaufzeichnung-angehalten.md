@@ -5,6 +5,9 @@ en_page: doc/getting-started/troubleshooting/signal-tracking-suspended.md
 ---
 # Die Signalaufzeichnung wurde angehalten
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 ## Mögliche Exception
 
 MessageSecurityException

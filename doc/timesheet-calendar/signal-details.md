@@ -4,6 +4,9 @@ description: Analyze detailed signal data in time cockpit's signal details pane.
 ---
 # Signal Details
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal details pane displays details about collected signal data (see also [Signal Tracker](~/doc/signal-tracker/overview.md)).
 
 time cockpit shows the following additional information in the signal details pane:

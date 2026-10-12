@@ -88,4 +88,4 @@ Date: Wed, 30 Apr 2014 11:08:26 GMT
 
 ## Aktuelle Einschränkungen
 
-Die API ist nur mit aktuellen time cockpit Versionen getestet. Wenn Ihr Konto noch nie mit einer time cockpit Version >= 1.10 (März 2013) verwendet wurde, muss es mit einem aktuellen Vollclient aktualisiert werden.
+Die API ist nur mit aktuellen time cockpit Versionen getestet. Wenn Ihr Konto noch nie mit einer time cockpit Version >= 1.10 (März 2013) verwendet wurde, muss es mit einem aktuellen Fullclient aktualisiert werden.

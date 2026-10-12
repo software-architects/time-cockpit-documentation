@@ -4,6 +4,9 @@ description: Track Microsoft Team Foundation Server change sets and work item ch
 ---
 # Signal Tracker for Team Foundation Server	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for Microsoft Team Foundation Server is able to track change sets and work item changes. Developers who are using Microsoft TFS and want to book time sheet entries per work item (user story, task, bug) can easily track when the have been working on which item.
 
 ## Collected Data

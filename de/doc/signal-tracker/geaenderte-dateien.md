@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/changed-files.md
 ---
 # Signal Tracker für geänderte Dateien	
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für geänderte Dateien zeichnet Schreibzugriffe auf Dateien auf Ihrem Computer auf. Die Namen der Dateien und Ordner helfen Ihnen oft dabei, den Kunden und das Projekt zu erkennen, an dem Sie arbeiten.
 
 ## Gesammelte Daten

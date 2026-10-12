@@ -81,6 +81,11 @@ Every page of the time cockpit documentation on one page, in the order of the na
   - [Time Sheet Templates](timesheet-calendar/timesheet-templates.md)
   - [Time Sheet Suggestions (Share Time Sheet)](timesheet-calendar/timesheet-suggestions-share-timesheet.md)
   - [Default Permissions](employee-time-tracking/default-permissions.md)
+- Activity Tracking with sidekick (Early Preview)
+  - [Overview](sidekick/overview.md)
+  - [Installation & Pairing](sidekick/installation-and-pairing.md)
+  - [Signals in the Calendar](sidekick/calendar-signals.md)
+  - [Privacy & Data](sidekick/privacy-and-data.md)
 - Project-Based Time Tracking
   - [Customer / Project / Task](project-time-tracking/customer-project-task.md)
   - [Time Sheet](project-time-tracking/timesheet.md)
@@ -124,7 +129,7 @@ Every page of the time cockpit documentation on one page, in the order of the na
     - [CryptographicException](getting-started/troubleshooting/next-button-missing-configuration-wizard.md)
   - How To
     - [Reset Password](getting-started/howtos/reset-password.md)
-  - Signal Trackers
+  - Activity Tracking (Classic Signal Tracker)
     - [Overview](signal-tracker/overview.md)
     - [Signals](timesheet-calendar/signals.md)
     - [Signal Details](timesheet-calendar/signal-details.md)

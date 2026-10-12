@@ -110,6 +110,53 @@ header.bg-body {
   --bs-btn-border-radius: 25px;
 }
 
+/* Download call to action in articles: <p class="tc-download"><a class="btn btn-primary btn-lg"><i class="bi bi-download"></i>Text</a></p>
+   Several buttons in one paragraph sit in a centred row and wrap on narrow screens. */
+article .tc-download {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+/* Buttons that belong together (for example the two macOS downloads) wrap as one unit */
+article .tc-download-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+article .tc-download .btn-outline-primary {
+  --bs-btn-color: var(--tc-green);
+  --bs-btn-border-color: var(--tc-green);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--tc-green);
+  --bs-btn-hover-border-color: var(--tc-green);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--tc-green-hover);
+  --bs-btn-active-border-color: var(--tc-green-hover);
+  --bs-btn-border-radius: 25px;
+}
+
+article .tc-download .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 100%;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* docfx marks absolute links as .external and appends an arrow icon; a download button has its own icon */
+article .tc-download .btn.external::after {
+  content: none;
+}
+
 /* --- Article typography ----------------------------------------------------------- */
 article h1 {
   font-size: 2rem;

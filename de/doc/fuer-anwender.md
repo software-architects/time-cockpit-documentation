@@ -26,6 +26,7 @@ Diese Seiten beschreiben die üblichen täglichen Abläufe:
 - [Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md)
 - [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)
 - [Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md)
+- [time cockpit sidekick](~/doc/sidekick/ueberblick.md) (Early Preview)
 
 ## Projektarbeit
 
@@ -78,7 +79,7 @@ Wenn Sie mit einer konkreten Aufgabe starten möchten, sind diese Seiten meist d
 
 ## Weitere Bereiche
 
-- Funktionen des Windows-Desktop-Clients: [Signal Tracker: Überblick](~/doc/signal-tracker/ueberblick.md)
+- Funktionen des Windows-Desktop-Clients: [Signal Tracker: Überblick](~/doc/signal-tracker/ueberblick.md) (klassisch, wird durch sidekick abgelöst)
 - Enterprise-Themen: [AAD-Integration](~/doc/enterprise/azure-active-directory.md)
 - Versionshinweise: [Release Notes](~/doc/release-notes/2026-02.md)
 

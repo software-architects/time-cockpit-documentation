@@ -62,7 +62,7 @@ Product and role names as used in the German product UI and on www.timecockpit.c
 | user, user detail | Benutzer, Benutzerdetail | |
 | account management | Kontoverwaltung | the web settings menu shows "Account Verwaltung"; the docs keep Kontoverwaltung until the product text is fixed |
 | web client | Web-Client | |
-| full client (desktop) | Vollclient (Desktop) | |
+| full client (desktop) | Fullclient (Desktop) | English word, never "Vollclient" |
 | mobile access | mobiler Zugriff | |
 | sandbox environment | Sandbox-Umgebung | |
 | customization | Anpassung | "Anpassungsmöglichkeiten" for "customization capabilities" |

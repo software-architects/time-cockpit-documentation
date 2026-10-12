@@ -4,6 +4,9 @@ description: Import phone call history from mobile phones into time cockpit. Sup
 ---
 # Signal Tracker for Phone Calls	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for phone calls allows you to import the call history of your mobile phone. This information is especially helpful for users who often call customers or partners and want to bill or analyze their calls. From the name of your contact you can usually derive the customer or project you are working on.
 
 ## Collected Data

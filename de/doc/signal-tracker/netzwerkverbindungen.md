@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/network-connections.md
 ---
 # Signal Tracker für Netzwerkverbindungen	
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für Netzwerkverbindungen zeichnet alle Netzwerke auf, mit denen der Computer verbunden war, sowie alle verfügbaren WLANs. Wenn Sie mit Ihrem Laptop an verschiedenen Orten arbeiten, helfen Ihnen die Namen der verbundenen und verfügbaren Netzwerke dabei, den Kunden zu erkennen, für den Sie gearbeitet haben.
 
 ## Gesammelte Daten

@@ -5,6 +5,9 @@ en_page: doc/timesheet-calendar/signals.md
 ---
 # Signale
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Im rechten Bereich des Zeiterfassungskalenders sehen Sie die verarbeiteten Signale, die der [Signal Tracker](~/doc/signal-tracker/ueberblick.md) aufgezeichnet hat. Signaldaten helfen Benutzern, sich zu erinnern, womit sie ihre Zeit verbracht haben, und Zeitbuchungen genau anzulegen. time cockpit unterscheidet zwischen **Dauersignalen** und **Punktsignalen**. Dauersignale sind z. B. Applikationen, Fenstertitel oder Benutzeraktivität. Beispiele für Punktsignale sind gesendete E-Mails, eingehende und ausgehende Telefonate oder eine Benutzernotiz.
 
 ![Signal-Tracker-Bereich](/doc/timesheet-calendar/images/signal-tracker-pane.png "Signal-Tracker-Bereich")

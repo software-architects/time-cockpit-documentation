@@ -4,6 +4,9 @@ description: Track when your computer is turned on and off with time cockpit's c
 ---
 # Signal Tracker for Computer Activity
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal tracker for computer activity tracks when your computer is turned on and off. This information is particularly helpful if you spend most of your working time at your PC. The points in time when you turn on and off your computer mostly mark the start and end of your working day.
 
 ## Collected Data

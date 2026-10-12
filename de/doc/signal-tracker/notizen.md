@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/notes.md
 ---
 # Signal Tracker für Notizen	
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Mit dem Signal Tracker für Benutzernotizen können Sie kurze Notizen zu Ihrer Arbeit festhalten. Notizen sind schlanker als Zeitbuchungen, sodass Sie Ihren Arbeitsfluss beim Festhalten einer Notiz weniger unterbrechen.
 
 ## Gesammelte Daten

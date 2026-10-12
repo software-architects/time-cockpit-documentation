@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/sent-emails.md
 ---
 # Signal Tracker für gesendete E-Mails
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Der Signal Tracker für gesendete E-Mails zeichnet alle E-Mails auf, die mit Microsoft Office Outlook gesendet werden. Dieser Signal Tracker hilft Ihnen zu erkennen, wann Sie ein Arbeitspaket abgeschlossen und die Ergebnisse an Ihre Kunden oder Kollegen gesendet haben.
 
 ## Gesammelte Daten

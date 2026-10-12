@@ -5,6 +5,9 @@ en_page: doc/signal-tracker/phone-calls.md
 ---
 # Signal Tracker für Telefonate	
 
+> [!NOTE]
+> Der klassische Signal Tracker wird in den kommenden Monaten durch [time cockpit sidekick](~/doc/sidekick/ueberblick.md) abgelöst. Verwenden Sie für neue Installationen sidekick.
+
 Mit dem Signal Tracker für Telefonate können Sie die Anrufliste Ihres Mobiltelefons importieren. Diese Information ist besonders hilfreich für Benutzer, die oft Kunden oder Partner anrufen und ihre Telefonate verrechnen oder auswerten möchten. Aus dem Namen Ihres Kontakts können Sie üblicherweise den Kunden oder das Projekt ableiten, an dem Sie arbeiten.
 
 ## Gesammelte Daten

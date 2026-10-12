@@ -5,7 +5,7 @@ en_page: doc/getting-started/troubleshooting/force-initial-sync.md
 ---
 # Initiale Synchronisierung von time cockpit erzwingen
 
-In manchen Fällen ist es nötig, für den Vollclient von time cockpit eine initiale Synchronisierung zu erzwingen. Dabei wird Ihre lokale Datenbank (Client-Datenbank) gelöscht und durch den aktuellen Stand der time cockpit-Serverdatenbank ersetzt. 
+In manchen Fällen ist es nötig, für den Fullclient von time cockpit eine initiale Synchronisierung zu erzwingen. Dabei wird Ihre lokale Datenbank (Client-Datenbank) gelöscht und durch den aktuellen Stand der time cockpit-Serverdatenbank ersetzt. 
 > [!NOTE]
 > Beachten Sie, dass nicht synchronisierte Daten der Client-Datenbank nach einer initialen Synchronisierung verloren sind.
 

@@ -4,6 +4,9 @@ description: Import custom signals from CSV files into time cockpit. Contact sup
 ---
 # Import Signals from Text Files	
 
+> [!NOTE]
+> The classic signal tracker will be replaced by [time cockpit sidekick](~/doc/sidekick/overview.md) over the coming months. For new installations, use sidekick.
+
 The signal importer is able to import signals from CSV files.
 
 Time cockpit can import signals from CSV files. At the moment this function is not officially released, but if you need to import your own signals please contact as at [support@timecockpit.com](mailto:support@timecockpit.com). We will gladly help you to get your own signals into time cockpit.
