@@ -118,7 +118,7 @@ Für Diagramme muss der Name einer Liste als Datenquelle angegeben werden. Zusä
             "position": "bottom",
             "orientation": "horizontal",
             "labels": {
-               "font": "10px Roboto, sans-serif"
+               "font": "10px 'Mulish Variable', sans-serif"
             }
       },
       "valueAxis": { "labels": { "format": "n0" }}
@@ -127,6 +127,8 @@ Für Diagramme muss der Name einer Liste als Datenquelle angegeben werden. Zusä
 ```
 
 In `series` gibt es ein zusätzliches Feld `groupField`, das in der API von Kendo UI nicht existiert. Damit können Sie ein Feld angeben, nach dem die Daten innerhalb einer Kategorie gruppiert werden.
+
+Diagrammtexte verwenden die Schrift des Web-Clients, solange die Konfiguration keine `font` setzt. Setzen Sie `font` nur, um Größe oder Stärke zu ändern, und nennen Sie darin die Schriftfamilie des Web-Clients `'Mulish Variable'`, wie im Beispiel oben. Eine Schrift, die der Web-Client nicht lädt, zum Beispiel `Roboto`, ersetzt der Browser durch seine serifenlose Standardschrift.
 
 ## Kennzahl
 
