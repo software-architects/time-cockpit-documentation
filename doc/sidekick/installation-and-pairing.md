@@ -20,7 +20,7 @@ sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel).
 1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The calendar settings link to the same file (**Download sidekick**).
 2. Run the installer. It installs sidekick for your Windows user only, needs no administrator rights and asks no questions. The program goes to `%LOCALAPPDATA%\TimeCockpit.Sidekick`, and a Start menu entry is added.
 3. Windows SmartScreen may warn about the installer, because sidekick is a new program. The installer is signed. To continue, click **More info** and then **Run anyway**.
-4. After the installation sidekick starts, switches on its autostart and opens its window. Its icon, the time cockpit logo, appears in the notification area of the taskbar (possibly hidden under the arrow).
+4. After the installation sidekick starts, switches on its autostart and opens its window. Its icon, the time cockpit logo, appears in the notification area of the taskbar (possibly hidden under the arrow). A banner at the top of the window asks whether sidekick may send usage data; nothing is sent until you agree (see [Usage Data](privacy-and-data.md#usage-data)).
 
 Closing the window does not stop sidekick; it keeps recording in the background. To open the window again, double-click the icon or choose **Open sidekick…** in its menu.
 

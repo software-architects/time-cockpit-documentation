@@ -48,15 +48,31 @@ sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Lib
 - `config.json` holds the settings.
 - `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
+- `telemetry.json` holds the install ID and when the daily usage event was sent last. It exists only after you agreed to send [usage data](#usage-data). The folder `telemetry-queue` holds usage events that have not been sent yet; it is deleted when you switch usage data off.
 
 Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
 
 ## What Leaves Your Computer
 
-- sidekick uploads no signals and sends no telemetry.
+- sidekick uploads no signals. It sends usage data only if you agree; see [Usage Data](#usage-data).
 - The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
-- The only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
+- Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
+
+## Usage Data
+
+sidekick asks in a banner at the top of its window: **May sidekick send usage data to software architects?** Until you answer, nothing is sent. **Yes, share** switches it on, **No thanks** keeps it off, and **What exactly?** opens the settings. You can change your choice at any time in sidekick under **Settings**, area **Privacy**, with **Send usage data**. The change takes effect at once; switching it off also deletes the events that have not been sent yet.
+
+If you agree, sidekick sends these events:
+
+- With every event: the version and update channel of sidekick, the operating system and processor architecture, the language of the interface, and a random install ID. The install ID is created when you agree for the first time. It makes the data pseudonymous: events of the same installation can be linked, but not to a person.
+- At every start: whether it is the first start after an installation, and the major version of the operating system.
+- Once a day: which sources and options are switched on, how many remote machines and paired calendars there are (in ranges such as 2–5), the retention period, the theme, and how long sidekick has been running (in ranges).
+- When it happens: a source or the autostart was switched on or off; a calendar was paired or revoked; an update was ready, failed or was installed; a source reported an error (a fixed error code, never the message, at most once a day per source and code); a part of sidekick crashed (only the kind and the reason).
+
+Every field is a yes/no value, a number or one of a fixed list of values. sidekick never sends free text and never sends recorded data: no window titles, applications, files, paths, repositories, commits, prompts, Wi-Fi names, projects, times, user name or computer name, and no tokens. Crash dumps stay on your computer, and `tracker.log` is not sent.
+
+The data goes to Microsoft Azure Application Insights in the region North Europe and is kept for 90 days. sidekick sets the IP address of every event to `0.0.0.0`, so no IP address and no location is stored with it.
 
 ## How the Calendar Reads the Signals
 

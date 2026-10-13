@@ -49,15 +49,31 @@ sidekick speichert seine Daten in `%APPDATA%\timecockpit-sidekick` (unter macOS 
 - `config.json` enthält die Einstellungen.
 - `anchor-exclusions.json` und `meeting-dismissals.json` enthalten, was der Kalender an sidekick zurückschreibt (siehe [Wie der Kalender die Signale liest](#wie-der-kalender-die-signale-liest)).
 - `tracker.log` ist eine Protokolldatei. Sie enthält keine Fenstertitel und keine Pfade.
+- `telemetry.json` enthält die Installations-ID und wann das tägliche Nutzungsereignis zuletzt gesendet wurde. Die Datei gibt es erst, wenn Sie dem Senden von [Nutzungsdaten](#nutzungsdaten) zugestimmt haben. Der Ordner `telemetry-queue` enthält Nutzungsereignisse, die noch nicht gesendet wurden; er wird gelöscht, wenn Sie die Nutzungsdaten ausschalten.
 
 Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum ändern Sie in sidekick unter **Einstellungen**, Bereich **Aufbewahrung und Start**, Einstellung **Signale aufbewahren (Tage)**.
 
 ## Was Ihren Rechner verlässt
 
-- sidekick lädt keine Signale hoch und sendet keine Telemetrie.
+- sidekick lädt keine Signale hoch. Nutzungsdaten sendet es nur, wenn Sie zustimmen; siehe [Nutzungsdaten](#nutzungsdaten).
 - Auch der time cockpit Web-Client sendet die Signale nicht an den time cockpit Server. Der Kalender verarbeitet sie nur in Ihrem Browser, auch die Schlüsselwörter und den Buchungsvorschlag. Nur die Zeitbuchungen, die Sie anlegen, werden wie gewohnt in time cockpit gespeichert.
-- Die einzige Anfrage, die sidekick von sich aus stellt, ist die Suche nach Updates: Eine Minute nach dem Start und danach alle vier Stunden liest es den Update-Feed unter `https://www.timecockpit.com/download/sidekick/` und lädt von dort eine neuere Version herunter. Die Anfrage enthält keine Daten von sidekick; der Server sieht die Adresse, von der die Anfrage kommt, wie bei jedem Download.
+- Abgesehen von Nutzungsdaten ist die einzige Anfrage, die sidekick von sich aus stellt, die Suche nach Updates: Eine Minute nach dem Start und danach alle vier Stunden liest es den Update-Feed unter `https://www.timecockpit.com/download/sidekick/` (mit eingeschaltetem **Vorabversionen erhalten** unter `https://www.timecockpit.com/download/sidekick-preview/`) und lädt von dort eine neuere Version herunter. Die Anfrage enthält keine Daten von sidekick; der Server sieht die Adresse, von der die Anfrage kommt, wie bei jedem Download.
 - Wenn Sie entfernte Rechner hinzufügen, verbindet sich sidekick über SSH mit ihnen, um ihre Signale zu lesen. Die Daten bleiben in der lokalen Datenbank.
+
+## Nutzungsdaten
+
+sidekick fragt in einem Banner oben in seinem Fenster: **Darf sidekick Nutzungsdaten an software architects senden?** Bis Sie antworten, wird nichts gesendet. **Ja, teilen** schaltet das Senden ein, **Nein, danke** lässt es aus, und **Was genau?** öffnet die Einstellungen. Sie können Ihre Wahl jederzeit in sidekick unter **Einstellungen** im Bereich **Datenschutz** mit **Nutzungsdaten senden** ändern. Die Änderung gilt sofort; das Ausschalten löscht auch die Ereignisse, die noch nicht gesendet wurden.
+
+Wenn Sie zustimmen, sendet sidekick diese Ereignisse:
+
+- Bei jedem Ereignis: Version und Update-Kanal von sidekick, Betriebssystem und Prozessorarchitektur, die Sprache der Oberfläche und eine zufällige Installations-ID. Die Installations-ID entsteht, wenn Sie zum ersten Mal zustimmen. Sie macht die Daten pseudonym: Ereignisse derselben Installation lassen sich verknüpfen, aber keiner Person zuordnen.
+- Bei jedem Start: ob es der erste Start nach einer Installation ist, und die Hauptversion des Betriebssystems.
+- Einmal am Tag: welche Quellen und Optionen eingeschaltet sind, wie viele entfernte Rechner und gekoppelte Kalender es gibt (in Bereichen wie 2–5), die Aufbewahrungsdauer, das Farbschema und wie lange sidekick schon läuft (in Bereichen).
+- Wenn es passiert: Eine Quelle oder der Autostart wurde ein- oder ausgeschaltet; ein Kalender wurde gekoppelt oder widerrufen; ein Update stand bereit, schlug fehl oder wurde installiert; eine Quelle meldete einen Fehler (ein fester Fehlercode, nie die Meldung, höchstens einmal am Tag je Quelle und Code); ein Teil von sidekick ist abgestürzt (nur die Art und der Grund).
+
+Jedes Feld ist ein Ja/Nein-Wert, eine Zahl oder einer aus einer festen Liste von Werten. sidekick sendet nie freien Text und nie aufgezeichnete Daten: keine Fenstertitel, Anwendungen, Dateien, Pfade, Repositorys, Commits, Prompts, WLAN-Namen, Projekte, Zeiten, keinen Benutzer- oder Rechnernamen und keine Tokens. Absturzberichte bleiben auf Ihrem Rechner, und `tracker.log` wird nicht gesendet.
+
+Die Daten gehen an Microsoft Azure Application Insights in der Region North Europe und werden 90 Tage aufbewahrt. sidekick setzt die IP-Adresse jedes Ereignisses auf `0.0.0.0`, deshalb werden keine IP-Adresse und kein Standort dazu gespeichert.
 
 ## Wie der Kalender die Signale liest
 
