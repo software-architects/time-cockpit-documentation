@@ -117,7 +117,7 @@ For charts the name of a list has to specified as data source. Additionally, `se
             "position": "bottom",
             "orientation": "horizontal",
             "labels": {
-               "font": "10px Roboto, sans-serif"
+               "font": "10px 'Mulish Variable', sans-serif"
             }
       },
       "valueAxis": { "labels": { "format": "n0" }}
@@ -126,6 +126,8 @@ For charts the name of a list has to specified as data source. Additionally, `se
 ```
 
 In `series` there is one additional field `groupField` that does not exist in the Kendo UI API. It allows you to specify a field for grouping data within a category.
+
+Chart texts use the font of the web client unless the configuration sets a `font`. Set `font` only to change the size or weight, and name the web client's font family `'Mulish Variable'` in it, as in the example above. A font that the web client does not load, for example `Roboto`, is replaced by the browser's default sans-serif font.
 
 ## Key Figure
 
