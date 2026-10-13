@@ -7733,7 +7733,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/overview.md
 # time cockpit sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
 
@@ -7773,7 +7773,7 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version is still being tested and has some limitations; see [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
 - On Windows, no administrator rights: sidekick installs for your Windows user only.
-- The time cockpit web client, opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
+- The time cockpit web client in the preview environment (`https://web-preview.timecockpit.com`), opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
 
 ## Next Steps
 
@@ -7790,7 +7790,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, create a token in sidekick, and enter the address and the token in the settings of the Time Sheet Calendar.
 
@@ -7835,13 +7835,16 @@ Limitations of the macOS version:
 
 ## Pair sidekick With the Calendar
 
-The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, for example `https://web.timecockpit.com`.
+> [!WARNING]
+> During the preview, sidekick can be paired only with the preview environment of time cockpit, `https://web-preview.timecockpit.com`. Pairing with `https://web.timecockpit.com` is not possible yet. Open the Time Sheet Calendar at `https://web-preview.timecockpit.com` and pair that address. The environments are described in the [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan).
+
+The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, during the preview `https://web-preview.timecockpit.com`.
 
 ### In sidekick: Create a Token
 
 1. Open sidekick and go to the tab **Pairing**.
 2. Under **Paired calendars**, click **+ Pair a calendar**. As long as no calendar is paired, the form **Pair a new calendar** is already open.
-3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser, usually `https://web.timecockpit.com`. You can enter a name under **Label (optional)**.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. You can enter a name under **Label (optional)**.
 4. Click **Create token**. A token is valid only for this address and is shown only once, for ten minutes at most.
 5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. The token disappears after ten minutes at the latest, so enter it in the calendar right away.
 
@@ -7849,7 +7852,7 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 
 ### In the Calendar: Enter Address and Token
 
-1. Open the Time Sheet Calendar in the time cockpit web client, in a browser on the same computer.
+1. Open the Time Sheet Calendar in the time cockpit web client at `https://web-preview.timecockpit.com`, in a browser on the same computer.
 2. Open the gear **Settings**.
 3. Under **Signals**, choose **Show signals of time cockpit sidekick**.
 4. Paste the address into **Address of sidekick** and the token into **Token**.
@@ -7910,7 +7913,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/calendar-signals.md
 # sidekick Signals in the Time Sheet Calendar
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Once time cockpit sidekick is [paired with the calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md), the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
 
@@ -7997,7 +8000,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md
 # sidekick Privacy and Data
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
 
@@ -8049,7 +8052,7 @@ Signals older than 90 days are deleted every night. You can change the period in
 ## How the Calendar Reads the Signals
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
-- Every time cockpit address, for example `https://web.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore and the signals you exclude as evidence for the proposal. Neither changes a signal.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.

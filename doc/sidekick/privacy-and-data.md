@@ -5,7 +5,7 @@ description: What time cockpit sidekick records and never records, where the dat
 # sidekick Privacy and Data
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
 
@@ -57,7 +57,7 @@ Signals older than 90 days are deleted every night. You can change the period in
 ## How the Calendar Reads the Signals
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
-- Every time cockpit address, for example `https://web.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore and the signals you exclude as evidence for the proposal. Neither changes a signal.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.

@@ -5,7 +5,7 @@ description: Download and install time cockpit sidekick on Windows, pair it with
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, create a token in sidekick, and enter the address and the token in the settings of the Time Sheet Calendar.
 
@@ -50,13 +50,16 @@ Limitations of the macOS version:
 
 ## Pair sidekick With the Calendar
 
-The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, for example `https://web.timecockpit.com`.
+> [!WARNING]
+> During the preview, sidekick can be paired only with the preview environment of time cockpit, `https://web-preview.timecockpit.com`. Pairing with `https://web.timecockpit.com` is not possible yet. Open the Time Sheet Calendar at `https://web-preview.timecockpit.com` and pair that address. The environments are described in the [Release Plan](~/doc/getting-started/web-client.md#release-plan).
+
+The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, during the preview `https://web-preview.timecockpit.com`.
 
 ### In sidekick: Create a Token
 
 1. Open sidekick and go to the tab **Pairing**.
 2. Under **Paired calendars**, click **+ Pair a calendar**. As long as no calendar is paired, the form **Pair a new calendar** is already open.
-3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser, usually `https://web.timecockpit.com`. You can enter a name under **Label (optional)**.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. You can enter a name under **Label (optional)**.
 4. Click **Create token**. A token is valid only for this address and is shown only once, for ten minutes at most.
 5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. The token disappears after ten minutes at the latest, so enter it in the calendar right away.
 
@@ -64,7 +67,7 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 
 ### In the Calendar: Enter Address and Token
 
-1. Open the Time Sheet Calendar in the time cockpit web client, in a browser on the same computer.
+1. Open the Time Sheet Calendar in the time cockpit web client at `https://web-preview.timecockpit.com`, in a browser on the same computer.
 2. Open the gear **Settings**.
 3. Under **Signals**, choose **Show signals of time cockpit sidekick**.
 4. Paste the address into **Address of sidekick** and the token into **Token**.

@@ -6,7 +6,7 @@ en_page: doc/sidekick/installation-and-pairing.md
 # sidekick installieren und koppeln
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Die Einrichtung von time cockpit sidekick besteht aus drei Schritten: sidekick installieren, in sidekick ein Token erstellen und Adresse und Token in den Einstellungen des Zeiterfassungskalenders eintragen.
 
@@ -51,13 +51,16 @@ Einschränkungen der macOS-Version:
 
 ## sidekick mit dem Kalender koppeln
 
-Der Kalender darf die Signale nur mit einem Token lesen, das sidekick für die Adresse Ihres time cockpit erstellt hat, zum Beispiel `https://web.timecockpit.com`.
+> [!WARNING]
+> Während der Preview kann sidekick nur mit der Preview-Umgebung von time cockpit gekoppelt werden, `https://web-preview.timecockpit.com`. Das Koppeln mit `https://web.timecockpit.com` ist noch nicht möglich. Öffnen Sie den Zeiterfassungskalender unter `https://web-preview.timecockpit.com` und koppeln Sie diese Adresse. Die Umgebungen sind im [Release-Plan](~/doc/erste-schritte/web-client.md#release-plan) beschrieben.
+
+Der Kalender darf die Signale nur mit einem Token lesen, das sidekick für die Adresse Ihres time cockpit erstellt hat, während der Preview `https://web-preview.timecockpit.com`.
 
 ### In sidekick: Token erstellen
 
 1. Öffnen Sie sidekick und wechseln Sie zum Reiter **Koppeln**.
 2. Klicken Sie unter **Gekoppelte Kalender** auf **+ Kalender koppeln**. Solange kein Kalender gekoppelt ist, ist das Formular **Neuen Kalender koppeln** bereits offen.
-3. Wählen Sie unter **Wo läuft er?** die Adresse, unter der Sie time cockpit im Browser öffnen, meist `https://web.timecockpit.com`. Unter **Bezeichnung (optional)** können Sie einen Namen eingeben.
+3. Wählen Sie unter **Wo läuft er?** die Adresse, unter der Sie time cockpit im Browser öffnen. Während der Preview ist das `https://web-preview.timecockpit.com`. Unter **Bezeichnung (optional)** können Sie einen Namen eingeben.
 4. Klicken Sie auf **Token erstellen**. Ein Token gilt nur für diese Adresse und wird nur einmal angezeigt, höchstens zehn Minuten lang.
 5. Kopieren Sie **Adresse von sidekick** (meist `http://127.0.0.1:41337`) und **Token** mit den Schaltflächen **Kopieren**. Das Token verschwindet spätestens nach zehn Minuten, tragen Sie es also gleich im Kalender ein.
 
@@ -65,7 +68,7 @@ sidekick speichert nur einen Hash des Tokens, nie das Token selbst. Wenn Sie das
 
 ### Im Kalender: Adresse und Token eintragen
 
-1. Öffnen Sie den Zeiterfassungskalender im time cockpit Web-Client, in einem Browser auf demselben Rechner.
+1. Öffnen Sie den Zeiterfassungskalender im time cockpit Web-Client unter `https://web-preview.timecockpit.com`, in einem Browser auf demselben Rechner.
 2. Öffnen Sie das Zahnrad **Einstellungen**.
 3. Wählen Sie unter **Signale** die Option **Signale von time cockpit sidekick anzeigen**.
 4. Fügen Sie die Adresse in **Adresse von sidekick** und das Token in **Token** ein.

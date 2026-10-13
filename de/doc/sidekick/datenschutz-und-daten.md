@@ -6,7 +6,7 @@ en_page: doc/sidekick/privacy-and-data.md
 # Datenschutz und Daten in sidekick
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält sie dort. Diese Seite beschreibt genau, was aufgezeichnet wird, was nie aufgezeichnet wird, wo die Daten gespeichert werden, wer sie lesen kann und wo der Schutz endet.
 
@@ -58,7 +58,7 @@ Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum 
 ## Wie der Kalender die Signale liest
 
 - sidekick antwortet nur unter `127.0.0.1`. Andere Rechner im Netzwerk können es nicht erreichen.
-- Jede time cockpit Adresse, zum Beispiel `https://web.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
+- Jede time cockpit Adresse, zum Beispiel `https://web-preview.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
 - Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser.
 - Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, und die Signale, die Sie als Beleg für den Vorschlag ausschließen. Beides ändert kein Signal.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.

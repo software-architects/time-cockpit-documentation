@@ -5,7 +5,7 @@ description: How the Time Sheet Calendar shows time cockpit sidekick signals - a
 # sidekick Signals in the Time Sheet Calendar
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Once time cockpit sidekick is [paired with the calendar](installation-and-pairing.md), the [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
 
