@@ -96,7 +96,8 @@ $sb = [System.Text.StringBuilder]::new()
 [void]$sb.AppendLine('---')
 if ($de) {
     [void]$sb.AppendLine('title: Alle Seiten - Index der Dokumentation')
-    [void]$sb.AppendLine('description: "Vollständiger Index der time cockpit Dokumentation: alle Anleitungen, FAQs, Referenzseiten und Release Notes sowie die Namespaces der API-Referenz."')
+    # Keep this script ASCII-only: Windows PowerShell 5.1 reads a BOM-less script as ANSI, so a literal umlaut would be garbled.
+    [void]$sb.AppendLine('description: "Vollst' + [char]0x00E4 + 'ndiger Index der time cockpit Dokumentation: alle Anleitungen, FAQs, Referenzseiten und Release Notes sowie die Namespaces der API-Referenz."')
     [void]$sb.AppendLine('en_page: doc/all-pages.md')
     [void]$sb.AppendLine('---')
     [void]$sb.AppendLine('# Alle Seiten')
