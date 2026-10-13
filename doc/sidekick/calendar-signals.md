@@ -31,16 +31,16 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
-| **Claude** | Claude Code sessions, one column per session, grouped by project, with prompts and token usage. |
+| **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
 | **Codex** | Codex sessions, in the same way as Claude. |
 | **Git** | Commits and branch switches. |
 | **Files** | File changes per folder. A click on a folder block shows its folder tree in the right pane. |
 | **Wi-Fi** | The connected Wi-Fi network. |
 | **SSH** | Logins on remote machines. Shown only on days with a login. |
-| **Projects** | The projects the signals point to, per quarter hour. |
+| **Projects** | For each quarter hour, the booking patterns the signals point to. A booking pattern is a combination you booked before, for example a project and a task. |
 | **Proposal** | The proposed bookings for the day (see below). |
 
-Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. A project has the same colour in the calendar as in sidekick.
+Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
 
 Bookings are created on the calendar grid as usual, never in the lanes.
 

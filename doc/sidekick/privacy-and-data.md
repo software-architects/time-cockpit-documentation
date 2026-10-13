@@ -11,7 +11,9 @@ time cockpit sidekick records work signals on your computer and keeps them there
 
 ## What sidekick Records
 
-From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
+From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add.
+
+sidekick also reads earlier activity once. It imports all Claude Code and Codex sessions that are already on your computer, without a time limit. When it finds a Git repository for the first time, also one you add later, it takes over the commits of the last 90 days. For a remote machine it does the same once, unless you switch the history import off for that machine. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
 
 - When the computer was on, when you were using it (from the time between your inputs) and when it was locked.
 - Which application was in the foreground, for how long, and its window title.
@@ -44,6 +46,7 @@ sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Lib
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
 - `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
 - `config.json` holds the settings.
+- `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
 
 Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
@@ -51,6 +54,7 @@ Signals older than 90 days are deleted every night. You can change the period in
 ## What Leaves Your Computer
 
 - sidekick uploads no signals and sends no telemetry.
+- The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
 - The only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
 
@@ -58,8 +62,8 @@ Signals older than 90 days are deleted every night. You can change the period in
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
-- The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser.
-- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore and the signals you exclude as evidence for the proposal. Neither changes a signal.
+- The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
+- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
 - To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
 
@@ -83,7 +87,7 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 - **Delete period…** deletes the signals between two days.
 - **Delete everything…** deletes all signals.
 
-sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick does not import the existing Claude Code, Codex and Git history again.
+sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
 
 Uninstalling sidekick does not delete the data folder.
 

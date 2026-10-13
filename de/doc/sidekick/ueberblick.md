@@ -1,6 +1,6 @@
 ---
 title: Aktivitäten aufzeichnen mit time cockpit sidekick
-description: time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Windows-PC auf und zeigt sie in Ihrem eigenen Zeiterfassungskalender. Early Preview.
+description: time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und zeigt sie in Ihrem eigenen Zeiterfassungskalender. Early Preview.
 en_page: doc/sidekick/overview.md
 ---
 # time cockpit sidekick
@@ -14,7 +14,7 @@ Die Signale erscheinen nur in Ihrem eigenen Kalender.
 
 ## Was sidekick aufzeichnet
 
-Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien auf. Jede Quelle außer der Präsenz lässt sich in sidekick unter **Einstellungen** abschalten.
+Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien auf. Frühere Aktivität liest es einmalig ebenfalls ein: alle Claude-Code- und Codex-Sessions, die bereits auf Ihrem Rechner liegen, und die Commits der letzten 90 Tage jedes Git-Repositorys, das es findet. Jede Quelle außer der Präsenz lässt sich in sidekick unter **Einstellungen** abschalten.
 
 | Signal | Standard | Was aufgezeichnet wird |
 |---|---|---|
@@ -24,7 +24,7 @@ Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien au
 | Git | An | Zeit und Nachricht von Commits und Branchwechseln. sidekick sucht Repositorys in `%USERPROFILE%\source\repos`, falls es diesen Ordner gibt, und in den Ordnern, die Sie unter **Ordner mit Repositorys** hinzufügen. Kein Code. |
 | Claude-Code- und Codex-Sessions | An | Wann und in welchem Projekt Sie mit Claude Code oder Codex gearbeitet haben, samt Tokenverbrauch. Vom Text Ihrer Prompts höchstens der Anfang des ersten Prompts, als Name der Session. |
 | Mikrofon | An | Welche Anwendung das Mikrofon benutzt, niemals Ton. |
-| WLAN | An | Der Name des verbundenen WLANs und die Namen der WLANs in Reichweite, nie eine Hardware-Adresse. |
+| WLAN | An | Die Namen des verbundenen WLANs und der WLANs in Reichweite, mit ihrer Signalstärke, nie eine Hardware-Adresse. |
 | SSH-Anmeldungen | Nur für hinzugefügte Rechner | Interaktive SSH-Anmeldungen auf Linux-Rechnern, die Sie in den Einstellungen von sidekick als entfernte Rechner hinzufügen. |
 
 sidekick kann auch Linux-Rechner auslesen, auf denen Sie über SSH arbeiten, zum Beispiel einen Entwicklungsserver: deren Commits, Claude-Code- und Codex-Sessions, Dateiänderungen und SSH-Anmeldungen. Auf diesem Rechner wird nichts installiert; sidekick verwendet Ihre eigene OpenSSH-Konfiguration und speichert keine Zugangsdaten.
@@ -38,7 +38,7 @@ sidekick ist der Nachfolger des [klassischen Signal Trackers](~/doc/signal-track
 Die wichtigsten Unterschiede:
 
 - sidekick ist eine eigene App. Sie brauchen den Fullclient nicht.
-- sidekick behält seine Signale auf Ihrem Rechner. Der Kalender liest sie direkt von sidekick.
+- sidekick behält seine Signale auf Ihrem Rechner. Der Kalender liest sie direkt von sidekick und verarbeitet sie nur in Ihrem Browser; sie werden nicht an den time cockpit Server gesendet.
 
 Der Kalender zeigt Signale immer nur aus einer Quelle an. In den Einstellungen des Kalenders wählen Sie unter **Signale** entweder **Keine Signale anzeigen**, **Signale vom klassischen time cockpit Signaltracker anzeigen** oder **Signale von time cockpit sidekick anzeigen**.
 

@@ -32,16 +32,16 @@ In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen.
 |---|---|
 | **Aktiv** | Wann Sie am Rechner aktiv waren. |
 | **Mikrofon** | Wann eine Anwendung das Mikrofon benutzt hat. Der Tooltip nennt die Anwendung; sidekick zeichnet niemals Ton auf. |
-| **Claude** | Claude-Code-Sessions, eine Spalte je Session, nach Projekt gruppiert, mit Prompts und Tokenverbrauch. |
+| **Claude** | Claude-Code-Sessions, eine Spalte je Session, nach Projekt gruppiert, mit den Zeitpunkten Ihrer Prompts und dem Tokenverbrauch. |
 | **Codex** | Codex-Sessions, genauso wie bei Claude. |
 | **Git** | Commits und Branchwechsel. |
 | **Dateien** | Dateiänderungen je Ordner. Ein Klick auf einen Ordnerblock zeigt seinen Ordnerbaum im rechten Bereich. |
 | **WLAN** | Das verbundene WLAN. |
 | **SSH** | Anmeldungen auf entfernten Rechnern. Nur an Tagen mit einer Anmeldung sichtbar. |
-| **Projekte** | Die Projekte, auf die die Signale hindeuten, je Viertelstunde. |
+| **Projekte** | Je Viertelstunde die Schablonen, auf die die Signale hindeuten. Eine Schablone ist eine Kombination, die Sie bereits gebucht haben, zum Beispiel ein Projekt und eine Aufgabe. |
 | **Vorschlag** | Die vorgeschlagenen Zeitbuchungen des Tages (siehe unten). |
 
-Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Ein Projekt hat im Kalender dieselbe Farbe wie in sidekick.
+Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Lokale Kontexte, zum Beispiel ein Claude-Code-Projekt, ein Git-Repository oder ein Ordner, haben im Kalender dieselbe Farbe wie in sidekick. Die Schablonen in den Spuren **Projekte** und **Vorschlag** färbt der Kalender.
 
 Zeitbuchungen werden wie gewohnt im Raster des Kalenders angelegt, nie in den Spuren.
 

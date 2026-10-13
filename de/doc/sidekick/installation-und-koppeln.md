@@ -1,6 +1,6 @@
 ---
 title: time cockpit sidekick installieren und koppeln
-description: time cockpit sidekick unter Windows herunterladen und installieren, mit dem Zeiterfassungskalender koppeln und Verbindungsprobleme lösen.
+description: time cockpit sidekick unter Windows oder macOS herunterladen und installieren, mit dem Zeiterfassungskalender koppeln und Verbindungsprobleme lösen.
 en_page: doc/sidekick/installation-and-pairing.md
 ---
 # sidekick installieren und koppeln
@@ -60,9 +60,9 @@ Der Kalender darf die Signale nur mit einem Token lesen, das sidekick für die A
 
 1. Öffnen Sie sidekick und wechseln Sie zum Reiter **Koppeln**.
 2. Klicken Sie unter **Gekoppelte Kalender** auf **+ Kalender koppeln**. Solange kein Kalender gekoppelt ist, ist das Formular **Neuen Kalender koppeln** bereits offen.
-3. Wählen Sie unter **Wo läuft er?** die Adresse, unter der Sie time cockpit im Browser öffnen. Während der Preview ist das `https://web-preview.timecockpit.com`. Unter **Bezeichnung (optional)** können Sie einen Namen eingeben.
-4. Klicken Sie auf **Token erstellen**. Ein Token gilt nur für diese Adresse und wird nur einmal angezeigt, höchstens zehn Minuten lang.
-5. Kopieren Sie **Adresse von sidekick** (meist `http://127.0.0.1:41337`) und **Token** mit den Schaltflächen **Kopieren**. Das Token verschwindet spätestens nach zehn Minuten, tragen Sie es also gleich im Kalender ein.
+3. Wählen Sie unter **Wo läuft er?** die Adresse, unter der Sie time cockpit im Browser öffnen. Während der Preview ist das `https://web-preview.timecockpit.com`. Die Liste enthält die Adressen von time cockpit. Um eine andere Adresse zu koppeln, wählen Sie den letzten Eintrag der Liste und fügen die Adresse aus der Adresszeile Ihres Browsers ein. sidekick übernimmt nur den Origin, also Schema, Hostname und Port, und verwirft den Pfad. Unter **Bezeichnung (optional)** können Sie einen Namen eingeben.
+4. Klicken Sie auf **Token erstellen**. Ein Token gilt nur für diese Adresse. Es läuft nicht ab, sondern gilt, bis Sie den Kalender widerrufen. sidekick zeigt es nur einmal an, höchstens zehn Minuten lang.
+5. Kopieren Sie **Adresse von sidekick** (meist `http://127.0.0.1:41337`) und **Token** mit den Schaltflächen **Kopieren**. Spätestens nach zehn Minuten verschwindet das Token aus dem Fenster und lässt sich nicht mehr anzeigen, tragen Sie es also gleich im Kalender ein.
 
 sidekick speichert nur einen Hash des Tokens, nie das Token selbst. Wenn Sie das Token verlieren, erstellen Sie ein neues.
 
@@ -90,7 +90,11 @@ Rechts oben im rechten Bereich des Kalenders zeigt ein Status, ob der Kalender s
 | **sidekick läuft nicht** | Starten Sie time cockpit sidekick auf diesem Rechner. Der Kalender verbindet sich von selbst, sobald er läuft. | Starten Sie sidekick, zum Beispiel über das Startmenü. |
 | **Token passt nicht zu sidekick** | Das Token in den Einstellungen des Kalenders fehlt oder passt nicht zu sidekick. Tragen Sie das Token aus sidekick ein und testen Sie die Verbindung. | Erstellen Sie in sidekick ein neues Token, tragen Sie es in den Einstellungen des Kalenders ein und klicken Sie auf **Verbindung testen**. |
 | **Token gehört zu einer anderen Adresse** | Das Token wurde für eine andere Adresse gekoppelt. Koppeln Sie diese Adresse in sidekick und tragen Sie das neue Token in den Einstellungen des Kalenders ein. | Wählen Sie in sidekick die Adresse, unter der Sie time cockpit geöffnet haben, erstellen Sie ein Token und tragen Sie es im Kalender ein. |
-| **Browser blockiert sidekick** | sidekick läuft, aber der Browser lässt diese Seite nicht darauf zugreifen. Erlauben Sie der Seite den Zugriff auf das lokale Netzwerk, oder koppeln Sie diese Adresse in sidekick. | Erlauben Sie den Zugriff auf das lokale Netzwerk für die time cockpit Seite im Browser, oder koppeln Sie die Adresse dieser Seite in sidekick. |
+| **Browser blockiert sidekick** | sidekick läuft, aber der Browser lässt diese Seite nicht darauf zugreifen. Erlauben Sie der Seite den Zugriff auf das lokale Netzwerk, oder koppeln Sie diese Adresse in sidekick. | Erlauben Sie den Zugriff auf das lokale Netzwerk für die time cockpit Seite im Browser. Hilft das nicht, koppeln Sie genau die Adresse dieser Seite in sidekick (siehe unten). |
+
+sidekick antwortet nur Adressen, die in seiner Adressliste stehen. Für jede andere Adresse erlaubt es dem Browser nicht, die Antwort zu lesen (CORS), und der Browser blockiert sie, genauso wie bei verweigertem Zugriff auf das lokale Netzwerk. Deshalb kann das Koppeln der Adresse **Browser blockiert sidekick** beheben. Steht die Adresse in der Liste, wurde das Token aber für eine andere Adresse erstellt, zeigt der Kalender stattdessen **Token gehört zu einer anderen Adresse**.
+
+Bei **sidekick läuft nicht** und **Browser blockiert sidekick** versucht es der Kalender von selbst erneut, zuerst nach 15 Sekunden und dann seltener, bis zu alle fünf Minuten. Nach einem Token-Problem versucht er es nicht erneut; tragen Sie das neue Token in den Einstellungen ein und klicken Sie auf **Verbindung testen**.
 
 Kann sidekick seinen Standard-Port 41337 nicht verwenden, weil ein anderes Programm ihn belegt, nimmt es den nächsten freien Port. Das Menü des Symbols im Infobereich zeigt den Port (**Verbindung zum Kalender: an (Port …)**), und der Reiter **Koppeln** zeigt die aktuelle **Adresse von sidekick**. Tragen Sie die neue Adresse in den Einstellungen des Kalenders ein.
 

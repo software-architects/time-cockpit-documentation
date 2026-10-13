@@ -12,7 +12,9 @@ time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält 
 
 ## Was sidekick aufzeichnet
 
-Ab der Installation zeichnet sidekick alle Quellen dieser Liste auf, außer geänderten Dateien, die standardmäßig aus sind. SSH-Anmeldungen werden nur für entfernte Rechner aufgezeichnet, die Sie hinzufügen. Wie Sie Quellen abschalten, steht unter [Festlegen, was aufgezeichnet wird](#festlegen-was-aufgezeichnet-wird).
+Ab der Installation zeichnet sidekick alle Quellen dieser Liste auf, außer geänderten Dateien, die standardmäßig aus sind. SSH-Anmeldungen werden nur für entfernte Rechner aufgezeichnet, die Sie hinzufügen.
+
+Frühere Aktivität liest sidekick einmalig ebenfalls ein. Es übernimmt alle Claude-Code- und Codex-Sessions, die bereits auf Ihrem Rechner liegen, ohne zeitliche Grenze. Findet es ein Git-Repository zum ersten Mal, auch eines, das Sie später hinzufügen, übernimmt es die Commits der letzten 90 Tage. Für einen entfernten Rechner gilt dasselbe einmalig, außer Sie schalten das Einlesen des Verlaufs für diesen Rechner ab. Wie Sie Quellen abschalten, steht unter [Festlegen, was aufgezeichnet wird](#festlegen-was-aufgezeichnet-wird).
 
 - Wann der Rechner lief, wann Sie ihn benutzt haben (aus dem Abstand zwischen Ihren Eingaben) und wann er gesperrt war.
 - Welche Anwendung im Vordergrund war, wie lange, und ihr Fenstertitel.
@@ -45,6 +47,7 @@ sidekick speichert seine Daten in `%APPDATA%\timecockpit-sidekick` (unter macOS 
 - `tokens.json` enthält nur einen Hash jedes Tokens für das Koppeln, nie das Token selbst.
 - `backups` enthält eine geprüfte Kopie der Datenbank von jedem Tag. Die sieben neuesten Kopien werden aufbewahrt.
 - `config.json` enthält die Einstellungen.
+- `anchor-exclusions.json` und `meeting-dismissals.json` enthalten, was der Kalender an sidekick zurückschreibt (siehe [Wie der Kalender die Signale liest](#wie-der-kalender-die-signale-liest)).
 - `tracker.log` ist eine Protokolldatei. Sie enthält keine Fenstertitel und keine Pfade.
 
 Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum ändern Sie in sidekick unter **Einstellungen**, Bereich **Aufbewahrung und Start**, Einstellung **Signale aufbewahren (Tage)**.
@@ -52,6 +55,7 @@ Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum 
 ## Was Ihren Rechner verlässt
 
 - sidekick lädt keine Signale hoch und sendet keine Telemetrie.
+- Auch der time cockpit Web-Client sendet die Signale nicht an den time cockpit Server. Der Kalender verarbeitet sie nur in Ihrem Browser, auch die Schlüsselwörter und den Buchungsvorschlag. Nur die Zeitbuchungen, die Sie anlegen, werden wie gewohnt in time cockpit gespeichert.
 - Die einzige Anfrage, die sidekick von sich aus stellt, ist die Suche nach Updates: Eine Minute nach dem Start und danach alle vier Stunden liest es den Update-Feed unter `https://www.timecockpit.com/download/sidekick/` und lädt von dort eine neuere Version herunter. Die Anfrage enthält keine Daten von sidekick; der Server sieht die Adresse, von der die Anfrage kommt, wie bei jedem Download.
 - Wenn Sie entfernte Rechner hinzufügen, verbindet sich sidekick über SSH mit ihnen, um ihre Signale zu lesen. Die Daten bleiben in der lokalen Datenbank.
 
@@ -59,8 +63,8 @@ Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum 
 
 - sidekick antwortet nur unter `127.0.0.1`. Andere Rechner im Netzwerk können es nicht erreichen.
 - Jede time cockpit Adresse, zum Beispiel `https://web-preview.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
-- Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser.
-- Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, und die Signale, die Sie als Beleg für den Vorschlag ausschließen. Beides ändert kein Signal.
+- Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser und werden nur dort verarbeitet; sie werden nie an den time cockpit Server gesendet.
+- Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, mit Betreff und geplanten Zeiten, und die Signale, die Sie als Beleg für den Vorschlag ausschließen, mit der Schablone, für die Sie sie ausgeschlossen haben (die Kennungen und Namen etwa ihres Projekts und ihrer Aufgabe). sidekick speichert sie, damit der Kalender sie anzeigen und zurücknehmen kann. Beides ändert kein Signal.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.
 - Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen** unter **Einstellungen** im Bereich **Verbindung zum Kalender**.
 
@@ -84,7 +88,7 @@ Um die Aufzeichnung zu pausieren, verwenden Sie **Pause** im Menü des Symbols i
 - **Zeitraum löschen…** löscht die Signale zwischen zwei Tagen.
 - **Alles löschen…** löscht alle Signale.
 
-sidekick zeigt vor dem Löschen, wie viele Zeilen gelöscht werden. Die Sicherungen, die einen gelöschten Tag enthalten, werden ebenfalls gelöscht, und gelöschte Zeilen werden in der Datenbankdatei überschrieben. Nach **Alles löschen…** liest sidekick den vorhandenen Verlauf von Claude Code, Codex und Git nicht erneut ein.
+sidekick zeigt vor dem Löschen, wie viele Zeilen gelöscht werden. Die Sicherungen, die einen gelöschten Tag enthalten, werden ebenfalls gelöscht, und gelöschte Zeilen werden in der Datenbankdatei überschrieben. Nach **Alles löschen…** liest sidekick keinen früheren Verlauf mehr ein: Claude-Code- und Codex-Sessions und Git-Repositorys werden erst ab dann aufgezeichnet, auch Repositorys, die es später findet.
 
 Die Deinstallation von sidekick löscht den Datenordner nicht.
 

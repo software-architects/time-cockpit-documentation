@@ -1,6 +1,6 @@
 ---
 title: Install and Pair time cockpit sidekick
-description: Download and install time cockpit sidekick on Windows, pair it with the Time Sheet Calendar and solve connection problems.
+description: Download and install time cockpit sidekick on Windows or macOS, pair it with the Time Sheet Calendar and solve connection problems.
 ---
 # Installing and Pairing sidekick
 
@@ -59,9 +59,9 @@ The calendar may read the signals only with a token that sidekick created for th
 
 1. Open sidekick and go to the tab **Pairing**.
 2. Under **Paired calendars**, click **+ Pair a calendar**. As long as no calendar is paired, the form **Pair a new calendar** is already open.
-3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. You can enter a name under **Label (optional)**.
-4. Click **Create token**. A token is valid only for this address and is shown only once, for ten minutes at most.
-5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. The token disappears after ten minutes at the latest, so enter it in the calendar right away.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. The list contains the addresses of time cockpit. To pair another address, choose the last entry of the list and paste the address from the address bar of your browser. sidekick keeps only the origin, that is scheme, host name and port, and drops the path. You can enter a name under **Label (optional)**.
+4. Click **Create token**. A token is valid only for this address. It does not expire; it stays valid until you revoke the calendar. sidekick shows it only once, for ten minutes at most.
+5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. After ten minutes at the latest the token disappears from the window and cannot be shown again, so enter it in the calendar right away.
 
 sidekick stores only a hash of the token, never the token itself. If you lose the token, create a new one.
 
@@ -89,7 +89,11 @@ At the top right of the right pane of the calendar, a status shows whether the c
 | **sidekick not running** | Start time cockpit sidekick on this computer. The calendar connects on its own once it runs. | Start sidekick, for example from the Start menu. |
 | **Token does not match sidekick** | The token in the calendar settings is missing or does not match sidekick. Enter the token from sidekick and test the connection. | Create a new token in sidekick, enter it in the calendar settings and click **Test connection**. |
 | **Token belongs to another address** | The token was paired for another address. Pair this address in sidekick and enter the new token in the calendar settings. | In sidekick, choose the address at which you opened time cockpit, create a token and enter it in the calendar. |
-| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page, or pair the address of this page in sidekick. |
+| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page. If that does not help, pair exactly the address of this page in sidekick (see below). |
+
+sidekick answers only addresses that are in its list of addresses. For any other address it does not give the browser permission to read the answer (CORS), so the browser blocks it, just as it does when local network access is denied. That is why pairing the address can fix **Browser blocks sidekick**. If the address is in the list but the token was created for another address, the calendar shows **Token belongs to another address** instead.
+
+The calendar retries **sidekick not running** and **Browser blocks sidekick** on its own, at first after 15 seconds and then less often, up to every five minutes. After a token problem it does not retry; enter the new token in the settings and click **Test connection**.
 
 If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick**. Enter the new address in the calendar settings.
 

@@ -7741,7 +7741,7 @@ The signals appear only in your own calendar.
 
 ## What sidekick Records
 
-From the moment it is installed, sidekick records every source except changed files. Every source except presence can be switched off in sidekick under **Settings**.
+From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code and Codex sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
 
 | Signal | Default | What is recorded |
 |---|---|---|
@@ -7751,7 +7751,7 @@ From the moment it is installed, sidekick records every source except changed fi
 | Git | On | Time and message of commits and branch switches. sidekick looks for repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**. No code. |
 | Claude Code and Codex sessions | On | When and in which project you worked with Claude Code or Codex, including token usage. Of the text of your prompts, at most the start of the first prompt, as the name of the session. |
 | Microphone | On | Which application uses the microphone, never any audio. |
-| Wi-Fi | On | The name of the connected Wi-Fi network and the names of the networks in reach, never a hardware address. |
+| Wi-Fi | On | The names of the connected Wi-Fi network and of the networks in reach, with their signal strength, never a hardware address. |
 | SSH logins | Only for added machines | Interactive SSH logins on Linux machines you add as remote machines in sidekick's settings. |
 
 sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code and Codex sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
@@ -7765,7 +7765,7 @@ sidekick is the successor to the [classic signal tracker](https://docs.timecockp
 The main differences:
 
 - sidekick is a separate app. You do not need the full client.
-- sidekick keeps its signals on your computer. The calendar reads them directly from sidekick.
+- sidekick keeps its signals on your computer. The calendar reads them directly from sidekick and processes them only in your browser; they are not sent to the time cockpit server.
 
 The calendar shows signals from only one source at a time. In the calendar settings under **Signals** you choose either **Do not show signals**, **Show signals of the classic time cockpit signal tracker** or **Show signals of time cockpit sidekick**.
 
@@ -7844,9 +7844,9 @@ The calendar may read the signals only with a token that sidekick created for th
 
 1. Open sidekick and go to the tab **Pairing**.
 2. Under **Paired calendars**, click **+ Pair a calendar**. As long as no calendar is paired, the form **Pair a new calendar** is already open.
-3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. You can enter a name under **Label (optional)**.
-4. Click **Create token**. A token is valid only for this address and is shown only once, for ten minutes at most.
-5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. The token disappears after ten minutes at the latest, so enter it in the calendar right away.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. During the preview this is `https://web-preview.timecockpit.com`. The list contains the addresses of time cockpit. To pair another address, choose the last entry of the list and paste the address from the address bar of your browser. sidekick keeps only the origin, that is scheme, host name and port, and drops the path. You can enter a name under **Label (optional)**.
+4. Click **Create token**. A token is valid only for this address. It does not expire; it stays valid until you revoke the calendar. sidekick shows it only once, for ten minutes at most.
+5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. After ten minutes at the latest the token disappears from the window and cannot be shown again, so enter it in the calendar right away.
 
 sidekick stores only a hash of the token, never the token itself. If you lose the token, create a new one.
 
@@ -7874,7 +7874,11 @@ At the top right of the right pane of the calendar, a status shows whether the c
 | **sidekick not running** | Start time cockpit sidekick on this computer. The calendar connects on its own once it runs. | Start sidekick, for example from the Start menu. |
 | **Token does not match sidekick** | The token in the calendar settings is missing or does not match sidekick. Enter the token from sidekick and test the connection. | Create a new token in sidekick, enter it in the calendar settings and click **Test connection**. |
 | **Token belongs to another address** | The token was paired for another address. Pair this address in sidekick and enter the new token in the calendar settings. | In sidekick, choose the address at which you opened time cockpit, create a token and enter it in the calendar. |
-| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page, or pair the address of this page in sidekick. |
+| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page. If that does not help, pair exactly the address of this page in sidekick (see below). |
+
+sidekick answers only addresses that are in its list of addresses. For any other address it does not give the browser permission to read the answer (CORS), so the browser blocks it, just as it does when local network access is denied. That is why pairing the address can fix **Browser blocks sidekick**. If the address is in the list but the token was created for another address, the calendar shows **Token belongs to another address** instead.
+
+The calendar retries **sidekick not running** and **Browser blocks sidekick** on its own, at first after 15 seconds and then less often, up to every five minutes. After a token problem it does not retry; enter the new token in the settings and click **Test connection**.
 
 If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick**. Enter the new address in the calendar settings.
 
@@ -7939,16 +7943,16 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
-| **Claude** | Claude Code sessions, one column per session, grouped by project, with prompts and token usage. |
+| **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
 | **Codex** | Codex sessions, in the same way as Claude. |
 | **Git** | Commits and branch switches. |
 | **Files** | File changes per folder. A click on a folder block shows its folder tree in the right pane. |
 | **Wi-Fi** | The connected Wi-Fi network. |
 | **SSH** | Logins on remote machines. Shown only on days with a login. |
-| **Projects** | The projects the signals point to, per quarter hour. |
+| **Projects** | For each quarter hour, the booking patterns the signals point to. A booking pattern is a combination you booked before, for example a project and a task. |
 | **Proposal** | The proposed bookings for the day (see below). |
 
-Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. A project has the same colour in the calendar as in sidekick.
+Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
 
 Bookings are created on the calendar grid as usual, never in the lanes.
 
@@ -8006,7 +8010,9 @@ time cockpit sidekick records work signals on your computer and keeps them there
 
 ## What sidekick Records
 
-From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
+From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add.
+
+sidekick also reads earlier activity once. It imports all Claude Code and Codex sessions that are already on your computer, without a time limit. When it finds a Git repository for the first time, also one you add later, it takes over the commits of the last 90 days. For a remote machine it does the same once, unless you switch the history import off for that machine. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
 
 - When the computer was on, when you were using it (from the time between your inputs) and when it was locked.
 - Which application was in the foreground, for how long, and its window title.
@@ -8039,6 +8045,7 @@ sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Lib
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
 - `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
 - `config.json` holds the settings.
+- `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
 
 Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
@@ -8046,6 +8053,7 @@ Signals older than 90 days are deleted every night. You can change the period in
 ## What Leaves Your Computer
 
 - sidekick uploads no signals and sends no telemetry.
+- The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
 - The only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
 
@@ -8053,8 +8061,8 @@ Signals older than 90 days are deleted every night. You can change the period in
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
-- The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser.
-- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore and the signals you exclude as evidence for the proposal. Neither changes a signal.
+- The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
+- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
 - To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
 
@@ -8078,7 +8086,7 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 - **Delete period…** deletes the signals between two days.
 - **Delete everything…** deletes all signals.
 
-sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick does not import the existing Claude Code, Codex and Git history again.
+sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
 
 Uninstalling sidekick does not delete the data folder.
 
