@@ -290,6 +290,38 @@ export default {
       if (isApiPage) { e.preventDefault(); apiLanguage(); }
     });
 
+    // Download clicks. Installers are files, not pages, so page views never show them:
+    // report one download_click to Simple Analytics (production hosts only) and, after
+    // analytics consent, to GA4. /download/sidekick-preview/ is deliberately not counted.
+    const downloadParams = (href) => {
+      let url;
+      try { url = new URL(href, location.href); } catch { return null; }
+      const path = url.host + url.pathname;
+      const file = url.pathname.split('/').pop();
+      if (path.includes('/download/sidekick/')) {
+        if (file.includes('-win-')) return { product: 'sidekick', platform: 'windows', file };
+        if (file.includes('mac-arm64')) return { product: 'sidekick', platform: 'macos-arm64', file };
+        if (file.includes('mac-x64')) return { product: 'sidekick', platform: 'macos-x64', file };
+        return null;
+      }
+      if (path.includes('update.timecockpit.com/general/') && url.pathname.endsWith('Setup.exe')) {
+        return { product: 'fullclient', platform: 'windows', file };
+      }
+      return null;
+    };
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest && e.target.closest('a[href]');
+      const params = link && downloadParams(link.href);
+      if (!params) return;
+      // Separate try blocks: a failing tracker must neither block the other nor the download.
+      try {
+        if (window.isProductionHost && window.isProductionHost() && typeof window.sa_event === 'function') window.sa_event('download_click', params);
+      } catch { /* ignore */ }
+      try {
+        if (window.hasAnalyticsConsent && window.hasAnalyticsConsent() && typeof window.gtag === 'function') window.gtag('event', 'download_click', params);
+      } catch { /* ignore */ }
+    }, true);
+
     pageJsonLd();
     const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); };
     update();
