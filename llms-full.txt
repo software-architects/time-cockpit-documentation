@@ -13194,7 +13194,7 @@ For charts the name of a list has to specified as data source. Additionally, `se
             "position": "bottom",
             "orientation": "horizontal",
             "labels": {
-               "font": "10px Roboto, sans-serif"
+               "font": "10px 'Mulish Variable', sans-serif"
             }
       },
       "valueAxis": { "labels": { "format": "n0" }}
@@ -13203,6 +13203,8 @@ For charts the name of a list has to specified as data source. Additionally, `se
 ```
 
 In `series` there is one additional field `groupField` that does not exist in the Kendo UI API. It allows you to specify a field for grouping data within a category.
+
+Chart texts use the font of the web client unless the configuration sets a `font`. Set `font` only to change the size or weight, and name the web client's font family `'Mulish Variable'` in it, as in the example above. A font that the web client does not load, for example `Roboto`, is replaced by the browser's default sans-serif font.
 
 ## Key Figure
 
@@ -18443,6 +18445,11 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 # 📅 November 2026
 
+## ✨ Improvements
+
+- **New Typeface**  
+  The web client now uses Mulish, the typeface of the time cockpit website and time cockpit sidekick. Text is one step larger (13 instead of 12 pixels), and menus, headings, tabs, and dialog titles use sentence case instead of capital letters. In the timesheet calendar, the date, the day headers, and the start time and duration of timesheets are larger and bolder, so they stand out from the descriptions. Date and time fields in forms are wider, so the full date stays visible.
+
 ## 🐛 Bug Fixes
 
 - **Unit Column on Invoice PDFs**  
@@ -18457,6 +18464,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 ## 🛠 Notes for Customizers
 
 These changes affect customers who maintain their own data model, lists, forms, or actions.
+
+- **Chart Fonts in Dashboards**  
+  Chart texts use the web client's font unless the dashboard configuration sets a `font`. Configurations that name `Roboto` now show the browser's default sans-serif font, because the web client no longer loads Roboto. Remove the `font` setting, or name `'Mulish Variable'` in it. See [Dashboards](https://docs.timecockpit.com/doc/data-model-customization/dashboard.md#chart).
 
 - **Invoice Report Data**  
   The `InvoiceDetails` dataset that `APP_CreateInvoiceReportAction` passes to the invoice report contains the field `Unit` (unit name) again, plus `EInvoiceUnitCode`. `UnitCode` (the unit's code) stays available. The `Invoices` dataset contains `IsEuMember` again, next to `CustomerIsEuMember`. Customized copies of the invoice report that use `Fields!Unit` or `Fields!IsEuMember` work again without changes.
