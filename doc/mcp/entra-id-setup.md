@@ -70,6 +70,9 @@ An Entra administrator (or a user with the *Application Developer* role) perform
    > [!NOTE]
    > The time cockpit MCP API appears under *APIs my organization uses* only once its service principal exists in your tenant. If it is not listed, create it as described in [Make the time cockpit MCP API Available in Your Tenant](#make-the-time-cockpit-mcp-api-available-in-your-tenant).
 
+   > [!NOTE]
+   > Clients also request `offline_access` to receive a refresh token. If users in your tenant may not consent to apps themselves (admin consent workflow), add **Microsoft Graph → Delegated permissions → `offline_access`** to the same app registration and include it in the admin consent. Otherwise sign-in still ends in the approval workflow.
+
 5. For **Copilot Studio** and **ChatGPT** only: **Certificates & secrets → New client secret**. Note the secret value; it is entered in the Copilot Studio MCP wizard or in the ChatGPT **New App** dialog together with the client ID.
 
 6. Copy the **Application (client) ID** from the overview page. This is the `<client-id>` used on all client pages of this documentation.
@@ -217,7 +220,7 @@ Deploy it at tenant scope. The deploying account needs the *Application Administ
 az deployment tenant create --location westeurope --template-file application.bicep --parameters redirectUris="['http://localhost:64485/callback','https://claude.ai/api/mcp/auth_callback']" grantAdminConsent=true
 ```
 
-The output `applicationClientId` is the `<client-id>` for your users. Redirect URIs for hosted clients (platform **Web**) and client secrets for Copilot Studio are not covered by the template; add them in the portal afterwards. Re-running the deployment with the same `applicationUniqueName` updates the existing registration.
+The output `applicationClientId` is the `<client-id>` for your users. Redirect URIs for hosted clients (platform **Web**), client secrets for Copilot Studio, and the Microsoft Graph permission `offline_access` (needed with admin consent workflow, see step 4) are not covered by the template; add them in the portal afterwards. Re-running the deployment with the same `applicationUniqueName` updates the existing registration.
 
 ## Redirect URIs per Client
 
@@ -253,7 +256,7 @@ If your organization filters outbound traffic or uses Conditional Access with na
 
 | Message | Cause / solution |
 |---------|------------------|
-| *needs admin approval* during sign-in | Admin consent for the `mcp.access` permission has not been granted on your app registration. |
+| *needs admin approval* during sign-in | Admin consent for the `mcp.access` permission has not been granted on your app registration. If users may not consent to apps in your tenant, `offline_access` (Microsoft Graph, delegated) needs admin consent as well, see step 4. |
 | `does not support dynamic client registration` | The client has no client ID configured. Set your client ID as described on the client page. |
 | `AADSTS50011: redirect URI … does not match` | The redirect URI used by the client is not registered on your app registration. Compare with the table above; check the platform type (Mobile and desktop vs. Web). |
 | `AADSTS7000218` / *client assertion or secret required* | The app registration is treated as a confidential client. Set **Allow public client flows** to *Yes*, or register the redirect URI under *Mobile and desktop applications* instead of *Web*. |

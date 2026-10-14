@@ -71,6 +71,9 @@ Ein Entra-Administrator (oder ein Benutzer mit der Rolle *Application Developer*
    > [!NOTE]
    > Die MCP-API von time cockpit erscheint erst unter *APIs my organization uses*, wenn ihr Service Principal in Ihrem Mandanten existiert. Ist sie nicht aufgeführt, legen Sie ihn wie unter [Die MCP-API von time cockpit in Ihrem Mandanten verfügbar machen](#die-mcp-api-von-time-cockpit-in-ihrem-mandanten-verfügbar-machen) beschrieben an.
 
+   > [!NOTE]
+   > Clients fordern zusätzlich `offline_access` an, um einen Refresh-Token zu erhalten. Dürfen Benutzer in Ihrem Mandanten Apps nicht selbst zustimmen (Admin-Consent-Workflow), fügen Sie derselben App-Registrierung **Microsoft Graph → Delegated permissions → `offline_access`** hinzu und nehmen Sie die Berechtigung in die Administratorzustimmung auf. Andernfalls endet die Anmeldung weiterhin im Genehmigungsworkflow.
+
 5. Nur für **Copilot Studio** und **ChatGPT**: **Certificates & secrets → New client secret**. Notieren Sie den Wert des Secrets; er wird zusammen mit der Client-ID im MCP-Assistenten von Copilot Studio oder im Dialog **New App** von ChatGPT eingetragen.
 
 6. Kopieren Sie die **Application (client) ID** von der Übersichtsseite. Das ist die `<client-id>`, die auf allen Client-Seiten dieser Dokumentation verwendet wird.
@@ -218,7 +221,7 @@ Stellen Sie die Vorlage auf Mandantenebene bereit. Das bereitstellende Konto ben
 az deployment tenant create --location westeurope --template-file application.bicep --parameters redirectUris="['http://localhost:64485/callback','https://claude.ai/api/mcp/auth_callback']" grantAdminConsent=true
 ```
 
-Die Ausgabe `applicationClientId` ist die `<client-id>` für Ihre Benutzer. Redirect-URIs für gehostete Clients (Plattform **Web**) und Client Secrets für Copilot Studio deckt die Vorlage nicht ab; fügen Sie diese anschließend im Portal hinzu. Eine erneute Bereitstellung mit demselben `applicationUniqueName` aktualisiert die vorhandene Registrierung.
+Die Ausgabe `applicationClientId` ist die `<client-id>` für Ihre Benutzer. Redirect-URIs für gehostete Clients (Plattform **Web**), Client Secrets für Copilot Studio und die Microsoft-Graph-Berechtigung `offline_access` (bei Admin-Consent-Workflow nötig, siehe Schritt 4) deckt die Vorlage nicht ab; fügen Sie diese anschließend im Portal hinzu. Eine erneute Bereitstellung mit demselben `applicationUniqueName` aktualisiert die vorhandene Registrierung.
 
 ## Redirect-URIs pro Client
 
@@ -254,7 +257,7 @@ Wenn Ihre Organisation ausgehenden Datenverkehr filtert oder bedingten Zugriff m
 
 | Meldung | Ursache / Lösung |
 |---------|------------------|
-| *needs admin approval* bei der Anmeldung | Für die Berechtigung `mcp.access` wurde in Ihrer App-Registrierung keine Administratorzustimmung erteilt. |
+| *needs admin approval* bei der Anmeldung | Für die Berechtigung `mcp.access` wurde in Ihrer App-Registrierung keine Administratorzustimmung erteilt. Dürfen Benutzer in Ihrem Mandanten Apps nicht selbst zustimmen, braucht auch `offline_access` (Microsoft Graph, delegiert) eine Administratorzustimmung, siehe Schritt 4. |
 | `does not support dynamic client registration` | Im Client ist keine Client-ID konfiguriert. Tragen Sie Ihre Client-ID wie auf der Client-Seite beschrieben ein. |
 | `AADSTS50011: redirect URI … does not match` | Die vom Client verwendete Redirect-URI ist in Ihrer App-Registrierung nicht eingetragen. Vergleichen Sie mit der Tabelle oben; prüfen Sie den Plattformtyp (Mobile and desktop oder Web). |
 | `AADSTS7000218` / *client assertion or secret required* | Die App-Registrierung wird als Confidential Client behandelt. Setzen Sie **Allow public client flows** auf *Yes* oder tragen Sie die Redirect-URI unter *Mobile and desktop applications* statt unter *Web* ein. |
