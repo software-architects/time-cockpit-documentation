@@ -86,6 +86,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Überblick](~/doc/sidekick/ueberblick.md)
   - [Installation & Koppeln](~/doc/sidekick/installation-und-koppeln.md)
   - [Signale im Kalender](~/doc/sidekick/signale-im-kalender.md)
+  - [Notizen](~/doc/sidekick/notizen.md)
   - [Datenschutz & Daten](~/doc/sidekick/datenschutz-und-daten.md)
 - Projektzeiterfassung
   - [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)

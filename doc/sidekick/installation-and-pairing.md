@@ -104,6 +104,7 @@ Right-click the sidekick icon in the notification area to open its menu. On macO
 - The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
+- **Note…** opens the window for a [quick note](notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
 - **Open data folder** opens the folder in which sidekick stores its data.

@@ -7758,6 +7758,10 @@ sidekick can also read Linux machines you work on over SSH, for example a develo
 
 What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md).
 
+## Quick Notes
+
+For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you just did, and sidekick keeps the note with its time. The calendar shows your notes next to the signals and turns a note that covers a time range into a booking draft. See [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md).
+
 ## sidekick and the Classic Signal Tracker
 
 sidekick is the successor to the [classic signal tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
@@ -7779,6 +7783,7 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - [Installing and Pairing sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md): the activity band, the detail lanes and the right pane.
+- [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md): writing down what you just did and booking it from the calendar.
 - [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.
 
 ---
@@ -7889,6 +7894,7 @@ Right-click the sidekick icon in the notification area to open its menu. On macO
 - The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
+- **Note…** opens the window for a [quick note](https://docs.timecockpit.com/doc/sidekick/notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
 - **Open data folder** opens the folder in which sidekick stores its data.
@@ -7943,6 +7949,7 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
+| **Notes** | Your [quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md) from sidekick. Shown only on days with notes (see [Notes](#notes)). |
 | **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
 | **Codex** | Codex sessions, in the same way as Claude. |
 | **Git** | Commits and branch switches. |
@@ -7955,6 +7962,27 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
 
 Bookings are created on the calendar grid as usual, never in the lanes.
+
+## Notes
+
+[Quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md) that you write in sidekick appear in the calendar as well. The calendar only reads them; you edit and delete notes in sidekick.
+
+### Notes in the Day View
+
+The lane **Notes** is the first lane of the group **Work**, right of **Microphone**, and appears only on days with notes. It shows a note symbol at the time of each note, in the colour of its workspace. A note with an end has a thin bar down to its end. The head of the lane shows the number of notes.
+
+The tooltip of a note shows its text, its **Context** and, for a note with an end, its duration.
+
+- The time at the top of the tooltip books the note, as in the tooltips of other signals: it opens a new booking for the time of the note (one hour for a note without an end), rounded to the quarter hour, with the text of the note as description.
+- **Copy** copies the text of the note. The button then shows **Copied**.
+
+### Notes in the Week View
+
+In views with several days, for example the week view, a small tab at the left edge of the bookings of a day marks each note at its time. Hovering over the tab shows the same tooltip as in the day view. A click on the tab, or **Enter** or **Space** while the tab has the focus, books the note with its text.
+
+### Drafts from Notes
+
+A note with an end becomes a draft in the bookings over its time range, where nothing is booked yet. Drafts from notes appear in the day view and in views of up to seven days, even when the calendar has no other proposal for the day. The draft is named after the first line of the note and marked **From a note**. A double-click books it with the text of the note.
 
 ## The Right Pane
 
@@ -7979,6 +8007,8 @@ The proposal learns from your bookings of the last 30 days and needs an up-to-da
 
 A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
 
+In the time range of a note with an end, the note takes precedence over the other blocks of the proposal (see [Drafts from Notes](#drafts-from-notes)).
+
 ## Marking Times
 
 - Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
@@ -7993,6 +8023,98 @@ While today is visible in the calendar, the signals are loaded again every minut
 
 - [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md)
 - [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
+- [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md)
+- [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
+
+---
+
+# Quick Notes with time cockpit sidekick
+
+Source: https://docs.timecockpit.com/doc/sidekick/notes.md
+
+# Quick Notes with sidekick
+
+> [!WARNING]
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+Signals show when you worked and with which applications, but not always what the work was. A phone call, a conversation at the desk or a quick fix leaves few traces. With a quick note you write it down in a few words at the end of the activity, without leaving the application you are in. sidekick keeps the note with its time, and the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows it next to the signals, so you can book it later with its text.
+
+## Open the Note Window
+
+- Press the key combination for a new note: **Ctrl+Alt+N** on Windows, **⌘⌥N** on macOS. You can change or switch off the combination in the settings (see [Key Combination](#key-combination)).
+- Or choose **Note…** in the menu of the tray icon.
+
+The window **Note** opens over any application, on the screen with the mouse pointer, and the cursor is in the text field. Type what you just did and press **Enter**.
+
+## The Note Window
+
+| Field | What it does |
+|---|---|
+| Text field | What you did, in a few words. **Shift+Enter** starts a new line. |
+| **Point in time** | When the note applies. It starts with the current time (hint **now**) and can be changed. |
+| **Closes** | Whether the note covers a time range. **None** is preselected; see below. |
+| **Workspace** | Which of today's workspaces or meetings the note belongs to. |
+
+**Enter** or **Save** saves the note, and sidekick confirms it with a silent notification **Note saved**. **Esc** discards the note. If you close the window with its close button instead, the text is kept for the next time you open it.
+
+### A Note with a Begin
+
+With **None** selected under **Closes**, you can enter an optional **Begin**. The note then covers the time from the begin to its point in time; without a begin, it marks a single point in time. The chips next to the begin set it with one click:
+
+- "since 10:12 · back at the desk": the end of your last break of at least 15 minutes today, with its time.
+- **−15 min**, **−30 min** and **−1 h**: that long before the point in time.
+
+For example, when you hang up after a call, open the note window, type "Call with the customer about the offer" and choose **−30 min**.
+
+### Close an Earlier Note
+
+Below **None**, **Closes** lists today's notes that have no end yet, at most five, the newest first. Choose one to end it at the point in time of the new note. The new note itself is then a single point in time.
+
+For example, write "Workshop preparation" when you start, and when you are done, write the next note and choose "Workshop preparation" under **Closes**.
+
+### Workspace
+
+**Workspace** shows today's workspaces and meetings as chips, in the same colours as in the day view of sidekick. The one that was in front during the last quarter hour is preselected. Choose another chip, or **None** for a note without a workspace. The calendar draws the note in the colour of its workspace.
+
+## Edit and Delete Notes
+
+Notes are edited and deleted only in sidekick. Open the tab **Day view**:
+
+- On a day with notes, the track **Notes** right of **Active** shows a sheet symbol for each note at its time, in the colour of its workspace. A note with an end has a thin bar down to its end. The tooltip shows the text.
+- The right pane starts with the section **Notes**: the notes of the day, or of the selected range. The search of the pane finds notes as well.
+- **Edit** opens a small form in the row with the text, **Begin**, **End (optional)** and **Context**. **Ctrl+Enter** or **Save** saves the changes, **Esc** or **Cancel** discards them.
+- **Delete** asks **Delete this note?** in the row. Confirm with **Delete**, or keep the note with **Cancel**.
+
+## Key Combination
+
+In sidekick, open **Settings** and, in the group **For all machines**, the area **Notes**.
+
+- Click into the field **Key combination for a new note** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
+- **Off** switches the key combination off. **Default** restores **Ctrl+Alt+N** (**⌘⌥N** on macOS).
+- The change takes effect when you save the settings.
+
+While sidekick runs, no other application gets this key combination. If another application already uses it, the area says so; choose another combination. **Note…** in the menu of the tray icon keeps working either way.
+
+## Notes in the Time Sheet Calendar
+
+The calendar reads your notes from sidekick together with the signals:
+
+- In the day view, the lane **Notes** shows each note at its time. Its tooltip shows the text, copies it and books the note with its text. See [Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#notes).
+- In the week view, a small tab at the left edge of the bookings of a day marks each note. A click on the tab books the note.
+- A note that covers a time range, because it has a begin or was closed by a later note, becomes a draft in the bookings over that range, as long as nothing is booked there yet. A double-click books it with the note's text. See [Drafts from Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#drafts-from-notes).
+
+The calendar never changes or deletes a note.
+
+## Privacy and Deletion
+
+Notes stay on your computer, in the same database as the signals, and are included in the daily backups. sidekick never uploads them, and the calendar reads them in the same way as the signals: only from the browser on the same computer, and only for paired calendars.
+
+Unlike signals, notes are not deleted after the retention period; they stay until you delete them. **Delete data** in the tab **Data** keeps your notes unless you select **Delete notes as well**. See [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md#deleting-data).
+
+## Related Pages
+
+- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
+- [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md)
 - [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
 
 ---
@@ -8041,19 +8163,19 @@ Window titles, file paths and commit messages can say a lot about your work. Tha
 
 sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). **Open data folder** in the menu of the tray icon opens this folder.
 
-- `signals.sqlite` holds the signals. It is an unencrypted SQLite database in your Windows profile.
+- `signals.sqlite` holds the signals and your [quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md). It is an unencrypted SQLite database in your Windows profile.
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
-- `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
+- `backups` holds a verified copy of the database from each day, including the notes. The seven newest copies are kept.
 - `config.json` holds the settings.
 - `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
 - `telemetry.json` holds the install ID and when the daily usage event was sent last. It exists only after you agreed to send [usage data](#usage-data). The folder `telemetry-queue` holds usage events that have not been sent yet; it is deleted when you switch usage data off.
 
-Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
+Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**. Notes are not affected by this period; they stay until you delete them.
 
 ## What Leaves Your Computer
 
-- sidekick uploads no signals. It sends usage data only if you agree; see [Usage Data](#usage-data).
+- sidekick uploads no signals and no notes. It sends usage data only if you agree; see [Usage Data](#usage-data).
 - The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
 - Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
@@ -8079,6 +8201,7 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
+- The calendar reads your notes in the same way as the signals, but never changes or deletes them. Notes are edited and deleted only in sidekick.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
 - To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
 
@@ -8101,6 +8224,8 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 - **Delete today…** deletes the signals of today.
 - **Delete period…** deletes the signals between two days.
 - **Delete everything…** deletes all signals.
+
+Your notes are kept by every delete unless you select **Delete notes as well** (off by default). With it, the notes that begin in the chosen range are deleted too, and **Delete everything…** deletes all notes. The question before deleting says how many notes will be deleted, or that notes are kept.
 
 sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
 
@@ -13194,7 +13319,7 @@ For charts the name of a list has to specified as data source. Additionally, `se
             "position": "bottom",
             "orientation": "horizontal",
             "labels": {
-               "font": "10px Roboto, sans-serif"
+               "font": "10px 'Mulish Variable', sans-serif"
             }
       },
       "valueAxis": { "labels": { "format": "n0" }}
@@ -13203,6 +13328,8 @@ For charts the name of a list has to specified as data source. Additionally, `se
 ```
 
 In `series` there is one additional field `groupField` that does not exist in the Kendo UI API. It allows you to specify a field for grouping data within a category.
+
+Chart texts use the font of the web client unless the configuration sets a `font`. Set `font` only to change the size or weight, and name the web client's font family `'Mulish Variable'` in it, as in the example above. A font that the web client does not load, for example `Roboto`, is replaced by the browser's default sans-serif font.
 
 ## Key Figure
 
@@ -18443,6 +18570,14 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 # 📅 November 2026
 
+## ✨ Improvements
+
+- **New Typeface**  
+  The web client now uses Mulish, the typeface of the time cockpit website and time cockpit sidekick. Text is one step larger (13 instead of 12 pixels), and menus, headings, tabs, and dialog titles use sentence case instead of capital letters. In the timesheet calendar, the date, the day headers, and the start time and duration of timesheets are larger and bolder, so they stand out from the descriptions. Date and time fields in forms are wider, so the full date stays visible.
+
+- **Quick Notes in time cockpit sidekick (Early Preview)**  
+  time cockpit sidekick takes quick notes: a key combination (**Ctrl+Alt+N** by default) or **Note…** in the tray menu opens a small window over any application, in which you write down what you just did, for example at the end of a phone call. In the Time Sheet Calendar, the day view shows the notes in the new lane **Notes**, the week view marks them with small tabs next to the bookings, and both book a note with its text. A note that covers a time range becomes a draft in the bookings, marked **From a note**. See [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md).
+
 ## 🐛 Bug Fixes
 
 - **Unit Column on Invoice PDFs**  
@@ -18457,6 +18592,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 ## 🛠 Notes for Customizers
 
 These changes affect customers who maintain their own data model, lists, forms, or actions.
+
+- **Chart Fonts in Dashboards**  
+  Chart texts use the web client's font unless the dashboard configuration sets a `font`. Configurations that name `Roboto` now show the browser's default sans-serif font, because the web client no longer loads Roboto. Remove the `font` setting, or name `'Mulish Variable'` in it. See [Dashboards](https://docs.timecockpit.com/doc/data-model-customization/dashboard.md#chart).
 
 - **Invoice Report Data**  
   The `InvoiceDetails` dataset that `APP_CreateInvoiceReportAction` passes to the invoice report contains the field `Unit` (unit name) again, plus `EInvoiceUnitCode`. `UnitCode` (the unit's code) stays available. The `Invoices` dataset contains `IsEuMember` again, next to `CustomerIsEuMember`. Customized copies of the invoice report that use `Fields!Unit` or `Fields!IsEuMember` work again without changes.

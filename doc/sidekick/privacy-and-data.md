@@ -42,19 +42,19 @@ Window titles, file paths and commit messages can say a lot about your work. Tha
 
 sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). **Open data folder** in the menu of the tray icon opens this folder.
 
-- `signals.sqlite` holds the signals. It is an unencrypted SQLite database in your Windows profile.
+- `signals.sqlite` holds the signals and your [quick notes](notes.md). It is an unencrypted SQLite database in your Windows profile.
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
-- `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
+- `backups` holds a verified copy of the database from each day, including the notes. The seven newest copies are kept.
 - `config.json` holds the settings.
 - `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
 - `telemetry.json` holds the install ID and when the daily usage event was sent last. It exists only after you agreed to send [usage data](#usage-data). The folder `telemetry-queue` holds usage events that have not been sent yet; it is deleted when you switch usage data off.
 
-Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
+Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**. Notes are not affected by this period; they stay until you delete them.
 
 ## What Leaves Your Computer
 
-- sidekick uploads no signals. It sends usage data only if you agree; see [Usage Data](#usage-data).
+- sidekick uploads no signals and no notes. It sends usage data only if you agree; see [Usage Data](#usage-data).
 - The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
 - Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
@@ -80,6 +80,7 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
+- The calendar reads your notes in the same way as the signals, but never changes or deletes them. Notes are edited and deleted only in sidekick.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
 - To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
 
@@ -102,6 +103,8 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 - **Delete today…** deletes the signals of today.
 - **Delete period…** deletes the signals between two days.
 - **Delete everything…** deletes all signals.
+
+Your notes are kept by every delete unless you select **Delete notes as well** (off by default). With it, the notes that begin in the chosen range are deleted too, and **Delete everything…** deletes all notes. The question before deleting says how many notes will be deleted, or that notes are kept.
 
 sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
 

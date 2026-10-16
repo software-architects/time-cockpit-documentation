@@ -31,6 +31,10 @@ sidekick kann auch Linux-Rechner auslesen, auf denen Sie über SSH arbeiten, zum
 
 Was sidekick nie aufzeichnet, wo die Daten gespeichert werden und wie Sie sie löschen, beschreibt [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md).
 
+## Notizen
+
+Für das, was kein Signal hinterlässt, zum Beispiel ein Telefonat, nimmt sidekick Notizen auf: Eine Tastenkombination öffnet ein kleines Fenster über jeder Anwendung, Sie tippen, was Sie gerade getan haben, und sidekick behält die Notiz mit ihrer Zeit. Der Kalender zeigt Ihre Notizen neben den Signalen und macht aus einer Notiz, die einen Zeitraum abdeckt, einen Buchungsentwurf. Siehe [Notizen mit sidekick](~/doc/sidekick/notizen.md).
+
 ## sidekick und der klassische Signal Tracker
 
 sidekick ist der Nachfolger des [klassischen Signal Trackers](~/doc/signal-tracker/ueberblick.md), der Teil des time cockpit Fullclients ist. sidekick wird den klassischen Signal Tracker in den kommenden Monaten ablösen.
@@ -52,4 +56,5 @@ Der Kalender zeigt Signale immer nur aus einer Quelle an. In den Einstellungen d
 
 - [sidekick installieren und koppeln](~/doc/sidekick/installation-und-koppeln.md): Download, Installation und Verbindung mit dem Kalender.
 - [sidekick-Signale im Zeiterfassungskalender](~/doc/sidekick/signale-im-kalender.md): das Aktivitätsband, die Detailspuren und der rechte Bereich.
+- [Notizen mit sidekick](~/doc/sidekick/notizen.md): festhalten, was Sie gerade getan haben, und es im Kalender buchen.
 - [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md): was aufgezeichnet wird, was nie aufgezeichnet wird, Speicherung und Löschen.

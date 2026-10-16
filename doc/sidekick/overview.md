@@ -30,6 +30,10 @@ sidekick can also read Linux machines you work on over SSH, for example a develo
 
 What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](privacy-and-data.md).
 
+## Quick Notes
+
+For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you just did, and sidekick keeps the note with its time. The calendar shows your notes next to the signals and turns a note that covers a time range into a booking draft. See [Quick Notes with sidekick](notes.md).
+
 ## sidekick and the Classic Signal Tracker
 
 sidekick is the successor to the [classic signal tracker](~/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
@@ -51,4 +55,5 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - [Installing and Pairing sidekick](installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](calendar-signals.md): the activity band, the detail lanes and the right pane.
+- [Quick Notes with sidekick](notes.md): writing down what you just did and booking it from the calendar.
 - [sidekick Privacy and Data](privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.

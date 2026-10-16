@@ -105,6 +105,7 @@ Klicken Sie mit der rechten Maustaste auf das sidekick-Symbol im Infobereich, um
 - Die erste Zeile zeigt den Zustand: **Zeichnet auf**, **Pausiert bis …** oder **Fehler: …**.
 - **Verbindung zum Kalender: an (Port …)** zeigt, ob der Kalender die Signale lesen kann und über welchen Port.
 - **sidekick öffnen…** öffnet das Fenster.
+- **Notiz…** öffnet das Fenster für eine [Notiz](~/doc/sidekick/notizen.md).
 - **Pause** pausiert die Aufzeichnung für **15 min**, **1 h** oder **bis Fortsetzen**. Während sidekick pausiert, beendet **Fortsetzen** die Pause.
 - **Update auf … installieren und neu starten** erscheint, wenn ein Update bereitsteht.
 - **Datenordner öffnen** öffnet den Ordner, in dem sidekick seine Daten speichert.

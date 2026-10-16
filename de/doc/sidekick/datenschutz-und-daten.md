@@ -43,19 +43,19 @@ Fenstertitel, Dateipfade und Commit-Nachrichten können viel über Ihre Arbeit v
 
 sidekick speichert seine Daten in `%APPDATA%\timecockpit-sidekick` (unter macOS in `~/Library/Application Support/timecockpit-sidekick`). **Datenordner öffnen** im Menü des Symbols im Infobereich öffnet diesen Ordner.
 
-- `signals.sqlite` enthält die Signale. Es ist eine unverschlüsselte SQLite-Datenbank in Ihrem Windows-Profil.
+- `signals.sqlite` enthält die Signale und Ihre [Notizen](~/doc/sidekick/notizen.md). Es ist eine unverschlüsselte SQLite-Datenbank in Ihrem Windows-Profil.
 - `tokens.json` enthält nur einen Hash jedes Tokens für das Koppeln, nie das Token selbst.
-- `backups` enthält eine geprüfte Kopie der Datenbank von jedem Tag. Die sieben neuesten Kopien werden aufbewahrt.
+- `backups` enthält eine geprüfte Kopie der Datenbank von jedem Tag, samt den Notizen. Die sieben neuesten Kopien werden aufbewahrt.
 - `config.json` enthält die Einstellungen.
 - `anchor-exclusions.json` und `meeting-dismissals.json` enthalten, was der Kalender an sidekick zurückschreibt (siehe [Wie der Kalender die Signale liest](#wie-der-kalender-die-signale-liest)).
 - `tracker.log` ist eine Protokolldatei. Sie enthält keine Fenstertitel und keine Pfade.
 - `telemetry.json` enthält die Installations-ID und wann das tägliche Nutzungsereignis zuletzt gesendet wurde. Die Datei gibt es erst, wenn Sie dem Senden von [Nutzungsdaten](#nutzungsdaten) zugestimmt haben. Der Ordner `telemetry-queue` enthält Nutzungsereignisse, die noch nicht gesendet wurden; er wird gelöscht, wenn Sie die Nutzungsdaten ausschalten.
 
-Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum ändern Sie in sidekick unter **Einstellungen**, Bereich **Aufbewahrung und Start**, Einstellung **Signale aufbewahren (Tage)**.
+Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum ändern Sie in sidekick unter **Einstellungen**, Bereich **Aufbewahrung und Start**, Einstellung **Signale aufbewahren (Tage)**. Notizen betrifft dieser Zeitraum nicht; sie bleiben, bis Sie sie löschen.
 
 ## Was Ihren Rechner verlässt
 
-- sidekick lädt keine Signale hoch. Nutzungsdaten sendet es nur, wenn Sie zustimmen; siehe [Nutzungsdaten](#nutzungsdaten).
+- sidekick lädt keine Signale und keine Notizen hoch. Nutzungsdaten sendet es nur, wenn Sie zustimmen; siehe [Nutzungsdaten](#nutzungsdaten).
 - Auch der time cockpit Web-Client sendet die Signale nicht an den time cockpit Server. Der Kalender verarbeitet sie nur in Ihrem Browser, auch die Schlüsselwörter und den Buchungsvorschlag. Nur die Zeitbuchungen, die Sie anlegen, werden wie gewohnt in time cockpit gespeichert.
 - Abgesehen von Nutzungsdaten ist die einzige Anfrage, die sidekick von sich aus stellt, die Suche nach Updates: Eine Minute nach dem Start und danach alle vier Stunden liest es den Update-Feed unter `https://www.timecockpit.com/download/sidekick/` (mit eingeschaltetem **Vorabversionen erhalten** unter `https://www.timecockpit.com/download/sidekick-preview/`) und lädt von dort eine neuere Version herunter. Die Anfrage enthält keine Daten von sidekick; der Server sieht die Adresse, von der die Anfrage kommt, wie bei jedem Download.
 - Wenn Sie entfernte Rechner hinzufügen, verbindet sich sidekick über SSH mit ihnen, um ihre Signale zu lesen. Die Daten bleiben in der lokalen Datenbank.
@@ -81,6 +81,7 @@ Die Daten gehen an Microsoft Azure Application Insights in der Region North Euro
 - Jede time cockpit Adresse, zum Beispiel `https://web-preview.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
 - Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser und werden nur dort verarbeitet; sie werden nie an den time cockpit Server gesendet.
 - Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, mit Betreff und geplanten Zeiten, und die Signale, die Sie als Beleg für den Vorschlag ausschließen, mit der Schablone, für die Sie sie ausgeschlossen haben (die Kennungen und Namen etwa ihres Projekts und ihrer Aufgabe). sidekick speichert sie, damit der Kalender sie anzeigen und zurücknehmen kann. Beides ändert kein Signal.
+- Der Kalender liest Ihre Notizen genauso wie die Signale, ändert oder löscht sie aber nie. Notizen werden nur in sidekick bearbeitet und gelöscht.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.
 - Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen** unter **Einstellungen** im Bereich **Verbindung zum Kalender**.
 
@@ -103,6 +104,8 @@ Um die Aufzeichnung zu pausieren, verwenden Sie **Pause** im Menü des Symbols i
 - **Heutigen Tag löschen…** löscht die Signale von heute.
 - **Zeitraum löschen…** löscht die Signale zwischen zwei Tagen.
 - **Alles löschen…** löscht alle Signale.
+
+Ihre Notizen bleiben bei jedem Löschen erhalten, außer Sie wählen **Notizen mitlöschen** (standardmäßig aus). Dann werden auch die Notizen gelöscht, die im gewählten Bereich beginnen, und **Alles löschen…** löscht alle Notizen. Die Rückfrage vor dem Löschen sagt, wie viele Notizen gelöscht werden oder dass die Notizen erhalten bleiben.
 
 sidekick zeigt vor dem Löschen, wie viele Zeilen gelöscht werden. Die Sicherungen, die einen gelöschten Tag enthalten, werden ebenfalls gelöscht, und gelöschte Zeilen werden in der Datenbankdatei überschrieben. Nach **Alles löschen…** liest sidekick keinen früheren Verlauf mehr ein: Claude-Code- und Codex-Sessions und Git-Repositorys werden erst ab dann aufgezeichnet, auch Repositorys, die es später findet.
 

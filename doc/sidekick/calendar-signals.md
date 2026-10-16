@@ -1,6 +1,6 @@
 ---
 title: sidekick Signals in the Time Sheet Calendar
-description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, keywords and booking proposals.
+description: How the Time Sheet Calendar shows time cockpit sidekick signals and notes - activity band, detail lanes, keywords and booking proposals.
 ---
 # sidekick Signals in the Time Sheet Calendar
 
@@ -31,6 +31,7 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
+| **Notes** | Your [quick notes](notes.md) from sidekick. Shown only on days with notes (see [Notes](#notes)). |
 | **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
 | **Codex** | Codex sessions, in the same way as Claude. |
 | **Git** | Commits and branch switches. |
@@ -43,6 +44,27 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
 
 Bookings are created on the calendar grid as usual, never in the lanes.
+
+## Notes
+
+[Quick notes](notes.md) that you write in sidekick appear in the calendar as well. The calendar only reads them; you edit and delete notes in sidekick.
+
+### Notes in the Day View
+
+The lane **Notes** is the first lane of the group **Work**, right of **Microphone**, and appears only on days with notes. It shows a note symbol at the time of each note, in the colour of its workspace. A note with an end has a thin bar down to its end. The head of the lane shows the number of notes.
+
+The tooltip of a note shows its text, its **Context** and, for a note with an end, its duration.
+
+- The time at the top of the tooltip books the note, as in the tooltips of other signals: it opens a new booking for the time of the note (one hour for a note without an end), rounded to the quarter hour, with the text of the note as description.
+- **Copy** copies the text of the note. The button then shows **Copied**.
+
+### Notes in the Week View
+
+In views with several days, for example the week view, a small tab at the left edge of the bookings of a day marks each note at its time. Hovering over the tab shows the same tooltip as in the day view. A click on the tab, or **Enter** or **Space** while the tab has the focus, books the note with its text.
+
+### Drafts from Notes
+
+A note with an end becomes a draft in the bookings over its time range, where nothing is booked yet. Drafts from notes appear in the day view and in views of up to seven days, even when the calendar has no other proposal for the day. The draft is named after the first line of the note and marked **From a note**. A double-click books it with the text of the note.
 
 ## The Right Pane
 
@@ -67,6 +89,8 @@ The proposal learns from your bookings of the last 30 days and needs an up-to-da
 
 A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
 
+In the time range of a note with an end, the note takes precedence over the other blocks of the proposal (see [Drafts from Notes](#drafts-from-notes)).
+
 ## Marking Times
 
 - Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
@@ -81,4 +105,5 @@ While today is visible in the calendar, the signals are loaded again every minut
 
 - [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md)
 - [time cockpit sidekick](overview.md)
+- [Quick Notes with sidekick](notes.md)
 - [sidekick Privacy and Data](privacy-and-data.md)
