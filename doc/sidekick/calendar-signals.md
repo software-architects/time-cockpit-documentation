@@ -70,8 +70,17 @@ A block of the **Proposal** lane can also be booked with a double-click. If an O
 ## Marking Times
 
 - Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
-- Press **/** to search the keywords. The search filters the word cloud and marks in the calendar when the matching words came up. **Esc** clears the search.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
+
+## Searching the Signals
+
+The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
+
+Under the field, a ruler of the day shows when the matches occurred, and a button for each section with matches jumps to it.
+
+If you selected blocks in the lanes, the search covers the selection. **Whole day** searches the whole day instead and keeps the selection; the ruler of the selection then shows the matches of the whole day. Both buttons show their number of matches.
+
+**Esc** clears the field; in an empty field it closes the search. The text stays while you move to other days, until the page is reloaded.
 
 ## Refresh
 
