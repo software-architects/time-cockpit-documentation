@@ -1,29 +1,26 @@
 ---
 title: Dark Mode in time cockpit
-description: Learn how to enable or disable dark mode in the time cockpit web client and use the dark theme in calendars, lists, forms, and dashboards.
-keywords: [time cockpit dark mode, dark theme, web client, theme settings]
+description: Choose light, dark or system appearance in the time cockpit web client; dark mode covers calendars, lists, forms, and dashboards.
+keywords: [time cockpit dark mode, dark theme, light mode, appearance, web client, theme settings]
 ---
 # Dark Mode in time cockpit
 
-Dark mode changes the time cockpit web client to a dark color theme. It can reduce glare in low-light environments and provides a consistent dark appearance across the timesheet calendar, lists, forms, and dashboards.
+Dark mode changes the time cockpit web client to a dark color theme. It can reduce glare in low-light environments and provides a consistent dark appearance across the timesheet calendar, lists, forms, and dashboards. Dark mode has colors of its own instead of inverting the page, so images, charts, and timesheet colors look the same in both modes.
 
-## Enable dark mode
+## Choose the appearance
 
 1. Open the **user menu** by selecting your name in the upper-right corner.
-2. In the **Settings** section, select **Dark mode**.
-3. The web client applies the dark theme immediately.
+2. In the **Settings** section, next to **Appearance**, select one of the options:
+   - **Light** – always the light theme.
+   - **Dark** – always the dark theme.
+   - **System** – follows the light or dark setting of your operating system and switches along with it.
+3. The web client applies the choice immediately.
 
-[![Dark mode setting in the time cockpit user menu](images/dark-mode-menu.png "Select Dark mode in the user menu")](images/dark-mode-menu.png)
+**System** is the default. If you had switched dark mode on before the November 2026 release, the web client starts with **Dark**.
 
-The following example shows the timesheet calendar with dark mode enabled:
-
-[![Timesheet calendar using dark mode](images/dark-mode-timesheet-calendar.png "Timesheet calendar in dark mode")](images/dark-mode-timesheet-calendar.png)
-
-## Switch back to light mode
-
-Open the user menu again and select **Dark mode** to clear the setting. The web client immediately returns to the light theme.
+The web client remembers your choice in the browser you use. In another browser or on another device, choose the appearance there as well.
 
 > [!TIP]
-> Dark mode changes the appearance only. It does not change your calendar data, list configuration, dashboards, or permissions.
+> The appearance changes only how the web client looks. Your calendar data, list configuration, dashboards, and permissions stay unchanged.
 
-Dark mode was introduced with the [June 2026 release](../release-notes/2026-06.md).
+Dark mode was introduced with the [June 2026 release](~/doc/release-notes/2026-06.md); the choice between **Light**, **Dark**, and **System** came with the [November 2026 release](~/doc/release-notes/2026-11.md).
