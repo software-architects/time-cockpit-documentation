@@ -30,6 +30,20 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 
 ![Double-Click Appointment](images/wc-transform-appointments.png "Double-Click Appointment")
 
+## How Appointments Appear in the Calendar
+
+Timesheets are filled with a colour. Outlook appointments have only an outline, so you can tell at a glance what is booked and what is not.
+
+By default, timesheets lie over the appointments of the same time, and an appointment stays visible:
+
+* If a timesheet covers only part of an appointment, the text of the appointment moves to its longest free part.
+* If timesheets cover the whole appointment, a narrow strip remains visible at its right edge. In the week view, the strip shows a calendar icon and, on longer appointments, the title. In the wide day view, it shows the full text.
+* Appointments that overlap each other and are fully covered share the strip. Hover over a strip to see the details of the appointment.
+
+The strip is only reserved when an appointment with a start and end time is on one of the days shown.
+
+To show timesheets and appointments side by side instead, click **Change office 365 calendar view mode** in the toolbar of the time sheet calendar, or press Ctrl + Alt + O.
+
 <!-- > [!NOTE]
 If you are not using Microsoft Office Outlook to manage your appointments, time cockpit cannot display your appointments at the moment.
 
