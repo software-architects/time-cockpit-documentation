@@ -21,7 +21,7 @@ In every view of the calendar, a narrow band next to each day shows your activit
 
 The unbooked active time is the time you most likely still have to book.
 
-In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the button **Day view** at the top of the right pane.
+In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the day view button (calendar icon) at the top of the right pane.
 
 ## Detail Lanes in the Day View
 
@@ -52,12 +52,23 @@ The right pane shows the signals of one day: the day you selected in the week vi
 
 The tab **Signals** lists the signals by kind, each in its own section:
 
-- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **AI**: your time with Claude Code and Codex, and the time the agents worked alone, per project and session.
+- **Window titles**: what was in the foreground. **By title** lists the window titles of the day, **By application** the applications with their durations. Your choice is kept.
 - **Files**: the folders and files that changed.
-- **AI**: your time with Claude Code and Codex, the tokens and an estimated cost based on API list prices. A subscription is billed differently.
-- **Applications**: the applications in the foreground, with their durations and window titles.
-- **Window titles**: the window titles of the day.
-- **Wi-Fi**: the connected networks and the networks in reach.
+- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **Wi-Fi**: the connected networks and the time without Wi-Fi.
+
+Each section shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
+
+| Section | Details |
+|---|---|
+| **AI** | The tokens and an estimated cost based on API list prices, split by token type. A subscription is billed differently. |
+| **Window titles** | The application under each title, or the titles under each application. |
+| **Files** | The changes by kind (new, changed, deleted) and the individual runs of the bulk changes. |
+| **Keywords** | The time after the most frequent words. |
+| **Wi-Fi** | When each network was connected, and the networks in reach. |
+
+Hover over a row of the section **AI** to see its time, tokens and cost in a tooltip. **Ctrl** + mouse wheel over a section shows more or fewer rows, in **Files** one level more or less of the folder tree. The number of open levels stays when you reload the page or move to another day.
 
 ### Proposal
 

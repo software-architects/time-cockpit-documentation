@@ -22,7 +22,7 @@ In jeder Ansicht des Kalenders zeigt ein schmales Band neben jedem Tag Ihre Akti
 
 Die nicht gebuchte aktive Zeit ist die Zeit, die Sie höchstwahrscheinlich noch buchen müssen.
 
-In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines Tages wechseln Sie in die Tagesansicht, zum Beispiel mit der Schaltfläche **Tagesansicht** oben im rechten Bereich.
+In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines Tages wechseln Sie in die Tagesansicht, zum Beispiel mit der Schaltfläche für die Tagesansicht (Kalendersymbol) oben im rechten Bereich.
 
 ## Detailspuren in der Tagesansicht
 
@@ -53,12 +53,23 @@ Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochen
 
 Der Reiter **Signale** listet die Signale nach Art, jede in einem eigenen Abschnitt:
 
-- **Schlagwörter**: die Wörter, die in Fenstertiteln, Dateipfaden, Commit-Betreffen, Session-Titeln und Besprechungsnamen vorkamen, als Wortwolke.
+- **KI**: Ihre Zeit mit Claude Code und Codex und die Zeit, in der die Agenten allein gearbeitet haben, je Projekt und Session.
+- **Fenstertitel**: was im Vordergrund war. **Nach Titel** listet die Fenstertitel des Tages, **Nach Anwendung** die Anwendungen mit ihrer Dauer. Ihre Wahl bleibt gespeichert.
 - **Dateien**: die Ordner und Dateien, die sich geändert haben.
-- **KI**: Ihre Zeit mit Claude Code und Codex, die Tokens und geschätzte Kosten nach API-Listenpreisen. Ein Abo wird anders abgerechnet.
-- **Anwendungen**: die Anwendungen im Vordergrund, mit ihrer Dauer und ihren Fenstertiteln.
-- **Fenstertitel**: die Fenstertitel des Tages.
-- **WLAN**: die verbundenen WLANs und die WLANs in Reichweite.
+- **Schlagwörter**: die Wörter, die in Fenstertiteln, Dateipfaden, Commit-Betreffen, Session-Titeln und Besprechungsnamen vorkamen, als Wortwolke.
+- **WLAN**: die verbundenen WLANs und die Zeit ohne WLAN.
+
+Jeder Abschnitt zeigt zuerst, was eine Buchung braucht. Das Reglersymbol im Band eines Abschnitts zeigt seine Details, ein zweiter Klick blendet sie wieder aus:
+
+| Abschnitt | Details |
+|---|---|
+| **KI** | Die Tokens und geschätzte Kosten nach API-Listenpreisen, aufgeteilt nach Token-Art. Ein Abo wird anders abgerechnet. |
+| **Fenstertitel** | Die Anwendung unter jedem Titel oder die Titel unter jeder Anwendung. |
+| **Dateien** | Die Änderungen nach Art (neu, geändert, gelöscht) und die einzelnen Läufe der Massenänderungen. |
+| **Schlagwörter** | Die Zeit nach den häufigsten Wörtern. |
+| **WLAN** | Wann jedes WLAN verbunden war, und die WLANs in Reichweite. |
+
+Zeigen Sie auf eine Zeile im Abschnitt **KI**, um ihre Zeit, Tokens und Kosten in einem Tooltip zu sehen. **Strg** + Mausrad über einem Abschnitt zeigt mehr oder weniger Zeilen, bei **Dateien** eine Ebene des Ordnerbaums mehr oder weniger. Die Zahl der offenen Ebenen bleibt erhalten, wenn Sie die Seite neu laden oder zu einem anderen Tag wechseln.
 
 ### Vorschlag
 
