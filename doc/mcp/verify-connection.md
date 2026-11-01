@@ -23,6 +23,7 @@ Missing tools are usually a matter of configuration:
 - `access=readonly` hides all writing tools.
 - `scope=owndata` hides everything that cannot be restricted to the current user.
 - The named-list tools (`get_lists`, `describe_list`, `execute_list`) depend on optional server capabilities and may be absent in a deployment.
+- The travel expense tools (`get_travel_expense_reports`, `get_travel_expense_report`, `calculate_travel_expense`) appear only when the tenant has the travel expense feature.
 - Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 See [connection settings](overview.md#connection-settings-header-or-url-segment) for how these values are passed.

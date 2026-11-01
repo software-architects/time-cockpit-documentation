@@ -147,6 +147,9 @@ Der lokale Server bietet dieselben gemeinsamen Tools wie der Remote-Server, mit 
 | `get_current_user` | nein | | Der vollständige Datensatz des angemeldeten Benutzers. |
 | `get_timesheets` | nein | | Zeitbuchungen mit typisierten Filtern lesen (Datumsbereich, Projekt- oder Tätigkeitscode, Beschreibung, Benutzer). |
 | `create_timesheet` | **ja** | | Eine Zeitbuchung anlegen. |
+| `get_travel_expense_reports` | nein | | Reisekostenabrechnungen mit Route, Zeitraum, Status und gespeicherter Summe; standardmäßig die eigenen. Nur mit dem Reisekosten-Feature. |
+| `get_travel_expense_report` | nein | | Eine Reisekostenabrechnung mit Abschnitten, Tagen, Belegen und gespeicherten Beträgen. Nur mit dem Reisekosten-Feature. |
+| `calculate_travel_expense` | nein | | Diäten, Mahlzeitenabzug, Nächtigungsgeld und Kilometergeld einer gespeicherten oder beschriebenen Reise mit den Sätzen des Tenants berechnen; speichert nichts. Nur mit dem Reisekosten-Feature. |
 | `create_timesheet_suggestion` | **ja** | ja | **Nur lokal.** Eine bestehende Zeitbuchung anderen Benutzern als Buchungsvorschlag anbieten. Benötigt `confirmed=true`. |
 | `get_entities` | nein | | Die Entitäten des Datenmodells des Mandanten auflisten. Systementitäten sind ausgeblendet. |
 | `describe_entity` | nein | | Vollständige Metadaten einer Entität: Eigenschaften, Typen, Beziehungen. |

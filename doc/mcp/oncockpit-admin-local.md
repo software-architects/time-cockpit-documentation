@@ -146,6 +146,9 @@ The local server offers the same shared tools as the remote server, with the sam
 | `get_current_user` | no | | The signed-in user's full record. |
 | `get_timesheets` | no | | Read timesheets with typed filters (date range, project or task code, description, user). |
 | `create_timesheet` | **yes** | | Create one timesheet entry. |
+| `get_travel_expense_reports` | no | | Travel expense reports with route, period, status and stored total; your own by default. Only with the travel expense feature. |
+| `get_travel_expense_report` | no | | One travel expense report with its legs, days, receipts and stored amounts. Only with the travel expense feature. |
+| `calculate_travel_expense` | no | | Calculate per diem allowances, meal deductions, overnight allowances and mileage of a stored report or a described trip with the tenant's rates; stores nothing. Only with the travel expense feature. |
 | `create_timesheet_suggestion` | **yes** | yes | **Local only.** Propose an existing timesheet to other users as a suggestion. Needs `confirmed=true`. |
 | `get_entities` | no | | List the entities of the tenant's data model. System entities are hidden. |
 | `describe_entity` | no | | Full metadata for one entity: properties, types, relations. |

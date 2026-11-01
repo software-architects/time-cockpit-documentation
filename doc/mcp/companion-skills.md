@@ -14,6 +14,7 @@ The public package **software-architects/timecockpit-agents** on GitHub ([github
 | `timecockpit-mcp-setup` | Set up the connection (remote/local), choose tenant/sandbox/access/scope, analyze sign-in problems and missing tools — **start here** |
 | `timecockpit-time-tracking` | Book and correct your own hours (booking patterns) |
 | `timecockpit-reporting` | Totals, budgets, utilization (report recipes) |
+| `timecockpit-travel-expenses` | Read travel expense reports and calculate per diem allowances (only with the travel expense feature) |
 | `timecockpit-tcql` | Ad-hoc queries in TCQL (reference and cookbook) |
 | `timecockpit-model-discovery` | Explore the customer-specific data model (`get_entities`, `describe_entity`) |
 | `timecockpit-record-management` | Create, update, delete objects (`create_object`, `update_object`, `delete_object`) — with confirmation handshake |

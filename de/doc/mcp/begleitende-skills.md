@@ -15,6 +15,7 @@ Das öffentliche Paket **software-architects/timecockpit-agents** auf GitHub ([g
 | `timecockpit-mcp-setup` | Verbindung einrichten (remote/lokal), Mandant/Sandbox/Zugriff/Umfang wählen, Anmeldeprobleme und fehlende Tools analysieren – **hier beginnen** |
 | `timecockpit-time-tracking` | Eigene Stunden buchen und korrigieren (Buchungsmuster) |
 | `timecockpit-reporting` | Summen, Budgets, Auslastung (Berichtsrezepte) |
+| `timecockpit-travel-expenses` | Reisekostenabrechnungen lesen und Diäten berechnen (nur mit dem Reisekosten-Feature) |
 | `timecockpit-tcql` | Ad-hoc-Abfragen in TCQL (Referenz und Kochbuch) |
 | `timecockpit-model-discovery` | Das kundenspezifische Datenmodell erkunden (`get_entities`, `describe_entity`) |
 | `timecockpit-record-management` | Objekte anlegen, ändern, löschen (`create_object`, `update_object`, `delete_object`) – mit Bestätigungsablauf |
