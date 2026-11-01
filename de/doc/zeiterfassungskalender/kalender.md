@@ -62,6 +62,7 @@ Der Zeiterfassungskalender zeigt verschiedene Arten von Informationen:
 * Zeitbuchungen
 * Abwesenheiten (Urlaub, Zeitausgleich, Krankenstand). Siehe auch [Abwesenheitsverwaltung](~/doc/arbeitszeiterfassung/abwesenheitsverwaltung.md).
 * Outlook-Termine und gesendete E-Mails aus Ihrem Office 365-Konto. Siehe auch [Office 365](~/doc/zeiterfassungskalender/office-365-integration.md).
+* Notizen aus time cockpit sidekick. Siehe auch [Notizen](~/doc/sidekick/signale-im-kalender.md#notizen).
 
 Sie können Zeitbuchungen manuell anlegen, ändern oder löschen, oder Sie legen sie mithilfe von Signalen oder Microsoft Office Outlook-Terminen an. Der Zeiterfassungskalender besteht aus folgenden Bereichen:
 
@@ -88,6 +89,19 @@ Neben der Granularität des Zeiterfassungskalenders können Sie auch wählen, wi
 Wenn Sie diese Option aktivieren, werden Zeitbuchungen und Outlook-Termine nebeneinander angezeigt.
 
 ![Ansicht nebeneinander aktiviert](/doc/timesheet-calendar/images/wc-side-by-side-enabled.png "Ansicht nebeneinander aktiviert")
+
+### Tooltips
+
+Zeigen Sie mit der Maus auf eine Zeitbuchung, einen Outlook-Termin oder eine Notiz, um den Tooltip zu sehen, oder tippen Sie auf einem Touchscreen darauf. Der Tooltip sagt, worum es sich handelt, mit Zeit, Dauer und ganzem Text. Er bleibt offen, solange der Mauszeiger darauf steht, bleibt innerhalb des Fensters und schließt sich, wenn Sie den Kalender scrollen.
+
+| Tooltip | Links |
+|---|---|
+| **Zeitbuchung** | **Bearbeiten** öffnet die Zeitbuchung. |
+| **Buchungsvorschlag** | Keine. |
+| **Outlook-Termin** | **Buchen** öffnet das Formular für eine neue Zeitbuchung, **Kalendereintrag öffnen** öffnet den Termin in Outlook. Siehe [Mit einem Termin arbeiten](~/doc/zeiterfassungskalender/outlook-termine.md#mit-einem-termin-arbeiten). |
+| **Notiz** | **Buchen** öffnet das Formular für eine neue Zeitbuchung. Siehe [Notizen](~/doc/sidekick/signale-im-kalender.md#notizen). |
+
+Eine schreibgeschützte Zeitbuchung hat keinen Link **Bearbeiten**.
 
 ### Zoom
 

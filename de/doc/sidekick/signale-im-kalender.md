@@ -1,6 +1,6 @@
 ---
 title: sidekick-Signale im Zeiterfassungskalender
-description: So zeigt der Zeiterfassungskalender die Signale von time cockpit sidekick - Aktivitätsband, Detailspuren, Schlagwörter und Buchungsvorschläge.
+description: So zeigt der Zeiterfassungskalender die Signale von time cockpit sidekick - Aktivitätsband, Detailspuren, Notizen, Schlagwörter und Buchungsvorschläge.
 en_page: doc/sidekick/calendar-signals.md
 ---
 # sidekick-Signale im Zeiterfassungskalender
@@ -44,6 +44,25 @@ In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen.
 Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Lokale Kontexte, zum Beispiel ein Claude-Code-Projekt, ein Git-Repository oder ein Ordner, haben im Kalender dieselbe Farbe wie in sidekick. Die Schablonen in den Spuren **Projekte** und **Vorschlag** färbt der Kalender.
 
 Zeitbuchungen werden wie gewohnt im Raster des Kalenders angelegt, nie in den Spuren.
+
+## Notizen
+
+Eine Notiz ist ein kurzer Text, den Sie in sidekick schreiben, standardmäßig mit **Strg** + **Alt** + **N** (**⌘⌥N** unter macOS). Der Kalender zeigt sie in jeder Ansicht zu ihrer Zeit. Eine Notiz ist eine Information wie ein Termin: Sie muss nicht zu einer Zeitbuchung werden, und nichts kennzeichnet sie als gebucht.
+
+- Eine Notiz hat eine Kontur in der Farbe ihres Kontexts auf leicht getöntem Grund, eine Notiz ohne Kontext ist hellgelb.
+- Liegt eine Zeitbuchung über einem Teil der Notiz, rückt ihr Text in den freien Teil. Liegen Zeitbuchungen über der ganzen Notiz, rückt sie in den schmalen Streifen rechts der Zeitbuchungen, in dem auch [Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md#so-erscheinen-termine-im-kalender) stehen.
+- Notizen und Termine derselben Zeit teilen sich die Breite. Notizen derselben Zeit, für die jeweils zu wenig davon bliebe, werden ein Eintrag, zum Beispiel **3 Notizen**.
+- Stehen Zeitbuchungen und Termine nebeneinander, stehen Notizen bei den Terminen.
+- Eine Notiz ohne Dauer ist eine Zeile zu ihrer Zeit. Eine laufende Notiz wächst bis zur aktuellen Zeit.
+
+| Was Sie tun | Was geschieht |
+|---|---|
+| Mit der Maus auf die Notiz zeigen | Nach einem Moment öffnet sich ihr [Tooltip](~/doc/zeiterfassungskalender/kalender.md#tooltips): die Zeit, die Dauer, der ganze Text und der Name des Kontexts. |
+| Klicken oder tippen, oder **Eingabe** oder **Leertaste** auf der Notiz drücken | Der Tooltip öffnet sich sofort. Mit einer Taste rückt der Fokus auf den Link im Tooltip; **Esc** oder **Tab** über den letzten Link hinaus schließt ihn und bringt den Fokus zurück auf die Notiz. |
+| Doppelklicken oder zweimal tippen, **Umschalt** + **Eingabe** auf der Notiz drücken oder **Buchen** im Tooltip klicken | Das Formular für eine neue Zeitbuchung öffnet sich mit dem Text der Notiz und ihrer Zeit, gerundet auf die Viertelstunde. Eine Notiz ohne Dauer bekommt eine Stunde. |
+| Auf die Notiz drücken und ziehen | Eine neue Zeitbuchung wird gezogen, wie im freien Raster. |
+
+Ein Eintrag für mehrere Notizen wird nicht als Ganzes gebucht: Sein Tooltip listet die Notizen auf, jede mit eigenem Link **Buchen**.
 
 ## Der rechte Bereich
 

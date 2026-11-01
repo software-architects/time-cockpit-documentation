@@ -1,6 +1,6 @@
 ---
 title: sidekick Signals in the Time Sheet Calendar
-description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, keywords and booking proposals.
+description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, quick notes, keywords and booking proposals.
 ---
 # sidekick Signals in the Time Sheet Calendar
 
@@ -43,6 +43,25 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
 
 Bookings are created on the calendar grid as usual, never in the lanes.
+
+## Quick Notes
+
+A quick note is a short text you write in sidekick, by default with **Ctrl** + **Alt** + **N** (**⌘⌥N** on macOS). The calendar shows it at its time in every view. A note is information, as an appointment is: it does not have to become a booking, and nothing marks it as booked.
+
+- A note has an outline in the colour of its context on a lightly tinted ground, and a note without a context is light yellow.
+- If a timesheet covers part of a note, its text moves to the free part. If timesheets cover all of it, the note moves to the narrow strip right of the timesheets, where [Outlook appointments](~/doc/timesheet-calendar/outlook-appointments.md#how-appointments-appear-in-the-calendar) have theirs.
+- Notes and appointments of the same time share the width. Notes of the same time that would get too little of it each become one entry, for example **3 notes**.
+- With timesheets and appointments side by side, notes stand with the appointments.
+- A note without a duration is one line at its time. A running note grows up to the current time.
+
+| What you do | What happens |
+|---|---|
+| Hover over a note | Its [tooltip](~/doc/timesheet-calendar/calendar.md#tooltips) opens after a moment: the time, the duration, the whole text and the name of the context. |
+| Click or tap it, or press **Enter** or **Space** on it | The tooltip opens at once. With a key, the focus moves to the link in the tooltip; **Esc** or **Tab** past the last link closes it and brings the focus back to the note. |
+| Double-click or double-tap it, press **Shift** + **Enter** on it, or click **Book** in its tooltip | The form for a new timesheet opens with the text of the note and its time, rounded to the quarter hour. A note without a duration gets one hour. |
+| Press on it and drag | A new timesheet is drawn, as on the free grid. |
+
+An entry for several notes is not booked as a whole: its tooltip lists the notes, each with its own **Book** link.
 
 ## The Right Pane
 
