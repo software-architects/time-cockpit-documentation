@@ -107,6 +107,18 @@ Jeder Client hat seine eigene Konfiguration. Ein in Claude Code registrierter Se
 - **Ergebnisse sind begrenzt.** Lesezugriffe sind in Zeilenzahl und Größe beschränkt und weisen darauf mit `truncated: true` hin. Siehe [Limits und Kürzung](~/doc/mcp/grenzen-und-kuerzung.md).
 - **Jeder Tool-Aufruf wird protokolliert.** Der Server zeichnet pro versuchtem Aufruf ein operatives Audit-Ereignis mit Mandant, handelndem Benutzer, Host, Tool, ob Daten geändert werden, Ergebnis und Dauer auf. Abgelehnte, fehlgeschlagene und abgebrochene Versuche werden ebenfalls erfasst. Das Ereignis enthält keine Argumente, keinen Abfragetext, keine Datensatzinhalte und keine Ergebnisse.
 
+## Reisekosten-Tools
+
+Drei Tools arbeiten mit [Reisekosten](~/doc/reisekosten/ueberblick.md). Sie gibt es auf dem Remote- und dem lokalen Server, aber nur, wenn der Mandant das Reisekosten-Feature hat; sonst fehlen sie in der Tool-Liste.
+
+| Tool | Zweck |
+|------|-------|
+| `get_travel_expense_reports` | Reisekostenabrechnungen mit Zweck, Reisendem, Route, Zeitraum, Status und gespeicherter Summe. Standardmäßig die eigenen; Filter nach Reisendem, Status und Zeitraum oder alle Abrechnungen, die Sie lesen dürfen. |
+| `get_travel_expense_report` | Eine Reisekostenabrechnung mit Reiseabschnitten, Reisetagen, Belegen und gespeicherten Beträgen. |
+| `calculate_travel_expense` | Berechnet Diäten, Mahlzeitenabzug, Nächtigungsgeld und Kilometergeld einer gespeicherten oder beschriebenen Reise mit den Sätzen und Einstellungen des Mandanten. Speichert nichts. |
+
+Alle drei lesen und rechnen nur. Erfassen, Einreichen, Genehmigen und Auszahlen geschehen im Web-Client; siehe [Genehmigung und Auszahlung](~/doc/reisekosten/genehmigung-und-auszahlung.md). Mit `owndata` arbeiten die Tools nur mit Ihren eigenen Reisen. Die Rechenregeln stehen unter [Einstellungen, Diätensätze und Rechenregeln](~/doc/reisekosten/einstellungen-diaetensaetze-und-rechenregeln.md#rechenregeln).
+
 ## Verwandte Seiten
 
 - [Zugriff, Bereich und Bestätigung](~/doc/mcp/zugriff-umfang-und-bestaetigung.md) und [Limits und Kürzung](~/doc/mcp/grenzen-und-kuerzung.md)

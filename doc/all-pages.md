@@ -86,6 +86,10 @@ Every page of the time cockpit documentation on one page, in the order of the na
   - [Installation & Pairing](sidekick/installation-and-pairing.md)
   - [Signals in the Calendar](sidekick/calendar-signals.md)
   - [Privacy & Data](sidekick/privacy-and-data.md)
+- Travel Expenses (Preview)
+  - [Recording Trips](travel-expenses/overview.md)
+  - [Approval and Payout](travel-expenses/approval-and-payout.md)
+  - [Settings, Rates and Calculation Rules](travel-expenses/settings-and-rates.md)
 - Project-Based Time Tracking
   - [Customer / Project / Task](project-time-tracking/customer-project-task.md)
   - [Time Sheet](project-time-tracking/timesheet.md)

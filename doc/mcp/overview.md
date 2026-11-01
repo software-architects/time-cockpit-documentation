@@ -106,6 +106,18 @@ Every client has its own configuration. A server registered in Claude Code is in
 - **Results are bounded.** Reads are capped in rows and size and say so with `truncated: true`. See [Limits and Truncation](limits.md).
 - **Every tool call is audited.** The server records one operational audit event per attempted call with tenant, acting user, host, tool, whether it changes data, outcome and duration. Denied, failed and cancelled attempts are recorded as well. The event contains no arguments, query text, record contents or results.
 
+## Travel Expense Tools
+
+Three tools work with [travel expenses](~/doc/travel-expenses/overview.md). They exist on the remote and the local server, but only when the tenant has the travel expense feature; otherwise they are missing from the tool list.
+
+| Tool | Purpose |
+|------|---------|
+| `get_travel_expense_reports` | Travel expense reports with purpose, traveler, route, period, status and stored total. Your own by default; filters for traveler, status and period, or all reports you may read. |
+| `get_travel_expense_report` | One travel expense report with its legs, days, receipts and stored amounts. |
+| `calculate_travel_expense` | Calculates per diem, meal deduction, overnight allowance and mileage for a stored report or a described trip with the tenant's rates and settings. Stores nothing. |
+
+All three only read and calculate. Recording, submitting, approving and marking trips as paid happen in the web client; see [Approval and Payout](~/doc/travel-expenses/approval-and-payout.md). With `owndata`, the tools work only with your own trips. The calculation rules are described in [Settings, Per Diem Rates and Calculation Rules](~/doc/travel-expenses/settings-and-rates.md#calculation-rules).
+
 ## Related Pages
 
 - [Access, Scope, and Confirmation](access-and-confirmation.md) and [Limits and Truncation](limits.md)

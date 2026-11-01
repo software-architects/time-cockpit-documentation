@@ -8120,6 +8120,371 @@ sidekick does not read your location. Windows only requires this setting before 
 
 ---
 
+# Travel Expenses - Record Business Trips
+
+Source: https://docs.timecockpit.com/doc/travel-expenses/overview.md
+
+# Travel Expenses
+
+> [!WARNING]
+> Preview: Travel expenses are a preview feature. The menu entries, the travel expense pages and the trips in the Time Sheet Calendar appear only when the feature flag `APP_TravelExpensePreview` is enabled for your tenant. To try the feature, contact [support@timecockpit.com](mailto:support@timecockpit.com). Labels and behavior can still change.
+
+With travel expenses, employees record each business trip as a travel expense report: the route with departure, arrival and border crossings, the meals and overnight stays per day, and the receipts. time cockpit calculates per diem allowances, meal deductions, overnight allowances and mileage according to the Austrian rules while you type. You submit the trip, your department lead approves it, and HR marks it as paid.
+
+Only the Austrian rules are supported. HR exports approved trips for payroll as Excel or CSV and records the payout as a status; see [Export for Payroll](https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md#export-for-payroll).
+
+## Where to Find It
+
+| Menu entry | What it opens | Who uses it |
+|---|---|---|
+| **User** → **My Travel Expenses** → **[My Trips](https://web.timecockpit.com/app/travel-expenses)** | Your trips with their stored amounts and status | Every employee |
+| **User** → **My Travel Expenses** → **[New Trip](https://web.timecockpit.com/app/travel-expenses/new)** | An empty trip on the capture page | Every employee |
+| **Management** → **Travel Expenses** | Lists for all trips, approval, payout and per diem rates | Department Leads, HR Administrators; see [Approval and Payout](https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md) |
+
+## My Trips
+
+**My Trips** lists your own trips, newest first, with begin, purpose, route, project, per diem, mileage, receipts, total and status. Above the list you see the sum of trips that are open for payout (submitted or approved) and the sum already paid. Click a trip to open it, or choose **New** to record a new one.
+
+## Record a Trip
+
+The capture page shows everything on one page. The result on the right is recalculated after every change, using the per diem rates and settings of your tenant. Required fields are highlighted.
+
+### General
+
+- **Purpose** (required), for example *Workshop at the customer*.
+- **Project** (optional). A project is required if you want to re-bill receipts to the customer.
+- **Calculation method**: **Calendar day (00:00–24:00)** or **24-hour period**. New trips start with the default from the [settings](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md#global-settings).
+- **Begin** and **End** are taken from the route.
+
+### Route
+
+The route is a sequence of stays, one stay per place. A new trip starts as a round trip from the home country of your tenant: enter the start place, then each destination with its country or region. The country decides which per diem rate applies. Use **Insert stay** to add a destination and **Remove stay** to delete one.
+
+For each leg between two stays, enter:
+
+| Field | Description |
+|---|---|
+| **Departure**, **Arrival** | Date and time. Arrival must be after departure, and a leg cannot depart before the previous one arrived. |
+| **Border crossing** | Date and time you crossed the border. Only needed when the country changes; otherwise the page shows *no change of country*. |
+| **Means of transport** | Selects how the leg is reimbursed (see below). |
+| **Distance (km)**, **Passengers** | Shown for means of transport with mileage allowance. |
+| **Flat amount (€)** | Shown for means of transport with a flat amount per leg. |
+
+Whether a means of transport earns mileage allowance, a flat amount or nothing is set in the means of transport; see [Mileage](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md#mileage). Costs of other means of transport, such as a train ticket, are entered as a receipt.
+
+### Travel Days
+
+The travel days follow from departure and arrival in the route. For each day you mark the meals that were provided (**Breakfast**, **Lunch**, **Dinner**) and choose the overnight stay for the night after that day:
+
+| Overnight stay | Effect |
+|---|---|
+| **Hotel with receipt** | No overnight allowance; enter the hotel bill as a receipt. This is the default. |
+| **Flat rate** | The overnight allowance of the country you are in at midnight. |
+| **Provided / no costs** | Nothing is paid for that night. |
+
+Provided meals reduce the per diem. The deduction and the rule applied are shown per day; see [Meals](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md#meals).
+
+### Receipts
+
+Choose **New receipt** and enter the date, type, description and amount. Use **Attach** to add the scanned receipt or invoice as a file, and **Replace** to exchange it. Mark **Rebill** for receipts you want to charge to the customer; this requires a project on the trip.
+
+### Timesheets in the Period
+
+This section shows your timesheets during the trip for information. The trip does not depend on them.
+
+### Result
+
+The result panel shows the **Payout amount** and its parts: per diem, meal deduction, overnight allowance, mileage and flat amounts, and receipts, plus the share that can be re-billed to the customer. Below it you see the per diem per calendar day or per 24-hour period with the twelfths per country, and the mileage per leg. If data is missing, the panel lists what to complete instead of a result. How the amounts are calculated is described in [Calculation Rules](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md#calculation-rules).
+
+## Import Legs from Timesheets
+
+If you record journeys on your timesheets (journey from, journey to, means of transport), choose **Actions** → **Import from timesheets**. The dialog lists the timesheets with journey data; timesheets that already belong to a trip are marked. Each selected timesheet becomes a leg with its begin as departure and its end as arrival. Check country and border crossing afterwards. The trip stays independent of the timesheet; the leg only remembers where it came from.
+
+## Save, Create a PDF and Submit
+
+| Button | Effect |
+|---|---|
+| **Save**, **Save and close** | Saves the trip with its legs, days and receipts and stores the calculated amounts. |
+| **PDF** (or **Actions** → **Create PDF**) | Creates the travel expense report as a PDF: employee, purpose, result, route, per diem per unit and country, mileage, receipts, travel days, status and signature lines. |
+| **Submit** | Recalculates the trip and sends it to your department lead for approval. Only possible when the calculation reports no issues. |
+| **Actions** → **Delete** | Deletes a draft with its legs, days and receipts. |
+
+After submitting, the trip is read-only. If it is rejected, you can change it and submit it again.
+
+## Status of a Trip
+
+| Status | Meaning | Can the employee change it? |
+|---|---|---|
+| **Draft** | Recorded, not submitted yet | Yes |
+| **Submitted** | Waiting for approval | No |
+| **Rejected** | Returned with a reason | Yes, then submit again |
+| **Approved** | Approved by the department lead or HR | No |
+| **Paid** | Marked as paid by HR | No |
+
+You receive a notification when your trip is approved, rejected (with the reason) or paid. The amounts are recalculated on submit and on approval. Approved and paid trips are not recalculated, even if rates change later.
+
+## Trips in the Time Sheet Calendar
+
+The [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows each trip of the displayed user as a bar in the all-day row across its travel days, with the means of transport, purpose, route, total and status. The color shows the status. Click the bar to open the trip. Trips cannot be created or moved in the calendar.
+
+## Related Pages
+
+- [Approval and Payout](https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md)
+- [Settings, Per Diem Rates and Calculation Rules](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md)
+- [MCP Server: Travel Expense Tools](https://docs.timecockpit.com/doc/mcp/overview.md#travel-expense-tools)
+- [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md)
+
+---
+
+# Travel Expenses - Approval and Payout
+
+Source: https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md
+
+# Travel Expenses: Approval and Payout
+
+> [!WARNING]
+> Preview: Travel expenses are a preview feature. The menu entries appear only when the feature flag `APP_TravelExpensePreview` is enabled for your tenant. To try the feature, contact [support@timecockpit.com](mailto:support@timecockpit.com).
+
+After an employee submits a trip, the department lead of the employee's department or an HR Administrator approves or rejects it. HR then pays the trip out and marks it as paid. How employees record and submit trips is described in [Travel Expenses](https://docs.timecockpit.com/doc/travel-expenses/overview.md).
+
+## Who Does What
+
+| Task | Who | Where |
+|---|---|---|
+| Approve or reject a submitted trip | Department Leads for users in the departments they lead, HR Administrators | **Management** → **Travel Expenses** → **[Approval](https://web.timecockpit.com/app/lists/APP_TravelExpenseReportApprovalList)** |
+| Mark an approved trip as paid | HR Administrators | **Management** → **Travel Expenses** → **[Payout](https://web.timecockpit.com/app/lists/APP_TravelExpenseReportPayoutList)** |
+| Export approved trips for payroll (Excel or CSV) | HR Administrators | **Management** → **Travel Expenses** → **[Payroll Export](https://web.timecockpit.com/app/lists/APP_TravelExpensePayrollList)** |
+| Review all trips | Everyone, limited to the trips they may read (see below) | **Management** → **Travel Expenses** → **[Travel Expense Reports](https://web.timecockpit.com/app/lists/entity/APP_TravelExpenseReport)** |
+| Find receipts to re-bill to customers | Billing Administrators, HR Administrators | **Management** → **Billing** → **[Unbilled Travel Receipts](https://web.timecockpit.com/app/lists/APP_UnbilledTravelReceiptList)** |
+
+With default permissions, the **Approval** list is available to Department Leads and HR Administrators, the **Payout** and **Payroll Export** lists to HR Administrators only.
+
+## Approve or Reject a Trip
+
+The **Approval** list shows all submitted trips you may read, newest first, with user, purpose, project, begin, end, status, per diem, mileage, receipts and total. Filter by user, department, project, or a period of the trip's begin.
+
+Each row offers these actions:
+
+| Action | Effect |
+|---|---|
+| **Approve Travel Expense Report** | Recalculates the trip, sets the status to **Approved** and stores you as approver with the time of approval. |
+| **Reject Travel Expense Report** | Sets the status to **Rejected**. Enter the **Reason for Rejection**; the employee sees it in the notification and on the trip. The employee can change the trip and submit it again. |
+| **Download Travel Expense Report as PDF** | Opens the trip as a PDF for review. |
+
+Department Leads can approve and reject only trips of users in the departments they lead. HR Administrators can approve and reject every trip.
+
+## Mark a Trip as Paid
+
+The **Payout** list shows all approved trips, newest first, with user, purpose, project, begin, end, per diem, mileage, receipts and total, and the same filters as the **Approval** list. Pay the total out through your payroll or bank, then choose **Mark Travel Expense Report as Paid** in the row. The status changes to **Paid** and the time of payout is stored.
+
+To hand the amounts to payroll first, use the [Payroll Export](#export-for-payroll).
+
+## Export for Payroll
+
+The **Payroll Export** list prepares the approved trips for your payroll, one row per trip, sorted by employee and trip end. By default it shows the trips that are approved but not marked as paid yet, that is, the trips for the next payroll run. Select **Include paid trips** to add the trips already paid.
+
+| Column | Content |
+|---|---|
+| **Personnel Number**, **User**, **Department** | The employee; the personnel number comes from the user details. |
+| **Purpose**, **Begin**, **End** | The trip. |
+| **Status**, **Approved (UTC)**, **Paid (UTC)** | Approved or paid, with the dates. |
+| **Per Diem**, **Meal Deduction**, **Per Diem after Deductions** | The per diem before and after the deduction for provided meals. |
+| **Overnight Allowance**, **Mileage Allowance**, **Receipts** | The other parts of the payout, so you can map each to a wage type. |
+| **Total** | The payout amount of the trip. |
+
+Filter by user, department, or a period of the trip's end (**Trip end from**, **Trip end to**). Then choose **Export** in the list toolbar and **Excel Export** or **CSV Export**; the file contains the rows and columns as shown.
+
+A typical payroll run: export the approved trips of the month, import or enter them in your payroll, then mark the trips as paid in **Payout**. After that they no longer appear in the default view of the export.
+
+> [!NOTE]
+> The amounts follow the Austrian per diem rates of your tenant. Whether a part is tax-free or taxable is decided in your payroll; the export does not split the amounts by tax treatment. There is no direct interface to a payroll system or a banking file.
+
+## Notifications
+
+| Event | Who is notified |
+|---|---|
+| A trip is submitted | All Department Leads of the employee's department, with a link to the **Approval** list |
+| A trip is approved | The employee |
+| A trip is rejected | The employee, with the reason |
+| A trip is marked as paid | The employee |
+
+Nobody is notified about their own action. When a trip is approved or rejected, the open approval notifications for it are removed. If the employee's department has no Department Lead, nobody receives the approval notification; HR then finds the trip in the **Approval** list.
+
+## All Trips
+
+**Travel Expense Reports** lists all trips you may read, regardless of status. Filter by user, department, project, purpose, or a period of the trip's begin. Each row has a PDF link.
+
+| Role | Trips visible |
+|---|---|
+| Employees | Their own trips |
+| Department Leads | Their own trips and those of users in the departments they lead |
+| HR Administrators, Billing Administrators, Project Controllers | All trips |
+
+Only the employee (while the trip is a draft or rejected) and HR Administrators can change a trip. Status, amounts, approver and timestamps are set by the actions only.
+
+## Unbilled Travel Receipts
+
+Receipts that the employee marked **Rebill** and that are not assigned to an invoice item yet appear in **Unbilled Travel Receipts**, with date, type, description, amount, trip purpose, user and project. Filter by customer, project, user, or a period of the receipt date.
+
+> [!NOTE]
+> Taking these receipts into an invoice automatically is planned for a later version. Until then, add them to the customer's invoice by hand.
+
+## When an Action Fails
+
+| Message | Cause |
+|---|---|
+| You are not allowed to modify this travel expense report. | You are not the Department Lead of the employee's department and not an HR Administrator (or, for **Mark Travel Expense Report as Paid**, not an HR Administrator). |
+| The travel expense report is not in the right status for this action. | Only submitted trips can be approved or rejected, only approved trips can be marked as paid. |
+
+## Related Pages
+
+- [Travel Expenses](https://docs.timecockpit.com/doc/travel-expenses/overview.md)
+- [Settings, Per Diem Rates and Calculation Rules](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md)
+- [Department Lead FAQ](https://docs.timecockpit.com/doc/department-lead-faq.md)
+- [HR Administrator FAQ](https://docs.timecockpit.com/doc/hr-administrator-faq.md)
+
+---
+
+# Travel Expenses - Settings, Rates and Calculation Rules
+
+Source: https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md
+
+# Travel Expenses: Settings, Per Diem Rates and Calculation Rules
+
+> [!WARNING]
+> Preview: Travel expenses are a preview feature. The menu entries and the travel expense fields in the forms below appear only when the feature flag `APP_TravelExpensePreview` is enabled for your tenant. To try the feature, contact [support@timecockpit.com](mailto:support@timecockpit.com).
+
+This page describes what an administrator configures for [travel expenses](https://docs.timecockpit.com/doc/travel-expenses/overview.md) and how time cockpit calculates the amounts. The calculation follows the Austrian rules for 2026. Rules of other countries, for example Germany, are not supported yet.
+
+## Who May Change What
+
+With default permissions:
+
+| What | Where | Who may change it |
+|---|---|---|
+| Travel expense settings | **Management** → **[Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings)**, section **Travel Expenses** | Base Data Admins |
+| Home country of a user | **User** → **[User Details](https://web.timecockpit.com/app/lists/entity/APP_UserDetail)**, field **Travel Home Country (Override)** in the **Configuration** section | HR Administrators |
+| Per diem rates | **Management** → **Travel Expenses** → **[Per Diem Rates](https://web.timecockpit.com/app/lists/entity/APP_PerDiemRate)** | HR Administrators, Base Data Admins |
+| Mileage of a means of transport | **Management** → **[Means of Transport](https://web.timecockpit.com/app/lists/entity/APP_MeansOfTransport)**, section **Mileage Allowance** | Base Data Admins |
+| Receipt types | Selection list of the **Type** field of a receipt | HR Administrators, Base Data Admins: add, rename, delete |
+| Overnight stay types, calculation methods, mileage reimbursement types, transport types | Selection lists in the forms | HR Administrators, Base Data Admins: rename only |
+
+Everyone can read rates and value lists.
+
+## Global Settings
+
+The section **Travel Expenses** in the global settings applies to all users of the tenant.
+
+| Setting | Default | Meaning |
+|---|---|---|
+| **Travel Home Country** | Austria | The domestic country. Time abroad is time outside this country. |
+| **Default Calculation Method** | Calendar day (00:00–24:00) | Calculation method for new trips. Each trip can use another one. |
+| **Minimum Hours for Per Diem** | 3 | A trip must last longer than this to earn per diem. |
+| **Abroad Deduction from Provided Meals** | 2 | Number of provided meals per day from which the deduction abroad applies. |
+| **Domestic Deduction Breakfast** | 0 € | Deduction for a provided breakfast on a domestic day. |
+| **Domestic Deduction Lunch** | 15 € | Deduction for a provided lunch on a domestic day. |
+| **Domestic Deduction Dinner** | 15 € | Deduction for a provided dinner on a domestic day. |
+
+A user can have a different home country, for example an employee of a German branch: set **Travel Home Country (Override)** in the user details. The minimum hours and the meal deductions still come from the global settings.
+
+## Per Diem Rates
+
+Each rate has a **Country**, an optional **Region** (for example *London* or border towns), the **Daily Allowance**, the **Overnight Allowance**, **Valid From** and **Valid To**. Employees choose a rate as the country or region of each stay.
+
+time cockpit ships the Austrian rates for 2026: 173 rates for 159 countries and 14 regions, valid from 1 January 2026. Countries that do not exist in the tenant yet are added. Rates you have changed or added are kept when time cockpit is updated.
+
+The list has a **Valid on** filter (default today) that shows the rates valid on a date. To introduce new rates, add rows with the new **Valid From** and set **Valid To** on the old ones.
+
+> [!NOTE]
+> The capture page offers every rate in the table, regardless of its validity dates, and the calculation uses the rate the employee selected.
+
+## Mileage
+
+Mileage depends on the means of transport of a leg. In the form of a means of transport, the section **Mileage Allowance** has these fields:
+
+| Field | Meaning |
+|---|---|
+| **Mileage Reimbursement** | **None** (default; costs are entered as receipts), **Mileage allowance** (per kilometer) or **Flat amount per leg** (the employee enters the amount on the leg). |
+| **Rate per Kilometer** | Euro per kilometer, for example 0.50 for a private car. |
+| **Surcharge per Passenger and Kilometer** | Added to the rate for each passenger, for example 0.15. |
+| **Minimum Distance (km)** | Legs up to and including this distance earn no mileage allowance. |
+| **Transport Type** | Car, train, plane, bus, bicycle, on foot or other. Decides the icon of the trip in the Time Sheet Calendar. |
+
+The rates per kilometer are not preset. Enter them for every means of transport that earns mileage allowance.
+
+## Value Lists
+
+The values in the selection lists of the travel expense forms are stored as small tables. They are not in the menu; open them from the selection list of the field.
+
+| Value list | Values | Changeable |
+|---|---|---|
+| Receipt Type | Hotel, Parking, Train/bus, Flight, Taxi, Toll/vignette, Hospitality, Other | Add, rename, delete |
+| Overnight Stay Type | Hotel with receipt, Flat rate, Provided / no costs | Rename only |
+| Calculation Method | Calendar day (00:00–24:00), 24-hour period | Rename only |
+| Mileage Reimbursement | None, Mileage allowance, Flat amount per leg | Rename only |
+| Transport Type | Car, Train, Plane, Bus, Bicycle, On foot, Other | Rename only |
+
+The names are created in the language of the tenant's data model (English or German) and are not translated per user. The fixed value lists drive the calculation, so their values cannot be added, deleted or recoded.
+
+## Calculation Rules
+
+The amounts are calculated with the Austrian rules and the rates and settings of your tenant.
+
+### Time per Country
+
+- During a leg, the time up to the border crossing counts to the country of origin, the time after it to the destination country. Without a border crossing, the whole leg counts to the country of origin.
+- The stay after a leg counts to its destination country until the next leg departs.
+
+### Per Diem
+
+- A trip earns per diem only if it lasts more than the minimum hours (3 by default). This applies to the whole trip.
+- The trip is split into units: calendar days (00:00–24:00) or 24-hour periods starting at the departure, depending on the calculation method.
+- Each unit earns one twelfth of the daily allowance per started hour, at most twelve twelfths.
+- The twelfths go to the foreign countries first, in descending order of hours, each at most the started hours spent there and together at most the started hours abroad. The remaining twelfths are paid at the domestic rate.
+- If the trip spends no more than 3 hours abroad in total, every twelfth is paid at the domestic rate.
+
+### Meals
+
+The deduction is calculated per calendar day:
+
+- **Domestic day** (no time abroad): the amounts from the global settings for each provided meal, by default 0 € for breakfast and 15 € each for lunch and dinner.
+- **Day with time abroad**: from 2 provided meals, two thirds of the daily allowance of the foreign country with the most hours on that day. With fewer provided meals, nothing is deducted.
+
+The deduction is taken from the unit that overlaps the day most and never exceeds that unit's per diem.
+
+### Overnight Stays
+
+Each night whose midnight lies within the trip counts. With **Flat rate**, the overnight allowance of the country at midnight is paid. **Hotel with receipt** and **Provided / no costs** pay no allowance; the hotel bill is entered as a receipt.
+
+### Total
+
+**Total** = per diem − meal deduction + overnight allowance + mileage + receipts.
+
+The amounts are calculated exactly. The totals are rounded to cents once, from the exact sums.
+
+### When the Amounts Are Fixed
+
+The capture page calculates live. Saving, **Submit** and **Approve** store the calculated amounts. Approved and paid trips are not recalculated, so later changes to rates or settings do not affect them.
+
+### Calculation Issues
+
+A trip cannot be submitted while the calculation reports an issue, for example:
+
+- The travel expense report contains no legs.
+- A leg is missing its departure or arrival time, or arrival is before departure.
+- Departure is before the arrival of the previous leg.
+- The border crossing is outside the leg.
+- A leg has no destination country, or no valid per diem rate exists for it.
+- A leg has no means of transport, or a leg with mileage allowance has no distance.
+
+## Related Pages
+
+- [Travel Expenses](https://docs.timecockpit.com/doc/travel-expenses/overview.md)
+- [Approval and Payout](https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md)
+- [Default Permissions](https://docs.timecockpit.com/doc/employee-time-tracking/default-permissions.md)
+
+---
+
 # Time Sheet - Tabular View & Export
 
 Source: https://docs.timecockpit.com/doc/project-time-tracking/timesheet.md
@@ -16579,6 +16944,18 @@ Every client has its own configuration. A server registered in Claude Code is in
 - **Results are bounded.** Reads are capped in rows and size and say so with `truncated: true`. See [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md).
 - **Every tool call is audited.** The server records one operational audit event per attempted call with tenant, acting user, host, tool, whether it changes data, outcome and duration. Denied, failed and cancelled attempts are recorded as well. The event contains no arguments, query text, record contents or results.
 
+## Travel Expense Tools
+
+Three tools work with [travel expenses](https://docs.timecockpit.com/doc/travel-expenses/overview.md). They exist on the remote and the local server, but only when the tenant has the travel expense feature; otherwise they are missing from the tool list.
+
+| Tool | Purpose |
+|------|---------|
+| `get_travel_expense_reports` | Travel expense reports with purpose, traveler, route, period, status and stored total. Your own by default; filters for traveler, status and period, or all reports you may read. |
+| `get_travel_expense_report` | One travel expense report with its legs, days, receipts and stored amounts. |
+| `calculate_travel_expense` | Calculates per diem, meal deduction, overnight allowance and mileage for a stored report or a described trip with the tenant's rates and settings. Stores nothing. |
+
+All three only read and calculate. Recording, submitting, approving and marking trips as paid happen in the web client; see [Approval and Payout](https://docs.timecockpit.com/doc/travel-expenses/approval-and-payout.md). With `owndata`, the tools work only with your own trips. The calculation rules are described in [Settings, Per Diem Rates and Calculation Rules](https://docs.timecockpit.com/doc/travel-expenses/settings-and-rates.md#calculation-rules).
+
 ## Related Pages
 
 - [Access, Scope, and Confirmation](https://docs.timecockpit.com/doc/mcp/access-and-confirmation.md) and [Limits and Truncation](https://docs.timecockpit.com/doc/mcp/limits.md)
@@ -17842,6 +18219,7 @@ Missing tools are usually a matter of configuration:
 - `access=readonly` hides all writing tools.
 - `scope=owndata` hides everything that cannot be restricted to the current user.
 - The named-list tools (`get_lists`, `describe_list`, `execute_list`) depend on optional server capabilities and may be absent in a deployment.
+- The travel expense tools (`get_travel_expense_reports`, `get_travel_expense_report`, `calculate_travel_expense`) appear only when the tenant has the travel expense feature; see [Travel Expense Tools](https://docs.timecockpit.com/doc/mcp/overview.md#travel-expense-tools).
 - Model actions are not available through the MCP server; run them in the time cockpit UI.
 
 See [connection settings](https://docs.timecockpit.com/doc/mcp/overview.md#connection-settings-header-or-url-segment) for how these values are passed.
@@ -18036,6 +18414,7 @@ The public package **software-architects/timecockpit-agents** on GitHub ([github
 | `timecockpit-mcp-setup` | Set up the connection (remote/local), choose tenant/sandbox/access/scope, analyze sign-in problems and missing tools — **start here** |
 | `timecockpit-time-tracking` | Book and correct your own hours (booking patterns) |
 | `timecockpit-reporting` | Totals, budgets, utilization (report recipes) |
+| `timecockpit-travel-expenses` | Read travel expense reports and calculate per diem allowances (only with the travel expense feature) |
 | `timecockpit-tcql` | Ad-hoc queries in TCQL (reference and cookbook) |
 | `timecockpit-model-discovery` | Explore the customer-specific data model (`get_entities`, `describe_entity`) |
 | `timecockpit-record-management` | Create, update, delete objects (`create_object`, `update_object`, `delete_object`) — with confirmation handshake |
@@ -18316,6 +18695,9 @@ The local server offers the same shared tools as the remote server, with the sam
 | `get_current_user` | no | | The signed-in user's full record. |
 | `get_timesheets` | no | | Read timesheets with typed filters (date range, project or task code, description, user). |
 | `create_timesheet` | **yes** | | Create one timesheet entry. |
+| `get_travel_expense_reports` | no | | Travel expense reports with route, period, status and stored total; your own by default. Only with the travel expense feature. |
+| `get_travel_expense_report` | no | | One travel expense report with its legs, days, receipts and stored amounts. Only with the travel expense feature. |
+| `calculate_travel_expense` | no | | Calculate per diem allowances, meal deductions, overnight allowances and mileage of a stored report or a described trip with the tenant's rates; stores nothing. Only with the travel expense feature. |
 | `create_timesheet_suggestion` | **yes** | yes | **Local only.** Propose an existing timesheet to other users as a suggestion. Needs `confirmed=true`. |
 | `get_entities` | no | | List the entities of the tenant's data model. System entities are hidden. |
 | `describe_entity` | no | | Full metadata for one entity: properties, types, relations. |
@@ -18447,6 +18829,11 @@ To update a custom report, click **Download Report Definition** and proceed with
 Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 # 📅 November 2026
+
+## ✨ New Features
+
+- **Travel Expenses (Preview)**  
+  Employees record business trips with route, border crossings, provided meals, overnight stays and receipts on one page under **User** → **My Travel Expenses**. time cockpit calculates per diem allowances, meal deductions, overnight allowances and mileage according to the Austrian rules 2026 while you type, and creates the travel expense report as a PDF. Submitted trips are approved or rejected by the department lead or HR and marked as paid by HR, with notifications at every step. Trips appear as bars in the Time Sheet Calendar. time cockpit ships 173 per diem rates (159 countries and 14 regions). The feature is a preview: it appears only when the feature flag `APP_TravelExpensePreview` is enabled; contact support@timecockpit.com to try it. HR exports approved trips for payroll as Excel or CSV. Only the Austrian rules are supported. The MCP server offers three read-only travel expense tools. 👉 [Read more](https://docs.timecockpit.com/doc/travel-expenses/overview.md)
 
 ## ✨ Improvements
 
@@ -19068,21 +19455,3 @@ Source: https://docs.timecockpit.com/doc/release-notes/2024-12.md
 ## Bug Fixes & Minor Improvements
 
 - **Filter in Multi Select**: It is now possible to filter the content of multi select input fields.
-
----
-
-# Release Notes November 2024
-
-Source: https://docs.timecockpit.com/doc/release-notes/2024-11.md
-
-# November 2024
-
-## Bug Fixes & Minor Improvements
-
-- **PWA**: Support for tabs when using [time cockpit as a Progressive Web App (PWA)](https://docs.timecockpit.com/doc/getting-started/web-client.html#use-time-cockpit-as-progressive-web-app-pwa) to enhance navigation and multitasking.
-- **Drag & copy**: Enable moving or copying of time sheet entries onto signal bars to easily adjust entry durations.
-- **Insert time sheet entry**: Inserting a time sheet entry from the taskbar or with CTRL + I now considers selected signals in the signal area, automatically adjusting start and end times based on signal data.
-- **Enhanced footer**: Displays not only the total duration of selected time sheet entries but also the duration of any selected signals from the signal area.
-- **User switch**: A "Select Me" link is now available in the time sheet calendar, allowing users to quickly switch back to their own view after selecting another user.
-- **Importer update**: The importer now supports importing multiple files simultaneously.
-- **File system signal support**: The signal area now also displays signals from the file system, expanding tracking options.

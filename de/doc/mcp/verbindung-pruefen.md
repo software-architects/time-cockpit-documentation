@@ -24,7 +24,7 @@ Fehlende Tools sind meist eine Frage der Konfiguration:
 - `access=readonly` blendet alle schreibenden Tools aus.
 - `scope=owndata` blendet alles aus, was sich nicht auf den aktuellen Benutzer einschränken lässt.
 - Die Tools für benannte Listen (`get_lists`, `describe_list`, `execute_list`) hängen von optionalen Serverfunktionen ab und können in einer Bereitstellung fehlen.
-- Die Reisekosten-Tools (`get_travel_expense_reports`, `get_travel_expense_report`, `calculate_travel_expense`) erscheinen nur, wenn der Tenant das Reisekosten-Feature hat.
+- Die Reisekosten-Tools (`get_travel_expense_reports`, `get_travel_expense_report`, `calculate_travel_expense`) erscheinen nur, wenn der Tenant das Reisekosten-Feature hat; siehe [Reisekosten-Tools](~/doc/mcp/ueberblick.md#reisekosten-tools).
 - Modellaktionen sind über den MCP-Server nicht verfügbar; führen Sie sie in der Oberfläche von time cockpit aus.
 
 Wie diese Werte übergeben werden, lesen Sie unter [Verbindungseinstellungen](~/doc/mcp/ueberblick.md#verbindungseinstellungen-header-oder-url-segment).

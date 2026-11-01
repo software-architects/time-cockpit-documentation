@@ -87,6 +87,10 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Installation & Koppeln](~/doc/sidekick/installation-und-koppeln.md)
   - [Signale im Kalender](~/doc/sidekick/signale-im-kalender.md)
   - [Datenschutz & Daten](~/doc/sidekick/datenschutz-und-daten.md)
+- Reisekosten (Preview)
+  - [Reisen erfassen](~/doc/reisekosten/ueberblick.md)
+  - [Genehmigung und Auszahlung](~/doc/reisekosten/genehmigung-und-auszahlung.md)
+  - [Einstellungen, Sätze und Rechenregeln](~/doc/reisekosten/einstellungen-diaetensaetze-und-rechenregeln.md)
 - Projektzeiterfassung
   - [Kunde / Projekt / Tätigkeit](~/doc/projektzeiterfassung/kunde-projekt-taetigkeit.md)
   - [Zeitbuchungen](~/doc/projektzeiterfassung/zeitbuchungen.md)
