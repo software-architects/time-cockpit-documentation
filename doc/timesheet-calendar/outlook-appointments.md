@@ -38,11 +38,21 @@ By default, timesheets lie over the appointments of the same time, and an appoin
 
 * If a timesheet covers only part of an appointment, the text of the appointment moves to its longest free part.
 * If timesheets cover the whole appointment, a narrow strip remains visible at its right edge. In the week view, the strip shows a calendar icon and, on longer appointments, the title. In the wide day view, it shows the full text.
-* Appointments that overlap each other and are fully covered share the strip. Hover over a strip to see the details of the appointment.
+* Appointments that overlap each other and are fully covered share the strip, also with [quick notes](~/doc/sidekick/calendar-signals.md#quick-notes) of time cockpit sidekick.
 
-The strip is only reserved when an appointment with a start and end time is on one of the days shown.
+The strip is only reserved when an appointment with a start and end time or a quick note is on one of the days shown.
 
 To show timesheets and appointments side by side instead, click **Change office 365 calendar view mode** in the toolbar of the time sheet calendar, or press Ctrl + Alt + O.
+
+## Working With an Appointment
+
+| What you do | What happens |
+|---|---|
+| Hover over an appointment | Its [tooltip](calendar.md#tooltips) opens after a moment: the time, the duration, the whole text and the location. |
+| Click or tap it, or press **Enter** or **Space** on it | The tooltip opens at once. With a key, the focus moves to the first link in the tooltip; **Esc** or **Tab** past the last link closes it and brings the focus back to the appointment. |
+| Double-click or double-tap it, press **Shift** + **Enter** on it, or click **Book** in its tooltip | The form for a new timesheet opens with the text, time and location of the appointment. |
+| Click **Open calendar item** in its tooltip | The appointment opens in Outlook. |
+| Press on it and drag | A new timesheet is drawn, as on the free grid. |
 
 <!-- > [!NOTE]
 If you are not using Microsoft Office Outlook to manage your appointments, time cockpit cannot display your appointments at the moment.

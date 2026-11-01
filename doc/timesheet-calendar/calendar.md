@@ -61,6 +61,7 @@ The time sheet calendar shows different types of information:
 * Timesheet Entries
 * Absence Times (vacation, compensatory time off, sick leave). See also [Absence Time Management](~/doc/employee-time-tracking/absence-time-management.md).
 * Outlook Appointments and Sent Mails from your Office 365 account. See also [Office 365](office365.md).
+* Quick notes from time cockpit sidekick. See also [Quick Notes](~/doc/sidekick/calendar-signals.md#quick-notes).
 
 You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
 
@@ -87,6 +88,19 @@ Besides changing the granularity of the time sheet calendar, you can also choose
 Enabling this option shows timesheet entries and Outlook appointments side-by-side.
 
 ![Side-by-Side View Enabled](images/wc-side-by-side-enabled.png "Side-by-Side View Enabled")
+
+### Tooltips
+
+Hover over a timesheet, an Outlook appointment or a quick note to see its tooltip, or tap it on a touch screen. The tooltip says what it is, with its time, duration and whole text. It stays open while the pointer is on it, stays inside the window, and closes when you scroll the calendar.
+
+| Tooltip | Links |
+|---|---|
+| **Timesheet entry** | **Edit** opens the timesheet. |
+| **Suggested timesheet entry** | None. |
+| **Outlook appointment** | **Book** opens the form for a new timesheet, **Open calendar item** opens the appointment in Outlook. See [Working With an Appointment](outlook-appointments.md#working-with-an-appointment). |
+| **Note** | **Book** opens the form for a new timesheet. See [Quick Notes](~/doc/sidekick/calendar-signals.md#quick-notes). |
+
+A read-only timesheet has no **Edit** link.
 
 ### Zoom
 
