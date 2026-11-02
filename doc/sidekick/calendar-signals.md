@@ -46,12 +46,13 @@ Bookings are created on the calendar grid as usual, never in the lanes.
 
 ## The Right Pane
 
-The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes, the right pane is narrowed to their time ranges. The pane has two tabs.
+The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes or a block in the **Proposal** lane, the right pane is narrowed to their time ranges. The pane has two tabs.
 
 ### Signals
 
 The tab **Signals** lists the signals by kind, each in its own section:
 
+- **Workspaces**: the time per repository or folder, longest first, with the same numbers as the insights in sidekick. A minute shared among several workspaces counts with its share; calls, mail and applications without a workspace are not listed but count towards the working time the percentages refer to. Needs an up-to-date version of sidekick. Click the colour square of a workspace to choose its colour; it also applies to the lanes, the section **AI** and sidekick.
 - **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
 - **Files**: the folders and files that changed.
 - **AI**: your time with Claude Code and Codex, the tokens and an estimated cost based on API list prices. A subscription is billed differently.
@@ -69,12 +70,12 @@ A block of the **Proposal** lane can also be booked with a double-click. If an O
 
 ## Marking Times
 
-- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
+- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. A workspace marks every minute it was involved in, also where it only had a share of the minute, so the marks can be longer than its time; a line under the marked row says how much was involved and how much of it counted. **Esc** clears the marking.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
 
 ## Searching the Signals
 
-The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
+The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: workspaces, window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
 
 Under the field, a ruler of the day shows when the matches occurred, and a button for each section with matches jumps to it.
 
@@ -84,7 +85,7 @@ If you selected blocks in the lanes, the search covers the selection. **Whole da
 
 ## Refresh
 
-While today is visible in the calendar, the signals are loaded again every minute. Other days are not reloaded automatically.
+While today is visible in the calendar, the signals are loaded again every minute. The section **Workspaces** follows about every 5 minutes, and at once when you refresh the calendar or return to the window, so it can be a few minutes behind the insights in sidekick. Other days are not reloaded automatically.
 
 ## Related Pages
 

@@ -115,7 +115,7 @@ While recording is paused, sidekick still records whether the computer was on an
 
 In sidekick, open the tab **Pairing**. Under **Paired calendars**, click **Revoke** next to the calendar. The calendar can then no longer read anything.
 
-To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read** in the area **Connection to the calendar**.
+To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read and pin colours** in the area **Connection to the calendar**.
 
 ## Uninstall sidekick
 
