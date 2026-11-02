@@ -82,7 +82,8 @@ Die Daten gehen an Microsoft Azure Application Insights in der Region North Euro
 - Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser und werden nur dort verarbeitet; sie werden nie an den time cockpit Server gesendet.
 - Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, mit Betreff und geplanten Zeiten, und die Signale, die Sie als Beleg für den Vorschlag ausschließen, mit der Schablone, für die Sie sie ausgeschlossen haben (die Kennungen und Namen etwa ihres Projekts und ihrer Aufgabe). sidekick speichert sie, damit der Kalender sie anzeigen und zurücknehmen kann. Beides ändert kein Signal.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.
-- Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen** unter **Einstellungen** im Bereich **Verbindung zum Kalender**.
+- Ein gekoppelter Kalender kann in sidekick genau eines ändern: die Farbe eines Arbeitsbereichs. Signale, Einstellungen oder anderes kann er weder ändern noch löschen.
+- Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen und Farben festlegen** unter **Einstellungen** im Bereich **Verbindung zum Kalender**.
 
 ## Festlegen, was aufgezeichnet wird
 

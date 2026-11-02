@@ -116,7 +116,7 @@ Während die Aufzeichnung pausiert, zeichnet sidekick weiterhin auf, ob der Rech
 
 Öffnen Sie in sidekick den Reiter **Koppeln**. Klicken Sie unter **Gekoppelte Kalender** neben dem Kalender auf **Widerrufen**. Der Kalender kann danach nichts mehr lesen.
 
-Um allen Kalendern das Lesen zu verbieten, öffnen Sie in sidekick **Einstellungen** und deaktivieren Sie im Bereich **Verbindung zum Kalender** die Option **Gekoppelte Kalender dürfen lesen**.
+Um allen Kalendern das Lesen zu verbieten, öffnen Sie in sidekick **Einstellungen** und deaktivieren Sie im Bereich **Verbindung zum Kalender** die Option **Gekoppelte Kalender dürfen lesen und Farben festlegen**.
 
 ## sidekick deinstallieren
 

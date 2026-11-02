@@ -66,19 +66,20 @@ Ein Eintrag für mehrere Notizen wird nicht als Ganzes gebucht: Sein Tooltip lis
 
 ## Der rechte Bereich
 
-Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
+Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren oder einen Block in der Spur **Vorschlag** auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
 
 ### Signale
 
 Der Reiter **Signale** listet die Signale nach Art, jede in einem eigenen Abschnitt:
 
+- **Arbeitsbereiche**: die Zeit pro Repository oder Ordner, die längste zuerst, mit denselben Zahlen wie die Auswertungen in sidekick. Eine Minute, die sich mehrere Arbeitsbereiche teilen, zählt anteilig; Calls, Mail und Anwendungen ohne Arbeitsbereich stehen nicht in der Liste, zählen aber zur Arbeitszeit, auf die sich die Prozente beziehen. Braucht eine aktuelle Version von sidekick. Ein Klick auf das Farbquadrat eines Arbeitsbereichs legt seine Farbe fest; sie gilt auch für die Spuren, den Abschnitt **KI** und sidekick.
 - **KI**: Ihre Zeit mit Claude Code und Codex und die Zeit, in der die Agenten allein gearbeitet haben, je Projekt und Session.
 - **Fenstertitel**: was im Vordergrund war. **Nach Titel** listet die Fenstertitel des Tages, **Nach Anwendung** die Anwendungen mit ihrer Dauer. Ihre Wahl bleibt gespeichert.
 - **Dateien**: die Ordner und Dateien, die sich geändert haben.
 - **Schlagwörter**: die Wörter, die in Fenstertiteln, Dateipfaden, Commit-Betreffen, Session-Titeln und Besprechungsnamen vorkamen, als Wortwolke.
 - **WLAN**: die verbundenen WLANs und die Zeit ohne WLAN.
 
-Jeder Abschnitt zeigt zuerst, was eine Buchung braucht. Das Reglersymbol im Band eines Abschnitts zeigt seine Details, ein zweiter Klick blendet sie wieder aus:
+Jeder Abschnitt außer **Arbeitsbereiche** zeigt zuerst, was eine Buchung braucht. Das Reglersymbol im Band eines Abschnitts zeigt seine Details, ein zweiter Klick blendet sie wieder aus:
 
 | Abschnitt | Details |
 |---|---|
@@ -100,13 +101,13 @@ Ein Block der Spur **Vorschlag** lässt sich auch mit einem Doppelklick buchen. 
 
 ## Zeiten markieren
 
-- Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. **Esc** hebt die Markierung auf.
+- Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. Ein Arbeitsbereich markiert jede Minute, an der er beteiligt war, auch wenn er nur einen Anteil daran hatte; die Markierungen können deshalb länger sein als seine Zeit. Der Balken der Zeile zeigt beide Zeiten im Verhältnis zur Arbeitszeit: dick die anteilig gerechnete, als dünne Linie die voll gerechnete; der Tooltip der Zeile nennt sie. **Esc** hebt die Markierung auf.
 - Drücken Sie **/**, um die Schlagwörter zu durchsuchen. Die Suche filtert die Wortwolke und markiert im Kalender, wann die passenden Wörter vorkamen. **Esc** leert die Suche.
 - Klicken Sie auf einen Block in einer Spur, um seinen Zeitbereich auszuwählen. **Strg** + Klick fügt einen weiteren Block hinzu; ein Klick auf eine leere Stelle in den Spuren hebt die Auswahl auf.
 
 ## Aktualisierung
 
-Solange heute im Kalender sichtbar ist, werden die Signale jede Minute neu geladen. Andere Tage werden nicht automatisch neu geladen.
+Solange heute im Kalender sichtbar ist, werden die Signale jede Minute neu geladen. Der Abschnitt **Arbeitsbereiche** folgt etwa alle 5 Minuten und sofort, wenn Sie den Kalender aktualisieren oder zum Fenster zurückkehren; er kann den Auswertungen in sidekick deshalb einige Minuten hinterherliegen. Andere Tage werden nicht automatisch neu geladen.
 
 ## Verwandte Seiten
 
