@@ -1,6 +1,6 @@
 ---
 title: sidekick Signals in the Time Sheet Calendar
-description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, keywords and booking proposals.
+description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, quick notes, keywords and booking proposals.
 ---
 # sidekick Signals in the Time Sheet Calendar
 
@@ -21,7 +21,7 @@ In every view of the calendar, a narrow band next to each day shows your activit
 
 The unbooked active time is the time you most likely still have to book.
 
-In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the button **Day view** at the top of the right pane.
+In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the day view button (calendar icon) at the top of the right pane.
 
 ## Detail Lanes in the Day View
 
@@ -44,6 +44,25 @@ Hover over a block to see its details in a tooltip. The **Legend** button (palet
 
 Bookings are created on the calendar grid as usual, never in the lanes.
 
+## Quick Notes
+
+A quick note is a short text you write in sidekick, by default with **Ctrl** + **Alt** + **N** (**⌘⌥N** on macOS). The calendar shows it at its time in every view. A note is information, as an appointment is: it does not have to become a booking, and nothing marks it as booked.
+
+- A note has an outline in the colour of its context on a lightly tinted ground, and a note without a context is light yellow.
+- If a timesheet covers part of a note, its text moves to the free part. If timesheets cover all of it, the note moves to the narrow strip right of the timesheets, where [Outlook appointments](~/doc/timesheet-calendar/outlook-appointments.md#how-appointments-appear-in-the-calendar) have theirs.
+- Notes and appointments of the same time share the width. Notes of the same time that would get too little of it each become one entry, for example **3 notes**.
+- With timesheets and appointments side by side, notes stand with the appointments.
+- A note without a duration is one line at its time. A running note grows up to the current time.
+
+| What you do | What happens |
+|---|---|
+| Hover over a note | Its [tooltip](~/doc/timesheet-calendar/calendar.md#tooltips) opens after a moment: the time, the duration, the whole text and the name of the context. |
+| Click or tap it, or press **Enter** or **Space** on it | The tooltip opens at once. With a key, the focus moves to the link in the tooltip; **Esc** or **Tab** past the last link closes it and brings the focus back to the note. |
+| Double-click or double-tap it, press **Shift** + **Enter** on it, or click **Book** in its tooltip | The form for a new timesheet opens with the text of the note and its time, rounded to the quarter hour. A note without a duration gets one hour. |
+| Press on it and drag | A new timesheet is drawn, as on the free grid. |
+
+An entry for several notes is not booked as a whole: its tooltip lists the notes, each with its own **Book** link.
+
 ## The Right Pane
 
 The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes or a block in the **Proposal** lane, the right pane is narrowed to their time ranges. The pane has two tabs.
@@ -53,12 +72,23 @@ The right pane shows the signals of one day: the day you selected in the week vi
 The tab **Signals** lists the signals by kind, each in its own section:
 
 - **Workspaces**: the time per repository or folder, longest first, with the same numbers as the insights in sidekick. A minute shared among several workspaces counts with its share; calls, mail and applications without a workspace are not listed but count towards the working time the percentages refer to. Needs an up-to-date version of sidekick. Click the colour square of a workspace to choose its colour; it also applies to the lanes, the section **AI** and sidekick.
-- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **AI**: your time with Claude Code and Codex, and the time the agents worked alone, per project and session.
+- **Window titles**: what was in the foreground. **By title** lists the window titles of the day, **By application** the applications with their durations. Your choice is kept.
 - **Files**: the folders and files that changed.
-- **AI**: your time with Claude Code and Codex, the tokens and an estimated cost based on API list prices. A subscription is billed differently.
-- **Applications**: the applications in the foreground, with their durations and window titles.
-- **Window titles**: the window titles of the day.
-- **Wi-Fi**: the connected networks and the networks in reach.
+- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **Wi-Fi**: the connected networks and the time without Wi-Fi.
+
+Each section except **Workspaces** shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
+
+| Section | Details |
+|---|---|
+| **AI** | The tokens and an estimated cost based on API list prices, split by token type. A subscription is billed differently. |
+| **Window titles** | The application under each title, or the titles under each application. |
+| **Files** | The changes by kind (new, changed, deleted) and the individual runs of the bulk changes. |
+| **Keywords** | The time after the most frequent words. |
+| **Wi-Fi** | When each network was connected, and the networks in reach. |
+
+Hover over a row of the section **AI** to see its time, tokens and cost in a tooltip. **Ctrl** + mouse wheel over a section shows more or fewer rows, in **Files** one level more or less of the folder tree. The number of open levels stays when you reload the page or move to another day.
 
 ### Proposal
 
