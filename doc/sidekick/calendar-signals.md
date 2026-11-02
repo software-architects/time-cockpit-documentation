@@ -70,7 +70,7 @@ A block of the **Proposal** lane can also be booked with a double-click. If an O
 
 ## Marking Times
 
-- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. A workspace marks every minute it was involved in, also where it only had a share of the minute, so the marks can be longer than its time; a line under the marked row says how much was involved and how much of it counted. **Esc** clears the marking.
+- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. A workspace marks every minute it was involved in, also where it only had a share of the minute, so the marks can be longer than its time; the row's bar shows both times against the working time, the time counted in part thick and the time counted in full as a thin line, and the row's tooltip names them. **Esc** clears the marking.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
 
 ## Searching the Signals

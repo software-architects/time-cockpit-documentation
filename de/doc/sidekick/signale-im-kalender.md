@@ -71,7 +71,7 @@ Ein Block der Spur **Vorschlag** lässt sich auch mit einem Doppelklick buchen. 
 
 ## Zeiten markieren
 
-- Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. Ein Arbeitsbereich markiert jede Minute, an der er beteiligt war, auch wenn er nur einen Anteil daran hatte; die Markierungen können deshalb länger sein als seine Zeit. Eine Zeile unter der markierten Zeile sagt, wie viel Zeit beteiligt war und wie viel davon gezählt wurde. **Esc** hebt die Markierung auf.
+- Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. Ein Arbeitsbereich markiert jede Minute, an der er beteiligt war, auch wenn er nur einen Anteil daran hatte; die Markierungen können deshalb länger sein als seine Zeit. Der Balken der Zeile zeigt beide Zeiten im Verhältnis zur Arbeitszeit: dick die anteilig gerechnete, als dünne Linie die voll gerechnete; der Tooltip der Zeile nennt sie. **Esc** hebt die Markierung auf.
 - Drücken Sie **/**, um die Schlagwörter zu durchsuchen. Die Suche filtert die Wortwolke und markiert im Kalender, wann die passenden Wörter vorkamen. **Esc** leert die Suche.
 - Klicken Sie auf einen Block in einer Spur, um seinen Zeitbereich auszuwählen. **Strg** + Klick fügt einen weiteren Block hinzu; ein Klick auf eine leere Stelle in den Spuren hebt die Auswahl auf.
 
