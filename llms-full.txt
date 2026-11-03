@@ -8395,8 +8395,7 @@ time cockpit ships the Austrian rates for 2026: 173 rates for 159 countries and 
 
 The list has a **Valid on** filter (default today) that shows the rates valid on a date. To introduce new rates, add rows with the new **Valid From** and set **Valid To** on the old ones.
 
-> [!NOTE]
-> The capture page offers every rate in the table, regardless of its validity dates, and the calculation uses the rate the employee selected.
+All rates of a trip are the ones valid on its first day, the earliest departure. The capture page offers only these rates. If a departure moves to a day on which a selected rate is no longer valid, the page switches to the rate of the same country and region valid on that day. If there is no such rate, the calculation reports an issue.
 
 ## Mileage
 
@@ -8475,6 +8474,7 @@ A trip cannot be submitted while the calculation reports an issue, for example:
 - Departure is before the arrival of the previous leg.
 - The border crossing is outside the leg.
 - A leg has no destination country, or no valid per diem rate exists for it.
+- A selected per diem rate is not valid on the first day of the trip.
 - A leg has no means of transport, or a leg with mileage allowance has no distance.
 
 ## Related Pages

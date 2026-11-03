@@ -49,8 +49,7 @@ time cockpit liefert die österreichischen Sätze für 2026 mit: 173 Sätze für
 
 Die Liste hat einen Filter **Gültig am** (Vorgabe heute), der die an einem Datum gültigen Sätze zeigt. Für neue Sätze legen Sie Zeilen mit dem neuen **Gültig ab** an und setzen bei den alten **Gültig bis**.
 
-> [!NOTE]
-> Die Erfassungsseite bietet jeden Satz der Tabelle an, unabhängig von seinen Gültigkeitsdaten, und die Berechnung verwendet den Satz, den der Mitarbeiter gewählt hat.
+Für alle Sätze einer Reise gilt der erste Reisetag, also die früheste Abfahrt. Die Erfassungsseite bietet nur Sätze an, die an diesem Tag gültig sind. Rückt eine Abfahrt auf einen Tag, an dem ein gewählter Satz nicht mehr gilt, wechselt die Seite auf den Satz desselben Landes und derselben Region, der an diesem Tag gilt. Gibt es keinen, meldet die Berechnung ein Problem.
 
 ## Kilometergeld
 
@@ -129,6 +128,7 @@ Eine Reise kann nicht eingereicht werden, solange die Berechnung ein Problem mel
 - Die Abfahrt liegt vor der Ankunft des vorherigen Reiseabschnitts.
 - Der Grenzübertritt liegt außerhalb des Reiseabschnitts.
 - Bei einem Reiseabschnitt fehlt das Zielland, oder dafür ist kein gültiger Diätensatz hinterlegt.
+- Ein gewählter Diätensatz gilt nicht am ersten Reisetag.
 - Bei einem Reiseabschnitt fehlt das Verkehrsmittel, oder bei einem Abschnitt mit Kilometergeld fehlt die Strecke.
 
 ## Verwandte Seiten
