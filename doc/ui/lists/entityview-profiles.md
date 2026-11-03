@@ -45,3 +45,7 @@ The Profile feature is particularly useful in the following scenarios:
 2. **Efficient Workflow:** Profiles enable users to switch between different views quickly, depending on the task at hand, improving workflow efficiency.
 
 3. **Consistency Across Devices:** Since profiles are stored in the database, users can access their customized list settings from any device or browser, ensuring a consistent experience.
+
+## Related Pages
+
+- [Grouping Lists](~/doc/ui/lists/grouping.md): group a list, collapse and expand groups or a whole grouping level
