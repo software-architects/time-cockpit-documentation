@@ -8367,7 +8367,7 @@ With default permissions:
 | Per diem rates | **Management** → **Travel Expenses** → **[Per Diem Rates](https://web.timecockpit.com/app/lists/entity/APP_PerDiemRate)** | HR Administrators, Base Data Admins |
 | Mileage of a means of transport | **Management** → **[Means of Transport](https://web.timecockpit.com/app/lists/entity/APP_MeansOfTransport)**, section **Mileage Allowance** | Base Data Admins |
 | Receipt types | Selection list of the **Type** field of a receipt | HR Administrators, Base Data Admins: add, rename, delete |
-| Overnight stay types, calculation methods, mileage reimbursement types, transport types | Selection lists in the forms | HR Administrators, Base Data Admins: rename only |
+| Overnight stay types, calculation methods, mileage reimbursement types, transport types | Selection lists in the forms | Nobody (fixed values, also without default permissions) |
 
 Everyone can read rates and value lists.
 
@@ -8419,12 +8419,12 @@ The values in the selection lists of the travel expense forms are stored as smal
 | Value list | Values | Changeable |
 |---|---|---|
 | Receipt Type | Hotel, Parking, Train/bus, Flight, Taxi, Toll/vignette, Hospitality, Other | Add, rename, delete |
-| Overnight Stay Type | Hotel with receipt, Flat rate, Provided / no costs | Rename only |
-| Calculation Method | Calendar day (00:00–24:00), 24-hour period | Rename only |
-| Mileage Reimbursement | None, Mileage allowance, Flat amount per leg | Rename only |
-| Transport Type | Car, Train, Plane, Bus, Bicycle, On foot, Other | Rename only |
+| Overnight Stay Type | Hotel with receipt, Flat rate, Provided / no costs | No |
+| Calculation Method | Calendar day (00:00–24:00), 24-hour period | No |
+| Mileage Reimbursement | None, Mileage allowance, Flat amount per leg | No |
+| Transport Type | Car, Train, Plane, Bus, Bicycle, On foot, Other | No |
 
-The names are created in the language of the tenant's data model (English or German) and are not translated per user. The fixed value lists drive the calculation, so their values cannot be added, deleted or recoded.
+The names are created in the language of the tenant's data model (English or German) and are not translated per user. The fixed value lists drive the calculation, so nobody can add, rename, change or delete their values, whatever the permission setup.
 
 ## Calculation Rules
 

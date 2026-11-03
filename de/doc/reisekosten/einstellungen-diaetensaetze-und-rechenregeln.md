@@ -21,7 +21,7 @@ Mit Standardberechtigungen:
 | Diätensätze | **Verwaltung** → **Reisekosten** → **[Diätensätze](https://web.timecockpit.com/app/lists/entity/APP_PerDiemRate)** | HR-Administratoren, Stammdatenadministratoren |
 | Kilometergeld eines Verkehrsmittels | **Verwaltung** → **[Verkehrsmittel](https://web.timecockpit.com/app/lists/entity/APP_MeansOfTransport)**, Abschnitt **Kilometergeld** | Stammdatenadministratoren |
 | Belegarten | Auswahlliste des Felds **Art** eines Belegs | HR-Administratoren, Stammdatenadministratoren: anlegen, umbenennen, löschen |
-| Übernachtungsarten, Berechnungsmethoden, Vergütungsarten, Verkehrsmittel-Arten | Auswahllisten in den Formularen | HR-Administratoren, Stammdatenadministratoren: nur umbenennen |
+| Übernachtungsarten, Berechnungsmethoden, Vergütungsarten, Verkehrsmittel-Arten | Auswahllisten in den Formularen | Niemand (feste Werte, auch ohne Standardberechtigungen) |
 
 Sätze und Wertelisten dürfen alle lesen.
 
@@ -73,12 +73,12 @@ Die Werte in den Auswahllisten der Reisekostenformulare sind als kleine Tabellen
 | Werteliste | Werte | Änderbar |
 |---|---|---|
 | Belegart | Hotel, Parken, Bahn/Bus, Flug, Taxi, Maut/Vignette, Bewirtung, Sonstiges | Anlegen, umbenennen, löschen |
-| Übernachtungsart | Hotel mit Beleg, Pauschale, Gestellt / keine Kosten | Nur umbenennen |
-| Berechnungsmethode | Kalendertag (00–24 Uhr), 24-Stunden-Zeitraum | Nur umbenennen |
-| Vergütungsart | Keine, Kilometergeld, Pauschale je Abschnitt | Nur umbenennen |
-| Verkehrsmittel-Art | Auto, Bahn, Flugzeug, Bus, Fahrrad, Zu Fuß, Sonstiges | Nur umbenennen |
+| Übernachtungsart | Hotel mit Beleg, Pauschale, Gestellt / keine Kosten | Nein |
+| Berechnungsmethode | Kalendertag (00–24 Uhr), 24-Stunden-Zeitraum | Nein |
+| Vergütungsart | Keine, Kilometergeld, Pauschale je Abschnitt | Nein |
+| Verkehrsmittel-Art | Auto, Bahn, Flugzeug, Bus, Fahrrad, Zu Fuß, Sonstiges | Nein |
 
-Die Namen werden in der Sprache des Datenmodells des Mandanten (Deutsch oder Englisch) angelegt und nicht je Benutzer übersetzt. Die festen Wertelisten steuern die Berechnung, deshalb lassen sich ihre Werte weder anlegen noch löschen noch umcodieren.
+Die Namen werden in der Sprache des Datenmodells des Mandanten (Deutsch oder Englisch) angelegt und nicht je Benutzer übersetzt. Die festen Wertelisten steuern die Berechnung, deshalb kann niemand ihre Werte anlegen, umbenennen, ändern oder löschen, unabhängig von der Berechtigungseinrichtung.
 
 ## Rechenregeln
 
