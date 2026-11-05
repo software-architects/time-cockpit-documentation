@@ -26,8 +26,10 @@ When time cockpit refuses the sign-in for your account, or for the tenant or san
 | `NoTenantMapping` | time cockpit has no tenant set up for sign-in with your Microsoft Entra organization | Ask your time cockpit administrator to set up Microsoft Entra sign-in for your tenant. |
 | `RequestedTenantNotAllowed` | time cockpit cannot sign your Microsoft Entra account in to the tenant | Check the tenant ID in your configuration. The tenant must accept sign-ins from your Microsoft Entra organization. |
 | `InvalidRequestedTenantId` | the tenant setting is not a tenant ID | Use the tenant ID (a GUID), or leave the setting out. |
-| `UserNotAllowed` | time cockpit does not allow your user to sign in | Check that your Microsoft Entra account is linked to an active time cockpit user. |
+| `UserNotAllowed` | time cockpit does not allow your user to sign in | Check that your Microsoft Entra account is linked to a time cockpit user. |
+| `UserInactive` | your time cockpit user is locked or inactive | Ask your administrator to unlock or reactivate your user. |
 | `SandboxNotAllowed` | your time cockpit user is not allowed to use the sandbox environment | Ask your administrator for sandbox access, or connect without the sandbox setting. |
+| `UnknownSandboxEnvironment` | the sandbox setting does not name a sandbox environment | Use `test`, or leave the setting out to work in production. |
 | `InvalidSubjectToken` | time cockpit did not accept your Microsoft Entra sign-in | Sign in to the MCP server again in your client. If that does not help, contact your administrator. |
 | other codes | the MCP server's sign-in to time cockpit is misconfigured | Nothing to change on your side; contact your administrator or time cockpit support. |
 
