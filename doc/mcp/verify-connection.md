@@ -18,7 +18,7 @@ A prompt such as *"Call ping, get_environment, get_current_user and entra_whoami
 
 ## Sign-in Refused by time cockpit
 
-When time cockpit refuses the sign-in for your account, or for the tenant or sandbox you selected, the remote server lists no tools and answers every call with a message that names the reason. Even `entra_whoami` is unavailable until the sign-in succeeds. The message ends with the error codes, for example `(error: invalid_grant, AmbiguousTenantMapping)`; include them when you contact support.
+When time cockpit refuses the sign-in for your account, or for the tenant or sandbox you selected, the remote server still answers `ping`, but every other call, `entra_whoami` included, returns a message that names the reason. The message ends with the error codes, for example `(error: invalid_grant, AmbiguousTenantMapping)`; include them when you contact support.
 
 | Code | The message says | What to do |
 |------|------------------|------------|

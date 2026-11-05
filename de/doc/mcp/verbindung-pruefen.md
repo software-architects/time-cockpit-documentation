@@ -19,7 +19,7 @@ Ein Prompt wie *„Rufe ping, get_environment, get_current_user und entra_whoami
 
 ## Anmeldung von time cockpit abgelehnt
 
-Lehnt time cockpit die Anmeldung für Ihr Konto oder für den gewählten Mandanten bzw. die gewählte Sandbox ab, listet der Remote-Server keine Tools und beantwortet jeden Aufruf mit einer Meldung, die den Grund nennt. Auch `entra_whoami` steht erst nach erfolgreicher Anmeldung zur Verfügung. Die Meldung endet mit den Fehlercodes, zum Beispiel `(error: invalid_grant, AmbiguousTenantMapping)`; geben Sie diese an, wenn Sie den Support kontaktieren. Die Meldungen selbst sind englisch.
+Lehnt time cockpit die Anmeldung für Ihr Konto oder für den gewählten Mandanten bzw. die gewählte Sandbox ab, antwortet der Remote-Server weiterhin auf `ping`, jeder andere Aufruf, auch `entra_whoami`, liefert aber eine Meldung, die den Grund nennt. Die Meldung endet mit den Fehlercodes, zum Beispiel `(error: invalid_grant, AmbiguousTenantMapping)`; geben Sie diese an, wenn Sie den Support kontaktieren. Die Meldungen selbst sind englisch.
 
 | Code | Die Meldung besagt | Was zu tun ist |
 |------|--------------------|----------------|
