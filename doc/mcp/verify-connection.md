@@ -18,7 +18,9 @@ A prompt such as *"Call ping, get_environment, get_current_user and entra_whoami
 
 ## Sign-in Refused by time cockpit
 
-When time cockpit refuses the sign-in for your account, or for the tenant or sandbox you selected, the remote server lists no tools and answers every call with a message that names the reason. Even `entra_whoami` is unavailable until the sign-in succeeds. The message ends with the error codes, for example `(error: invalid_grant, AmbiguousTenantMapping)`; include them when you contact support.
+When time cockpit refuses the sign-in for your account, or for the tenant or sandbox you selected, the remote server lists only `ping` and `entra_whoami`. Both tool descriptions start with "Sign-in to time cockpit was refused:" and a message that names the reason. `ping` still answers; `entra_whoami` and every other tool return that message. The message ends with the error codes, for example `(error: invalid_grant, AmbiguousTenantMapping)`; include them when you contact support.
+
+The server remembers a refused sign-in for about 30 seconds, so after the configuration has been fixed, wait that long before you reconnect. A rejected Microsoft Entra sign-in (`InvalidSubjectToken`) is not remembered: signing in again takes effect at once.
 
 | Code | The message says | What to do |
 |------|------------------|------------|
@@ -26,8 +28,10 @@ When time cockpit refuses the sign-in for your account, or for the tenant or san
 | `NoTenantMapping` | time cockpit has no tenant set up for sign-in with your Microsoft Entra organization | Ask your time cockpit administrator to set up Microsoft Entra sign-in for your tenant. |
 | `RequestedTenantNotAllowed` | time cockpit cannot sign your Microsoft Entra account in to the tenant | Check the tenant ID in your configuration. The tenant must accept sign-ins from your Microsoft Entra organization. |
 | `InvalidRequestedTenantId` | the tenant setting is not a tenant ID | Use the tenant ID (a GUID), or leave the setting out. |
-| `UserNotAllowed` | time cockpit does not allow your user to sign in | Check that your Microsoft Entra account is linked to an active time cockpit user. |
+| `UserNotAllowed` | time cockpit does not allow your user to sign in | Check that your Microsoft Entra account is linked to a time cockpit user. |
+| `UserInactive` | your time cockpit user is locked or inactive | Ask your time cockpit administrator to unlock or reactivate your user. |
 | `SandboxNotAllowed` | your time cockpit user is not allowed to use the sandbox environment | Ask your administrator for sandbox access, or connect without the sandbox setting. |
+| `UnknownSandboxEnvironment` | the sandbox setting does not name a sandbox environment | Use `test`, or leave the setting out to work in production. |
 | `InvalidSubjectToken` | time cockpit did not accept your Microsoft Entra sign-in | Sign in to the MCP server again in your client. If that does not help, contact your administrator. |
 | other codes | the MCP server's sign-in to time cockpit is misconfigured | Nothing to change on your side; contact your administrator or time cockpit support. |
 
