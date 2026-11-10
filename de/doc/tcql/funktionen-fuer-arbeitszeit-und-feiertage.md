@@ -97,19 +97,53 @@ Beispiele finden Sie im Abschnitt mit Beispielen im Kapitel [PlannedHoursOfWork]
 
 ## Overtime
 
-Mit der Funktion Overtime berechnen Sie die Überstunden eines Benutzers zu einem bestimmten Stichtag.
+Mit der Funktion Overtime berechnen Sie den Arbeitszeitsaldo (die Überstunden) eines Benutzers, entweder zu einem Stichtag oder als dessen Veränderung in einem Zeitraum.
+
+Die Funktion hat zwei Formen:
+
+```
+:Overtime(userUuid, effectiveDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+:Overtime(userUuid, startDate, endDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+```
+
+Bei fünf Argumenten entscheidet der Typ des dritten Arguments über die Form: Ein Datum wählt die Zeitraumform, ein boolescher Wert die Stichtagsform mit `useLegacyOvertimeCalculation`.
 
 ### Parameter
 
 Parameter | Beschreibung
 --- | ---
 userUuid | ID des Benutzers, für den die Funktion das Ergebnis berechnet.
-effectiveDate | Stichtag, für den die Funktion das Ergebnis berechnet.
+effectiveDate | Stichtag, für den die Funktion den Saldo berechnet.
+startDate | Erster Tag des Zeitraums (nur Zeitraumform).
+endDate | Letzter Tag des Zeitraums (nur Zeitraumform).
 includeWeights | Gibt an, ob die Funktion Arbeitszeitgewichtungen berücksichtigt.
 includeLumpSumOvertime | Gibt an, ob das Ergebnis die für den Benutzer definierte Überstundenpauschale enthalten soll.
+useLegacyOvertimeCalculation | Optional. `True` wählt die bisherige Berechnung, `False` die aktuelle. Ohne dieses Argument gilt die aktuelle Berechnung, außer das Feature Flag `LegacyOvertimeCalc` ist für den Mandanten aktiviert.
 
 > [!NOTE]
 > Einer Zeitbuchung können Sie über die Beziehung `APP_Timesheet.APP_WorkingTimeWeight` eine Gewichtung zuweisen. Die verfügbaren Gewichtungen pflegen Sie in der Entität `APP_WorkingTimeWeight`.
+
+### So wird der Saldo berechnet
+
+Der Saldo zu einem Stichtag beginnt bei der letzten Korrektur des Arbeitszeitsaldos des Benutzers (oder bei null) und wendet die folgenden Monate nacheinander an. In einem Monat mit weniger Ist- als Sollstunden wird die Differenz abgezogen. In einem Monat mit mehr Ist- als Sollstunden wird der Überschuss so behandelt:
+
+- **Aktuelle Berechnung:** Der Überschuss baut zuerst einen negativen Saldo aus den Vormonaten ab, bis dieser null erreicht. Erst der Rest wird von der Überstundenpauschale aufgenommen; was die Pauschale übersteigt, kommt zum Saldo hinzu.
+- **Bisherige Berechnung** (`useLegacyOvertimeCalculation = True` oder Feature Flag `LegacyOvertimeCalc`): Die Überstundenpauschale nimmt den Überschuss immer zuerst auf, auch wenn der Saldo negativ ist.
+
+Die Überstundenpauschale ist eine Schwelle pro Monat. Bei einem Stichtag innerhalb eines Monats zählt der Monat bis zum Stichtag, mit einer nach Arbeitstagen anteiligen Pauschale; ein Saldo innerhalb eines Monats ist daher ein Zwischenwert.
+
+### Zeitraumform
+
+Mit der aktuellen Berechnung liefert die Zeitraumform per Definition den Saldo am `endDate` minus den Saldo am Tag vor `startDate`, beide wie mit der Stichtagsform und denselben Argumenten berechnet. Daher gilt:
+
+- Eine Korrektur des Arbeitszeitsaldos, die innerhalb des Zeitraums wirksam ist, ist im Ergebnis enthalten.
+- Zeiträume, die innerhalb eines Monats beginnen, gehen auf: Saldo vor dem Zeitraum plus Ergebnis des Zeitraums ergibt den Saldo am Ende des Zeitraums.
+
+Mit der bisherigen Berechnung wird der Zeitraum für sich berechnet, beginnend bei einem Saldo von null; Korrekturen des Arbeitszeitsaldos innerhalb des Zeitraums werden nicht angewendet.
+
+### Overtime2
+
+`:Overtime2` nimmt in beiden Formen dieselben Argumente und liefert dieselben Werte wie `:Overtime`. `:Overtime` wird vor der Ausführung in die Abfrage eingesetzt, daher müssen seine Argumente außer `userUuid` Konstanten oder Abfrageparameter sein. `:Overtime2` wird im Speicher für die geladenen Zeilen ausgewertet, so wie es die Standardlisten mit `Current.UserDetailUuid` verwenden.
 
 ### Beispiele
 
@@ -121,6 +155,17 @@ Select New With
 {
         .User = U,
         .Overtime = :Overtime(U.UserDetailUuid, #2011-12-31#, True, True)
+}
+```
+
+Die folgende TCQL-Abfrage zeigt die Veränderung des Saldos im ersten Quartal 2011, einschließlich der in diesem Quartal wirksamen Korrekturen des Arbeitszeitsaldos:
+
+```
+From U In UserDetail
+Select New With
+{
+        .User = U,
+        .OvertimeInPeriod = :Overtime(U.UserDetailUuid, #2011-01-01#, #2011-03-31#, True, True)
 }
 ```
 

@@ -96,19 +96,53 @@ For examples see example section in chapter [PlannedHoursOfWork](#plannedhoursof
 
 ## Overtime
 
-Use the function Overtime to calculate the overtime hours for a given user and effective date.
+Use the function Overtime to calculate the working time balance (overtime hours) of a user, either on an effective date or as its change within a time range.
+
+The function has two forms:
+
+```
+:Overtime(userUuid, effectiveDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+:Overtime(userUuid, startDate, endDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+```
+
+With five arguments, the type of the third argument decides the form: a date selects the time range form, a Boolean value the effective date form with `useLegacyOvertimeCalculation`.
 
 ### Parameters
 
 Parameter | Description
 --- | ---
 userUuid | ID of the user for which the function calculates the result.
-effectiveDate | Effective date for which the function calculates the result.
+effectiveDate | Effective date for which the function calculates the balance.
+startDate | First day of the time range (time range form only).
+endDate | Last day of the time range (time range form only).
 includeWeights | Indicating whether the function takes working time weights into account.
 includeLumpSumOvertime | Indicating whether the result should include the lump sum for overtime defined for the user.
+useLegacyOvertimeCalculation | Optional. `True` selects the previous calculation, `False` the current one. If you omit it, the current calculation is used unless the feature flag `LegacyOvertimeCalc` is enabled for the tenant.
 
 > [!NOTE]
 > You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+
+### How the Balance Is Calculated
+
+The balance on an effective date starts at the last overtime correction of the user (or at zero) and applies the following months one after another. In a month with fewer actual hours than planned hours, the difference is subtracted. In a month with more actual hours than planned hours, the excess is handled as follows:
+
+- **Current calculation:** the excess first reduces a negative balance carried over from the previous months until it reaches zero. Only the remainder is absorbed by the lump sum overtime; what exceeds the lump sum is added to the balance.
+- **Previous calculation** (`useLegacyOvertimeCalculation = True` or feature flag `LegacyOvertimeCalc`): the lump sum overtime always absorbs the excess first, even while the balance is negative.
+
+The lump sum overtime is a threshold per month. For an effective date within a month, the month counts up to the effective date with its lump sum prorated by working days, so a balance within a month is an intermediate value.
+
+### Time Range Form
+
+With the current calculation, the time range form returns by definition the balance at `endDate` minus the balance on the day before `startDate`, both calculated as by the effective date form with the same arguments. Therefore:
+
+- an overtime correction that is effective within the range is included in the result,
+- ranges that start within a month add up: balance before the range plus the result of the range equals the balance at the end of the range.
+
+With the previous calculation, the range is calculated on its own, starting from a balance of zero; overtime corrections within the range are not applied.
+
+### Overtime2
+
+`:Overtime2` takes the same arguments in both forms and returns the same values as `:Overtime`. `:Overtime` is substituted into the query before it is executed, so its arguments other than `userUuid` must be constants or query parameters. `:Overtime2` is evaluated in memory on the loaded rows, as the standard lists do with `Current.UserDetailUuid`.
 
 ### Examples
 
@@ -120,6 +154,17 @@ Select New With
 {
         .User = U,
         .Overtime = :Overtime(U.UserDetailUuid, #2011-12-31#, True, True)
+}
+```
+
+The following TCQL query shows the change of the balance in the first quarter of 2011, including overtime corrections effective in that quarter:
+
+```
+From U In UserDetail
+Select New With
+{
+        .User = U,
+        .OvertimeInPeriod = :Overtime(U.UserDetailUuid, #2011-01-01#, #2011-03-31#, True, True)
 }
 ```
 
