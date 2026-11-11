@@ -44,11 +44,11 @@ This list is typically relevant for:
 
 The list also calculates additional values that are mainly used by the report output and summary logic, for example:
 
-- overtime at the begin and end of the period
+- overtime at the beginning and end of the period
 - overtime within the period
 - target hours in the month
 - actual hours in the month
-- remaining vacation at the begin and end of the period
+- remaining vacation at the beginning and end of the period
 - taken vacation and new vacation entitlement in the period
 
 These values come from standard working-time, overtime, vacation, legal-holiday, and absence calculations.
