@@ -108,7 +108,10 @@ Every page of the time cockpit documentation on one page, in the order of the na
 - Working with Time Cockpit
   - [Dark Mode](ui/dark-mode.md)
   - [Search the Navigation Menu](ui/menu-search.md)
-  - [Lists](ui/lists/entityview-profiles.md)
+  - Lists
+    - [List Profiles](ui/lists/entityview-profiles.md)
+    - [Grouping Lists](ui/lists/grouping.md)
+    - [Dates in List Filters](ui/lists/filter-dates.md)
 - Data Exchange
   - [Data Import](data-exchange/import.md)
   - [Data Export](data-exchange/export.md)
@@ -223,6 +226,7 @@ Every page of the time cockpit documentation on one page, in the order of the na
 ## Release Notes
 
 - 2026
+  - [December](release-notes/2026-12.md)
   - [November](release-notes/2026-11.md)
   - [October](release-notes/2026-10.md)
   - [September](release-notes/2026-09.md)

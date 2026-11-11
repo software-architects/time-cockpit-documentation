@@ -49,5 +49,5 @@ Die Profilfunktion ist besonders in folgenden Szenarien nützlich:
 
 ## Verwandte Seiten
 
-- [Listen gruppieren](~/doc/ui/lists/grouping.md): eine Liste gruppieren, Gruppen oder eine ganze Gruppierungsebene auf- und zuklappen
-- [Datum in Listenfiltern](~/doc/ui/lists/filter-dates.md): Schnellauswahl und dynamische Datumswerte, die ein Profil aktuell hält
+- [Listen gruppieren](~/doc/benutzeroberflaeche/listen/listen-gruppieren.md): eine Liste gruppieren, Gruppen oder eine ganze Gruppierungsebene auf- und zuklappen
+- [Datum in Listenfiltern](~/doc/benutzeroberflaeche/listen/datum-in-listenfiltern.md): Schnellauswahl und dynamische Datumswerte, die ein Profil aktuell hält

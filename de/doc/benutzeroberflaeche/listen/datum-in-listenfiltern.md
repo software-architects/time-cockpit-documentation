@@ -5,7 +5,7 @@ en_page: doc/ui/lists/filter-dates.md
 ---
 # Datum in Listenfiltern
 
-Jedes Datumsfeld im time cockpit Web-Client öffnet einen Kalender. Unter dem Kalender setzt die Schnellauswahl häufige Datumswerte mit einem Klick. Im Filter einer Liste sind diese Werte dynamisch: Ein [Listenprofil](~/doc/ui/lists/entityview-profiles.md) speichert die Regel statt des Datums, deshalb wird der Filter bei jedem Öffnen der Liste neu berechnet.
+Jedes Datumsfeld im time cockpit Web-Client öffnet einen Kalender. Unter dem Kalender setzt die Schnellauswahl häufige Datumswerte mit einem Klick. Im Filter einer Liste sind diese Werte dynamisch: Ein [Listenprofil](~/doc/benutzeroberflaeche/listen/listenprofile.md) speichert die Regel statt des Datums, deshalb wird der Filter bei jedem Öffnen der Liste neu berechnet.
 
 ## Schnellauswahl
 
@@ -58,5 +58,5 @@ Erlaubt ein Feld nur einen bestimmten Bereich und ergibt eine eigene Regel oder 
 
 ## Verwandte Seiten
 
-- [Listenprofile](~/doc/ui/lists/entityview-profiles.md): Filter, Spalten, Gruppierung und Sortierung einer Liste speichern
-- [Listen gruppieren](~/doc/ui/lists/grouping.md): eine Liste gruppieren, Gruppen oder eine ganze Gruppierungsebene auf- und zuklappen
+- [Listenprofile](~/doc/benutzeroberflaeche/listen/listenprofile.md): Filter, Spalten, Gruppierung und Sortierung einer Liste speichern
+- [Listen gruppieren](~/doc/benutzeroberflaeche/listen/listen-gruppieren.md): eine Liste gruppieren, Gruppen oder eine ganze Gruppierungsebene auf- und zuklappen
