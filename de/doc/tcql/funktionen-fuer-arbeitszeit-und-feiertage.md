@@ -118,7 +118,7 @@ startDate | Erster Tag des Zeitraums (nur Zeitraumform).
 endDate | Letzter Tag des Zeitraums (nur Zeitraumform).
 includeWeights | Gibt an, ob die Funktion Arbeitszeitgewichtungen berücksichtigt.
 includeLumpSumOvertime | Gibt an, ob das Ergebnis die für den Benutzer definierte Überstundenpauschale enthalten soll.
-useLegacyOvertimeCalculation | Optional. `True` wählt die bisherige Berechnung, `False` die aktuelle. Ohne dieses Argument gilt die aktuelle Berechnung, außer das Feature Flag `LegacyOvertimeCalc` ist für den Mandanten aktiviert.
+useLegacyOvertimeCalculation | Optional. `True` wählt die bisherige Berechnung, `False` die aktuelle. Ohne dieses Argument gilt die aktuelle Berechnung.
 
 > [!NOTE]
 > Einer Zeitbuchung können Sie über die Beziehung `APP_Timesheet.APP_WorkingTimeWeight` eine Gewichtung zuweisen. Die verfügbaren Gewichtungen pflegen Sie in der Entität `APP_WorkingTimeWeight`.
@@ -128,7 +128,7 @@ useLegacyOvertimeCalculation | Optional. `True` wählt die bisherige Berechnung,
 Der Saldo zu einem Stichtag beginnt bei der letzten Korrektur des Arbeitszeitsaldos des Benutzers (oder bei null) und wendet die folgenden Monate nacheinander an. In einem Monat mit weniger Ist- als Sollstunden wird die Differenz abgezogen. In einem Monat mit mehr Ist- als Sollstunden wird der Überschuss so behandelt:
 
 - **Aktuelle Berechnung:** Der Überschuss baut zuerst einen negativen Saldo aus den Vormonaten ab, bis dieser null erreicht. Erst der Rest wird von der Überstundenpauschale aufgenommen; was die Pauschale übersteigt, kommt zum Saldo hinzu.
-- **Bisherige Berechnung** (`useLegacyOvertimeCalculation = True` oder Feature Flag `LegacyOvertimeCalc`): Die Überstundenpauschale nimmt den Überschuss immer zuerst auf, auch wenn der Saldo negativ ist.
+- **Bisherige Berechnung** (`useLegacyOvertimeCalculation = True`): Die Überstundenpauschale nimmt den Überschuss immer zuerst auf; was die Pauschale übersteigt, kommt zum Saldo hinzu. Jeder Monat wird für sich betrachtet, unabhängig vom Saldo, mit dem er beginnt. Das hält die Berechnung einfach, konsistent und gut nachvollziehbar. Bei einem negativen Saldo nimmt allerdings die Pauschale die Stunden, mit denen er abgebaut werden soll, zuerst auf, sodass nur der Teil über der Pauschale den negativen Saldo verringert.
 
 Die Überstundenpauschale ist eine Schwelle pro Monat. Bei einem Stichtag innerhalb eines Monats zählt der Monat bis zum Stichtag, mit einer nach Arbeitstagen anteiligen Pauschale; ein Saldo innerhalb eines Monats ist daher ein Zwischenwert.
 
@@ -139,7 +139,7 @@ Mit der aktuellen Berechnung liefert die Zeitraumform per Definition den Saldo a
 - Eine Korrektur des Arbeitszeitsaldos, die innerhalb des Zeitraums wirksam ist, ist im Ergebnis enthalten.
 - Zeiträume, die innerhalb eines Monats beginnen, gehen auf: Saldo vor dem Zeitraum plus Ergebnis des Zeitraums ergibt den Saldo am Ende des Zeitraums.
 
-Mit der bisherigen Berechnung wird der Zeitraum für sich berechnet, beginnend bei einem Saldo von null; Korrekturen des Arbeitszeitsaldos innerhalb des Zeitraums werden nicht angewendet.
+Mit der bisherigen Berechnung ist der Zeitraum in sich abgeschlossen: Er wird allein aus seinen Monaten berechnet, beginnend bei einem Saldo von null, der Saldo vor dem Zeitraum beeinflusst ihn also nicht. Korrekturen des Arbeitszeitsaldos innerhalb des Zeitraums werden nicht angewendet.
 
 ### Overtime2
 

@@ -117,7 +117,7 @@ startDate | First day of the time range (time range form only).
 endDate | Last day of the time range (time range form only).
 includeWeights | Indicating whether the function takes working time weights into account.
 includeLumpSumOvertime | Indicating whether the result should include the lump sum for overtime defined for the user.
-useLegacyOvertimeCalculation | Optional. `True` selects the previous calculation, `False` the current one. If you omit it, the current calculation is used unless the feature flag `LegacyOvertimeCalc` is enabled for the tenant.
+useLegacyOvertimeCalculation | Optional. `True` selects the previous calculation, `False` the current one. If you omit it, the current calculation is used.
 
 > [!NOTE]
 > You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
@@ -127,7 +127,7 @@ useLegacyOvertimeCalculation | Optional. `True` selects the previous calculation
 The balance on an effective date starts at the last overtime correction of the user (or at zero) and applies the following months one after another. In a month with fewer actual hours than planned hours, the difference is subtracted. In a month with more actual hours than planned hours, the excess is handled as follows:
 
 - **Current calculation:** the excess first reduces a negative balance carried over from the previous months until it reaches zero. Only the remainder is absorbed by the lump sum overtime; what exceeds the lump sum is added to the balance.
-- **Previous calculation** (`useLegacyOvertimeCalculation = True` or feature flag `LegacyOvertimeCalc`): the lump sum overtime always absorbs the excess first, even while the balance is negative.
+- **Previous calculation** (`useLegacyOvertimeCalculation = True`): the lump sum overtime always absorbs the excess first; what exceeds the lump sum is added to the balance. Every month is evaluated on its own, independent of the balance it starts from, which keeps the calculation simple, consistent and easy to retrace. With a negative balance, however, hours worked to reduce it are first absorbed by the lump sum, so the negative balance is reduced only by what exceeds the lump sum.
 
 The lump sum overtime is a threshold per month. For an effective date within a month, the month counts up to the effective date with its lump sum prorated by working days, so a balance within a month is an intermediate value.
 
@@ -138,7 +138,7 @@ With the current calculation, the time range form returns by definition the bala
 - an overtime correction that is effective within the range is included in the result,
 - ranges that start within a month add up: balance before the range plus the result of the range equals the balance at the end of the range.
 
-With the previous calculation, the range is calculated on its own, starting from a balance of zero; overtime corrections within the range are not applied.
+With the previous calculation, the range is self-contained: it is calculated from the months within it alone, starting from a balance of zero, so the balance before the range does not affect it. Overtime corrections within the range are not applied.
 
 ### Overtime2
 
