@@ -28,8 +28,8 @@ Die Doppelpfeile im Gruppierungsbereich funktionieren auch mit der Tastatur: Set
 
 ## Ansicht behalten
 
-Die Gruppierung und wie weit die Gruppen aufgeklappt sind, gehören zur Ansicht der Liste. Damit Sie sie beim nächsten Öffnen der Liste wieder vorfinden, speichern Sie sie in einem Listenprofil. Siehe [Listenprofile](~/doc/ui/lists/entityview-profiles.md).
+Die Gruppierung und wie weit die Gruppen aufgeklappt sind, gehören zur Ansicht der Liste. Damit Sie sie beim nächsten Öffnen der Liste wieder vorfinden, speichern Sie sie in einem Listenprofil. Siehe [Listenprofile](~/doc/benutzeroberflaeche/listen/listenprofile.md).
 
 ## Verwandte Seiten
 
-- [Listenprofile](~/doc/ui/lists/entityview-profiles.md)
+- [Listenprofile](~/doc/benutzeroberflaeche/listen/listenprofile.md)
