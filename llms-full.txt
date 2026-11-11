@@ -7836,7 +7836,7 @@ Setting up time cockpit sidekick takes three steps: install sidekick, create a t
 
 sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The macOS version is still being tested; see [Install on macOS](#install-on-macos) for its limitations.
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
 
 ### Install on Windows
 
@@ -7850,18 +7850,19 @@ Closing the window does not stop sidekick; it keeps recording in the background.
 ### Install on macOS
 
 > [!NOTE]
-> The macOS version is still being tested. Unlike the Windows version, it is not signed and does not update itself.
+> The macOS version is still being tested.
 
-1. Download the disk image for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg). **About This Mac** in the Apple menu shows which chip your Mac has.
-2. Open the downloaded `.dmg` file and drag **time cockpit sidekick** into the **Applications** folder.
-3. Start sidekick from the **Applications** folder. Because the app is not signed, macOS blocks the first start. Open **System Settings** > **Privacy & Security**, click **Open Anyway** next to the message about time cockpit sidekick, and confirm with **Open**. On older macOS versions you can instead Control-click the app and choose **Open**.
+1. Download the installer for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). **About This Mac** in the Apple menu shows which chip your Mac has.
+2. Open the downloaded `.pkg` file and follow the installer. The installer is signed by software architects and checked by Apple (notarised), so macOS opens it without a warning. It installs **time cockpit sidekick** into the **Applications** folder.
+3. Start sidekick from the **Applications** folder if the installer has not started it.
 4. sidekick runs in the menu bar, not in the Dock. Click its icon in the menu bar to open its menu.
 5. To record window titles, allow screen recording for sidekick in **System Settings** > **Privacy & Security** > **Screen Recording**, then quit sidekick and start it again. Without this permission sidekick records which application was in front, but no window titles. sidekick does not take screenshots.
 
+If you installed sidekick from the earlier disk image (`.dmg`), quit it before you run the installer. The installer replaces the app in the **Applications** folder; your recorded data stays.
+
 Limitations of the macOS version:
 
-- No automatic updates. To update, download the disk image again and replace the app in the **Applications** folder.
-- The autostart may not work reliably for the unsigned app. If sidekick is not running after you sign in, start it from the **Applications** folder.
+- The autostart is off after the installation. To start sidekick when you sign in, switch on **Start with the operating system** (see [Autostart and Updates](#autostart-and-updates)).
 - macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
 - Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
 - The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
@@ -7869,7 +7870,7 @@ Limitations of the macOS version:
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- On Windows, sidekick updates itself. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the tray icon then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
 
 ## Pair sidekick With the Calendar
 
@@ -18624,6 +18625,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 - **Collapse or Expand a Grouping Level in One Click**  
   Each entry in the grouping area above a grouped list has two double arrows: **Collapse all ... groups** closes all groups of that level, **Expand all ... groups** opens them. The titles of group header rows now start at the left edge of the list instead of further in. See [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md).
+
+- **sidekick for macOS Is Signed and Updates Itself**  
+  time cockpit sidekick for macOS now comes as an installer package that is signed by software architects and notarised by Apple, so macOS opens it without a warning, and it updates itself like the Windows version. If you use the earlier version from the disk image, quit it and run the installer; it replaces the app, and your recorded data stays. See [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
 
 ## 🐛 Bug Fixes
 
