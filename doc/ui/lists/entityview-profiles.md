@@ -49,3 +49,4 @@ The Profile feature is particularly useful in the following scenarios:
 ## Related Pages
 
 - [Grouping Lists](~/doc/ui/lists/grouping.md): group a list, collapse and expand groups or a whole grouping level
+- [Dates in List Filters](~/doc/ui/lists/filter-dates.md): quick picks and dynamic dates that a profile keeps current
