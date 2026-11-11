@@ -31,7 +31,7 @@ Das Schließen des Fensters beendet sidekick nicht; sidekick zeichnet im Hinterg
 > Die macOS-Version wird noch getestet.
 
 1. Laden Sie das Installationspaket für Ihren Mac herunter: [Apple Silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 und neuer) oder [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). Welchen Chip Ihr Mac hat, zeigt **Über diesen Mac** im Apple-Menü.
-2. Öffnen Sie die heruntergeladene `.pkg`-Datei und folgen Sie dem Installationsprogramm. Das Installationspaket ist signiert und von Apple geprüft (notarisiert), deshalb öffnet macOS es ohne Warnung. Es installiert **time cockpit sidekick** in den Ordner **Programme**.
+2. Öffnen Sie die heruntergeladene `.pkg`-Datei und folgen Sie dem Installationsprogramm. Das Installationspaket ist von software architects signiert und von Apple geprüft (notarisiert), deshalb öffnet macOS es ohne Warnung. Es installiert **time cockpit sidekick** in den Ordner **Programme**.
 3. Starten Sie sidekick aus dem Ordner **Programme**, falls das Installationsprogramm es nicht schon gestartet hat.
 4. sidekick läuft in der Menüleiste, nicht im Dock. Klicken Sie auf sein Symbol in der Menüleiste, um sein Menü zu öffnen.
 5. Damit sidekick Fenstertitel aufzeichnen kann, erlauben Sie sidekick die Bildschirmaufnahme unter **Systemeinstellungen** > **Datenschutz & Sicherheit** > **Bildschirmaufnahme**, beenden Sie sidekick und starten Sie es neu. Ohne diese Berechtigung zeichnet sidekick auf, welche Anwendung im Vordergrund war, aber keine Fenstertitel. sidekick macht keine Bildschirmfotos.
