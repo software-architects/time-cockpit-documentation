@@ -36,7 +36,9 @@ Das Schließen des Fensters beendet sidekick nicht; sidekick zeichnet im Hinterg
 4. sidekick läuft in der Menüleiste, nicht im Dock. Klicken Sie auf sein Symbol in der Menüleiste, um sein Menü zu öffnen.
 5. Damit sidekick Fenstertitel aufzeichnen kann, erlauben Sie sidekick die Bildschirmaufnahme unter **Systemeinstellungen** > **Datenschutz & Sicherheit** > **Bildschirmaufnahme**, beenden Sie sidekick und starten Sie es neu. Ohne diese Berechtigung zeichnet sidekick auf, welche Anwendung im Vordergrund war, aber keine Fenstertitel. sidekick macht keine Bildschirmfotos.
 
-Wenn Sie sidekick aus dem früheren Disk-Image (`.dmg`) installiert haben, beenden Sie es, bevor Sie das Installationsprogramm ausführen. Das Installationsprogramm ersetzt die App im Ordner **Programme**; Ihre aufgezeichneten Daten bleiben erhalten.
+Wenn Sie sidekick aus dem früheren Disk-Image (`.dmg`) installiert haben, können Sie das Installationsprogramm gleich ausführen: Beim ersten Start beendet die neue Version die alte, und Ihre aufgezeichneten Daten bleiben erhalten. Liegt noch eine Kopie der früheren Version auf Ihrem Mac, nennt sidekick sie in einem Band oben im Fenster; **In den Papierkorb legen** entfernt sie, **Später** fragt beim nächsten Start erneut. Entfernen Sie sie: Sie aktualisiert sich nicht und kann bei der Anmeldung statt der neuen Version starten.
+
+Nach dem Wechsel fragt macOS einmal erneut nach der Bildschirmaufnahme und, für WLAN-Namen, nach den Ortungsdiensten, und den Autostart müssen Sie eventuell wieder einschalten. Fragt **Frag deine KI** erneut nach Ihrem API-Schlüssel, hat der Schlüsselbund den gespeicherten Schlüssel nicht an die neue Version freigegeben; geben Sie ihn noch einmal ein.
 
 Einschränkungen der macOS-Version:
 

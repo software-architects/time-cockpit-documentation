@@ -35,7 +35,9 @@ Closing the window does not stop sidekick; it keeps recording in the background.
 4. sidekick runs in the menu bar, not in the Dock. Click its icon in the menu bar to open its menu.
 5. To record window titles, allow screen recording for sidekick in **System Settings** > **Privacy & Security** > **Screen Recording**, then quit sidekick and start it again. Without this permission sidekick records which application was in front, but no window titles. sidekick does not take screenshots.
 
-If you installed sidekick from the earlier disk image (`.dmg`), quit it before you run the installer. The installer replaces the app in the **Applications** folder; your recorded data stays.
+If you installed sidekick from the earlier disk image (`.dmg`), you can run the installer right away: at its first start the new version stops the old one, and your recorded data stays. If a copy of the earlier version is still on your Mac, sidekick names it in a band at the top of its window; **Move to Trash** removes it, **Later** asks again at the next start. Remove it: it does not update itself and can start at sign-in instead of the new version.
+
+After the switch, macOS asks once more for screen recording and, for Wi-Fi names, for location access, and the autostart may have to be switched on again. If **Ask your AI** asks for your API key again, the keychain did not release the stored key to the new version; enter it once more.
 
 Limitations of the macOS version:
 
