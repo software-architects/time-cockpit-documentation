@@ -81,6 +81,10 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 
 ![Week view](images/wc-week-view.png "Week view")
 
+You can also switch views without the toolbar: double-click a day head in the week or work week view to show that day alone, and double-click the day in the week strip of the day view to go back. The keyboard shortcuts are **CTRL + ALT + W** for the week view, **CTRL + ALT + R** for the work week view and **CTRL + ALT + D** for the day view.
+
+A narrow calendar shows one day at a time, because several days no longer fit side by side. This happens on a phone, and on a small window with wide side panes. The week and work week views are then unavailable: the toolbar greys them out and notes that the calendar is too narrow for more than one day, and the shortcuts and the double-click say the same. Your chosen view is kept, so it comes back as soon as there is room for it again.
+
 Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
 
 ![Side-by-Side View](images/wc-side-by-side.png "Side-by-Side View")
