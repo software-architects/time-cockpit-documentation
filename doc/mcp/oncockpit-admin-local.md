@@ -175,7 +175,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
 | `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
-| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
+| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source and whether it is disabled. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |
 
