@@ -71,14 +71,13 @@ The right pane shows the signals of one day: the day you selected in the week vi
 
 The tab **Signals** lists the signals by kind, each in its own section:
 
-- **Workspaces**: the time per repository or folder, longest first, with the same numbers as the insights in sidekick. A minute shared among several workspaces counts with its share; calls, mail and applications without a workspace are not listed but count towards the working time the percentages refer to. Needs an up-to-date version of sidekick. Click the colour square of a workspace to choose its colour; it also applies to the lanes, the section **AI** and sidekick.
 - **AI**: your time with Claude Code and Codex, and the time the agents worked alone, per project and session.
 - **Window titles**: what was in the foreground. **By title** lists the window titles of the day, **By application** the applications with their durations. Your choice is kept.
 - **Files**: the folders and files that changed.
 - **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
 - **Wi-Fi**: the connected networks and the time without Wi-Fi.
 
-Each section except **Workspaces** shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
+Each section shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
 
 | Section | Details |
 |---|---|
@@ -100,12 +99,12 @@ A block of the **Proposal** lane can also be booked with a double-click. If an O
 
 ## Marking Times
 
-- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. A workspace marks every minute it was involved in, also where it only had a share of the minute, so the marks can be longer than its time; the row's bar shows both times against the working time, the time counted in part thick and the time counted in full as a thin line, and the row's tooltip names them. **Esc** clears the marking.
+- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
 
 ## Searching the Signals
 
-The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: workspaces, window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
+The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
 
 Under the field, a ruler of the day shows when the matches occurred, and a button for each section with matches jumps to it.
 
@@ -115,7 +114,7 @@ If you selected blocks in the lanes, the search covers the selection. **Whole da
 
 ## Refresh
 
-While today is visible in the calendar, the signals are loaded again every minute. The section **Workspaces** follows about every 5 minutes, and at once when you refresh the calendar or return to the window, so it can be a few minutes behind the insights in sidekick. Other days are not reloaded automatically.
+While today is visible in the calendar, the signals are loaded again every minute. Other days are not reloaded automatically.
 
 ## Related Pages
 

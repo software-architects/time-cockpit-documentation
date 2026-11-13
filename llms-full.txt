@@ -3985,6 +3985,10 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 
 ![Week view](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-week-view.png "Week view")
 
+You can also switch views without the toolbar: double-click a day head in the week or work week view to show that day alone, and double-click the day in the week strip of the day view to go back. The keyboard shortcuts are **CTRL + ALT + W** for the week view, **CTRL + ALT + R** for the work week view and **CTRL + ALT + D** for the day view.
+
+A narrow calendar shows one day at a time, because several days no longer fit side by side. This happens on a phone, and on a small window with wide side panes. The week and work week views are then unavailable: the toolbar greys them out and notes that the calendar is too narrow for more than one day, and the shortcuts and the double-click say the same. Your chosen view is kept, so it comes back as soon as there is room for it again.
+
 Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
 
 ![Side-by-Side View](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-side-by-side.png "Side-by-Side View")
@@ -8025,14 +8029,13 @@ The right pane shows the signals of one day: the day you selected in the week vi
 
 The tab **Signals** lists the signals by kind, each in its own section:
 
-- **Workspaces**: the time per repository or folder, longest first, with the same numbers as the insights in sidekick. A minute shared among several workspaces counts with its share; calls, mail and applications without a workspace are not listed but count towards the working time the percentages refer to. Needs an up-to-date version of sidekick. Click the colour square of a workspace to choose its colour; it also applies to the lanes, the section **AI** and sidekick.
 - **AI**: your time with Claude Code and Codex, and the time the agents worked alone, per project and session.
 - **Window titles**: what was in the foreground. **By title** lists the window titles of the day, **By application** the applications with their durations. Your choice is kept.
 - **Files**: the folders and files that changed.
 - **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
 - **Wi-Fi**: the connected networks and the time without Wi-Fi.
 
-Each section except **Workspaces** shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
+Each section shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
 
 | Section | Details |
 |---|---|
@@ -8054,12 +8057,12 @@ A block of the **Proposal** lane can also be booked with a double-click. If an O
 
 ## Marking Times
 
-- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. A workspace marks every minute it was involved in, also where it only had a share of the minute, so the marks can be longer than its time; the row's bar shows both times against the working time, the time counted in part thick and the time counted in full as a thin line, and the row's tooltip names them. **Esc** clears the marking.
+- Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
 
 ## Searching the Signals
 
-The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: workspaces, window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
+The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
 
 Under the field, a ruler of the day shows when the matches occurred, and a button for each section with matches jumps to it.
 
@@ -8069,7 +8072,7 @@ If you selected blocks in the lanes, the search covers the selection. **Whole da
 
 ## Refresh
 
-While today is visible in the calendar, the signals are loaded again every minute. The section **Workspaces** follows about every 5 minutes, and at once when you refresh the calendar or return to the window, so it can be a few minutes behind the insights in sidekick. Other days are not reloaded automatically.
+While today is visible in the calendar, the signals are loaded again every minute. Other days are not reloaded automatically.
 
 ## Related Pages
 
@@ -18595,7 +18598,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
 | `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
-| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
+| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source and whether it is disabled. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |
 
@@ -18705,6 +18708,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 
 ## 🐛 Bug Fixes
 
+- **Switching Between the Day, Work Week and Week View Sticks**  
+  Switching the view of the time sheet calendar sometimes did not take: the toolbar did nothing, or the double-click on a day switched back on its own a moment later. A calendar that had once been too narrow for several days kept putting its own view back. The view you choose now stays. Where the calendar really is too narrow, one day at a time is all it shows: the week and work week views are greyed out and say why, and your chosen view comes back as soon as there is room for it. In the day heads of the week views, the deviation and the bar below it are no longer cut off in narrow columns. See [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md).
+
 - **Lists That Load on Open Wait for Preset Filter Values**  
   A list that loads on open sometimes reported its filter as incomplete when a mandatory filter field selects its first entry by itself and that entry arrived late. The list now waits for such fields before it loads, and loads once a slow field has picked its value. A list that is not loaded now says why: it loads only on demand, its filter is incomplete or invalid, or checking the filter took too long. If checking the filter takes too long while the list already shows data, a notification says so; click **Apply Filter** to try again. Back-reference tabs on forms name the same reason in the tooltip of their row count.
 
@@ -18741,9 +18747,6 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 - **Search in the Signals Pane**  
   The right pane of the Time Sheet Calendar can search all signals of the day from time cockpit sidekick: window titles, applications, file paths, keywords, Wi-Fi networks and AI sessions. A ruler shows when the matches occurred; with a selection you can search the selection or the whole day. The search replaces the search field of the keywords. See [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#searching-the-signals).
-
-- **Workspaces in the Signals Pane**  
-  The right pane of the Time Sheet Calendar shows the time per workspace of the day or the selection, with the same numbers as the insights in time cockpit sidekick. A click on a workspace marks its times in the calendar, and a click on its colour square changes its colour everywhere. In sidekick the section stands above **AI** as well, and the colour of a workspace is now chosen there. The insights in sidekick now also keep themselves up to date while they cover today. See [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#signals).
 
 - **Calmer Signals Pane**
   The sections of the right pane now show at first what a booking needs, and the bars look the same everywhere: a thin bar in each row and at most one bar per section that shows a split. Colour stands for a project or an application only. **Window titles** and **Applications** are one section with the switch **By title** and **By application**, and **AI** shows the time per project, with the cost in the details. The sliders icon in the band of a section shows its details; **Ctrl** + mouse wheel changes how many rows a section shows. See [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#signals).
