@@ -3985,6 +3985,10 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 
 ![Week view](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-week-view.png "Week view")
 
+You can also switch views without the toolbar: double-click a day head in the week or work week view to show that day alone, and double-click the day in the week strip of the day view to go back. The keyboard shortcuts are **CTRL + ALT + W** for the week view, **CTRL + ALT + R** for the work week view and **CTRL + ALT + D** for the day view.
+
+A narrow calendar shows one day at a time, because several days no longer fit side by side. This happens on a phone, and on a small window with wide side panes. The week and work week views are then unavailable: the toolbar greys them out and notes that the calendar is too narrow for more than one day, and the shortcuts and the double-click say the same. Your chosen view is kept, so it comes back as soon as there is room for it again.
+
 Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
 
 ![Side-by-Side View](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-side-by-side.png "Side-by-Side View")
@@ -8935,6 +8939,16 @@ Every grouping level appears as an entry in the grouping area, in the order of t
 The menu of a header row also contains **Move group up**, **Move group down** and **Remove group** to change the order of the grouping levels or to remove one.
 
 The double arrows in the grouping area can also be used with the keyboard: move the focus to them with **Tab** and press **Enter** or **Space**.
+
+## Select the Rows of a Group
+
+Each header row has a checkbox between the arrow and the menu icon. It selects all rows of the group at once, also when the group is collapsed, and includes the rows of the groups below it. Rows you selected in other groups stay selected, so you can select several groups one after the other and then run an action on all of them. Click the checkbox of a fully selected group again to clear the selection of that group only.
+
+When rows of a group are selected, the number in the header row puts the selected count in front of the group's size, for example **4/9**, highlighted in the accent color, and the checkbox shows a dash while only some of them are selected. That way a collapsed group shows how much of the selection it holds. The list's selection count above the list shows the total.
+
+The menu of a header row offers the same as **Select all ... items** and **Clear group selection**.
+
+Like the checkbox in the column header, the group checkbox selects the rows the list has loaded. If the list shows **load all**, load all rows first to include the rest.
 
 ## Keep the Layout
 
@@ -18595,7 +18609,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
 | `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
-| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
+| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source and whether it is disabled. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |
 
@@ -18703,7 +18717,13 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 - **Quick Picks and Dynamic Dates in Date Fields**  
   Below the calendar of a date field, quick picks set yesterday, today, or the start or end of the week, the month or last month with one click, and show the date each one stands for today. In the filter of a list they set a dynamic date: the field shows an fx icon, its tooltip names the rule and the date it gives today, and a list profile saves the rule, so a profile for last month stays current. **Use fixed date** turns a dynamic date into a fixed one, and **Custom rule** builds other dynamic dates such as "7 days before today". **Alt** + **Down** or **F4** opens the calendar. See [Dates in List Filters](https://docs.timecockpit.com/doc/ui/lists/filter-dates.md).
 
+- **Select All Rows of a Group**  
+  In a grouped list, every header row has a checkbox that selects all rows of the group, also when the group is collapsed and including nested groups, without clearing the selection in other groups. A partly selected group shows a dash in its checkbox and the number of selected rows, for example **4/9**, in its header row. The menu of a header row offers **Select all ... items** and **Clear group selection** as well. See [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md#select-the-rows-of-a-group).
+
 ## 🐛 Bug Fixes
+
+- **Switching Between the Day, Work Week and Week View Sticks**  
+  Switching the view of the time sheet calendar sometimes did not take: the toolbar did nothing, or the double-click on a day switched back on its own a moment later. A calendar that had once been too narrow for several days kept putting its own view back. The view you choose now stays. Where the calendar really is too narrow, one day at a time is all it shows: the week and work week views are greyed out and say why, and your chosen view comes back as soon as there is room for it. In the day heads of the week views, the deviation and the bar below it are no longer cut off in narrow columns. See [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md).
 
 - **Lists That Load on Open Wait for Preset Filter Values**  
   A list that loads on open sometimes reported its filter as incomplete when a mandatory filter field selects its first entry by itself and that entry arrived late. The list now waits for such fields before it loads, and loads once a slow field has picked its value. A list that is not loaded now says why: it loads only on demand, its filter is incomplete or invalid, or checking the filter took too long. If checking the filter takes too long while the list already shows data, a notification says so; click **Apply Filter** to try again. Back-reference tabs on forms name the same reason in the tooltip of their row count.

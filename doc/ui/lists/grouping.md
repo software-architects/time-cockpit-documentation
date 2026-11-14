@@ -1,6 +1,6 @@
 ---
 title: Grouping Lists - Group, Collapse and Expand
-description: Group a time cockpit list by one or more columns, collapse and expand single groups or a whole grouping level, and keep the layout in a list profile.
+description: Group a time cockpit list by one or more columns, collapse and expand single groups or a whole grouping level, select all rows of a group, and keep the layout in a list profile.
 ---
 # Grouping Lists
 
@@ -24,6 +24,16 @@ Every grouping level appears as an entry in the grouping area, in the order of t
 The menu of a header row also contains **Move group up**, **Move group down** and **Remove group** to change the order of the grouping levels or to remove one.
 
 The double arrows in the grouping area can also be used with the keyboard: move the focus to them with **Tab** and press **Enter** or **Space**.
+
+## Select the Rows of a Group
+
+Each header row has a checkbox between the arrow and the menu icon. It selects all rows of the group at once, also when the group is collapsed, and includes the rows of the groups below it. Rows you selected in other groups stay selected, so you can select several groups one after the other and then run an action on all of them. Click the checkbox of a fully selected group again to clear the selection of that group only.
+
+When rows of a group are selected, the number in the header row puts the selected count in front of the group's size, for example **4/9**, highlighted in the accent color, and the checkbox shows a dash while only some of them are selected. That way a collapsed group shows how much of the selection it holds. The list's selection count above the list shows the total.
+
+The menu of a header row offers the same as **Select all ... items** and **Clear group selection**.
+
+Like the checkbox in the column header, the group checkbox selects the rows the list has loaded. If the list shows **load all**, load all rows first to include the rest.
 
 ## Keep the Layout
 
