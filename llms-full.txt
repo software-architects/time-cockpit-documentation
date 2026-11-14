@@ -2059,7 +2059,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
 - **Code:** A unique code identifier for the unit.
 - **Name:** The name of the unit. It is printed in the unit column of the invoice document.
 - **Hidden:** Indicates whether the unit is hidden or visible in the combobox.
-- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts the following codes, written in capital letters:
+- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts every unit code of the ZUGFeRD code list, written in capital letters, for example `LTR` (liter) or `KGM` (kilogram). Common codes for invoices:
 
   | Code | Unit | Code | Unit |
   |---|---|---|---|
@@ -2074,7 +2074,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
   | `ANN` | Year | | |
 
 > [!NOTE]
-> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was one of these codes received that code as its e-invoice unit code with the November 2026 release; all other units have none.
+> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was a code of the ZUGFeRD code list received that code as its e-invoice unit code with the November 2026 release; all other units have none.
 
 ## How to Create an Invoice
 
@@ -8938,6 +8938,16 @@ Every grouping level appears as an entry in the grouping area, in the order of t
 The menu of a header row also contains **Move group up**, **Move group down** and **Remove group** to change the order of the grouping levels or to remove one.
 
 The double arrows in the grouping area can also be used with the keyboard: move the focus to them with **Tab** and press **Enter** or **Space**.
+
+## Select the Rows of a Group
+
+Each header row has a checkbox between the arrow and the menu icon. It selects all rows of the group at once, also when the group is collapsed, and includes the rows of the groups below it. Rows you selected in other groups stay selected, so you can select several groups one after the other and then run an action on all of them. Click the checkbox of a fully selected group again to clear the selection of that group only.
+
+When rows of a group are selected, the number in the header row puts the selected count in front of the group's size, for example **4/9**, highlighted in the accent color, and the checkbox shows a dash while only some of them are selected. That way a collapsed group shows how much of the selection it holds. The list's selection count above the list shows the total.
+
+The menu of a header row offers the same as **Select all ... items** and **Clear group selection**.
+
+Like the checkbox in the column header, the group checkbox selects the rows the list has loaded. If the list shows **load all**, load all rows first to include the rest.
 
 ## Keep the Layout
 
@@ -18705,6 +18715,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 
 - **Quick Picks and Dynamic Dates in Date Fields**  
   Below the calendar of a date field, quick picks set yesterday, today, or the start or end of the week, the month or last month with one click, and show the date each one stands for today. In the filter of a list they set a dynamic date: the field shows an fx icon, its tooltip names the rule and the date it gives today, and a list profile saves the rule, so a profile for last month stays current. **Use fixed date** turns a dynamic date into a fixed one, and **Custom rule** builds other dynamic dates such as "7 days before today". **Alt** + **Down** or **F4** opens the calendar. See [Dates in List Filters](https://docs.timecockpit.com/doc/ui/lists/filter-dates.md).
+
+- **Select All Rows of a Group**  
+  In a grouped list, every header row has a checkbox that selects all rows of the group, also when the group is collapsed and including nested groups, without clearing the selection in other groups. A partly selected group shows a dash in its checkbox and the number of selected rows, for example **4/9**, in its header row. The menu of a header row offers **Select all ... items** and **Clear group selection** as well. See [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md#select-the-rows-of-a-group).
 
 ## 🐛 Bug Fixes
 
