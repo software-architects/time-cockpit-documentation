@@ -45,7 +45,7 @@ Diese Liste ist typischerweise relevant für:
 
 - Diese Liste ist zeitraumbezogen. Wenn Sie eine Momentaufnahme zu einem einzelnen Datum benötigen, verwenden Sie [Arbeitszeitsaldo](~/doc/referenz/listen/arbeitszeitsaldo.md).
 - Der Wert der Iststunden kann sich ändern, je nachdem, ob Arbeitszeitgewichtungen einbezogen werden.
-- Die Abweichung ist nicht einfach Ist- minus Sollstunden: Die Überstundenpauschale wird berücksichtigt und mit der aktuellen Überstundenberechnung auch ein negativer Saldo aus früheren Monaten, der zuerst aufgefüllt wird, sowie Korrekturen des Arbeitszeitsaldos innerhalb des Zeitraums. Siehe [Overtime](~/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
+- Die Abweichung ist nicht einfach Ist- minus Sollstunden: Die Überstundenpauschale wird berücksichtigt und mit der aktuellen Überstundenberechnung auch ein negativer Saldo aus früheren Monaten, der zuerst aufgefüllt wird, sowie Korrekturen des Arbeitszeitsaldos innerhalb des Zeitraums. Siehe [Overtime](~/doc/tcql/funktionen-fuer-arbeitszeit-und-feiertage.md#overtime).
 - Ausgeblendete Benutzer sind ausgeschlossen, sofern der entsprechende Filter nicht aktiviert ist.
 
 ## Verwandte Seiten
