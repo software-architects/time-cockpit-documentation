@@ -61,7 +61,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
 - **Code:** A unique code identifier for the unit.
 - **Name:** The name of the unit. It is printed in the unit column of the invoice document.
 - **Hidden:** Indicates whether the unit is hidden or visible in the combobox.
-- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts the following codes, written in capital letters:
+- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts every unit code of the ZUGFeRD code list, written in capital letters, for example `LTR` (liter) or `KGM` (kilogram). Common codes for invoices:
 
   | Code | Unit | Code | Unit |
   |---|---|---|---|
@@ -76,7 +76,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
   | `ANN` | Year | | |
 
 > [!NOTE]
-> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was one of these codes received that code as its e-invoice unit code with the November 2026 release; all other units have none.
+> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was a code of the ZUGFeRD code list received that code as its e-invoice unit code with the November 2026 release; all other units have none.
 
 ## How to Create an Invoice
 
