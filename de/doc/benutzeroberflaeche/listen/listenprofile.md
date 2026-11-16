@@ -46,3 +46,8 @@ Die Profilfunktion ist besonders in folgenden Szenarien nützlich:
 2. **Effizientes Arbeiten:** Mit Profilen wechseln Benutzer je nach Aufgabe schnell zwischen verschiedenen Ansichten und arbeiten dadurch effizienter.
 
 3. **Einheitlich auf allen Geräten:** Da Profile in der Datenbank gespeichert werden, können Benutzer auf jedem Gerät und in jedem Browser auf ihre angepassten Listeneinstellungen zugreifen und haben überall dieselbe Arbeitsumgebung.
+
+## Verwandte Seiten
+
+- [Listen gruppieren](~/doc/benutzeroberflaeche/listen/listen-gruppieren.md): eine Liste gruppieren, Gruppen oder eine ganze Gruppierungsebene auf- und zuklappen
+- [Datum in Listenfiltern](~/doc/benutzeroberflaeche/listen/datum-in-listenfiltern.md): Schnellauswahl und dynamische Datumswerte, die ein Profil aktuell hält

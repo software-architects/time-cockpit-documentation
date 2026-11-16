@@ -61,6 +61,7 @@ The time sheet calendar shows different types of information:
 * Timesheet Entries
 * Absence Times (vacation, compensatory time off, sick leave). See also [Absence Time Management](~/doc/employee-time-tracking/absence-time-management.md).
 * Outlook Appointments and Sent Mails from your Office 365 account. See also [Office 365](office365.md).
+* Quick notes from time cockpit sidekick. See also [Quick Notes](~/doc/sidekick/calendar-signals.md#quick-notes).
 
 You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
 
@@ -80,6 +81,10 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 
 ![Week view](images/wc-week-view.png "Week view")
 
+You can also switch views without the toolbar: double-click a day head in the week or work week view to show that day alone, and double-click the day in the week strip of the day view to go back. The keyboard shortcuts are **CTRL + ALT + W** for the week view, **CTRL + ALT + R** for the work week view and **CTRL + ALT + D** for the day view.
+
+A narrow calendar shows one day at a time, because several days no longer fit side by side. This happens on a phone, and on a small window with wide side panes. The week and work week views are then unavailable: the toolbar greys them out and notes that the calendar is too narrow for more than one day, and the shortcuts and the double-click say the same. Your chosen view is kept, so it comes back as soon as there is room for it again.
+
 Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
 
 ![Side-by-Side View](images/wc-side-by-side.png "Side-by-Side View")
@@ -87,6 +92,19 @@ Besides changing the granularity of the time sheet calendar, you can also choose
 Enabling this option shows timesheet entries and Outlook appointments side-by-side.
 
 ![Side-by-Side View Enabled](images/wc-side-by-side-enabled.png "Side-by-Side View Enabled")
+
+### Tooltips
+
+Hover over a timesheet, an Outlook appointment or a quick note to see its tooltip, or tap it on a touch screen. The tooltip says what it is, with its time, duration and whole text. It stays open while the pointer is on it, stays inside the window, and closes when you scroll the calendar.
+
+| Tooltip | Links |
+|---|---|
+| **Timesheet entry** | **Edit** opens the timesheet. |
+| **Suggested timesheet entry** | None. |
+| **Outlook appointment** | **Book** opens the form for a new timesheet, **Open calendar item** opens the appointment in Outlook. See [Working With an Appointment](outlook-appointments.md#working-with-an-appointment). |
+| **Note** | **Book** opens the form for a new timesheet. See [Quick Notes](~/doc/sidekick/calendar-signals.md#quick-notes). |
+
+A read-only timesheet has no **Edit** link.
 
 ### Zoom
 

@@ -1,6 +1,6 @@
 ---
 title: MCP-Server - Verbindung prüfen
-description: "Eine MCP-Verbindung zu time cockpit mit den Tools ping, get_environment, get_current_user und entra_whoami prüfen und fehlende Tools verstehen."
+description: "MCP-Verbindung zu time cockpit mit ping, get_environment, get_current_user und entra_whoami prüfen, abgelehnte Anmeldungen und fehlende Tools beheben."
 en_page: doc/mcp/verify-connection.md
 ---
 # Verbindung prüfen
@@ -16,6 +16,25 @@ Rufen Sie nach dem Konfigurieren eines Clients die Diagnose-Tools des Servers in
 4. `entra_whoami` (nur Remote-Server) – Entra-Identität plus der **ermittelte** Mandant, Sandbox, Zugriff und Umfang. Das belegt, dass Header oder URL-Segmente beim Server angekommen sind.
 
 Ein Prompt wie *„Rufe ping, get_environment, get_current_user und entra_whoami auf dem time cockpit Server auf und fasse das Ergebnis zusammen“* funktioniert in jedem Client.
+
+## Anmeldung von time cockpit abgelehnt
+
+Lehnt time cockpit die Anmeldung für Ihr Konto oder für den gewählten Mandanten bzw. die gewählte Sandbox ab, listet der Remote-Server nur `ping` und `entra_whoami`. Beide Tool-Beschreibungen beginnen mit „Sign-in to time cockpit was refused:“ und einer Meldung, die den Grund nennt. `ping` antwortet weiterhin; `entra_whoami` und alle anderen Tools liefern diese Meldung. Die Meldung endet mit den Fehlercodes, zum Beispiel `(error: invalid_grant, AmbiguousTenantMapping)`; geben Sie diese an, wenn Sie den Support kontaktieren. Die Meldungen selbst sind englisch.
+
+Der Server merkt sich eine abgelehnte Anmeldung etwa 30 Sekunden lang. Warten Sie daher nach einer Korrektur der Konfiguration so lange, bevor Sie sich erneut verbinden. Eine abgelehnte Microsoft-Entra-Anmeldung (`InvalidSubjectToken`) merkt sich der Server nicht: Eine erneute Anmeldung wirkt sofort.
+
+| Code | Die Meldung besagt | Was zu tun ist |
+|------|--------------------|----------------|
+| `AmbiguousTenantMapping` | time cockpit hat für Ihr Microsoft-Entra-Konto mehr als einen Mandanten gefunden | Wählen Sie den Mandanten mit der Mandanten-[Verbindungseinstellung](~/doc/mcp/ueberblick.md#verbindungseinstellungen-header-oder-url-segment). Die Mandanten-ID erhalten Sie von Ihrem Administrator. |
+| `NoTenantMapping` | für Ihre Microsoft-Entra-Organisation ist kein Mandant für die Anmeldung eingerichtet | Bitten Sie Ihren time cockpit Administrator, die Anmeldung mit Microsoft Entra für Ihren Mandanten einzurichten. |
+| `RequestedTenantNotAllowed` | time cockpit kann Ihr Microsoft-Entra-Konto nicht beim Mandanten anmelden | Prüfen Sie die Mandanten-ID in Ihrer Konfiguration. Der Mandant muss Anmeldungen aus Ihrer Microsoft-Entra-Organisation zulassen. |
+| `InvalidRequestedTenantId` | die Mandanten-Einstellung ist keine Mandanten-ID | Verwenden Sie die Mandanten-ID (eine GUID) oder lassen Sie die Einstellung weg. |
+| `UserNotAllowed` | time cockpit lässt die Anmeldung Ihres Benutzers nicht zu | Prüfen Sie, ob Ihr Microsoft-Entra-Konto mit einem time cockpit Benutzer verknüpft ist. |
+| `UserInactive` | Ihr time cockpit Benutzer ist gesperrt oder inaktiv | Bitten Sie Ihren time cockpit Administrator, Ihren Benutzer zu entsperren oder wieder zu aktivieren. |
+| `SandboxNotAllowed` | Ihr time cockpit Benutzer darf die Sandbox nicht verwenden | Bitten Sie Ihren Administrator um Zugriff auf die Sandbox oder verbinden Sie sich ohne Sandbox-Einstellung. |
+| `UnknownSandboxEnvironment` | die Sandbox-Einstellung nennt keine Sandbox-Umgebung | Verwenden Sie `test` oder lassen Sie die Einstellung weg, um in der Produktion zu arbeiten. |
+| `InvalidSubjectToken` | time cockpit hat Ihre Microsoft-Entra-Anmeldung nicht akzeptiert | Melden Sie sich in Ihrem Client erneut beim MCP-Server an. Hilft das nicht, kontaktieren Sie Ihren Administrator. |
+| andere Codes | die Anmeldung des MCP-Servers bei time cockpit ist falsch konfiguriert | Auf Ihrer Seite ist nichts zu ändern; kontaktieren Sie Ihren Administrator oder den time cockpit Support. |
 
 ## Fehlende Tools
 

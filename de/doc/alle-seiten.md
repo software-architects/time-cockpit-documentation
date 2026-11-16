@@ -110,7 +110,10 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
 - Arbeiten mit time cockpit
   - [Dunkler Modus](~/doc/benutzeroberflaeche/dunkler-modus.md)
   - [Menü durchsuchen](~/doc/benutzeroberflaeche/menue-suche.md)
-  - [Listen](~/doc/benutzeroberflaeche/listen/listenprofile.md)
+  - Listen
+    - [Listenprofile](~/doc/benutzeroberflaeche/listen/listenprofile.md)
+    - [Listen gruppieren](~/doc/benutzeroberflaeche/listen/listen-gruppieren.md)
+    - [Datum in Listenfiltern](~/doc/benutzeroberflaeche/listen/datum-in-listenfiltern.md)
 - Datenaustausch
   - [Datenimport](~/doc/datenaustausch/import.md)
   - [Datenexport](~/doc/datenaustausch/export.md)
@@ -225,6 +228,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
 ## Release Notes
 
 - 2026
+  - [Dezember](~/doc/release-notes/2026-12.md)
   - [November](~/doc/release-notes/2026-11.md)
   - [Oktober](~/doc/release-notes/2026-10.md)
   - [September](~/doc/release-notes/2026-09.md)

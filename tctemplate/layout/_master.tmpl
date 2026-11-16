@@ -80,6 +80,12 @@
           return h !== 'localhost' && h !== '127.0.0.1' && h.indexOf('docs-dev') === -1;
         };
         if (window.isProductionHost()) {
+          {{!time cockpit: queue stub (same as on www.timecockpit.com) so sa_event calls made before
+              latest.js has loaded, e.g. download_click in public/main.js, are not lost.}}
+          window.sa_event = window.sa_event || function () {
+            var a = [].slice.call(arguments);
+            window.sa_event.q ? window.sa_event.q.push(a) : (window.sa_event.q = [a]);
+          };
           var sa = document.createElement('script');
           sa.async = true;
           sa.src = 'https://scripts.simpleanalyticscdn.com/latest.js';

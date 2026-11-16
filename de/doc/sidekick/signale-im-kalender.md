@@ -1,6 +1,6 @@
 ---
 title: sidekick-Signale im Zeiterfassungskalender
-description: So zeigt der Zeiterfassungskalender Signale und Notizen von time cockpit sidekick - Aktivitätsband, Detailspuren, Schlagwörter und Buchungsvorschläge.
+description: So zeigt der Zeiterfassungskalender die Signale von time cockpit sidekick - Aktivitätsband, Detailspuren, Notizen, Schlagwörter und Buchungsvorschläge.
 en_page: doc/sidekick/calendar-signals.md
 ---
 # sidekick-Signale im Zeiterfassungskalender
@@ -22,7 +22,7 @@ In jeder Ansicht des Kalenders zeigt ein schmales Band neben jedem Tag Ihre Akti
 
 Die nicht gebuchte aktive Zeit ist die Zeit, die Sie höchstwahrscheinlich noch buchen müssen.
 
-In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines Tages wechseln Sie in die Tagesansicht, zum Beispiel mit der Schaltfläche **Tagesansicht** oben im rechten Bereich.
+In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines Tages wechseln Sie in die Tagesansicht, zum Beispiel mit der Schaltfläche für die Tagesansicht (Kalendersymbol) oben im rechten Bereich.
 
 ## Detailspuren in der Tagesansicht
 
@@ -32,7 +32,6 @@ In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen.
 |---|---|
 | **Aktiv** | Wann Sie am Rechner aktiv waren. |
 | **Mikrofon** | Wann eine Anwendung das Mikrofon benutzt hat. Der Tooltip nennt die Anwendung; sidekick zeichnet niemals Ton auf. |
-| **Notizen** | Ihre [Notizen](~/doc/sidekick/notizen.md) aus sidekick. Nur an Tagen mit Notizen sichtbar (siehe [Notizen](#notizen)). |
 | **Claude** | Claude-Code-Sessions, eine Spalte je Session, nach Projekt gruppiert, mit den Zeitpunkten Ihrer Prompts und dem Tokenverbrauch. |
 | **Codex** | Codex-Sessions, genauso wie bei Claude. |
 | **Git** | Commits und Branchwechsel. |
@@ -48,39 +47,48 @@ Zeitbuchungen werden wie gewohnt im Raster des Kalenders angelegt, nie in den Sp
 
 ## Notizen
 
-[Notizen](~/doc/sidekick/notizen.md), die Sie in sidekick schreiben, erscheinen ebenfalls im Kalender. Der Kalender liest sie nur; bearbeitet und gelöscht werden Notizen in sidekick.
+Eine Notiz ist ein kurzer Text, den Sie in sidekick schreiben, standardmäßig mit **Strg** + **Alt** + **N** (**⌘⌥N** unter macOS). Der Kalender zeigt sie in jeder Ansicht zu ihrer Zeit. Eine Notiz ist eine Information wie ein Termin: Sie muss nicht zu einer Zeitbuchung werden, und nichts kennzeichnet sie als gebucht.
 
-### Notizen in der Tagesansicht
+- Eine Notiz hat eine Kontur in der Farbe ihres Kontexts auf leicht getöntem Grund, eine Notiz ohne Kontext ist hellgelb.
+- Liegt eine Zeitbuchung über einem Teil der Notiz, rückt ihr Text in den freien Teil. Liegen Zeitbuchungen über der ganzen Notiz, rückt sie in den schmalen Streifen rechts der Zeitbuchungen, in dem auch [Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md#so-erscheinen-termine-im-kalender) stehen.
+- Notizen und Termine derselben Zeit teilen sich die Breite. Notizen derselben Zeit, für die jeweils zu wenig davon bliebe, werden ein Eintrag, zum Beispiel **3 Notizen**.
+- Stehen Zeitbuchungen und Termine nebeneinander, stehen Notizen bei den Terminen.
+- Eine Notiz ohne Dauer ist eine Zeile zu ihrer Zeit. Eine laufende Notiz wächst bis zur aktuellen Zeit.
 
-Die Spur **Notizen** ist die erste Spur der Gruppe **Arbeit**, rechts von **Mikrofon**, und erscheint nur an Tagen mit Notizen. Sie zeigt zu jeder Notiz ein Notizsymbol zu ihrer Zeit, in der Farbe ihres Arbeitsbereichs. Eine Notiz mit Ende hat einen dünnen Balken bis zu ihrem Ende. Der Kopf der Spur zeigt die Anzahl der Notizen.
+| Was Sie tun | Was geschieht |
+|---|---|
+| Mit der Maus auf die Notiz zeigen | Nach einem Moment öffnet sich ihr [Tooltip](~/doc/zeiterfassungskalender/kalender.md#tooltips): die Zeit, die Dauer, der ganze Text und der Name des Kontexts. |
+| Klicken oder tippen, oder **Eingabe** oder **Leertaste** auf der Notiz drücken | Der Tooltip öffnet sich sofort. Mit einer Taste rückt der Fokus auf den Link im Tooltip; **Esc** oder **Tab** über den letzten Link hinaus schließt ihn und bringt den Fokus zurück auf die Notiz. |
+| Doppelklicken oder zweimal tippen, **Umschalt** + **Eingabe** auf der Notiz drücken oder **Buchen** im Tooltip klicken | Das Formular für eine neue Zeitbuchung öffnet sich mit dem Text der Notiz und ihrer Zeit, gerundet auf die Viertelstunde. Eine Notiz ohne Dauer bekommt eine Stunde. |
+| Auf die Notiz drücken und ziehen | Eine neue Zeitbuchung wird gezogen, wie im freien Raster. |
 
-Der Tooltip einer Notiz zeigt ihren Text, ihren **Kontext** und bei einer Notiz mit Ende ihre Dauer.
-
-- Die Uhrzeit oben im Tooltip bucht die Notiz, wie in den Tooltips anderer Signale: Sie öffnet eine neue Zeitbuchung für die Zeit der Notiz (eine Stunde bei einer Notiz ohne Ende), auf die Viertelstunde gerundet, mit dem Text der Notiz als Beschreibung.
-- **Kopieren** kopiert den Text der Notiz. Die Schaltfläche zeigt dann **Kopiert**.
-
-### Notizen in der Wochenansicht
-
-In Ansichten mit mehreren Tagen, zum Beispiel in der Wochenansicht, markiert ein kleiner Reiter am linken Rand der Zeitbuchungen eines Tages jede Notiz zu ihrer Zeit. Wenn Sie die Maus über den Reiter bewegen, erscheint derselbe Tooltip wie in der Tagesansicht. Ein Klick auf den Reiter, oder **Enter** oder **Leertaste**, während der Reiter den Fokus hat, bucht die Notiz mit ihrem Text.
-
-### Entwürfe aus Notizen
-
-Eine Notiz mit Ende wird zu einem Entwurf in den Zeitbuchungen über ihrem Zeitraum, wo noch nichts gebucht ist. Entwürfe aus Notizen erscheinen in der Tagesansicht und in Ansichten bis zu sieben Tagen, auch wenn der Kalender sonst keinen Vorschlag für den Tag hat. Der Entwurf trägt den Namen der ersten Zeile der Notiz und ist mit **Aus Notiz** markiert. Ein Doppelklick bucht ihn mit dem Text der Notiz.
+Ein Eintrag für mehrere Notizen wird nicht als Ganzes gebucht: Sein Tooltip listet die Notizen auf, jede mit eigenem Link **Buchen**.
 
 ## Der rechte Bereich
 
-Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
+Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren oder einen Block in der Spur **Vorschlag** auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
 
 ### Signale
 
 Der Reiter **Signale** listet die Signale nach Art, jede in einem eigenen Abschnitt:
 
-- **Schlagwörter**: die Wörter, die in Fenstertiteln, Dateipfaden, Commit-Betreffen, Session-Titeln und Besprechungsnamen vorkamen, als Wortwolke.
+- **KI**: Ihre Zeit mit Claude Code und Codex und die Zeit, in der die Agenten allein gearbeitet haben, je Projekt und Session.
+- **Fenstertitel**: was im Vordergrund war. **Nach Titel** listet die Fenstertitel des Tages, **Nach Anwendung** die Anwendungen mit ihrer Dauer. Ihre Wahl bleibt gespeichert.
 - **Dateien**: die Ordner und Dateien, die sich geändert haben.
-- **KI**: Ihre Zeit mit Claude Code und Codex, die Tokens und geschätzte Kosten nach API-Listenpreisen. Ein Abo wird anders abgerechnet.
-- **Anwendungen**: die Anwendungen im Vordergrund, mit ihrer Dauer und ihren Fenstertiteln.
-- **Fenstertitel**: die Fenstertitel des Tages.
-- **WLAN**: die verbundenen WLANs und die WLANs in Reichweite.
+- **Schlagwörter**: die Wörter, die in Fenstertiteln, Dateipfaden, Commit-Betreffen, Session-Titeln und Besprechungsnamen vorkamen, als Wortwolke.
+- **WLAN**: die verbundenen WLANs und die Zeit ohne WLAN.
+
+Jeder Abschnitt zeigt zuerst, was eine Buchung braucht. Das Reglersymbol im Band eines Abschnitts zeigt seine Details, ein zweiter Klick blendet sie wieder aus:
+
+| Abschnitt | Details |
+|---|---|
+| **KI** | Die Tokens und geschätzte Kosten nach API-Listenpreisen, aufgeteilt nach Token-Art. Ein Abo wird anders abgerechnet. |
+| **Fenstertitel** | Die Anwendung unter jedem Titel oder die Titel unter jeder Anwendung. |
+| **Dateien** | Die Änderungen nach Art (neu, geändert, gelöscht) und die einzelnen Läufe der Massenänderungen. |
+| **Schlagwörter** | Die Zeit nach den häufigsten Wörtern. |
+| **WLAN** | Wann jedes WLAN verbunden war, und die WLANs in Reichweite. |
+
+Zeigen Sie auf eine Zeile im Abschnitt **KI**, um ihre Zeit, Tokens und Kosten in einem Tooltip zu sehen. **Strg** + Mausrad über einem Abschnitt zeigt mehr oder weniger Zeilen, bei **Dateien** eine Ebene des Ordnerbaums mehr oder weniger. Die Zahl der offenen Ebenen bleibt erhalten, wenn Sie die Seite neu laden oder zu einem anderen Tag wechseln.
 
 ### Vorschlag
 
@@ -90,13 +98,20 @@ Der Vorschlag lernt aus Ihren Buchungen der letzten 30 Tage und braucht eine akt
 
 Ein Block der Spur **Vorschlag** lässt sich auch mit einem Doppelklick buchen. Fand ein Office 365 Termin statt, während das Mikrofon benutzt wurde, schlägt die Spur ihn als eigenen Block mit dem Betreff des Termins vor. **Termin ignorieren** im Tooltip eines solchen Blocks schlägt ihn nicht mehr vor; ignorierte Termine stehen im Reiter **Vorschlag** unter **Ignorierte Termine**, wo Sie sie wieder vorschlagen lassen können.
 
-Im Zeitraum einer Notiz mit Ende hat die Notiz Vorrang vor den anderen Blöcken des Vorschlags (siehe [Entwürfe aus Notizen](#entwürfe-aus-notizen)).
-
 ## Zeiten markieren
 
 - Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. **Esc** hebt die Markierung auf.
-- Drücken Sie **/**, um die Schlagwörter zu durchsuchen. Die Suche filtert die Wortwolke und markiert im Kalender, wann die passenden Wörter vorkamen. **Esc** leert die Suche.
 - Klicken Sie auf einen Block in einer Spur, um seinen Zeitbereich auszuwählen. **Strg** + Klick fügt einen weiteren Block hinzu; ein Klick auf eine leere Stelle in den Spuren hebt die Auswahl auf.
+
+## Signale durchsuchen
+
+Die Suchschaltfläche (Lupensymbol) oben im rechten Bereich oder **/** öffnet ein Suchfeld über den Abschnitten des Reiters **Signale**. Jeder Abschnitt zeigt dann nur die Einträge, die jedes eingegebene Wort enthalten, in beliebiger Reihenfolge und unabhängig von Groß- und Kleinschreibung und Akzenten: Fenstertitel und Anwendungen, Dateipfade, Schlagwörter, WLANs sowie KI-Sessions nach Arbeitsbereich, Titel oder erstem Prompt. Der passende Text wird hervorgehoben, und ein Abschnitt ohne Treffer klappt zu und zeigt **keine Treffer**. Passende Schlagwörter werden außerdem im Kalender markiert.
+
+Unter dem Feld zeigt ein Zeitstrahl des Tages, wann die Treffer vorkamen, und eine Schaltfläche für jeden Abschnitt mit Treffern springt zu ihm.
+
+Wenn Sie Blöcke in den Spuren ausgewählt haben, durchsucht die Suche die Auswahl. **Ganzer Tag** durchsucht stattdessen den ganzen Tag und behält die Auswahl bei; der Zeitstrahl der Auswahl zeigt dann die Treffer des ganzen Tages. Beide Schaltflächen zeigen ihre Anzahl an Treffern.
+
+**Esc** leert das Feld; in einem leeren Feld schließt es die Suche. Der Text bleibt erhalten, wenn Sie zu anderen Tagen wechseln, bis die Seite neu geladen wird.
 
 ## Aktualisierung
 
@@ -106,5 +121,4 @@ Solange heute im Kalender sichtbar ist, werden die Signale jede Minute neu gelad
 
 - [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 - [time cockpit sidekick](~/doc/sidekick/ueberblick.md)
-- [Notizen mit sidekick](~/doc/sidekick/notizen.md)
 - [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md)

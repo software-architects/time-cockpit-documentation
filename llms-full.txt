@@ -2059,7 +2059,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
 - **Code:** A unique code identifier for the unit.
 - **Name:** The name of the unit. It is printed in the unit column of the invoice document.
 - **Hidden:** Indicates whether the unit is hidden or visible in the combobox.
-- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts the following codes, written in capital letters:
+- **E-Invoice Unit Code:** The unit code according to UN/ECE Recommendation 20 that is written to the ZUGFeRD data of the invoice PDF. Invoice items whose unit has no e-invoice unit code are written with `HUR`. Time cockpit accepts every unit code of the ZUGFeRD code list, written in capital letters, for example `LTR` (liter) or `KGM` (kilogram). Common codes for invoices:
 
   | Code | Unit | Code | Unit |
   |---|---|---|---|
@@ -2074,7 +2074,7 @@ Invoice items and articles refer to a unit of measurement. A unit consists of th
   | `ANN` | Year | | |
 
 > [!NOTE]
-> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was one of these codes received that code as its e-invoice unit code with the November 2026 release; all other units have none.
+> Time cockpit ships the units "h" (code `hour`, e-invoice unit code `HUR`) and "km" (code `kilometer`, e-invoice unit code `KMT`). If you created your own units, check their e-invoice unit code in your [units list](https://web.timecockpit.com/app/lists/entity/APP_Unit) before you send electronic invoices. A unit whose code already was a code of the ZUGFeRD code list received that code as its e-invoice unit code with the November 2026 release; all other units have none.
 
 ## How to Create an Invoice
 
@@ -3965,6 +3965,7 @@ The time sheet calendar shows different types of information:
 * Timesheet Entries
 * Absence Times (vacation, compensatory time off, sick leave). See also [Absence Time Management](https://docs.timecockpit.com/doc/employee-time-tracking/absence-time-management.md).
 * Outlook Appointments and Sent Mails from your Office 365 account. See also [Office 365](https://docs.timecockpit.com/doc/timesheet-calendar/office365.md).
+* Quick notes from time cockpit sidekick. See also [Quick Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#quick-notes).
 
 You can manually create, change or delete time sheet entries, or you can create them with help of signals or Microsoft Office Outlook appointments. The time sheet calendar consists of the following parts:
 
@@ -3984,6 +3985,10 @@ Use the day view e.g. if you want to create your time sheet entries based on you
 
 ![Week view](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-week-view.png "Week view")
 
+You can also switch views without the toolbar: double-click a day head in the week or work week view to show that day alone, and double-click the day in the week strip of the day view to go back. The keyboard shortcuts are **CTRL + ALT + W** for the week view, **CTRL + ALT + R** for the work week view and **CTRL + ALT + D** for the day view.
+
+A narrow calendar shows one day at a time, because several days no longer fit side by side. This happens on a phone, and on a small window with wide side panes. The week and work week views are then unavailable: the toolbar greys them out and notes that the calendar is too narrow for more than one day, and the shortcuts and the double-click say the same. Your chosen view is kept, so it comes back as soon as there is room for it again.
+
 Besides changing the granularity of the time sheet calendar, you can also choose how to view your data. If you have enabled the Office365 integration, you can choose to display Outlook appointments and timesheet entries side-by-side.
 
 ![Side-by-Side View](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-side-by-side.png "Side-by-Side View")
@@ -3991,6 +3996,19 @@ Besides changing the granularity of the time sheet calendar, you can also choose
 Enabling this option shows timesheet entries and Outlook appointments side-by-side.
 
 ![Side-by-Side View Enabled](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-side-by-side-enabled.png "Side-by-Side View Enabled")
+
+### Tooltips
+
+Hover over a timesheet, an Outlook appointment or a quick note to see its tooltip, or tap it on a touch screen. The tooltip says what it is, with its time, duration and whole text. It stays open while the pointer is on it, stays inside the window, and closes when you scroll the calendar.
+
+| Tooltip | Links |
+|---|---|
+| **Timesheet entry** | **Edit** opens the timesheet. |
+| **Suggested timesheet entry** | None. |
+| **Outlook appointment** | **Book** opens the form for a new timesheet, **Open calendar item** opens the appointment in Outlook. See [Working With an Appointment](https://docs.timecockpit.com/doc/timesheet-calendar/outlook-appointments.md#working-with-an-appointment). |
+| **Note** | **Book** opens the form for a new timesheet. See [Quick Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#quick-notes). |
+
+A read-only timesheet has no **Edit** link.
 
 ### Zoom
 
@@ -6731,13 +6749,14 @@ This list is typically relevant for:
 | Target Hours | `PlannedHoursOfWork` | Planned hours for the period | Calculated with the standard planned-hours function without overtime lump sum |
 | Target Hours Including Overtime | `PlannedHoursOfWorkIncludingLumpSumOvertime` | Planned hours including monthly overtime lump sum | Calculated with the standard planned-hours function including lump-sum overtime |
 | Actual Hours | `ActualHoursOfWork` | Actual worked hours for the period | Calculated with the standard actual-hours function and the selected weight setting |
-| Deviation | `Deviation` | Difference between target and actual | Calculated with the standard overtime function for the selected period |
+| Deviation | `Deviation` | Change of the working time balance in the period | Calculated with the time range form of the standard overtime function, including lump sum overtime: the balance at the end date minus the balance on the day before the start date. With the current overtime calculation it includes an overtime correction effective within the period. |
 | Deviation % | derived `DataBarCell` | Relative deviation | For negative deviation, the list compares it with target hours. For positive deviation, it compares it with target hours including overtime. |
 
 ## Notes
 
 - This list is period-based. If you need a single-date snapshot, use [Overtime per Effective Date](https://docs.timecockpit.com/doc/reference/lists/overtime-per-effective-date.md).
 - The actual-hours value can change depending on whether working-time weights are included.
+- The deviation is not simply actual minus target hours: the lump sum overtime is taken into account and, with the current overtime calculation, so are a negative balance from earlier months, which is refilled first, and overtime corrections within the period. See [Overtime](https://docs.timecockpit.com/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
 - Hidden users are excluded unless the corresponding filter is enabled.
 
 ## Related Pages
@@ -6793,11 +6812,11 @@ This list is typically relevant for:
 
 The list also calculates additional values that are mainly used by the report output and summary logic, for example:
 
-- overtime at the begin and end of the period
+- overtime at the beginning and end of the period
 - overtime within the period
 - target hours in the month
 - actual hours in the month
-- remaining vacation at the begin and end of the period
+- remaining vacation at the beginning and end of the period
 - taken vacation and new vacation entitlement in the period
 
 These values come from standard working-time, overtime, vacation, legal-holiday, and absence calculations.
@@ -7291,6 +7310,30 @@ By connecting time cockpit with your Office 365 account, you can gain a more hol
 
 ![Double-Click Appointment](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-transform-appointments.png "Double-Click Appointment")
 
+## How Appointments Appear in the Calendar
+
+Timesheets are filled with a colour. Outlook appointments have only an outline, so you can tell at a glance what is booked and what is not.
+
+By default, timesheets lie over the appointments of the same time, and an appointment stays visible:
+
+* If a timesheet covers only part of an appointment, the text of the appointment moves to its longest free part.
+* If timesheets cover the whole appointment, a narrow strip remains visible at its right edge. In the week view, the strip shows a calendar icon and, on longer appointments, the title. In the wide day view, it shows the full text.
+* Appointments that overlap each other and are fully covered share the strip, also with [quick notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#quick-notes) of time cockpit sidekick.
+
+The strip is only reserved when an appointment with a start and end time or a quick note is on one of the days shown.
+
+To show timesheets and appointments side by side instead, click **Change office 365 calendar view mode** in the toolbar of the time sheet calendar, or press Ctrl + Alt + O.
+
+## Working With an Appointment
+
+| What you do | What happens |
+|---|---|
+| Hover over an appointment | Its [tooltip](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md#tooltips) opens after a moment: the time, the duration, the whole text and the location. |
+| Click or tap it, or press **Enter** or **Space** on it | The tooltip opens at once. With a key, the focus moves to the first link in the tooltip; **Esc** or **Tab** past the last link closes it and brings the focus back to the appointment. |
+| Double-click or double-tap it, press **Shift** + **Enter** on it, or click **Book** in its tooltip | The form for a new timesheet opens with the text, time and location of the appointment. |
+| Click **Open calendar item** in its tooltip | The appointment opens in Outlook. |
+| Press on it and drag | A new timesheet is drawn, as on the free grid. |
+
 <!-- > [!NOTE]
 If you are not using Microsoft Office Outlook to manage your appointments, time cockpit cannot display your appointments at the moment.
 
@@ -7758,10 +7801,6 @@ sidekick can also read Linux machines you work on over SSH, for example a develo
 
 What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md).
 
-## Quick Notes
-
-For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you just did, and sidekick keeps the note with its time. The calendar shows your notes next to the signals and turns a note that covers a time range into a booking draft. See [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md).
-
 ## sidekick and the Classic Signal Tracker
 
 sidekick is the successor to the [classic signal tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
@@ -7783,7 +7822,6 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - [Installing and Pairing sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md): the activity band, the detail lanes and the right pane.
-- [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md): writing down what you just did and booking it from the calendar.
 - [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.
 
 ---
@@ -7803,7 +7841,7 @@ Setting up time cockpit sidekick takes three steps: install sidekick, create a t
 
 sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The macOS version is still being tested; see [Install on macOS](#install-on-macos) for its limitations.
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
 
 ### Install on Windows
 
@@ -7817,18 +7855,21 @@ Closing the window does not stop sidekick; it keeps recording in the background.
 ### Install on macOS
 
 > [!NOTE]
-> The macOS version is still being tested. Unlike the Windows version, it is not signed and does not update itself.
+> The macOS version is still being tested.
 
-1. Download the disk image for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg). **About This Mac** in the Apple menu shows which chip your Mac has.
-2. Open the downloaded `.dmg` file and drag **time cockpit sidekick** into the **Applications** folder.
-3. Start sidekick from the **Applications** folder. Because the app is not signed, macOS blocks the first start. Open **System Settings** > **Privacy & Security**, click **Open Anyway** next to the message about time cockpit sidekick, and confirm with **Open**. On older macOS versions you can instead Control-click the app and choose **Open**.
+1. Download the installer for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). **About This Mac** in the Apple menu shows which chip your Mac has.
+2. Open the downloaded `.pkg` file and follow the installer. The installer is signed by software architects and checked by Apple (notarised), so macOS opens it without a warning. It installs **time cockpit sidekick** into the **Applications** folder.
+3. Start sidekick from the **Applications** folder if the installer has not started it.
 4. sidekick runs in the menu bar, not in the Dock. Click its icon in the menu bar to open its menu.
 5. To record window titles, allow screen recording for sidekick in **System Settings** > **Privacy & Security** > **Screen Recording**, then quit sidekick and start it again. Without this permission sidekick records which application was in front, but no window titles. sidekick does not take screenshots.
 
+If you installed sidekick from the earlier disk image (`.dmg`), you can run the installer right away: at its first start the new version stops the old one, and your recorded data stays. If a copy of the earlier version is still on your Mac, sidekick names it in a band at the top of its window; **Move to Trash** removes it, **Later** asks again at the next start. Remove it: it does not update itself and can start at sign-in instead of the new version.
+
+After the switch, macOS asks once more for screen recording and, for Wi-Fi names, for location access, and the autostart may have to be switched on again. If **Ask your AI** asks for your API key again, the keychain did not release the stored key to the new version; enter it once more.
+
 Limitations of the macOS version:
 
-- No automatic updates. To update, download the disk image again and replace the app in the **Applications** folder.
-- The autostart may not work reliably for the unsigned app. If sidekick is not running after you sign in, start it from the **Applications** folder.
+- The autostart is off after the installation. To start sidekick when you sign in, switch on **Start with the operating system** (see [Autostart and Updates](#autostart-and-updates)).
 - macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
 - Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
 - The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
@@ -7836,7 +7877,7 @@ Limitations of the macOS version:
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- On Windows, sidekick updates itself. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the tray icon then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
 
 ## Pair sidekick With the Calendar
 
@@ -7894,7 +7935,6 @@ Right-click the sidekick icon in the notification area to open its menu. On macO
 - The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
-- **Note…** opens the window for a [quick note](https://docs.timecockpit.com/doc/sidekick/notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
 - **Open data folder** opens the folder in which sidekick stores its data.
@@ -7906,7 +7946,7 @@ While recording is paused, sidekick still records whether the computer was on an
 
 In sidekick, open the tab **Pairing**. Under **Paired calendars**, click **Revoke** next to the calendar. The calendar can then no longer read anything.
 
-To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read** in the area **Connection to the calendar**.
+To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read and pin colours** in the area **Connection to the calendar**.
 
 ## Uninstall sidekick
 
@@ -7939,7 +7979,7 @@ In every view of the calendar, a narrow band next to each day shows your activit
 
 The unbooked active time is the time you most likely still have to book.
 
-In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the button **Day view** at the top of the right pane.
+In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the day view button (calendar icon) at the top of the right pane.
 
 ## Detail Lanes in the Day View
 
@@ -7949,7 +7989,6 @@ In the day view, the calendar draws detail lanes next to your bookings. The head
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
-| **Notes** | Your [quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md) from sidekick. Shown only on days with notes (see [Notes](#notes)). |
 | **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
 | **Codex** | Codex sessions, in the same way as Claude. |
 | **Git** | Commits and branch switches. |
@@ -7963,41 +8002,50 @@ Hover over a block to see its details in a tooltip. The **Legend** button (palet
 
 Bookings are created on the calendar grid as usual, never in the lanes.
 
-## Notes
+## Quick Notes
 
-[Quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md) that you write in sidekick appear in the calendar as well. The calendar only reads them; you edit and delete notes in sidekick.
+A quick note is a short text you write in sidekick, by default with **Ctrl** + **Alt** + **N** (**⌘⌥N** on macOS). The calendar shows it at its time in every view. A note is information, as an appointment is: it does not have to become a booking, and nothing marks it as booked.
 
-### Notes in the Day View
+- A note has an outline in the colour of its context on a lightly tinted ground, and a note without a context is light yellow.
+- If a timesheet covers part of a note, its text moves to the free part. If timesheets cover all of it, the note moves to the narrow strip right of the timesheets, where [Outlook appointments](https://docs.timecockpit.com/doc/timesheet-calendar/outlook-appointments.md#how-appointments-appear-in-the-calendar) have theirs.
+- Notes and appointments of the same time share the width. Notes of the same time that would get too little of it each become one entry, for example **3 notes**.
+- With timesheets and appointments side by side, notes stand with the appointments.
+- A note without a duration is one line at its time. A running note grows up to the current time.
 
-The lane **Notes** is the first lane of the group **Work**, right of **Microphone**, and appears only on days with notes. It shows a note symbol at the time of each note, in the colour of its workspace. A note with an end has a thin bar down to its end. The head of the lane shows the number of notes.
+| What you do | What happens |
+|---|---|
+| Hover over a note | Its [tooltip](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md#tooltips) opens after a moment: the time, the duration, the whole text and the name of the context. |
+| Click or tap it, or press **Enter** or **Space** on it | The tooltip opens at once. With a key, the focus moves to the link in the tooltip; **Esc** or **Tab** past the last link closes it and brings the focus back to the note. |
+| Double-click or double-tap it, press **Shift** + **Enter** on it, or click **Book** in its tooltip | The form for a new timesheet opens with the text of the note and its time, rounded to the quarter hour. A note without a duration gets one hour. |
+| Press on it and drag | A new timesheet is drawn, as on the free grid. |
 
-The tooltip of a note shows its text, its **Context** and, for a note with an end, its duration.
-
-- The time at the top of the tooltip books the note, as in the tooltips of other signals: it opens a new booking for the time of the note (one hour for a note without an end), rounded to the quarter hour, with the text of the note as description.
-- **Copy** copies the text of the note. The button then shows **Copied**.
-
-### Notes in the Week View
-
-In views with several days, for example the week view, a small tab at the left edge of the bookings of a day marks each note at its time. Hovering over the tab shows the same tooltip as in the day view. A click on the tab, or **Enter** or **Space** while the tab has the focus, books the note with its text.
-
-### Drafts from Notes
-
-A note with an end becomes a draft in the bookings over its time range, where nothing is booked yet. Drafts from notes appear in the day view and in views of up to seven days, even when the calendar has no other proposal for the day. The draft is named after the first line of the note and marked **From a note**. A double-click books it with the text of the note.
+An entry for several notes is not booked as a whole: its tooltip lists the notes, each with its own **Book** link.
 
 ## The Right Pane
 
-The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes, the right pane is narrowed to their time ranges. The pane has two tabs.
+The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes or a block in the **Proposal** lane, the right pane is narrowed to their time ranges. The pane has two tabs.
 
 ### Signals
 
 The tab **Signals** lists the signals by kind, each in its own section:
 
-- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **AI**: your time with Claude Code and Codex, and the time the agents worked alone, per project and session.
+- **Window titles**: what was in the foreground. **By title** lists the window titles of the day, **By application** the applications with their durations. Your choice is kept.
 - **Files**: the folders and files that changed.
-- **AI**: your time with Claude Code and Codex, the tokens and an estimated cost based on API list prices. A subscription is billed differently.
-- **Applications**: the applications in the foreground, with their durations and window titles.
-- **Window titles**: the window titles of the day.
-- **Wi-Fi**: the connected networks and the networks in reach.
+- **Keywords**: the words that came up in window titles, file paths, commit subjects, session titles and meeting names, as a word cloud.
+- **Wi-Fi**: the connected networks and the time without Wi-Fi.
+
+Each section shows at first what a booking needs. The sliders icon in the band of a section shows its details, and a second click hides them again:
+
+| Section | Details |
+|---|---|
+| **AI** | The tokens and an estimated cost based on API list prices, split by token type. A subscription is billed differently. |
+| **Window titles** | The application under each title, or the titles under each application. |
+| **Files** | The changes by kind (new, changed, deleted) and the individual runs of the bulk changes. |
+| **Keywords** | The time after the most frequent words. |
+| **Wi-Fi** | When each network was connected, and the networks in reach. |
+
+Hover over a row of the section **AI** to see its time, tokens and cost in a tooltip. **Ctrl** + mouse wheel over a section shows more or fewer rows, in **Files** one level more or less of the folder tree. The number of open levels stays when you reload the page or move to another day.
 
 ### Proposal
 
@@ -8007,13 +8055,20 @@ The proposal learns from your bookings of the last 30 days and needs an up-to-da
 
 A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
 
-In the time range of a note with an end, the note takes precedence over the other blocks of the proposal (see [Drafts from Notes](#drafts-from-notes)).
-
 ## Marking Times
 
 - Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
-- Press **/** to search the keywords. The search filters the word cloud and marks in the calendar when the matching words came up. **Esc** clears the search.
 - Click a block in a lane to select its time range. **Ctrl** + click adds another block; a click on empty space in the lanes clears the selection.
+
+## Searching the Signals
+
+The search button (magnifier icon) at the top of the right pane, or **/**, opens a search field above the sections of the tab **Signals**. Each section then shows only the entries that contain every word you type, in any order and regardless of upper case and accents: window titles and applications, file paths, keywords, Wi-Fi networks, and AI sessions by workspace, title or first prompt. The matching text is highlighted, and a section without a match collapses and says **no matches**. Matching keywords are also marked in the calendar.
+
+Under the field, a ruler of the day shows when the matches occurred, and a button for each section with matches jumps to it.
+
+If you selected blocks in the lanes, the search covers the selection. **Whole day** searches the whole day instead and keeps the selection; the ruler of the selection then shows the matches of the whole day. Both buttons show their number of matches.
+
+**Esc** clears the field; in an empty field it closes the search. The text stays while you move to other days, until the page is reloaded.
 
 ## Refresh
 
@@ -8023,98 +8078,6 @@ While today is visible in the calendar, the signals are loaded again every minut
 
 - [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md)
 - [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
-- [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md)
-- [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
-
----
-
-# Quick Notes with time cockpit sidekick
-
-Source: https://docs.timecockpit.com/doc/sidekick/notes.md
-
-# Quick Notes with sidekick
-
-> [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
-
-Signals show when you worked and with which applications, but not always what the work was. A phone call, a conversation at the desk or a quick fix leaves few traces. With a quick note you write it down in a few words at the end of the activity, without leaving the application you are in. sidekick keeps the note with its time, and the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows it next to the signals, so you can book it later with its text.
-
-## Open the Note Window
-
-- Press the key combination for a new note: **Ctrl+Alt+N** on Windows, **⌘⌥N** on macOS. You can change or switch off the combination in the settings (see [Key Combination](#key-combination)).
-- Or choose **Note…** in the menu of the tray icon.
-
-The window **Note** opens over any application, on the screen with the mouse pointer, and the cursor is in the text field. Type what you just did and press **Enter**.
-
-## The Note Window
-
-| Field | What it does |
-|---|---|
-| Text field | What you did, in a few words. **Shift+Enter** starts a new line. |
-| **Point in time** | When the note applies. It starts with the current time (hint **now**) and can be changed. |
-| **Closes** | Whether the note covers a time range. **None** is preselected; see below. |
-| **Workspace** | Which of today's workspaces or meetings the note belongs to. |
-
-**Enter** or **Save** saves the note, and sidekick confirms it with a silent notification **Note saved**. **Esc** discards the note. If you close the window with its close button instead, the text is kept for the next time you open it.
-
-### A Note with a Begin
-
-With **None** selected under **Closes**, you can enter an optional **Begin**. The note then covers the time from the begin to its point in time; without a begin, it marks a single point in time. The chips next to the begin set it with one click:
-
-- "since 10:12 · back at the desk": the end of your last break of at least 15 minutes today, with its time.
-- **−15 min**, **−30 min** and **−1 h**: that long before the point in time.
-
-For example, when you hang up after a call, open the note window, type "Call with the customer about the offer" and choose **−30 min**.
-
-### Close an Earlier Note
-
-Below **None**, **Closes** lists today's notes that have no end yet, at most five, the newest first. Choose one to end it at the point in time of the new note. The new note itself is then a single point in time.
-
-For example, write "Workshop preparation" when you start, and when you are done, write the next note and choose "Workshop preparation" under **Closes**.
-
-### Workspace
-
-**Workspace** shows today's workspaces and meetings as chips, in the same colours as in the day view of sidekick. The one that was in front during the last quarter hour is preselected. Choose another chip, or **None** for a note without a workspace. The calendar draws the note in the colour of its workspace.
-
-## Edit and Delete Notes
-
-Notes are edited and deleted only in sidekick. Open the tab **Day view**:
-
-- On a day with notes, the track **Notes** right of **Active** shows a sheet symbol for each note at its time, in the colour of its workspace. A note with an end has a thin bar down to its end. The tooltip shows the text.
-- The right pane starts with the section **Notes**: the notes of the day, or of the selected range. The search of the pane finds notes as well.
-- **Edit** opens a small form in the row with the text, **Begin**, **End (optional)** and **Context**. **Ctrl+Enter** or **Save** saves the changes, **Esc** or **Cancel** discards them.
-- **Delete** asks **Delete this note?** in the row. Confirm with **Delete**, or keep the note with **Cancel**.
-
-## Key Combination
-
-In sidekick, open **Settings** and, in the group **For all machines**, the area **Notes**.
-
-- Click into the field **Key combination for a new note** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
-- **Off** switches the key combination off. **Default** restores **Ctrl+Alt+N** (**⌘⌥N** on macOS).
-- The change takes effect when you save the settings.
-
-While sidekick runs, no other application gets this key combination. If another application already uses it, the area says so; choose another combination. **Note…** in the menu of the tray icon keeps working either way.
-
-## Notes in the Time Sheet Calendar
-
-The calendar reads your notes from sidekick together with the signals:
-
-- In the day view, the lane **Notes** shows each note at its time. Its tooltip shows the text, copies it and books the note with its text. See [Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#notes).
-- In the week view, a small tab at the left edge of the bookings of a day marks each note. A click on the tab books the note.
-- A note that covers a time range, because it has a begin or was closed by a later note, becomes a draft in the bookings over that range, as long as nothing is booked there yet. A double-click books it with the note's text. See [Drafts from Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#drafts-from-notes).
-
-The calendar never changes or deletes a note.
-
-## Privacy and Deletion
-
-Notes stay on your computer, in the same database as the signals, and are included in the daily backups. sidekick never uploads them, and the calendar reads them in the same way as the signals: only from the browser on the same computer, and only for paired calendars.
-
-Unlike signals, notes are not deleted after the retention period; they stay until you delete them. **Delete data** in the tab **Data** keeps your notes unless you select **Delete notes as well**. See [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md#deleting-data).
-
-## Related Pages
-
-- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
-- [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md)
 - [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
 
 ---
@@ -8163,19 +8126,19 @@ Window titles, file paths and commit messages can say a lot about your work. Tha
 
 sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). **Open data folder** in the menu of the tray icon opens this folder.
 
-- `signals.sqlite` holds the signals and your [quick notes](https://docs.timecockpit.com/doc/sidekick/notes.md). It is an unencrypted SQLite database in your Windows profile.
+- `signals.sqlite` holds the signals. It is an unencrypted SQLite database in your Windows profile.
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
-- `backups` holds a verified copy of the database from each day, including the notes. The seven newest copies are kept.
+- `backups` holds a verified copy of the database from each day. The seven newest copies are kept.
 - `config.json` holds the settings.
 - `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
 - `tracker.log` is a log file. It contains no window titles and no paths.
 - `telemetry.json` holds the install ID and when the daily usage event was sent last. It exists only after you agreed to send [usage data](#usage-data). The folder `telemetry-queue` holds usage events that have not been sent yet; it is deleted when you switch usage data off.
 
-Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**. Notes are not affected by this period; they stay until you delete them.
+Signals older than 90 days are deleted every night. You can change the period in sidekick under **Settings**, area **Retention and start**, setting **Keep signals (days)**.
 
 ## What Leaves Your Computer
 
-- sidekick uploads no signals and no notes. It sends usage data only if you agree; see [Usage Data](#usage-data).
+- sidekick uploads no signals. It sends usage data only if you agree; see [Usage Data](#usage-data).
 - The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
 - Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
@@ -8201,9 +8164,9 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
-- The calendar reads your notes in the same way as the signals, but never changes or deletes them. Notes are edited and deleted only in sidekick.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
-- To stop every calendar from reading, clear **Paired calendars may read** under **Settings** in the area **Connection to the calendar**.
+- A paired calendar can change one thing in sidekick: the colour of a workspace. It cannot change or delete signals, settings or anything else.
+- To stop every calendar from reading, clear **Paired calendars may read and pin colours** under **Settings** in the area **Connection to the calendar**.
 
 ## Controlling What Is Recorded
 
@@ -8224,8 +8187,6 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 - **Delete today…** deletes the signals of today.
 - **Delete period…** deletes the signals between two days.
 - **Delete everything…** deletes all signals.
-
-Your notes are kept by every delete unless you select **Delete notes as well** (off by default). With it, the notes that begin in the chosen range are deleted too, and **Delete everything…** deletes all notes. The question before deleting says how many notes will be deleted, or that notes are kept.
 
 sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
 
@@ -8833,28 +8794,25 @@ Source: https://docs.timecockpit.com/doc/ui/dark-mode.md
 
 # Dark Mode in time cockpit
 
-Dark mode changes the time cockpit web client to a dark color theme. It can reduce glare in low-light environments and provides a consistent dark appearance across the timesheet calendar, lists, forms, and dashboards.
+Dark mode changes the time cockpit web client to a dark color theme. It can reduce glare in low-light environments and provides a consistent dark appearance across the timesheet calendar, lists, forms, and dashboards. Dark mode has colors of its own instead of inverting the page, so images, charts, and timesheet colors look the same in both modes.
 
-## Enable dark mode
+## Choose the appearance
 
 1. Open the **user menu** by selecting your name in the upper-right corner.
-2. In the **Settings** section, select **Dark mode**.
-3. The web client applies the dark theme immediately.
+2. In the **Settings** section, next to **Appearance**, select one of the options:
+   - **Light** – always the light theme.
+   - **Dark** – always the dark theme.
+   - **System** – follows the light or dark setting of your operating system and switches along with it.
+3. The web client applies the choice immediately.
 
-[![Dark mode setting in the time cockpit user menu](https://docs.timecockpit.com/doc/ui/images/dark-mode-menu.png "Select Dark mode in the user menu")](https://docs.timecockpit.com/doc/ui/images/dark-mode-menu.png)
+**System** is the default. If you had switched dark mode on before the November 2026 release, the web client starts with **Dark**.
 
-The following example shows the timesheet calendar with dark mode enabled:
-
-[![Timesheet calendar using dark mode](https://docs.timecockpit.com/doc/ui/images/dark-mode-timesheet-calendar.png "Timesheet calendar in dark mode")](https://docs.timecockpit.com/doc/ui/images/dark-mode-timesheet-calendar.png)
-
-## Switch back to light mode
-
-Open the user menu again and select **Dark mode** to clear the setting. The web client immediately returns to the light theme.
+The web client remembers your choice in the browser you use. In another browser or on another device, choose the appearance there as well.
 
 > [!TIP]
-> Dark mode changes the appearance only. It does not change your calendar data, list configuration, dashboards, or permissions.
+> The appearance changes only how the web client looks. Your calendar data, list configuration, dashboards, and permissions stay unchanged.
 
-Dark mode was introduced with the [June 2026 release](https://docs.timecockpit.com/doc/release-notes/2026-06.md).
+Dark mode was introduced with the [June 2026 release](https://docs.timecockpit.com/doc/release-notes/2026-06.md); the choice between **Light**, **Dark**, and **System** came with the [November 2026 release](https://docs.timecockpit.com/doc/release-notes/2026-11.md).
 
 ---
 
@@ -8946,6 +8904,122 @@ The Profile feature is particularly useful in the following scenarios:
 2. **Efficient Workflow:** Profiles enable users to switch between different views quickly, depending on the task at hand, improving workflow efficiency.
 
 3. **Consistency Across Devices:** Since profiles are stored in the database, users can access their customized list settings from any device or browser, ensuring a consistent experience.
+
+## Related Pages
+
+- [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md): group a list, collapse and expand groups or a whole grouping level
+- [Dates in List Filters](https://docs.timecockpit.com/doc/ui/lists/filter-dates.md): quick picks and dynamic dates that a profile keeps current
+
+---
+
+# Grouping Lists - Group, Collapse and Expand
+
+Source: https://docs.timecockpit.com/doc/ui/lists/grouping.md
+
+# Grouping Lists
+
+Grouping sorts the rows of a list into groups with a header row per value, for example all timesheets per project and, below that, per customer. Each header row shows how many rows the group contains.
+
+## Group a List
+
+- Open the column menu of a column (the three dots in the column header) and choose **Group by** followed by the column name. For date columns the entry has a submenu: **Group by displayed value**, **Group by year**, **Group by month**, **Group by week** or **Group by day**.
+- Or drag a column header into the grouping area above the list.
+
+Every grouping level appears as an entry in the grouping area, in the order of the levels. Group by further columns to add levels below the existing ones. The **x** of an entry removes that grouping.
+
+## Collapse and Expand
+
+| What | How |
+|------|-----|
+| One group | Click the arrow in its header row. |
+| All groups of one level | In the grouping area, use the double arrows of the level's entry: **Collapse all ... groups** shows the groups of that level closed, **Expand all ... groups** opens them while the levels below stay closed. Levels above stay open. |
+| All groups of the level of a header row | Open the menu of a header row (the menu icon in the header row, or a right-click on it) and choose **Collapse all group items** or **Expand all group items**. |
+
+The menu of a header row also contains **Move group up**, **Move group down** and **Remove group** to change the order of the grouping levels or to remove one.
+
+The double arrows in the grouping area can also be used with the keyboard: move the focus to them with **Tab** and press **Enter** or **Space**.
+
+## Select the Rows of a Group
+
+Each header row has a checkbox between the arrow and the menu icon. It selects all rows of the group at once, also when the group is collapsed, and includes the rows of the groups below it. Rows you selected in other groups stay selected, so you can select several groups one after the other and then run an action on all of them. Click the checkbox of a fully selected group again to clear the selection of that group only.
+
+When rows of a group are selected, the number in the header row puts the selected count in front of the group's size, for example **4/9**, highlighted in the accent color, and the checkbox shows a dash while only some of them are selected. That way a collapsed group shows how much of the selection it holds. The list's selection count above the list shows the total.
+
+The menu of a header row offers the same as **Select all ... items** and **Clear group selection**.
+
+Like the checkbox in the column header, the group checkbox selects the rows the list has loaded. If the list shows **load all**, load all rows first to include the rest.
+
+## Keep the Layout
+
+The grouping and how far the groups are expanded belong to the list's layout. To get them back the next time you open the list, save them in a list profile. See [List Profiles](https://docs.timecockpit.com/doc/ui/lists/entityview-profiles.md).
+
+## Related Pages
+
+- [List Profiles](https://docs.timecockpit.com/doc/ui/lists/entityview-profiles.md)
+
+---
+
+# Dates in List Filters - Quick Picks and Dynamic Dates
+
+Source: https://docs.timecockpit.com/doc/ui/lists/filter-dates.md
+
+# Dates in List Filters
+
+Every date field in the time cockpit web client opens a calendar. Below the calendar, quick picks set common dates with one click. In the filter of a list these dates are dynamic: a [list profile](https://docs.timecockpit.com/doc/ui/lists/entityview-profiles.md) saves the rule instead of the date, so the filter is recalculated every time the list opens.
+
+## Quick Picks
+
+The quick picks of a field that selects a day stand in two columns, the earlier date of each pair on the left:
+
+| Left | Right |
+|------|-------|
+| **Yesterday** | **Today** |
+| **Start of week** | **End of week** |
+| **Start of month** | **End of month** |
+| **Start of last month** | **End of last month** |
+
+- Below each name, the quick pick shows the weekday and date it stands for today.
+- The first day of the week follows your culture settings.
+- **Today**, **End of month**, and **End of last month** show the key that sets the same date in the date field: **T**, **N**, and **P** (see [Keyboard](#keyboard)).
+- A field that selects a month offers **Last month** and **This month**, a field that selects a year **Last year** and **This year**.
+- A quick pick whose date lies outside the range the field allows is disabled.
+- Outside list filters, for example in a form, a quick pick sets a fixed date.
+
+## Dynamic Dates in List Filters
+
+In the filter of a list the quick picks are titled **Dynamic date**. Choosing one sets a dynamic date:
+
+- The date field shows the date in italics with an fx icon after it. Its tooltip names the rule and today's date, for example "Dynamic: First day of last month (currently Thu, 10/1/2026)".
+- The chosen quick pick is marked with a check mark. Below the quick picks, a line says that the date is recalculated every time the list opens.
+- When you save a list profile, it saves the rule. A profile with **From** set to the first day of last month and **To** set to the last day of last month always shows the previous month.
+
+**Use fixed date** next to the title keeps the current date and removes the rule. Picking a day in the calendar or typing a date also replaces a dynamic date with a fixed one.
+
+## Custom Rule
+
+For other dynamic dates, expand **Custom rule** below the quick picks. It reads like a sentence: a reference point, an amount, a unit, and **before today** or **after today**. The reference points use the same words as the quick picks, plus **The exact day**, **Start of year**, and **End of year**. With an amount of 0, the direction does not apply and is disabled.
+
+| Dynamic date | Reference point | Amount and unit | Direction |
+|--------------|-----------------|-----------------|-----------|
+| 7 days ago | **The exact day** | 7 days | **before today** |
+| First day of the month three months ago | **Start of month** | 3 months | **before today** |
+| Last day of next week | **End of week** | 1 week | **after today** |
+
+The custom rule is available in list filter fields that select a day. It opens by itself when a filter holds a dynamic date that none of the quick picks stands for.
+
+If a field allows only a certain range and a custom rule or a shortcut key gives a date outside it today, the field turns red and its tooltip says "Today this dynamic date is outside the allowed range."
+
+## Keyboard
+
+- **Alt** + **Down** or **F4** in a date field opens and closes the calendar.
+- With the calendar open, **Tab** moves to the quick picks.
+- **Esc** closes the calendar and returns to the date field.
+- In a field that selects a day, **T** (or **C**) sets today, **N** the last day of this month, and **P** the last day of last month. In a list filter these keys set the same dynamic date as the quick pick that shows them; elsewhere they set a fixed date.
+
+## Related Pages
+
+- [List Profiles](https://docs.timecockpit.com/doc/ui/lists/entityview-profiles.md): save filters, columns, grouping, and sorting of a list
+- [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md): group a list, collapse and expand groups or a whole grouping level
 
 ---
 
@@ -9183,7 +9257,7 @@ Source: https://docs.timecockpit.com/doc/getting-started/installation-instructio
 
 # Installation Instructions	
 
-Download the latest installer for time cockpit from https://update.timecockpit.com/general/Setup.exe. The installation wizard helps you to check, if all prerequisites are installed. If there are missing prerequisites, the installer helps you to install the missing components.
+Download the latest installer for time cockpit from [Setup.exe](https://update.timecockpit.com/general/Setup.exe). The installation wizard helps you to check, if all prerequisites are installed. If there are missing prerequisites, the installer helps you to install the missing components.
 
 When you start time cockpit the first time the configuration wizard will guide you through the first steps to configure time cockpit.
 
@@ -14257,19 +14331,53 @@ For examples see example section in chapter [PlannedHoursOfWork](#plannedhoursof
 
 ## Overtime
 
-Use the function Overtime to calculate the overtime hours for a given user and effective date.
+Use the function Overtime to calculate the working time balance (overtime hours) of a user, either on an effective date or as its change within a time range.
+
+The function has two forms:
+
+```
+:Overtime(userUuid, effectiveDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+:Overtime(userUuid, startDate, endDate, includeWeights, includeLumpSumOvertime[, useLegacyOvertimeCalculation])
+```
+
+With five arguments, the type of the third argument decides the form: a date selects the time range form, a Boolean value the effective date form with `useLegacyOvertimeCalculation`.
 
 ### Parameters
 
 Parameter | Description
 --- | ---
 userUuid | ID of the user for which the function calculates the result.
-effectiveDate | Effective date for which the function calculates the result.
+effectiveDate | Effective date for which the function calculates the balance.
+startDate | First day of the time range (time range form only).
+endDate | Last day of the time range (time range form only).
 includeWeights | Indicating whether the function takes working time weights into account.
 includeLumpSumOvertime | Indicating whether the result should include the lump sum for overtime defined for the user.
+useLegacyOvertimeCalculation | Optional. `True` selects the previous calculation, `False` the current one. If you omit it, the current calculation is used.
 
 > [!NOTE]
 > You can assign a weight to a timesheet using the relation `APP_Timesheet.APP_WorkingTimeWeight`. You have to maintain the available weights in the entity `APP_WorkingTimeWeight`.
+
+### How the Balance Is Calculated
+
+The balance on an effective date starts at the last overtime correction of the user (or at zero) and applies the following months one after another. In a month with fewer actual hours than planned hours, the difference is subtracted. In a month with more actual hours than planned hours, the excess is handled as follows:
+
+- **Current calculation:** the excess first reduces a negative balance carried over from the previous months until it reaches zero. Only the remainder is absorbed by the lump sum overtime; what exceeds the lump sum is added to the balance.
+- **Previous calculation** (`useLegacyOvertimeCalculation = True`): the lump sum overtime always absorbs the excess first; what exceeds the lump sum is added to the balance. Every month is evaluated on its own, independent of the balance it starts from, which keeps the calculation simple, consistent and easy to retrace. With a negative balance, however, hours worked to reduce it are first absorbed by the lump sum, so the negative balance is reduced only by what exceeds the lump sum.
+
+The lump sum overtime is a threshold per month. For an effective date within a month, the month counts up to the effective date with its lump sum prorated by working days, so a balance within a month is an intermediate value.
+
+### Time Range Form
+
+With the current calculation, the time range form returns by definition the balance at `endDate` minus the balance on the day before `startDate`, both calculated as by the effective date form with the same arguments. Therefore:
+
+- an overtime correction that is effective within the range is included in the result,
+- ranges that start within a month add up: balance before the range plus the result of the range equals the balance at the end of the range.
+
+With the previous calculation, the range is self-contained: it is calculated from the months within it alone, starting from a balance of zero, so the balance before the range does not affect it. Overtime corrections within the range are not applied.
+
+### Overtime2
+
+`:Overtime2` takes the same arguments in both forms and returns the same values as `:Overtime`. `:Overtime` is substituted into the query before it is executed, so its arguments other than `userUuid` must be constants or query parameters. `:Overtime2` is evaluated in memory on the loaded rows, as the standard lists do with `Current.UserDetailUuid`.
 
 ### Examples
 
@@ -14281,6 +14389,17 @@ Select New With
 {
         .User = U,
         .Overtime = :Overtime(U.UserDetailUuid, #2011-12-31#, True, True)
+}
+```
+
+The following TCQL query shows the change of the balance in the first quarter of 2011, including overtime corrections effective in that quarter:
+
+```
+From U In UserDetail
+Select New With
+{
+        .User = U,
+        .OvertimeInPeriod = :Overtime(U.UserDetailUuid, #2011-01-01#, #2011-03-31#, True, True)
 }
 ```
 
@@ -16785,6 +16904,9 @@ An Entra administrator (or a user with the *Application Developer* role) perform
    > [!NOTE]
    > The time cockpit MCP API appears under *APIs my organization uses* only once its service principal exists in your tenant. If it is not listed, create it as described in [Make the time cockpit MCP API Available in Your Tenant](#make-the-time-cockpit-mcp-api-available-in-your-tenant).
 
+   > [!NOTE]
+   > Clients also request `offline_access` to receive a refresh token. If users in your tenant may not consent to apps themselves (admin consent workflow), add **Microsoft Graph → Delegated permissions → `offline_access`** to the same app registration and include it in the admin consent. Otherwise sign-in still ends in the approval workflow.
+
 5. For **Copilot Studio** and **ChatGPT** only: **Certificates & secrets → New client secret**. Note the secret value; it is entered in the Copilot Studio MCP wizard or in the ChatGPT **New App** dialog together with the client ID.
 
 6. Copy the **Application (client) ID** from the overview page. This is the `<client-id>` used on all client pages of this documentation.
@@ -16932,7 +17054,7 @@ Deploy it at tenant scope. The deploying account needs the *Application Administ
 az deployment tenant create --location westeurope --template-file application.bicep --parameters redirectUris="['http://localhost:64485/callback','https://claude.ai/api/mcp/auth_callback']" grantAdminConsent=true
 ```
 
-The output `applicationClientId` is the `<client-id>` for your users. Redirect URIs for hosted clients (platform **Web**) and client secrets for Copilot Studio are not covered by the template; add them in the portal afterwards. Re-running the deployment with the same `applicationUniqueName` updates the existing registration.
+The output `applicationClientId` is the `<client-id>` for your users. Redirect URIs for hosted clients (platform **Web**), client secrets for Copilot Studio, and the Microsoft Graph permission `offline_access` (needed with admin consent workflow, see step 4) are not covered by the template; add them in the portal afterwards. Re-running the deployment with the same `applicationUniqueName` updates the existing registration.
 
 ## Redirect URIs per Client
 
@@ -16968,7 +17090,7 @@ If your organization filters outbound traffic or uses Conditional Access with na
 
 | Message | Cause / solution |
 |---------|------------------|
-| *needs admin approval* during sign-in | Admin consent for the `mcp.access` permission has not been granted on your app registration. |
+| *needs admin approval* during sign-in | Admin consent for the `mcp.access` permission has not been granted on your app registration. If users may not consent to apps in your tenant, `offline_access` (Microsoft Graph, delegated) needs admin consent as well, see step 4. |
 | `does not support dynamic client registration` | The client has no client ID configured. Set your client ID as described on the client page. |
 | `AADSTS50011: redirect URI … does not match` | The redirect URI used by the client is not registered on your app registration. Compare with the table above; check the platform type (Mobile and desktop vs. Web). |
 | `AADSTS7000218` / *client assertion or secret required* | The app registration is treated as a confidential client. Set **Allow public client flows** to *Yes*, or register the redirect URI under *Mobile and desktop applications* instead of *Web*. |
@@ -17957,6 +18079,25 @@ After configuring a client, call the server's diagnostic tools in this order. De
 
 A prompt such as *"Call ping, get_environment, get_current_user and entra_whoami on the time cockpit server and summarize the result"* works in every client.
 
+## Sign-in Refused by time cockpit
+
+When time cockpit refuses the sign-in for your account, or for the tenant or sandbox you selected, the remote server lists only `ping` and `entra_whoami`. Both tool descriptions start with "Sign-in to time cockpit was refused:" and a message that names the reason. `ping` still answers; `entra_whoami` and every other tool return that message. The message ends with the error codes, for example `(error: invalid_grant, AmbiguousTenantMapping)`; include them when you contact support.
+
+The server remembers a refused sign-in for about 30 seconds, so after the configuration has been fixed, wait that long before you reconnect. A rejected Microsoft Entra sign-in (`InvalidSubjectToken`) is not remembered: signing in again takes effect at once.
+
+| Code | The message says | What to do |
+|------|------------------|------------|
+| `AmbiguousTenantMapping` | time cockpit found more than one tenant for your Microsoft Entra account | Select the tenant with the tenant [connection setting](https://docs.timecockpit.com/doc/mcp/overview.md#connection-settings-header-or-url-segment). Your administrator has the tenant ID. |
+| `NoTenantMapping` | time cockpit has no tenant set up for sign-in with your Microsoft Entra organization | Ask your time cockpit administrator to set up Microsoft Entra sign-in for your tenant. |
+| `RequestedTenantNotAllowed` | time cockpit cannot sign your Microsoft Entra account in to the tenant | Check the tenant ID in your configuration. The tenant must accept sign-ins from your Microsoft Entra organization. |
+| `InvalidRequestedTenantId` | the tenant setting is not a tenant ID | Use the tenant ID (a GUID), or leave the setting out. |
+| `UserNotAllowed` | time cockpit does not allow your user to sign in | Check that your Microsoft Entra account is linked to a time cockpit user. |
+| `UserInactive` | your time cockpit user is locked or inactive | Ask your time cockpit administrator to unlock or reactivate your user. |
+| `SandboxNotAllowed` | your time cockpit user is not allowed to use the sandbox environment | Ask your administrator for sandbox access, or connect without the sandbox setting. |
+| `UnknownSandboxEnvironment` | the sandbox setting does not name a sandbox environment | Use `test`, or leave the setting out to work in production. |
+| `InvalidSubjectToken` | time cockpit did not accept your Microsoft Entra sign-in | Sign in to the MCP server again in your client. If that does not help, contact your administrator. |
+| other codes | the MCP server's sign-in to time cockpit is misconfigured | Nothing to change on your side; contact your administrator or time cockpit support. |
+
 ## Missing Tools
 
 Missing tools are usually a matter of configuration:
@@ -18467,7 +18608,7 @@ The server publishes the connected tenant's model as MCP resources. Clients with
 | `timecockpit://datamodel` | Compact index of the live data model: entities with properties and relations, lists with columns, actions with permissions, trigger and validation summaries. Source code is left out to keep it small. |
 | `timecockpit://datamodel/lists/{listName}` | Full details of one list including its TCQL query or script source, columns and edit settings. |
 | `timecockpit://datamodel/actions/{actionName}` | Full details of one action including its IronPython source. Read-only model metadata: the action cannot be run through MCP. |
-| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source. |
+| `timecockpit://datamodel/entities/{entityName}/triggers/{triggerName}` | Full details of one trigger including its IronPython source and whether it is disabled. |
 | `timecockpit://currentUser` | The signed-in user (`APP_UserDetail`). |
 | `timecockpit://globalSettings` | The tenant's global settings (`APP_GlobalSettings`). |
 
@@ -18564,6 +18705,30 @@ To update a custom report, click **Download Report Definition** and proceed with
 
 ---
 
+# Release Notes December 2026
+
+Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
+
+# 📅 December 2026
+
+## ✨ Improvements
+
+- **Quick Picks and Dynamic Dates in Date Fields**  
+  Below the calendar of a date field, quick picks set yesterday, today, or the start or end of the week, the month or last month with one click, and show the date each one stands for today. In the filter of a list they set a dynamic date: the field shows an fx icon, its tooltip names the rule and the date it gives today, and a list profile saves the rule, so a profile for last month stays current. **Use fixed date** turns a dynamic date into a fixed one, and **Custom rule** builds other dynamic dates such as "7 days before today". **Alt** + **Down** or **F4** opens the calendar. See [Dates in List Filters](https://docs.timecockpit.com/doc/ui/lists/filter-dates.md).
+
+- **Select All Rows of a Group**  
+  In a grouped list, every header row has a checkbox that selects all rows of the group, also when the group is collapsed and including nested groups, without clearing the selection in other groups. A partly selected group shows a dash in its checkbox and the number of selected rows, for example **4/9**, in its header row. The menu of a header row offers **Select all ... items** and **Clear group selection** as well. See [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md#select-the-rows-of-a-group).
+
+## 🐛 Bug Fixes
+
+- **Switching Between the Day, Work Week and Week View Sticks**  
+  Switching the view of the time sheet calendar sometimes did not take: the toolbar did nothing, or the double-click on a day switched back on its own a moment later. A calendar that had once been too narrow for several days kept putting its own view back. The view you choose now stays. Where the calendar really is too narrow, one day at a time is all it shows: the week and work week views are greyed out and say why, and your chosen view comes back as soon as there is room for it. In the day heads of the week views, the deviation and the bar below it are no longer cut off in narrow columns. See [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md).
+
+- **Lists That Load on Open Wait for Preset Filter Values**  
+  A list that loads on open sometimes reported its filter as incomplete when a mandatory filter field selects its first entry by itself and that entry arrived late. The list now waits for such fields before it loads, and loads once a slow field has picked its value. A list that is not loaded now says why: it loads only on demand, its filter is incomplete or invalid, or checking the filter took too long. If checking the filter takes too long while the list already shows data, a notification says so; click **Apply Filter** to try again. Back-reference tabs on forms name the same reason in the tooltip of their row count.
+
+---
+
 # Release Notes November 2026
 
 Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
@@ -18572,11 +18737,44 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 
 ## ✨ Improvements
 
+- **New Colours and a Real Dark Mode**  
+  The web client takes on the colours of the time cockpit website: a navy menu bar, Harbor Blue for buttons, links and table headers, and calm, cool greys. The page is a dimmed white and the text a soft dark grey, which is easier on the eyes over a long working day. Dark mode now has colours of its own instead of inverting the page, so images, charts and timesheet colours look the same in both modes. Under **Appearance** in the user menu, choose **Light**, **Dark** or **System**; **System**, the default, follows the setting of your operating system.
+
+- **Calmer Motion**  
+  The **load all** button no longer flashes red and white; it is highlighted with a soft yellow tint instead. If your operating system is set to reduce motion, the web client switches animations and transitions off; loading indicators keep turning slowly.
+
+- **Lists, Forms and Dashboards in the New Design**  
+  The commands of a list and its full-text search now share one row below the filter: commands on the left, the number of items and the search field on the right. The search field is always visible. Forms have underlined tabs and a quiet action bar with the main action in blue. Dashboard widgets have a blue line under their title instead of a shadow.
+
+- **Calmer Time Sheet Calendar**  
+  The day headers of the Time Sheet Calendar are light with a blue line instead of a solid blue band; today is underlined. The text of a timesheet is dark or white, whichever reads better on its colour, so light formatting-profile colours such as yellow stay readable.
+
+- **Outlook Appointments Stay Visible**
+  Outlook appointments in the Time Sheet Calendar now have only an outline, while timesheets are filled, so the two are easy to tell apart. A timesheet no longer hides the appointment under it: the text moves to the free part of the appointment, and a fully booked appointment keeps a narrow strip at its right edge. Showing timesheets and appointments side by side remains available. See [Working With Outlook Appointments](https://docs.timecockpit.com/doc/timesheet-calendar/outlook-appointments.md).
+
+- **Clearer Text in Calendar Items**
+  The description of a timesheet or appointment now comes first; time and duration are smaller and lighter. An item with room for only one line shows its description and duration instead of the start and end time. Blocks of the **Proposal** lane show the topic and duration; the time remains in the tooltip.
+
 - **New Typeface**  
   The web client now uses Mulish, the typeface of the time cockpit website and time cockpit sidekick. Text is one step larger (13 instead of 12 pixels), and menus, headings, tabs, and dialog titles use sentence case instead of capital letters. In the timesheet calendar, the date, the day headers, and the start time and duration of timesheets are larger and bolder, so they stand out from the descriptions. Date and time fields in forms are wider, so the full date stays visible.
 
-- **Quick Notes in time cockpit sidekick (Early Preview)**  
-  time cockpit sidekick takes quick notes: a key combination (**Ctrl+Alt+N** by default) or **Note…** in the tray menu opens a small window over any application, in which you write down what you just did, for example at the end of a phone call. In the Time Sheet Calendar, the day view shows the notes in the new lane **Notes**, the week view marks them with small tabs next to the bookings, and both book a note with its text. A note that covers a time range becomes a draft in the bookings, marked **From a note**. See [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md).
+- **Search in the Signals Pane**  
+  The right pane of the Time Sheet Calendar can search all signals of the day from time cockpit sidekick: window titles, applications, file paths, keywords, Wi-Fi networks and AI sessions. A ruler shows when the matches occurred; with a selection you can search the selection or the whole day. The search replaces the search field of the keywords. See [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#searching-the-signals).
+
+- **Calmer Signals Pane**
+  The sections of the right pane now show at first what a booking needs, and the bars look the same everywhere: a thin bar in each row and at most one bar per section that shows a split. Colour stands for a project or an application only. **Window titles** and **Applications** are one section with the switch **By title** and **By application**, and **AI** shows the time per project, with the cost in the details. The sliders icon in the band of a section shows its details; **Ctrl** + mouse wheel changes how many rows a section shows. See [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#signals).
+
+- **Quick Notes in Every View**
+  Quick notes of time cockpit sidekick now stand at their time in every view of the Time Sheet Calendar, with their text and the colour of their context, instead of a small flag in the week view and a lane of their own in the day view. They follow the same rule as Outlook appointments: under a timesheet the text moves to the free part, and a fully covered note moves to the strip right of the timesheets. A click, **Enter** or **Space** opens the tooltip; a double-click, a double tap or **Shift** + **Enter** books. See [Quick Notes](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md#quick-notes).
+
+- **One Tooltip in the Calendar**
+  Timesheets, Outlook appointments and quick notes share one tooltip that says what it is, with the time, the duration and the whole text. It stays inside the window and closes when you scroll. Outlook appointments can now also be reached with the keyboard, a click or a key opens their tooltip at once, and a tap opens the tooltip of a timesheet on a touch screen. See [Tooltips](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md#tooltips).
+
+- **Collapse or Expand a Grouping Level in One Click**  
+  Each entry in the grouping area above a grouped list has two double arrows: **Collapse all ... groups** closes all groups of that level, **Expand all ... groups** opens them. The titles of group header rows now start at the left edge of the list instead of further in. See [Grouping Lists](https://docs.timecockpit.com/doc/ui/lists/grouping.md).
+
+- **sidekick for macOS Is Signed and Updates Itself**  
+  time cockpit sidekick for macOS now comes as an installer package that is signed by software architects and notarised by Apple, so macOS opens it without a warning, and it updates itself like the Windows version. If you use the earlier version from the disk image, just run the installer: the new version stops the old one at its first start, offers to move the old copy to the Trash, and your recorded data stays. See [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
 
 ## 🐛 Bug Fixes
 
@@ -18586,8 +18784,23 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-11.md
 - **Reverse Charge Note on Invoice PDFs**  
   Since the ZUGFeRD update, invoice PDFs showed the reverse charge note intended for customers outside the EU even when the country of the invoice is an EU member. The note matches the country again.
 
+- **Timesheets Created by AI Assistants**  
+  Through the local MCP server (`OnCockpit.Admin.exe --mcp`), creating a timesheet failed every time, and changing an object's relation through `create_object` or `update_object` could fail the same way. Both now work. When time cockpit rejects an object because a validation rule is not met, for example a booking on a closed project, both MCP servers return the rule's message and the fields it concerns (for example `APP_ProjectUuid`) instead of a generic error, so the assistant can tell you what to correct. The local MCP server now also labels entities and fields in your language, as the hosted server does. Invoices can now also be created through the local MCP server, and objects created or changed by an AI assistant get the same default values as in the web form on both servers, for example an invoice's address from the project's customer. See [AI Agents and the time cockpit MCP Server](https://docs.timecockpit.com/doc/mcp/overview.md).
+
+- **Refused Sign-ins at the Hosted MCP Server**  
+  When time cockpit refused the sign-in of an AI assistant, for example because the Microsoft Entra account maps to more than one tenant or the user may not use the sandbox, the hosted MCP server showed no tools and gave no reason. It now lists `ping` and `entra_whoami`, and the assistant receives a message that names the reason and an error code such as `AmbiguousTenantMapping`. See [Verify the Connection](https://docs.timecockpit.com/doc/mcp/verify-connection.md#sign-in-refused-by-time-cockpit).
+
 - **Valid ZUGFeRD Data**  
   The ZUGFeRD data embedded in invoice PDFs failed schema validation because the delivery block was missing. It now contains the delivery date (the end of the service period, otherwise its start, otherwise the invoice date), the e-mail addresses of the company and the customer as electronic addresses, and the payment terms "Zahlbar netto" when a payment target without discount is set.
+
+- **Smooth Scrolling After Clicking a Row**  
+  After a click on a row, a long list jerked back a little with every scroll step, and a grouped list could jump a page ahead. Lists now scroll smoothly.
+
+- **Grouped Lists Keep Their Column Widths**  
+  Grouping a list could widen all columns and push the rows further right with every grouping level. The columns keep their width.
+
+- **Overtime in a Period Adds Up With the Balances**  
+  The overtime of a period, for example the deviation in [Target-Actual Hours Comparison](https://docs.timecockpit.com/doc/reference/lists/target-actual-hours-comparison.md) or the overtime within the period in the [Time Report](https://docs.timecockpit.com/doc/reference/lists/time-report.md), did not always match the change of the working time balance: an overtime correction effective within the period was left out, and a period starting within a month could differ because the lump sum overtime applies to the month as a whole. The overtime of a period is now the balance at its end minus the balance on the day before it starts, so the balance at the beginning plus the overtime of the period always equals the balance at the end when all three are calculated with the same settings. With the current calculation, periods of whole months without overtime corrections show the same values as before. Compared with the previous calculation, a period that starts with a negative balance can still differ, because the current calculation refills a negative balance before the lump sum overtime absorbs the excess (see [How the Balance Is Calculated](https://docs.timecockpit.com/doc/tcql/functions-for-working-time-and-holidays.md#how-the-balance-is-calculated)). Queries that pass `useLegacyOvertimeCalculation = True` keep the previous, self-contained calculation of a period. The lists also calculate their overtime values faster. See [Overtime](https://docs.timecockpit.com/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
 
 ## 🛠 Notes for Customizers
 
@@ -18595,6 +18808,9 @@ These changes affect customers who maintain their own data model, lists, forms, 
 
 - **Chart Fonts in Dashboards**  
   Chart texts use the web client's font unless the dashboard configuration sets a `font`. Configurations that name `Roboto` now show the browser's default sans-serif font, because the web client no longer loads Roboto. Remove the `font` setting, or name `'Mulish Variable'` in it. See [Dashboards](https://docs.timecockpit.com/doc/data-model-customization/dashboard.md#chart).
+
+- **Default Colours of Charts and Formatting Profiles**  
+  Charts without their own `seriesColors` and formatting-profile values without a stored colour use a new set of ten colours that stay distinguishable for people with colour-vision deficiencies, with their own values in dark mode. Charts and timesheets that relied on the previous automatic colours therefore change colour. Colours that are stored explicitly stay as they are.
 
 - **Invoice Report Data**  
   The `InvoiceDetails` dataset that `APP_CreateInvoiceReportAction` passes to the invoice report contains the field `Unit` (unit name) again, plus `EInvoiceUnitCode`. `UnitCode` (the unit's code) stays available. The `Invoices` dataset contains `IsEuMember` again, next to `CustomerIsEuMember`. Customized copies of the invoice report that use `Fields!Unit` or `Fields!IsEuMember` work again without changes.
@@ -19193,21 +19409,3 @@ Source: https://docs.timecockpit.com/doc/release-notes/2024-12.md
 ## Bug Fixes & Minor Improvements
 
 - **Filter in Multi Select**: It is now possible to filter the content of multi select input fields.
-
----
-
-# Release Notes November 2024
-
-Source: https://docs.timecockpit.com/doc/release-notes/2024-11.md
-
-# November 2024
-
-## Bug Fixes & Minor Improvements
-
-- **PWA**: Support for tabs when using [time cockpit as a Progressive Web App (PWA)](https://docs.timecockpit.com/doc/getting-started/web-client.html#use-time-cockpit-as-progressive-web-app-pwa) to enhance navigation and multitasking.
-- **Drag & copy**: Enable moving or copying of time sheet entries onto signal bars to easily adjust entry durations.
-- **Insert time sheet entry**: Inserting a time sheet entry from the taskbar or with CTRL + I now considers selected signals in the signal area, automatically adjusting start and end times based on signal data.
-- **Enhanced footer**: Displays not only the total duration of selected time sheet entries but also the duration of any selected signals from the signal area.
-- **User switch**: A "Select Me" link is now available in the time sheet calendar, allowing users to quickly switch back to their own view after selecting another user.
-- **Importer update**: The importer now supports importing multiple files simultaneously.
-- **File system signal support**: The signal area now also displays signals from the file system, expanding tracking options.

@@ -31,6 +31,30 @@ Wenn Sie time cockpit mit Ihrem Office 365-Konto verbinden, erhalten Sie ein umf
 
 ![Doppelklick auf Termin](/doc/timesheet-calendar/images/wc-transform-appointments.png "Doppelklick auf Termin")
 
+## So erscheinen Termine im Kalender
+
+Zeitbuchungen sind mit einer Farbe gefüllt. Outlook-Termine haben nur eine Kontur, sodass Sie auf einen Blick sehen, was gebucht ist und was nicht.
+
+Standardmäßig liegen Zeitbuchungen über den Terminen derselben Zeit, und ein Termin bleibt sichtbar:
+
+* Liegt eine Zeitbuchung nur über einem Teil des Termins, rückt sein Text in den längsten freien Teil.
+* Liegen Zeitbuchungen über dem ganzen Termin, bleibt an seinem rechten Rand ein schmaler Streifen sichtbar. In der Wochenansicht zeigt der Streifen ein Kalendersymbol und bei längeren Terminen den Titel. In der breiten Tagesansicht zeigt er den ganzen Text.
+* Termine, die sich überschneiden und ganz verdeckt sind, teilen sich den Streifen, auch mit [Notizen](~/doc/sidekick/signale-im-kalender.md#notizen) von time cockpit sidekick.
+
+Der Streifen wird nur freigehalten, wenn an einem der angezeigten Tage ein Termin mit Beginn und Ende oder eine Notiz liegt.
+
+Um Zeitbuchungen und Termine stattdessen nebeneinander anzuzeigen, klicken Sie in der Symbolleiste des Zeiterfassungskalenders auf **Kalender Ansicht Office 365 ändern** oder drücken Sie Strg + Alt + O.
+
+## Mit einem Termin arbeiten
+
+| Was Sie tun | Was geschieht |
+|---|---|
+| Mit der Maus auf den Termin zeigen | Nach einem Moment öffnet sich sein [Tooltip](~/doc/zeiterfassungskalender/kalender.md#tooltips): die Zeit, die Dauer, der ganze Text und der Ort. |
+| Klicken oder tippen, oder **Eingabe** oder **Leertaste** auf dem Termin drücken | Der Tooltip öffnet sich sofort. Mit einer Taste rückt der Fokus auf den ersten Link im Tooltip; **Esc** oder **Tab** über den letzten Link hinaus schließt ihn und bringt den Fokus zurück auf den Termin. |
+| Doppelklicken oder zweimal tippen, **Umschalt** + **Eingabe** auf dem Termin drücken oder **Buchen** im Tooltip klicken | Das Formular für eine neue Zeitbuchung öffnet sich mit Text, Zeit und Ort des Termins. |
+| **Kalendereintrag öffnen** im Tooltip klicken | Der Termin öffnet sich in Outlook. |
+| Auf den Termin drücken und ziehen | Eine neue Zeitbuchung wird gezogen, wie im freien Raster. |
+
 <!-- > [!NOTE]
 If you are not using Microsoft Office Outlook to manage your appointments, time cockpit cannot display your appointments at the moment.
 

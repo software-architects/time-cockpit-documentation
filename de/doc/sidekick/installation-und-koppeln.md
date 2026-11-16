@@ -14,7 +14,7 @@ Die Einrichtung von time cockpit sidekick besteht aus drei Schritten: sidekick i
 
 sidekick läuft unter Windows 10 und 11 (x64) und unter macOS (Apple Silicon und Intel). Die macOS-Version wird noch getestet; ihre Einschränkungen stehen unter [Installation unter macOS](#installation-unter-macos).
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Für Windows herunterladen</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple Silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Für Windows herunterladen</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple Silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
 
 ### Installation unter Windows
 
@@ -28,18 +28,21 @@ Das Schließen des Fensters beendet sidekick nicht; sidekick zeichnet im Hinterg
 ### Installation unter macOS
 
 > [!NOTE]
-> Die macOS-Version wird noch getestet. Anders als die Windows-Version ist sie nicht signiert und aktualisiert sich nicht selbst.
+> Die macOS-Version wird noch getestet.
 
-1. Laden Sie das Disk-Image für Ihren Mac herunter: [Apple Silicon](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-arm64.dmg) (M1 und neuer) oder [Intel](https://www.timecockpit.com/download/sidekick/timecockpit-sidekick-mac-x64.dmg). Welchen Chip Ihr Mac hat, zeigt **Über diesen Mac** im Apple-Menü.
-2. Öffnen Sie die heruntergeladene `.dmg`-Datei und ziehen Sie **time cockpit sidekick** in den Ordner **Programme**.
-3. Starten Sie sidekick aus dem Ordner **Programme**. Weil die App nicht signiert ist, blockiert macOS den ersten Start. Öffnen Sie **Systemeinstellungen** > **Datenschutz & Sicherheit**, klicken Sie neben dem Hinweis zu time cockpit sidekick auf **Dennoch öffnen** und bestätigen Sie mit **Öffnen**. Unter älteren macOS-Versionen können Sie stattdessen bei gedrückter Ctrl-Taste auf die App klicken und **Öffnen** wählen.
+1. Laden Sie das Installationspaket für Ihren Mac herunter: [Apple Silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 und neuer) oder [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). Welchen Chip Ihr Mac hat, zeigt **Über diesen Mac** im Apple-Menü.
+2. Öffnen Sie die heruntergeladene `.pkg`-Datei und folgen Sie dem Installationsprogramm. Das Installationspaket ist von software architects signiert und von Apple geprüft (notarisiert), deshalb öffnet macOS es ohne Warnung. Es installiert **time cockpit sidekick** in den Ordner **Programme**.
+3. Starten Sie sidekick aus dem Ordner **Programme**, falls das Installationsprogramm es nicht schon gestartet hat.
 4. sidekick läuft in der Menüleiste, nicht im Dock. Klicken Sie auf sein Symbol in der Menüleiste, um sein Menü zu öffnen.
 5. Damit sidekick Fenstertitel aufzeichnen kann, erlauben Sie sidekick die Bildschirmaufnahme unter **Systemeinstellungen** > **Datenschutz & Sicherheit** > **Bildschirmaufnahme**, beenden Sie sidekick und starten Sie es neu. Ohne diese Berechtigung zeichnet sidekick auf, welche Anwendung im Vordergrund war, aber keine Fenstertitel. sidekick macht keine Bildschirmfotos.
 
+Wenn Sie sidekick aus dem früheren Disk-Image (`.dmg`) installiert haben, können Sie das Installationsprogramm gleich ausführen: Beim ersten Start beendet die neue Version die alte, und Ihre aufgezeichneten Daten bleiben erhalten. Liegt noch eine Kopie der früheren Version auf Ihrem Mac, nennt sidekick sie in einem Band oben im Fenster; **In den Papierkorb legen** entfernt sie, **Später** fragt beim nächsten Start erneut. Entfernen Sie sie: Sie aktualisiert sich nicht und kann bei der Anmeldung statt der neuen Version starten.
+
+Nach dem Wechsel fragt macOS einmal erneut nach der Bildschirmaufnahme und, für WLAN-Namen, nach den Ortungsdiensten, und den Autostart müssen Sie eventuell wieder einschalten. Fragt **Frag deine KI** erneut nach Ihrem API-Schlüssel, hat der Schlüsselbund den gespeicherten Schlüssel nicht an die neue Version freigegeben; geben Sie ihn noch einmal ein.
+
 Einschränkungen der macOS-Version:
 
-- Keine automatischen Updates. Zum Aktualisieren laden Sie das Disk-Image erneut herunter und ersetzen die App im Ordner **Programme**.
-- Der Autostart funktioniert bei der nicht signierten App möglicherweise nicht zuverlässig. Wenn sidekick nach der Anmeldung nicht läuft, starten Sie es aus dem Ordner **Programme**.
+- Der Autostart ist nach der Installation ausgeschaltet. Damit sidekick bei der Anmeldung startet, schalten Sie **Mit dem Betriebssystem starten** ein (siehe [Autostart und Updates](#autostart-und-updates)).
 - macOS verrät nicht, welche Anwendung das Mikrofon benutzt. sidekick zeichnet auf, dass das Mikrofon in Gebrauch war, und nennt die Besprechungsanwendung, deren Fenster zu dieser Zeit im Vordergrund war, falls es eine gab.
 - Seit macOS 14.4 erhalten nur Apps mit Zugriff auf die Ortungsdienste WLAN-Namen. Ohne diesen Zugriff zeichnet sidekick keine WLAN-Namen auf.
 - Die Daten werden in `~/Library/Application Support/timecockpit-sidekick` gespeichert.
@@ -47,7 +50,7 @@ Einschränkungen der macOS-Version:
 ### Autostart und Updates
 
 - Der Autostart ist die Einstellung **Mit dem Betriebssystem starten** in sidekick unter **Einstellungen** im Bereich **Aufbewahrung und Start**.
-- Unter Windows aktualisiert sich sidekick selbst. Es sucht eine Minute nach dem Start und danach alle vier Stunden nach einer neuen Version und lädt eine neue Version im Hintergrund herunter. Das Menü des Symbols im Infobereich bietet dann **Update auf … installieren und neu starten** an; sonst wird das Update beim nächsten Start installiert. Der Bereich **Version und Updates** in den Einstellungen zeigt den aktuellen Stand.
+- sidekick aktualisiert sich unter Windows und macOS selbst. Es sucht eine Minute nach dem Start und danach alle vier Stunden nach einer neuen Version und lädt eine neue Version im Hintergrund herunter. Das Menü des sidekick-Symbols (unter Windows im Infobereich, unter macOS in der Menüleiste) bietet dann **Update auf … installieren und neu starten** an; sonst wird das Update beim nächsten Start installiert. Der Bereich **Version und Updates** in den Einstellungen zeigt den aktuellen Stand.
 
 ## sidekick mit dem Kalender koppeln
 
@@ -117,7 +120,7 @@ Während die Aufzeichnung pausiert, zeichnet sidekick weiterhin auf, ob der Rech
 
 Öffnen Sie in sidekick den Reiter **Koppeln**. Klicken Sie unter **Gekoppelte Kalender** neben dem Kalender auf **Widerrufen**. Der Kalender kann danach nichts mehr lesen.
 
-Um allen Kalendern das Lesen zu verbieten, öffnen Sie in sidekick **Einstellungen** und deaktivieren Sie im Bereich **Verbindung zum Kalender** die Option **Gekoppelte Kalender dürfen lesen**.
+Um allen Kalendern das Lesen zu verbieten, öffnen Sie in sidekick **Einstellungen** und deaktivieren Sie im Bereich **Verbindung zum Kalender** die Option **Gekoppelte Kalender dürfen lesen und Farben festlegen**.
 
 ## sidekick deinstallieren
 

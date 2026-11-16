@@ -5,7 +5,7 @@ en_page: doc/getting-started/installation-instructions.md
 ---
 # Installationsanleitung
 
-Laden Sie das aktuelle Installationsprogramm für time cockpit von https://update.timecockpit.com/general/Setup.exe herunter. Der Installationsassistent hilft Ihnen zu prüfen, ob alle Voraussetzungen installiert sind. Fehlen Voraussetzungen, hilft Ihnen das Installationsprogramm, die fehlenden Komponenten zu installieren.
+Laden Sie das aktuelle Installationsprogramm für time cockpit von [Setup.exe](https://update.timecockpit.com/general/Setup.exe) herunter. Der Installationsassistent hilft Ihnen zu prüfen, ob alle Voraussetzungen installiert sind. Fehlen Voraussetzungen, hilft Ihnen das Installationsprogramm, die fehlenden Komponenten zu installieren.
 
 Wenn Sie time cockpit zum ersten Mal starten, führt Sie der Konfigurationsassistent durch die ersten Schritte der Konfiguration.
 

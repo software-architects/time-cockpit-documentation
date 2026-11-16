@@ -37,13 +37,14 @@ This list is typically relevant for:
 | Target Hours | `PlannedHoursOfWork` | Planned hours for the period | Calculated with the standard planned-hours function without overtime lump sum |
 | Target Hours Including Overtime | `PlannedHoursOfWorkIncludingLumpSumOvertime` | Planned hours including monthly overtime lump sum | Calculated with the standard planned-hours function including lump-sum overtime |
 | Actual Hours | `ActualHoursOfWork` | Actual worked hours for the period | Calculated with the standard actual-hours function and the selected weight setting |
-| Deviation | `Deviation` | Difference between target and actual | Calculated with the standard overtime function for the selected period |
+| Deviation | `Deviation` | Change of the working time balance in the period | Calculated with the time range form of the standard overtime function, including lump sum overtime: the balance at the end date minus the balance on the day before the start date. With the current overtime calculation it includes an overtime correction effective within the period. |
 | Deviation % | derived `DataBarCell` | Relative deviation | For negative deviation, the list compares it with target hours. For positive deviation, it compares it with target hours including overtime. |
 
 ## Notes
 
 - This list is period-based. If you need a single-date snapshot, use [Overtime per Effective Date](overtime-per-effective-date.md).
 - The actual-hours value can change depending on whether working-time weights are included.
+- The deviation is not simply actual minus target hours: the lump sum overtime is taken into account and, with the current overtime calculation, so are a negative balance from earlier months, which is refilled first, and overtime corrections within the period. See [Overtime](~/doc/tcql/functions-for-working-time-and-holidays.md#overtime).
 - Hidden users are excluded unless the corresponding filter is enabled.
 
 ## Related Pages
