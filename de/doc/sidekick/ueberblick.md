@@ -33,7 +33,7 @@ Was sidekick nie aufzeichnet, wo die Daten gespeichert werden und wie Sie sie l�
 
 ## Notizen
 
-Für das, was kein Signal hinterlässt, zum Beispiel ein Telefonat, nimmt sidekick Notizen auf: Eine Tastenkombination öffnet ein kleines Fenster über jeder Anwendung, Sie tippen, was Sie gerade getan haben, und sidekick behält die Notiz mit ihrer Zeit. Der Kalender zeigt Ihre Notizen neben den Signalen und macht aus einer Notiz, die einen Zeitraum abdeckt, einen Buchungsentwurf. Siehe [Notizen mit sidekick](~/doc/sidekick/notizen.md).
+Für das, was kein Signal hinterlässt, zum Beispiel ein Telefonat, nimmt sidekick Notizen auf: Eine Tastenkombination öffnet ein kleines Fenster über jeder Anwendung, Sie tippen, woran Sie arbeiten, und sidekick behält die Notiz mit ihrer Zeit. Eine Notiz kann wie eine Stoppuhr laufen, bis Sie sie beenden. Der Kalender zeigt Ihre Notizen in jeder Ansicht, bucht sie mit ihrem Text und schlägt eine Notiz mit Dauer als Zeitbuchung vor. Siehe [Notizen mit sidekick](~/doc/sidekick/notizen.md).
 
 ## sidekick und der klassische Signal Tracker
 

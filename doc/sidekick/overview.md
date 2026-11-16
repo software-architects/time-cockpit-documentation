@@ -32,7 +32,7 @@ What sidekick never records, where the data is stored and how to delete it is de
 
 ## Quick Notes
 
-For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you just did, and sidekick keeps the note with its time. The calendar shows your notes next to the signals and turns a note that covers a time range into a booking draft. See [Quick Notes with sidekick](notes.md).
+For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you are working on, and sidekick keeps the note with its time. A note can run like a timer until you end it. The calendar shows your notes in every view, books them with their text and proposes a note with a duration as a booking. See [Quick Notes with sidekick](notes.md).
 
 ## sidekick and the Classic Signal Tracker
 
