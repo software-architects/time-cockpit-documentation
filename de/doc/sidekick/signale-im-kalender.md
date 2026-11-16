@@ -47,7 +47,7 @@ Zeitbuchungen werden wie gewohnt im Raster des Kalenders angelegt, nie in den Sp
 
 ## Notizen
 
-Eine Notiz ist ein kurzer Text, den Sie in sidekick schreiben, standardmäßig mit **Strg** + **Alt** + **N** (**⌘⌥N** unter macOS). Der Kalender zeigt sie in jeder Ansicht zu ihrer Zeit. Eine Notiz ist eine Information wie ein Termin: Sie muss nicht zu einer Zeitbuchung werden, und nichts kennzeichnet sie als gebucht.
+Eine Notiz ist ein kurzer Text, den Sie in sidekick schreiben, standardmäßig mit **Strg** + **Alt** + **N** (**⌘⌥N** unter macOS); wie Sie Notizen schreiben, beenden und bearbeiten, beschreibt [Notizen mit sidekick](~/doc/sidekick/notizen.md). Der Kalender zeigt sie in jeder Ansicht zu ihrer Zeit. Eine Notiz ist eine Information wie ein Termin: Sie muss nicht zu einer Zeitbuchung werden, und nichts kennzeichnet sie als gebucht.
 
 - Eine Notiz hat eine Kontur in der Farbe ihres Kontexts auf leicht getöntem Grund, eine Notiz ohne Kontext ist hellgelb.
 - Liegt eine Zeitbuchung über einem Teil der Notiz, rückt ihr Text in den freien Teil. Liegen Zeitbuchungen über der ganzen Notiz, rückt sie in den schmalen Streifen rechts der Zeitbuchungen, in dem auch [Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md#so-erscheinen-termine-im-kalender) stehen.
@@ -98,6 +98,8 @@ Der Vorschlag lernt aus Ihren Buchungen der letzten 30 Tage und braucht eine akt
 
 Ein Block der Spur **Vorschlag** lässt sich auch mit einem Doppelklick buchen. Fand ein Office 365 Termin statt, während das Mikrofon benutzt wurde, schlägt die Spur ihn als eigenen Block mit dem Betreff des Termins vor. **Termin ignorieren** im Tooltip eines solchen Blocks schlägt ihn nicht mehr vor; ignorierte Termine stehen im Reiter **Vorschlag** unter **Ignorierte Termine**, wo Sie sie wieder vorschlagen lassen können.
 
+Eine [Notiz](#notizen) mit Dauer, oder die laufende Notiz bis jetzt, ist ein eigener Block in der Spur **Vorschlag**, benannt nach der Notiz. In ihrem Zeitraum hat die Notiz Vorrang vor den anderen Signalen. Notizen ohne Dauer werden kein Vorschlag.
+
 ## Zeiten markieren
 
 - Klicken Sie im rechten Bereich auf ein Schlagwort, eine Datei, eine Anwendung oder einen anderen Eintrag, um im Kalender zu markieren, wann er vorkam. **Esc** hebt die Markierung auf.
@@ -121,4 +123,5 @@ Solange heute im Kalender sichtbar ist, werden die Signale jede Minute neu gelad
 
 - [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md)
 - [time cockpit sidekick](~/doc/sidekick/ueberblick.md)
+- [Notizen mit sidekick](~/doc/sidekick/notizen.md)
 - [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md)

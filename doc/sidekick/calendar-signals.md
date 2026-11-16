@@ -46,7 +46,7 @@ Bookings are created on the calendar grid as usual, never in the lanes.
 
 ## Quick Notes
 
-A quick note is a short text you write in sidekick, by default with **Ctrl** + **Alt** + **N** (**⌘⌥N** on macOS). The calendar shows it at its time in every view. A note is information, as an appointment is: it does not have to become a booking, and nothing marks it as booked.
+A quick note is a short text you write in sidekick, by default with **Ctrl** + **Alt** + **N** (**⌘⌥N** on macOS); how to write, end and edit notes is described in [Quick Notes with sidekick](notes.md). The calendar shows it at its time in every view. A note is information, as an appointment is: it does not have to become a booking, and nothing marks it as booked.
 
 - A note has an outline in the colour of its context on a lightly tinted ground, and a note without a context is light yellow.
 - If a timesheet covers part of a note, its text moves to the free part. If timesheets cover all of it, the note moves to the narrow strip right of the timesheets, where [Outlook appointments](~/doc/timesheet-calendar/outlook-appointments.md#how-appointments-appear-in-the-calendar) have theirs.
@@ -97,6 +97,8 @@ The proposal learns from your bookings of the last 30 days and needs an up-to-da
 
 A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
 
+A [quick note](#quick-notes) with a duration, or the running note up to now, is a block of its own in the **Proposal** lane, named after the note. In its time range, the note takes precedence over the other signals. Notes without a duration make no proposal.
+
 ## Marking Times
 
 - Click a keyword, a file, an application or another entry in the right pane to mark in the calendar when it occurred. **Esc** clears the marking.
@@ -120,4 +122,5 @@ While today is visible in the calendar, the signals are loaded again every minut
 
 - [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md)
 - [time cockpit sidekick](overview.md)
+- [Quick Notes with sidekick](notes.md)
 - [sidekick Privacy and Data](privacy-and-data.md)
