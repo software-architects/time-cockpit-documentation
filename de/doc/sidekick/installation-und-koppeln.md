@@ -115,7 +115,7 @@ Um später einen weiteren Browser zu koppeln, öffnen Sie den Kalender in diesem
 
 ### Manuell koppeln mit Adresse und Token
 
-Verwenden Sie das manuelle Koppeln in Safari und mit einer Version von sidekick, die noch nicht per Klick koppeln kann. In den Einstellungen des Kalenders und im Reiter **Koppeln** von sidekick ist es unter **Manuell koppeln mit Adresse und Token** eingeklappt.
+Verwenden Sie das manuelle Koppeln mit einer Version von sidekick, die noch nicht per Klick koppeln kann. In den Einstellungen des Kalenders und im Reiter **Koppeln** von sidekick ist es unter **Manuell koppeln mit Adresse und Token** eingeklappt.
 
 #### In sidekick: Token erstellen
 

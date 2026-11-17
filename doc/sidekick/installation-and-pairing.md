@@ -114,7 +114,7 @@ To pair another browser later, open the calendar in that browser and click **Pai
 
 ### Pair Manually With Address and Token
 
-Use the manual pairing in Safari and with a version of sidekick that cannot pair in one click yet. In the calendar settings and in the tab **Pairing** of sidekick, it is folded under **Pair manually with address and token**.
+Use the manual pairing with a version of sidekick that cannot pair in one click yet. In the calendar settings and in the tab **Pairing** of sidekick, it is folded under **Pair manually with address and token**.
 
 #### In sidekick: Create a Token
 
