@@ -78,12 +78,15 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
 - Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- A token comes into being only by a click on **Allow** in sidekick, when the calendar asks to pair, or in the manual pairing in the tab **Pairing**. Nothing outside sidekick can create one without that click.
+- The address shown in the question to pair is the one your browser sends with it, that is, the address of the page that asks. A web page cannot ask in the name of another address, and only the time cockpit addresses that sidekick knows can ask at all.
+- The calendar picks up the token once. A token that the calendar does not pick up within a minute after **Allow** is revoked again, and a question that nobody answers expires after two minutes.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
 - Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
 - The calendar reads your notes in the same way as the signals, but never changes or deletes them. Notes are edited and deleted only in sidekick.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
 - A paired calendar can change one thing in sidekick: the colour of a workspace. It cannot change or delete signals, settings or anything else.
-- To stop every calendar from reading, clear **Paired calendars may read and pin colours** under **Settings** in the area **Connection to the calendar**.
+- To stop every calendar from reading, clear **Paired calendars may read** under **Paired calendars** in the tab **Pairing**.
 
 ## Controlling What Is Recorded
 
