@@ -6,7 +6,7 @@ en_page: doc/sidekick/privacy-and-data.md
 # Datenschutz und Daten in sidekick
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur in der Preview-Umgebung (`https://web-preview.timecockpit.com`) und im Release Candidate (RC, unter `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält sie dort. Diese Seite beschreibt genau, was aufgezeichnet wird, was nie aufgezeichnet wird, wo die Daten gespeichert werden, wer sie lesen kann und wo der Schutz endet.
 
@@ -38,6 +38,20 @@ Fenstertitel, Dateipfade und Commit-Nachrichten können viel über Ihre Arbeit v
 - Jede Art von Ton. Das Mikrofonsignal sagt nur, welche Anwendung das Mikrofon geöffnet hatte. sidekick öffnet keinen Audiostream.
 - Die BSSID, MAC-Adresse oder eine andere Hardware-Adresse eines WLANs. Aufgezeichnet werden nur Netzwerknamen.
 - Den Text Ihrer Prompts an Claude Code und Codex. Die einzige Ausnahme ist der Name der Session: sidekick verwendet den Titel, den Claude Code für eine Session schreibt, und wenn es keinen gibt (bei Codex immer), die ersten 80 Zeichen des ersten Prompts.
+
+Der Reiter **Agenten** zeigt mehr von Ihren Claude-Code- und Codex-Sessions, solange er offen ist, zeichnet davon aber nichts auf; siehe [Der Reiter Agenten](#der-reiter-agenten).
+
+## Der Reiter Agenten
+
+Der Reiter [Agenten](~/doc/sidekick/agenten.md) zeigt Ihre Claude-Code- und Codex-Sessions danach, wer am Zug ist. Er ist keine Signalquelle:
+
+- Er liest die Session-Dateien von Claude Code und Codex live, solange der Reiter angezeigt wird. Nichts davon wird in der Datenbank von sidekick gespeichert, im Zeiterfassungskalender angezeigt, in die Nutzungsdaten aufgenommen oder irgendwohin gesendet.
+- Er zeigt Inhalte, die die Tagesansicht nicht zeigt: die letzte Nachricht des Agenten, seine Fragen und den Anfang der Befehle und anderen Werkzeugaufrufe, die er ausführt. Das gilt auch, wenn Sie in den Einstellungen bei **Name einer Session** die Option **Nur der Arbeitsbereich** gewählt haben, denn diese Einstellung regelt nur, was sidekick speichert.
+- Werkzeugergebnisse und die Überlegungen des Agenten werden nie angezeigt.
+- Ein Ziel eines Werkzeugaufrufs, das nach Zugangsdaten aussieht, zum Beispiel ein Schlüssel oder eine URL mit Benutzernamen, wird durch `[…]` ersetzt. Dieser Filter arbeitet nach bestem Bemühen und ist keine Garantie. Fragen erscheinen so, wie der Agent sie geschrieben hat; ausgeblendet werden sie nur, wo sie selbst wie Zugangsdaten aussehen.
+- sidekick merkt sich in seinem eigenen Fenster auf diesem Rechner, welche Sessions Sie als erledigt markiert oder ausgeblendet haben und wie Sie den Reiter eingerichtet haben. Den Inhalt der Sessions speichert es nicht.
+
+Soll eine Quelle nicht im Reiter erscheinen, schalten Sie sie in sidekick unter **Einstellungen** aus: Ein ausgeschalteter Agent wird auch dort nicht gelesen.
 
 ## Wo die Daten gespeichert werden
 

@@ -86,6 +86,7 @@ Every page of the time cockpit documentation on one page, in the order of the na
   - [Installation & Pairing](sidekick/installation-and-pairing.md)
   - [Signals in the Calendar](sidekick/calendar-signals.md)
   - [Quick Notes](sidekick/notes.md)
+  - [Agents](sidekick/agents-tab.md)
   - [Privacy & Data](sidekick/privacy-and-data.md)
 - Project-Based Time Tracking
   - [Customer / Project / Task](project-time-tracking/customer-project-task.md)

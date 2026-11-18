@@ -5,7 +5,7 @@ description: time cockpit sidekick records work signals on your computer and sho
 # time cockpit sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
 
@@ -34,6 +34,10 @@ What sidekick never records, where the data is stored and how to delete it is de
 
 For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you are working on, and sidekick keeps the note with its time. A note can run like a timer until you end it. The calendar shows your notes in every view, books them with their text and proposes a note with a duration as a booking. See [Quick Notes with sidekick](notes.md).
 
+## Agents
+
+If you work with Claude Code or Codex, the tab **Agents** in sidekick shows your sessions on this computer by whose turn it is: which one asks you a question, which one has answered, which one stopped halfway and which ones are still working. You mark a session as done when you have dealt with it, and it comes back with the next answer. The tab reads the sessions live and stores nothing of them. See [The Agents Tab of sidekick](agents-tab.md).
+
 ## sidekick and the Classic Signal Tracker
 
 sidekick is the successor to the [classic signal tracker](~/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
@@ -49,11 +53,12 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version is still being tested and has some limitations; see [Install on macOS](installation-and-pairing.md#install-on-macos).
 - On Windows, no administrator rights: sidekick installs for your Windows user only.
-- The time cockpit web client in the preview environment (`https://web-preview.timecockpit.com`), opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
+- The time cockpit web client in the preview environment (`https://web-preview.timecockpit.com`) or in the release candidate (RC, at `https://web.timecockpit.com`), opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
 
 ## Next Steps
 
 - [Installing and Pairing sidekick](installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](calendar-signals.md): the activity band, the detail lanes and the right pane.
 - [Quick Notes with sidekick](notes.md): writing down what you just did and booking it from the calendar.
+- [The Agents Tab of sidekick](agents-tab.md): which Claude Code or Codex session waits for you.
 - [sidekick Privacy and Data](privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.

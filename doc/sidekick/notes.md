@@ -5,7 +5,7 @@ description: Write down what you are working on in a quick note with time cockpi
 # Quick Notes with sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Signals show when you worked and with which applications, but not always what the work was. A phone call, a conversation at the desk or a quick fix leaves few traces. With a quick note you write it down in a few words, without leaving the application you are in. sidekick keeps the note with its time, and the [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md) shows it next to the signals, so you can book it later with its text.
 
