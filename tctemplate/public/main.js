@@ -300,8 +300,8 @@ export default {
       const file = url.pathname.split('/').pop();
       if (path.includes('/download/sidekick/')) {
         if (file.includes('-win-')) return { product: 'sidekick', platform: 'windows', file };
-        if (file.includes('mac-arm64')) return { product: 'sidekick', platform: 'macos-arm64', file };
-        if (file.includes('mac-x64')) return { product: 'sidekick', platform: 'macos-x64', file };
+        if (file.includes('-osx-arm64-')) return { product: 'sidekick', platform: 'macos-arm64', file };
+        if (file.includes('-osx-x64-')) return { product: 'sidekick', platform: 'macos-x64', file };
         return null;
       }
       if (path.includes('update.timecockpit.com/general/') && url.pathname.endsWith('Setup.exe')) {
