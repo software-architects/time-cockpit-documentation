@@ -35,12 +35,14 @@ Both servers can be registered side by side under different names.
 - An MCP client that supports stdio servers.
 
 > [!NOTE]
-> The installer places a version-independent launcher at `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe`. It forwards all arguments to the currently installed version, so use this path in your client configuration. The versioned folders below (`app-<version>\`) change with every update.
+> OnCockpit Admin installs every version into its own folder (`%LOCALAPPDATA%\OnCockpitAdmin\app-<version>\`). On installation and on every update it sets the user environment variable `OnCockpitAdminBinary` to the full path of `OnCockpit.Admin.exe` in the current version's folder, so use this variable in your client configuration. Programs see a changed environment variable only when they are started after the change: after OnCockpit Admin has updated itself, restart your MCP client (and the terminal it runs in).
+>
+> Do not use `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe` outside the version folders. That launcher starts the current version and ends at once, so the MCP client loses track of the server process.
 
 ## Start Command
 
 ```powershell
-%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe --mcp [-c <configuration>]
+& $env:OnCockpitAdminBinary --mcp [-c <configuration>]
 ```
 
 | Option | Meaning |
@@ -59,15 +61,15 @@ You normally do not run this command by hand. The client starts the process when
 
 ## Register the Server
 
-The examples use a configuration named `test`. Replace `<you>` with your Windows user name where a full path is required; environment variables such as `%LOCALAPPDATA%` are not expanded inside JSON files.
+The examples use a configuration named `test`. Clients that cannot expand an environment variable in the command start the server through `cmd /v:on /c !OnCockpitAdminBinary!`. `cmd` reads the variable each time the server starts, and this form also works when the path contains spaces, for example in a user name such as `Jane Doe`.
 
 ### Claude Code
 
 ```powershell
-claude mcp add timecockpit-local --scope user -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+claude mcp add timecockpit-local --scope user -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
-Or in a project's `.mcp.json`, so the whole team gets the server. Use an environment variable for the path when team members have different user names:
+Or in a project's `.mcp.json`, so the whole team gets the server:
 
 ```json
 {
@@ -81,7 +83,7 @@ Or in a project's `.mcp.json`, so the whole team gets the server. Use an environ
 }
 ```
 
-Set `OnCockpitAdminBinary` as a user environment variable to `C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe`, then restart the terminal. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
+Restart the terminal after installing OnCockpit Admin so that it sees `OnCockpitAdminBinary`. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
 
 ### Visual Studio Code (Copilot agent mode)
 
@@ -103,11 +105,16 @@ VS Code shows the server in the Copilot Chat **MCP Servers** pane with **Start**
 
 ### OpenAI Codex
 
-```powershell
-codex mcp add timecockpit-local -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+Add the server to `%USERPROFILE%\.codex\config.toml`:
+
+```toml
+[mcp_servers.timecockpit-local]
+command = "cmd"
+args = ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
+env_vars = ["OnCockpitAdminBinary"]
 ```
 
-This writes a `[mcp_servers.timecockpit-local]` entry with `command` and `args` to `%USERPROFILE%\.codex\config.toml`.
+Codex starts MCP servers with a reduced environment and passes on only the variables listed in `env_vars`, so the entry must name `OnCockpitAdminBinary` there. `codex mcp add` cannot set `env_vars`, so edit the file directly.
 
 ### Claude Desktop
 
@@ -117,8 +124,8 @@ Claude Desktop starts stdio servers from `%APPDATA%\Claude\claude_desktop_config
 {
   "mcpServers": {
     "timecockpit-local": {
-      "command": "C:\\Users\\<you>\\AppData\\Local\\OnCockpitAdmin\\OnCockpit.Admin.exe",
-      "args": ["-c", "test", "--mcp"]
+      "command": "cmd",
+      "args": ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
     }
   }
 }
@@ -131,7 +138,7 @@ Ask the assistant to call `ping` and then to read the resource `timecockpit://cu
 If the server does not start:
 
 - Check the client's MCP log for the message from standard error. `Could not get a data context` means the configuration name is wrong or its stored sign-in no longer works. Start OnCockpit Admin normally, open the configuration, sign in and try again.
-- Make sure the path points to the launcher in `%LOCALAPPDATA%\OnCockpitAdmin\`, not to a removed `app-<version>` folder.
+- Run `echo %OnCockpitAdminBinary%` in a new command prompt. It must show `OnCockpit.Admin.exe` in an existing `app-<version>` folder. If it is empty or points to a removed folder, start OnCockpit Admin once and let it finish updating, then restart the MCP client.
 - Only one MCP session per configuration should run at a time. Model changes are not protected by optimistic locking; two scripts writing the model of the same tenant concurrently overwrite each other silently.
 
 ## Tools
