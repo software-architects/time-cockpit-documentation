@@ -25,7 +25,7 @@ These pages cover the standard daily workflows:
 - [Outlook Appointments](timesheet-calendar/outlook-appointments.md)
 - [Time Sheet Templates](timesheet-calendar/timesheet-templates.md)
 - [Working Time](employee-time-tracking/working-time.md)
-- [time cockpit sidekick](sidekick/overview.md) (early preview)
+- [time cockpit sidekick](sidekick/overview.md) (preview)
 
 ## Project Work
 

@@ -1,11 +1,11 @@
 ---
 title: Activity Tracking with time cockpit sidekick
-description: time cockpit sidekick records work signals on your computer and shows them in your own Time Sheet Calendar. Early preview.
+description: time cockpit sidekick records work signals on your computer and shows them in your own Time Sheet Calendar. Preview.
 ---
 # time cockpit sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
 

@@ -5,7 +5,7 @@ description: Download and install time cockpit sidekick on Windows or macOS, pai
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, create a token in sidekick, and enter the address and the token in the settings of the Time Sheet Calendar.
 

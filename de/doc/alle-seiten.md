@@ -82,7 +82,7 @@ Alle Seiten der time cockpit Dokumentation auf einer Seite, in der Reihenfolge d
   - [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)
   - [Buchungsvorschläge (Zeitbuchungen teilen)](~/doc/zeiterfassungskalender/buchungsvorschlaege-zeitbuchungen-teilen.md)
   - [Standardberechtigungen](~/doc/arbeitszeiterfassung/standardberechtigungen.md)
-- Aktivitäten aufzeichnen mit sidekick (Early Preview)
+- Aktivitäten aufzeichnen mit sidekick (Preview)
   - [Überblick](~/doc/sidekick/ueberblick.md)
   - [Installation & Koppeln](~/doc/sidekick/installation-und-koppeln.md)
   - [Signale im Kalender](~/doc/sidekick/signale-im-kalender.md)

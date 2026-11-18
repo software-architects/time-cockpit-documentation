@@ -1,12 +1,12 @@
 ---
 title: Aktivitäten aufzeichnen mit time cockpit sidekick
-description: time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und zeigt sie in Ihrem eigenen Zeiterfassungskalender. Early Preview.
+description: time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und zeigt sie in Ihrem eigenen Zeiterfassungskalender. Preview.
 en_page: doc/sidekick/overview.md
 ---
 # time cockpit sidekick
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick ist eine kleine Desktop-App, die im Infobereich von Windows oder in der macOS-Menüleiste läuft. Sie zeichnet Arbeitssignale auf Ihrem Rechner auf, zum Beispiel wann Sie aktiv waren, welche Anwendung im Vordergrund war und welche Git-Commits Sie gemacht haben, und behält sie auf diesem Rechner. Der Zeiterfassungskalender des time cockpit Web-Clients liest diese Signale von sidekick und zeigt sie neben Ihren Zeitbuchungen an. So buchen Sie Ihre Zeit nach dem, was tatsächlich passiert ist, statt den Tag aus dem Gedächtnis zu rekonstruieren.
 

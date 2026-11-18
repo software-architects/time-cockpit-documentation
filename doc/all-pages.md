@@ -81,7 +81,7 @@ Every page of the time cockpit documentation on one page, in the order of the na
   - [Time Sheet Templates](timesheet-calendar/timesheet-templates.md)
   - [Time Sheet Suggestions (Share Time Sheet)](timesheet-calendar/timesheet-suggestions-share-timesheet.md)
   - [Default Permissions](employee-time-tracking/default-permissions.md)
-- Activity Tracking with sidekick (Early Preview)
+- Activity Tracking with sidekick (Preview)
   - [Overview](sidekick/overview.md)
   - [Installation & Pairing](sidekick/installation-and-pairing.md)
   - [Signals in the Calendar](sidekick/calendar-signals.md)

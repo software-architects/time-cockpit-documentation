@@ -26,7 +26,7 @@ Diese Seiten beschreiben die üblichen täglichen Abläufe:
 - [Outlook-Termine](~/doc/zeiterfassungskalender/outlook-termine.md)
 - [Musterbuchungen](~/doc/zeiterfassungskalender/musterbuchungen.md)
 - [Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md)
-- [time cockpit sidekick](~/doc/sidekick/ueberblick.md) (Early Preview)
+- [time cockpit sidekick](~/doc/sidekick/ueberblick.md) (Preview)
 
 ## Projektarbeit
 

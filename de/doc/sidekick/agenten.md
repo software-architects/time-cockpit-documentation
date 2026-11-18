@@ -1,12 +1,12 @@
 ---
 title: Der Reiter Agenten in time cockpit sidekick
-description: Der Reiter Agenten in time cockpit sidekick ordnet Ihre Claude-Code- und Codex-Sessions danach, wer am Zug ist, und zeigt, was auf Sie wartet.
+description: Der Reiter Agenten in time cockpit sidekick ordnet Ihre Claude-Code- und Codex-Sessions danach, wer am Zug ist, und zeigt, was auf Sie wartet. Preview.
 en_page: doc/sidekick/agents.md
 ---
 # Der Reiter Agenten in sidekick
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Wenn Sie mit mehreren Claude-Code- oder Codex-Sessions gleichzeitig arbeiten, wartet oft eine davon auf Sie: Sie stellt eine Frage, sie ist fertig, oder sie ist mittendrin stehen geblieben. Der Reiter **Agenten** in sidekick zeigt die Sessions auf Ihrem Rechner danach, wer am Zug ist. So sehen Sie auf einen Blick, welche Session Sie braucht und welche noch arbeiten.
 

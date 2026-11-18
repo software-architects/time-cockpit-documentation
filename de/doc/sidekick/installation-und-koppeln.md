@@ -6,7 +6,7 @@ en_page: doc/sidekick/installation-and-pairing.md
 # sidekick installieren und koppeln
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Die Einrichtung von time cockpit sidekick besteht aus drei Schritten: sidekick installieren, in sidekick ein Token erstellen und Adresse und Token in den Einstellungen des Zeiterfassungskalenders eintragen.
 
