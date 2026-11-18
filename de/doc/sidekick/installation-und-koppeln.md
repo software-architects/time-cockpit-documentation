@@ -14,7 +14,23 @@ Die Einrichtung von time cockpit sidekick besteht aus drei Schritten: sidekick i
 
 sidekick läuft unter Windows 10 und 11 (x64) und unter macOS (Apple Silicon und Intel). Die Einschränkungen der macOS-Version stehen unter [Installation unter macOS](#installation-unter-macos).
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Für Windows herunterladen</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple Silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<div class="tc-dl" data-tc-download>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="mobile" hidden>sidekick läuft unter Windows und macOS. Laden Sie es auf dem Computer herunter, an dem Sie arbeiten.</p>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="desktop" hidden>sidekick läuft unter Windows und macOS. Linux-Rechner, auf denen Sie per SSH arbeiten, zeichnet es von Ihrem Windows-PC oder Mac aus mit auf.</p>
+<div class="tc-dl-top">
+<div>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i><span>Für Windows herunterladen<small>Windows 10 und 11 (x64)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Für Mac mit Apple Silicon herunterladen<small>macOS auf Apple Silicon (M1 und neuer)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Für Mac mit Intel-Prozessor herunterladen<small>macOS auf Intel-Prozessor</small></span></a>
+</div>
+<p class="tc-dl-side">Kostenlos und signiert. Unter Windows installiert sich sidekick nur für Ihren Benutzer und braucht keine Administratorrechte.</p>
+</div>
+<p class="tc-dl-others"><span data-mobile-label="Installer für Ihren Computer:">Weitere Versionen:</span>
+<a data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe" hidden>Windows</a>
+<a data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg">Mac mit Apple Silicon</a>
+<a data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg">Mac mit Intel-Prozessor</a></p>
+<p class="tc-dl-hint" data-dl-hint="mac" hidden>Welche Version passt? Im Apple-Menü unter <strong>Über diesen Mac</strong> steht bei Apple Silicon <strong>Chip</strong>, bei älteren Macs <strong>Prozessor</strong> mit Intel.</p>
+</div>
 
 ### Installation unter Windows
 
