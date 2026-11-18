@@ -16,6 +16,8 @@ Der Reiter liegt zwischen **Tagesansicht** und **Auswertungen**. Er liest die Se
 
 Der obere Teil des Reiters zeigt die Sessions, bei denen Sie am Zug sind. Jeder Tag mit einer solchen Session hat eine Spalte, heute steht rechts. Ein Tag ohne wartende Session hat keine Spalte. Passen nicht alle Tage nebeneinander, sammelt die Spalte **Älter** links die ältesten.
 
+![Der Reiter Agenten nach Zustand: Fragen, laufende Sessions und Antworten nach Tagen, heute rechts](images/agents-board.png "Der Reiter Agenten nach Zustand")
+
 Der Kopf einer Spalte nennt den Tag (**Heute**, **Gestern** oder den Wochentag mit Datum) und zählt seine Sessions. Jede Session ist eine Karte mit ihrer Zeit, ihrem Titel, ihrem Projekt und ihren Schaltflächen. Eine Frage steht in einem gelben Kasten, eine laufende Session zeigt ihre letzten Werkzeugaufrufe und eine fertige den Anfang ihrer Antwort mit **Ganz lesen**.
 
 Wartet nichts auf Sie, sagt der Bereich **Alles erledigt.** oder, solange noch Sessions laufen, „Gerade braucht dich keine Sitzung, die Agenten arbeiten.“
@@ -43,6 +45,8 @@ Der Umschalter **Nach Zustand | Nach Thema** rechts oben bestimmt, was die Zeile
 - **Nach Thema**: eine Zeile je Thema, alphabetisch geordnet, jede mit einer Linie in der Farbe des Themas. Die Karten zeigen dann wieder ihren Zustand, mit Wort und Farbe.
 
 Das Thema einer Session ist der Arbeitsbereich, zu dem ihr Ordner gehört, oder der Name des Ordners, in der Farbe, in der die **Tagesansicht** ihn am Tag der letzten Aktivität der Session zeichnet. Der Rahmen einer Karte und ihr Projekt haben dieselbe Farbe.
+
+![Der Reiter Agenten nach Thema: eine Zeile je Thema in den Farben der Tagesansicht](images/agents-board-topics.png "Der Reiter Agenten nach Thema")
 
 ## Sessions als erledigt markieren
 

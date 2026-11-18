@@ -70,6 +70,8 @@ Notizen werden nur in sidekick bearbeitet, beendet und gelöscht. Öffnen Sie de
 - **Bearbeiten** öffnet in der Zeile ein kleines Formular mit dem Text, **Beginn**, **Ende (optional)**, **Ohne Dauer** und **Arbeitsbereich**. **Strg+Enter** oder **Speichern** speichert die Änderungen, **Esc** oder **Abbrechen** verwirft sie.
 - **Löschen** fragt in der Zeile **Notiz löschen?**. Bestätigen Sie mit **Löschen**, oder behalten Sie die Notiz mit **Abbrechen**.
 
+![Der Abschnitt Notizen im rechten Bereich der Tagesansicht](images/day-view-notes.png "Der Abschnitt Notizen in der Tagesansicht")
+
 ## Tastenkombination
 
 Öffnen Sie in sidekick **Einstellungen** und in der Gruppe **Für alle Rechner** den Bereich **Notizen**.

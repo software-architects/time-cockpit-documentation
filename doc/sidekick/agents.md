@@ -15,6 +15,8 @@ The tab is between **Day view** and **Insights**. It reads the sessions live fro
 
 The upper part of the tab shows the sessions where it is your turn. Each day with such a session has a column, with today at the right. A day without a session that waits for you has no column. If there are more days than fit side by side, the oldest are gathered in the column **Older** at the left.
 
+![The tab Agents by state: questions, running sessions and answers by day, today at the right](images/agents-board.png "The tab Agents by state")
+
 The head of a column names the day (**Today**, **Yesterday** or the weekday with the date) and counts its sessions. Each session is a card with its time, its title, its project and its buttons. A question is shown in a yellow box, a running session with its latest tool calls, and a finished one with the start of its answer and **Read in full**.
 
 When nothing waits for you, the area says **All done.**, or, while sessions are still running, **No session needs you right now; the agents are working.**
@@ -42,6 +44,8 @@ The switch **By state | By topic** at the top right changes what the rows of the
 - **By topic**: one row per topic, in alphabetical order, each opened by a line in the colour of the topic. The cards then show their state again, with its word and colour.
 
 The topic of a session is the workspace its folder belongs to, or the name of the folder, in the colour the **Day view** draws it in on the day of the session's last activity. The frame of a card and its project are in the same colour.
+
+![The tab Agents by topic: one row per topic in the colours of the day view](images/agents-board-topics.png "The tab Agents by topic")
 
 ## Marking Sessions as Done
 

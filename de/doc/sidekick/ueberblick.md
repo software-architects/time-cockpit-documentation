@@ -12,6 +12,8 @@ time cockpit sidekick ist eine kleine Desktop-App, die im Infobereich von Window
 
 Die Signale erscheinen nur in Ihrem eigenen Kalender.
 
+![Die Tagesansicht von sidekick: was Sie je Thema buchen können, darüber die Wochenleiste](images/day-view-overview.png "Die Tagesansicht von sidekick")
+
 ## Was sidekick aufzeichnet
 
 Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien auf. Frühere Aktivität liest es einmalig ebenfalls ein: alle Claude-Code- und Codex-Sessions, die bereits auf Ihrem Rechner liegen, und die Commits der letzten 90 Tage jedes Git-Repositorys, das es findet. Jede Quelle außer der Präsenz lässt sich in sidekick unter **Einstellungen** abschalten.

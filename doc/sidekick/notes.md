@@ -69,6 +69,8 @@ Notes are edited, ended and deleted only in sidekick. Open the tab **Day view**:
 - **Edit** opens a small form in the row with the text, **Begin**, **End (optional)**, **No duration** and **Workspace**. **Ctrl+Enter** or **Save** saves the changes, **Esc** or **Cancel** discards them.
 - **Delete** asks **Delete this note?** in the row. Confirm with **Delete**, or keep the note with **Cancel**.
 
+![The section Notes in the right pane of the day view](images/day-view-notes.png "The section Notes in the day view")
+
 ## Key Combination
 
 In sidekick, open **Settings** and, in the group **For all machines**, the area **Notes**.

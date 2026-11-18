@@ -11,6 +11,8 @@ time cockpit sidekick is a small desktop app that runs in the notification area 
 
 The signals appear only in your own calendar.
 
+![The day view of sidekick: what you can book per topic, with the week bar above](images/day-view-overview.png "The day view of sidekick")
+
 ## What sidekick Records
 
 From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code and Codex sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
