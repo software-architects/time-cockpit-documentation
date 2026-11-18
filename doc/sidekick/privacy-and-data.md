@@ -38,6 +38,20 @@ Window titles, file paths and commit messages can say a lot about your work. Tha
 - The BSSID, MAC address or any other hardware address of a Wi-Fi network. Only network names are recorded.
 - The text of your prompts to Claude Code and Codex. The only exception is the session name: sidekick uses the title Claude Code writes for a session, and when there is none (always for Codex), the first 80 characters of the first prompt.
 
+The tab **Agents** shows more of your Claude Code and Codex sessions while it is open, but records none of it; see [The Agents Tab](#the-agents-tab).
+
+## The Agents Tab
+
+The tab [Agents](agents.md) shows your Claude Code and Codex sessions by whose turn it is. It is not a source of signals:
+
+- It reads the session files of Claude Code and Codex live, while the tab is on screen. Nothing of it is stored in the sidekick database, shown in the Time Sheet Calendar, included in the usage data or sent anywhere.
+- It shows content the day view does not: the agent's last message, its questions, and the start of the commands and other tool calls it runs. It does so also when you chose **Workspace only** for **Name of a session** in the settings, because that setting governs only what sidekick stores.
+- Tool results and the agent's reasoning are never shown.
+- A tool call target that looks like it contains a credential, for example a key or a URL with a user name, is replaced by `[…]`. This filter is best effort and not a guarantee. Questions are shown as the agent wrote them; they are hidden only where they look like a credential themselves.
+- sidekick remembers, in its own window on this computer, which sessions you marked as done or dismissed and how you arranged the tab. It does not store the content of the sessions.
+
+To keep a session source off the tab, switch it off in sidekick under **Settings**: a switched-off agent is not read there either.
+
 ## Where the Data Is Stored
 
 sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Library/Application Support/timecockpit-sidekick`). **Open data folder** in the menu of the tray icon opens this folder.

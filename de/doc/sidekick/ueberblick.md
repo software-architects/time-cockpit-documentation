@@ -35,6 +35,10 @@ Was sidekick nie aufzeichnet, wo die Daten gespeichert werden und wie Sie sie l�
 
 Für das, was kein Signal hinterlässt, zum Beispiel ein Telefonat, nimmt sidekick Notizen auf: Eine Tastenkombination öffnet ein kleines Fenster über jeder Anwendung, Sie tippen, woran Sie arbeiten, und sidekick behält die Notiz mit ihrer Zeit. Eine Notiz kann wie eine Stoppuhr laufen, bis Sie sie beenden. Der Kalender zeigt Ihre Notizen in jeder Ansicht, bucht sie mit ihrem Text und schlägt eine Notiz mit Dauer als Zeitbuchung vor. Siehe [Notizen mit sidekick](~/doc/sidekick/notizen.md).
 
+## Agenten
+
+Wenn Sie mit Claude Code oder Codex arbeiten, zeigt der Reiter **Agenten** in sidekick Ihre Sessions auf diesem Rechner danach, wer am Zug ist: welche Ihnen eine Frage stellt, welche geantwortet hat, welche mittendrin stehen geblieben ist und welche noch arbeiten. Sie markieren eine Session als erledigt, wenn Sie sich um sie gekümmert haben, und sie kommt mit der nächsten Antwort zurück. Der Reiter liest die Sessions live und speichert nichts davon. Siehe [Der Reiter Agenten in sidekick](~/doc/sidekick/agenten.md).
+
 ## sidekick und der klassische Signal Tracker
 
 sidekick ist der Nachfolger des [klassischen Signal Trackers](~/doc/signal-tracker/ueberblick.md), der Teil des time cockpit Fullclients ist. sidekick wird den klassischen Signal Tracker in den kommenden Monaten ablösen.
@@ -57,4 +61,5 @@ Der Kalender zeigt Signale immer nur aus einer Quelle an. In den Einstellungen d
 - [sidekick installieren und koppeln](~/doc/sidekick/installation-und-koppeln.md): Download, Installation und Verbindung mit dem Kalender.
 - [sidekick-Signale im Zeiterfassungskalender](~/doc/sidekick/signale-im-kalender.md): das Aktivitätsband, die Detailspuren und der rechte Bereich.
 - [Notizen mit sidekick](~/doc/sidekick/notizen.md): festhalten, was Sie gerade getan haben, und es im Kalender buchen.
+- [Der Reiter Agenten in sidekick](~/doc/sidekick/agenten.md): welche Claude-Code- oder Codex-Session auf Sie wartet.
 - [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md): was aufgezeichnet wird, was nie aufgezeichnet wird, Speicherung und Löschen.

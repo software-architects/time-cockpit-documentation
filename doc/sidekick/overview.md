@@ -34,6 +34,10 @@ What sidekick never records, where the data is stored and how to delete it is de
 
 For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you are working on, and sidekick keeps the note with its time. A note can run like a timer until you end it. The calendar shows your notes in every view, books them with their text and proposes a note with a duration as a booking. See [Quick Notes with sidekick](notes.md).
 
+## Agents
+
+If you work with Claude Code or Codex, the tab **Agents** in sidekick shows your sessions on this computer by whose turn it is: which one asks you a question, which one has answered, which one stopped halfway and which ones are still working. You mark a session as done when you have dealt with it, and it comes back with the next answer. The tab reads the sessions live and stores nothing of them. See [The Agents Tab of sidekick](agents.md).
+
 ## sidekick and the Classic Signal Tracker
 
 sidekick is the successor to the [classic signal tracker](~/doc/signal-tracker/overview.md), which is part of the time cockpit full client. sidekick will replace the classic signal tracker over the coming months.
@@ -56,4 +60,5 @@ The calendar shows signals from only one source at a time. In the calendar setti
 - [Installing and Pairing sidekick](installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](calendar-signals.md): the activity band, the detail lanes and the right pane.
 - [Quick Notes with sidekick](notes.md): writing down what you just did and booking it from the calendar.
+- [The Agents Tab of sidekick](agents.md): which Claude Code or Codex session waits for you.
 - [sidekick Privacy and Data](privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.
