@@ -69,6 +69,8 @@
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
         document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+        {{!time cockpit: tc-js lets main.css keep blocks that main.js decides on (the download block) invisible until then.}}
+        document.documentElement.classList.add('tc-js')
       </script>
 
       {{!time cockpit: analytics. Google Analytics is NOT loaded here, see the consent block at the

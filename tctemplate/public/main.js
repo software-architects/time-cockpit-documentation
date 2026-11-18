@@ -300,8 +300,8 @@ export default {
       const file = url.pathname.split('/').pop();
       if (path.includes('/download/sidekick/')) {
         if (file.includes('-win-')) return { product: 'sidekick', platform: 'windows', file };
-        if (file.includes('mac-arm64')) return { product: 'sidekick', platform: 'macos-arm64', file };
-        if (file.includes('mac-x64')) return { product: 'sidekick', platform: 'macos-x64', file };
+        if (file.includes('-osx-arm64-')) return { product: 'sidekick', platform: 'macos-arm64', file };
+        if (file.includes('-osx-x64-')) return { product: 'sidekick', platform: 'macos-x64', file };
         return null;
       }
       if (path.includes('update.timecockpit.com/general/') && url.pathname.endsWith('Setup.exe')) {
@@ -322,8 +322,73 @@ export default {
       } catch { /* ignore */ }
     }, true);
 
+    // Download block for an installer that exists per platform (the sidekick installation pages), like the download
+    // section of www.timecockpit.com/sidekick. Markup in Markdown: <div class="tc-dl" data-tc-download> with one
+    // a.tc-dl-main per installer (data-dl="win|arm|x86"; the first one is shown without JavaScript), the same
+    // installers as links in .tc-dl-others, and hints in [data-dl-hint="mac|mobile|desktop"].
+    // The installer is picked from what the browser says about itself; nothing is sent or stored:
+    // - Windows, or a system the browser does not name: Windows stays the button.
+    // - Mac: Apple silicon, with the hint how to check. Chromium browsers report the architecture on request, so an
+    //   Intel Mac gets its installer there; Safari and Firefox report "Intel" on every Mac.
+    // - Phone or tablet (an iPad counts as a Mac with touch), Linux, ChromeOS: no button, every installer is a link.
+    // The outcome goes to data-choice ("installer", "unsure", "none"); until then main.css keeps the block invisible.
+    const chooseDownload = (root) => {
+      const uad = navigator.userAgentData;
+      const ua = navigator.userAgent || '';
+      const platform = (uad && uad.platform) || navigator.platform || '';
+      const isMac = /mac/i.test(platform);
+      const isWindows = /win/i.test(platform);
+      const mobile = !!(uad && uad.mobile) || /android|iphone|ipad|ipod/i.test(ua) || (isMac && navigator.maxTouchPoints > 1);
+      const otherDesktop = !mobile && !isMac && !isWindows && /linux|cros|x11|bsd/i.test(`${platform} ${ua}`);
+      const hint = (kind, show) => {
+        const el = root.querySelector(`[data-dl-hint="${kind}"]`);
+        if (el) el.hidden = !show;
+      };
+      const show = (key) => {
+        root.querySelectorAll('[data-dl]').forEach((el) => {
+          const same = el.dataset.dl === key;
+          el.hidden = el.classList.contains('tc-dl-main') ? !same : same;
+        });
+      };
+
+      if (mobile || otherDesktop) {
+        root.querySelectorAll('.tc-dl-main').forEach((el) => { el.hidden = true; });
+        root.querySelectorAll('.tc-dl-others [data-dl]').forEach((el) => { el.hidden = false; });
+        const label = root.querySelector('.tc-dl-others [data-mobile-label]');
+        if (label) label.textContent = label.dataset.mobileLabel;
+        hint(otherDesktop && root.querySelector('[data-dl-hint="desktop"]') ? 'desktop' : 'mobile', true);
+        root.dataset.choice = 'none';
+        return;
+      }
+      if (!isMac) {
+        root.dataset.choice = isWindows ? 'installer' : 'unsure';
+        return;
+      }
+      show('arm');
+      hint('mac', true);
+      root.dataset.choice = 'unsure';
+      if (uad && typeof uad.getHighEntropyValues === 'function') {
+        uad.getHighEntropyValues(['architecture']).then((v) => {
+          if (v.architecture !== 'x86' && v.architecture !== 'arm') return;
+          show(v.architecture);
+          hint('mac', false);
+          root.dataset.choice = 'installer';
+        }).catch(() => { /* keep Apple silicon with the hint */ });
+      }
+    };
+    const downloads = () => {
+      document.querySelectorAll('[data-tc-download]:not([data-choice])').forEach((root) => {
+        try {
+          chooseDownload(root);
+        } finally {
+          // never leave the block invisible, whatever went wrong
+          if (!root.dataset.choice) root.dataset.choice = 'unsure';
+        }
+      });
+    };
+
     pageJsonLd();
-    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); };
+    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); downloads(); };
     update();
     new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   }

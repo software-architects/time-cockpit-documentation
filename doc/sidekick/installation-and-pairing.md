@@ -5,15 +5,31 @@ description: Download and install time cockpit sidekick on Windows or macOS, pai
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, click **Pair with sidekick** in the right pane of the Time Sheet Calendar, and confirm the question in sidekick with **Allow**. The right pane of the calendar guides you through these steps.
 
 ## Install sidekick
 
-sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The macOS version is still being tested; see [Install on macOS](#install-on-macos) for its limitations.
+sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The limitations of the macOS version are listed under [Install on macOS](#install-on-macos).
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<div class="tc-dl" data-tc-download>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="mobile" hidden>sidekick runs on Windows and macOS. Download it on the computer you work on.</p>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="desktop" hidden>sidekick runs on Windows and macOS. Linux machines you work on over SSH are recorded from your Windows PC or Mac.</p>
+<div class="tc-dl-top">
+<div>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i><span>Download for Windows<small>Windows 10 and 11 (x64)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Download for Mac with Apple silicon<small>macOS on Apple silicon (M1 and later)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Download for Mac with Intel processor<small>macOS on an Intel processor</small></span></a>
+</div>
+<p class="tc-dl-side">Free and signed. On Windows, sidekick installs for your user only and needs no administrator rights.</p>
+</div>
+<p class="tc-dl-others"><span data-mobile-label="Installers for your computer:">Other versions:</span>
+<a data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe" hidden>Windows</a>
+<a data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg">Mac with Apple silicon</a>
+<a data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg">Mac with Intel processor</a></p>
+<p class="tc-dl-hint" data-dl-hint="mac" hidden>Which version fits? Under <strong>About This Mac</strong> in the Apple menu, a Mac with Apple silicon shows <strong>Chip</strong>, an older Mac shows <strong>Processor</strong> with Intel.</p>
+</div>
 
 ### Install on Windows
 
@@ -25,9 +41,6 @@ sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel).
 Closing the window does not stop sidekick; it keeps recording in the background. To open the window again, double-click the icon or choose **Open sidekick…** in its menu.
 
 ### Install on macOS
-
-> [!NOTE]
-> The macOS version is still being tested.
 
 1. Download the installer for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). **About This Mac** in the Apple menu shows which chip your Mac has.
 2. Open the downloaded `.pkg` file and follow the installer. The installer is signed by software architects and checked by Apple (notarised), so macOS opens it without a warning. It installs **time cockpit sidekick** into the **Applications** folder.
@@ -44,12 +57,13 @@ Limitations of the macOS version:
 - The autostart is off after the installation. To start sidekick when you sign in, switch on **Start with the operating system** (see [Autostart and Updates](#autostart-and-updates)).
 - macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
 - Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
+- On macOS, sidekick records only the connected Wi-Fi network, not the networks in reach.
 - The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
 
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
@@ -181,7 +195,7 @@ If sidekick cannot use its default port 41337 because another program uses it, i
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
-- The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
+- The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
 - **Note…** opens the window for a [quick note](notes.md).

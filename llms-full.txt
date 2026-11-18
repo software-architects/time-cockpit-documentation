@@ -30,7 +30,7 @@ These pages cover the standard daily workflows:
 - [Outlook Appointments](https://docs.timecockpit.com/doc/timesheet-calendar/outlook-appointments.md)
 - [Time Sheet Templates](https://docs.timecockpit.com/doc/timesheet-calendar/timesheet-templates.md)
 - [Working Time](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md)
-- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) (early preview)
+- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) (preview)
 
 ## Project Work
 
@@ -7776,15 +7776,17 @@ Source: https://docs.timecockpit.com/doc/sidekick/overview.md
 # time cockpit sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
 
 The signals appear only in your own calendar.
 
+![The day view of sidekick: what you can book per topic, with the week bar above](https://docs.timecockpit.com/doc/sidekick/images/day-view-overview.png "The day view of sidekick")
+
 ## What sidekick Records
 
-From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code and Codex sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
+From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code, Codex and GitHub Copilot sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
 
 | Signal | Default | What is recorded |
 |---|---|---|
@@ -7792,18 +7794,22 @@ From the moment it is installed, sidekick records every source except changed fi
 | Foreground windows | On | Which application was in front, for how long, and its window title. Window titles can be switched off, and exclusion rules record a window without its title or not at all. |
 | Changed files | Off | Which files changed in the folders you choose, never their content. Nothing is watched until you switch it on and choose folders. |
 | Git | On | Time and message of commits and branch switches. sidekick looks for repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**. No code. |
-| Claude Code and Codex sessions | On | When and in which project you worked with Claude Code or Codex, including token usage. Of the text of your prompts, at most the start of the first prompt, as the name of the session. |
+| Claude Code, Codex and GitHub Copilot sessions | On | When and in which project you worked with Claude Code, Codex or GitHub Copilot, including token usage. Of the text of your prompts, only the start of the first prompt (at most 200 characters), which names the session. |
 | Microphone | On | Which application uses the microphone, never any audio. |
-| Wi-Fi | On | The names of the connected Wi-Fi network and of the networks in reach, with their signal strength, never a hardware address. |
+| Wi-Fi | On | The names of the connected Wi-Fi network and of the networks in reach, with their signal strength, never a hardware address. On macOS only the connected network. |
 | SSH logins | Only for added machines | Interactive SSH logins on Linux machines you add as remote machines in sidekick's settings. |
 
-sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code and Codex sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
+sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code, Codex and Copilot sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
 
 What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md).
 
 ## Quick Notes
 
 For what leaves no signal, for example a phone call, sidekick takes quick notes: a key combination opens a small window over any application, you type what you are working on, and sidekick keeps the note with its time. A note can run like a timer until you end it. The calendar shows your notes in every view, books them with their text and proposes a note with a duration as a booking. See [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md).
+
+## Agents
+
+If you work with Claude Code or Codex, the tab **Agents** in sidekick shows your sessions on this computer by whose turn it is: which one asks you a question, which one has answered, which one stopped halfway and which ones are still working. You mark a session as done when you have dealt with it, and it comes back with the next answer. The tab reads the sessions live and stores nothing of them. See [The Agents Tab of sidekick](https://docs.timecockpit.com/doc/sidekick/agents-tab.md).
 
 ## sidekick and the Classic Signal Tracker
 
@@ -7818,7 +7824,7 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 ## Requirements
 
-- Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version is still being tested and has some limitations; see [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
+- Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version has some limitations; see [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
 - On Windows, no administrator rights: sidekick installs for your Windows user only.
 - The time cockpit web client in the preview environment (`https://web-preview.timecockpit.com`), opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
 
@@ -7827,6 +7833,7 @@ The calendar shows signals from only one source at a time. In the calendar setti
 - [Installing and Pairing sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md): the activity band, the detail lanes and the right pane.
 - [Quick Notes with sidekick](https://docs.timecockpit.com/doc/sidekick/notes.md): writing down what you just did and booking it from the calendar.
+- [The Agents Tab of sidekick](https://docs.timecockpit.com/doc/sidekick/agents-tab.md): which Claude Code or Codex session waits for you.
 - [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.
 
 ---
@@ -7838,15 +7845,31 @@ Source: https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, click **Pair with sidekick** in the right pane of the Time Sheet Calendar, and confirm the question in sidekick with **Allow**. The right pane of the calendar guides you through these steps.
 
 ## Install sidekick
 
-sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The macOS version is still being tested; see [Install on macOS](#install-on-macos) for its limitations.
+sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel). The limitations of the macOS version are listed under [Install on macOS](#install-on-macos).
 
-<p class="tc-download"><a class="btn btn-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i>Download for Windows</a><span class="tc-download-group"><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Apple silicon)</a><a class="btn btn-outline-primary btn-lg" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg"><i class="bi bi-apple" aria-hidden="true"></i>macOS (Intel)</a></span></p>
+<div class="tc-dl" data-tc-download>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="mobile" hidden>sidekick runs on Windows and macOS. Download it on the computer you work on.</p>
+<p class="tc-dl-hint tc-dl-hint-first" data-dl-hint="desktop" hidden>sidekick runs on Windows and macOS. Linux machines you work on over SSH are recorded from your Windows PC or Mac.</p>
+<div class="tc-dl-top">
+<div>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe"><i class="bi bi-windows" aria-hidden="true"></i><span>Download for Windows<small>Windows 10 and 11 (x64)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Download for Mac with Apple silicon<small>macOS on Apple silicon (M1 and later)</small></span></a>
+<a class="btn btn-primary btn-lg tc-dl-main" data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg" hidden><i class="bi bi-apple" aria-hidden="true"></i><span>Download for Mac with Intel processor<small>macOS on an Intel processor</small></span></a>
+</div>
+<p class="tc-dl-side">Free and signed. On Windows, sidekick installs for your user only and needs no administrator rights.</p>
+</div>
+<p class="tc-dl-others"><span data-mobile-label="Installers for your computer:">Other versions:</span>
+<a data-dl="win" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe" hidden>Windows</a>
+<a data-dl="arm" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg">Mac with Apple silicon</a>
+<a data-dl="x86" href="https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg">Mac with Intel processor</a></p>
+<p class="tc-dl-hint" data-dl-hint="mac" hidden>Which version fits? Under <strong>About This Mac</strong> in the Apple menu, a Mac with Apple silicon shows <strong>Chip</strong>, an older Mac shows <strong>Processor</strong> with Intel.</p>
+</div>
 
 ### Install on Windows
 
@@ -7858,9 +7881,6 @@ sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel).
 Closing the window does not stop sidekick; it keeps recording in the background. To open the window again, double-click the icon or choose **Open sidekick…** in its menu.
 
 ### Install on macOS
-
-> [!NOTE]
-> The macOS version is still being tested.
 
 1. Download the installer for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). **About This Mac** in the Apple menu shows which chip your Mac has.
 2. Open the downloaded `.pkg` file and follow the installer. The installer is signed by software architects and checked by Apple (notarised), so macOS opens it without a warning. It installs **time cockpit sidekick** into the **Applications** folder.
@@ -7877,12 +7897,13 @@ Limitations of the macOS version:
 - The autostart is off after the installation. To start sidekick when you sign in, switch on **Start with the operating system** (see [Autostart and Updates](#autostart-and-updates)).
 - macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
 - Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
+- On macOS, sidekick records only the connected Wi-Fi network, not the networks in reach.
 - The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
 
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
@@ -8014,7 +8035,7 @@ If sidekick cannot use its default port 41337 because another program uses it, i
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
-- The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
+- The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
 - **Note…** opens the window for a [quick note](https://docs.timecockpit.com/doc/sidekick/notes.md).
@@ -8046,7 +8067,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/calendar-signals.md
 # sidekick Signals in the Time Sheet Calendar
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Once time cockpit sidekick is [paired with the calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md), the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
 
@@ -8066,24 +8087,40 @@ In the week view the calendar shows only this band. For the details of a day, sw
 
 ## Detail Lanes in the Day View
 
-In the day view, the calendar draws detail lanes next to your bookings. The head of the lanes groups them under **Presence**, **Work** and **Proposal** and shows a key figure for each lane, for example the covered time or the number of commits.
+In the day view, the calendar draws detail lanes next to your bookings, and right of them the column **Proposal**. The head names each lane and, for several of them, shows a key figure.
 
 | Lane | What it shows |
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
 | **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
-| **Codex** | Codex sessions, in the same way as Claude. |
+| **Codex** | Codex sessions, in the same way as Claude. Shown only on days with a session. |
 | **Git** | Commits and branch switches. |
 | **Files** | File changes per folder. A click on a folder block shows its folder tree in the right pane. |
 | **Wi-Fi** | The connected Wi-Fi network. |
 | **SSH** | Logins on remote machines. Shown only on days with a login. |
-| **Projects** | For each quarter hour, the booking patterns the signals point to. A booking pattern is a combination you booked before, for example a project and a task. |
-| **Proposal** | The proposed bookings for the day (see below). |
+| **Proposal** | The day divided into topics (see [The Proposal Column](#the-proposal-column)). |
 
-Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
+Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick.
 
-Bookings are created on the calendar grid as usual, never in the lanes.
+A click on a block in a lane selects its time range, and a double-click then opens the form for a new timesheet for that time range. A double-click on empty space in the lanes does nothing.
+
+## The Proposal Column
+
+The column **Proposal** divides the day into topics. sidekick computes them from what the signals themselves name; it reads no bookings and assigns no project or task. A block is one of these kinds:
+
+- **Session**: an AI agent session.
+- **Meeting**: a meeting.
+- **Repository**: work in a Git repository.
+- **Note**: a [quick note](#quick-notes) with a duration, or the running note up to now, named after the note. In its time range, the note takes precedence over the other signals. Notes without a duration make no block.
+- **Open group**: window titles that belong together without a context.
+- **Unclear**: time in which the signals name no topic.
+
+The word statistics behind the topics come from the day itself and the 21 days before it. The proposal needs an up-to-date version of sidekick; with an older version the tab **Proposal** says **This version of time cockpit sidekick does not compute a proposal yet.**
+
+- The head of the column shows the sum of the proposal and how much of it is not booked yet (**… unbooked**).
+- **Round the blocks to** in the head sets the raster of the blocks: **Minute-exact** or a number of minutes.
+- A double-click or double tap on a block opens the form for a new timesheet with the times of the block and the name of its topic as text.
 
 ## Quick Notes
 
@@ -8106,7 +8143,7 @@ An entry for several notes is not booked as a whole: its tooltip lists the notes
 
 ## The Right Pane
 
-The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes or a block in the **Proposal** lane, the right pane is narrowed to their time ranges. The pane has two tabs.
+The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes, the right pane is narrowed to their time ranges. The pane has two tabs.
 
 ### Signals
 
@@ -8132,13 +8169,7 @@ Hover over a row of the section **AI** to see its time, tokens and cost in a too
 
 ### Proposal
 
-The tab **Proposal** shows the proposed bookings of the day by pattern: when, what spoke for it, and a **Book** button. **Book** opens the form for a new booking with the project, task and text of the pattern.
-
-The proposal learns from your bookings of the last 30 days and needs an up-to-date version of sidekick. If a signal does not fit a pattern, you can stop counting it as evidence for that pattern; the tab lists such exclusions so you can undo them.
-
-A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
-
-A [quick note](#quick-notes) with a duration, or the running note up to now, is a block of its own in the **Proposal** lane, named after the note. In its time range, the note takes precedence over the other signals. Notes without a duration make no proposal.
+The tab **Proposal** explains the [Proposal column](#the-proposal-column). Click a block in the column, and the tab shows what it was made of: **Why this topic**, the topics **Close behind** and the **Words in the block**. Without a selected block, it shows **The day by topic**: each topic with its minute-exact time and its time in the raster, and the **Total**.
 
 ## Marking Times
 
@@ -8175,7 +8206,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/notes.md
 # Quick Notes with sidekick
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Signals show when you worked and with which applications, but not always what the work was. A phone call, a conversation at the desk or a quick fix leaves few traces. With a quick note you write it down in a few words, without leaving the application you are in. sidekick keeps the note with its time, and the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows it next to the signals, so you can book it later with its text.
 
@@ -8239,6 +8270,8 @@ Notes are edited, ended and deleted only in sidekick. Open the tab **Day view**:
 - **Edit** opens a small form in the row with the text, **Begin**, **End (optional)**, **No duration** and **Workspace**. **Ctrl+Enter** or **Save** saves the changes, **Esc** or **Cancel** discards them.
 - **Delete** asks **Delete this note?** in the row. Confirm with **Delete**, or keep the note with **Cancel**.
 
+![The section Notes in the right pane of the day view](https://docs.timecockpit.com/doc/sidekick/images/day-view-notes.png "The section Notes in the day view")
+
 ## Key Combination
 
 In sidekick, open **Settings** and, in the group **For all machines**, the area **Notes**.
@@ -8273,6 +8306,122 @@ Unlike signals, notes are not deleted after the retention period; they stay unti
 
 ---
 
+# The Agents Tab of time cockpit sidekick
+
+Source: https://docs.timecockpit.com/doc/sidekick/agents-tab.md
+
+# The Agents Tab of sidekick
+
+> [!WARNING]
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+
+If you work with several Claude Code or Codex sessions at the same time, one of them is often waiting for you: it asks a question, it has finished, or it stopped halfway. The tab **Agents** in sidekick shows the sessions on your computer by whose turn it is, so you see at a glance which one needs you and which ones are still working.
+
+The tab is between **Day view** and **Insights**. It reads the sessions live from the files of Claude Code and Codex and stores nothing of them (see [Privacy](#privacy)).
+
+## Your Turn, Day by Day
+
+The upper part of the tab shows the sessions where it is your turn. Each day with such a session has a column, with today at the right. A day without a session that waits for you has no column. If there are more days than fit side by side, the oldest are gathered in the column **Older** at the left.
+
+![The tab Agents by state: questions, running sessions and answers by day, today at the right](https://docs.timecockpit.com/doc/sidekick/images/agents-board.png "The tab Agents by state")
+
+The head of a column names the day (**Today**, **Yesterday** or the weekday with the date) and counts its sessions. Each session is a card with its time, its title, its project and its buttons. A question is shown in a yellow box, a running session with its latest tool calls, and a finished one with the start of its answer and **Read in full**.
+
+When nothing waits for you, the area says **All done.**, or, while sessions are still running, **No session needs you right now; the agents are working.**
+
+## States
+
+With **By state**, every state that has a session is a row of its own, with its name, its count and a coloured line across the width:
+
+| State | What it means |
+|---|---|
+| **Asks you** | The agent asks you a question and waits for your answer. In Claude Code this also covers a plan that waits for your approval and, in the Claude desktop app, a finished turn that ends with a question. A question you set aside shows as **Question open**. |
+| **Working** | The agent is working on a turn, in the column of today. The card shows how long the turn has been running and its latest tool calls. A card that says **Waiting** belongs to a turn that has ended, but the agent waits for a task it started in the background and goes on by itself (Claude Code only). |
+| **Answered** | The agent has finished and you have not marked its answer as done yet. |
+| **Interrupted** | The turn was stopped before the agent had finished, for example because you stopped it or rejected a tool call. |
+| **Cut off** | Claude Code was closed in the middle of the turn. Nothing goes on until you open the session and tell the agent to continue. **Unanswered** means that the app was closed before the agent began with your last message; send it again. |
+| **Gone quiet** | The turn has no end and there has been no activity for at least five minutes (an hour while a tool call runs). Whether it still runs is unclear. |
+
+The hint of a state word explains it where the word alone does not say enough.
+
+## By State or by Topic
+
+The switch **By state | By topic** at the top right changes what the rows of the upper area are. sidekick remembers your choice.
+
+- **By state**: one row per state, as described above.
+- **By topic**: one row per topic, in alphabetical order, each opened by a line in the colour of the topic. The cards then show their state again, with its word and colour.
+
+The topic of a session is the workspace its folder belongs to, or the name of the folder, in the colour the **Day view** draws it in on the day of the session's last activity. The frame of a card and its project are in the same colour.
+
+![The tab Agents by topic: one row per topic in the colours of the day view](https://docs.timecockpit.com/doc/sidekick/images/agents-board-topics.png "The tab Agents by topic")
+
+## Marking Sessions as Done
+
+A session stays in the upper area until you say you are done with it. Opening its details or opening it in Claude or Codex does not change that.
+
+- The check (**Mark as done**) moves a session down to **Done**. It comes back as soon as the agent answers again, also when its next turn is interrupted. The line above the days says this as well.
+- On a question, the check is called **Set the question aside**. The session rests as **Question open** until something new happens in it.
+- In **Done**, the arrow (**Mark as not done**) brings a session back up to its day.
+- The head of every day except today has **Mark all n as done** (for a day with one session, **Mark as done**), which marks all sessions of that day at once. For 15 seconds a line above the days then offers **Undo**. Sessions of today are marked one by one.
+- The cross (**Dismiss**) is offered on a session whose turn has ended. It parks the session under **Dismissed** until you choose **Restore**. While the session runs or asks, it shows above; its next answer goes back to **Dismissed**.
+
+Below the days, the area **Done** holds every session that rests, in the groups **Today**, **This week**, **Older** and **Dismissed**. Click **Done** to open or fold it.
+
+### Your First Visit
+
+On your first visit, only sessions whose turn ended in the last 24 hours count as yours. Older endings rest under **Done** from the start, so the board does not open with every session you ever had.
+
+## Details and Opening a Session
+
+Click the title of a card to open its details in a pane at the right:
+
+- the buttons to open the session and to mark it as done,
+- what the session is doing now, while something runs (**Now**),
+- the **Last result** in full,
+- the tasks it runs in the background (**In the background**),
+- the **Timeline** with its latest events,
+- the model and the folder.
+
+Drag the left edge of the pane to make it wider or narrower. The cross at the top right of the pane or **Esc** closes it.
+
+To continue a session, use the button with the name of the agent on its card (**Claude** or **Codex** with an arrow), **Open in Claude** or **Open in Codex** in the details, or click the yellow box of a question. sidekick hands the session to the Claude desktop app or to Codex, where you answer.
+
+### Background Tasks
+
+For Claude Code, a small mark next to the title shows how many commands or subagents the session started in the background and that have not reported back yet. The details list each with its description, its kind (**Command** or **Subagent**) and when it started. The mark is a hint, not a state: a server left running in the background does not keep a session in **Working**. When a session has been silent for more than 12 hours, its background tasks are shown as **unclear**, because they end without a trace when Claude Code is closed.
+
+## Which Sessions Appear
+
+- Claude Code and Codex sessions on this computer that changed in the last 30 days.
+- Not archived sessions, and not the subagent threads of Codex.
+- Not the sessions of an agent you switched off in sidekick under **Settings**.
+
+The first time you open the tab after starting sidekick, reading all sessions can take a moment. The newest appear first, and a line above the list says how many sessions are still being read.
+
+If the file of a session cannot be read for a moment, for example because a virus scanner locks it, the card is greyed and shows the last known state.
+
+## Limits
+
+- Only Claude Code and Codex. GitHub Copilot and other agents are not shown.
+- Only sessions on this computer. Sessions on [remote machines](https://docs.timecockpit.com/doc/sidekick/overview.md#what-sidekick-records) that sidekick reads over SSH are not on the board.
+- A Claude Code session can be opened from sidekick only if the Claude desktop app knows it. A session started in a terminal shows the agent's name without the arrow; continue it in that terminal.
+- When Claude Code asks for permission to run a tool, the board cannot tell this from the session files. The session shows as **Working**, as if the tool call were running.
+- Background tasks and **Waiting** are shown for Claude Code only.
+
+## Privacy
+
+The tab reads the sessions live while it is on screen. Nothing of it is stored in the sidekick database, shown in the Time Sheet Calendar or sent anywhere. sidekick only remembers on this computer which sessions you marked as done or dismissed, and how you arranged the tab.
+
+The board shows more of a session than the day view does: the agent's last message, its questions and the start of the commands it runs. See [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md#the-agents-tab).
+
+## Related Pages
+
+- [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md)
+- [sidekick Signals in the Time Sheet Calendar](https://docs.timecockpit.com/doc/sidekick/calendar-signals.md)
+- [sidekick Privacy and Data](https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md)
+
+---
+
 # sidekick Privacy and Data - What Is Recorded
 
 Source: https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md
@@ -8280,7 +8429,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md
 # sidekick Privacy and Data
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
 
@@ -8288,15 +8437,15 @@ time cockpit sidekick records work signals on your computer and keeps them there
 
 From the moment it is installed, sidekick records every source in this list except changed files, which are off by default. SSH logins are recorded only for remote machines you add.
 
-sidekick also reads earlier activity once. It imports all Claude Code and Codex sessions that are already on your computer, without a time limit. When it finds a Git repository for the first time, also one you add later, it takes over the commits of the last 90 days. For a remote machine it does the same once, unless you switch the history import off for that machine. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
+sidekick also reads earlier activity once. It imports all Claude Code, Codex and GitHub Copilot sessions that are already on your computer, without a time limit. When it finds a Git repository for the first time, also one you add later, it takes over the commits of the last 90 days. For a remote machine it does the same once, unless you switch the history import off for that machine. See [Controlling What Is Recorded](#controlling-what-is-recorded) to switch sources off.
 
 - When the computer was on, when you were using it (from the time between your inputs) and when it was locked.
 - Which application was in the foreground, for how long, and its window title.
 - Which files changed in the folders you choose (off by default; nothing is watched until you switch it on and choose folders).
 - Time and message of Git commits and branch switches in the repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**.
-- When and in which project you worked with Claude Code or Codex, the times of your prompts, the token usage, and a name for each session (see below).
+- When and in which project you worked with Claude Code, Codex or GitHub Copilot, the times of your prompts, the token usage, and a name for each session (see below).
 - Which application uses the microphone.
-- The names of the connected Wi-Fi network and of the networks in reach, with their signal strength.
+- The names of the connected Wi-Fi network and of the networks in reach, with their signal strength (on macOS only the connected network).
 - Interactive SSH logins on Linux machines you add as remote machines.
 
 Window titles, file paths and commit messages can say a lot about your work. That is why exclusions, the pause and the deletion described below exist.
@@ -8311,7 +8460,21 @@ Window titles, file paths and commit messages can say a lot about your work. Tha
 - Browser URLs.
 - Any audio. The microphone signal only says which application had the microphone open. sidekick opens no audio stream.
 - The BSSID, MAC address or any other hardware address of a Wi-Fi network. Only network names are recorded.
-- The text of your prompts to Claude Code and Codex. The only exception is the session name: sidekick uses the title Claude Code writes for a session, and when there is none (always for Codex), the first 80 characters of the first prompt.
+- The text of your prompts to Claude Code, Codex and GitHub Copilot, apart from the start of the first prompt of each session: sidekick stores its first 200 characters and shows them in the tooltip of the session. As the name of the session, sidekick uses the title Claude Code writes for a session, and when there is none (always for Codex), the first 80 characters of the first prompt. If you choose **Workspace only** for **Name of a session** in the area **Claude Code** of the settings, sidekick stores no text of your prompts at all.
+
+The tab **Agents** shows more of your Claude Code and Codex sessions while it is open, but records none of it; see [The Agents Tab](#the-agents-tab).
+
+## The Agents Tab
+
+The tab [Agents](https://docs.timecockpit.com/doc/sidekick/agents-tab.md) shows your Claude Code and Codex sessions by whose turn it is. It is not a source of signals:
+
+- It reads the session files of Claude Code and Codex live, while the tab is on screen. Nothing of it is stored in the sidekick database, shown in the Time Sheet Calendar, included in the usage data or sent anywhere.
+- It shows content the day view does not: the agent's last message, its questions, and the start of the commands and other tool calls it runs. It does so also when you chose **Workspace only** for **Name of a session** in the settings, because that setting governs only what sidekick stores.
+- Tool results and the agent's reasoning are never shown.
+- A tool call target that looks like it contains a credential, for example a key or a URL with a user name, is replaced by `[…]`. This filter is best effort and not a guarantee. Questions are shown as the agent wrote them; they are hidden only where they look like a credential themselves.
+- sidekick remembers, in its own window on this computer, which sessions you marked as done or dismissed and how you arranged the tab. It does not store the content of the sessions.
+
+To keep a session source off the tab, switch it off in sidekick under **Settings**: a switched-off agent is not read there either.
 
 ## Where the Data Is Stored
 
@@ -8321,7 +8484,7 @@ sidekick stores its data in `%APPDATA%\timecockpit-sidekick` (on macOS in `~/Lib
 - `tokens.json` holds only a hash of each pairing token, never the token itself.
 - `backups` holds a verified copy of the database from each day, including the notes. The seven newest copies are kept.
 - `config.json` holds the settings.
-- `anchor-exclusions.json` and `meeting-dismissals.json` hold what the calendar writes back to sidekick (see [How the Calendar Reads the Signals](#how-the-calendar-reads-the-signals)).
+- `brain.json`, `brain-key.bin` and `brain-key-claude.bin` exist only after you set up a language model for **Ask your AI** (see [What Leaves Your Computer](#what-leaves-your-computer)): the provider and the model, and the API key of each provider, encrypted.
 - `tracker.log` is a log file. It contains no window titles and no paths.
 - `telemetry.json` holds the install ID and when the daily usage event was sent last. It exists only after you agreed to send [usage data](#usage-data). The folder `telemetry-queue` holds usage events that have not been sent yet; it is deleted when you switch usage data off.
 
@@ -8330,9 +8493,10 @@ Signals older than 90 days are deleted every night. You can change the period in
 ## What Leaves Your Computer
 
 - sidekick uploads no signals and no notes. It sends usage data only if you agree; see [Usage Data](#usage-data).
-- The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords and the booking proposal. Only the bookings you create are saved in time cockpit, as usual.
+- The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords; the proposal by topic is computed by sidekick on your computer. Only the bookings you create are saved in time cockpit, as usual.
 - Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
+- **Ask your AI** sends data only if you set up a language model in sidekick under **Settings**, area **AI**, and only when you ask a question or request a proposal. sidekick then sends your question and a summary of the days (window titles, tickets, session titles, the names of your topics and the paths of changed files; with a bookings export also your projects and booking texts) to that model, with your API key and under the terms of its provider. The data goes straight from your computer to the provider, not through time cockpit; with a local model it stays on your computer. Every answer shows under **What was sent** what went out.
 
 ## Usage Data
 
@@ -8357,17 +8521,16 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 - The address shown in the question to pair is the one your browser sends with it, that is, the address of the page that asks. A web page cannot ask in the name of another address, and only the time cockpit addresses that sidekick knows can ask at all.
 - The calendar picks up the token once. A token that the calendar does not pick up within a minute after **Allow** is revoked again, and a question that nobody answers expires after two minutes.
 - The calendar requests the signals directly from your browser. The signals go from sidekick directly to your browser and are processed only there; they are never sent to the time cockpit server.
-- Besides reading, the calendar writes only two things back to sidekick: the meetings you ignore, with their subject and planned times, and the signals you exclude as evidence for the proposal, with the booking pattern they were excluded for (the identifiers and names of, for example, its project and task). sidekick stores them so that the calendar can show and undo them. Neither changes a signal.
 - The calendar reads your notes in the same way as the signals, but never changes or deletes them. Notes are edited and deleted only in sidekick.
 - The tab **Pairing** in sidekick shows an access log of the latest requests, and **Revoke** removes the access of a paired calendar.
-- A paired calendar can change one thing in sidekick: the colour of a workspace. It cannot change or delete signals, settings or anything else.
+- A paired calendar can only read. It cannot change or delete signals, notes, settings or anything else.
 - To stop every calendar from reading, clear **Paired calendars may read** under **Paired calendars** in the tab **Pairing**.
 
 ## Controlling What Is Recorded
 
 In sidekick under **Settings**:
 
-- Every source except presence can be switched off: **Windows**, **Files**, **Microphone**, **Wi-Fi**, **Claude Code**, **Codex** and **Git**.
+- Every source except presence can be switched off: **Windows**, **Files**, **Microphone**, **Wi-Fi**, **Claude Code**, **Codex**, **Copilot** and **Git**.
 - **Record window titles** in the area **Windows** keeps the application names and times but drops all window titles.
 - **Exclusions** in the area **Windows** apply to single applications or windows. **Time only, without title** keeps the time but drops the window title. **Do not record** records nothing at all; the time disappears from the day. Exclusions are applied before anything is stored.
 - By default, password managers and private browser windows are recorded without their titles, and the window of sidekick itself is not recorded. The calendar shows windows without titles as **redacted**.
@@ -8385,7 +8548,7 @@ In sidekick, open the tab **Data**. In the area **Delete data**:
 
 Your notes are kept by every delete unless you select **Delete notes as well** (off by default). With it, the notes that begin in the chosen range are deleted too, and **Delete everything…** deletes all notes. The question before deleting says how many notes will be deleted, or that notes are kept.
 
-sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code and Codex sessions and Git repositories are recorded only from then on, including repositories it finds later.
+sidekick shows how many rows will be deleted before it deletes them. The backups that contain a deleted day are deleted as well, and deleted rows are overwritten in the database file. After **Delete everything…**, sidekick no longer imports earlier history: Claude Code, Codex and Copilot sessions and Git repositories are recorded only from then on, including repositories it finds later.
 
 Uninstalling sidekick does not delete the data folder.
 

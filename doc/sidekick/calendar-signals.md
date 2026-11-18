@@ -1,11 +1,11 @@
 ---
 title: sidekick Signals in the Time Sheet Calendar
-description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, quick notes, keywords and booking proposals.
+description: How the Time Sheet Calendar shows time cockpit sidekick signals - activity band, detail lanes, quick notes, keywords and the proposal by topic.
 ---
 # sidekick Signals in the Time Sheet Calendar
 
 > [!WARNING]
-> Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Once time cockpit sidekick is [paired with the calendar](installation-and-pairing.md), the [Time Sheet Calendar](~/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
 
@@ -25,24 +25,40 @@ In the week view the calendar shows only this band. For the details of a day, sw
 
 ## Detail Lanes in the Day View
 
-In the day view, the calendar draws detail lanes next to your bookings. The head of the lanes groups them under **Presence**, **Work** and **Proposal** and shows a key figure for each lane, for example the covered time or the number of commits.
+In the day view, the calendar draws detail lanes next to your bookings, and right of them the column **Proposal**. The head names each lane and, for several of them, shows a key figure.
 
 | Lane | What it shows |
 |---|---|
 | **Active** | When you were active at the computer. |
 | **Microphone** | When an application used the microphone. The tooltip names the application; sidekick never records sound. |
 | **Claude** | Claude Code sessions, one column per session, grouped by project, with the times of your prompts and the token usage. |
-| **Codex** | Codex sessions, in the same way as Claude. |
+| **Codex** | Codex sessions, in the same way as Claude. Shown only on days with a session. |
 | **Git** | Commits and branch switches. |
 | **Files** | File changes per folder. A click on a folder block shows its folder tree in the right pane. |
 | **Wi-Fi** | The connected Wi-Fi network. |
 | **SSH** | Logins on remote machines. Shown only on days with a login. |
-| **Projects** | For each quarter hour, the booking patterns the signals point to. A booking pattern is a combination you booked before, for example a project and a task. |
-| **Proposal** | The proposed bookings for the day (see below). |
+| **Proposal** | The day divided into topics (see [The Proposal Column](#the-proposal-column)). |
 
-Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick. The booking patterns in the lanes **Projects** and **Proposal** are coloured by the calendar.
+Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick.
 
-Bookings are created on the calendar grid as usual, never in the lanes.
+A click on a block in a lane selects its time range, and a double-click then opens the form for a new timesheet for that time range. A double-click on empty space in the lanes does nothing.
+
+## The Proposal Column
+
+The column **Proposal** divides the day into topics. sidekick computes them from what the signals themselves name; it reads no bookings and assigns no project or task. A block is one of these kinds:
+
+- **Session**: an AI agent session.
+- **Meeting**: a meeting.
+- **Repository**: work in a Git repository.
+- **Note**: a [quick note](#quick-notes) with a duration, or the running note up to now, named after the note. In its time range, the note takes precedence over the other signals. Notes without a duration make no block.
+- **Open group**: window titles that belong together without a context.
+- **Unclear**: time in which the signals name no topic.
+
+The word statistics behind the topics come from the day itself and the 21 days before it. The proposal needs an up-to-date version of sidekick; with an older version the tab **Proposal** says **This version of time cockpit sidekick does not compute a proposal yet.**
+
+- The head of the column shows the sum of the proposal and how much of it is not booked yet (**… unbooked**).
+- **Round the blocks to** in the head sets the raster of the blocks: **Minute-exact** or a number of minutes.
+- A double-click or double tap on a block opens the form for a new timesheet with the times of the block and the name of its topic as text.
 
 ## Quick Notes
 
@@ -65,7 +81,7 @@ An entry for several notes is not booked as a whole: its tooltip lists the notes
 
 ## The Right Pane
 
-The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes or a block in the **Proposal** lane, the right pane is narrowed to their time ranges. The pane has two tabs.
+The right pane shows the signals of one day: the day you selected in the week view, otherwise today or the first day of the view. If you select blocks in the lanes, the right pane is narrowed to their time ranges. The pane has two tabs.
 
 ### Signals
 
@@ -91,13 +107,7 @@ Hover over a row of the section **AI** to see its time, tokens and cost in a too
 
 ### Proposal
 
-The tab **Proposal** shows the proposed bookings of the day by pattern: when, what spoke for it, and a **Book** button. **Book** opens the form for a new booking with the project, task and text of the pattern.
-
-The proposal learns from your bookings of the last 30 days and needs an up-to-date version of sidekick. If a signal does not fit a pattern, you can stop counting it as evidence for that pattern; the tab lists such exclusions so you can undo them.
-
-A block of the **Proposal** lane can also be booked with a double-click. If an Office 365 meeting took place while the microphone was in use, the lane proposes it as a block of its own with the subject of the meeting. **Ignore meeting** in the tooltip of such a block stops proposing it; ignored meetings are listed in the tab **Proposal** under **Ignored meetings**, where you can propose them again.
-
-A [quick note](#quick-notes) with a duration, or the running note up to now, is a block of its own in the **Proposal** lane, named after the note. In its time range, the note takes precedence over the other signals. Notes without a duration make no proposal.
+The tab **Proposal** explains the [Proposal column](#the-proposal-column). Click a block in the column, and the tab shows what it was made of: **Why this topic**, the topics **Close behind** and the **Words in the block**. Without a selected block, it shows **The day by topic**: each topic with its minute-exact time and its time in the raster, and the **Total**.
 
 ## Marking Times
 

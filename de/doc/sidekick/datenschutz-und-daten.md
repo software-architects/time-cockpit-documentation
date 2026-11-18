@@ -6,7 +6,7 @@ en_page: doc/sidekick/privacy-and-data.md
 # Datenschutz und Daten in sidekick
 
 > [!WARNING]
-> Early Preview: time cockpit sidekick befindet sich in einer frühen Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11; die macOS-Version wird noch getestet. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält sie dort. Diese Seite beschreibt genau, was aufgezeichnet wird, was nie aufgezeichnet wird, wo die Daten gespeichert werden, wer sie lesen kann und wo der Schutz endet.
 
@@ -14,15 +14,15 @@ time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält 
 
 Ab der Installation zeichnet sidekick alle Quellen dieser Liste auf, außer geänderten Dateien, die standardmäßig aus sind. SSH-Anmeldungen werden nur für entfernte Rechner aufgezeichnet, die Sie hinzufügen.
 
-Frühere Aktivität liest sidekick einmalig ebenfalls ein. Es übernimmt alle Claude-Code- und Codex-Sessions, die bereits auf Ihrem Rechner liegen, ohne zeitliche Grenze. Findet es ein Git-Repository zum ersten Mal, auch eines, das Sie später hinzufügen, übernimmt es die Commits der letzten 90 Tage. Für einen entfernten Rechner gilt dasselbe einmalig, außer Sie schalten das Einlesen des Verlaufs für diesen Rechner ab. Wie Sie Quellen abschalten, steht unter [Festlegen, was aufgezeichnet wird](#festlegen-was-aufgezeichnet-wird).
+Frühere Aktivität liest sidekick einmalig ebenfalls ein. Es übernimmt alle Sessions von Claude Code, Codex und GitHub Copilot, die bereits auf Ihrem Rechner liegen, ohne zeitliche Grenze. Findet es ein Git-Repository zum ersten Mal, auch eines, das Sie später hinzufügen, übernimmt es die Commits der letzten 90 Tage. Für einen entfernten Rechner gilt dasselbe einmalig, außer Sie schalten das Einlesen des Verlaufs für diesen Rechner ab. Wie Sie Quellen abschalten, steht unter [Festlegen, was aufgezeichnet wird](#festlegen-was-aufgezeichnet-wird).
 
 - Wann der Rechner lief, wann Sie ihn benutzt haben (aus dem Abstand zwischen Ihren Eingaben) und wann er gesperrt war.
 - Welche Anwendung im Vordergrund war, wie lange, und ihr Fenstertitel.
 - Welche Dateien sich in den von Ihnen gewählten Ordnern ändern (standardmäßig aus; beobachtet wird erst, wenn Sie die Quelle einschalten und Ordner wählen).
 - Zeit und Nachricht von Git-Commits und Branchwechseln in den Repositorys in `%USERPROFILE%\source\repos`, falls es diesen Ordner gibt, und in den Ordnern, die Sie unter **Ordner mit Repositorys** hinzufügen.
-- Wann und in welchem Projekt Sie mit Claude Code oder Codex gearbeitet haben, die Zeitpunkte Ihrer Prompts, den Tokenverbrauch und einen Namen je Session (siehe unten).
+- Wann und in welchem Projekt Sie mit Claude Code, Codex oder GitHub Copilot gearbeitet haben, die Zeitpunkte Ihrer Prompts, den Tokenverbrauch und einen Namen je Session (siehe unten).
 - Welche Anwendung das Mikrofon benutzt.
-- Die Namen des verbundenen WLANs und der WLANs in Reichweite, mit ihrer Signalstärke.
+- Die Namen des verbundenen WLANs und der WLANs in Reichweite, mit ihrer Signalstärke (unter macOS nur das verbundene WLAN).
 - Interaktive SSH-Anmeldungen auf Linux-Rechnern, die Sie als entfernte Rechner hinzufügen.
 
 Fenstertitel, Dateipfade und Commit-Nachrichten können viel über Ihre Arbeit verraten. Deshalb gibt es die unten beschriebenen Ausnahmen, die Pause und das Löschen.
@@ -37,7 +37,21 @@ Fenstertitel, Dateipfade und Commit-Nachrichten können viel über Ihre Arbeit v
 - Browser-URLs.
 - Jede Art von Ton. Das Mikrofonsignal sagt nur, welche Anwendung das Mikrofon geöffnet hatte. sidekick öffnet keinen Audiostream.
 - Die BSSID, MAC-Adresse oder eine andere Hardware-Adresse eines WLANs. Aufgezeichnet werden nur Netzwerknamen.
-- Den Text Ihrer Prompts an Claude Code und Codex. Die einzige Ausnahme ist der Name der Session: sidekick verwendet den Titel, den Claude Code für eine Session schreibt, und wenn es keinen gibt (bei Codex immer), die ersten 80 Zeichen des ersten Prompts.
+- Den Text Ihrer Prompts an Claude Code, Codex und GitHub Copilot, abgesehen vom Anfang des ersten Prompts jeder Session: Davon speichert sidekick die ersten 200 Zeichen und zeigt sie im Tooltip der Session. Als Name der Session verwendet sidekick den Titel, den Claude Code für eine Session schreibt, und wenn es keinen gibt (bei Codex immer), die ersten 80 Zeichen des ersten Prompts. Wählen Sie in den Einstellungen im Bereich **Claude Code** bei **Name einer Session** die Option **Nur der Arbeitsbereich**, speichert sidekick keinerlei Text aus Ihren Prompts.
+
+Der Reiter **Agenten** zeigt mehr von Ihren Claude-Code- und Codex-Sessions, solange er offen ist, zeichnet davon aber nichts auf; siehe [Der Reiter Agenten](#der-reiter-agenten).
+
+## Der Reiter Agenten
+
+Der Reiter [Agenten](~/doc/sidekick/agenten.md) zeigt Ihre Claude-Code- und Codex-Sessions danach, wer am Zug ist. Er ist keine Signalquelle:
+
+- Er liest die Session-Dateien von Claude Code und Codex live, solange der Reiter angezeigt wird. Nichts davon wird in der Datenbank von sidekick gespeichert, im Zeiterfassungskalender angezeigt, in die Nutzungsdaten aufgenommen oder irgendwohin gesendet.
+- Er zeigt Inhalte, die die Tagesansicht nicht zeigt: die letzte Nachricht des Agenten, seine Fragen und den Anfang der Befehle und anderen Werkzeugaufrufe, die er ausführt. Das gilt auch, wenn Sie in den Einstellungen bei **Name einer Session** die Option **Nur der Arbeitsbereich** gewählt haben, denn diese Einstellung regelt nur, was sidekick speichert.
+- Werkzeugergebnisse und die Überlegungen des Agenten werden nie angezeigt.
+- Ein Ziel eines Werkzeugaufrufs, das nach Zugangsdaten aussieht, zum Beispiel ein Schlüssel oder eine URL mit Benutzernamen, wird durch `[…]` ersetzt. Dieser Filter arbeitet nach bestem Bemühen und ist keine Garantie. Fragen erscheinen so, wie der Agent sie geschrieben hat; ausgeblendet werden sie nur, wo sie selbst wie Zugangsdaten aussehen.
+- sidekick merkt sich in seinem eigenen Fenster auf diesem Rechner, welche Sessions Sie als erledigt markiert oder ausgeblendet haben und wie Sie den Reiter eingerichtet haben. Den Inhalt der Sessions speichert es nicht.
+
+Soll eine Quelle nicht im Reiter erscheinen, schalten Sie sie in sidekick unter **Einstellungen** aus: Ein ausgeschalteter Agent wird auch dort nicht gelesen.
 
 ## Wo die Daten gespeichert werden
 
@@ -47,7 +61,7 @@ sidekick speichert seine Daten in `%APPDATA%\timecockpit-sidekick` (unter macOS 
 - `tokens.json` enthält nur einen Hash jedes Tokens für das Koppeln, nie das Token selbst.
 - `backups` enthält eine geprüfte Kopie der Datenbank von jedem Tag, samt den Notizen. Die sieben neuesten Kopien werden aufbewahrt.
 - `config.json` enthält die Einstellungen.
-- `anchor-exclusions.json` und `meeting-dismissals.json` enthalten, was der Kalender an sidekick zurückschreibt (siehe [Wie der Kalender die Signale liest](#wie-der-kalender-die-signale-liest)).
+- `brain.json`, `brain-key.bin` und `brain-key-claude.bin` gibt es erst, wenn Sie für **Frag deine KI** ein Sprachmodell einrichten (siehe [Was Ihren Rechner verlässt](#was-ihren-rechner-verlässt)): Anbieter und Modell sowie den API-Schlüssel jedes Anbieters, verschlüsselt.
 - `tracker.log` ist eine Protokolldatei. Sie enthält keine Fenstertitel und keine Pfade.
 - `telemetry.json` enthält die Installations-ID und wann das tägliche Nutzungsereignis zuletzt gesendet wurde. Die Datei gibt es erst, wenn Sie dem Senden von [Nutzungsdaten](#nutzungsdaten) zugestimmt haben. Der Ordner `telemetry-queue` enthält Nutzungsereignisse, die noch nicht gesendet wurden; er wird gelöscht, wenn Sie die Nutzungsdaten ausschalten.
 
@@ -56,9 +70,10 @@ Signale, die älter als 90 Tage sind, werden jede Nacht gelöscht. Den Zeitraum 
 ## Was Ihren Rechner verlässt
 
 - sidekick lädt keine Signale und keine Notizen hoch. Nutzungsdaten sendet es nur, wenn Sie zustimmen; siehe [Nutzungsdaten](#nutzungsdaten).
-- Auch der time cockpit Web-Client sendet die Signale nicht an den time cockpit Server. Der Kalender verarbeitet sie nur in Ihrem Browser, auch die Schlüsselwörter und den Buchungsvorschlag. Nur die Zeitbuchungen, die Sie anlegen, werden wie gewohnt in time cockpit gespeichert.
+- Auch der time cockpit Web-Client sendet die Signale nicht an den time cockpit Server. Der Kalender verarbeitet sie nur in Ihrem Browser, auch die Schlüsselwörter; den Vorschlag nach Themen berechnet sidekick auf Ihrem Rechner. Nur die Zeitbuchungen, die Sie anlegen, werden wie gewohnt in time cockpit gespeichert.
 - Abgesehen von Nutzungsdaten ist die einzige Anfrage, die sidekick von sich aus stellt, die Suche nach Updates: Eine Minute nach dem Start und danach alle vier Stunden liest es den Update-Feed unter `https://www.timecockpit.com/download/sidekick/` (mit eingeschaltetem **Vorabversionen erhalten** unter `https://www.timecockpit.com/download/sidekick-preview/`) und lädt von dort eine neuere Version herunter. Die Anfrage enthält keine Daten von sidekick; der Server sieht die Adresse, von der die Anfrage kommt, wie bei jedem Download.
 - Wenn Sie entfernte Rechner hinzufügen, verbindet sich sidekick über SSH mit ihnen, um ihre Signale zu lesen. Die Daten bleiben in der lokalen Datenbank.
+- **Frag deine KI** sendet nur dann Daten, wenn Sie in sidekick unter **Einstellungen**, Bereich **KI**, ein Sprachmodell einrichten, und nur, wenn Sie eine Frage stellen oder einen Vorschlag anfordern. sidekick sendet dann Ihre Frage und eine Zusammenfassung der Tage (Fenstertitel, Tickets, Sitzungstitel, die Namen Ihrer Themen und die Pfade geänderter Dateien, mit einem Buchungsexport auch Ihre Projekte und Buchungstexte) an dieses Modell, mit Ihrem API-Schlüssel und zu den Bedingungen des Anbieters. Die Daten gehen direkt von Ihrem Rechner an den Anbieter, nicht über time cockpit; mit einem lokalen Modell bleiben sie auf Ihrem Rechner. Jede Antwort zeigt unter **Was gesendet wurde**, was hinausging.
 
 ## Nutzungsdaten
 
@@ -83,17 +98,16 @@ Die Daten gehen an Microsoft Azure Application Insights in der Region North Euro
 - Die Adresse in der Anfrage zum Koppeln ist die, die Ihr Browser mit der Anfrage mitschickt, also die Adresse der anfragenden Seite. Eine Webseite kann nicht im Namen einer anderen Adresse anfragen, und anfragen können überhaupt nur die time cockpit Adressen, die sidekick kennt.
 - Der Kalender holt das Token einmal ab. Ein Token, das der Kalender nicht innerhalb einer Minute nach **Erlauben** abholt, wird wieder widerrufen, und eine Anfrage, die niemand beantwortet, verfällt nach zwei Minuten.
 - Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser und werden nur dort verarbeitet; sie werden nie an den time cockpit Server gesendet.
-- Außer dem Lesen schreibt der Kalender nur zwei Dinge an sidekick zurück: die Termine, die Sie ignorieren, mit Betreff und geplanten Zeiten, und die Signale, die Sie als Beleg für den Vorschlag ausschließen, mit der Schablone, für die Sie sie ausgeschlossen haben (die Kennungen und Namen etwa ihres Projekts und ihrer Aufgabe). sidekick speichert sie, damit der Kalender sie anzeigen und zurücknehmen kann. Beides ändert kein Signal.
 - Der Kalender liest Ihre Notizen genauso wie die Signale, ändert oder löscht sie aber nie. Notizen werden nur in sidekick bearbeitet und gelöscht.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.
-- Ein gekoppelter Kalender kann in sidekick genau eines ändern: die Farbe eines Arbeitsbereichs. Signale, Einstellungen oder anderes kann er weder ändern noch löschen.
+- Ein gekoppelter Kalender kann nur lesen. Signale, Notizen, Einstellungen oder anderes kann er weder ändern noch löschen.
 - Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen** unter **Gekoppelte Kalender** im Reiter **Koppeln**.
 
 ## Festlegen, was aufgezeichnet wird
 
 In sidekick unter **Einstellungen**:
 
-- Jede Quelle außer der Präsenz lässt sich abschalten: **Fenster**, **Dateien**, **Mikrofon**, **WLAN**, **Claude Code**, **Codex** und **Git**.
+- Jede Quelle außer der Anwesenheit lässt sich abschalten: **Fenster**, **Dateien**, **Mikrofon**, **WLAN**, **Claude Code**, **Codex**, **Copilot** und **Git**.
 - **Fenstertitel mitschreiben** im Bereich **Fenster** behält Anwendungsnamen und Zeiten, lässt aber alle Fenstertitel weg.
 - **Ausnahmen** im Bereich **Fenster** gelten für einzelne Anwendungen oder Fenster. **Nur Zeit, ohne Titel** behält die Zeit, lässt aber den Fenstertitel weg. **Nicht aufzeichnen** zeichnet gar nichts auf; die Zeit verschwindet aus dem Tag. Ausnahmen werden angewendet, bevor etwas gespeichert wird.
 - Standardmäßig werden Passwortmanager und private Browserfenster ohne ihre Titel aufgezeichnet, und das Fenster von sidekick selbst wird nicht aufgezeichnet. Der Kalender zeigt Fenster ohne Titel als **geschwärzt**.
@@ -111,7 +125,7 @@ Um die Aufzeichnung zu pausieren, verwenden Sie **Pause** im Menü des Symbols i
 
 Ihre Notizen bleiben bei jedem Löschen erhalten, außer Sie wählen **Notizen mitlöschen** (standardmäßig aus). Dann werden auch die Notizen gelöscht, die im gewählten Bereich beginnen, und **Alles löschen…** löscht alle Notizen. Die Rückfrage vor dem Löschen sagt, wie viele Notizen gelöscht werden oder dass die Notizen erhalten bleiben.
 
-sidekick zeigt vor dem Löschen, wie viele Zeilen gelöscht werden. Die Sicherungen, die einen gelöschten Tag enthalten, werden ebenfalls gelöscht, und gelöschte Zeilen werden in der Datenbankdatei überschrieben. Nach **Alles löschen…** liest sidekick keinen früheren Verlauf mehr ein: Claude-Code- und Codex-Sessions und Git-Repositorys werden erst ab dann aufgezeichnet, auch Repositorys, die es später findet.
+sidekick zeigt vor dem Löschen, wie viele Zeilen gelöscht werden. Die Sicherungen, die einen gelöschten Tag enthalten, werden ebenfalls gelöscht, und gelöschte Zeilen werden in der Datenbankdatei überschrieben. Nach **Alles löschen…** liest sidekick keinen früheren Verlauf mehr ein: Sessions von Claude Code, Codex und Copilot und Git-Repositorys werden erst ab dann aufgezeichnet, auch Repositorys, die es später findet.
 
 Die Deinstallation von sidekick löscht den Datenordner nicht.
 

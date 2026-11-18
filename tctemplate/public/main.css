@@ -110,51 +110,117 @@ header.bg-body {
   --bs-btn-border-radius: 25px;
 }
 
-/* Download call to action in articles: <p class="tc-download"><a class="btn btn-primary btn-lg"><i class="bi bi-download"></i>Text</a></p>
-   Several buttons in one paragraph sit in a centred row and wrap on narrow screens. */
-article .tc-download {
+/* Download block for an installer per platform (sidekick installation pages), like the download section of
+   www.timecockpit.com/sidekick. main.js picks the button for this computer (data-choice); the markup is described
+   there. Between two rules: the button and one sentence, the other installers as links, a hint where needed. */
+article .tc-dl {
+  margin: 1.5rem 0 2rem;
+  padding: 1.25rem 0;
+  border-top: 2px solid var(--bs-emphasis-color);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* until main.js has chosen, the block keeps its space but shows nothing, so a Mac or a phone never sees the
+   Windows button first; without JavaScript (no html.tc-js) everything shows at once */
+html.tc-js article .tc-dl:not([data-choice]) > * {
+  visibility: hidden;
+}
+
+article .tc-dl [hidden] {
+  display: none !important;
+}
+
+article .tc-dl-top {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
+  align-items: center;
+  gap: 0.75rem 2rem;
 }
 
-/* Buttons that belong together (for example the two macOS downloads) wrap as one unit */
-article .tc-download-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
+/* no installer runs here: the empty button column must not leave a gap in front of the sentence */
+article .tc-dl[data-choice="none"] .tc-dl-top > div {
+  display: none;
 }
 
-article .tc-download .btn-outline-primary {
-  --bs-btn-color: var(--tc-green);
-  --bs-btn-border-color: var(--tc-green);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: var(--tc-green);
-  --bs-btn-hover-border-color: var(--tc-green);
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: var(--tc-green-hover);
-  --bs-btn-active-border-color: var(--tc-green-hover);
-  --bs-btn-border-radius: 25px;
-}
-
-article .tc-download .btn {
+article .tc-dl-main {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
   max-width: 100%;
-  text-align: center;
-  padding: 0.75rem 2rem;
+  padding: 0.7rem 1.6rem 0.7rem 1.3rem;
+  text-align: left;
   font-weight: 600;
   text-decoration: none;
 }
 
-/* docfx marks absolute links as .external and appends an arrow icon; a download button has its own icon */
-article .tc-download .btn.external::after {
+article .tc-dl-main > .bi {
+  flex: none;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+article .tc-dl-main small {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+article .tc-dl-side {
+  flex: 1 1 16rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--bs-secondary-color);
+}
+
+article .tc-dl-others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1rem 1.1rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  color: var(--bs-secondary-color);
+}
+
+article .tc-dl-others a {
+  padding-block: 0.3rem;
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+article .tc-dl-hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--bs-secondary-color);
+}
+
+/* on a phone or a desktop without an installer the hint comes first: it says why there is no button */
+article .tc-dl-hint-first {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bs-body-color);
+}
+
+article .tc-dl a:focus-visible {
+  outline: 3px solid rgb(var(--bs-link-color-rgb));
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+/* docfx marks absolute links as .external and appends an arrow icon; a download has its own icon */
+article .tc-dl a.external::after {
   content: none;
+}
+
+/* on a phone the label gets its own line, so the links do not break apart */
+@media (max-width: 575.98px) {
+  article .tc-dl-others > span {
+    flex-basis: 100%;
+  }
 }
 
 /* --- Article typography ----------------------------------------------------------- */
