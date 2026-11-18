@@ -6,7 +6,7 @@ en_page: doc/sidekick/agents-tab.md
 # Der Reiter Agenten in sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur mit `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in der Preview-Umgebung (`https://web-preview.timecockpit.com`) und im Release Candidate (RC, unter `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Wenn Sie mit mehreren Claude-Code- oder Codex-Sessions gleichzeitig arbeiten, wartet oft eine davon auf Sie: Sie stellt eine Frage, sie ist fertig, oder sie ist mittendrin stehen geblieben. Der Reiter **Agenten** in sidekick zeigt die Sessions auf Ihrem Rechner danach, wer am Zug ist. So sehen Sie auf einen Blick, welche Session Sie braucht und welche noch arbeiten.
 

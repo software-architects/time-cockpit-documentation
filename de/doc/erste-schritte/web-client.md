@@ -40,7 +40,7 @@ Wenn Sie Fragen zu Signal Trackern oder zu den Anpassungsmöglichkeiten von time
 
 ## Release-Plan
 
-Wir bieten drei verschiedene time cockpit-Umgebungen an:
+Wir bieten vier verschiedene time cockpit-Umgebungen an:
 
 ### Dev: <https://web-dev.timecockpit.com>
 
@@ -49,6 +49,10 @@ Dies ist eine experimentelle Version, die wir laufend mit neuen Releases aktuali
 ### Preview: <https://web-preview.timecockpit.com>
 
 In dieser Umgebung veröffentlichen wir Preview-Releases. Zwischen dem 10. und dem Ende jedes Monats kann das Preview-Release instabil sein. Es ist aber trotzdem deutlich stabiler als Dev. Zwischen dem 1. und dem 9. jedes Monats sollte sich die Preview-Umgebung nicht ändern. Sie enthält dann den Release Candidate für die kommende Version. Nutzen Sie diesen Zeitraum, um Ihr Team vorzubereiten und uns Feedback zu geben. Zwischen dem 1. und dem 9. aktualisieren wir Preview nur, wenn es unbedingt notwendig ist.
+
+### Release Candidate (RC): <https://web.timecockpit.com>
+
+Etwa ein bis zwei Wochen nach einem Preview-Release schalten wir es als Release Candidate (RC) frei. Benutzer der RC-Umgebung öffnen time cockpit unter derselben Adresse wie Prod. In der RC-Umgebung arbeiten deutlich mehr Benutzer als in Preview.
 
 ### Prod: <https://web.timecockpit.com>
 
