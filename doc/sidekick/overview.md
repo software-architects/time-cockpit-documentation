@@ -43,7 +43,7 @@ The main differences:
 - sidekick is a separate app. You do not need the full client.
 - sidekick keeps its signals on your computer. The calendar reads them directly from sidekick and processes them only in your browser; they are not sent to the time cockpit server.
 
-The calendar shows signals from only one source at a time. In the calendar settings under **Signals** you choose either **Do not show signals**, **Show signals of the classic time cockpit signal tracker** or **Show signals of time cockpit sidekick**.
+The calendar shows signals from only one source at a time. In the calendar settings under **Signals** you choose **None**, **time cockpit sidekick** or **Classic signal tracker**. In a browser in which the calendar has no settings stored yet, sidekick is the signal source already.
 
 ## Requirements
 

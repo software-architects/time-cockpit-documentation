@@ -7,7 +7,7 @@ description: Download and install time cockpit sidekick on Windows or macOS, pai
 > [!WARNING]
 > Early preview: time cockpit sidekick is in an early preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11; the macOS version is still being tested. During the preview, sidekick works only with `https://web-preview.timecockpit.com`. Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
-Setting up time cockpit sidekick takes three steps: install sidekick, click **Pair with sidekick** in the settings of the Time Sheet Calendar, and confirm the question in sidekick with **Allow**.
+Setting up time cockpit sidekick takes three steps: install sidekick, click **Pair with sidekick** in the right pane of the Time Sheet Calendar, and confirm the question in sidekick with **Allow**. The right pane of the calendar guides you through these steps.
 
 ## Install sidekick
 
@@ -17,7 +17,7 @@ sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel).
 
 ### Install on Windows
 
-1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The calendar settings link to the same file (**Download sidekick**).
+1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The right pane of the calendar offers the same file on Windows (**Download for Windows**); on other systems its link **Go to the download** opens this page.
 2. Run the installer. It installs sidekick for your Windows user only, needs no administrator rights and asks no questions. The program goes to `%LOCALAPPDATA%\TimeCockpit.Sidekick`, and a Start menu entry is added.
 3. Windows SmartScreen may warn about the installer, because sidekick is a new program. The installer is signed. To continue, click **More info** and then **Run anyway**.
 4. After the installation sidekick starts, switches on its autostart and opens its window. Its icon, the time cockpit logo, appears in the notification area of the taskbar (possibly hidden under the arrow). A banner at the top of the window asks whether sidekick may send usage data; nothing is sent until you agree (see [Usage Data](privacy-and-data.md#usage-data)).
@@ -62,19 +62,19 @@ The calendar may read the signals only with a token that sidekick created for th
 
 1. Start sidekick on the computer on which you use time cockpit in the browser.
 2. Open the Time Sheet Calendar in the time cockpit web client at `https://web-preview.timecockpit.com`, in a browser on the same computer.
-3. Open the gear **Settings**.
-4. Under **Signals**, choose **Show signals of time cockpit sidekick**.
-5. Click **Pair with sidekick**. The calendar looks for sidekick on this computer and asks it. Your browser may first ask whether the page may access devices on the local network. Allow it; otherwise the browser blocks the connection to sidekick.
-6. While the calendar waits, it asks you to confirm in sidekick with “Allow” and names the address from which sidekick shows the request. **Cancel** stops the pairing.
+3. In a browser in which the calendar has no settings stored yet, sidekick is the signal source of the calendar already. Otherwise open the gear **Settings**, choose **time cockpit sidekick** under **Signals** and click **Set up in the pane**: the calendar saves the settings, closes the dialog and goes to the right pane.
+4. The right pane asks **What did you work on today?** and shows two steps: **Install sidekick** and **Pair the calendar**. If sidekick is not installed yet, install it first: on Windows, **Download for Windows** downloads the installer; on other systems, **Go to the download** opens this page.
+5. Under **Pair the calendar**, click **Pair with sidekick**. The calendar looks for sidekick on this computer and asks it. Your browser may first ask whether the page may access devices on the local network. Allow it; the calendar needs it to reach sidekick.
+6. While the calendar waits, it says **Click “Allow” in the sidekick window.** Below, it names the address the window shows and that the request is valid for two minutes, and where the sidekick icon is if no window appears. **Cancel** stops the pairing and withdraws the question from sidekick.
 7. In sidekick, check the question and click **Allow** (see [The Question in sidekick](#the-question-in-sidekick)).
 
-The calendar receives the token, saves it together with the address of sidekick and says **Paired with sidekick.** The signals appear right away; there is nothing to copy.
+The calendar receives the token, saves it together with the address of sidekick and says **Paired. Your signals now appear in the calendar.** The right pane then shows the signals; there is nothing to copy.
 
 The calendar shows signals from only one source at a time. If you pair sidekick, the signals of the [classic signal tracker](~/doc/signal-tracker/overview.md) are no longer shown.
 
 ### The Question in sidekick
 
-sidekick shows the question in a small window in front of the other windows, at the bottom right of the screen with the mouse pointer, also when sidekick runs only as an icon in the notification area or in the menu bar. A notification announces it as well. The same question appears as a card at the top of the tab **Pairing**.
+sidekick shows the question in a small window in front of the other windows, at the bottom right of the screen with the mouse pointer, also when sidekick runs only as an icon in the notification area or in the menu bar. The same question appears as a card at the top of the tab **Pairing**.
 
 - **time cockpit wants to pair**, with the environment for an address other than `https://web.timecockpit.com`, for example **Preview**.
 - What the calendar can do with the pairing, and that you can revoke it at any time under **Pairing**.
@@ -82,20 +82,22 @@ sidekick shows the question in a small window in front of the other windows, at 
 - The address that asks, the browser, the time of the question and a countdown. The address is the one your browser sends with the question, that is, the address of the page on which **Pair with sidekick** was clicked.
 - **Allow** and **Decline**.
 
-Answering in either place closes both. Closing the small window (or pressing **Esc**) only hides it: the question waits in the tab **Pairing** until you answer it or it expires after two minutes. Only **Allow** creates a token. It is labelled with the browser the question named, and the calendar picks it up by itself.
+Answering in either place closes both. Closing the small window (or pressing **Esc**) only hides it: the question waits in the tab **Pairing** until you answer it or it expires after two minutes. If the calendar cancels the pairing or starts a new one, a current sidekick removes the question at once; an older one lets it expire. Only **Allow** creates a token. It is labelled with the browser the question named, and the calendar picks it up by itself. If the token does not reach the calendar on the first try, the calendar gets it with its next question; a token that no calendar picks up within a minute is revoked again.
 
-What the calendar says when the pairing does not complete:
+What the calendar says when the pairing does not complete at once:
 
 | What the calendar says | What to do |
 |---|---|
-| Looking for sidekick on this computer … | Wait a moment. |
-| sidekick is not running on this computer. Install or start it – the calendar keeps looking. | Start sidekick, or [install it](#install-sidekick). The calendar asks as soon as sidekick runs. |
-| Declined in sidekick. | Click **Pair with sidekick** again if you want to pair. |
-| No answer in sidekick – the request expired. Try again. | Click **Pair with sidekick** again and answer the question in sidekick within two minutes. |
-| The browser does not let this page reach sidekick. Allow local network access in the site settings of the browser. | Allow the local network access for the time cockpit page in the site settings of the browser, then click **Pair with sidekick** again. |
-| This version of sidekick cannot pair in one click yet. Update sidekick or pair manually. | Update sidekick (see [Autostart and Updates](#autostart-and-updates)), or [pair manually](#pair-manually-with-address-and-token). |
-| sidekick does not allow … Update sidekick or pair manually. | sidekick does not know the address of this page. Update sidekick, or add the address in the [manual pairing](#pair-manually-with-address-and-token). |
-| Pairing did not work. Try again or pair manually. | Click **Pair with sidekick** again, or [pair manually](#pair-manually-with-address-and-token). |
+| Looking for sidekick … | Wait a moment. |
+| sidekick was not found. Install or start sidekick. The calendar keeps looking. | Start sidekick, or [install it](#install-sidekick). The calendar asks as soon as sidekick runs. |
+| The calendar cannot reach sidekick. Either another app answers in its place, or sidekick does not accept … Install, start or update sidekick. The calendar keeps looking. (In place of … the calendar names its own address.) | Another program uses the ports of sidekick, or sidekick does not know the address of this page. Install or start sidekick, or update it. |
+| sidekick already shows other questions to pair. Answer them in the sidekick window; the calendar keeps asking. | Answer the waiting questions in sidekick, or wait until they expire. The calendar asks again by itself. |
+| Declined in sidekick. You can try again at any time. | Click **Pair with sidekick** again if you want to pair. |
+| The request expired after two minutes. Try again. | Click **Pair with sidekick** again and answer the question in sidekick within two minutes. |
+| The browser blocks access to sidekick. Click the icon to the left of the address bar and allow access to the local network. Then try again. | Allow the local network access for the time cockpit page in the site settings of the browser, then click **Pair with sidekick** again. |
+| This sidekick version is too old to pair in one click. Update sidekick, or pair manually under Calendar › Settings › Signals. | Update sidekick (see [Autostart and Updates](#autostart-and-updates)), or [pair manually](#pair-manually-with-address-and-token). |
+| sidekick does not accept … Update sidekick, or pair manually under Calendar › Settings › Signals. | sidekick does not know the address of this page. Update sidekick, or add the address in the [manual pairing](#pair-manually-with-address-and-token). |
+| Pairing failed. Try again, or pair manually under Calendar › Settings › Signals. | Click **Pair with sidekick** again, or [pair manually](#pair-manually-with-address-and-token). |
 
 ### Start From sidekick
 
@@ -103,7 +105,7 @@ As long as no calendar is paired, the tab **Pairing** in sidekick shows the card
 
 If you use Preview or a sandbox, open your address as usual and click **Pair with sidekick** in the calendar instead. During the preview, this is `https://web-preview.timecockpit.com`.
 
-To pair another browser later, open the calendar in that browser and click **Pair with sidekick** under **Settings**.
+To pair another browser later, open the calendar in that browser and click **Pair with sidekick** in the right pane.
 
 ### Addresses and Environments
 
@@ -130,7 +132,7 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 
 1. Open the Time Sheet Calendar in the time cockpit web client at `https://web-preview.timecockpit.com`, in a browser on the same computer.
 2. Open the gear **Settings**.
-3. Under **Signals**, choose **Show signals of time cockpit sidekick**.
+3. Under **Signals**, choose **time cockpit sidekick**.
 4. Unfold **Pair manually with address and token**.
 5. Paste the address into **Address of sidekick** and the token into **Token**.
 6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device.
@@ -138,24 +140,40 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 
 Your browser may ask whether the time cockpit page may access devices in your local network. Allow it; otherwise the browser blocks the connection to sidekick.
 
+### sidekick in the Calendar Settings
+
+Under **Signals** in the calendar settings you choose the signal source: **None**, **time cockpit sidekick** or **Classic signal tracker**. Next to **time cockpit sidekick**, **More about sidekick** opens the [overview](overview.md). The settings do not pair; under the choice they show the state of the pairing:
+
+- **Not paired yet**: the note that the right pane guides you through installing and pairing, and **Set up in the pane**. The button saves the settings with sidekick as the source, closes the dialog and goes to the right pane.
+- **Paired with sidekick**: with a status after it when sidekick does not answer, and **Remove pairing**. Removing the pairing deletes the token in this browser at once; the calendar then says that the pairing is removed in this browser only. To revoke the pairing altogether, use the tab **Pairing** in sidekick (see [Revoke a Paired Calendar](#revoke-a-paired-calendar)).
+- **Pairing no longer valid**: sidekick no longer accepts this browser. **Go to pairing** leads to the right pane, where you pair again; **Remove pairing** deletes the token in this browser.
+- While a pairing runs in the right pane, the settings show what it waits for.
+
+**Pair manually with address and token** stays folded below; see [Pair Manually With Address and Token](#pair-manually-with-address-and-token).
+
+### Hide the sidekick Pane
+
+If you do not want to use sidekick, click **Hide the pane** at the bottom of the right pane, below **Rather work without sidekick?**. The calendar then stops reading sidekick and the pane disappears; sidekick itself keeps running and recording. A message offers **Undo**. To show the pane again later, open the gear **Settings**, choose **time cockpit sidekick** under **Signals** and click **Save**.
+
 ## Connection Status in the Calendar
 
-At the top right of the right pane of the calendar, a status shows whether the calendar reaches sidekick. If it does not, the right pane explains why. For a missing or wrong token and when sidekick is not running, it also offers the button **Pair with sidekick**.
+At the top right of the right pane of the calendar, a status shows whether the calendar reaches sidekick. If it does not, the right pane explains why and offers **Pair with sidekick**.
 
-| Status | What the calendar says | What to do |
+| Status | What the right pane says | What to do |
 |---|---|---|
+| **Not paired yet** | What did you work on today? sidekick knows. … with the steps **Install sidekick** and **Pair the calendar**. | Install sidekick if needed and click **Pair with sidekick** (see [Pair in One Click](#pair-in-one-click)). |
 | **sidekick connected** | — | Nothing. The calendar reads the signals. |
 | **Connecting to sidekick …** | — | Wait a moment. |
-| **sidekick not running** | Start time cockpit sidekick on this computer. The calendar connects on its own once it runs. | Start sidekick, for example from the Start menu. If the calendar is not paired yet, click **Pair with sidekick**. |
-| **Token does not match sidekick** | The token in the calendar settings is missing or does not match sidekick. Pair the calendar with sidekick: click below, then “Allow” in sidekick. | Click **Pair with sidekick** in the right pane, then **Allow** in sidekick. |
-| **Token belongs to another address** | The token was paired for another address. Pair … again – with “Pair with sidekick” it takes one click. (In place of … the calendar names its own address.) | Click **Pair with sidekick** in the right pane, then **Allow** in sidekick. |
-| **Browser blocks sidekick** | sidekick runs, but the browser does not let this page reach it. Allow the page to access the local network, or pair this address in sidekick. | Allow the browser's local network access for the time cockpit page. If that does not help, add exactly the address of this page in the [manual pairing](#pair-manually-with-address-and-token) in sidekick. |
+| **sidekick not answering** | Start sidekick on this computer. The calendar then finds sidekick on its own. If sidekick is already running, pair again. | Start sidekick, for example from the Start menu. If it is running already, another program may use its port: click **Pair with sidekick**. |
+| **Pairing no longer valid** | sidekick no longer accepts this browser, for example because the pairing was revoked there. Pair again and click “Allow” in sidekick. | Click **Pair with sidekick** in the right pane, then **Allow** in sidekick. |
+| **Paired for another address** | The pairing does not cover … Pair again and click “Allow” in sidekick. (In place of … the calendar names its own address.) | Click **Pair with sidekick** in the right pane, then **Allow** in sidekick. |
+| **Browser blocks sidekick** | Click the icon to the left of the address bar and allow access to the local network. | Allow the browser's local network access for the time cockpit page, or click **Pair with sidekick**: the browser then asks for the access. |
 
-sidekick answers only addresses that are in its list of addresses. For any other address it does not give the browser permission to read the answer (CORS), so the browser blocks it, just as it does when local network access is denied. That is why adding the address can fix **Browser blocks sidekick**. Only an address in this list can ask to pair in one click. If the address is in the list but the token was created for another address, the calendar shows **Token belongs to another address** instead.
+sidekick answers only addresses that are in its list of addresses. For any other address it does not give the browser permission to read the answer (CORS), so the browser blocks it. If the browser has allowed the time cockpit page to access the local network, such an unreadable answer comes from another program on the port of sidekick or from a sidekick that does not know the address; the calendar then shows **sidekick not answering**. As long as the browser has not allowed the access, or does not say whether it has, the calendar shows **Browser blocks sidekick**. Only an address in the list of sidekick can ask to pair in one click. If the address is in the list but the token was created for another address, the calendar shows **Paired for another address** instead.
 
-The calendar retries **sidekick not running** and **Browser blocks sidekick** on its own, at first after 15 seconds and then less often, up to every five minutes. After a token problem it does not retry; click **Pair with sidekick** and confirm the question in sidekick.
+The calendar retries **sidekick not answering** and **Browser blocks sidekick** on its own, at first after 15 seconds and then less often, up to every five minutes. After a token problem it does not retry; click **Pair with sidekick** and confirm the question in sidekick.
 
-If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The calendar looks for sidekick on port 41337 and the next nine ports, both when it pairs and when a paired sidekick no longer answers at the saved address; it then saves the new address itself, so there is nothing to enter again. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick** under **Pair manually with address and token**. If you set a port outside this range under **Port and technical details** in the tab **Pairing**, enter the new address in the [manual pairing](#pair-manually-with-address-and-token) of the calendar.
+If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The calendar looks for sidekick on port 41337 and the next nine ports when it pairs. When a paired sidekick no longer answers at the saved address, the calendar looks for it there as well and recognises it by a proof of its token for that port, without sending the token; it then saves the new address itself, so there is nothing to enter again. This needs a current sidekick; with an older one, click **Pair with sidekick** in the right pane. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick** under **Pair manually with address and token**. If you set a port outside this range under **Port and technical details** in the tab **Pairing**, enter the new address in the [manual pairing](#pair-manually-with-address-and-token) of the calendar.
 
 ## The Tray Icon Menu
 
