@@ -42,7 +42,7 @@ Both servers can be registered side by side under different names.
 ## Start Command
 
 ```powershell
-%OnCockpitAdminBinary% --mcp [-c <configuration>]
+& $env:OnCockpitAdminBinary --mcp [-c <configuration>]
 ```
 
 | Option | Meaning |
@@ -61,12 +61,12 @@ You normally do not run this command by hand. The client starts the process when
 
 ## Register the Server
 
-The examples use a configuration named `test`. Clients that cannot expand an environment variable in the command start the server through `cmd /c`, which expands `%OnCockpitAdminBinary%` each time the server starts.
+The examples use a configuration named `test`. Clients that cannot expand an environment variable in the command start the server through `cmd /v:on /c !OnCockpitAdminBinary!`. `cmd` reads the variable each time the server starts, and this form also works when the path contains spaces, for example in a user name such as `Jane Doe`.
 
 ### Claude Code
 
 ```powershell
-claude mcp add timecockpit-local --scope user -- cmd /c %OnCockpitAdminBinary% -c test --mcp
+claude mcp add timecockpit-local --scope user -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
 Or in a project's `.mcp.json`, so the whole team gets the server:
@@ -106,7 +106,7 @@ VS Code shows the server in the Copilot Chat **MCP Servers** pane with **Start**
 ### OpenAI Codex
 
 ```powershell
-codex mcp add timecockpit-local -- cmd /c %OnCockpitAdminBinary% -c test --mcp
+codex mcp add timecockpit-local -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
 This writes a `[mcp_servers.timecockpit-local]` entry with `command` and `args` to `%USERPROFILE%\.codex\config.toml`.
@@ -120,7 +120,7 @@ Claude Desktop starts stdio servers from `%APPDATA%\Claude\claude_desktop_config
   "mcpServers": {
     "timecockpit-local": {
       "command": "cmd",
-      "args": ["/c", "%OnCockpitAdminBinary%", "-c", "test", "--mcp"]
+      "args": ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
     }
   }
 }

@@ -43,7 +43,7 @@ Beide Server können unter unterschiedlichen Namen nebeneinander registriert wer
 ## Startbefehl
 
 ```powershell
-%OnCockpitAdminBinary% --mcp [-c <configuration>]
+& $env:OnCockpitAdminBinary --mcp [-c <configuration>]
 ```
 
 | Option | Bedeutung |
@@ -62,12 +62,12 @@ Normalerweise führen Sie diesen Befehl nicht von Hand aus. Der Client startet d
 
 ## Server registrieren
 
-Die Beispiele verwenden eine Konfiguration namens `test`. Clients, die im Befehl keine Umgebungsvariable auflösen, starten den Server über `cmd /c`, das `%OnCockpitAdminBinary%` bei jedem Start des Servers auflöst.
+Die Beispiele verwenden eine Konfiguration namens `test`. Clients, die im Befehl keine Umgebungsvariable auflösen, starten den Server über `cmd /v:on /c !OnCockpitAdminBinary!`. `cmd` liest die Variable bei jedem Start des Servers, und diese Form funktioniert auch, wenn der Pfad Leerzeichen enthält, etwa in einem Benutzernamen wie `Jane Doe`.
 
 ### Claude Code
 
 ```powershell
-claude mcp add timecockpit-local --scope user -- cmd /c %OnCockpitAdminBinary% -c test --mcp
+claude mcp add timecockpit-local --scope user -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
 Oder in der `.mcp.json` eines Projekts, damit das ganze Team den Server erhält. Verwenden Sie für den Pfad eine Umgebungsvariable, wenn Teammitglieder unterschiedliche Benutzernamen haben:
@@ -107,7 +107,7 @@ VS Code zeigt den Server im Bereich **MCP Servers** von Copilot Chat mit **Start
 ### OpenAI Codex
 
 ```powershell
-codex mcp add timecockpit-local -- cmd /c %OnCockpitAdminBinary% -c test --mcp
+codex mcp add timecockpit-local -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
 Das schreibt einen Eintrag `[mcp_servers.timecockpit-local]` mit `command` und `args` in `%USERPROFILE%\.codex\config.toml`.
@@ -121,7 +121,7 @@ Claude Desktop startet stdio-Server aus `%APPDATA%\Claude\claude_desktop_config.
   "mcpServers": {
     "timecockpit-local": {
       "command": "cmd",
-      "args": ["/c", "%OnCockpitAdminBinary%", "-c", "test", "--mcp"]
+      "args": ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
     }
   }
 }
