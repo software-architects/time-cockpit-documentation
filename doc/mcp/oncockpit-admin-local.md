@@ -105,11 +105,16 @@ VS Code shows the server in the Copilot Chat **MCP Servers** pane with **Start**
 
 ### OpenAI Codex
 
-```powershell
-codex mcp add timecockpit-local -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
+Add the server to `%USERPROFILE%\.codex\config.toml`:
+
+```toml
+[mcp_servers.timecockpit-local]
+command = "cmd"
+args = ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
+env_vars = ["OnCockpitAdminBinary"]
 ```
 
-This writes a `[mcp_servers.timecockpit-local]` entry with `command` and `args` to `%USERPROFILE%\.codex\config.toml`.
+Codex starts MCP servers with a reduced environment and passes on only the variables listed in `env_vars`, so the entry must name `OnCockpitAdminBinary` there. `codex mcp add` cannot set `env_vars`, so edit the file directly.
 
 ### Claude Desktop
 
