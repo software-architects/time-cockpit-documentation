@@ -94,11 +94,14 @@ Die Daten gehen an Microsoft Azure Application Insights in der Region North Euro
 
 - sidekick antwortet nur unter `127.0.0.1`. Andere Rechner im Netzwerk können es nicht erreichen.
 - Jede time cockpit Adresse, zum Beispiel `https://web-preview.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
+- Ein Token entsteht nur durch einen Klick auf **Erlauben** in sidekick, wenn der Kalender um eine Kopplung bittet, oder beim manuellen Koppeln im Reiter **Koppeln**. Ohne diesen Klick kann nichts außerhalb von sidekick ein Token erstellen.
+- Die Adresse in der Anfrage zum Koppeln ist die, die Ihr Browser mit der Anfrage mitschickt, also die Adresse der anfragenden Seite. Eine Webseite kann nicht im Namen einer anderen Adresse anfragen, und anfragen können überhaupt nur die time cockpit Adressen, die sidekick kennt.
+- Der Kalender holt das Token einmal ab. Ein Token, das der Kalender nicht innerhalb einer Minute nach **Erlauben** abholt, wird wieder widerrufen, und eine Anfrage, die niemand beantwortet, verfällt nach zwei Minuten.
 - Der Kalender fragt die Signale direkt aus Ihrem Browser ab. Die Signale gehen von sidekick direkt an Ihren Browser und werden nur dort verarbeitet; sie werden nie an den time cockpit Server gesendet.
 - Der Kalender liest Ihre Notizen genauso wie die Signale, ändert oder löscht sie aber nie. Notizen werden nur in sidekick bearbeitet und gelöscht.
 - Der Reiter **Koppeln** in sidekick zeigt ein Zugriffsprotokoll der letzten Anfragen, und **Widerrufen** entzieht einem gekoppelten Kalender den Zugriff.
 - Ein gekoppelter Kalender kann nur lesen. Signale, Notizen, Einstellungen oder anderes kann er weder ändern noch löschen.
-- Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie im Reiter **Koppeln** die Option **Gekoppelte Kalender dürfen lesen**.
+- Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie **Gekoppelte Kalender dürfen lesen** unter **Gekoppelte Kalender** im Reiter **Koppeln**.
 
 ## Festlegen, was aufgezeichnet wird
 

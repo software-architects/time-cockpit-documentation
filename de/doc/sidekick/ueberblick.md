@@ -50,7 +50,7 @@ Die wichtigsten Unterschiede:
 - sidekick ist eine eigene App. Sie brauchen den Fullclient nicht.
 - sidekick behält seine Signale auf Ihrem Rechner. Der Kalender liest sie direkt von sidekick und verarbeitet sie nur in Ihrem Browser; sie werden nicht an den time cockpit Server gesendet.
 
-Der Kalender zeigt Signale immer nur aus einer Quelle an. In den Einstellungen des Kalenders wählen Sie unter **Signale** entweder **Keine Signale anzeigen**, **Signale vom klassischen time cockpit Signaltracker anzeigen** oder **Signale von time cockpit sidekick anzeigen**.
+Der Kalender zeigt Signale immer nur aus einer Quelle an. In den Einstellungen des Kalenders wählen Sie unter **Signale** **Keine**, **time cockpit sidekick** oder **Klassischer Signaltracker**. In einem Browser, in dem der Kalender noch keine Einstellungen gespeichert hat, ist sidekick bereits die Signalquelle.
 
 ## Voraussetzungen
 
