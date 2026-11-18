@@ -1,6 +1,6 @@
 ---
 title: Notizen mit time cockpit sidekick
-description: Halten Sie mit time cockpit sidekick in einer Notiz fest, woran Sie arbeiten, beenden Sie sie wie eine Stoppuhr und buchen Sie sie später im Zeiterfassungskalender. Preview.
+description: Halten Sie mit time cockpit sidekick fest, woran Sie arbeiten, beenden Sie die Notiz wie eine Stoppuhr und buchen Sie sie im Kalender. Preview.
 en_page: doc/sidekick/notes.md
 ---
 # Notizen mit sidekick

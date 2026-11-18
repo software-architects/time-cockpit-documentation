@@ -16,20 +16,20 @@ Die Signale erscheinen nur in Ihrem eigenen Kalender.
 
 ## Was sidekick aufzeichnet
 
-Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien auf. Frühere Aktivität liest es einmalig ebenfalls ein: alle Claude-Code- und Codex-Sessions, die bereits auf Ihrem Rechner liegen, und die Commits der letzten 90 Tage jedes Git-Repositorys, das es findet. Jede Quelle außer der Präsenz lässt sich in sidekick unter **Einstellungen** abschalten.
+Ab der Installation zeichnet sidekick alle Quellen außer geänderten Dateien auf. Frühere Aktivität liest es einmalig ebenfalls ein: alle Sessions von Claude Code, Codex und GitHub Copilot, die bereits auf Ihrem Rechner liegen, und die Commits der letzten 90 Tage jedes Git-Repositorys, das es findet. Jede Quelle außer der Anwesenheit lässt sich in sidekick unter **Einstellungen** abschalten.
 
 | Signal | Standard | Was aufgezeichnet wird |
 |---|---|---|
-| Präsenz und Aktivität | Immer an | Wann der Rechner lief, wann Sie ihn benutzt haben (aus dem Abstand zwischen Ihren Eingaben, nicht aus dem, was Sie tippen) und wann er gesperrt war. |
+| Anwesenheit und Aktivität | Immer an | Wann der Rechner lief, wann Sie ihn benutzt haben (aus dem Abstand zwischen Ihren Eingaben, nicht aus dem, was Sie tippen) und wann er gesperrt war. |
 | Vordergrundfenster | An | Welche Anwendung im Vordergrund war, wie lange, und ihr Fenstertitel. Fenstertitel lassen sich abschalten, und Ausnahmeregeln zeichnen ein Fenster ohne Titel oder gar nicht auf. |
 | Geänderte Dateien | Aus | Welche Dateien sich in den von Ihnen gewählten Ordnern ändern, nie ihr Inhalt. Beobachtet wird erst, wenn Sie die Quelle einschalten und Ordner wählen. |
 | Git | An | Zeit und Nachricht von Commits und Branchwechseln. sidekick sucht Repositorys in `%USERPROFILE%\source\repos`, falls es diesen Ordner gibt, und in den Ordnern, die Sie unter **Ordner mit Repositorys** hinzufügen. Kein Code. |
-| Claude-Code- und Codex-Sessions | An | Wann und in welchem Projekt Sie mit Claude Code oder Codex gearbeitet haben, samt Tokenverbrauch. Vom Text Ihrer Prompts höchstens der Anfang des ersten Prompts, als Name der Session. |
+| Sessions von Claude Code, Codex und GitHub Copilot | An | Wann und in welchem Projekt Sie mit Claude Code, Codex oder GitHub Copilot gearbeitet haben, samt Tokenverbrauch. Vom Text Ihrer Prompts nur der Anfang des ersten Prompts (höchstens 200 Zeichen), der die Session benennt. |
 | Mikrofon | An | Welche Anwendung das Mikrofon benutzt, niemals Ton. |
-| WLAN | An | Die Namen des verbundenen WLANs und der WLANs in Reichweite, mit ihrer Signalstärke, nie eine Hardware-Adresse. |
+| WLAN | An | Die Namen des verbundenen WLANs und der WLANs in Reichweite, mit ihrer Signalstärke, nie eine Hardware-Adresse. Unter macOS nur das verbundene WLAN. |
 | SSH-Anmeldungen | Nur für hinzugefügte Rechner | Interaktive SSH-Anmeldungen auf Linux-Rechnern, die Sie in den Einstellungen von sidekick als entfernte Rechner hinzufügen. |
 
-sidekick kann auch Linux-Rechner auslesen, auf denen Sie über SSH arbeiten, zum Beispiel einen Entwicklungsserver: deren Commits, Claude-Code- und Codex-Sessions, Dateiänderungen und SSH-Anmeldungen. Auf diesem Rechner wird nichts installiert; sidekick verwendet Ihre eigene OpenSSH-Konfiguration und speichert keine Zugangsdaten.
+sidekick kann auch Linux-Rechner auslesen, auf denen Sie über SSH arbeiten, zum Beispiel einen Entwicklungsserver: deren Commits, Sessions von Claude Code, Codex und Copilot, Dateiänderungen und SSH-Anmeldungen. Auf diesem Rechner wird nichts installiert; sidekick verwendet Ihre eigene OpenSSH-Konfiguration und speichert keine Zugangsdaten.
 
 Was sidekick nie aufzeichnet, wo die Daten gespeichert werden und wie Sie sie löschen, beschreibt [Datenschutz und Daten in sidekick](~/doc/sidekick/datenschutz-und-daten.md).
 

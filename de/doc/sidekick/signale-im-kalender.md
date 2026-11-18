@@ -1,6 +1,6 @@
 ---
 title: sidekick-Signale im Zeiterfassungskalender
-description: So zeigt der Zeiterfassungskalender die Signale von time cockpit sidekick - Aktivitätsband, Detailspuren, Notizen, Schlagwörter und Buchungsvorschläge.
+description: So zeigt der Zeiterfassungskalender die Signale von time cockpit sidekick - Aktivitätsband, Detailspuren, Notizen, Schlagwörter und der Vorschlag nach Themen.
 en_page: doc/sidekick/calendar-signals.md
 ---
 # sidekick-Signale im Zeiterfassungskalender
@@ -26,24 +26,40 @@ In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines 
 
 ## Detailspuren in der Tagesansicht
 
-In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen. Der Kopf der Spuren gruppiert sie unter **Präsenz**, **Arbeit** und **Vorschlag** und zeigt für jede Spur eine Kennzahl, zum Beispiel die abgedeckte Zeit oder die Anzahl der Commits.
+In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen und rechts davon die Spalte **Vorschlag**. Der Kopf nennt jede Spur und zeigt bei einigen eine Kennzahl.
 
 | Spur | Was sie zeigt |
 |---|---|
 | **Aktiv** | Wann Sie am Rechner aktiv waren. |
 | **Mikrofon** | Wann eine Anwendung das Mikrofon benutzt hat. Der Tooltip nennt die Anwendung; sidekick zeichnet niemals Ton auf. |
 | **Claude** | Claude-Code-Sessions, eine Spalte je Session, nach Projekt gruppiert, mit den Zeitpunkten Ihrer Prompts und dem Tokenverbrauch. |
-| **Codex** | Codex-Sessions, genauso wie bei Claude. |
+| **Codex** | Codex-Sessions, genauso wie bei Claude. Nur an Tagen mit einer Session sichtbar. |
 | **Git** | Commits und Branchwechsel. |
 | **Dateien** | Dateiänderungen je Ordner. Ein Klick auf einen Ordnerblock zeigt seinen Ordnerbaum im rechten Bereich. |
 | **WLAN** | Das verbundene WLAN. |
 | **SSH** | Anmeldungen auf entfernten Rechnern. Nur an Tagen mit einer Anmeldung sichtbar. |
-| **Projekte** | Je Viertelstunde die Schablonen, auf die die Signale hindeuten. Eine Schablone ist eine Kombination, die Sie bereits gebucht haben, zum Beispiel ein Projekt und eine Aufgabe. |
-| **Vorschlag** | Die vorgeschlagenen Zeitbuchungen des Tages (siehe unten). |
+| **Vorschlag** | Der Tag, aufgeteilt in Themen (siehe [Die Spalte Vorschlag](#die-spalte-vorschlag)). |
 
-Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Lokale Kontexte, zum Beispiel ein Claude-Code-Projekt, ein Git-Repository oder ein Ordner, haben im Kalender dieselbe Farbe wie in sidekick. Die Schablonen in den Spuren **Projekte** und **Vorschlag** färbt der Kalender.
+Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Lokale Kontexte, zum Beispiel ein Claude-Code-Projekt, ein Git-Repository oder ein Ordner, haben im Kalender dieselbe Farbe wie in sidekick.
 
-Zeitbuchungen werden wie gewohnt im Raster des Kalenders angelegt, nie in den Spuren.
+Ein Klick auf einen Block in einer Spur wählt seinen Zeitraum aus, und ein Doppelklick öffnet dann das Formular für eine neue Zeitbuchung über diesen Zeitraum. Ein Doppelklick auf eine leere Stelle der Spuren bewirkt nichts.
+
+## Die Spalte Vorschlag
+
+Die Spalte **Vorschlag** teilt den Tag in Themen auf. sidekick berechnet sie aus dem, was die Signale selbst nennen; es liest keine Buchungen und ordnet weder Projekt noch Tätigkeit zu. Ein Block ist eine dieser Arten:
+
+- **Session**: eine Session eines KI-Agenten.
+- **Besprechung**: eine Besprechung.
+- **Repo**: Arbeit in einem Git-Repository.
+- **Notiz**: eine [Notiz](#notizen) mit Dauer, oder die laufende Notiz bis jetzt, benannt nach der Notiz. In ihrem Zeitraum hat die Notiz Vorrang vor den anderen Signalen. Notizen ohne Dauer werden kein Block.
+- **Offene Gruppe**: Fenstertitel, die ohne Kontext zusammengehören.
+- **Unklar**: Zeit, in der die Signale kein Thema nennen.
+
+Die Wortstatistik hinter den Themen stammt aus dem Tag selbst und den 21 Tagen davor. Der Vorschlag braucht eine aktuelle Version von sidekick; mit einer älteren Version sagt der Reiter **Vorschlag** **Diese Version von time cockpit sidekick berechnet noch keinen Vorschlag.**
+
+- Der Kopf der Spalte zeigt die Summe des Vorschlags und wie viel davon noch nicht gebucht ist (**… ungebucht**).
+- **Blöcke runden auf** im Kopf legt das Raster der Blöcke fest: **Minutengenau** oder eine Anzahl Minuten.
+- Ein Doppelklick oder doppeltes Tippen auf einen Block öffnet das Formular für eine neue Zeitbuchung mit den Zeiten des Blocks und dem Namen seines Themas als Text.
 
 ## Notizen
 
@@ -66,7 +82,7 @@ Ein Eintrag für mehrere Notizen wird nicht als Ganzes gebucht: Sein Tooltip lis
 
 ## Der rechte Bereich
 
-Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren oder einen Block in der Spur **Vorschlag** auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
+Der rechte Bereich zeigt die Signale eines Tages: den Tag, den Sie in der Wochenansicht ausgewählt haben, sonst heute oder den ersten Tag der Ansicht. Wenn Sie Blöcke in den Spuren auswählen, wird der rechte Bereich auf deren Zeitbereiche eingeschränkt. Der Bereich hat zwei Reiter.
 
 ### Signale
 
@@ -92,13 +108,7 @@ Zeigen Sie auf eine Zeile im Abschnitt **KI**, um ihre Zeit, Tokens und Kosten i
 
 ### Vorschlag
 
-Der Reiter **Vorschlag** zeigt die vorgeschlagenen Zeitbuchungen des Tages nach Schablone: wann, was dafür sprach, und eine Schaltfläche **Buchen**. **Buchen** öffnet das Formular für eine neue Zeitbuchung mit Projekt, Tätigkeit und Text der Schablone.
-
-Der Vorschlag lernt aus Ihren Buchungen der letzten 30 Tage und braucht eine aktuelle Version von sidekick. Passt ein Signal nicht zu einer Schablone, können Sie es für diese Schablone nicht mehr als Beleg zählen lassen; der Reiter listet solche Ausschlüsse, damit Sie sie zurücknehmen können.
-
-Ein Block der Spur **Vorschlag** lässt sich auch mit einem Doppelklick buchen. Fand ein Office 365 Termin statt, während das Mikrofon benutzt wurde, schlägt die Spur ihn als eigenen Block mit dem Betreff des Termins vor. **Termin ignorieren** im Tooltip eines solchen Blocks schlägt ihn nicht mehr vor; ignorierte Termine stehen im Reiter **Vorschlag** unter **Ignorierte Termine**, wo Sie sie wieder vorschlagen lassen können.
-
-Eine [Notiz](#notizen) mit Dauer, oder die laufende Notiz bis jetzt, ist ein eigener Block in der Spur **Vorschlag**, benannt nach der Notiz. In ihrem Zeitraum hat die Notiz Vorrang vor den anderen Signalen. Notizen ohne Dauer werden kein Vorschlag.
+Der Reiter **Vorschlag** erklärt die [Spalte Vorschlag](#die-spalte-vorschlag). Klicken Sie auf einen Block der Spalte, zeigt der Reiter, woraus er entstanden ist: **Warum dieses Thema**, die Themen **Knapp dahinter** und die **Wörter im Block**. Ohne ausgewählten Block zeigt er **Der Tag nach Themen**: jedes Thema mit seiner minutengenauen Zeit und seiner Zeit im Raster, und die **Summe**.
 
 ## Zeiten markieren
 

@@ -1,7 +1,7 @@
 ---
 title: Der Reiter Agenten in time cockpit sidekick
 description: Der Reiter Agenten in time cockpit sidekick ordnet Ihre Claude-Code- und Codex-Sessions danach, wer am Zug ist, und zeigt, was auf Sie wartet. Preview.
-en_page: doc/sidekick/agents.md
+en_page: doc/sidekick/agents-tab.md
 ---
 # Der Reiter Agenten in sidekick
 
@@ -20,7 +20,7 @@ Der obere Teil des Reiters zeigt die Sessions, bei denen Sie am Zug sind. Jeder 
 
 Der Kopf einer Spalte nennt den Tag (**Heute**, **Gestern** oder den Wochentag mit Datum) und zählt seine Sessions. Jede Session ist eine Karte mit ihrer Zeit, ihrem Titel, ihrem Projekt und ihren Schaltflächen. Eine Frage steht in einem gelben Kasten, eine laufende Session zeigt ihre letzten Werkzeugaufrufe und eine fertige den Anfang ihrer Antwort mit **Ganz lesen**.
 
-Wartet nichts auf Sie, sagt der Bereich **Alles erledigt.** oder, solange noch Sessions laufen, „Gerade braucht dich keine Sitzung, die Agenten arbeiten.“
+Wartet nichts auf Sie, sagt der Bereich **Alles erledigt.** oder, solange noch Sessions laufen, **Gerade braucht dich keine Sitzung, die Agenten arbeiten.**
 
 ## Zustände
 
@@ -56,7 +56,7 @@ Eine Session bleibt im oberen Bereich, bis Sie sagen, dass Sie mit ihr fertig si
 - Bei einer Frage heißt das Häkchen **Frage beiseitelegen**. Die Session ruht dann als **Frage offen**, bis sich in ihr etwas Neues tut.
 - Unter **Erledigt** holt der Pfeil (**Als nicht erledigt markieren**) eine Session zurück nach oben zu ihrem Tag.
 - Der Kopf jedes Tages außer heute hat **Alle n als erledigt markieren** (bei einem Tag mit nur einer Session **Als erledigt markieren**). Damit markieren Sie alle Sessions dieses Tages auf einmal. Danach bietet eine Zeile über den Tagen 15 Sekunden lang **Rückgängig** an. Sessions von heute markieren Sie einzeln.
-- Das Kreuz (**Ausblenden**) gibt es bei Sessions, deren Durchlauf beendet ist. Es legt die Session unter **Ausgeblendet** ab, wo sie bleibt, bis sie wieder läuft oder fragt oder bis Sie **Wiederherstellen** wählen.
+- Das Kreuz (**Ausblenden**) gibt es bei Sessions, deren Durchlauf beendet ist. Es legt die Session unter **Ausgeblendet** ab, bis Sie **Wiederherstellen** wählen. Solange die Session läuft oder fragt, steht sie oben; ihre nächste Antwort landet wieder unter **Ausgeblendet**.
 
 Unter den Tagen sammelt der Bereich **Erledigt** alle ruhenden Sessions, in den Gruppen **Heute**, **Diese Woche**, **Älter** und **Ausgeblendet**. Ein Klick auf **Erledigt** klappt ihn auf oder zu.
 

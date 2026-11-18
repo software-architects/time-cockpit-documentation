@@ -33,7 +33,7 @@ sidekick runs on Windows 10 and 11 (x64) and on macOS (Apple silicon and Intel).
 
 ### Install on Windows
 
-1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The calendar settings link to the same file (**Download sidekick**).
+1. Download the installer [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe). The calendar settings link to this page (**Installation and pairing**).
 2. Run the installer. It installs sidekick for your Windows user only, needs no administrator rights and asks no questions. The program goes to `%LOCALAPPDATA%\TimeCockpit.Sidekick`, and a Start menu entry is added.
 3. Windows SmartScreen may warn about the installer, because sidekick is a new program. The installer is signed. To continue, click **More info** and then **Run anyway**.
 4. After the installation sidekick starts, switches on its autostart and opens its window. Its icon, the time cockpit logo, appears in the notification area of the taskbar (possibly hidden under the arrow). A banner at the top of the window asks whether sidekick may send usage data; nothing is sent until you agree (see [Usage Data](privacy-and-data.md#usage-data)).
@@ -57,12 +57,13 @@ Limitations of the macOS version:
 - The autostart is off after the installation. To start sidekick when you sign in, switch on **Start with the operating system** (see [Autostart and Updates](#autostart-and-updates)).
 - macOS does not say which application uses the microphone. sidekick records that the microphone was in use and names the meeting application whose window was in front at the time, if there was one.
 - Since macOS 14.4, Wi-Fi names are only available to apps with location access. Without it, sidekick records no Wi-Fi names.
+- On macOS, sidekick records only the connected Wi-Fi network, not the networks in reach.
 - The data is stored in `~/Library/Application Support/timecockpit-sidekick`.
 
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. The area **Version and updates** in the settings shows the current state.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
@@ -117,7 +118,7 @@ If sidekick cannot use its default port 41337 because another program uses it, i
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
-- The first line shows the state: **Recording**, **Paused until …** or **Error: …**.
+- The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
 - **Open sidekick…** opens the window.
 - **Note…** opens the window for a [quick note](notes.md).
@@ -132,7 +133,7 @@ While recording is paused, sidekick still records whether the computer was on an
 
 In sidekick, open the tab **Pairing**. Under **Paired calendars**, click **Revoke** next to the calendar. The calendar can then no longer read anything.
 
-To stop every calendar from reading, open **Settings** in sidekick and clear **Paired calendars may read and pin colours** in the area **Connection to the calendar**.
+To stop every calendar from reading, clear **Paired calendars may read** in the tab **Pairing**.
 
 ## Uninstall sidekick
 

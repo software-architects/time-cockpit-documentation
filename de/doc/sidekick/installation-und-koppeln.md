@@ -34,7 +34,7 @@ sidekick läuft unter Windows 10 und 11 (x64) und unter macOS (Apple Silicon und
 
 ### Installation unter Windows
 
-1. Laden Sie das Installationsprogramm [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe) herunter. Die Einstellungen des Kalenders verlinken dieselbe Datei (**sidekick herunterladen**).
+1. Laden Sie das Installationsprogramm [TimeCockpit.Sidekick-win-Setup.exe](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-win-Setup.exe) herunter. Die Einstellungen des Kalenders verlinken diese Seite (**Installation und Koppeln**).
 2. Führen Sie das Installationsprogramm aus. Es installiert sidekick nur für Ihren Windows-Benutzer, braucht keine Administratorrechte und stellt keine Fragen. Das Programm wird nach `%LOCALAPPDATA%\TimeCockpit.Sidekick` installiert, und ein Eintrag im Startmenü wird angelegt.
 3. Windows SmartScreen warnt möglicherweise vor dem Installationsprogramm, weil sidekick ein neues Programm ist. Das Installationsprogramm ist signiert. Um fortzufahren, klicken Sie auf **Weitere Informationen** und dann auf **Trotzdem ausführen**.
 4. Nach der Installation startet sidekick, schaltet seinen Autostart ein und öffnet sein Fenster. Sein Symbol, das time cockpit Logo, erscheint im Infobereich der Taskleiste (eventuell ausgeblendet unter dem Pfeil). Ein Banner oben im Fenster fragt, ob sidekick Nutzungsdaten senden darf; bis Sie zustimmen, wird nichts gesendet (siehe [Nutzungsdaten](~/doc/sidekick/datenschutz-und-daten.md#nutzungsdaten)).
@@ -58,12 +58,13 @@ Einschränkungen der macOS-Version:
 - Der Autostart ist nach der Installation ausgeschaltet. Damit sidekick bei der Anmeldung startet, schalten Sie **Mit dem Betriebssystem starten** ein (siehe [Autostart und Updates](#autostart-und-updates)).
 - macOS verrät nicht, welche Anwendung das Mikrofon benutzt. sidekick zeichnet auf, dass das Mikrofon in Gebrauch war, und nennt die Besprechungsanwendung, deren Fenster zu dieser Zeit im Vordergrund war, falls es eine gab.
 - Seit macOS 14.4 erhalten nur Apps mit Zugriff auf die Ortungsdienste WLAN-Namen. Ohne diesen Zugriff zeichnet sidekick keine WLAN-Namen auf.
+- Unter macOS zeichnet sidekick nur das verbundene WLAN auf, keine WLANs in Reichweite.
 - Die Daten werden in `~/Library/Application Support/timecockpit-sidekick` gespeichert.
 
 ### Autostart und Updates
 
 - Der Autostart ist die Einstellung **Mit dem Betriebssystem starten** in sidekick unter **Einstellungen** im Bereich **Aufbewahrung und Start**.
-- sidekick aktualisiert sich unter Windows und macOS selbst. Es sucht eine Minute nach dem Start und danach alle vier Stunden nach einer neuen Version und lädt eine neue Version im Hintergrund herunter. Das Menü des sidekick-Symbols (unter Windows im Infobereich, unter macOS in der Menüleiste) bietet dann **Update auf … installieren und neu starten** an; sonst wird das Update beim nächsten Start installiert. Der Bereich **Version und Updates** in den Einstellungen zeigt den aktuellen Stand.
+- sidekick aktualisiert sich unter Windows und macOS selbst. Es sucht eine Minute nach dem Start und danach alle vier Stunden nach einer neuen Version und lädt eine neue Version im Hintergrund herunter. Das Menü des sidekick-Symbols (unter Windows im Infobereich, unter macOS in der Menüleiste) bietet dann **Update auf … installieren und neu starten** an; sonst wird das Update beim nächsten Start installiert. Ein Klick auf die Versionsnummer unten in der linken Leiste des sidekick-Fensters zeigt den Stand der Updates, mit **Nach Updates suchen** und **Vorabversionen erhalten**.
 
 ## sidekick mit dem Kalender koppeln
 
@@ -118,7 +119,7 @@ Kann sidekick seinen Standard-Port 41337 nicht verwenden, weil ein anderes Progr
 
 Klicken Sie mit der rechten Maustaste auf das sidekick-Symbol im Infobereich, um sein Menü zu öffnen. Unter macOS klicken Sie auf das sidekick-Symbol in der Menüleiste.
 
-- Die erste Zeile zeigt den Zustand: **Zeichnet auf**, **Pausiert bis …** oder **Fehler: …**.
+- Die erste Zeile zeigt den Zustand: **Zeichnet auf**, **Gestoppt**, **Pausiert bis …** oder **Fehler: …**.
 - **Verbindung zum Kalender: an (Port …)** zeigt, ob der Kalender die Signale lesen kann und über welchen Port.
 - **sidekick öffnen…** öffnet das Fenster.
 - **Notiz…** öffnet das Fenster für eine [Notiz](~/doc/sidekick/notizen.md).
@@ -133,7 +134,7 @@ Während die Aufzeichnung pausiert, zeichnet sidekick weiterhin auf, ob der Rech
 
 Öffnen Sie in sidekick den Reiter **Koppeln**. Klicken Sie unter **Gekoppelte Kalender** neben dem Kalender auf **Widerrufen**. Der Kalender kann danach nichts mehr lesen.
 
-Um allen Kalendern das Lesen zu verbieten, öffnen Sie in sidekick **Einstellungen** und deaktivieren Sie im Bereich **Verbindung zum Kalender** die Option **Gekoppelte Kalender dürfen lesen und Farben festlegen**.
+Um allen Kalendern das Lesen zu verbieten, deaktivieren Sie im Reiter **Koppeln** die Option **Gekoppelte Kalender dürfen lesen**.
 
 ## sidekick deinstallieren
 

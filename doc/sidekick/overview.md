@@ -15,7 +15,7 @@ The signals appear only in your own calendar.
 
 ## What sidekick Records
 
-From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code and Codex sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
+From the moment it is installed, sidekick records every source except changed files. It also reads earlier activity once: all Claude Code, Codex and GitHub Copilot sessions that are already on your computer, and the commits of the last 90 days of every Git repository it finds. Every source except presence can be switched off in sidekick under **Settings**.
 
 | Signal | Default | What is recorded |
 |---|---|---|
@@ -23,12 +23,12 @@ From the moment it is installed, sidekick records every source except changed fi
 | Foreground windows | On | Which application was in front, for how long, and its window title. Window titles can be switched off, and exclusion rules record a window without its title or not at all. |
 | Changed files | Off | Which files changed in the folders you choose, never their content. Nothing is watched until you switch it on and choose folders. |
 | Git | On | Time and message of commits and branch switches. sidekick looks for repositories in `%USERPROFILE%\source\repos`, if that folder exists, and in the folders you add under **Folders with repositories**. No code. |
-| Claude Code and Codex sessions | On | When and in which project you worked with Claude Code or Codex, including token usage. Of the text of your prompts, at most the start of the first prompt, as the name of the session. |
+| Claude Code, Codex and GitHub Copilot sessions | On | When and in which project you worked with Claude Code, Codex or GitHub Copilot, including token usage. Of the text of your prompts, only the start of the first prompt (at most 200 characters), which names the session. |
 | Microphone | On | Which application uses the microphone, never any audio. |
-| Wi-Fi | On | The names of the connected Wi-Fi network and of the networks in reach, with their signal strength, never a hardware address. |
+| Wi-Fi | On | The names of the connected Wi-Fi network and of the networks in reach, with their signal strength, never a hardware address. On macOS only the connected network. |
 | SSH logins | Only for added machines | Interactive SSH logins on Linux machines you add as remote machines in sidekick's settings. |
 
-sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code and Codex sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
+sidekick can also read Linux machines you work on over SSH, for example a development server: their commits, Claude Code, Codex and Copilot sessions, file changes and SSH logins. Nothing is installed on that machine; sidekick uses your own OpenSSH configuration and stores no credentials.
 
 What sidekick never records, where the data is stored and how to delete it is described in [sidekick Privacy and Data](privacy-and-data.md).
 
@@ -38,7 +38,7 @@ For what leaves no signal, for example a phone call, sidekick takes quick notes:
 
 ## Agents
 
-If you work with Claude Code or Codex, the tab **Agents** in sidekick shows your sessions on this computer by whose turn it is: which one asks you a question, which one has answered, which one stopped halfway and which ones are still working. You mark a session as done when you have dealt with it, and it comes back with the next answer. The tab reads the sessions live and stores nothing of them. See [The Agents Tab of sidekick](agents.md).
+If you work with Claude Code or Codex, the tab **Agents** in sidekick shows your sessions on this computer by whose turn it is: which one asks you a question, which one has answered, which one stopped halfway and which ones are still working. You mark a session as done when you have dealt with it, and it comes back with the next answer. The tab reads the sessions live and stores nothing of them. See [The Agents Tab of sidekick](agents-tab.md).
 
 ## sidekick and the Classic Signal Tracker
 
@@ -62,5 +62,5 @@ The calendar shows signals from only one source at a time. In the calendar setti
 - [Installing and Pairing sidekick](installation-and-pairing.md): download, installation and connection to the calendar.
 - [sidekick Signals in the Time Sheet Calendar](calendar-signals.md): the activity band, the detail lanes and the right pane.
 - [Quick Notes with sidekick](notes.md): writing down what you just did and booking it from the calendar.
-- [The Agents Tab of sidekick](agents.md): which Claude Code or Codex session waits for you.
+- [The Agents Tab of sidekick](agents-tab.md): which Claude Code or Codex session waits for you.
 - [sidekick Privacy and Data](privacy-and-data.md): what is recorded, what is never recorded, storage and deletion.

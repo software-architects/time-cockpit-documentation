@@ -55,7 +55,7 @@ A session stays in the upper area until you say you are done with it. Opening it
 - On a question, the check is called **Set the question aside**. The session rests as **Question open** until something new happens in it.
 - In **Done**, the arrow (**Mark as not done**) brings a session back up to its day.
 - The head of every day except today has **Mark all n as done** (for a day with one session, **Mark as done**), which marks all sessions of that day at once. For 15 seconds a line above the days then offers **Undo**. Sessions of today are marked one by one.
-- The cross (**Dismiss**) is offered on a session whose turn has ended. It parks the session under **Dismissed**, where it stays until it runs or asks again, or until you choose **Restore**.
+- The cross (**Dismiss**) is offered on a session whose turn has ended. It parks the session under **Dismissed** until you choose **Restore**. While the session runs or asks, it shows above; its next answer goes back to **Dismissed**.
 
 Below the days, the area **Done** holds every session that rests, in the groups **Today**, **This week**, **Older** and **Dismissed**. Click **Done** to open or fold it.
 
