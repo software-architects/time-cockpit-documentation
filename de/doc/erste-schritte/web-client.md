@@ -1,63 +1,45 @@
 ---
 title: Web-Client - Moderne browserbasierte Zeiterfassung
-description: Der Web-Client von time cockpit basiert auf HTML5, CSS3 und JavaScript. Erfassen Sie Zeiten auf jedem Gerät mit modernem Browser oder als PWA.
+description: Der Web-Client ist der Haupt-Client von time cockpit. Er läuft ohne Installation in jedem aktuellen Browser und lässt sich als App installieren.
 en_page: doc/getting-started/web-client.md
 ---
 # Web-Client
 
-time cockpit hat sich seit seiner Veröffentlichung im Jahr 2010 stark weiterentwickelt. Am Anfang stand ein Fat Client auf Basis von Windows Presentation Foundation (WPF) mit einer umfangreichen und reaktionsschnellen Benutzeroberfläche. Zusätzlich haben wir einen Silverlight-Client eingeführt, der plattformübergreifend nutzbar war.
-
-Aus mehreren Gründen, etwa weil das Silverlight-Framework abgekündigt wurde, haben wir den Silverlight-Client vor einigen Jahren eingestellt. Seit einigen Jahren ist der Web-Client der primäre Client von time cockpit.
-
-Der Web-Client basiert auf modernen Webtechnologien wie HTML5, CSS3 und JavaScript und läuft in jedem modernen Webbrowser. Er bietet eine responsive, anpassungsfähige Benutzeroberfläche und ist damit auf verschiedenen Geräten nutzbar, darunter Desktops, Laptops und Tablets.
-
-Wenn Sie gerade erst mit time cockpit beginnen, empfehlen wir den Web-Client. Er ist eine moderne und robuste Lösung für die Zeiterfassung.
+Der Web-Client ist der Haupt-Client von time cockpit und der Client, mit dem wir neuen Benutzern den Einstieg empfehlen. Er läuft ohne Installation in jedem aktuellen Browser, auf Desktop-Rechnern und Laptops ebenso wie auf Tablets und Smartphones (siehe [Mobile Zeiterfassung](~/doc/erste-schritte/mobile-zeiterfassung.md)). Sie können ihn auch als App installieren (siehe [time cockpit als App installieren](#time-cockpit-als-app-installieren)).
 
 ## Einschränkungen
 
-- Mit dem Web-Client können Sie keine Computersignale aufzeichnen. Wenn Sie jedoch den Fullclient installiert haben, um Signale aufzuzeichnen, können Sie die aufgezeichneten Signale auch im Web-Client ansehen. Derzeit arbeiten wir an einer schlanken Version des Signal Trackers, die ohne den WPF-Fullclient funktioniert.
-- Das Datenmodell lässt sich im Web-Client nicht ändern. Alle Änderungen, die Sie mit dem Fullclient vornehmen, stehen aber auch im Web-Client zur Verfügung.
+- Der Web-Client selbst zeichnet keine Signale Ihres Rechners auf. Dafür gibt es [time cockpit sidekick](~/doc/sidekick/ueberblick.md), eine eigene kleine Anwendung, die Ihre Aktivitäten aufzeichnet und im Zeiterfassungskalender des Web-Clients anzeigt; sidekick ist derzeit in der Preview. Signale, die der [klassische Signal Tracker](~/doc/signal-tracker/ueberblick.md) des Fullclients aufzeichnet, sehen Sie ebenfalls im Web-Client.
+- Das Datenmodell lässt sich im Web-Client nicht ändern. Änderungen, die Sie mit dem Fullclient vornehmen, stehen aber auch im Web-Client zur Verfügung (siehe [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md)).
 
-Wenn Sie Fragen zu Signal Trackern oder zu den Anpassungsmöglichkeiten von time cockpit haben, schreiben Sie uns an [support@timecockpit.com](mailto:support@timecockpit.com) oder lesen Sie [Anpassung des Datenmodells](~/doc/datenmodell-anpassung/ueberblick.md).
+Bei Fragen zu sidekick, zum Signal Tracker oder zur Anpassung von time cockpit schreiben Sie uns an [support@timecockpit.com](mailto:support@timecockpit.com).
 
+## time cockpit als App installieren
 
-## time cockpit als Progressive Web App (PWA) verwenden
+time cockpit ist eine Progressive Web App (PWA): Sie können den Web-Client wie eine Anwendung installieren. Er läuft dann in einem eigenen Fenster und lässt sich aus dem Startmenü oder der Taskleiste starten.
 
-- Um time cockpit als Progressive Web App zu verwenden, öffnen Sie [time cockpit](https://web.timecockpit.com) in Ihrem Browser.
-- Wählen Sie rechts im Adressfeld "Time Cockpit installieren".
+1. Öffnen Sie [time cockpit](https://web.timecockpit.com) in Google Chrome oder Microsoft Edge.
+2. Klicken Sie rechts in der Adressleiste auf das Symbol zum Installieren und dann auf **Installieren**. Der Browser nennt die App **time cockpit**.
 
+### Mehrere Tabs im App-Fenster
 
-### Desktop-PWA-Tableisten in Google Chrome aktivieren
-- Öffnen Sie Chrome und navigieren Sie zu: chrome://flags/
-- Suchen Sie nach der Einstellung "Desktop PWA tab strips" und setzen Sie den Status auf "Enabled".
-- Wählen Sie "Neu starten", um den Browser neu zu starten.
+Ohne weitere Einstellung öffnet die installierte App jede Seite in einem eigenen Fenster. Chrome und Edge können stattdessen Tabs im App-Fenster anzeigen. Die Einstellung dafür ist eine experimentelle Funktion des Browsers; ob es sie gibt und wie sie heißt, kann sich mit jeder Browserversion ändern.
 
-### Desktop-PWA-Tableisten in Microsoft Edge aktivieren
-- Öffnen Sie Edge und navigieren Sie zu: edge://flags/
-- Suchen Sie nach der Einstellung "Desktop PWA tab strips" und setzen Sie den Status auf "Enabled".
-- Wählen Sie "Neu starten", um den Browser neu zu starten.
-
+1. Öffnen Sie in Chrome `chrome://flags/`, in Edge `edge://flags/`.
+2. Suchen Sie die Einstellung **Desktop PWA tab strips** und setzen Sie sie auf **Enabled**.
+3. Starten Sie den Browser neu, wenn er Sie dazu auffordert.
 
 ## Release-Plan
 
-Wir bieten vier verschiedene time cockpit-Umgebungen an:
+Sie öffnen time cockpit immer unter <https://web.timecockpit.com>. In welcher der vier Umgebungen Sie dort arbeiten, legen wir für Ihren Tenant oder für einzelne Benutzer fest; die Adresse im Browser bleibt dieselbe. Eine neue Version erscheint ungefähr am 10. jedes Monats in Prod, die anderen Umgebungen bekommen sie jeweils etwas früher.
 
-### Dev: <https://web-dev.timecockpit.com>
+Die Umgebung zeigt ein Badge rechts oben in der Menüleiste des Web-Clients. Auf einem schmalen Bildschirm zeigt es nur die ersten drei Buchstaben, zum Beispiel **PRE**.
 
-Dies ist eine experimentelle Version, die wir laufend mit neuen Releases aktualisieren. Verwenden Sie sie niemals produktiv! Manches wird wahrscheinlich nicht funktionieren. Die Verwendung mit Ihrem produktiven Tenant kann sogar zu beschädigten Daten führen. Wenn Sie diese Version verwenden möchten, fragen Sie nach einer time cockpit-Sandbox.
+Die Adressen unter **Gezielt testen** brauchen Sie nur, wenn Sie eine bestimmte Umgebung ausprobieren möchten: Sie öffnen genau diese Umgebung, unabhängig von unserer Einstellung.
 
-### Preview: <https://web-preview.timecockpit.com>
-
-In dieser Umgebung veröffentlichen wir Preview-Releases. Zwischen dem 10. und dem Ende jedes Monats kann das Preview-Release instabil sein. Es ist aber trotzdem deutlich stabiler als Dev. Zwischen dem 1. und dem 9. jedes Monats sollte sich die Preview-Umgebung nicht ändern. Sie enthält dann den Release Candidate für die kommende Version. Nutzen Sie diesen Zeitraum, um Ihr Team vorzubereiten und uns Feedback zu geben. Zwischen dem 1. und dem 9. aktualisieren wir Preview nur, wenn es unbedingt notwendig ist.
-
-### Release Candidate (RC): <https://web.timecockpit.com>
-
-Etwa ein bis zwei Wochen nach einem Preview-Release schalten wir es als Release Candidate (RC) frei. Benutzer der RC-Umgebung öffnen time cockpit unter derselben Adresse wie Prod. In der RC-Umgebung arbeiten deutlich mehr Benutzer als in Preview.
-
-### Prod: <https://web.timecockpit.com>
-
-Dies ist die stabile Produktivumgebung von time cockpit. Am 10. jedes Monats (bzw. am ersten Arbeitstag nach dem 10.) erstellen wir Prod aus dem neuesten Preview-Release. An diesem Datum erscheint auch unser Newsletter. Während des Monats aktualisieren wir Prod nur bei kritischen Hotfixes.
-
-Die folgende Abbildung zeigt unseren Release-Rhythmus:
-
-![Release-Plan von time cockpit](/doc/getting-started/images/tc-release-plan.png "Release-Plan von time cockpit")
+| Umgebung | Beschreibung |
+|---|---|
+| **Dev** | <img src="/doc/getting-started/images/environment-badge-dev.de.png" alt="Badge DEV" title="Badge DEV" width="410" /><br>Experimentelle Version, die wir laufend aktualisieren. Verwenden Sie Dev nicht für Ihre produktive Arbeit: Manches funktioniert dort wahrscheinlich nicht, und mit Ihrem produktiven Tenant kann Dev sogar Daten beschädigen. Wenn Sie Dev ausprobieren möchten, fragen Sie nach einer time cockpit-Sandbox.<br><br>Gezielt testen: <https://web-dev.timecockpit.com> |
+| **Preview** | <img src="/doc/getting-started/images/environment-badge-preview.de.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="410" /><br>Bekommt eine neue Version vor dem Release Candidate. Deutlich stabiler als Dev, kann sich aber noch ändern. Nutzen Sie Preview, um Ihr Team auf eine neue Version vorzubereiten und uns Feedback zu geben.<br><br>Gezielt testen: <https://web-preview.timecockpit.com> |
+| **Release Candidate (RC)** | <img src="/doc/getting-started/images/environment-badge-rc.de.png" alt="Badge RC" title="Badge RC" width="410" /><br>Die Version, die als Nächstes in Prod kommt, idealerweise ein bis zwei Wochen vor dem Prod-Release. Im RC arbeiten deutlich mehr Benutzer als in Preview.<br><br>Gezielt testen: <https://web-rc.timecockpit.com> |
+| **Prod** | <img src="/doc/getting-started/images/environment-badge-prod.de.png" alt="Kein Badge in Prod" title="Kein Badge in Prod" width="410" /><br>Kein Badge. Die stabile Produktivumgebung. Eine neue Version erscheint ungefähr am 10. jedes Monats, zusammen mit unserem Newsletter. Während des Monats aktualisieren wir Prod nur für kritische Fehlerbehebungen.<br><br>Gezielt testen: <https://web-prod.timecockpit.com> |

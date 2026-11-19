@@ -143,62 +143,44 @@ Source: https://docs.timecockpit.com/doc/getting-started/web-client.md
 
 # Web Client
 
-Time cockpit has undergone significant development since its release in 2010. It began with a Windows Presentation Foundation (WPF) fat client, which provided a rich and responsive user interface. Additionally, we introduced a Silverlight client, which offered cross-platform compatibility.
-
-Due to several reasons such as the deprecation of the Silverlight framework, the Silverlight client was deprecated a few years ago. For the past couple of years, the web client has been time cockpit's primary client.
-
-The web client is built using modern web technologies such as HTML5, CSS3, and JavaScript, and runs on any modern web browser. The web client provides a responsive and adaptive user interface making it accessible from a range of devices, including desktops, laptops, tablets.
-
-If you're just starting out with time cockpit, the web client is the recommended client to use, providing a modern and robust solution for time tracking.
+The web client is time cockpit's main client and the one we recommend to new users. It runs without installation in any current browser, on desktop computers and laptops as well as on tablets and smartphones (see [Mobile Guide](https://docs.timecockpit.com/doc/getting-started/mobile-guide.md)). You can also install it as an app (see [Install time cockpit as an App](#install-time-cockpit-as-an-app)).
 
 ## Limitations
 
-- It is not possible to track computer signals with the web client. But if you have installed the full client to track signals, you can view the tracked signals in the web client, too. At the moment we are working on a lightweight version of the signal tracker that works without the WPF full client.
-- It is not possible to modify the data model. But all changes made with the full client are available in the web client.
+- The web client itself does not record signals of your computer. [time cockpit sidekick](https://docs.timecockpit.com/doc/sidekick/overview.md) does: a small application of its own that records your activities and shows them in the Time Sheet Calendar of the web client; sidekick is currently in preview. Signals that the [classic Signal Tracker](https://docs.timecockpit.com/doc/signal-tracker/overview.md) of the full client records are shown in the web client, too.
+- The data model cannot be changed in the web client. Changes you make with the full client are available in the web client, though (see [Data Model Customization](https://docs.timecockpit.com/doc/data-model-customization/overview.md)).
 
-If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com) or refer to [Data Model Customization](https://docs.timecockpit.com/doc/data-model-customization/overview.md)
+If you have questions about sidekick, the Signal Tracker or customizing time cockpit, write to us at [support@timecockpit.com](mailto:support@timecockpit.com).
 
+## Install time cockpit as an App
 
-## Use time cockpit as Progressive Web App (PWA)
+time cockpit is a Progressive Web App (PWA): you can install the web client like an application. It then runs in a window of its own and can be started from the Start menu or the taskbar.
 
-- To use time cockpit as a Progressive Web App open [time cockpit](https://web.timecockpit.com) in your Browser.
-- Select "Install Time Cockpit" on the right side in the url input field
+1. Open [time cockpit](https://web.timecockpit.com) in Google Chrome or Microsoft Edge.
+2. Click the install icon on the right of the address bar, then **Install**. The browser calls the app **time cockpit**.
 
+### Several Tabs in the App Window
 
-### How to Enable Desktop PWA Tab Strips in Google Chrome
-- Open Chrome and navigate to: chrome://flags/
-- Search for the setting "Desktop PWA tab strips" and set the flag state to "Enabled".
-- Select "Restart" of the browser
+By default, the installed app opens every page in a window of its own. Chrome and Edge can show tabs in the app window instead. The setting for this is an experimental browser feature; whether it exists and what it is called can change with every browser version.
 
-### How to Enable Desktop PWA Tab Strips in Microsoft Edge
-- Open Edge and navigate to: edge://flags/
-- Search for the setting "Desktop PWA tab strips" and set the flag state to "Enabled".
-- Select "Restart" of the browser
-
+1. In Chrome, open `chrome://flags/`; in Edge, open `edge://flags/`.
+2. Search for the setting **Desktop PWA tab strips** and set it to **Enabled**.
+3. Restart the browser when it asks you to.
 
 ## Release Plan
 
-We offer four different time cockpit environments:
+You always open time cockpit at <https://web.timecockpit.com>. We decide for your tenant or for individual users which of the four environments you work in there; the address in the browser stays the same. A new version reaches Prod around the 10th of each month, and the other environments get it somewhat earlier.
 
-### Dev: <https://web-dev.timecockpit.com>
+A badge at the top right of the menu bar of the web client shows the environment. On a narrow screen, it shows only the first three letters, for example **PRE**.
 
-This is an experimental version that we continuously update with new releases. Never use it for production purposes! Some things are likely to be broken. Using it with your production tenant might even lead to data corruption. If you want to use this version, ask for a time cockpit Sandbox.
+You need the addresses under **Targeted test** only if you want to try a particular environment: they open exactly that environment, regardless of our setting.
 
-### Preview: <https://web-preview.timecockpit.com>
-
-We publish preview releases in this environment. Between 10th and end of each month the preview release might be unstable. Still, it is way more stable than Dev. Between 1st and 9th of each month, the preview environment should not change. It contains the release candidate for the upcoming version. You can use this time frame for making your team ready and for giving us feedback. Between 1st and 9th we only update Preview if it is absolutely necessary. 
-
-### Release Candidate (RC): <https://web.timecockpit.com>
-
-About one to two weeks after a preview release, we enable it as the release candidate (RC). Users of the RC environment open time cockpit at the same address as Prod. Considerably more users work in the RC environment than in Preview.
-
-### Prod: <https://web.timecockpit.com>
-
-This is the stable production environment for time cockpit. On the 10th of each month (resp. the first working day after the 10th) we create Prod from the latest preview release. This is also the new date for our newsletter. During the month, we only update Prod in case of critical hotfixes.
-
-The following picture illustrates our release cadence:
-
-![Time cockpit release plan](https://docs.timecockpit.com/doc/getting-started/images/tc-release-plan.png "Time cockpit release plan")
+| Environment | Description |
+|---|---|
+| **Dev** | <img src="images/environment-badge-dev.en.png" alt="Badge DEV" title="Badge DEV" width="410" /><br>Experimental version that we update continuously. Do not use Dev for your productive work: some things are likely broken there, and with your production tenant Dev can even damage data. If you want to try Dev, ask for a time cockpit sandbox.<br><br>Targeted test: <https://web-dev.timecockpit.com> |
+| **Preview** | <img src="images/environment-badge-preview.en.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="410" /><br>Gets a new version before the release candidate. Considerably more stable than Dev but can still change. Use Preview to prepare your team for a new version and to give us feedback.<br><br>Targeted test: <https://web-preview.timecockpit.com> |
+| **Release candidate (RC)** | <img src="images/environment-badge-rc.en.png" alt="Badge RC" title="Badge RC" width="410" /><br>The version that goes to Prod next, ideally one to two weeks before the Prod release. Considerably more users work in the RC than in Preview.<br><br>Targeted test: <https://web-rc.timecockpit.com> |
+| **Prod** | <img src="images/environment-badge-prod.en.png" alt="No badge in Prod" title="No badge in Prod" width="410" /><br>No badge. The stable production environment. A new version arrives around the 10th of each month, together with our newsletter. During the month, we update Prod only for critical fixes.<br><br>Targeted test: <https://web-prod.timecockpit.com> |
 
 ---
 
@@ -7780,7 +7762,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/overview.md
 # time cockpit sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick is a small desktop app that runs in the notification area of Windows or in the macOS menu bar. It records work signals on your computer, for example when you were active, which application was in front and which Git commits you made, and keeps them on that computer. The Time Sheet Calendar of the time cockpit web client reads these signals from sidekick and shows them next to your bookings. You book your time from what actually happened instead of reconstructing the day from memory.
 
@@ -7830,7 +7812,7 @@ The calendar shows signals from only one source at a time. In the calendar setti
 
 - Windows 10 or 11 (x64), or macOS on Apple silicon or Intel. The macOS version has some limitations; see [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
 - On Windows, no administrator rights: sidekick installs for your Windows user only.
-- The time cockpit web client in the preview environment (`https://web-preview.timecockpit.com`) or in the release candidate (RC, at `https://web.timecockpit.com`), opened in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
+- The time cockpit web client in the environment Preview or release candidate (RC), opened at `https://web.timecockpit.com` in a browser on the same computer on which sidekick runs. The calendar reaches sidekick at `127.0.0.1`, which is only reachable from that computer.
 
 ## Next Steps
 
@@ -7849,7 +7831,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md
 # Installing and Pairing sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Setting up time cockpit sidekick takes three steps: install sidekick, click **Pair with sidekick** in the right pane of the Time Sheet Calendar, and confirm the question in sidekick with **Allow**. The right pane of the calendar guides you through these steps.
 
@@ -7907,19 +7889,22 @@ Limitations of the macOS version:
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. If the sidekick window was open when the update started, also minimized, sidekick opens it again after the restart. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
 > [!WARNING]
-> During the preview, sidekick can be paired only with the preview environment and the release candidate (RC) of time cockpit. Open the Time Sheet Calendar at the address at which you use time cockpit and pair that address: `https://web-preview.timecockpit.com` in the preview environment, `https://web.timecockpit.com` in the RC. The environments are described in the [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan).
+> During the preview, sidekick can be paired only with the environments Preview and release candidate (RC) of time cockpit. You open both at `https://web.timecockpit.com`, and this is the address you pair. The badge at the top right of the web client shows which environment you use: **PREVIEW** or **RC**. The environments are described in the [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan).
 
-The calendar may read the signals only with a token that sidekick created for the address of your time cockpit: `https://web-preview.timecockpit.com` in the preview environment, `https://web.timecockpit.com` in the RC. You do not have to create or copy the token yourself: the calendar asks sidekick for it, and you confirm the question in sidekick with one click.
+The calendar may read the signals only with a token that sidekick created for the address of your time cockpit, that is for `https://web.timecockpit.com`. You do not have to create or copy the token yourself: the calendar asks sidekick for it, and you confirm the question in sidekick with one click.
+
+> [!NOTE]
+> Pairing in one click needs time cockpit 2026.12 or later. In an older version, the calendar does not offer **Pair with sidekick**; pair [manually with address and token](#pair-manually-with-address-and-token) instead.
 
 ### Pair in One Click
 
 1. Start sidekick on the computer on which you use time cockpit in the browser.
-2. Open the Time Sheet Calendar in the time cockpit web client, at `https://web-preview.timecockpit.com` in the preview environment or at `https://web.timecockpit.com` in the RC, in a browser on the same computer.
+2. Open the Time Sheet Calendar in the time cockpit web client at `https://web.timecockpit.com`, in a browser on the same computer.
 3. In a browser in which the calendar has no settings stored yet, sidekick is the signal source of the calendar already. Otherwise open the gear **Settings**, choose **time cockpit sidekick** under **Signals** and click **Set up in the pane**: the calendar saves the settings, closes the dialog and goes to the right pane.
 4. The right pane asks **What did you work on today?** and shows two steps: **Install sidekick** and **Pair the calendar**. If sidekick is not installed yet, install it first: on Windows, **Download for Windows** downloads the installer; on other systems, **Go to the download** opens this page.
 5. Under **Pair the calendar**, click **Pair with sidekick**. The calendar looks for sidekick on this computer and asks it. Your browser may first ask whether the page may access devices on the local network. Allow it; the calendar needs it to reach sidekick.
@@ -7963,26 +7948,28 @@ What the calendar says when the pairing does not complete at once:
 
 As long as no calendar is paired, the tab **Pairing** in sidekick shows the card **I use time cockpit**. Its button **Open time cockpit** opens the Time Sheet Calendar at `https://web.timecockpit.com` in your browser. The calendar then asks sidekick on its own, and a notification in the calendar shows how far the pairing is. Confirm the question in sidekick with **Allow**. If this browser is paired already, the calendar starts no new pairing and says **This browser is already paired with sidekick. If no signals appear, pair again in the right pane.**
 
-If you use Preview or a sandbox, open your address as usual and click **Pair with sidekick** in the calendar instead. In the preview environment, this is `https://web-preview.timecockpit.com`.
+This also holds if your time cockpit runs in Preview or in the RC. If you use time cockpit at another address, for example at `https://web-dev.timecockpit.com`, open that address as usual and click **Pair with sidekick** in the calendar instead.
 
 To pair another browser later, open the calendar in that browser and click **Pair with sidekick** in the right pane.
+
+A calendar before time cockpit 2026.12 does not ask sidekick when you open it with **Open time cockpit**. Pair [manually with address and token](#pair-manually-with-address-and-token) instead.
 
 ### Addresses and Environments
 
 - Each address of time cockpit is paired once. After that, the calendar reads the signals without asking again.
-- Prod and the release candidate run under the same address, `https://web.timecockpit.com`, so a move between them needs no new pairing.
-- Preview (`https://web-preview.timecockpit.com`) and Dev (`https://web-dev.timecockpit.com`) are addresses of their own. Pair them in the calendar that runs there. sidekick labels them **Preview** and **Dev · test environment**, and a question from Dev carries a note that Dev is the test environment of time cockpit. If you do not use Dev, you can remove it: under **Pair manually with address and token**, choose it under **Where does it run?** and click **Remove address**, as long as no calendar is paired with it. An update of sidekick does not add it again.
+- Preview, release candidate and Prod run at the same address, `https://web.timecockpit.com`. time cockpit decides which environment your tenant or individual users get; switching the environment needs no new pairing.
+- `https://web-preview.timecockpit.com` and Dev (`https://web-dev.timecockpit.com`) are addresses of their own. If you open time cockpit there, pair them in the calendar that runs there. sidekick labels them **Preview** and **Dev · test environment**, and a question from Dev carries a note that Dev is the test environment of time cockpit. If you do not use Dev, you can remove it: under **Pair manually with address and token**, choose it under **Where does it run?** and click **Remove address**, as long as no calendar is paired with it. An update of sidekick does not add it again.
 - You need a new pairing only in another browser, after you revoked the calendar in sidekick, or when the browser has lost the data it stored for the page, for example after you cleared the site data.
 
 ### Pair Manually With Address and Token
 
-Use the manual pairing with a version of sidekick that cannot pair in one click yet. In the calendar settings and in the tab **Pairing** of sidekick, it is folded under **Pair manually with address and token**.
+Use the manual pairing if your time cockpit is older than 2026.12 or your version of sidekick cannot pair in one click yet. In the tab **Pairing** of sidekick, and from time cockpit 2026.12 also in the calendar settings, it is folded under **Pair manually with address and token**.
 
 #### In sidekick: Create a Token
 
 1. Open sidekick and go to the tab **Pairing**.
 2. Under **Paired calendars**, unfold **Pair manually with address and token**. It contains the form **Pair a new calendar**.
-3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser. In the preview environment this is `https://web-preview.timecockpit.com`, in the RC `https://web.timecockpit.com`. The list contains the addresses of time cockpit. To pair another address, choose the last entry of the list and paste the address from the address bar of your browser. sidekick keeps only the origin, that is scheme, host name and port, and drops the path. You can enter a name under **Label (optional)**.
+3. Under **Where does it run?**, choose the address at which you open time cockpit in the browser, usually `https://web.timecockpit.com`, also in Preview and in the RC. The list contains the addresses of time cockpit. To pair another address, choose the last entry of the list and paste the address from the address bar of your browser. sidekick keeps only the origin, that is scheme, host name and port, and drops the path. You can enter a name under **Label (optional)**.
 4. Click **Create token**. A token is valid only for this address. It does not expire; it stays valid until you revoke the calendar. sidekick shows it only once, for ten minutes at most.
 5. Copy **Address of sidekick** (usually `http://127.0.0.1:41337`) and **Token** with the **Copy** buttons. After ten minutes at the latest the token disappears from the window and cannot be shown again, so enter it in the calendar right away.
 
@@ -7990,12 +7977,12 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 
 #### In the Calendar: Enter Address and Token
 
-1. Open the Time Sheet Calendar in the time cockpit web client, at `https://web-preview.timecockpit.com` in the preview environment or at `https://web.timecockpit.com` in the RC, in a browser on the same computer.
+1. Open the Time Sheet Calendar in the time cockpit web client at `https://web.timecockpit.com`, in a browser on the same computer.
 2. Open the gear **Settings**.
 3. Under **Signals**, choose **time cockpit sidekick**.
-4. Unfold **Pair manually with address and token**.
-5. Paste the address into **Address of sidekick** and the token into **Token**. The calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
-6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; the test then says so, and you try again a minute later.
+4. From time cockpit 2026.12, unfold **Pair manually with address and token**. In older versions, the fields are right below **time cockpit sidekick**.
+5. Paste the address into **Address of sidekick** and the token into **Token**. From time cockpit 2026.12, the calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
+6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; from time cockpit 2026.12, the test then says so. Try again a minute later.
 7. Click **Save**.
 
 Your browser may ask whether the time cockpit page may access devices in your local network. Allow it; otherwise the browser blocks the connection to sidekick.
@@ -8035,13 +8022,25 @@ The calendar retries **sidekick not answering** and **Browser blocks sidekick** 
 
 If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The calendar looks for sidekick on port 41337 and the next nine ports when it pairs. When a paired sidekick no longer answers at the saved address, the calendar looks for it there as well and recognises it by a proof of its token for that port, without sending the token; it then saves the new address itself, so there is nothing to enter again. This needs a current sidekick; with an older one, click **Pair with sidekick** in the right pane. The calendar asks a current sidekick for the same proof at the saved address before it sends its token, when the page loads and after the connection was lost, so a program that took the port of sidekick gets no token. If the proof does not match, the calendar looks on the other ports and otherwise shows **Pairing no longer valid**. With a token paired by hand, the calendar sends it without a proof as long as sidekick has never shown one, because older versions of sidekick cannot; pairing in one click avoids this. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick** under **Pair manually with address and token**. If you set a port outside this range under **Port and technical details** in the tab **Pairing**, enter the new address in the [manual pairing](#pair-manually-with-address-and-token) of the calendar.
 
+## Open sidekick With a Key Combination
+
+Press **Ctrl+Alt+S** on Windows or **⌘⌥S** on macOS to bring the sidekick window to the front from any application. The key combination works while sidekick runs, also when only its icon in the notification area or the menu bar is shown.
+
+To change the combination, open **Settings** in sidekick and, in the group **For all machines**, the area **Retention and start**.
+
+- Click into the field **Key combination to open sidekick** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
+- **Off** switches the key combination off. **Default** restores **Ctrl+Alt+S** (**⌘⌥S** on macOS).
+- The change takes effect when you save the settings.
+
+While sidekick runs, no other application gets this key combination. Visual Studio and the JetBrains IDEs, for example IntelliJ IDEA or Rider, use **Ctrl+Alt+S** as well; if you use them, choose another combination for sidekick or switch it off. If another application already uses the combination, the area says so. The combination cannot be the same as the [key combination for a new note](https://docs.timecockpit.com/doc/sidekick/notes.md#key-combination). **Open sidekick…** in the menu of the tray icon keeps working either way.
+
 ## The Tray Icon Menu
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
 - The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
-- **Open sidekick…** opens the window.
+- **Open sidekick…** opens the window. The menu shows the [key combination](#open-sidekick-with-a-key-combination) next to it while it is active.
 - **Note…** opens the window for a [quick note](https://docs.timecockpit.com/doc/sidekick/notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
@@ -8071,7 +8070,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/calendar-signals.md
 # sidekick Signals in the Time Sheet Calendar
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Once time cockpit sidekick is [paired with the calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md), the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows its signals next to your bookings. This page describes what you see and how to work with it.
 
@@ -8210,7 +8209,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/notes.md
 # Quick Notes with sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Signals show when you worked and with which applications, but not always what the work was. A phone call, a conversation at the desk or a quick fix leaves few traces. With a quick note you write it down in a few words, without leaving the application you are in. sidekick keeps the note with its time, and the [Time Sheet Calendar](https://docs.timecockpit.com/doc/timesheet-calendar/calendar.md) shows it next to the signals, so you can book it later with its text.
 
@@ -8283,6 +8282,7 @@ In sidekick, open **Settings** and, in the group **For all machines**, the area 
 - Click into the field **Key combination for a new note** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
 - **Off** switches the key combination off. **Default** restores **Ctrl+Alt+N** (**⌘⌥N** on macOS).
 - The change takes effect when you save the settings.
+- The combination cannot be the same as the [key combination to open sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#open-sidekick-with-a-key-combination).
 
 While sidekick runs, no other application gets this key combination. If another application already uses it, the area says so; choose another combination. **Note…** in the menu of the tray icon keeps working either way.
 
@@ -8317,7 +8317,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/agents-tab.md
 # The Agents Tab of sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 If you work with several Claude Code or Codex sessions at the same time, one of them is often waiting for you: it asks a question, it has finished, or it stopped halfway. The tab **Agents** in sidekick shows the sessions on your computer by whose turn it is, so you see at a glance which one needs you and which ones are still working.
 
@@ -8433,7 +8433,7 @@ Source: https://docs.timecockpit.com/doc/sidekick/privacy-and-data.md
 # sidekick Privacy and Data
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
 
@@ -8520,7 +8520,7 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 ## How the Calendar Reads the Signals
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
-- Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- Every time cockpit address, for example `https://web-dev.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - A token comes into being only by a click on **Allow** in sidekick, when the calendar asks to pair, or in the manual pairing in the tab **Pairing**. Nothing outside sidekick can create one without that click.
 - The address shown in the question to pair is the one your browser sends with it, that is, the address of the page that asks. A web page cannot ask in the name of another address, and only the time cockpit addresses that sidekick knows can ask at all.
 - The calendar picks up the token once. A token that the calendar does not pick up within a minute after **Allow** is revoked again, and a question that nobody answers expires after two minutes.
@@ -18832,12 +18832,14 @@ Both servers can be registered side by side under different names.
 - An MCP client that supports stdio servers.
 
 > [!NOTE]
-> The installer places a version-independent launcher at `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe`. It forwards all arguments to the currently installed version, so use this path in your client configuration. The versioned folders below (`app-<version>\`) change with every update.
+> OnCockpit Admin installs every version into its own folder (`%LOCALAPPDATA%\OnCockpitAdmin\app-<version>\`). On installation and on every update it sets the user environment variable `OnCockpitAdminBinary` to the full path of `OnCockpit.Admin.exe` in the current version's folder, so use this variable in your client configuration. Programs see a changed environment variable only when they are started after the change: after OnCockpit Admin has updated itself, restart your MCP client (and the terminal it runs in).
+>
+> Do not use `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe` outside the version folders. That launcher starts the current version and ends at once, so the MCP client loses track of the server process.
 
 ## Start Command
 
 ```powershell
-%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe --mcp [-c <configuration>]
+& $env:OnCockpitAdminBinary --mcp [-c <configuration>]
 ```
 
 | Option | Meaning |
@@ -18856,15 +18858,15 @@ You normally do not run this command by hand. The client starts the process when
 
 ## Register the Server
 
-The examples use a configuration named `test`. Replace `<you>` with your Windows user name where a full path is required; environment variables such as `%LOCALAPPDATA%` are not expanded inside JSON files.
+The examples use a configuration named `test`. Clients that cannot expand an environment variable in the command start the server through `cmd /v:on /c !OnCockpitAdminBinary!`. `cmd` reads the variable each time the server starts, and this form also works when the path contains spaces, for example in a user name such as `Jane Doe`.
 
 ### Claude Code
 
 ```powershell
-claude mcp add timecockpit-local --scope user -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+claude mcp add timecockpit-local --scope user -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
-Or in a project's `.mcp.json`, so the whole team gets the server. Use an environment variable for the path when team members have different user names:
+Or in a project's `.mcp.json`, so the whole team gets the server:
 
 ```json
 {
@@ -18878,7 +18880,7 @@ Or in a project's `.mcp.json`, so the whole team gets the server. Use an environ
 }
 ```
 
-Set `OnCockpitAdminBinary` as a user environment variable to `C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe`, then restart the terminal. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
+Restart the terminal after installing OnCockpit Admin so that it sees `OnCockpitAdminBinary`. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
 
 ### Visual Studio Code (Copilot agent mode)
 
@@ -18900,11 +18902,16 @@ VS Code shows the server in the Copilot Chat **MCP Servers** pane with **Start**
 
 ### OpenAI Codex
 
-```powershell
-codex mcp add timecockpit-local -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+Add the server to `%USERPROFILE%\.codex\config.toml`:
+
+```toml
+[mcp_servers.timecockpit-local]
+command = "cmd"
+args = ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
+env_vars = ["OnCockpitAdminBinary"]
 ```
 
-This writes a `[mcp_servers.timecockpit-local]` entry with `command` and `args` to `%USERPROFILE%\.codex\config.toml`.
+Codex starts MCP servers with a reduced environment and passes on only the variables listed in `env_vars`, so the entry must name `OnCockpitAdminBinary` there. `codex mcp add` cannot set `env_vars`, so edit the file directly.
 
 ### Claude Desktop
 
@@ -18914,8 +18921,8 @@ Claude Desktop starts stdio servers from `%APPDATA%\Claude\claude_desktop_config
 {
   "mcpServers": {
     "timecockpit-local": {
-      "command": "C:\\Users\\<you>\\AppData\\Local\\OnCockpitAdmin\\OnCockpit.Admin.exe",
-      "args": ["-c", "test", "--mcp"]
+      "command": "cmd",
+      "args": ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
     }
   }
 }
@@ -18928,7 +18935,7 @@ Ask the assistant to call `ping` and then to read the resource `timecockpit://cu
 If the server does not start:
 
 - Check the client's MCP log for the message from standard error. `Could not get a data context` means the configuration name is wrong or its stored sign-in no longer works. Start OnCockpit Admin normally, open the configuration, sign in and try again.
-- Make sure the path points to the launcher in `%LOCALAPPDATA%\OnCockpitAdmin\`, not to a removed `app-<version>` folder.
+- Run `echo %OnCockpitAdminBinary%` in a new command prompt. It must show `OnCockpit.Admin.exe` in an existing `app-<version>` folder. If it is empty or points to a removed folder, start OnCockpit Admin once and let it finish updating, then restart the MCP client.
 - Only one MCP session per configuration should run at a time. Model changes are not protected by optimistic locking; two scripts writing the model of the same tenant concurrently overwrite each other silently.
 
 ## Tools
@@ -19085,6 +19092,12 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 
 - **Pair sidekick in One Click**  
   Pairing time cockpit sidekick with the Time Sheet Calendar no longer means copying an address and a token. The right pane of the calendar guides you through it in two steps, installing and pairing: click **Pair with sidekick** there, then **Allow** in sidekick: sidekick asks in a small window in front, also when it runs only in the notification area or the menu bar, and the calendar picks up the token by itself. Each address of time cockpit is paired once. As long as no calendar is paired, **Open time cockpit** in the tab **Pairing** of sidekick opens the calendar, which then asks on its own. The right pane also offers **Pair with sidekick** when the token is missing or does not match, and the calendar finds sidekick by itself when it restarted on another port. The calendar settings show the state of the pairing and offer **Remove pairing**; if you do not want to use sidekick, **Hide the pane** at the bottom of the right pane hides it. The manual pairing with address and token stays available in the settings under **Pair manually with address and token**, for older versions of sidekick. See [Pair sidekick With the Calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#pair-sidekick-with-the-calendar).
+
+- **Open sidekick With a Key Combination**  
+  **Ctrl+Alt+S** (**⌘⌥S** on macOS) brings the time cockpit sidekick window to the front from any application. Change or switch off the combination in the sidekick settings in the area **Retention and start**; Visual Studio and the JetBrains IDEs use **Ctrl+Alt+S** as well. The menu of the tray icon shows the combination next to **Open sidekick…**. If the sidekick window was open when an update started, sidekick opens it again after the restart. See [Open sidekick With a Key Combination](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#open-sidekick-with-a-key-combination).
+
+- **Local MCP Server Survives OnCockpit Admin Updates**  
+  OnCockpit Admin now sets the user environment variable `OnCockpitAdminBinary` to the current version of `OnCockpit.Admin.exe` when it is installed and every time it updates itself, and removes it on uninstall. Use the variable in the configuration of your MCP client instead of a fixed path, and restart the client after an update. The launcher in `%LOCALAPPDATA%\OnCockpitAdmin\` is not suitable for MCP clients because it ends right after starting the current version. See [OnCockpit Admin: Local MCP Server](https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md).
 
 ## 🐛 Bug Fixes
 

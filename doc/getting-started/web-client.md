@@ -1,62 +1,44 @@
 ---
 title: Web Client - Modern Browser-Based Time Tracking
-description: Discover time cockpit's web client built with HTML5, CSS3, and JavaScript. Access your time tracking from any device with a modern browser or as a PWA.
+description: The web client is time cockpit's main client. It runs in any current browser without installation and can be installed as an app.
 ---
 # Web Client
 
-Time cockpit has undergone significant development since its release in 2010. It began with a Windows Presentation Foundation (WPF) fat client, which provided a rich and responsive user interface. Additionally, we introduced a Silverlight client, which offered cross-platform compatibility.
-
-Due to several reasons such as the deprecation of the Silverlight framework, the Silverlight client was deprecated a few years ago. For the past couple of years, the web client has been time cockpit's primary client.
-
-The web client is built using modern web technologies such as HTML5, CSS3, and JavaScript, and runs on any modern web browser. The web client provides a responsive and adaptive user interface making it accessible from a range of devices, including desktops, laptops, tablets.
-
-If you're just starting out with time cockpit, the web client is the recommended client to use, providing a modern and robust solution for time tracking.
+The web client is time cockpit's main client and the one we recommend to new users. It runs without installation in any current browser, on desktop computers and laptops as well as on tablets and smartphones (see [Mobile Guide](~/doc/getting-started/mobile-guide.md)). You can also install it as an app (see [Install time cockpit as an App](#install-time-cockpit-as-an-app)).
 
 ## Limitations
 
-- It is not possible to track computer signals with the web client. But if you have installed the full client to track signals, you can view the tracked signals in the web client, too. At the moment we are working on a lightweight version of the signal tracker that works without the WPF full client.
-- It is not possible to modify the data model. But all changes made with the full client are available in the web client.
+- The web client itself does not record signals of your computer. [time cockpit sidekick](~/doc/sidekick/overview.md) does: a small application of its own that records your activities and shows them in the Time Sheet Calendar of the web client; sidekick is currently in preview. Signals that the [classic Signal Tracker](~/doc/signal-tracker/overview.md) of the full client records are shown in the web client, too.
+- The data model cannot be changed in the web client. Changes you make with the full client are available in the web client, though (see [Data Model Customization](~/doc/data-model-customization/overview.md)).
 
-If you have questions regarding signal trackers or time cockpit's customization capabilities drop us a mail at [support@timecockpit.com](mailto:support@timecockpit.com) or refer to [Data Model Customization](~/doc/data-model-customization/overview.md)
+If you have questions about sidekick, the Signal Tracker or customizing time cockpit, write to us at [support@timecockpit.com](mailto:support@timecockpit.com).
 
+## Install time cockpit as an App
 
-## Use time cockpit as Progressive Web App (PWA)
+time cockpit is a Progressive Web App (PWA): you can install the web client like an application. It then runs in a window of its own and can be started from the Start menu or the taskbar.
 
-- To use time cockpit as a Progressive Web App open [time cockpit](https://web.timecockpit.com) in your Browser.
-- Select "Install Time Cockpit" on the right side in the url input field
+1. Open [time cockpit](https://web.timecockpit.com) in Google Chrome or Microsoft Edge.
+2. Click the install icon on the right of the address bar, then **Install**. The browser calls the app **time cockpit**.
 
+### Several Tabs in the App Window
 
-### How to Enable Desktop PWA Tab Strips in Google Chrome
-- Open Chrome and navigate to: chrome://flags/
-- Search for the setting "Desktop PWA tab strips" and set the flag state to "Enabled".
-- Select "Restart" of the browser
+By default, the installed app opens every page in a window of its own. Chrome and Edge can show tabs in the app window instead. The setting for this is an experimental browser feature; whether it exists and what it is called can change with every browser version.
 
-### How to Enable Desktop PWA Tab Strips in Microsoft Edge
-- Open Edge and navigate to: edge://flags/
-- Search for the setting "Desktop PWA tab strips" and set the flag state to "Enabled".
-- Select "Restart" of the browser
-
+1. In Chrome, open `chrome://flags/`; in Edge, open `edge://flags/`.
+2. Search for the setting **Desktop PWA tab strips** and set it to **Enabled**.
+3. Restart the browser when it asks you to.
 
 ## Release Plan
 
-We offer four different time cockpit environments:
+You always open time cockpit at <https://web.timecockpit.com>. We decide for your tenant or for individual users which of the four environments you work in there; the address in the browser stays the same. A new version reaches Prod around the 10th of each month, and the other environments get it somewhat earlier.
 
-### Dev: <https://web-dev.timecockpit.com>
+A badge at the top right of the menu bar of the web client shows the environment. On a narrow screen, it shows only the first three letters, for example **PRE**.
 
-This is an experimental version that we continuously update with new releases. Never use it for production purposes! Some things are likely to be broken. Using it with your production tenant might even lead to data corruption. If you want to use this version, ask for a time cockpit Sandbox.
+You need the addresses under **Targeted test** only if you want to try a particular environment: they open exactly that environment, regardless of our setting.
 
-### Preview: <https://web-preview.timecockpit.com>
-
-We publish preview releases in this environment. Between 10th and end of each month the preview release might be unstable. Still, it is way more stable than Dev. Between 1st and 9th of each month, the preview environment should not change. It contains the release candidate for the upcoming version. You can use this time frame for making your team ready and for giving us feedback. Between 1st and 9th we only update Preview if it is absolutely necessary. 
-
-### Release Candidate (RC): <https://web.timecockpit.com>
-
-About one to two weeks after a preview release, we enable it as the release candidate (RC). Users of the RC environment open time cockpit at the same address as Prod. Considerably more users work in the RC environment than in Preview.
-
-### Prod: <https://web.timecockpit.com>
-
-This is the stable production environment for time cockpit. On the 10th of each month (resp. the first working day after the 10th) we create Prod from the latest preview release. This is also the new date for our newsletter. During the month, we only update Prod in case of critical hotfixes.
-
-The following picture illustrates our release cadence:
-
-![Time cockpit release plan](images/tc-release-plan.png "Time cockpit release plan")
+| Environment | Description |
+|---|---|
+| **Dev** | <img src="images/environment-badge-dev.en.png" alt="Badge DEV" title="Badge DEV" width="410" /><br>Experimental version that we update continuously. Do not use Dev for your productive work: some things are likely broken there, and with your production tenant Dev can even damage data. If you want to try Dev, ask for a time cockpit sandbox.<br><br>Targeted test: <https://web-dev.timecockpit.com> |
+| **Preview** | <img src="images/environment-badge-preview.en.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="410" /><br>Gets a new version before the release candidate. Considerably more stable than Dev but can still change. Use Preview to prepare your team for a new version and to give us feedback.<br><br>Targeted test: <https://web-preview.timecockpit.com> |
+| **Release candidate (RC)** | <img src="images/environment-badge-rc.en.png" alt="Badge RC" title="Badge RC" width="410" /><br>The version that goes to Prod next, ideally one to two weeks before the Prod release. Considerably more users work in the RC than in Preview.<br><br>Targeted test: <https://web-rc.timecockpit.com> |
+| **Prod** | <img src="images/environment-badge-prod.en.png" alt="No badge in Prod" title="No badge in Prod" width="410" /><br>No badge. The stable production environment. A new version arrives around the 10th of each month, together with our newsletter. During the month, we update Prod only for critical fixes.<br><br>Targeted test: <https://web-prod.timecockpit.com> |

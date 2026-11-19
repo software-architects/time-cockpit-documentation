@@ -6,7 +6,7 @@ en_page: doc/sidekick/calendar-signals.md
 # sidekick-Signale im Zeiterfassungskalender
 
 > [!WARNING]
-> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in der Preview-Umgebung (`https://web-preview.timecockpit.com`) und im Release Candidate (RC, unter `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in den Umgebungen Preview und Release Candidate (RC). Sie öffnen beide unter `https://web.timecockpit.com`; welche Sie verwenden, zeigt das Badge rechts oben im Web-Client (**PREVIEW** oder **RC**, siehe [Release-Plan](~/doc/erste-schritte/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Sobald time cockpit sidekick [mit dem Kalender gekoppelt](~/doc/sidekick/installation-und-koppeln.md) ist, zeigt der [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) seine Signale neben Ihren Zeitbuchungen an. Diese Seite beschreibt, was Sie sehen und wie Sie damit arbeiten.
 
