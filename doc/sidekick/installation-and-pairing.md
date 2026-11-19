@@ -63,7 +63,7 @@ Limitations of the macOS version:
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. If the sidekick window was open when the update started, also minimized, sidekick opens it again after the restart. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
@@ -191,13 +191,25 @@ The calendar retries **sidekick not answering** and **Browser blocks sidekick** 
 
 If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The calendar looks for sidekick on port 41337 and the next nine ports when it pairs. When a paired sidekick no longer answers at the saved address, the calendar looks for it there as well and recognises it by a proof of its token for that port, without sending the token; it then saves the new address itself, so there is nothing to enter again. This needs a current sidekick; with an older one, click **Pair with sidekick** in the right pane. The calendar asks a current sidekick for the same proof at the saved address before it sends its token, when the page loads and after the connection was lost, so a program that took the port of sidekick gets no token. If the proof does not match, the calendar looks on the other ports and otherwise shows **Pairing no longer valid**. With a token paired by hand, the calendar sends it without a proof as long as sidekick has never shown one, because older versions of sidekick cannot; pairing in one click avoids this. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick** under **Pair manually with address and token**. If you set a port outside this range under **Port and technical details** in the tab **Pairing**, enter the new address in the [manual pairing](#pair-manually-with-address-and-token) of the calendar.
 
+## Open sidekick With a Key Combination
+
+Press **Ctrl+Alt+S** on Windows or **⌘⌥S** on macOS to bring the sidekick window to the front from any application. The key combination works while sidekick runs, also when only its icon in the notification area or the menu bar is shown.
+
+To change the combination, open **Settings** in sidekick and, in the group **For all machines**, the area **Retention and start**.
+
+- Click into the field **Key combination to open sidekick** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
+- **Off** switches the key combination off. **Default** restores **Ctrl+Alt+S** (**⌘⌥S** on macOS).
+- The change takes effect when you save the settings.
+
+While sidekick runs, no other application gets this key combination. Visual Studio and the JetBrains IDEs, for example IntelliJ IDEA or Rider, use **Ctrl+Alt+S** as well; if you use them, choose another combination for sidekick or switch it off. If another application already uses the combination, the area says so. The combination cannot be the same as the [key combination for a new note](notes.md#key-combination). **Open sidekick…** in the menu of the tray icon keeps working either way.
+
 ## The Tray Icon Menu
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
 - The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
-- **Open sidekick…** opens the window.
+- **Open sidekick…** opens the window. The menu shows the [key combination](#open-sidekick-with-a-key-combination) next to it while it is active.
 - **Note…** opens the window for a [quick note](notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
