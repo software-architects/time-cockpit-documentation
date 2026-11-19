@@ -169,43 +169,18 @@ By default, the installed app opens every page in a window of its own. Chrome an
 
 ## Release Plan
 
-There are four environments: Dev, Preview, release candidate (RC) and Prod. You open Preview, RC and Prod all at the same address, <https://web.timecockpit.com>. We decide which of these environments a whole tenant or individual users get; the address in the browser stays the same.
+You always open time cockpit at <https://web.timecockpit.com>. We decide for your tenant or for individual users which of the four environments you work in there; the address in the browser stays the same. A new version reaches Prod around the 10th of each month, and the other environments get it somewhat earlier.
 
-A badge at the top right of the menu bar of the web client shows the environment you work in:
+A badge at the top right of the menu bar of the web client shows the environment. On a narrow screen, it shows only the first three letters, for example **PRE**.
 
-| Environment | Top right in the web client |
+You need the addresses under **Targeted test** only if you want to try a particular environment: they open exactly that environment, regardless of our setting.
+
+| Environment | Description |
 |---|---|
-| Dev | <img src="images/environment-badge-dev.en.png" alt="Badge DEV" title="Badge DEV" width="400" /> |
-| Preview | <img src="images/environment-badge-preview.en.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="400" /> |
-| Release candidate | <img src="images/environment-badge-rc.en.png" alt="Badge RC" title="Badge RC" width="400" /> |
-| Prod | <img src="images/environment-badge-prod.en.png" alt="No badge in Prod" title="No badge in Prod" width="400" /><br>no badge |
-
-On a narrow screen, the badge shows only the first three letters, for example **PRE**.
-
-A new version reaches Prod around the 10th of each month. The other environments get it somewhat earlier:
-
-```mermaid
-flowchart LR
-    dev["Dev<br>new versions continuously"] --> preview["Preview<br>before the RC"]
-    preview --> rc["Release candidate<br>ideally one to two weeks before Prod"]
-    rc --> prod["Prod<br>around the 10th of each month"]
-```
-
-### Dev: <https://web-dev.timecockpit.com>
-
-Dev is an experimental version that we update continuously with new versions. Do not use Dev for your productive work: some things are likely broken there, and with your production tenant Dev can even damage data. If you want to try Dev, ask for a time cockpit sandbox.
-
-### Preview
-
-Preview gets a new version before the release candidate. It is considerably more stable than Dev but can still change. Use Preview to prepare your team for a new version and to give us feedback.
-
-### Release Candidate (RC)
-
-The release candidate is the version that goes to Prod next. Ideally, it is available one to two weeks before the Prod release. Considerably more users work in the RC than in Preview.
-
-### Prod
-
-Prod is time cockpit's stable production environment. A new version arrives here around the 10th of each month, together with our newsletter. During the month, we update Prod only for critical fixes.
+| **Dev**<br><img src="images/environment-badge-dev.en.png" alt="Badge DEV" title="Badge DEV" width="240" style="min-width:240px" /> | Experimental version that we update continuously. Do not use Dev for your productive work: some things are likely broken there, and with your production tenant Dev can even damage data. If you want to try Dev, ask for a time cockpit sandbox.<br><br>Targeted test: <https://web-dev.timecockpit.com> |
+| **Preview**<br><img src="images/environment-badge-preview.en.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="240" style="min-width:240px" /> | Gets a new version before the release candidate. Considerably more stable than Dev but can still change. Use Preview to prepare your team for a new version and to give us feedback.<br><br>Targeted test: <https://web-preview.timecockpit.com> |
+| **Release candidate (RC)**<br><img src="images/environment-badge-rc.en.png" alt="Badge RC" title="Badge RC" width="240" style="min-width:240px" /> | The version that goes to Prod next, ideally one to two weeks before the Prod release. Considerably more users work in the RC than in Preview.<br><br>Targeted test: <https://web-rc.timecockpit.com> |
+| **Prod**<br><img src="images/environment-badge-prod.en.png" alt="No badge in Prod" title="No badge in Prod" width="240" style="min-width:240px" /><br>no badge | The stable production environment. A new version arrives around the 10th of each month, together with our newsletter. During the month, we update Prod only for critical fixes.<br><br>Targeted test: <https://web-prod.timecockpit.com> |
 
 ---
 
