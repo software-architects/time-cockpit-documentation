@@ -24,6 +24,8 @@ To create a script for time cockpit you can use the built in script editor or an
 
 You can execute scripts using the Execute button in the ribbon or the F5 key. If you select a part of the script only the selected part of the script is executed. In the lower part of the script editor you see the output of the script. If your script generates a tabular result you can assign the result to the python variable result. If result is an [IEnumerable](http://msdn.microsoft.com/en-us/library/9eekhta0(VS.100).aspx)<<xref:TimeCockpit.Data.EntityObject>> a result tab appears in which the content of the table is displayed.
 
+When you run a saved script that has no unsaved changes, time cockpit sets the Python variable `__file__` to the full path of the script file. The script can then read files next to itself, for example from the folder `Path.GetDirectoryName(__file__)` (with `from System.IO import Path`). The same applies to scripts that [ExecuteScript](automating-scripts.md), OnCockpit Admin or the local MCP tool `execute_script_file` run from a file. A selection, or a script with unsaved changes, runs as text: `__file__` then contains the placeholder `<module>`, as it always did in versions before December 2026.
+
 ## Basics For Time Cockpit Scripts
 
 You can use all Python language constructs that are supported by IronPython. If you want to learn more about the language Python we recommend the [documentation web site for IronPython](http://ironpython.net/documentation/).

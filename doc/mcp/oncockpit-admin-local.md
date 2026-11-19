@@ -163,7 +163,7 @@ The local server offers the same shared tools as the remote server, with the sam
 | `create_object`, `update_object`, `delete_object` | **yes** | yes | Create, update or delete an object of a visible entity. Need `confirmed=true`. |
 | `get_resource` | no | | **Local only.** Read one of the resources below for clients that do not support MCP resources natively. |
 | `execute_script_literal` | **yes** | yes | **Local only.** Run inline IronPython 2.7 source against the live data context. Output written with `print` is returned as the result. The script sees the data context as the global `Context` object. |
-| `execute_script_file` | **yes** | yes | **Local only.** Run an existing `.py` file from the local disk. Use this for larger scripts such as `DataModel.py` migrations that read further files relative to their own location. An operator can restrict the allowed folders. |
+| `execute_script_file` | **yes** | yes | **Local only.** Run an existing `.py` file from the local disk. Use this for larger scripts such as `DataModel.py` migrations that read further files relative to their own location: the script gets its full path in `__file__`. An operator can restrict the allowed folders. |
 
 Everything marked as changing data is hidden with `--mcp-access ReadOnly`. `entra_whoami` exists only on the remote server. The script tools are not confirmation-gated; the confirmation handshake applies to the generic object tools and `create_timesheet_suggestion`. Model actions are not exposed as tools; run them in the time cockpit UI. Reads are row-capped and report `truncated`; see [Limits and Truncation](limits.md).
 

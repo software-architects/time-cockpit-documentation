@@ -25,6 +25,8 @@ Um ein Skript für time cockpit zu erstellen, können Sie den integrierten Skrip
 
 Skripte führen Sie mit der Schaltfläche Execute im Menüband oder mit der Taste F5 aus. Wenn Sie einen Teil des Skripts markieren, wird nur der markierte Teil ausgeführt. Im unteren Bereich des Skripteditors sehen Sie die Ausgabe des Skripts. Erzeugt Ihr Skript ein tabellarisches Ergebnis, können Sie es der Python-Variable result zuweisen. Ist result ein [IEnumerable](http://msdn.microsoft.com/en-us/library/9eekhta0(VS.100).aspx)<[TimeCockpit.Data.EntityObject](/api/TimeCockpit.Data.EntityObject.html)>, erscheint ein Ergebnis-Tab, in dem der Inhalt der Tabelle angezeigt wird.
 
+Wenn Sie ein gespeichertes Skript ohne ungespeicherte Änderungen ausführen, setzt time cockpit die Python-Variable `__file__` auf den vollständigen Pfad der Skriptdatei. Das Skript kann dann Dateien neben sich lesen, zum Beispiel aus dem Ordner `Path.GetDirectoryName(__file__)` (mit `from System.IO import Path`). Dasselbe gilt für Skripte, die [ExecuteScript](skripte-automatisieren.md), OnCockpit Admin oder das lokale MCP-Werkzeug `execute_script_file` aus einer Datei ausführen. Eine Markierung oder ein Skript mit ungespeicherten Änderungen läuft als Text: `__file__` enthält dann den Platzhalter `<module>`, wie in Versionen vor Dezember 2026 immer.
+
 ## Grundlagen für time cockpit-Skripte
 
 Sie können alle Sprachkonstrukte von Python verwenden, die IronPython unterstützt. Wenn Sie mehr über die Sprache Python erfahren möchten, empfehlen wir die [Dokumentationswebsite von IronPython](http://ironpython.net/documentation/).
