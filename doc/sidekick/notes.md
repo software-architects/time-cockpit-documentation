@@ -78,6 +78,7 @@ In sidekick, open **Settings** and, in the group **For all machines**, the area 
 - Click into the field **Key combination for a new note** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
 - **Off** switches the key combination off. **Default** restores **Ctrl+Alt+N** (**⌘⌥N** on macOS).
 - The change takes effect when you save the settings.
+- The combination cannot be the same as the [key combination to open sidekick](installation-and-pairing.md#open-sidekick-with-a-key-combination).
 
 While sidekick runs, no other application gets this key combination. If another application already uses it, the area says so; choose another combination. **Note…** in the menu of the tray icon keeps working either way.
 
