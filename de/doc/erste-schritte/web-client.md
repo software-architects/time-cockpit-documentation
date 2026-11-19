@@ -44,12 +44,12 @@ Wir bieten vier verschiedene time cockpit-Umgebungen an. Preview, Release Candid
 
 In welcher Umgebung Sie arbeiten, zeigt ein Badge rechts oben in der Menüleiste des Web-Clients:
 
-| Badge | Umgebung |
+| Umgebung | Rechts oben im Web-Client |
 |---|---|
-| **DEV** | Dev |
-| **PREVIEW** | Preview |
-| **RC** | Release Candidate |
-| kein Badge | Prod |
+| Dev | <img src="/doc/getting-started/images/environment-badge-dev.de.png" alt="Badge DEV" title="Badge DEV" width="400" /> |
+| Preview | <img src="/doc/getting-started/images/environment-badge-preview.de.png" alt="Badge PREVIEW" title="Badge PREVIEW" width="400" /> |
+| Release Candidate | <img src="/doc/getting-started/images/environment-badge-rc.de.png" alt="Badge RC" title="Badge RC" width="400" /> |
+| Prod | <img src="/doc/getting-started/images/environment-badge-prod.de.png" alt="Kein Badge in Prod" title="Kein Badge in Prod" width="400" /><br>kein Badge |
 
 Auf einem schmalen Bildschirm zeigt das Badge nur die ersten drei Buchstaben, zum Beispiel **PRE**.
 
