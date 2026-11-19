@@ -40,21 +40,32 @@ Wenn Sie Fragen zu Signal Trackern oder zu den Anpassungsmöglichkeiten von time
 
 ## Release-Plan
 
-Wir bieten vier verschiedene time cockpit-Umgebungen an:
+Wir bieten vier verschiedene time cockpit-Umgebungen an. Preview, Release Candidate (RC) und Prod öffnen Sie alle unter derselben Adresse, <https://web.timecockpit.com>. Auf welche dieser Umgebungen ein ganzer Tenant oder einzelne Benutzer kommen, legen wir fest; die Adresse im Browser bleibt dieselbe.
+
+In welcher Umgebung Sie arbeiten, zeigt ein Badge rechts oben in der Menüleiste des Web-Clients:
+
+| Badge | Umgebung |
+|---|---|
+| **DEV** | Dev |
+| **PREVIEW** | Preview |
+| **RC** | Release Candidate |
+| kein Badge | Prod |
+
+Auf einem schmalen Bildschirm zeigt das Badge nur die ersten drei Buchstaben, zum Beispiel **PRE**.
 
 ### Dev: <https://web-dev.timecockpit.com>
 
 Dies ist eine experimentelle Version, die wir laufend mit neuen Releases aktualisieren. Verwenden Sie sie niemals produktiv! Manches wird wahrscheinlich nicht funktionieren. Die Verwendung mit Ihrem produktiven Tenant kann sogar zu beschädigten Daten führen. Wenn Sie diese Version verwenden möchten, fragen Sie nach einer time cockpit-Sandbox.
 
-### Preview: <https://web-preview.timecockpit.com>
+### Preview
 
 In dieser Umgebung veröffentlichen wir Preview-Releases. Zwischen dem 10. und dem Ende jedes Monats kann das Preview-Release instabil sein. Es ist aber trotzdem deutlich stabiler als Dev. Zwischen dem 1. und dem 9. jedes Monats sollte sich die Preview-Umgebung nicht ändern. Sie enthält dann den Release Candidate für die kommende Version. Nutzen Sie diesen Zeitraum, um Ihr Team vorzubereiten und uns Feedback zu geben. Zwischen dem 1. und dem 9. aktualisieren wir Preview nur, wenn es unbedingt notwendig ist.
 
-### Release Candidate (RC): <https://web.timecockpit.com>
+### Release Candidate (RC)
 
-Etwa ein bis zwei Wochen nach einem Preview-Release schalten wir es als Release Candidate (RC) frei. Benutzer der RC-Umgebung öffnen time cockpit unter derselben Adresse wie Prod. In der RC-Umgebung arbeiten deutlich mehr Benutzer als in Preview.
+Etwa ein bis zwei Wochen nach einem Preview-Release schalten wir es als Release Candidate (RC) frei. In der RC-Umgebung arbeiten deutlich mehr Benutzer als in Preview.
 
-### Prod: <https://web.timecockpit.com>
+### Prod
 
 Dies ist die stabile Produktivumgebung von time cockpit. Am 10. jedes Monats (bzw. am ersten Arbeitstag nach dem 10.) erstellen wir Prod aus dem neuesten Preview-Release. An diesem Datum erscheint auch unser Newsletter. Während des Monats aktualisieren wir Prod nur bei kritischen Hotfixes.
 

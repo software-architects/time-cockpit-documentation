@@ -6,7 +6,7 @@ en_page: doc/sidekick/privacy-and-data.md
 # Datenschutz und Daten in sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in der Preview-Umgebung (`https://web-preview.timecockpit.com`) und im Release Candidate (RC, unter `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in den Umgebungen Preview und Release Candidate (RC). Sie öffnen beide unter `https://web.timecockpit.com`; welche Sie verwenden, zeigt das Badge rechts oben im Web-Client (**PREVIEW** oder **RC**, siehe [Release-Plan](~/doc/erste-schritte/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick zeichnet Arbeitssignale auf Ihrem Rechner auf und behält sie dort. Diese Seite beschreibt genau, was aufgezeichnet wird, was nie aufgezeichnet wird, wo die Daten gespeichert werden, wer sie lesen kann und wo der Schutz endet.
 
@@ -93,7 +93,7 @@ Die Daten gehen an Microsoft Azure Application Insights in der Region North Euro
 ## Wie der Kalender die Signale liest
 
 - sidekick antwortet nur unter `127.0.0.1`. Andere Rechner im Netzwerk können es nicht erreichen.
-- Jede time cockpit Adresse, zum Beispiel `https://web-preview.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
+- Jede time cockpit Adresse, zum Beispiel `https://web-dev.timecockpit.com`, braucht ihr eigenes Token. Ein Token, das für eine andere Adresse erstellt wurde, wird abgewiesen.
 - Ein Token entsteht nur durch einen Klick auf **Erlauben** in sidekick, wenn der Kalender um eine Kopplung bittet, oder beim manuellen Koppeln im Reiter **Koppeln**. Ohne diesen Klick kann nichts außerhalb von sidekick ein Token erstellen.
 - Die Adresse in der Anfrage zum Koppeln ist die, die Ihr Browser mit der Anfrage mitschickt, also die Adresse der anfragenden Seite. Eine Webseite kann nicht im Namen einer anderen Adresse anfragen, und anfragen können überhaupt nur die time cockpit Adressen, die sidekick kennt.
 - Der Kalender holt das Token einmal ab. Ein Token, das der Kalender nicht innerhalb einer Minute nach **Erlauben** abholt, wird wieder widerrufen, und eine Anfrage, die niemand beantwortet, verfällt nach zwei Minuten.

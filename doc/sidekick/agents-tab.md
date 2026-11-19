@@ -5,7 +5,7 @@ description: The Agents tab of time cockpit sidekick orders your Claude Code and
 # The Agents Tab of sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](~/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 If you work with several Claude Code or Codex sessions at the same time, one of them is often waiting for you: it asks a question, it has finished, or it stopped halfway. The tab **Agents** in sidekick shows the sessions on your computer by whose turn it is, so you see at a glance which one needs you and which ones are still working.
 

@@ -39,21 +39,32 @@ If you have questions regarding signal trackers or time cockpit's customization 
 
 ## Release Plan
 
-We offer four different time cockpit environments:
+We offer four different time cockpit environments. You open Preview, release candidate (RC) and Prod all at the same address, <https://web.timecockpit.com>. We decide which of these environments a whole tenant or individual users get; the address in the browser stays the same.
+
+A badge at the top right of the menu bar of the web client shows the environment you work in:
+
+| Badge | Environment |
+|---|---|
+| **DEV** | Dev |
+| **PREVIEW** | Preview |
+| **RC** | Release candidate |
+| no badge | Prod |
+
+On a narrow screen, the badge shows only the first three letters, for example **PRE**.
 
 ### Dev: <https://web-dev.timecockpit.com>
 
 This is an experimental version that we continuously update with new releases. Never use it for production purposes! Some things are likely to be broken. Using it with your production tenant might even lead to data corruption. If you want to use this version, ask for a time cockpit Sandbox.
 
-### Preview: <https://web-preview.timecockpit.com>
+### Preview
 
 We publish preview releases in this environment. Between 10th and end of each month the preview release might be unstable. Still, it is way more stable than Dev. Between 1st and 9th of each month, the preview environment should not change. It contains the release candidate for the upcoming version. You can use this time frame for making your team ready and for giving us feedback. Between 1st and 9th we only update Preview if it is absolutely necessary. 
 
-### Release Candidate (RC): <https://web.timecockpit.com>
+### Release Candidate (RC)
 
-About one to two weeks after a preview release, we enable it as the release candidate (RC). Users of the RC environment open time cockpit at the same address as Prod. Considerably more users work in the RC environment than in Preview.
+About one to two weeks after a preview release, we enable it as the release candidate (RC). Considerably more users work in the RC environment than in Preview.
 
-### Prod: <https://web.timecockpit.com>
+### Prod
 
 This is the stable production environment for time cockpit. On the 10th of each month (resp. the first working day after the 10th) we create Prod from the latest preview release. This is also the new date for our newsletter. During the month, we only update Prod in case of critical hotfixes.
 

@@ -6,7 +6,7 @@ en_page: doc/sidekick/notes.md
 # Notizen mit sidekick
 
 > [!WARNING]
-> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in der Preview-Umgebung (`https://web-preview.timecockpit.com`) und im Release Candidate (RC, unter `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick befindet sich in einer Vorschauphase. Funktionen, Bezeichnungen und Einrichtungsschritte können sich ohne Vorankündigung ändern. sidekick läuft unter Windows 10/11 und macOS. Während der Preview funktioniert sidekick nur in den Umgebungen Preview und Release Candidate (RC). Sie öffnen beide unter `https://web.timecockpit.com`; welche Sie verwenden, zeigt das Badge rechts oben im Web-Client (**PREVIEW** oder **RC**, siehe [Release-Plan](~/doc/erste-schritte/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 Signale zeigen, wann Sie gearbeitet haben und mit welchen Anwendungen, aber nicht immer, woran. Ein Telefonat, ein Gespräch am Schreibtisch oder eine schnelle Korrektur hinterlassen kaum Spuren. Mit einer Notiz halten Sie es in wenigen Worten fest, ohne die Anwendung zu verlassen, in der Sie gerade sind. sidekick behält die Notiz mit ihrer Zeit, und der [Zeiterfassungskalender](~/doc/zeiterfassungskalender/kalender.md) zeigt sie neben den Signalen, sodass Sie sie später mit ihrem Text buchen können.
 

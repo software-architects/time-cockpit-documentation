@@ -5,7 +5,7 @@ description: What time cockpit sidekick records and never records, where the dat
 # sidekick Privacy and Data
 
 > [!WARNING]
-> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the preview environment (`https://web-preview.timecockpit.com`) and in the release candidate (RC, at `https://web.timecockpit.com`). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
+> Preview: time cockpit sidekick is in a preview. Features, labels and setup steps can change without notice. sidekick runs on Windows 10/11 and macOS. During the preview, sidekick works only in the environments Preview and release candidate (RC). You open both at `https://web.timecockpit.com`; the badge at the top right of the web client shows which one you use (**PREVIEW** or **RC**, see [Release Plan](~/doc/getting-started/web-client.md#release-plan)). Feedback: [support@timecockpit.com](mailto:support@timecockpit.com)
 
 time cockpit sidekick records work signals on your computer and keeps them there. This page states exactly what is recorded, what is never recorded, where the data is stored, who can read it, and where the protection ends.
 
@@ -92,7 +92,7 @@ The data goes to Microsoft Azure Application Insights in the region North Europe
 ## How the Calendar Reads the Signals
 
 - sidekick answers only on `127.0.0.1`. Other computers in the network cannot reach it.
-- Every time cockpit address, for example `https://web-preview.timecockpit.com`, needs its own token. A token that was created for another address is refused.
+- Every time cockpit address, for example `https://web-dev.timecockpit.com`, needs its own token. A token that was created for another address is refused.
 - A token comes into being only by a click on **Allow** in sidekick, when the calendar asks to pair, or in the manual pairing in the tab **Pairing**. Nothing outside sidekick can create one without that click.
 - The address shown in the question to pair is the one your browser sends with it, that is, the address of the page that asks. A web page cannot ask in the name of another address, and only the time cockpit addresses that sidekick knows can ask at all.
 - The calendar picks up the token once. A token that the calendar does not pick up within a minute after **Allow** is revoked again, and a question that nobody answers expires after two minutes.
