@@ -73,6 +73,9 @@ Einschränkungen der macOS-Version:
 
 Der Kalender darf die Signale nur mit einem Token lesen, das sidekick für die Adresse Ihres time cockpit erstellt hat: in der Preview-Umgebung `https://web-preview.timecockpit.com`, im RC `https://web.timecockpit.com`. Sie müssen das Token weder selbst erstellen noch kopieren: Der Kalender fragt sidekick danach, und Sie bestätigen die Anfrage in sidekick mit einem Klick.
 
+> [!NOTE]
+> Das Koppeln mit einem Klick braucht time cockpit 2026.12 oder neuer. In einer älteren Version bietet der Kalender **Mit sidekick koppeln** nicht an; koppeln Sie dann [manuell mit Adresse und Token](#manuell-koppeln-mit-adresse-und-token).
+
 ### Mit einem Klick koppeln
 
 1. Starten Sie sidekick auf dem Rechner, auf dem Sie time cockpit im Browser verwenden.
@@ -124,6 +127,8 @@ Wenn Sie Preview oder eine Sandbox verwenden, öffnen Sie stattdessen Ihre Adres
 
 Um später einen weiteren Browser zu koppeln, öffnen Sie den Kalender in diesem Browser und klicken im rechten Bereich auf **Mit sidekick koppeln**.
 
+Ein Kalender vor time cockpit 2026.12 fragt nicht bei sidekick an, wenn Sie ihn mit **time cockpit öffnen** öffnen. Koppeln Sie dann [manuell mit Adresse und Token](#manuell-koppeln-mit-adresse-und-token).
+
 ### Adressen und Umgebungen
 
 - Jede Adresse von time cockpit wird einmal gekoppelt. Danach liest der Kalender die Signale, ohne erneut zu fragen.
@@ -133,7 +138,7 @@ Um später einen weiteren Browser zu koppeln, öffnen Sie den Kalender in diesem
 
 ### Manuell koppeln mit Adresse und Token
 
-Verwenden Sie das manuelle Koppeln mit einer Version von sidekick, die noch nicht per Klick koppeln kann. In den Einstellungen des Kalenders und im Reiter **Koppeln** von sidekick ist es unter **Manuell koppeln mit Adresse und Token** eingeklappt.
+Verwenden Sie das manuelle Koppeln, wenn Ihr time cockpit älter als 2026.12 ist oder Ihre Version von sidekick noch nicht per Klick koppeln kann. Im Reiter **Koppeln** von sidekick und ab time cockpit 2026.12 auch in den Einstellungen des Kalenders ist es unter **Manuell koppeln mit Adresse und Token** eingeklappt.
 
 #### In sidekick: Token erstellen
 
@@ -150,9 +155,9 @@ sidekick speichert nur einen Hash des Tokens, nie das Token selbst. Wenn Sie das
 1. Öffnen Sie den Zeiterfassungskalender im time cockpit Web-Client, in der Preview-Umgebung unter `https://web-preview.timecockpit.com`, im RC unter `https://web.timecockpit.com`, in einem Browser auf demselben Rechner.
 2. Öffnen Sie das Zahnrad **Einstellungen**.
 3. Wählen Sie unter **Signale** die Option **time cockpit sidekick**.
-4. Klappen Sie **Manuell koppeln mit Adresse und Token** auf.
-5. Fügen Sie die Adresse in **Adresse von sidekick** und das Token in **Token** ein. Der Kalender akzeptiert nur eine Adresse von sidekick auf diesem Computer, `http://127.0.0.1:` oder `http://localhost:` gefolgt vom Port; das Token sendet er nirgendwo anders hin. Bei jeder anderen Adresse meldet er **Geben Sie die Adresse von sidekick auf diesem Computer ein, zum Beispiel http://127.0.0.1:41337.** und testet oder speichert sie nicht.
-6. Klicken Sie auf **Verbindung testen**. Erreicht der Kalender sidekick, zeigt er **Verbunden mit**, gefolgt vom Namen des Geräts. Nach zu vielen ungültigen Tokens dieser Adresse nimmt sidekick eine Minute lang keine Anfragen an; der Test sagt das dann, und Sie versuchen es eine Minute später noch einmal.
+4. Klappen Sie ab time cockpit 2026.12 **Manuell koppeln mit Adresse und Token** auf. In älteren Versionen stehen die Felder direkt unter **time cockpit sidekick**.
+5. Fügen Sie die Adresse in **Adresse von sidekick** und das Token in **Token** ein. Ab time cockpit 2026.12 akzeptiert der Kalender nur eine Adresse von sidekick auf diesem Computer, `http://127.0.0.1:` oder `http://localhost:` gefolgt vom Port; das Token sendet er nirgendwo anders hin. Bei jeder anderen Adresse meldet er **Geben Sie die Adresse von sidekick auf diesem Computer ein, zum Beispiel http://127.0.0.1:41337.** und testet oder speichert sie nicht.
+6. Klicken Sie auf **Verbindung testen**. Erreicht der Kalender sidekick, zeigt er **Verbunden mit**, gefolgt vom Namen des Geräts. Nach zu vielen ungültigen Tokens dieser Adresse nimmt sidekick eine Minute lang keine Anfragen an; ab time cockpit 2026.12 sagt der Test das dann. Versuchen Sie es eine Minute später noch einmal.
 7. Klicken Sie auf **Speichern**.
 
 Ihr Browser fragt möglicherweise, ob die time cockpit Seite auf Geräte in Ihrem lokalen Netzwerk zugreifen darf. Erlauben Sie es; sonst blockiert der Browser die Verbindung zu sidekick.

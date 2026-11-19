@@ -72,6 +72,9 @@ Limitations of the macOS version:
 
 The calendar may read the signals only with a token that sidekick created for the address of your time cockpit: `https://web-preview.timecockpit.com` in the preview environment, `https://web.timecockpit.com` in the RC. You do not have to create or copy the token yourself: the calendar asks sidekick for it, and you confirm the question in sidekick with one click.
 
+> [!NOTE]
+> Pairing in one click needs time cockpit 2026.12 or later. In an older version, the calendar does not offer **Pair with sidekick**; pair [manually with address and token](#pair-manually-with-address-and-token) instead.
+
 ### Pair in One Click
 
 1. Start sidekick on the computer on which you use time cockpit in the browser.
@@ -123,6 +126,8 @@ If you use Preview or a sandbox, open your address as usual and click **Pair wit
 
 To pair another browser later, open the calendar in that browser and click **Pair with sidekick** in the right pane.
 
+A calendar before time cockpit 2026.12 does not ask sidekick when you open it with **Open time cockpit**. Pair [manually with address and token](#pair-manually-with-address-and-token) instead.
+
 ### Addresses and Environments
 
 - Each address of time cockpit is paired once. After that, the calendar reads the signals without asking again.
@@ -132,7 +137,7 @@ To pair another browser later, open the calendar in that browser and click **Pai
 
 ### Pair Manually With Address and Token
 
-Use the manual pairing with a version of sidekick that cannot pair in one click yet. In the calendar settings and in the tab **Pairing** of sidekick, it is folded under **Pair manually with address and token**.
+Use the manual pairing if your time cockpit is older than 2026.12 or your version of sidekick cannot pair in one click yet. In the tab **Pairing** of sidekick, and from time cockpit 2026.12 also in the calendar settings, it is folded under **Pair manually with address and token**.
 
 #### In sidekick: Create a Token
 
@@ -149,9 +154,9 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 1. Open the Time Sheet Calendar in the time cockpit web client, at `https://web-preview.timecockpit.com` in the preview environment or at `https://web.timecockpit.com` in the RC, in a browser on the same computer.
 2. Open the gear **Settings**.
 3. Under **Signals**, choose **time cockpit sidekick**.
-4. Unfold **Pair manually with address and token**.
-5. Paste the address into **Address of sidekick** and the token into **Token**. The calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
-6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; the test then says so, and you try again a minute later.
+4. From time cockpit 2026.12, unfold **Pair manually with address and token**. In older versions, the fields are right below **time cockpit sidekick**.
+5. Paste the address into **Address of sidekick** and the token into **Token**. From time cockpit 2026.12, the calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
+6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; from time cockpit 2026.12, the test then says so. Try again a minute later.
 7. Click **Save**.
 
 Your browser may ask whether the time cockpit page may access devices in your local network. Allow it; otherwise the browser blocks the connection to sidekick.

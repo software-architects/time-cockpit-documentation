@@ -7907,7 +7907,7 @@ Limitations of the macOS version:
 ### Autostart and Updates
 
 - The autostart is the setting **Start with the operating system** in sidekick under **Settings** in the area **Retention and start**.
-- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
+- sidekick updates itself on Windows and macOS. It checks for a new version one minute after the start and then every four hours, and downloads a new version in the background. The menu of the sidekick icon (in the notification area on Windows, in the menu bar on macOS) then offers **Install update … and restart**; otherwise the update is installed at the next start. If the sidekick window was open when the update started, also minimized, sidekick opens it again after the restart. A click on the version number at the bottom of the left rail of the sidekick window shows the state of the updates, with **Check for updates** and **Get pre-release versions**.
 
 ## Pair sidekick With the Calendar
 
@@ -7915,6 +7915,9 @@ Limitations of the macOS version:
 > During the preview, sidekick can be paired only with the preview environment and the release candidate (RC) of time cockpit. Open the Time Sheet Calendar at the address at which you use time cockpit and pair that address: `https://web-preview.timecockpit.com` in the preview environment, `https://web.timecockpit.com` in the RC. The environments are described in the [Release Plan](https://docs.timecockpit.com/doc/getting-started/web-client.md#release-plan).
 
 The calendar may read the signals only with a token that sidekick created for the address of your time cockpit: `https://web-preview.timecockpit.com` in the preview environment, `https://web.timecockpit.com` in the RC. You do not have to create or copy the token yourself: the calendar asks sidekick for it, and you confirm the question in sidekick with one click.
+
+> [!NOTE]
+> Pairing in one click needs time cockpit 2026.12 or later. In an older version, the calendar does not offer **Pair with sidekick**; pair [manually with address and token](#pair-manually-with-address-and-token) instead.
 
 ### Pair in One Click
 
@@ -7967,6 +7970,8 @@ If you use Preview or a sandbox, open your address as usual and click **Pair wit
 
 To pair another browser later, open the calendar in that browser and click **Pair with sidekick** in the right pane.
 
+A calendar before time cockpit 2026.12 does not ask sidekick when you open it with **Open time cockpit**. Pair [manually with address and token](#pair-manually-with-address-and-token) instead.
+
 ### Addresses and Environments
 
 - Each address of time cockpit is paired once. After that, the calendar reads the signals without asking again.
@@ -7976,7 +7981,7 @@ To pair another browser later, open the calendar in that browser and click **Pai
 
 ### Pair Manually With Address and Token
 
-Use the manual pairing with a version of sidekick that cannot pair in one click yet. In the calendar settings and in the tab **Pairing** of sidekick, it is folded under **Pair manually with address and token**.
+Use the manual pairing if your time cockpit is older than 2026.12 or your version of sidekick cannot pair in one click yet. In the tab **Pairing** of sidekick, and from time cockpit 2026.12 also in the calendar settings, it is folded under **Pair manually with address and token**.
 
 #### In sidekick: Create a Token
 
@@ -7993,9 +7998,9 @@ sidekick stores only a hash of the token, never the token itself. If you lose th
 1. Open the Time Sheet Calendar in the time cockpit web client, at `https://web-preview.timecockpit.com` in the preview environment or at `https://web.timecockpit.com` in the RC, in a browser on the same computer.
 2. Open the gear **Settings**.
 3. Under **Signals**, choose **time cockpit sidekick**.
-4. Unfold **Pair manually with address and token**.
-5. Paste the address into **Address of sidekick** and the token into **Token**. The calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
-6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; the test then says so, and you try again a minute later.
+4. From time cockpit 2026.12, unfold **Pair manually with address and token**. In older versions, the fields are right below **time cockpit sidekick**.
+5. Paste the address into **Address of sidekick** and the token into **Token**. From time cockpit 2026.12, the calendar accepts only an address of sidekick on this computer, `http://127.0.0.1:` or `http://localhost:` followed by the port; it sends the token nowhere else. For any other address it says **Enter the address of sidekick on this computer, for example http://127.0.0.1:41337.** and neither tests nor saves it.
+6. Click **Test connection**. If the calendar reaches sidekick, it shows **Connected to** followed by the name of the device. After too many invalid tokens from this address, sidekick refuses requests for a minute; from time cockpit 2026.12, the test then says so. Try again a minute later.
 7. Click **Save**.
 
 Your browser may ask whether the time cockpit page may access devices in your local network. Allow it; otherwise the browser blocks the connection to sidekick.
@@ -8035,13 +8040,25 @@ The calendar retries **sidekick not answering** and **Browser blocks sidekick** 
 
 If sidekick cannot use its default port 41337 because another program uses it, it takes the next free port. The calendar looks for sidekick on port 41337 and the next nine ports when it pairs. When a paired sidekick no longer answers at the saved address, the calendar looks for it there as well and recognises it by a proof of its token for that port, without sending the token; it then saves the new address itself, so there is nothing to enter again. This needs a current sidekick; with an older one, click **Pair with sidekick** in the right pane. The calendar asks a current sidekick for the same proof at the saved address before it sends its token, when the page loads and after the connection was lost, so a program that took the port of sidekick gets no token. If the proof does not match, the calendar looks on the other ports and otherwise shows **Pairing no longer valid**. With a token paired by hand, the calendar sends it without a proof as long as sidekick has never shown one, because older versions of sidekick cannot; pairing in one click avoids this. The menu of the tray icon shows the port (**Connection to the calendar: on (port …)**), and the tab **Pairing** shows the current **Address of sidekick** under **Pair manually with address and token**. If you set a port outside this range under **Port and technical details** in the tab **Pairing**, enter the new address in the [manual pairing](#pair-manually-with-address-and-token) of the calendar.
 
+## Open sidekick With a Key Combination
+
+Press **Ctrl+Alt+S** on Windows or **⌘⌥S** on macOS to bring the sidekick window to the front from any application. The key combination works while sidekick runs, also when only its icon in the notification area or the menu bar is shown.
+
+To change the combination, open **Settings** in sidekick and, in the group **For all machines**, the area **Retention and start**.
+
+- Click into the field **Key combination to open sidekick** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
+- **Off** switches the key combination off. **Default** restores **Ctrl+Alt+S** (**⌘⌥S** on macOS).
+- The change takes effect when you save the settings.
+
+While sidekick runs, no other application gets this key combination. Visual Studio and the JetBrains IDEs, for example IntelliJ IDEA or Rider, use **Ctrl+Alt+S** as well; if you use them, choose another combination for sidekick or switch it off. If another application already uses the combination, the area says so. The combination cannot be the same as the [key combination for a new note](https://docs.timecockpit.com/doc/sidekick/notes.md#key-combination). **Open sidekick…** in the menu of the tray icon keeps working either way.
+
 ## The Tray Icon Menu
 
 Right-click the sidekick icon in the notification area to open its menu. On macOS, click the sidekick icon in the menu bar.
 
 - The first line shows the state: **Recording**, **Stopped**, **Paused until …** or **Error: …**.
 - **Connection to the calendar: on (port …)** shows whether the calendar can read the signals and on which port.
-- **Open sidekick…** opens the window.
+- **Open sidekick…** opens the window. The menu shows the [key combination](#open-sidekick-with-a-key-combination) next to it while it is active.
 - **Note…** opens the window for a [quick note](https://docs.timecockpit.com/doc/sidekick/notes.md).
 - **Pause** pauses the recording for **15 min**, **1 h** or **until resumed**. While sidekick is paused, **Resume** ends the pause.
 - **Install update … and restart** appears when an update is ready.
@@ -8283,6 +8300,7 @@ In sidekick, open **Settings** and, in the group **For all machines**, the area 
 - Click into the field **Key combination for a new note** and press the keys you want. A combination needs **Ctrl** (**⌘** on macOS), **Alt** or **Win** and exactly one other key.
 - **Off** switches the key combination off. **Default** restores **Ctrl+Alt+N** (**⌘⌥N** on macOS).
 - The change takes effect when you save the settings.
+- The combination cannot be the same as the [key combination to open sidekick](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#open-sidekick-with-a-key-combination).
 
 While sidekick runs, no other application gets this key combination. If another application already uses it, the area says so; choose another combination. **Note…** in the menu of the tray icon keeps working either way.
 
@@ -18832,12 +18850,14 @@ Both servers can be registered side by side under different names.
 - An MCP client that supports stdio servers.
 
 > [!NOTE]
-> The installer places a version-independent launcher at `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe`. It forwards all arguments to the currently installed version, so use this path in your client configuration. The versioned folders below (`app-<version>\`) change with every update.
+> OnCockpit Admin installs every version into its own folder (`%LOCALAPPDATA%\OnCockpitAdmin\app-<version>\`). On installation and on every update it sets the user environment variable `OnCockpitAdminBinary` to the full path of `OnCockpit.Admin.exe` in the current version's folder, so use this variable in your client configuration. Programs see a changed environment variable only when they are started after the change: after OnCockpit Admin has updated itself, restart your MCP client (and the terminal it runs in).
+>
+> Do not use `%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe` outside the version folders. That launcher starts the current version and ends at once, so the MCP client loses track of the server process.
 
 ## Start Command
 
 ```powershell
-%LOCALAPPDATA%\OnCockpitAdmin\OnCockpit.Admin.exe --mcp [-c <configuration>]
+& $env:OnCockpitAdminBinary --mcp [-c <configuration>]
 ```
 
 | Option | Meaning |
@@ -18856,15 +18876,15 @@ You normally do not run this command by hand. The client starts the process when
 
 ## Register the Server
 
-The examples use a configuration named `test`. Replace `<you>` with your Windows user name where a full path is required; environment variables such as `%LOCALAPPDATA%` are not expanded inside JSON files.
+The examples use a configuration named `test`. Clients that cannot expand an environment variable in the command start the server through `cmd /v:on /c !OnCockpitAdminBinary!`. `cmd` reads the variable each time the server starts, and this form also works when the path contains spaces, for example in a user name such as `Jane Doe`.
 
 ### Claude Code
 
 ```powershell
-claude mcp add timecockpit-local --scope user -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+claude mcp add timecockpit-local --scope user -- cmd /v:on /c !OnCockpitAdminBinary! -c test --mcp
 ```
 
-Or in a project's `.mcp.json`, so the whole team gets the server. Use an environment variable for the path when team members have different user names:
+Or in a project's `.mcp.json`, so the whole team gets the server:
 
 ```json
 {
@@ -18878,7 +18898,7 @@ Or in a project's `.mcp.json`, so the whole team gets the server. Use an environ
 }
 ```
 
-Set `OnCockpitAdminBinary` as a user environment variable to `C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe`, then restart the terminal. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
+Restart the terminal after installing OnCockpit Admin so that it sees `OnCockpitAdminBinary`. `claude mcp list` should report the server as connected; `/mcp` inside a session shows its tools.
 
 ### Visual Studio Code (Copilot agent mode)
 
@@ -18900,11 +18920,16 @@ VS Code shows the server in the Copilot Chat **MCP Servers** pane with **Start**
 
 ### OpenAI Codex
 
-```powershell
-codex mcp add timecockpit-local -- "C:\Users\<you>\AppData\Local\OnCockpitAdmin\OnCockpit.Admin.exe" -c test --mcp
+Add the server to `%USERPROFILE%\.codex\config.toml`:
+
+```toml
+[mcp_servers.timecockpit-local]
+command = "cmd"
+args = ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
+env_vars = ["OnCockpitAdminBinary"]
 ```
 
-This writes a `[mcp_servers.timecockpit-local]` entry with `command` and `args` to `%USERPROFILE%\.codex\config.toml`.
+Codex starts MCP servers with a reduced environment and passes on only the variables listed in `env_vars`, so the entry must name `OnCockpitAdminBinary` there. `codex mcp add` cannot set `env_vars`, so edit the file directly.
 
 ### Claude Desktop
 
@@ -18914,8 +18939,8 @@ Claude Desktop starts stdio servers from `%APPDATA%\Claude\claude_desktop_config
 {
   "mcpServers": {
     "timecockpit-local": {
-      "command": "C:\\Users\\<you>\\AppData\\Local\\OnCockpitAdmin\\OnCockpit.Admin.exe",
-      "args": ["-c", "test", "--mcp"]
+      "command": "cmd",
+      "args": ["/v:on", "/c", "!OnCockpitAdminBinary!", "-c", "test", "--mcp"]
     }
   }
 }
@@ -18928,7 +18953,7 @@ Ask the assistant to call `ping` and then to read the resource `timecockpit://cu
 If the server does not start:
 
 - Check the client's MCP log for the message from standard error. `Could not get a data context` means the configuration name is wrong or its stored sign-in no longer works. Start OnCockpit Admin normally, open the configuration, sign in and try again.
-- Make sure the path points to the launcher in `%LOCALAPPDATA%\OnCockpitAdmin\`, not to a removed `app-<version>` folder.
+- Run `echo %OnCockpitAdminBinary%` in a new command prompt. It must show `OnCockpit.Admin.exe` in an existing `app-<version>` folder. If it is empty or points to a removed folder, start OnCockpit Admin once and let it finish updating, then restart the MCP client.
 - Only one MCP session per configuration should run at a time. Model changes are not protected by optimistic locking; two scripts writing the model of the same tenant concurrently overwrite each other silently.
 
 ## Tools
@@ -19085,6 +19110,12 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 
 - **Pair sidekick in One Click**  
   Pairing time cockpit sidekick with the Time Sheet Calendar no longer means copying an address and a token. The right pane of the calendar guides you through it in two steps, installing and pairing: click **Pair with sidekick** there, then **Allow** in sidekick: sidekick asks in a small window in front, also when it runs only in the notification area or the menu bar, and the calendar picks up the token by itself. Each address of time cockpit is paired once. As long as no calendar is paired, **Open time cockpit** in the tab **Pairing** of sidekick opens the calendar, which then asks on its own. The right pane also offers **Pair with sidekick** when the token is missing or does not match, and the calendar finds sidekick by itself when it restarted on another port. The calendar settings show the state of the pairing and offer **Remove pairing**; if you do not want to use sidekick, **Hide the pane** at the bottom of the right pane hides it. The manual pairing with address and token stays available in the settings under **Pair manually with address and token**, for older versions of sidekick. See [Pair sidekick With the Calendar](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#pair-sidekick-with-the-calendar).
+
+- **Open sidekick With a Key Combination**  
+  **Ctrl+Alt+S** (**⌘⌥S** on macOS) brings the time cockpit sidekick window to the front from any application. Change or switch off the combination in the sidekick settings in the area **Retention and start**; Visual Studio and the JetBrains IDEs use **Ctrl+Alt+S** as well. The menu of the tray icon shows the combination next to **Open sidekick…**. If the sidekick window was open when an update started, sidekick opens it again after the restart. See [Open sidekick With a Key Combination](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#open-sidekick-with-a-key-combination).
+
+- **Local MCP Server Survives OnCockpit Admin Updates**  
+  OnCockpit Admin now sets the user environment variable `OnCockpitAdminBinary` to the current version of `OnCockpit.Admin.exe` when it is installed and every time it updates itself, and removes it on uninstall. Use the variable in the configuration of your MCP client instead of a fixed path, and restart the client after an update. The launcher in `%LOCALAPPDATA%\OnCockpitAdmin\` is not suitable for MCP clients because it ends right after starting the current version. See [OnCockpit Admin: Local MCP Server](https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md).
 
 ## 🐛 Bug Fixes
 
