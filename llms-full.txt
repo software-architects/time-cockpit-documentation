@@ -113,7 +113,7 @@ We want to make life easier for employees by providing a graphical calendar for 
 
 Effective project management requires accurate time tracking, which helps managers understand the time and effort needed to complete a project, allocate resources, and create realistic timelines. Time cockpit simplifies project-based time tracking, providing insights into project progress and resource utilization. For further information refer to [Working with Timesheet Entries](https://docs.timecockpit.com/doc/timesheet-calendar/working-with-timesheet-entries.md) and  [Project-based Time Tracking](https://docs.timecockpit.com/doc/project-time-tracking/customer-project-task.md).
 
-![Budgetary Control of Tasks](https://docs.timecockpit.com/doc/getting-started/images/wc-budgetary-control-of-tasks.png "Budgetary Control of Tasks")
+![Budgetary Control of Projects](https://docs.timecockpit.com/doc/getting-started/images/budgetary-control-of-projects.png "Budgetary Control of Projects")
 
 ### Attendance Time Tracking
 
@@ -1059,6 +1059,8 @@ In time cockpit, customers, projects, and tasks are administered hierarchically.
 
 You can manage customers in [Management -> Customers](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
+![Customer form](https://docs.timecockpit.com/doc/project-time-tracking/images/customer-form.png "Customer form")
+
 For each customer you can enter a default hourly rate (`APP_HourlyRate`). If you do not enter a differing hourly rate in a project or a task, the hourly rate of the customer applies to all projects and tasks assigned to the customer.
 
 ## Project
@@ -1066,6 +1068,8 @@ For each customer you can enter a default hourly rate (`APP_HourlyRate`). If you
 Each customer can have multiple projects.
 
 You can manage projects in [Management -> Projects](https://web.timecockpit.com/app/lists/entity/APP_Project).
+
+![Project form](https://docs.timecockpit.com/doc/project-time-tracking/images/project-form.png "Project form")
 
 Per project, you can set the budget in hours (`APP_BudgetInHours`) and the monetary budget (`APP_Budget`). These fields can be used for project budget control.
 
@@ -1078,6 +1082,8 @@ Time cockpit differentiates between billable and non-billable projects (`APP_Bil
 Each project can have multiple tasks.
 
 You can manage tasks in [Management -> Tasks](https://web.timecockpit.com/app/lists/entity/APP_Task).
+
+![Task form](https://docs.timecockpit.com/doc/project-time-tracking/images/task-form.png "Task form")
 
 For each task you can set the budget in hours (`APP_BudgetInHours`) and the monetary budget (`APP_Budget`). These fields can be used for controlling a project's budget.
 
@@ -1181,6 +1187,8 @@ For detailed budget allocation:
 Time cockpit provides two powerful built-in views:
 
 **[Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**
+
+![Budgetary Control of Projects](https://docs.timecockpit.com/doc/project-time-tracking/images/budgetary-control-of-projects.png "Budgetary Control of Projects")
 
 Navigate to **Management** → **Projects** → Select list view **Budgetary Control**
 
@@ -2071,6 +2079,8 @@ The time cockpit default data model contains the list [Management -> Billing -> 
 3. From the **Actions** menu, choose **Create Invoice**.
 4. Enter your invoice details.
 
+![Create Invoice from the unbilled timesheets](https://docs.timecockpit.com/doc/project-time-tracking/images/create-invoice.png "Create Invoice from the unbilled timesheets")
+
 When you execute the **Create Invoice** action, it assigns the selected timesheets to invoice items. 
 
 <div class="tc-video" data-youtube="tnP0-jU6mUQ" data-title="Time Cockpit How-To: Create Invoices from Tracked Time" data-poster="../../images/video-posters/tnP0-jU6mUQ.jpg" style="--bs-aspect-ratio: 56.25%"></div>
@@ -2924,6 +2934,8 @@ Before version 1.7 of time cockpit only the current planned hours of work per we
 
 Since version 1.7 time cockpit supports historical weekly hours of work. That means you can tell time cockpit from when until when the planned weekly hours of work are valid. You can manage the weekly hours of work in [User -> Weekly Hours of Work](https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork).
 
+![Weekly hours of work of a part-time employee](https://docs.timecockpit.com/doc/employee-time-tracking/images/weekly-hours-of-work.png "Weekly hours of work of a part-time employee")
+
 Planned hours of work are stored per week day. You can split the weekly working time equally on all working days (e.g. for full-time employees) or you can define different hours for every day (e.g. for an employee that only works on Monday and Tuesday). For control purposes time cockpit will show you the sum of all days. Additionally you can specify the included overtime hours per month (only relevant if you want to calculate overtime).
 
 > [!WARNING]
@@ -2950,6 +2962,8 @@ You can manage vacation entitlement in [User -> Vacation Entitlement](https://we
 
 The menu item [User -> Vacation](https://web.timecockpit.com/app/lists/entity/APP_Vacation) allows you to manage vacations of your employees. Remaining leave calculation is based on weeks. Employees are entitled to get a certain number of weeks of vacation. In many cases it is not possible to calculate vacations in days instead of weeks because of part-time employees that have different hours of work on each day or because of changing weekly hours of work. The rules of the calculation of remaining leave are as follows:
 
+![Vacation list with entitlement, vacations and remaining weeks](https://docs.timecockpit.com/doc/employee-time-tracking/images/vacations.png "Vacation list with entitlement, vacations and remaining weeks")
+
 Every use of vacation is automatically converted into weeks. Therefor the planned hours for each day are considered (see Weekly Hours of Work). Non-all-day vacations are converted into weeks, too.
 Legal holidays during vacations do not reduce the remaining leave. See [Add Holidays Using Scripts](https://docs.timecockpit.com/doc/scripting/add-holidays.md) for information on how to automatically create legal holidays with a script.
 Vacations that are marked as Special Leave do not reduce the remaining leave. You can use special leaves to grant extra paid vacation for special reasons like marriage or house moving.
@@ -2971,6 +2985,8 @@ In [TCQL queries](https://docs.timecockpit.com/doc/tcql/overview.md) you can cal
 Use [User -> Legal Holiday Calendars](https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar) to define one or more holiday calendars, for example per country, region, or company-specific setup.
 
 Use [User -> Legal Holidays](https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday) to maintain the concrete holidays that belong to a calendar.
+
+![Legal holidays of a holiday calendar](https://docs.timecockpit.com/doc/employee-time-tracking/images/legal-holidays.png "Legal holidays of a holiday calendar")
 
 Each user can then be assigned a holiday calendar in **User Details**. Time cockpit uses the assigned calendar when calculating planned hours of work, overtime, and vacation-related values.
 
@@ -7341,7 +7357,7 @@ The working time display shows the planned hours of work and actual hours of wor
 - current week and
 - current month.
 
-![Working time](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-attendance-time-info.png "Working time")
+<img src="images/wc-attendance-time-info.png" alt="Working time" title="Working time" width="247" />
 
 ## Determining of planned and actual hours of work
 In the chapters [planned hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#planned-hours-of-work) and [actual hours of work](https://docs.timecockpit.com/doc/employee-time-tracking/working-time.md#actual-hours-of-work) you find detailed information on how the time, which is shown in the working time display, are determined.
@@ -7388,7 +7404,7 @@ Formatting profiles influence three areas in the time sheet calendar:
 - In the main area of the calendar the active formatting profile specifies how time cockpit generates caption and footer texts as well as background color of time sheet entries.
 - Template bookings in the navigation pane are also colored based on the currently active formatting profile.
 
-![Billable formatting profile](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-formatting-profile-billable.png "Billable formatting profile")
+![Formatting profile Customer in the time sheet calendar](https://docs.timecockpit.com/doc/timesheet-calendar/images/wc-formatting-profile-billable.png "Formatting profile Customer in the time sheet calendar")
 
 ## Formatting Profile Settings
 
@@ -7871,7 +7887,7 @@ Closing the window does not stop sidekick; it keeps recording in the background.
 1. Download the installer for your Mac: [Apple silicon](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-arm64-Setup.pkg) (M1 and later) or [Intel](https://www.timecockpit.com/download/sidekick/TimeCockpit.Sidekick-osx-x64-Setup.pkg). **About This Mac** in the Apple menu shows which chip your Mac has.
 2. Open the downloaded `.pkg` file and follow the installer. The installer is signed by software architects and checked by Apple (notarised), so macOS opens it without a warning. It installs **time cockpit sidekick** into the **Applications** folder.
 3. Start sidekick from the **Applications** folder if the installer has not started it.
-4. sidekick runs in the menu bar, not in the Dock. Click its icon in the menu bar to open its menu.
+4. sidekick runs in the menu bar. Click its icon in the menu bar to open its menu. While the sidekick window is open, sidekick also shows an icon in the Dock, so you can switch to the window with **⌘ Tab**; when you close the window, the Dock icon disappears again and sidekick keeps running in the menu bar. To open the window again, choose **Open sidekick…** in the menu of its icon, or start sidekick again from the **Applications** folder or with Spotlight.
 5. To record window titles, allow screen recording for sidekick in **System Settings** > **Privacy & Security** > **Screen Recording**, then quit sidekick and start it again. Without this permission sidekick records which application was in front, but no window titles. sidekick does not take screenshots.
 
 If you installed sidekick from the earlier disk image (`.dmg`), you can run the installer right away: at its first start the new version stops the old one, and your recorded data stays. If a copy of the earlier version is still on your Mac, sidekick names it in a band at the top of its window; **Move to Trash** removes it, **Later** asks again at the next start. Remove it: it does not update itself and can start at sign-in instead of the new version.
@@ -8088,6 +8104,8 @@ The unbooked active time is the time you most likely still have to book.
 
 In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the day view button (calendar icon) at the top of the right pane.
 
+![Week view with the activity band next to the bookings](https://docs.timecockpit.com/doc/sidekick/images/calendar-activity-band.png "Week view with the activity band next to the bookings")
+
 ## Detail Lanes in the Day View
 
 In the day view, the calendar draws detail lanes next to your bookings, and right of them the column **Proposal**. The head names each lane and, for several of them, shows a key figure.
@@ -8107,6 +8125,8 @@ In the day view, the calendar draws detail lanes next to your bookings, and righ
 Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick.
 
 A click on a block in a lane selects its time range, and a double-click then opens the form for a new timesheet for that time range. A double-click on empty space in the lanes does nothing.
+
+![Day view with the detail lanes and the column Proposal](https://docs.timecockpit.com/doc/sidekick/images/calendar-detail-lanes.png "Day view with the detail lanes and the column Proposal")
 
 ## The Proposal Column
 
@@ -8170,9 +8190,13 @@ Each section shows at first what a booking needs. The sliders icon in the band o
 
 Hover over a row of the section **AI** to see its time, tokens and cost in a tooltip. **Ctrl** + mouse wheel over a section shows more or fewer rows, in **Files** one level more or less of the folder tree. The number of open levels stays when you reload the page or move to another day.
 
+<img src="images/calendar-signals-pane.png" alt="The tab Signals of the right pane" title="The tab Signals of the right pane" width="320" />
+
 ### Proposal
 
 The tab **Proposal** explains the [Proposal column](#the-proposal-column). Click a block in the column, and the tab shows what it was made of: **Why this topic**, the topics **Close behind** and the **Words in the block**. Without a selected block, it shows **The day by topic**: each topic with its minute-exact time and its time in the raster, and the **Total**.
+
+![The tab Proposal with the day by topic](https://docs.timecockpit.com/doc/sidekick/images/calendar-proposal.png "The tab Proposal with the day by topic")
 
 ## Marking Times
 
@@ -8500,7 +8524,7 @@ Signals older than 90 days are deleted every night. You can change the period in
 - The time cockpit web client does not send the signals to the time cockpit server either. The calendar processes them only in your browser, including the keywords; the proposal by topic is computed by sidekick on your computer. Only the bookings you create are saved in time cockpit, as usual.
 - Apart from usage data, the only request sidekick makes on its own is the update check: one minute after the start and then every four hours, it reads the update feed at `https://www.timecockpit.com/download/sidekick/` (with **Get pre-release versions** switched on, `https://www.timecockpit.com/download/sidekick-preview/`) and downloads a newer version from there. The request carries no data from sidekick; the server sees the address the request comes from, as with any download.
 - If you add remote machines, sidekick connects to them over SSH to read their signals. The data stays in the local database.
-- **Ask your AI** sends data only if you set up a language model in sidekick under **Settings**, area **AI**, and only when you ask a question or request a proposal. sidekick then sends your question and a summary of the days (window titles, tickets, session titles, the names of your topics and the paths of changed files; with a bookings export also your projects and booking texts) to that model, with your API key and under the terms of its provider. The data goes straight from your computer to the provider, not through time cockpit; with a local model it stays on your computer. Every answer shows under **What was sent** what went out.
+- **Ask your AI** is a feature in development and is only shown in developer mode. To switch developer mode on, click the version number at the bottom left of the sidekick window ten times quickly; a **Dev** badge then appears next to the logo. To switch it off, clear **Developer mode** under **Settings**, area **Appearance**. **Ask your AI** sends data only if you set up a language model in sidekick under **Settings**, area **AI**, and only when you ask a question or request a proposal. sidekick then sends your question and a summary of the days (window titles, tickets, session titles, the names of your topics and the paths of changed files; with a bookings export also your projects and booking texts) to that model, with your API key and under the terms of its provider. The data goes straight from your computer to the provider, not through time cockpit; with a local model it stays on your computer. Every answer shows under **What was sent** what went out.
 
 ## Usage Data
 
@@ -8586,6 +8610,8 @@ In time cockpit you can create, edit and delete time sheet entries in the graphi
 > time cockpit is shipped with a sample excel export template for the standard time sheet list (see following register). You find this sample TimesheetListPivotAnalysis.xlsx in the installation directory of time cockpit.
 
 For each time sheet you can define a specific hourly rate (`APP_HourlyRate`) differing from customer, project or task. If you do not enter a specific rate, the default hourly rate of project, customer or task will be used. You find the effective hourly rate of a time sheet in the calculated property `APP_HourlyRateActual`.
+
+![Time sheet entry with a different hourly rate](https://docs.timecockpit.com/doc/project-time-tracking/images/timesheet-form.png "Time sheet entry with a different hourly rate")
 
 Time sheet entries can be marked as not billable (`APP_NoBilling`). You can find if a specific time sheet is billable or not billable in the column `APP_Billable`.
 
@@ -13644,7 +13670,7 @@ Source: https://docs.timecockpit.com/doc/data-model-customization/dashboard.md
 
 # Dashboards
 
-![Simple Dashboard](https://docs.timecockpit.com/doc/data-model-customization/images/dashboard/wc-dashboard.png "Simple Dashboard")
+![Example dashboard](https://docs.timecockpit.com/doc/data-model-customization/images/dashboard/wc-dashboard.png "Example dashboard")
 
 Dashboards allow you to arrange different type of data on a board. The following three types of widgets are allowed:
 
@@ -19151,6 +19177,9 @@ Source: https://docs.timecockpit.com/doc/release-notes/2026-12.md
 - **Open sidekick With a Key Combination**  
   **Ctrl+Alt+S** (**⌘⌥S** on macOS) brings the time cockpit sidekick window to the front from any application. Change or switch off the combination in the sidekick settings in the area **Retention and start**; Visual Studio and the JetBrains IDEs use **Ctrl+Alt+S** as well. The menu of the tray icon shows the combination next to **Open sidekick…**. If the sidekick window was open when an update started, sidekick opens it again after the restart. See [Open sidekick With a Key Combination](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#open-sidekick-with-a-key-combination).
 
+- **Switch to sidekick With ⌘ Tab on macOS**  
+  While the time cockpit sidekick window is open, sidekick shows an icon in the Dock, so **⌘ Tab** reaches the window like any other application. When you close the window, the Dock icon disappears again and sidekick keeps running in the menu bar. Starting sidekick again from the **Applications** folder or with Spotlight now opens its window. See [Install on macOS](https://docs.timecockpit.com/doc/sidekick/installation-and-pairing.md#install-on-macos).
+
 - **Local MCP Server Survives OnCockpit Admin Updates**  
   OnCockpit Admin now sets the user environment variable `OnCockpitAdminBinary` to the current version of `OnCockpit.Admin.exe` when it is installed and every time it updates itself, and removes it on uninstall. Use the variable in the configuration of your MCP client instead of a fixed path, and restart the client after an update. The launcher in `%LOCALAPPDATA%\OnCockpitAdmin\` is not suitable for MCP clients because it ends right after starting the current version. See [OnCockpit Admin: Local MCP Server](https://docs.timecockpit.com/doc/mcp/oncockpit-admin-local.md).
 
@@ -19576,7 +19605,7 @@ The absence calendar gives HR and department leads a clearer, more actionable ov
 In addition to the calendar itself, pending approvals are surfaced in a list above the calendar, making it easy to review what needs attention.
 👉 [Read more](https://docs.timecockpit.com/doc/employee-time-tracking/absence-time-management.md)
 
-![Absence Time Calendar](https://docs.timecockpit.com/doc/employee-time-tracking/images/absence-time-calendar.png "Absence Time Calendar")
+![Absence Time Calendar](https://docs.timecockpit.com/doc/release-notes/images/2026-02/absence-time-calendar.png "Absence Time Calendar")
 
 ### Absence Approval Workflow: Transparent requests with automatic notifications
 

@@ -91,7 +91,7 @@ Vor dem Genehmigen oder Ablehnen können Sie eine Zeile auswählen, um die Abwes
 
 Ansicht als HR-Administrator:
 
-![Abwesenheitskalender](/doc/employee-time-tracking/images/absence-time-calendar.png "Abwesenheitskalender")
+![Abwesenheitskalender](images/absence-time-calendar.png "Abwesenheitskalender")
 
 ## Automatische Benachrichtigungen im Genehmigungsworkflow
 

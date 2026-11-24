@@ -10,7 +10,7 @@ The working time display shows the planned hours of work and actual hours of wor
 - current week and
 - current month.
 
-![Working time](images/wc-attendance-time-info.png "Working time")
+<img src="images/wc-attendance-time-info.png" alt="Working time" title="Working time" width="247" />
 
 ## Determining of planned and actual hours of work
 In the chapters [planned hours of work](~/doc/employee-time-tracking/working-time.md#planned-hours-of-work) and [actual hours of work](~/doc/employee-time-tracking/working-time.md#actual-hours-of-work) you find detailed information on how the time, which is shown in the working time display, are determined.

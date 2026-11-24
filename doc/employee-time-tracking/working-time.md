@@ -25,6 +25,8 @@ Before version 1.7 of time cockpit only the current planned hours of work per we
 
 Since version 1.7 time cockpit supports historical weekly hours of work. That means you can tell time cockpit from when until when the planned weekly hours of work are valid. You can manage the weekly hours of work in [User -> Weekly Hours of Work](https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork).
 
+![Weekly hours of work of a part-time employee](images/weekly-hours-of-work.png "Weekly hours of work of a part-time employee")
+
 Planned hours of work are stored per week day. You can split the weekly working time equally on all working days (e.g. for full-time employees) or you can define different hours for every day (e.g. for an employee that only works on Monday and Tuesday). For control purposes time cockpit will show you the sum of all days. Additionally you can specify the included overtime hours per month (only relevant if you want to calculate overtime).
 
 > [!WARNING]
@@ -51,6 +53,8 @@ You can manage vacation entitlement in [User -> Vacation Entitlement](https://we
 
 The menu item [User -> Vacation](https://web.timecockpit.com/app/lists/entity/APP_Vacation) allows you to manage vacations of your employees. Remaining leave calculation is based on weeks. Employees are entitled to get a certain number of weeks of vacation. In many cases it is not possible to calculate vacations in days instead of weeks because of part-time employees that have different hours of work on each day or because of changing weekly hours of work. The rules of the calculation of remaining leave are as follows:
 
+![Vacation list with entitlement, vacations and remaining weeks](images/vacations.png "Vacation list with entitlement, vacations and remaining weeks")
+
 Every use of vacation is automatically converted into weeks. Therefor the planned hours for each day are considered (see Weekly Hours of Work). Non-all-day vacations are converted into weeks, too.
 Legal holidays during vacations do not reduce the remaining leave. See [Add Holidays Using Scripts](~/doc/scripting/add-holidays.md) for information on how to automatically create legal holidays with a script.
 Vacations that are marked as Special Leave do not reduce the remaining leave. You can use special leaves to grant extra paid vacation for special reasons like marriage or house moving.
@@ -72,6 +76,8 @@ In [TCQL queries](~/doc/tcql/overview.md) you can calculate the remaining leave 
 Use [User -> Legal Holiday Calendars](https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar) to define one or more holiday calendars, for example per country, region, or company-specific setup.
 
 Use [User -> Legal Holidays](https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday) to maintain the concrete holidays that belong to a calendar.
+
+![Legal holidays of a holiday calendar](images/legal-holidays.png "Legal holidays of a holiday calendar")
 
 Each user can then be assigned a holiday calendar in **User Details**. Time cockpit uses the assigned calendar when calculating planned hours of work, overtime, and vacation-related values.
 

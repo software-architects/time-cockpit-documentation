@@ -19,6 +19,8 @@ In time cockpit werden Kunden, Projekte und Tätigkeiten hierarchisch verwaltet.
 
 Kunden verwalten Sie unter [Verwaltung -> Kunden](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
+![Kundenformular](images/customer-form.png "Kundenformular")
+
 Für jeden Kunden können Sie einen Standardstundensatz (`APP_HourlyRate`) eingeben. Wenn Sie in einem Projekt oder einer Tätigkeit keinen abweichenden Stundensatz eingeben, gilt der Stundensatz des Kunden für alle Projekte und Tätigkeiten, die dem Kunden zugeordnet sind.
 
 ## Projekt
@@ -26,6 +28,8 @@ Für jeden Kunden können Sie einen Standardstundensatz (`APP_HourlyRate`) einge
 Jeder Kunde kann mehrere Projekte haben.
 
 Projekte verwalten Sie unter [Verwaltung -> Projekte](https://web.timecockpit.com/app/lists/entity/APP_Project).
+
+![Projektformular](images/project-form.png "Projektformular")
 
 Pro Projekt können Sie das Budget in Stunden (`APP_BudgetInHours`) und das monetäre Budget (`APP_Budget`) festlegen. Diese Felder können Sie für die Budgetkontrolle des Projekts verwenden.
 
@@ -38,6 +42,8 @@ time cockpit unterscheidet zwischen verrechenbaren und nicht verrechenbaren Proj
 Jedes Projekt kann mehrere Tätigkeiten haben.
 
 Tätigkeiten verwalten Sie unter [Verwaltung -> Tätigkeiten](https://web.timecockpit.com/app/lists/entity/APP_Task).
+
+![Tätigkeitsformular](images/task-form.png "Tätigkeitsformular")
 
 Für jede Tätigkeit können Sie das Budget in Stunden (`APP_BudgetInHours`) und das monetäre Budget (`APP_Budget`) festlegen. Diese Felder können Sie für die Budgetkontrolle eines Projekts verwenden.
 

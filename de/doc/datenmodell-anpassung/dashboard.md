@@ -5,7 +5,7 @@ en_page: doc/data-model-customization/dashboard.md
 ---
 # Dashboards
 
-![Einfaches Dashboard](/doc/data-model-customization/images/dashboard/wc-dashboard.png "Einfaches Dashboard")
+![Beispiel-Dashboard](images/dashboard/wc-dashboard.png "Beispiel-Dashboard")
 
 Mit Dashboards können Sie verschiedene Arten von Daten auf einer Übersichtsseite anordnen. Folgende drei Arten von Widgets sind möglich:
 

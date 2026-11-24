@@ -79,6 +79,8 @@ time cockpit bietet zwei leistungsfähige integrierte Ansichten:
 
 **[Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**
 
+![Budgetkontrolle für Projekte](images/budgetary-control-of-projects.png "Budgetkontrolle für Projekte")
+
 Navigieren Sie zu **Verwaltung** → **Projekte** → wählen Sie die Listenansicht **Budgetkontrolle**
 
 **Wichtige Spalten:**

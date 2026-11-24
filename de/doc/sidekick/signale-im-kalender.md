@@ -24,6 +24,8 @@ Die nicht gebuchte aktive Zeit ist die Zeit, die Sie höchstwahrscheinlich noch 
 
 In der Wochenansicht zeigt der Kalender nur dieses Band. Für die Details eines Tages wechseln Sie in die Tagesansicht, zum Beispiel mit der Schaltfläche für die Tagesansicht (Kalendersymbol) oben im rechten Bereich.
 
+![Wochenansicht mit dem Aktivitätsband neben den Buchungen](images/calendar-activity-band.png "Wochenansicht mit dem Aktivitätsband neben den Buchungen")
+
 ## Detailspuren in der Tagesansicht
 
 In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen und rechts davon die Spalte **Vorschlag**. Der Kopf nennt jede Spur und zeigt bei einigen eine Kennzahl.
@@ -43,6 +45,8 @@ In der Tagesansicht zeichnet der Kalender Detailspuren neben Ihre Zeitbuchungen 
 Bewegen Sie die Maus über einen Block, um seine Details in einem Tooltip zu sehen. Die Schaltfläche **Legende** (Palettensymbol) oben im rechten Bereich zeigt die Farben der Detailspuren des Tages. Lokale Kontexte, zum Beispiel ein Claude-Code-Projekt, ein Git-Repository oder ein Ordner, haben im Kalender dieselbe Farbe wie in sidekick.
 
 Ein Klick auf einen Block in einer Spur wählt seinen Zeitraum aus, und ein Doppelklick öffnet dann das Formular für eine neue Zeitbuchung über diesen Zeitraum. Ein Doppelklick auf eine leere Stelle der Spuren bewirkt nichts.
+
+![Tagesansicht mit den Detailspuren und der Spalte Vorschlag](images/calendar-detail-lanes.png "Tagesansicht mit den Detailspuren und der Spalte Vorschlag")
 
 ## Die Spalte Vorschlag
 
@@ -106,9 +110,13 @@ Jeder Abschnitt zeigt zuerst, was eine Buchung braucht. Das Reglersymbol im Band
 
 Zeigen Sie auf eine Zeile im Abschnitt **KI**, um ihre Zeit, Tokens und Kosten in einem Tooltip zu sehen. **Strg** + Mausrad über einem Abschnitt zeigt mehr oder weniger Zeilen, bei **Dateien** eine Ebene des Ordnerbaums mehr oder weniger. Die Zahl der offenen Ebenen bleibt erhalten, wenn Sie die Seite neu laden oder zu einem anderen Tag wechseln.
 
+<img src="images/calendar-signals-pane.png" alt="Der Reiter Signale im rechten Bereich" title="Der Reiter Signale im rechten Bereich" width="320" />
+
 ### Vorschlag
 
 Der Reiter **Vorschlag** erklärt die [Spalte Vorschlag](#die-spalte-vorschlag). Klicken Sie auf einen Block der Spalte, zeigt der Reiter, woraus er entstanden ist: **Warum dieses Thema**, die Themen **Knapp dahinter** und die **Wörter im Block**. Ohne ausgewählten Block zeigt er **Der Tag nach Themen**: jedes Thema mit seiner minutengenauen Zeit und seiner Zeit im Raster, und die **Summe**.
+
+![Der Reiter Vorschlag mit dem Tag nach Themen](images/calendar-proposal.png "Der Reiter Vorschlag mit dem Tag nach Themen")
 
 ## Zeiten markieren
 

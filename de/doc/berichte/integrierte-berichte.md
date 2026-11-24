@@ -23,4 +23,4 @@ Der Bericht Umsatz pro Kunde zeigt die Umsatzentwicklung pro Kunde und Projekt. 
 
 Der Stundenzettel zeigt die Anwesenheits-, Arbeits- und Pausenzeit eines Mitarbeiters für jeden Tag in einem ausgewählten Zeitraum.
 
-![Stundenzettel](/doc/reporting/images/time-report.png "Stundenzettel")
+![Stundenzettel](images/time-report.png "Stundenzettel")

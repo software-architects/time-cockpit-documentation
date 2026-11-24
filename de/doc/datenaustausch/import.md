@@ -38,7 +38,7 @@ Der Link führt zu einer Liste der Importdefinitionen. Ein Doppelklick auf eine 
 - Die Tabelle der Arbeitsblattzuordnungen: listet die Zuordnungen von Arbeitsblättern zu Entitäten auf.
 - Die Tabelle der Spaltenzuordnungen: listet die Zuordnungen von Quellspalten zu Eigenschaften für die aktuell ausgewählte Arbeitsblattzuordnung auf.
 
-![Importdefinition](/doc/data-exchange/images/wc-import-definition.png "Importdefinition")
+![Importdefinition](images/wc-import-definition.png "Importdefinition")
 
 Um eine Spaltenzuordnung festzulegen, benötigt der Importdefinitionseditor einen Anhaltspunkt zu den Quelldaten, die importiert werden sollen. Es gibt zwei typische Szenarien: Im ersten möchten Sie das Excel-Blatt verwenden, um Daten schnell einzugeben. In diesem Szenario können Sie die Struktur der Quelldaten frei festlegen. Dann lassen Sie am besten den Import von time cockpit die Quelldatei und die Spaltenzuordnung automatisch generieren. Im zweiten Szenario werden Ihnen die Daten in einem bestimmten Format geliefert. In diesem Fall müssen Sie die Zuordnungen manuell anpassen.
 

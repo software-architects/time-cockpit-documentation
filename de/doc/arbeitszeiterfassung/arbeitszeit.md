@@ -26,6 +26,8 @@ Vor Version 1.7 von time cockpit konnte nur die aktuelle Soll-Arbeitszeit pro Wo
 
 Seit Version 1.7 unterstützt time cockpit eine historische Wochenarbeitszeit. Das heißt, Sie können time cockpit mitteilen, von wann bis wann die geplante Wochenarbeitszeit gilt. Die Wochenarbeitszeit verwalten Sie unter [Benutzer -> Wochenarbeitszeit](https://web.timecockpit.com/app/lists/entity/APP_WeeklyHoursOfWork).
 
+![Wochenarbeitszeit einer Teilzeitkraft](images/weekly-hours-of-work.png "Wochenarbeitszeit einer Teilzeitkraft")
+
 Die Soll-Arbeitszeit wird pro Wochentag gespeichert. Sie können die Wochenarbeitszeit gleichmäßig auf alle Arbeitstage aufteilen (z. B. für Vollzeitbeschäftigte) oder für jeden Tag unterschiedliche Stunden festlegen (z. B. für einen Mitarbeiter, der nur am Montag und Dienstag arbeitet). Zur Kontrolle zeigt Ihnen time cockpit die Summe aller Tage an. Zusätzlich können Sie die inkludierten Überstunden pro Monat angeben (nur relevant, wenn Sie Überstunden berechnen möchten).
 
 > [!WARNING]
@@ -52,6 +54,8 @@ Den Urlaubsanspruch verwalten Sie unter [Benutzer -> Urlaubsanspruch](https://we
 
 Über den Menüpunkt [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation) verwalten Sie die Urlaube Ihrer Mitarbeiter. Die Berechnung des Resturlaubs basiert auf Wochen. Mitarbeiter haben Anspruch auf eine bestimmte Anzahl von Urlaubswochen. In vielen Fällen ist es nicht möglich, Urlaub in Tagen statt in Wochen zu berechnen, weil Teilzeitbeschäftigte an jedem Tag unterschiedlich viele Stunden arbeiten oder weil sich die Wochenarbeitszeit ändert. Für die Berechnung des Resturlaubs gelten folgende Regeln:
 
+![Urlaubsliste mit Anspruch, Urlauben und Restwochen](images/vacations.png "Urlaubsliste mit Anspruch, Urlauben und Restwochen")
+
 Jeder Urlaubsverbrauch wird automatisch in Wochen umgerechnet. Dabei werden die Sollstunden jedes Tages berücksichtigt (siehe Wochenarbeitszeit). Auch nicht ganztägige Urlaube werden in Wochen umgerechnet.
 Gesetzliche Feiertage während eines Urlaubs verringern den Resturlaub nicht. Wie Sie gesetzliche Feiertage automatisch mit einem Skript anlegen, lesen Sie unter [Feiertage mit Skripten hinzufügen](~/doc/scripting/feiertage-per-skript-hinzufuegen.md).
 Urlaube, die als Sonderurlaub markiert sind, verringern den Resturlaub nicht. Mit Sonderurlaub können Sie zusätzlichen bezahlten Urlaub aus besonderen Anlässen wie Hochzeit oder Umzug gewähren.
@@ -73,6 +77,8 @@ In [TCQL-Abfragen](~/doc/tcql/ueberblick.md) können Sie den Resturlaub eines Mi
 Unter [Benutzer -> Feiertagskalender](https://web.timecockpit.com/app/lists/entity/APP_LegalHolidayCalendar) legen Sie einen oder mehrere Feiertagskalender an, zum Beispiel pro Land, pro Region oder für unternehmensspezifische Anforderungen.
 
 Unter [Benutzer -> Feiertage](https://web.timecockpit.com/app/lists/entity/APP_LegalHoliday) pflegen Sie die konkreten Feiertage, die zu einem Kalender gehören.
+
+![Feiertage eines Feiertagskalenders](images/legal-holidays.png "Feiertage eines Feiertagskalenders")
 
 Jedem Benutzer kann anschließend in **Benutzerdetails** ein Feiertagskalender zugewiesen werden. time cockpit verwendet den zugewiesenen Kalender bei der Berechnung von Soll-Arbeitszeit, Überstunden und urlaubsbezogenen Werten.
 

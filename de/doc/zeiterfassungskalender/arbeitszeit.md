@@ -11,7 +11,7 @@ Die Arbeitszeitanzeige zeigt die Soll-Arbeitszeit und die Ist-Arbeitszeit für d
 - die aktuelle Woche und
 - den aktuellen Monat.
 
-![Arbeitszeit](/doc/timesheet-calendar/images/wc-attendance-time-info.png "Arbeitszeit")
+<img src="images/wc-attendance-time-info.png" alt="Arbeitszeit" title="Arbeitszeit" width="247" />
 
 ## Ermittlung von Soll- und Ist-Arbeitszeit
 In den Kapiteln [Soll-Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md#soll-arbeitszeit) und [Ist-Arbeitszeit](~/doc/arbeitszeiterfassung/arbeitszeit.md#ist-arbeitszeit) finden Sie ausführliche Informationen dazu, wie die Zeiten in der Arbeitszeitanzeige ermittelt werden.

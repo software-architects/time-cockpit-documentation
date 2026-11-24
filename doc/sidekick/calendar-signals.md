@@ -23,6 +23,8 @@ The unbooked active time is the time you most likely still have to book.
 
 In the week view the calendar shows only this band. For the details of a day, switch to the day view, for example with the day view button (calendar icon) at the top of the right pane.
 
+![Week view with the activity band next to the bookings](images/calendar-activity-band.png "Week view with the activity band next to the bookings")
+
 ## Detail Lanes in the Day View
 
 In the day view, the calendar draws detail lanes next to your bookings, and right of them the column **Proposal**. The head names each lane and, for several of them, shows a key figure.
@@ -42,6 +44,8 @@ In the day view, the calendar draws detail lanes next to your bookings, and righ
 Hover over a block to see its details in a tooltip. The **Legend** button (palette icon) at the top of the right pane shows the colours of the detail lanes of the day. Local contexts, for example a Claude Code project, a Git repository or a folder, have the same colour in the calendar as in sidekick.
 
 A click on a block in a lane selects its time range, and a double-click then opens the form for a new timesheet for that time range. A double-click on empty space in the lanes does nothing.
+
+![Day view with the detail lanes and the column Proposal](images/calendar-detail-lanes.png "Day view with the detail lanes and the column Proposal")
 
 ## The Proposal Column
 
@@ -105,9 +109,13 @@ Each section shows at first what a booking needs. The sliders icon in the band o
 
 Hover over a row of the section **AI** to see its time, tokens and cost in a tooltip. **Ctrl** + mouse wheel over a section shows more or fewer rows, in **Files** one level more or less of the folder tree. The number of open levels stays when you reload the page or move to another day.
 
+<img src="images/calendar-signals-pane.png" alt="The tab Signals of the right pane" title="The tab Signals of the right pane" width="320" />
+
 ### Proposal
 
 The tab **Proposal** explains the [Proposal column](#the-proposal-column). Click a block in the column, and the tab shows what it was made of: **Why this topic**, the topics **Close behind** and the **Words in the block**. Without a selected block, it shows **The day by topic**: each topic with its minute-exact time and its time in the raster, and the **Total**.
+
+![The tab Proposal with the day by topic](images/calendar-proposal.png "The tab Proposal with the day by topic")
 
 ## Marking Times
 

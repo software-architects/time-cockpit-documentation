@@ -18,6 +18,8 @@ In time cockpit, customers, projects, and tasks are administered hierarchically.
 
 You can manage customers in [Management -> Customers](https://web.timecockpit.com/app/lists/entity/APP_Customer).
 
+![Customer form](images/customer-form.png "Customer form")
+
 For each customer you can enter a default hourly rate (`APP_HourlyRate`). If you do not enter a differing hourly rate in a project or a task, the hourly rate of the customer applies to all projects and tasks assigned to the customer.
 
 ## Project
@@ -25,6 +27,8 @@ For each customer you can enter a default hourly rate (`APP_HourlyRate`). If you
 Each customer can have multiple projects.
 
 You can manage projects in [Management -> Projects](https://web.timecockpit.com/app/lists/entity/APP_Project).
+
+![Project form](images/project-form.png "Project form")
 
 Per project, you can set the budget in hours (`APP_BudgetInHours`) and the monetary budget (`APP_Budget`). These fields can be used for project budget control.
 
@@ -37,6 +41,8 @@ Time cockpit differentiates between billable and non-billable projects (`APP_Bil
 Each project can have multiple tasks.
 
 You can manage tasks in [Management -> Tasks](https://web.timecockpit.com/app/lists/entity/APP_Task).
+
+![Task form](images/task-form.png "Task form")
 
 For each task you can set the budget in hours (`APP_BudgetInHours`) and the monetary budget (`APP_Budget`). These fields can be used for controlling a project's budget.
 

@@ -25,7 +25,7 @@ Formatprofile beeinflussen drei Bereiche im Zeiterfassungskalender:
 - Im Hauptbereich des Kalenders legt das aktive Formatprofil fest, wie time cockpit die Titel- und Fußzeilentexte sowie die Hintergrundfarbe von Zeitbuchungen erzeugt.
 - Auch die Musterbuchungen im Navigationsbereich werden auf Basis des aktuell aktiven Formatprofils eingefärbt.
 
-![Formatprofil für verrechenbare Zeiten](/doc/timesheet-calendar/images/wc-formatting-profile-billable.png "Formatprofil für verrechenbare Zeiten")
+![Formatprofil Kunde im Zeiterfassungskalender](images/wc-formatting-profile-billable.png "Formatprofil Kunde im Zeiterfassungskalender")
 
 ## Einstellungen von Formatprofilen
 

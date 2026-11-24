@@ -29,7 +29,7 @@ Eine Rechnungsposition besteht aus folgenden Daten:
 - **Total:** Die Gesamtkosten dieser Position (Preis x Menge).
 - **Total (incl. VAT):** Die Gesamtkosten einschließlich Umsatzsteuer.
 
-![Rechnungsposition](/doc/project-time-tracking/images/invoice-item.png "Rechnungsposition")
+![Rechnungsposition](images/invoice-item.png "Rechnungsposition")
 
 > [!NOTE]
 > Rechnungspositionen innerhalb einer Rechnung können unterschiedliche Umsatzsteuersätze haben, die im Rechnungsdokument entsprechend ausgewiesen werden. Außerdem können Sie mit negativen Werten Gutschriften erstellen.
@@ -87,6 +87,8 @@ Das Standarddatenmodell von time cockpit enthält die Liste [Verwaltung -> Verre
 2. Wählen Sie die Zeitbuchungen aus, die in die Rechnung aufgenommen werden sollen.
 3. Wählen Sie im Menü **Aktionen** den Eintrag **Ausgangsrechnung anlegen**.
 4. Geben Sie die Rechnungsdaten ein.
+
+![Ausgangsrechnung aus den nicht verrechneten Zeitbuchungen anlegen](images/create-invoice.png "Ausgangsrechnung aus den nicht verrechneten Zeitbuchungen anlegen")
 
 Wenn Sie die Aktion **Ausgangsrechnung anlegen** ausführen, ordnet sie die ausgewählten Zeitbuchungen Rechnungspositionen zu. 
 
@@ -171,7 +173,7 @@ In time cockpit können Sie bei Bedarf flexibel manuelle Rechnungen erstellen. D
 
 time cockpit kann für eine bestimmte Rechnung ein umfassendes PDF-Dokument erstellen, das die wesentlichen Angaben einer gültigen Rechnung enthält. Dazu gehören Kundenadresse, Rechnungsnummer, Rechnungsdatum und Leistungszeitraum. 
 
-![Rechnungsdokument](/doc/project-time-tracking/images/invoice-report.png "Rechnungsdokument")
+![Rechnungsdokument](images/invoice-report.png "Rechnungsdokument")
 
 Außerdem listet das Dokument alle zugeordneten Rechnungspositionen einzeln auf. Jede Rechnungsposition wird mit Menge, Einheit, Preis, Gesamtbetrag und dem zugehörigen Umsatzsteuersatz dargestellt. So erhalten Sie einen vollständigen Überblick über den Inhalt der Rechnung und können die verrechneten Positionen leicht prüfen und nachvollziehen.
 

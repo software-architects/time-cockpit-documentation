@@ -12,7 +12,7 @@ Der Zeiterfassungskalender ist das zentrale Werkzeug, um in time cockpit Zeitbuc
 
 ## Elemente des Zeiterfassungskalenders
 
-![Zeiterfassungskalender](/doc/timesheet-calendar/images/wc-calendar-overview.png "Zeiterfassungskalender")
+![Zeiterfassungskalender](images/wc-calendar-overview.png "Zeiterfassungskalender")
 
 Der Zeiterfassungskalender besteht aus folgenden Bereichen:
 
@@ -78,7 +78,7 @@ Verwenden Sie die Tagesansicht zum Beispiel, wenn Sie Ihre Zeitbuchungen auf Bas
 
 ![Tagesansicht](/doc/timesheet-calendar/images/wc-day-view.png "Tagesansicht")
 
-![Arbeitswochenansicht](/doc/timesheet-calendar/images/wc-work-week-view.png "Arbeitswochenansicht")
+![Arbeitswochenansicht](images/wc-work-week-view.png "Arbeitswochenansicht")
 
 ![Wochenansicht](/doc/timesheet-calendar/images/wc-week-view.png "Wochenansicht")
 

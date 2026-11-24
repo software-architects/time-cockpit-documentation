@@ -15,4 +15,6 @@ In time cockpit you can create, edit and delete time sheet entries in the graphi
 
 For each time sheet you can define a specific hourly rate (`APP_HourlyRate`) differing from customer, project or task. If you do not enter a specific rate, the default hourly rate of project, customer or task will be used. You find the effective hourly rate of a time sheet in the calculated property `APP_HourlyRateActual`.
 
+![Time sheet entry with a different hourly rate](images/timesheet-form.png "Time sheet entry with a different hourly rate")
+
 Time sheet entries can be marked as not billable (`APP_NoBilling`). You can find if a specific time sheet is billable or not billable in the column `APP_Billable`.

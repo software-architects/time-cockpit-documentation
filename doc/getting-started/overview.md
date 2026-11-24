@@ -19,7 +19,7 @@ We want to make life easier for employees by providing a graphical calendar for 
 
 Effective project management requires accurate time tracking, which helps managers understand the time and effort needed to complete a project, allocate resources, and create realistic timelines. Time cockpit simplifies project-based time tracking, providing insights into project progress and resource utilization. For further information refer to [Working with Timesheet Entries](~/doc/timesheet-calendar/working-with-timesheet-entries.md) and  [Project-based Time Tracking](~/doc/project-time-tracking/customer-project-task.md).
 
-![Budgetary Control of Tasks](images/wc-budgetary-control-of-tasks.png "Budgetary Control of Tasks")
+![Budgetary Control of Projects](images/budgetary-control-of-projects.png "Budgetary Control of Projects")
 
 ### Attendance Time Tracking
 

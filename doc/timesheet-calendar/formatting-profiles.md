@@ -24,7 +24,7 @@ Formatting profiles influence three areas in the time sheet calendar:
 - In the main area of the calendar the active formatting profile specifies how time cockpit generates caption and footer texts as well as background color of time sheet entries.
 - Template bookings in the navigation pane are also colored based on the currently active formatting profile.
 
-![Billable formatting profile](images/wc-formatting-profile-billable.png "Billable formatting profile")
+![Formatting profile Customer in the time sheet calendar](images/wc-formatting-profile-billable.png "Formatting profile Customer in the time sheet calendar")
 
 ## Formatting Profile Settings
 

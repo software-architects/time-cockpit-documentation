@@ -4,7 +4,7 @@ description: Create custom dashboards in time cockpit with charts, key figures, 
 ---
 # Dashboards
 
-![Simple Dashboard](images/dashboard/wc-dashboard.png "Simple Dashboard")
+![Example dashboard](images/dashboard/wc-dashboard.png "Example dashboard")
 
 Dashboards allow you to arrange different type of data on a board. The following three types of widgets are allowed:
 

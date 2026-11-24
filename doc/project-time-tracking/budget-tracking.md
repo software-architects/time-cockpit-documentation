@@ -78,6 +78,8 @@ Time cockpit provides two powerful built-in views:
 
 **[Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**
 
+![Budgetary Control of Projects](images/budgetary-control-of-projects.png "Budgetary Control of Projects")
+
 Navigate to **Management** → **Projects** → Select list view **Budgetary Control**
 
 **Key Columns:**
