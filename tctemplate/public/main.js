@@ -3,7 +3,9 @@
 
 export default {
   defaultTheme: 'auto',
-  // Lightbox: the template default (images larger than 200px that are not already links) is right.
+  // Lightbox: the template default wraps every image larger than 200px in a link that opens the file in a new tab.
+  // Switched off here; start() opens such images in a lightbox dialog instead, like the website (imageZoom below).
+  showLightbox: () => false,
   start: () => {
     // The modern template renders ```mermaid blocks into <pre class="mermaid"> and
     // re-renders them on theme changes. This adds a zoom toolbar and drag-to-pan
@@ -387,8 +389,61 @@ export default {
       });
     };
 
+    // Click-to-enlarge for screenshots, as on the website (TimeCockpit.WebsiteV2, src/scripts/image-lightbox.ts and
+    // .image-zoom / .image-lightbox in _user.scss): an article image larger than 200 px in both directions becomes a
+    // button with a magnifier badge; a click opens the picture in one shared <dialog> per page, created on the first
+    // click. A click anywhere in the dialog or Esc closes it. Images that are already links, video posters and
+    // pictures inside a <picture> stay as they are.
+    const minZoomSize = 200;
+    const isGerman = () => document.documentElement.lang.startsWith('de') || location.pathname.startsWith('/de/');
+    let lightbox;
+    const getLightbox = () => {
+      if (lightbox) return lightbox;
+      lightbox = document.createElement('dialog');
+      lightbox.className = 'image-lightbox';
+      lightbox.innerHTML =
+        `<button type="button" class="image-lightbox-close" aria-label="${isGerman() ? 'Schließen' : 'Close'}">&times;</button>` +
+        '<img alt="" />';
+      // clicks on the backdrop, the picture or the close button all close the dialog
+      lightbox.addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('close', () => document.documentElement.classList.remove('image-lightbox-open'));
+      document.body.appendChild(lightbox);
+      return lightbox;
+    };
+    const openLightbox = (src, alt) => {
+      const dialog = getLightbox();
+      const img = dialog.querySelector('img');
+      img.src = src;
+      img.alt = alt || '';
+      document.documentElement.classList.add('image-lightbox-open');
+      dialog.showModal();
+    };
+    const zoomBadge =
+      '<span class="image-zoom-badge" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">' +
+      '<circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6" /></svg></span>';
+    const makeZoomable = (img) => {
+      if (img.naturalWidth <= minZoomSize || img.naturalHeight <= minZoomSize) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'image-zoom';
+      button.setAttribute('aria-label', isGerman() ? 'Bild vergrößern' : 'Enlarge image');
+      img.replaceWith(button);
+      button.appendChild(img);
+      button.insertAdjacentHTML('beforeend', zoomBadge);
+      button.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
+    };
+    const imageZoom = () => {
+      document.querySelectorAll('article img[src]:not([data-tc-zoom])').forEach((img) => {
+        img.dataset.tcZoom = '';
+        if (img.closest('a, button, picture, .tc-video')) return;
+        if (img.complete && img.naturalWidth) makeZoomable(img);
+        else img.addEventListener('load', () => makeZoomable(img), { once: true });
+      });
+    };
+
     pageJsonLd();
-    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); downloads(); };
+    const update = () => { wrapAll(); externalNavLinks(); renderVideos(); breadcrumbJsonLd(); apiLanguage(); downloads(); imageZoom(); };
     update();
     new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   }

@@ -382,6 +382,126 @@ article h4 {
   max-width: 100%;
 }
 
+/* --- Image zoom: button with magnifier badge + lightbox dialog (see main.js) ------ */
+/* Same look as the website (TimeCockpit.WebsiteV2, .image-zoom / .image-lightbox in _user.scss). */
+.image-zoom {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: zoom-in;
+  display: inline-block;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+}
+
+.image-zoom > img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-zoom:focus-visible {
+  border-radius: calc(var(--bs-border-radius) * 0.75);
+  outline: 3px solid var(--bs-primary);
+  outline-offset: 4px;
+}
+
+.image-zoom-badge {
+  align-items: center;
+  background: rgba(0, 20, 40, 0.65);
+  border-radius: 50%;
+  bottom: 12px;
+  color: #fff;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  transition: opacity 0.2s ease;
+  width: 36px;
+}
+
+.image-zoom:hover .image-zoom-badge,
+.image-zoom:focus-visible .image-zoom-badge {
+  opacity: 1;
+}
+
+/* touch devices have no hover, so keep the hint visible */
+@media (hover: none) {
+  .image-zoom-badge {
+    opacity: 0.8;
+  }
+}
+
+.image-lightbox {
+  background: transparent;
+  border: 0;
+  max-height: 95vh;
+  max-width: 95vw;
+  overflow: visible;
+  padding: 0;
+}
+
+.image-lightbox::backdrop {
+  background: rgba(0, 20, 40, 0.85);
+}
+
+.image-lightbox[open] {
+  animation: image-lightbox-in 0.2s ease;
+}
+
+.image-lightbox img {
+  background: #fff;
+  border-radius: calc(var(--bs-border-radius) * 0.5);
+  cursor: zoom-out;
+  display: block;
+  height: auto;
+  max-height: 90vh;
+  max-width: 95vw;
+  object-fit: contain;
+  width: auto;
+}
+
+.image-lightbox-close {
+  background: rgba(255, 255, 255, 0.15);
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  height: 44px;
+  line-height: 44px;
+  padding: 0;
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  width: 44px;
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus-visible {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+html.image-lightbox-open {
+  overflow: hidden;
+}
+
+@keyframes image-lightbox-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-lightbox[open] {
+    animation: none;
+  }
+}
+
 /* --- Language switch (EN | DE) in the navbar, styled like www.timecockpit.com ---- */
 .tc-lang {
   align-items: center;
