@@ -14,6 +14,8 @@ Die Funktionen zur Budgetkontrolle bestehen aus zwei Hauptlisten:
 - **[Budgetkontrolle für Projekte](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**: Budgetanalyse auf Projektebene
 - **[Budgetkontrolle für Tätigkeiten](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**: Budgetanalyse auf Tätigkeitsebene
 
+![Budgetkontrolle für Projekte](images/budgetary-control-of-projects.png "Budgetkontrolle für Projekte")
+
 Beide Listen sind als **eigene Python-Skripte** umgesetzt, die Daten aus mehreren Quellen zusammenfassen und abgeleitete Kennzahlen in Echtzeit berechnen.
 
 ## Wichtige Kennzahlen erklärt

@@ -102,6 +102,8 @@ Best for: Standard rates across entire project
 - Blended rate across team
 - Simple time-and-materials billing
 
+![Project form with the hourly rate of the customer and a different hourly rate](images/project-form.png "Project form with the hourly rate of the customer and a different hourly rate")
+
 ### Task-Level Rates (Granular Control)
 
 Best for: Different rates for different work types
@@ -130,6 +132,8 @@ Best for: Different rates for different work types
   - Architecture & Design: $200/hour
   - Standard Development: $150/hour
   - Bug Fixes: $100/hour
+
+![Task form with the hourly rate of the project and a different hourly rate](images/task-form.png "Task form with the hourly rate of the project and a different hourly rate")
 
 ### Employee/User Rates (Internal Cost)
 

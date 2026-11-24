@@ -129,6 +129,8 @@ Nicht alle Mitarbeiter benötigen unbedingt eine Genehmigung (etwa Geschäftsfü
 4. Wählen Sie eine Zeile aus, um die Abwesenheit im Kalender darunter in einer Vorschau zu sehen.
 5. Der Kalender springt zur besseren Einordnung automatisch zum Datum der Abwesenheit.
 
+![Abwesenheitskalender mit den offenen Genehmigungen über dem Kalender](images/absence-time-calendar.png "Abwesenheitskalender mit den offenen Genehmigungen über dem Kalender")
+
 **Alternative: Listenansicht**
 
 1. Öffnen Sie **Benutzer** → **[Urlaub](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)** (oder Krankenstand, Zeitausgleich).

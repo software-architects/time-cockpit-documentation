@@ -103,6 +103,8 @@ Am besten geeignet für: einheitliche Sätze für das gesamte Projekt
 - Mischsatz über das ganze Team
 - Einfache Verrechnung nach Aufwand
 
+![Projektformular mit dem Stundensatz des Kunden und einem abweichenden Stundensatz](images/project-form.png "Projektformular mit dem Stundensatz des Kunden und einem abweichenden Stundensatz")
+
 ### Sätze auf Tätigkeitsebene (feine Steuerung)
 
 Am besten geeignet für: unterschiedliche Sätze für unterschiedliche Arten von Arbeit
@@ -131,6 +133,8 @@ Am besten geeignet für: unterschiedliche Sätze für unterschiedliche Arten von
   - Architektur und Design: 200 $/Stunde
   - Standardentwicklung: 150 $/Stunde
   - Fehlerbehebung: 100 $/Stunde
+
+![Tätigkeitsformular mit dem Stundensatz des Projekts und einem abweichenden Stundensatz](images/task-form.png "Tätigkeitsformular mit dem Stundensatz des Projekts und einem abweichenden Stundensatz")
 
 ### Sätze für Mitarbeiter bzw. Benutzer (interne Kosten)
 

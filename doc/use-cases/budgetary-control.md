@@ -13,6 +13,8 @@ The budgetary control functionality consists of two main lists:
 - **[Budgetary Control of Projects](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfProjectsList)**: Project-level budget analysis
 - **[Budgetary Control of Tasks](https://web.timecockpit.com/app/lists/APP_BudgetaryControlOfTasksList)**: Task-level budget analysis
 
+![Budgetary Control of Projects](images/budgetary-control-of-projects.png "Budgetary Control of Projects")
+
 Both lists are implemented as **custom Python scripts** that aggregate data from multiple sources and calculate derived metrics in real-time.
 
 ## Key Metrics Explained

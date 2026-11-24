@@ -8,6 +8,8 @@ Time sheet templates in time cockpit are a powerful feature designed to streamli
 
 <div class="tc-video" data-youtube="Sn7hNR69YOo" data-title="Time Cockpit How-To: Time Sheet Templates" data-poster="../../images/video-posters/Sn7hNR69YOo.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
+<img src="images/calendar-sidebar-templates.png" alt="Time sheet templates in the sidebar of the calendar" title="Time sheet templates in the sidebar of the calendar" width="262" />
+
 ### Create a Time Sheet Template
 
 Time sheet templates in Time Cockpit allow you to simplify the process of tracking recurring tasks and activities. You can create templates for common tasks and easily apply them to your time sheets. Here's how to create and use time sheet templates:

@@ -9,6 +9,8 @@ Musterbuchungen sind eine leistungsfähige Funktion von time cockpit, die Ihre Z
 
 <div class="tc-video" data-youtube="Sn7hNR69YOo" data-title="Musterbuchungen" data-poster="/images/video-posters/Sn7hNR69YOo.jpg" style="--bs-aspect-ratio: 56.25%"></div>
 
+<img src="images/calendar-sidebar-templates.png" alt="Musterbuchungen in der Seitenleiste des Kalenders" title="Musterbuchungen in der Seitenleiste des Kalenders" width="262" />
+
 ### Musterbuchung anlegen
 
 Mit Musterbuchungen in time cockpit erfassen Sie wiederkehrende Aufgaben und Tätigkeiten einfacher. Sie können Musterbuchungen für häufige Aufgaben anlegen und sie bequem in Ihre Zeiterfassung übernehmen. So legen Sie Musterbuchungen an und verwenden sie:

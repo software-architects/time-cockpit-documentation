@@ -128,6 +128,8 @@ Not all employees may require approval (executives, managers):
 4. Select a row to preview absence in calendar below
 5. Calendar automatically jumps to the absence date for context
 
+![Absence calendar with the pending approvals above the calendar](images/absence-time-calendar.png "Absence calendar with the pending approvals above the calendar")
+
 **Alternative: List View**
 
 1. Navigate to **User** → **[Vacation](https://web.timecockpit.com/app/lists/APP_DefaultVacationList)** (or Sick Leave, Comp Time)
