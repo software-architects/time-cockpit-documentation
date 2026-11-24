@@ -6,9 +6,6 @@ en_page: doc/employee-time-tracking/absence-time-management.md
 
 # Genehmigungsworkflow für Abwesenheiten (Urlaub, Zeitausgleich, Krankenstand)
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 time cockpit unterstützt einen Genehmigungsworkflow für Abwesenheiten, den Sie in den [Globalen Einstellungen](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) pro Abwesenheitsart aktivieren und im [Abwesenheitskalender](https://web.timecockpit.com/app/absence-time-calendar) prüfen können.
 
 Urlaub, Krankenstand und Zeitausgleich können unter [Benutzer -> Urlaub](https://web.timecockpit.com/app/lists/entity/APP_Vacation), [Benutzer -> Krankenstand](https://web.timecockpit.com/app/lists/entity/APP_SickLeave) und [Benutzer -> Zeitausgleich](https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime) sowie im Zeiterfassungskalender angelegt werden. Alle drei Abwesenheitsarten unterstützen ganztägige und stundenweise Einträge.

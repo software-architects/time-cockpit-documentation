@@ -11,9 +11,6 @@ en_page: doc/department-lead-faq.md
 Diese FAQ beantwortet häufige Fragen von Abteilungsleitern, die in time cockpit Abwesenheiten genehmigen und die Zeiterfassungsdaten ihres Teams prüfen.
 
 > [!NOTE]
-> Überprüft im April 2026.
-
-> [!NOTE]
 > Allgemeine Fragen zur Zeiterfassung beantwortet die [Anwender-FAQ](~/doc/anwender-faq.md). HR-spezifische Einrichtung und Stammdaten behandelt die [HR-Administrator-FAQ](~/doc/hr-administrator-faq.md).
 
 ## Genehmigung von Abwesenheiten

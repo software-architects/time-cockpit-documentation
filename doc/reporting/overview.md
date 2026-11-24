@@ -8,9 +8,6 @@ In versions greater than 1.22, time cockpit supports to view your data in the fo
 
 This page explains the reporting technology in time cockpit, what custom reports can and cannot do, and how report filters and data access work.
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Overview
 
 Custom reports in time cockpit are based on RDL files. At runtime, time cockpit does not read directly from the database. Report data is provided through the time cockpit business layer, so permissions, calculated properties, and business logic still apply.

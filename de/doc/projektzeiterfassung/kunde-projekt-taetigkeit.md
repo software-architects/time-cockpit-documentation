@@ -5,9 +5,6 @@ en_page: doc/project-time-tracking/customer-project-task.md
 ---
 # Hierarchie Kunde / Projekt / Tätigkeit
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 Diese Seite beschreibt die Standardhierarchie aus Kunde, Projekt und Tätigkeit, die Teil des Standarddatenmodells von time cockpit ist.
 
 > [!NOTE]

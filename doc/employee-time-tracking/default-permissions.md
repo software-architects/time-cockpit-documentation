@@ -10,9 +10,6 @@ Time cockpit includes a default permission model with predefined roles for commo
 
 This page gives an overview of the standard roles and keeps the technical permission rules for reference.
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Previous Standard Permissions
 
 Before the current default permission model, time cockpit used a simpler role setup with only a few basic roles:

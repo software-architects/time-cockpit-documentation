@@ -9,9 +9,6 @@ In Versionen ab 1.22 kann time cockpit Ihre Daten in Form druckbarer Berichte an
 
 Diese Seite erklärt die Berichtstechnologie in time cockpit, was benutzerdefinierte Berichte können und was nicht, und wie Berichtsfilter und Datenzugriff funktionieren.
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Überblick
 
 Benutzerdefinierte Berichte in time cockpit basieren auf RDL-Dateien. Zur Laufzeit liest time cockpit nicht direkt aus der Datenbank. Die Berichtsdaten werden über die Geschäftslogikschicht von time cockpit bereitgestellt, sodass Berechtigungen, berechnete Eigenschaften und Geschäftslogik weiterhin gelten.

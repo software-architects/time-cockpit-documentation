@@ -6,9 +6,6 @@ keywords: [navigation, permissions, roles, menu structure, access control, defau
 
 # Navigation Access Permissions & Menu Structure
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 This page describes the standard navigation structure in time cockpit when `APP_DefaultPermissions` is enabled. It shows which roles typically work with which menu areas and maps common menu items to their verified deeplinks.
 
 > [!NOTE]

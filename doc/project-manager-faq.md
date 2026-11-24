@@ -12,9 +12,6 @@ This FAQ answers common questions from project managers who maintain projects an
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For developer/API questions, see the [Developer FAQ](developer-faq.md).
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Budget Tracking & Planning
 
 ### How do I set up project budgets to track hours and costs?

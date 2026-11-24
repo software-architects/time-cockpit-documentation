@@ -5,9 +5,6 @@ description: Manage vacation, sick leave, and compensatory time in time cockpit.
 
 # Absence Approval Workflow (Vacation, Compensatory Time Off, Sick Leave)
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 Time cockpit supports an absence approval workflow that can be enabled in [Global Settings](https://web.timecockpit.com/app/forms/entity/APP_GlobalSettings) per absence type and reviewed in the [absence calendar](https://web.timecockpit.com/app/absence-time-calendar).
 
 Vacation, sick leave, and compensatory time off can be created from [User -> Vacation](https://web.timecockpit.com/app/lists/entity/APP_Vacation), [User -> Sick Leave](https://web.timecockpit.com/app/lists/entity/APP_SickLeave), and [User -> Compensatory Time](https://web.timecockpit.com/app/lists/entity/APP_CompensatoryTime), as well as from the Time Sheet Calendar. All three absence types support full-day entries and hourly entries.

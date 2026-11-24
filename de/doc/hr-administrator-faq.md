@@ -13,9 +13,6 @@ Diese FAQ beantwortet häufige Fragen von HR-Administratoren, die in time cockpi
 > [!NOTE]
 > Allgemeine Fragen zur Zeiterfassung beantwortet die [Anwender-FAQ](~/doc/anwender-faq.md). Fragen zu Entwicklung und API beantwortet die [Entwickler-FAQ](~/doc/entwickler-faq.md).
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Mitarbeiterverwaltung und Onboarding
 
 ### Wie lege ich einen neuen Mitarbeiter in time cockpit an?

@@ -13,9 +13,6 @@ Diese FAQ beantwortet häufige Fragen von Mitarbeitern, die mit time cockpit Arb
 > [!NOTE]
 > Diese FAQ konzentriert sich auf den Alltag von Mitarbeitern. Für administrative Fragen oder rollenspezifische Funktionen lesen Sie die [Anwender-FAQ](~/doc/anwender-faq.md) oder die passende Rollen-FAQ.
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Erste Schritte
 
 ### Wie melde ich mich bei time cockpit an?

@@ -13,9 +13,6 @@ Diese FAQ beantwortet häufige Fragen von time cockpit Anwendern. Sie konzentrie
 > [!NOTE]
 > Sie suchen Fragen für Entwickler zur API, zum Datenmodell oder zu Anpassungen? Lesen Sie die [Entwickler-FAQ](~/doc/entwickler-faq.md).
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Tägliche Zeiterfassung
 
 ### Wie lege ich eine neue Zeitbuchung an?

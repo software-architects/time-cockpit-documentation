@@ -4,9 +4,6 @@ description: Track working time, calculate overtime, manage vacation entitlement
 ---
 # Working Time
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 Tracking working time is the core function of time cockpit. Based on time sheet entries, weekly hours of work, vacation entitlement, and holidays, time cockpit can calculate planned hours, actual hours, overtime, and remaining leave for each employee.
 
 > [!NOTE]

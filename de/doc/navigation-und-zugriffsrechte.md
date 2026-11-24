@@ -7,9 +7,6 @@ en_page: doc/navigation-access-permissions.md
 
 # Navigation, Zugriffsrechte und Menüstruktur
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 Diese Seite beschreibt die Standard-Navigationsstruktur in time cockpit, wenn `APP_DefaultPermissions` aktiviert ist. Sie zeigt, welche Rollen typischerweise mit welchen Menübereichen arbeiten, und ordnet häufig verwendeten Menüeinträgen ihre geprüften Deeplinks zu.
 
 > [!NOTE]

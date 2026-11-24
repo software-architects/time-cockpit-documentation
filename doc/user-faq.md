@@ -12,9 +12,6 @@ This FAQ answers common questions from time cockpit users. It focuses on everyda
 > [!NOTE]
 > Looking for developer-specific questions about the API, data model, or customizations? See the [Developer FAQ](developer-faq.md).
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Daily Time Tracking
 
 ### How do I create a new timesheet entry?

@@ -12,9 +12,6 @@ This FAQ answers common questions from billing administrators who create invoice
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For project budget tracking, see the [Project Manager FAQ](project-manager-faq.md).
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Invoice Creation
 
 ### How do I create an invoice from unbilled timesheet entries?

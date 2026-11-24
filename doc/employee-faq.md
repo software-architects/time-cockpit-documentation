@@ -12,9 +12,6 @@ This FAQ answers common questions for employees who use time cockpit to track wo
 > [!NOTE]
 > This FAQ focuses on everyday usage for employees. For administrative questions or role-specific features, see the [User FAQ](user-faq.md) or the relevant role FAQ.
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Getting Started
 
 ### How do I log in to time cockpit?

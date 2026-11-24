@@ -4,9 +4,6 @@ description: Understand time cockpit's hierarchical data model for customers, pr
 ---
 # Customer / Project / Task Hierarchy
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 This page describes the default customer, project, and task hierarchy that is part of the standard time cockpit data model.
 
 > [!NOTE]

@@ -10,9 +10,6 @@ faq: true
 This FAQ answers common questions from department leads who approve absences and review team-related time tracking data in time cockpit.
 
 > [!NOTE]
-> Reviewed in April 2026.
-
-> [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For HR-specific setup and master data topics, see the [HR Administrator FAQ](hr-administrator-faq.md).
 
 ## Absence Approval

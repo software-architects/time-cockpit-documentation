@@ -12,9 +12,6 @@ This FAQ answers common questions from HR administrators who maintain employee d
 > [!NOTE]
 > For general time tracking questions, see the [User FAQ](user-faq.md). For developer/API questions, see the [Developer FAQ](developer-faq.md).
 
-> [!NOTE]
-> Reviewed in April 2026.
-
 ## Employee Management & Onboarding
 
 ### How do I add a new employee to time cockpit?

@@ -13,9 +13,6 @@ Diese FAQ beantwortet häufige Fragen von Projektleitern, die in time cockpit Pr
 > [!NOTE]
 > Allgemeine Fragen zur Zeiterfassung beantwortet die [Anwender-FAQ](~/doc/anwender-faq.md). Fragen zu Entwicklung und API beantwortet die [Entwickler-FAQ](~/doc/entwickler-faq.md).
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Budgetkontrolle und Planung
 
 ### Wie richte ich Projektbudgets ein, um Stunden und Kosten zu verfolgen?

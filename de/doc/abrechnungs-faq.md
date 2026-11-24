@@ -13,9 +13,6 @@ Diese FAQ beantwortet häufige Fragen von Abrechnungsadministratoren, die in tim
 > [!NOTE]
 > Allgemeine Fragen zur Zeiterfassung beantwortet die [Anwender-FAQ](~/doc/anwender-faq.md). Fragen zur Budgetkontrolle von Projekten beantwortet die [Projektleiter-FAQ](~/doc/projektleiter-faq.md).
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Rechnungserstellung
 
 ### Wie erstelle ich eine Rechnung aus nicht verrechneten Zeitbuchungen?

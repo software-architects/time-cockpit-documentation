@@ -11,9 +11,6 @@ time cockpit enthält ein Standardberechtigungsmodell mit vordefinierten Rollen 
 
 Diese Seite gibt einen Überblick über die Standardrollen und führt die technischen Berechtigungsregeln zum Nachschlagen an.
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 ## Bisherige Standardberechtigungen
 
 Vor dem aktuellen Standardberechtigungsmodell verwendete time cockpit ein einfacheres Rollenkonzept mit nur wenigen Basisrollen:

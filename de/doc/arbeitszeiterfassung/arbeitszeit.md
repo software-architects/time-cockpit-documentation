@@ -5,9 +5,6 @@ en_page: doc/employee-time-tracking/working-time.md
 ---
 # Arbeitszeit
 
-> [!NOTE]
-> Überprüft im April 2026.
-
 Die Erfassung der Arbeitszeit ist die Kernfunktion von time cockpit. Auf Basis von Zeitbuchungen, Wochenarbeitszeit, Urlaubsanspruch und Feiertagen kann time cockpit für jeden Mitarbeiter Sollstunden, Iststunden, Überstunden und Resturlaub berechnen.
 
 > [!NOTE]
